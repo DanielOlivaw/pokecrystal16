@@ -52,6 +52,7 @@ StdScripts::
 	dba PCScript
 	dba GameCornerCoinVendorScript
 	dba HappinessCheckScript
+	dba StandardMartScript
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1891,3 +1892,40 @@ Movement_ContestResults_WalkAfterWarp:
 	step DOWN
 	turn_head UP
 	step_end
+
+StandardMartScript:
+	opentext
+	readvar VAR_BADGES
+	ifgreater 7, .EightBadges
+	ifgreater 6, .SevenBadges
+	ifgreater 4, .FiveBadges
+	ifgreater 2, .ThreeBadges
+	ifgreater 0, .OneBadge
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_DEX
+	closetext
+	end
+
+.EightBadges:
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_BADGE_8
+	closetext
+	end
+
+.SevenBadges:
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_BADGE_7
+	closetext
+	end
+
+.FiveBadges:
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_BADGE_5
+	closetext
+	end
+
+.ThreeBadges:
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_BADGE_3
+	closetext
+	end
+
+.OneBadge:
+	pokemart MARTTYPE_STANDARD, MART_STANDARD_BADGE_1
+	closetext
+	end

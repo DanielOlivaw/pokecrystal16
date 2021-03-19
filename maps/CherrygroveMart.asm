@@ -9,17 +9,15 @@ CherrygroveMart_MapScripts:
 	db 0 ; callbacks
 
 CherrygroveMartClerkScript:
-	opentext
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	iftrue .PokeBallsInStock
+	opentext
 	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE
 	closetext
 	end
 
 .PokeBallsInStock:
-	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE_DEX
-	closetext
-	end
+	jumpstd standardmart
 
 CherrygroveMartCooltrainerMScript:
 	faceplayer
