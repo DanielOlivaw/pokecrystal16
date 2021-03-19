@@ -1,6 +1,7 @@
 LoadOverworldMonIcon:
 	ld a, e
 	call ReadMonMenuIcon
+	ld [wCurIcon], a
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -9,8 +10,9 @@ LoadOverworldMonIcon:
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	ld b, BANK(Icons)
-	ld c, 8
+	; ld b, BANK(Icons)
+	; ld c, 8
+	call GetIconBank
 	ret
 
 LoadMenuMonIcon:
@@ -337,10 +339,25 @@ endr
 	ld d, [hl]
 	pop hl
 
-	lb bc, BANK(Icons), 8
+	; lb bc, BANK(Icons), 8
+	call GetIconBank
 	call GetGFXUnlessMobile
 
 	pop hl
+	ret
+
+GetIconBank:
+	ld a, [wCurIcon]
+	cp ICON_JIGGLYPUFF ; first icon in Icons2
+	lb bc, BANK("Mon Icons 1"), 8
+	ret c
+	cp ICON_PONYTA ; first icon in Icons3
+	lb bc, BANK("Mon Icons 2"), 8
+	ret c
+	cp ICON_MIME ; first icon in Icons4
+	lb bc, BANK("Mon Icons 3"), 8
+	ret c
+	ld b, BANK("Mon Icons 4")
 	ret
 
 GetGFXUnlessMobile:

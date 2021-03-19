@@ -160,8 +160,8 @@ CyndaquilPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic CYNDAQUIL
-	cry CYNDAQUIL
+	pokepic BULBASAUR
+	cry BULBASAUR
 	waitbutton
 	closepokepic
 	opentext
@@ -173,12 +173,12 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	getmonname STRING_BUFFER_3, CYNDAQUIL
+	getmonname STRING_BUFFER_3, BULBASAUR
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke CYNDAQUIL, 5, BERRY
+	givepoke BULBASAUR, 5, BERRY
 	closetext
 	readvar VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
@@ -190,8 +190,8 @@ TotodilePokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic OSHAWOTT
-	cry OSHAWOTT
+	pokepic PONYTA
+	cry PONYTA
 	waitbutton
 	closepokepic
 	opentext
@@ -203,12 +203,12 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	getmonname STRING_BUFFER_3, OSHAWOTT
+	getmonname STRING_BUFFER_3, PONYTA
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke OSHAWOTT, 5, BERRY
+	givepoke PONYTA, 5, BERRY
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
@@ -218,8 +218,8 @@ ChikoritaPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic ROWLET
-	cry ROWLET
+	pokepic JIGGLYPUFF
+	cry JIGGLYPUFF
 	waitbutton
 	closepokepic
 	opentext
@@ -231,12 +231,12 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	getmonname STRING_BUFFER_3, ROWLET
+	getmonname STRING_BUFFER_3, JIGGLYPUFF
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke ROWLET, 5, BERRY
+	givepoke JIGGLYPUFF, 5, BERRY
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
