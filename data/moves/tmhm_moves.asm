@@ -1,56 +1,56 @@
 TMHMMoves:
-; entries correspond to *_TMNUM enums (see constants/item_constants.asm)
+; entries correspond to *_TMNUM enums (see constants/tmhm_constants.asm)
 ; TMs
-	dw DYNAMICPUNCH
-	dw HEADBUTT
-	dw CURSE
-	dw ROLLOUT
-	dw ROAR
-	dw TOXIC
-	dw ZAP_CANNON
-	dw ROCK_SMASH
-	dw PSYCH_UP
-	dw HIDDEN_POWER
-	dw SUNNY_DAY
-	dw SWEET_SCENT
-	dw SNORE
-	dw BLIZZARD
-	dw HYPER_BEAM
-	dw ICY_WIND
-	dw PROTECT
-	dw RAIN_DANCE
-	dw GIGA_DRAIN
-	dw ENDURE
-	dw FRUSTRATION
-	dw SOLARBEAM
-	dw IRON_TAIL
-	dw DRAGONBREATH
-	dw THUNDER
-	dw EARTHQUAKE
-	dw RETURN
-	dw DIG
-	dw PSYCHIC_M
-	dw SHADOW_BALL
-	dw MUD_SLAP
-	dw DOUBLE_TEAM
-	dw ICE_PUNCH
-	dw SWAGGER
-	dw SLEEP_TALK
-	dw SLUDGE_BOMB
-	dw SANDSTORM
-	dw FIRE_BLAST
-	dw SWIFT
-	dw DEFENSE_CURL
-	dw THUNDERPUNCH
-	dw DREAM_EATER
-	dw DETECT
-	dw REST
-	dw ATTRACT
-	dw THIEF
-	dw STEEL_WING
-	dw FIRE_PUNCH
-	dw FURY_CUTTER
-	dw NIGHTMARE
+	dw DYNAMICPUNCH ; TM01
+	dw HEADBUTT     ; TM02
+	dw CURSE        ; TM03
+	dw ROLLOUT      ; TM04
+	dw ROAR         ; TM05
+	dw TOXIC        ; TM06
+	dw ZAP_CANNON   ; TM07
+	dw ROCK_SMASH   ; TM08
+	dw PSYCH_UP     ; TM09
+	dw HIDDEN_POWER ; TM10
+	dw SUNNY_DAY    ; TM11
+	dw SWEET_SCENT  ; TM12
+	dw SNORE        ; TM13
+	dw BLIZZARD     ; TM14
+	dw HYPER_BEAM   ; TM15
+	dw ICY_WIND     ; TM16
+	dw PROTECT      ; TM17
+	dw RAIN_DANCE   ; TM18
+	dw GIGA_DRAIN   ; TM19
+	dw ENDURE       ; TM20
+	dw FRUSTRATION  ; TM21
+	dw SOLARBEAM    ; TM22
+	dw IRON_TAIL    ; TM23
+	dw DRAGONBREATH ; TM24
+	dw THUNDER      ; TM25
+	dw EARTHQUAKE   ; TM26
+	dw RETURN       ; TM27
+	dw DIG          ; TM28
+	dw PSYCHIC_M    ; TM29
+	dw SHADOW_BALL  ; TM30
+	dw MUD_SLAP     ; TM31
+	dw DOUBLE_TEAM  ; TM32
+	dw ICE_PUNCH    ; TM33
+	dw SWAGGER      ; TM34
+	dw SLEEP_TALK   ; TM35
+	dw SLUDGE_BOMB  ; TM36
+	dw SANDSTORM    ; TM37
+	dw FIRE_BLAST   ; TM38
+	dw SWIFT        ; TM39
+	dw DEFENSE_CURL ; TM40
+	dw THUNDERPUNCH ; TM41
+	dw DREAM_EATER  ; TM42
+	dw DETECT       ; TM43
+	dw REST         ; TM44
+	dw ATTRACT      ; TM45
+	dw THIEF        ; TM46
+	dw STEEL_WING   ; TM47
+	dw FIRE_PUNCH   ; TM48
+	dw FURY_CUTTER  ; TM49
+	dw NIGHTMARE    ; TM50
 ; HMs
 	dw CUT
 	dw FLY

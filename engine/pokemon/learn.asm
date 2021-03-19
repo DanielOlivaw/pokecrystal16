@@ -9,6 +9,8 @@ LearnMove:
 	call CopyBytes
 
 .loop
+	ld hl, wForgettingMove
+	res FORGETTING_MOVE_F, [hl]
 	ld hl, wPartyMon1Moves
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
@@ -53,6 +55,9 @@ LearnMove:
 	call GetMoveName
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
 	call PrintText
+
+	ld hl, wForgettingMove
+	set FORGETTING_MOVE_F, [hl]
 	pop de
 	pop hl
 
@@ -67,8 +72,27 @@ LearnMove:
 	ld a, MOVE_PP
 	call GetMoveAttribute
 	pop hl
+	ld b, a
 
-	ld [hl], a
+; Are we forgetting a move?
+	ld a, [wForgettingMove]
+	cp FORGETTING_MOVE | LEARNING_TM
+	jr nz, .pp_ok
+; Is the old move's current PP less than the new move's PP?
+	ld a, [hl]
+	cp b
+	jr nc, .pp_ok
+; TMs won't give free PP
+	ld b, a
+.pp_ok
+	ld [hl], b
+
+	; ld l, a
+	; ld a, MOVE_PP
+	; call GetMoveAttribute
+	; pop hl
+
+	; ld [hl], a
 
 	ld a, [wBattleMode]
 	and a

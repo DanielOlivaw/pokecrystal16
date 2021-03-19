@@ -1,7 +1,12 @@
 Marts:
 ; entries correspond to MART_* constants
 	dw MartCherrygrove
-	dw MartCherrygroveDex
+	dw MartCherrygroveDex ;MartStandardDex
+	; dw MartStandardBadge1
+	; dw MartStandardBadge3
+	; dw MartStandardBadge5
+	; dw MartStandardBadge7
+	; dw MartStandardBadge8
 	dw MartViolet
 	dw MartAzalea
 	dw MartCianwood
@@ -9,10 +14,7 @@ Marts:
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
 	dw MartGoldenrod4F
-	dw MartGoldenrod5F1
-	dw MartGoldenrod5F2
-	dw MartGoldenrod5F3
-	dw MartGoldenrod5F4
+	dw MartGoldenrod5F
 	dw MartOlivine
 	dw MartEcruteak
 	dw MartMahogany1
@@ -44,7 +46,7 @@ MartCherrygrove:
 	db AWAKENING
 	db -1 ; end
 
-MartCherrygroveDex:
+MartCherrygroveDex: ;MartStandardDex:
 	db 5 ; # items
 	db POKE_BALL
 	db POTION
@@ -52,6 +54,97 @@ MartCherrygroveDex:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db -1 ; end
+
+; MartStandardBadge1:
+	; db 9 ; # items
+	; db POKE_BALL
+	; db POTION
+	; db SUPER_POTION
+	; db ANTIDOTE
+	; db PARLYZ_HEAL
+	; db AWAKENING
+	; db BURN_HEAL
+	; db ICE_HEAL
+	; db REPEL
+	; db -1 ; end
+
+; MartStandardBadge3:
+	; db 12 ; # items
+	; db POKE_BALL
+	; db GREAT_BALL
+	; db POTION
+	; db SUPER_POTION
+	; db REVIVE
+	; db ANTIDOTE
+	; db PARLYZ_HEAL
+	; db AWAKENING
+	; db BURN_HEAL
+	; db ICE_HEAL
+	; db REPEL
+	; db SUPER_REPEL
+	; db -1 ; end
+
+; MartStandardBadge5:
+	; db 15 ; # items
+	; db POKE_BALL
+	; db GREAT_BALL
+	; db ULTRA_BALL
+	; db POTION
+	; db SUPER_POTION
+	; db HYPER_POTION
+	; db REVIVE
+	; db ANTIDOTE
+	; db PARLYZ_HEAL
+	; db AWAKENING
+	; db BURN_HEAL
+	; db ICE_HEAL
+	; db FULL_HEAL
+	; db REPEL
+	; db SUPER_REPEL
+	; db -1 ; end
+
+; MartStandardBadge7:
+	; db 17 ; # items
+	; db POKE_BALL
+	; db GREAT_BALL
+	; db ULTRA_BALL
+	; db POTION
+	; db SUPER_POTION
+	; db HYPER_POTION
+	; db MAX_POTION
+	; db REVIVE
+	; db ANTIDOTE
+	; db PARLYZ_HEAL
+	; db AWAKENING
+	; db BURN_HEAL
+	; db ICE_HEAL
+	; db FULL_HEAL
+	; db REPEL
+	; db SUPER_REPEL
+	; db MAX_REPEL
+	; db -1 ; end
+
+; MartStandardBadge8:
+	; db 18 ; # items
+	; db POKE_BALL
+	; db GREAT_BALL
+	; db ULTRA_BALL
+	; db POTION
+	; db SUPER_POTION
+	; db HYPER_POTION
+	; db MAX_POTION
+	; db FULL_RESTORE
+	; db REVIVE
+	; db ANTIDOTE
+	; db PARLYZ_HEAL
+	; db AWAKENING
+	; db BURN_HEAL
+	; db ICE_HEAL
+	; db FULL_HEAL
+	; db REPEL
+	; db SUPER_REPEL
+	; db MAX_REPEL
+	; db -1 ; end
 
 MartViolet:
 	db 10 ; # items
@@ -132,36 +225,11 @@ MartGoldenrod4F:
 	db HP_UP
 	db -1 ; end
 
-MartGoldenrod5F1:
+MartGoldenrod5F:
 	db 3 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
-	db -1 ; end
-
-MartGoldenrod5F2:
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_HEADBUTT
-	db -1 ; end
-
-MartGoldenrod5F3:
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_ROCK_SMASH
-	db -1 ; end
-
-MartGoldenrod5F4:
-	db 5 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_HEADBUTT
-	db TM_ROCK_SMASH
 	db -1 ; end
 
 MartOlivine:
@@ -313,11 +381,11 @@ MartCeladon2F2:
 
 MartCeladon3F:
 	db 5 ; # items
-	db TM_HIDDEN_POWER
-	db TM_SUNNY_DAY
+	db TM_PSYCH_UP
 	db TM_PROTECT
-	db TM_RAIN_DANCE
-	db TM_SANDSTORM
+	db TM_THUNDERPUNCH
+	db TM_FIRE_PUNCH
+	db TM_ICE_PUNCH
 	db -1 ; end
 
 MartCeladon4F:

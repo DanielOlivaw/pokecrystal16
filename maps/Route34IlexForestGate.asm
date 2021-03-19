@@ -49,7 +49,7 @@ Route34IlexForestGateTeacherScript:
 	iftrue .GotSweetScent
 	writetext Route34IlexForestGateTeacherText
 	buttonsound
-	verbosegiveitem TM_SWEET_SCENT
+	verbosegivetmhm TM_SWEET_SCENT
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 .GotSweetScent:

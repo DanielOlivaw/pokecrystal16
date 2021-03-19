@@ -29,12 +29,12 @@ FindItemInBallScript::
 
 .text_found
 	; found @ !
-	text_far UnknownText_0x1c0a1c
+	text_far _FoundItemText
 	text_end
 
 .text_bag_full
 	; But   can't carry any more items.
-	text_far UnknownText_0x1c0a2c
+	text_far _CantCarryItemText
 	text_end
 
 .TryReceiveItem:
@@ -55,3 +55,50 @@ FindItemInBallScript::
 	ld a, $1
 	ld [wScriptVar], a
 	ret
+
+FindTMHMInBallScript::
+	callasm .ReceiveTMHM
+	disappear LAST_TALKED
+	opentext
+	writetext .FoundItemText
+	playsound SFX_GET_TM
+	pause 60
+	tmhmnotify
+	closetext
+	end
+
+.FoundItemText
+	text_far _FoundItemText
+	text_end
+
+.ReceiveTMHM:
+	xor a
+	ld [wScriptVar], a
+	ld a, [wItemBallItemID]
+	ld [wNamedObjectIndexBuffer], a
+	call GetTMHMName
+	ld hl, wStringBuffer3
+	call CopyName2
+	
+	; off by one error?
+	ld a, [wTempTMHM]
+	inc a
+	ld [wTempTMHM], a
+
+	predef GetTMHMMove
+	ld a, [wTempTMHM]
+	ld [wPutativeTMHMMove], a
+	call GetMoveName
+
+	ld hl, wStringBuffer3 + 4 ; assume all TM names are 4 characters, "TM##"
+	ld a, " "
+	ld [hli], a
+	call CopyName2
+
+	ld a, [wItemBallItemID]
+	ld [wCurTMHM], a
+	farcall ReceiveTMHM
+	ld a, $1
+	ld [wScriptVar], a
+	ret
+

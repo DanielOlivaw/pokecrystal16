@@ -171,7 +171,7 @@ PowerPlantManager:
 	iftrue .GotZapCannon
 	writetext PowerPlantManagerTakeThisTMText
 	buttonsound
-	verbosegiveitem TM_ZAP_CANNON
+	verbosegivetmhm TM_ZAP_CANNON
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM07_ZAP_CANNON
 	writetext PowerPlantManagerTM07IsZapCannonText

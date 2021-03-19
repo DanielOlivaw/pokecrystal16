@@ -1087,8 +1087,8 @@ TutorialPack:
 ; entries correspond to *_POCKET constants
 	dw .Items
 	dw .Balls
-	dw .KeyItems
-	dw .TMHM
+	; dw .KeyItems
+	; dw .TMHM
 
 .Items:
 	xor a ; ITEM_POCKET
@@ -1110,34 +1110,34 @@ TutorialPack:
 	dba PlaceMenuItemQuantity
 	dba UpdateItemDescription
 
-.KeyItems:
-	ld a, KEY_ITEM_POCKET
-	ld hl, .KeyItemsMenuHeader
-	jr .DisplayPocket
+; .KeyItems:
+	; ld a, KEY_ITEM_POCKET
+	; ld hl, .KeyItemsMenuHeader
+	; jr .DisplayPocket
 
-.KeyItemsMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
-	dw .KeyItemsMenuData
-	db 1 ; default option
+; .KeyItemsMenuHeader:
+	; db MENU_BACKUP_TILES ; flags
+	; menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	; dw .KeyItemsMenuData
+	; db 1 ; default option
 
-.KeyItemsMenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
-	db 1 ; horizontal spacing
-	dbw 0, wDudeNumKeyItems
-	dba PlaceMenuItemName
-	dba PlaceMenuItemQuantity
-	dba UpdateItemDescription
+; .KeyItemsMenuData:
+	; db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
+	; db 5, 8 ; rows, columns
+	; db 1 ; horizontal spacing
+	; dbw 0, wDudeNumKeyItems
+	; dba PlaceMenuItemName
+	; dba PlaceMenuItemQuantity
+	; dba UpdateItemDescription
 
-.TMHM:
-	ld a, TM_HM_POCKET
-	call InitPocket
-	call WaitBGMap_DrawPackGFX
-	farcall TMHMPocket
-	ld a, [wCurItem]
-	ld [wCurItem], a
-	ret
+; .TMHM:
+	; ld a, TM_HM_POCKET
+	; call InitPocket
+	; call WaitBGMap_DrawPackGFX
+	; farcall TMHMPocket
+	; ld a, [wCurItem]
+	; ld [wCurItem], a
+	; ret
 
 .Balls:
 	ld a, BALL_POCKET

@@ -65,8 +65,8 @@ CheckCanLearnMoveTutorMove:
 	ld de, SFX_WRONG
 	call PlaySFX
 	pop de
-	ld a, BANK(Text_TMHMNotCompatible)
-	ld hl, Text_TMHMNotCompatible
+	; ld a, BANK(Text_TMHMNotCompatible)
+	ld hl, TutorMoveNotCompatibleText
 	call FarPrintText
 	jr .didnt_learn
 
@@ -96,3 +96,7 @@ CheckCanLearnMoveTutorMove:
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+
+TutorMoveNotCompatibleText:
+	text_far _TutorMoveNotCompatibleText
+	text_end

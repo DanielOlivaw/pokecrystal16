@@ -15,7 +15,7 @@ _ReceiveItem::
 	dw .Item
 	dw .KeyItem
 	dw .Ball
-	dw .TMHM
+	dw TMHM_Dummy ; .TMHM
 
 .Item:
 	ld h, d
@@ -31,13 +31,13 @@ _ReceiveItem::
 	ld hl, wNumBalls
 	jp PutItemInPocket
 
-.TMHM:
-	ld h, d
-	ld l, e
-	ld a, [wCurItem]
-	ld c, a
-	call GetTMHMNumber
-	jp ReceiveTMHM
+; .TMHM:
+	; ld h, d
+	; ld l, e
+	; ld a, [wCurItem]
+	; ld c, a
+	; call GetTMHMNumber
+	; jp ReceiveTMHM
 
 _TossItem::
 	call DoesHLEqualNumItems
@@ -56,19 +56,19 @@ _TossItem::
 	dw .Item
 	dw .KeyItem
 	dw .Ball
-	dw .TMHM
+	dw TMHM_Dummy ; .TMHM
 
 .Ball:
 	ld hl, wNumBalls
 	jp RemoveItemFromPocket
 
-.TMHM:
-	ld h, d
-	ld l, e
-	ld a, [wCurItem]
-	ld c, a
-	call GetTMHMNumber
-	jp TossTMHM
+; .TMHM:
+	; ld h, d
+	; ld l, e
+	; ld a, [wCurItem]
+	; ld c, a
+	; call GetTMHMNumber
+	; jp TossTMHM
 
 .KeyItem:
 	ld h, d
@@ -99,19 +99,19 @@ _CheckItem::
 	dw .Item
 	dw .KeyItem
 	dw .Ball
-	dw .TMHM
+	dw TMHM_Dummy ; .TMHM
 
 .Ball:
 	ld hl, wNumBalls
 	jp CheckTheItem
 
-.TMHM:
-	ld h, d
-	ld l, e
-	ld a, [wCurItem]
-	ld c, a
-	call GetTMHMNumber
-	jp CheckTMHM
+; .TMHM:
+	; ld h, d
+	; ld l, e
+	; ld a, [wCurItem]
+	; ld c, a
+	; call GetTMHMNumber
+	; jp CheckTMHM
 
 .KeyItem:
 	ld h, d
@@ -153,6 +153,7 @@ GetPocketCapacity:
 
 .not_pc
 	ld c, MAX_BALLS
+TMHM_Dummy: ; .TMHM
 	ret
 
 PutItemInPocket:
@@ -402,73 +403,92 @@ CheckKeyItems:
 	ret
 
 ReceiveTMHM:
-	dec c
-	ld b, 0
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, SET_FLAG
 	ld hl, wTMsHMs
-	add hl, bc
-	ld a, [wItemQuantityChangeBuffer]
-	add [hl]
-	cp 100
-	jr nc, .toomany
-	ld [hl], a
+	call FlagAction
 	scf
 	ret
 
-.toomany
-	and a
-	ret
+	; dec c
+	; ld b, 0
+	; ld hl, wTMsHMs
+	; add hl, bc
+	; ld a, [wItemQuantityChangeBuffer]
+	; add [hl]
+	; cp 100
+	; jr nc, .toomany
+	; ld [hl], a
+	; scf
+	; ret
 
-TossTMHM:
-	dec c
-	ld b, 0
-	ld hl, wTMsHMs
-	add hl, bc
-	ld a, [wItemQuantityChangeBuffer]
-	ld b, a
-	ld a, [hl]
-	sub b
-	jr c, .nope
-	ld [hl], a
-	ld [wItemQuantityBuffer], a
-	jr nz, .yup
-	ld a, [wTMHMPocketScrollPosition]
-	and a
-	jr z, .yup
-	dec a
-	ld [wTMHMPocketScrollPosition], a
+; .toomany
+	; and a
+	; ret
 
-.yup
-	scf
-	ret
+; TossTMHM:
+	; dec c
+	; ld b, 0
+	; ld hl, wTMsHMs
+	; add hl, bc
+	; ld a, [wItemQuantityChangeBuffer]
+	; ld b, a
+	; ld a, [hl]
+	; sub b
+	; jr c, .nope
+	; ld [hl], a
+	; ld [wItemQuantityBuffer], a
+	; jr nz, .yup
+	; ld a, [wTMHMPocketScrollPosition]
+	; and a
+	; jr z, .yup
+	; dec a
+	; ld [wTMHMPocketScrollPosition], a
 
-.nope
-	and a
-	ret
+; .yup
+	; scf
+	; ret
+
+; .nope
+	; and a
+	; ret
 
 CheckTMHM:
-	dec c
-	ld b, $0
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
 	ld hl, wTMsHMs
-	add hl, bc
-	ld a, [hl]
-	and a
+	call FlagAction
 	ret z
 	scf
 	ret
 
-GetTMHMNumber::
-; Return the number of a TM/HM by item id c.
-	ld a, c
-	sub TM01 - 1
-	ld c, a
-	ret
+	; dec c
+	; ld b, $0
+	; ld hl, wTMsHMs
+	; add hl, bc
+	; ld a, [hl]
+	; and a
+	; ret z
+	; scf
+	; ret
 
-GetNumberedTMHM:
-; Return the item id of a TM/HM by number c.
-	ld a, c
-	add a, TM01 - 1
-	ld c, a
-	ret
+; GetTMHMNumber::
+;; Return the number of a TM/HM by item id c.
+	; ld a, c
+	; sub TM01 - 1
+	; ld c, a
+	; ret
+
+; GetNumberedTMHM:
+;; Return the item id of a TM/HM by number c.
+	; ld a, c
+	; add a, TM01 - 1
+	; ld c, a
+	; ret
 
 _CheckTossableItem::
 ; Return 1 in wItemAttributeParamBuffer and carry if wCurItem can't be removed from the bag.

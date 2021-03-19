@@ -110,7 +110,6 @@ ROMX $24
 	"bank24"
 ROMX $25
 	"Maps"
-	"Events"
 ROMX $26
 	"Map Scripts 11"
 ROMX $27
@@ -199,6 +198,7 @@ ROMX $49
 ROMX $4a
 	"Trainer Pic Pointers"
 ROMX $4b
+	"Events"
 ROMX $4c
 ROMX $4d
 ROMX $4e

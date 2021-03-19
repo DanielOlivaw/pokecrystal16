@@ -8,19 +8,19 @@ HasNoItems:
 	ld a, [wNumBalls]
 	and a
 	ret nz
-	ld hl, wTMsHMs
-	ld b, NUM_TMS + NUM_HMS
-.loop
-	ld a, [hli]
-	and a
-	jr nz, .done
-	dec b
-	jr nz, .loop
+	; ld hl, wTMsHMs
+	; ld b, NUM_TMS + NUM_HMS
+; .loop
+	; ld a, [hli]
+	; and a
+	; jr nz, .done
+	; dec b
+	; jr nz, .loop
 	scf
 	ret
-.done
-	and a
-	ret
+; .done
+	; and a
+	; ret
 
 TossItemFromPC:
 	push de

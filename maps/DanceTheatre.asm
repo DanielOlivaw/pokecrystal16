@@ -105,7 +105,7 @@ DanceTheaterSurfGuy:
 .GetSurf:
 	writetext SurfGuyLikeADanceText
 	buttonsound
-	verbosegiveitem HM_SURF
+	verbosegivetmhm HM_SURF
 	setevent EVENT_GOT_HM03_SURF
 	writetext SurfGuySurfExplanationText
 	waitbutton

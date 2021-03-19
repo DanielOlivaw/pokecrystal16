@@ -99,6 +99,10 @@ else
 endc
 ENDM
 
+tmhmball_event: MACRO
+	object_event \1, \2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_TMHMBALL, PLAYEREVENT_TMHMBALL, \3, \4
+ENDM
+
 hiddenitem: MACRO
 ;\1: item: from constants/item_constants.asm
 ;\2: flag: an EVENT_* constant

@@ -196,99 +196,70 @@
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
 	const ITEM_BE      ; be
-	const ITEM_DC      ; bf
-	const ITEM_C3      ; c0
-	const ITEM_FA      ; c1
-
-add_tm: MACRO
-if !DEF(TM01)
-TM01 EQU const_value
-	enum_start 1
-endc
-	define _\@_1, "TM_\1"
-	const _\@_1
-	enum \1_TMNUM
-ENDM
-
-; see data/moves/tmhm_moves.asm for moves
-	add_tm DYNAMICPUNCH ; c2
-	add_tm HEADBUTT     ; c3
-	add_tm CURSE        ; c4
-	add_tm ROLLOUT      ; c5
-	add_tm ROAR         ; c6
-	add_tm TOXIC        ; c7
-	add_tm ZAP_CANNON   ; c8
-	add_tm ROCK_SMASH   ; c9
-	add_tm PSYCH_UP     ; ca
-	add_tm HIDDEN_POWER ; cb
-	add_tm SUNNY_DAY    ; cc
-	add_tm SWEET_SCENT  ; cd
-	add_tm SNORE        ; ce
-	add_tm BLIZZARD     ; cf
-	add_tm HYPER_BEAM   ; d0
-	add_tm ICY_WIND     ; d1
-	add_tm PROTECT      ; d2
-	add_tm RAIN_DANCE   ; d3
-	add_tm GIGA_DRAIN   ; d4
-	add_tm ENDURE       ; d5
-	add_tm FRUSTRATION  ; d6
-	add_tm SOLARBEAM    ; d7
-	add_tm IRON_TAIL    ; d8
-	add_tm DRAGONBREATH ; d9
-	add_tm THUNDER      ; da
-	add_tm EARTHQUAKE   ; db
-	add_tm RETURN       ; dc
-	add_tm DIG          ; dd
-	add_tm PSYCHIC_M    ; de
-	add_tm SHADOW_BALL  ; df
-	add_tm MUD_SLAP     ; e0
-	add_tm DOUBLE_TEAM  ; e1
-	add_tm ICE_PUNCH    ; e2
-	add_tm SWAGGER      ; e3
-	add_tm SLEEP_TALK   ; e4
-	add_tm SLUDGE_BOMB  ; e5
-	add_tm SANDSTORM    ; e6
-	add_tm FIRE_BLAST   ; e7
-	add_tm SWIFT        ; e8
-	add_tm DEFENSE_CURL ; e9
-	add_tm THUNDERPUNCH ; ea
-	add_tm DREAM_EATER  ; eb
-	add_tm DETECT       ; ec
-	add_tm REST         ; ed
-	add_tm ATTRACT      ; ee
-	add_tm THIEF        ; ef
-	add_tm STEEL_WING   ; f0
-	add_tm FIRE_PUNCH   ; f1
-	add_tm FURY_CUTTER  ; f2
-	add_tm NIGHTMARE    ; f3
-NUM_TMS EQU const_value - TM01
-
-add_hm: MACRO
-if !DEF(HM01)
-HM01 EQU const_value
-endc
-	define _\@_1, "HM_\1"
-	const _\@_1
-	enum \1_TMNUM
-ENDM
-
-	add_hm CUT          ; f4
-	add_hm FLY          ; f5
-	add_hm SURF         ; f6
-	add_hm STRENGTH     ; f7
-	add_hm FLASH        ; f8
-	add_hm WHIRLPOOL    ; f9
-	add_hm WATERFALL    ; fa
-NUM_HMS EQU const_value - HM01
-
-add_mt: MACRO
-	enum \1_TMNUM
-ENDM
-
-	add_mt FLAMETHROWER
-	add_mt THUNDERBOLT
-	add_mt ICE_BEAM
-NUM_TM_HM_TUTOR EQU __enum__ + -1
+	const ITEM_BF      ; bf
+	const ITEM_C0      ; c0
+	const ITEM_C1      ; c1
+	const ITEM_C2      ; c2
+	const ITEM_C3      ; c3
+	const ITEM_C4      ; c4
+	const ITEM_C5      ; c5
+	const ITEM_C6      ; c6
+	const ITEM_C7      ; c7
+	const ITEM_C8      ; c8
+	const ITEM_C9      ; c9
+	const ITEM_CA      ; ca
+	const ITEM_CB      ; cb
+	const ITEM_CC      ; cc
+	const ITEM_CD      ; cd
+	const ITEM_CE      ; ce
+	const ITEM_CF      ; cf
+	const ITEM_D0      ; d0
+	const ITEM_D1      ; d1
+	const ITEM_D2      ; d2
+	const ITEM_D3      ; d3
+	const ITEM_D4      ; d4
+	const ITEM_D5      ; d5
+	const ITEM_D6      ; d6
+	const ITEM_D7      ; d7
+	const ITEM_D8      ; d8
+	const ITEM_D9      ; d9
+	const ITEM_DA      ; da
+	const ITEM_DB      ; db
+	const ITEM_DC      ; dc
+	const ITEM_DD      ; dd
+	const ITEM_DE      ; de
+	const ITEM_DF      ; df
+	const ITEM_E0      ; e0
+	const ITEM_E1      ; e1
+	const ITEM_E2      ; e2
+	const ITEM_E3      ; e3
+	const ITEM_E4      ; e4
+	const ITEM_E5      ; e5
+	const ITEM_E6      ; e6
+	const ITEM_E7      ; e7
+	const ITEM_E8      ; e8
+	const ITEM_E9      ; e9
+	const ITEM_EA      ; ea
+	const ITEM_EB      ; eb
+	const ITEM_EC      ; ec
+	const ITEM_ED      ; ed
+	const ITEM_EE      ; ee
+	const ITEM_EF      ; ef
+	const ITEM_F0      ; f0
+	const ITEM_F1      ; f1
+	const ITEM_F2      ; f2
+	const ITEM_F3      ; f3
+	const ITEM_F4      ; f4
+	const ITEM_F5      ; f5
+	const ITEM_F6      ; f6
+	const ITEM_F7      ; f7
+	const ITEM_F8      ; f8
+	const ITEM_F9      ; f9
+	const ITEM_FA      ; fa
+	const ITEM_FB      ; fb
+	const ITEM_FC      ; fc
+	const ITEM_FD      ; fd
+	const ITEM_FE      ; fe
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff

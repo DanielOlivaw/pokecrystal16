@@ -1,20 +1,20 @@
 PrintItemDescription:
 ; Print the description for item [wCurSpecies] at de.
 
-	ld a, [wCurSpecies]
-	cp TM01
-	jr c, .not_a_tm
+	; ld a, [wCurSpecies]
+	; cp TM01
+	; jr c, .not_a_tm
 
-	ld [wCurItem], a
-	push de
-	farcall GetTMHMItemMove
-	pop hl
-	ld a, [wTempTMHM]
-	ld [wCurSpecies], a
-	predef PrintMoveDesc
-	ret
+	; ld [wCurItem], a
+	; push de
+	; farcall GetTMHMItemMove
+	; pop hl
+	; ld a, [wTempTMHM]
+	; ld [wCurSpecies], a
+	; predef PrintMoveDesc
+	; ret
 
-.not_a_tm
+; .not_a_tm
 	push de
 	ld hl, ItemDescriptions
 	ld a, [wCurSpecies]
@@ -30,3 +30,18 @@ PrintItemDescription:
 	jp PlaceString
 
 INCLUDE "data/items/descriptions.asm"
+
+PrintTMHMDescription:
+; Print the description for TM/HM [wCurSpecies] at de.
+
+	ld a, [wCurSpecies]
+	inc a
+	ld [wCurTMHM], a
+	ld [wCurTMHMBuffer], a
+	push de
+	predef GetTMHMMove
+	pop hl
+	ld a, [wTempTMHM]
+	ld [wCurSpecies], a
+	predef PrintMoveDesc
+	ret

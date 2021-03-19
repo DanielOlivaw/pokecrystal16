@@ -53,13 +53,14 @@ DragonsDenB1F_ClairScene:
 	opentext
 	writetext ClairText_GiveDragonbreathDragonDen
 	buttonsound
-	giveitem TM_DRAGONBREATH
-	iffalse .BagFull
-	getitemname STRING_BUFFER_3, TM_DRAGONBREATH
-	writetext NotifyReceiveDragonbreath
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
+	; givetmhm TM_DRAGONBREATH
+	; iffalse .BagFull
+	; getitemname STRING_BUFFER_3, TM_DRAGONBREATH
+	; writetext NotifyReceiveDragonbreath
+	; playsound SFX_ITEM
+	; waitsfx
+	; itemnotify
+	verbosegivetmhm TM_DRAGONBREATH
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext ClairText_DescribeDragonbreathDragonDen
 	buttonsound

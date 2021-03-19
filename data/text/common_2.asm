@@ -1,14 +1,14 @@
-UnknownText_0x1c0000::
+_NoPhotoText::
 	text "Oh, no picture?"
 	line "Come again, OK?"
 	done
 
-UnknownText_0x1c0021::
+_EggPhotoText::
 	text "An EGG? My talent"
 	line "is worth more…"
 	done
 
-UnknownText_0x1c0043::
+_NameRaterHelloText::
 	text "Hello, hello! I'm"
 	line "the NAME RATER."
 
@@ -19,13 +19,13 @@ UnknownText_0x1c0043::
 	line "to rate names?"
 	done
 
-UnknownText_0x1c00a0::
+_NameRaterWhichMonText::
 	text "Which #MON's"
 	line "nickname should I"
 	cont "rate for you?"
 	prompt
 
-UnknownText_0x1c00cd::
+_NameRaterBetterNameText::
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "…"
@@ -40,25 +40,25 @@ UnknownText_0x1c00cd::
 	line "a better name?"
 	done
 
-UnknownText_0x1c0142::
+_NameRaterWhatNameText::
 	text "All right. What"
 	line "name should we"
 	cont "give it, then?"
 	prompt
 
-UnknownText_0x1c0171::
+_NameRaterFinishedText::
 	text "That's a better"
 	line "name than before!"
 
 	para "Well done!"
 	done
 
-UnknownText_0x1c019e::
+_NameRaterComeAgainText::
 	text "OK, then. Come"
 	line "again sometime."
 	done
 
-UnknownText_0x1c01be::
+_NameRaterPerfectNameText::
 	text "Hm… @"
 	text_ram wStringBuffer1
 	text "?"
@@ -71,12 +71,12 @@ UnknownText_0x1c01be::
 	line "with loving care."
 	done
 
-UnknownText_0x1c0208::
+_NameRaterEggText::
 	text "Whoa… That's just"
 	line "an EGG."
 	done
 
-UnknownText_0x1c0222::
+_NameRaterSameNameText::
 	text "It might look the"
 	line "same as before,"
 
@@ -86,7 +86,7 @@ UnknownText_0x1c0222::
 	para "Well done!"
 	done
 
-UnknownText_0x1c0272::
+_NameRaterNamedText::
 	text "All right. This"
 	line "#MON is now"
 	cont "named @"
@@ -162,27 +162,32 @@ Text_ComeBack::
 	line "back!"
 	done
 
-UnknownText_0x1c0373::
+_BootedTMText::
 	text "Booted up a TM."
 	prompt
 
-UnknownText_0x1c0384::
+_BootedHMText::
 	text "Booted up an HM."
 	prompt
 
-UnknownText_0x1c0396::
-	text "It contained"
-	line "@"
-	text_ram wStringBuffer2
-	text "."
+_ContainedMoveText::
+	; text "It contained"
+	; line "@"
+	; text_ram wStringBuffer2
+	; text "."
 
-	para "Teach @"
+	text "Teach @"
 	text_ram wStringBuffer2
 	text_start
 	line "to a #MON?"
 	done
 
-UnknownText_0x1c03c2::
+_TutorMoveNotCompatibleText::
+	text "I can't teach that"
+	line "#MON a move."
+	prompt
+
+_TMHMNotCompatibleText::
 	text_ram wStringBuffer2
 	text " is"
 	line "not compatible"
@@ -523,14 +528,14 @@ UnknownText_0x1c0a05::
 	line "CUT!"
 	done
 
-UnknownText_0x1c0a1c::
+_FoundItemText::
 	text "<PLAYER> found"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
 	done
 
-UnknownText_0x1c0a2c::
+_CantCarryItemText::
 	text "But <PLAYER> can't"
 	line "carry any more"
 	cont "items."

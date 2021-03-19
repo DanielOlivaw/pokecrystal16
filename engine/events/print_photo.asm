@@ -46,10 +46,10 @@ PhotoStudio:
 
 .Text_NoPicture:
 	; Oh, no picture? Come again, OK?
-	text_far UnknownText_0x1c0000
+	text_far _NoPhotoText
 	text_end
 
 .Text_Egg:
 	; An EGG? My talent is worth more…
-	text_far UnknownText_0x1c0021
+	text_far _EggPhotoText
 	text_end

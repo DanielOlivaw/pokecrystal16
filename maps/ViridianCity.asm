@@ -54,7 +54,7 @@ ViridianCityDreamEaterFisher:
 	iftrue .GotDreamEater
 	writetext ViridianCityDreamEaterFisherText
 	buttonsound
-	verbosegiveitem TM_DREAM_EATER
+	verbosegivetmhm TM_DREAM_EATER
 	iffalse .NoRoomForDreamEater
 	setevent EVENT_GOT_TM42_DREAM_EATER
 .GotDreamEater:

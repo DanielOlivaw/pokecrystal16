@@ -158,17 +158,17 @@ GetItemName::
 	push bc
 	ld a, [wNamedObjectIndexBuffer]
 
-	cp TM01
-	jr nc, .TM
+	; cp TM01
+	; jr nc, .TM
 
 	ld [wCurSpecies], a
 	ld a, ITEM_NAME
 	ld [wNamedObjectTypeBuffer], a
 	call GetName
-	jr .Copied
-.TM:
-	call GetTMHMName
-.Copied:
+	; jr .Copied
+; .TM:
+	; call GetTMHMName
+; .Copied:
 	ld de, wStringBuffer1
 	pop bc
 	pop hl
@@ -190,38 +190,39 @@ GetTMHMName::
 
 	ld hl, .HMText
 	ld bc, .HMTextEnd - .HMText
-	jr .asm_34a1
+	jr .got_prefix
 
 .TM:
 	ld hl, .TMText
 	ld bc, .TMTextEnd - .TMText
 
-.asm_34a1
+.got_prefix
 	ld de, wStringBuffer1
 	call CopyBytes
 
 ; TM/HM number
-	push de
+	; push de
 	ld a, [wNamedObjectIndexBuffer]
 	ld c, a
-	callfar GetTMHMNumber
-	pop de
+	; callfar GetTMHMNumber
+	; pop de
 
 ; HM numbers start from 51, not 1
 	pop af
 	ld a, c
-	jr c, .asm_34b9
+	jr c, .got_number
 	sub NUM_TMS
-.asm_34b9
+.got_number
+	inc a
 
 ; Divide and mod by 10 to get the top and bottom digits respectively
 	ld b, "0"
 .mod10
 	sub 10
-	jr c, .asm_34c2
+	jr c, .got_digits
 	inc b
 	jr .mod10
-.asm_34c2
+.got_digits
 	add 10
 
 	push af
@@ -244,6 +245,7 @@ GetTMHMName::
 	pop bc
 	pop de
 	pop hl
+	ld de, wStringBuffer1
 	ret
 
 .TMText:

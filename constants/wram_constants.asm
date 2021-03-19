@@ -65,6 +65,12 @@ GBPRINTER_DARKEST  EQU $7f
 	const_def
 	const MENU_ACCOUNT ; 0
 
+; wForgettingMove ; TMHM Update
+FORGETTING_MOVE_F EQU 7
+LEARNING_TM_F     EQU 6
+FORGETTING_MOVE   EQU 1 << FORGETTING_MOVE_F
+LEARNING_TM       EQU 1 << LEARNING_TM_F
+
 ; wWalkingDirection:: ; d043
 	const_def -1
 	const STANDING ; -1

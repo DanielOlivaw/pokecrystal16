@@ -66,23 +66,24 @@ BlackthornGymClairScript:
 	iftrue .GotTM24
 	writetext BlackthornGymClairText_YouKeptMeWaiting
 	buttonsound
-	giveitem TM_DRAGONBREATH
-	iffalse .BagFull
-	getitemname STRING_BUFFER_3, TM_DRAGONBREATH
-	writetext BlackthornGymText_ReceivedTM24
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
+	verbosegivetmhm TM_DRAGONBREATH
+	; givetmhm TM_DRAGONBREATH
+	; iffalse .BagFull
+	; getitemname STRING_BUFFER_3, TM_DRAGONBREATH
+	; writetext BlackthornGymText_ReceivedTM24
+	; playsound SFX_ITEM
+	; waitsfx
+	; itemnotify
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext BlackthornGymClairText_DescribeTM24
 	buttonsound
-	sjump .GotTM24
+	; sjump .GotTM24
 
-.BagFull:
-	writetext BlackthornGymClairText_BagFull
-	waitbutton
-	closetext
-	end
+; .BagFull:
+	; writetext BlackthornGymClairText_BagFull
+	; waitbutton
+	; closetext
+	; end
 
 .GotTM24:
 	writetext BlackthornGymClairText_League

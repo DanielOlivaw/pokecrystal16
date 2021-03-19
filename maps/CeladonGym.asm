@@ -38,7 +38,7 @@ CeladonGymErikaScript:
 	iftrue .GotGigaDrain
 	writetext ErikaExplainTMText
 	buttonsound
-	verbosegiveitem TM_GIGA_DRAIN
+	verbosegivetmhm TM_GIGA_DRAIN
 	iffalse .GotGigaDrain
 	setevent EVENT_GOT_TM19_GIGA_DRAIN
 .GotGigaDrain:

@@ -1,73 +1,99 @@
 TMHMPocket:
 	ld a, $1
-	ldh [hInMenu], a
+	ld [hInMenu], a
 	call TMHM_PocketLoop
-	ld a, $0
-	ldh [hInMenu], a
+	ld a, 0 ; not xor a; preserve carry flag
+	ld [hInMenu], a
 	ret nc
 	call PlaceHollowCursor
-	call WaitBGMap
-	ld a, [wCurItem]
-	dec a
-	ld [wCurItemQuantity], a
-	ld hl, wTMsHMs
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ld [wItemQuantityBuffer], a
-	call .ConvertItemToTMHMNumber
+	ld a, [wCurTMHM]
 	scf
 	ret
 
-.ConvertItemToTMHMNumber:
-	ld a, [wCurItem]
-	ld c, a
-	callfar GetNumberedTMHM
-	ld a, c
-	ld [wCurItem], a
-	ret
+	; ld a, $1
+	; ldh [hInMenu], a
+	; call TMHM_PocketLoop
+	; ld a, $0
+	; ldh [hInMenu], a
+	; ret nc
+	; call PlaceHollowCursor
+	; call WaitBGMap
+	; ld a, [wCurItem]
+	; dec a
+	; ld [wCurItemQuantity], a
+	; ld hl, wTMsHMs
+	; ld c, a
+	; ld b, 0
+	; add hl, bc
+	; ld a, [hl]
+	; ld [wItemQuantityBuffer], a
+	; call .ConvertItemToTMHMNumber
+	; scf
+	; ret
 
-ConvertCurItemIntoCurTMHM:
-	ld a, [wCurItem]
-	ld c, a
-	callfar GetTMHMNumber
-	ld a, c
-	ld [wTempTMHM], a
-	ret
+; .ConvertItemToTMHMNumber:
+	; ld a, [wCurItem]
+	; ld c, a
+	; callfar GetNumberedTMHM
+	; ld a, c
+	; ld [wCurItem], a
+	; ret
 
-GetTMHMItemMove:
-	call ConvertCurItemIntoCurTMHM
-	predef GetTMHMMove
-	ret
+; ConvertCurItemIntoCurTMHM:
+	; ld a, [wCurItem]
+	; ld c, a
+	; callfar GetTMHMNumber
+	; ld a, c
+	; ld [wTempTMHM], a
+	; ret
+
+; GetTMHMItemMove:
+	; call ConvertCurItemIntoCurTMHM
+	; predef GetTMHMMove
+	; ret
 
 AskTeachTMHM:
 	ld hl, wOptions
 	ld a, [hl]
 	push af
 	res NO_TEXT_SCROLL, [hl]
-	ld a, [wCurItem]
-	cp TM01
-	jr c, .NotTMHM
-	call GetTMHMItemMove
-	ld a, [wTempTMHM]
+	ld hl, wForgettingMove
+	set LEARNING_TM_F, [hl]
+	ld a, [wCurTMHM]
+	ld [wCurTMHMBuffer], a
+	predef GetTMHMMove
+	ld a, [wCurTMHMBuffer]
+	; ld a, [wCurItem]
+	; cp TM01
+	; jr c, .NotTMHM
+	; call GetTMHMItemMove
+	; ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
 	call CopyName1
-	ld hl, Text_BootedTM ; Booted up a TM
-	ld a, [wCurItem]
+	ld hl, BootedTMText ; Booted up a TM
+	ld a, [wCurTMHM]
 	cp HM01
 	jr c, .TM
-	ld hl, Text_BootedHM ; Booted up an HM
+
+	; allow full PP restore for HMs
+	ld hl, wForgettingMove
+	res LEARNING_TM_F, [hl]
+	ld hl, BootedHMText ; Booted up an HM
 .TM:
 	call PrintText
-	ld hl, Text_ItContained
+	ld de, SFX_CHOOSE_PC_OPTION
+	call WaitPlaySFX
+	call TextCommand_WAIT_BUTTON
+	ld hl, ContainedMoveText
 	call PrintText
 	call YesNoBox
-.NotTMHM:
+; .NotTMHM:
 	pop bc
 	ld a, b
 	ld [wOptions], a
+	ld hl, wForgettingMove
+	res LEARNING_TM_F, [hl]
 	ret
 
 ChooseMonToLearnTMHM:
@@ -89,6 +115,7 @@ ChooseMonToLearnTMHM_NoRefresh:
 	call SetPalettes
 	call DelayFrame
 	farcall PartyMenuSelect
+	ret c
 	push af
 	ld a, [wCurPartySpecies]
 	cp EGG
@@ -132,7 +159,7 @@ TeachTMHM:
 	ld de, SFX_WRONG
 	call PlaySFX
 	pop de
-	ld hl, Text_TMHMNotCompatible
+	ld hl, TMHMNotCompatibleText
 	call PrintText
 	jr .nope
 
@@ -146,44 +173,45 @@ TeachTMHM:
 	jr z, .nope
 
 	farcall StubbedTrainerRankings_TMsHMsTaught
-	ld a, [wCurItem]
+	; ld a, [wCurItem]
+	ld a, [wCurTMHM]
 	call IsHM
 	ret c
 
 	ld c, HAPPINESS_LEARNMOVE
 	callfar ChangeHappiness
-	call ConsumeTM
+	; call ConsumeTM
 	jr .learned_move
 
 .nope
 	and a
 	ret
 
-.unused
-	ld a, 2
-	ld [wItemEffectSucceeded], a
+; .unused
+	; ld a, 2
+	; ld [wItemEffectSucceeded], a
 .learned_move
 	scf
 	ret
 
-Text_BootedTM:
+BootedTMText:
 	; Booted up a TM.
-	text_far UnknownText_0x1c0373
+	text_far _BootedTMText
 	text_end
 
-Text_BootedHM:
+BootedHMText:
 	; Booted up an HM.
-	text_far UnknownText_0x1c0384
+	text_far _BootedHMText
 	text_end
 
-Text_ItContained:
+ContainedMoveText:
 	; It contained @ . Teach @ to a #MON?
-	text_far UnknownText_0x1c0396
+	text_far _ContainedMoveText
 	text_end
 
-Text_TMHMNotCompatible:
+TMHMNotCompatibleText:
 	; is not compatible with @ . It can't learn @ .
-	text_far UnknownText_0x1c03c2
+	text_far _TMHMNotCompatibleText
 	text_end
 
 TMHM_PocketLoop:
@@ -243,12 +271,12 @@ TMHM_JoypadLoop:
 	jp nz, TMHM_ExitPocket
 TMHM_ShowTMMoveDescription:
 	call TMHM_CheckHoveringOverCancel
-	jp nc, TMHM_ExitPocket
+	; jp nc, TMHM_ExitPocket
 	hlcoord 0, 12
 	ld b, 4
 	ld c, SCREEN_WIDTH - 2
 	call Textbox
-	ld a, [wCurItem]
+	ld a, [wCurTMHM]
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, TMHM_JoypadLoop
 	ld [wTempTMHM], a
@@ -280,15 +308,17 @@ TMHM_CheckHoveringOverCancel:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .okay
-	ld a, [hli]
-	and a
+	call InnerCheckTMHM
+	; ld a, [hli]
+	; and a
 	jr z, .loop
 	dec b
 	jr nz, .loop
 	ld a, c
 .okay
-	ld [wCurItem], a
-	cp -1
+	ld [wCurTMHM], a
+	; ld [wCurItem], a
+	; cp -1
 	ret
 
 TMHM_ExitPack:
@@ -323,8 +353,9 @@ TMHM_ScrollPocket:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jp nc, TMHM_JoypadLoop
-	ld a, [hli]
-	and a
+	call InnerCheckTMHM
+	; ld a, [hli]
+	; and a
 	jr z, .loop
 	dec b
 	jr nz, .loop
@@ -349,8 +380,9 @@ TMHM_DisplayPocketItems:
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .NotTMHM
-	ld a, [hli]
-	and a
+	call InnerCheckTMHM
+	; ld a, [hli]
+	; and a
 	jr z, .loop2
 	ld b, a
 	ld a, c
@@ -376,6 +408,7 @@ TMHM_DisplayPocketItems:
 	inc hl
 	ld de, wTempTMHM
 	lb bc, PRINTNUM_RIGHTALIGN | 1, 2
+	; lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	pop af
 	ld [wTempTMHM], a
@@ -391,24 +424,24 @@ TMHM_DisplayPocketItems:
 	call PlaceString
 	pop hl
 	pop bc
-	ld a, c
-	push bc
-	cp NUM_TMS + 1
-	jr nc, .hm2
-	ld bc, SCREEN_WIDTH + 9
-	add hl, bc
-	ld [hl], "×"
-	inc hl
-	ld a, "0" ; why are we doing this?
-	pop bc
-	push bc
-	ld a, b
-	ld [wTempTMHM], a
-	ld de, wTempTMHM
-	lb bc, 1, 2
-	call PrintNum
-.hm2
-	pop bc
+	; ld a, c
+	; push bc
+	; cp NUM_TMS + 1
+	; jr nc, .hm2
+	; ld bc, SCREEN_WIDTH + 9
+	; add hl, bc
+	; ld [hl], "×"
+	; inc hl
+	; ld a, "0" ; why are we doing this?
+	; pop bc
+	; push bc
+	; ld a, b
+	; ld [wTempTMHM], a
+	; ld de, wTempTMHM
+	; lb bc, 1, 2
+	; call PrintNum
+; .hm2
+	; pop bc
 	pop de
 	pop hl
 	dec d
@@ -440,18 +473,18 @@ TMHMPocket_GetCurrentLineCoord:
 	jr nz, .loop
 	ret
 
-Unreferenced_Function2ca95:
-	pop hl
-	ld bc, 3
-	add hl, bc
-	predef GetTMHMMove
-	ld a, [wTempTMHM]
-	ld [wPutativeTMHMMove], a
-	call GetMoveName
-	push hl
-	call PlaceString
-	pop hl
-	ret
+; Unreferenced_Function2ca95:
+	; pop hl
+	; ld bc, 3
+	; add hl, bc
+	; predef GetTMHMMove
+	; ld a, [wTempTMHM]
+	; ld [wPutativeTMHMMove], a
+	; call GetMoveName
+	; push hl
+	; call PlaceString
+	; pop hl
+	; ret
 
 TMHM_String_Cancel:
 	db "CANCEL@"
@@ -465,8 +498,9 @@ TMHM_GetCurrentPocketPosition:
 .loop
 	inc c
 	ld a, [hli]
-	and a
-	jr z, .loop
+	call InnerCheckTMHM
+	; and a
+	; jr z, .loop
 	dec b
 	jr nz, .loop
 	dec hl
@@ -488,72 +522,93 @@ TMHM_PlaySFX_ReadText2:
 	pop de
 	ret
 
-Unreferenced_Function2cadf:
-	call ConvertCurItemIntoCurTMHM
-	call .CheckHaveRoomForTMHM
-	ld hl, .NoRoomText
-	jr nc, .print
-	ld hl, .ReceivedText
-.print
-	jp PrintText
+; Unreferenced_Function2cadf:
+	; call ConvertCurItemIntoCurTMHM
+	; call .CheckHaveRoomForTMHM
+	; ld hl, .NoRoomText
+	; jr nc, .print
+	; ld hl, .ReceivedText
+; .print
+	; jp PrintText
 
-.NoRoomText:
-	; You have no room for any more @ S.
-	text_far UnknownText_0x1c03fa
-	text_end
+; .NoRoomText:
+	;; You have no room for any more @ S.
+	; text_far UnknownText_0x1c03fa
+	; text_end
 
-.ReceivedText:
-	; You received @ !
-	text_far UnknownText_0x1c0421
-	text_end
+; .ReceivedText:
+	;; You received @ !
+	; text_far UnknownText_0x1c0421
+	; text_end
 
-.CheckHaveRoomForTMHM:
-	ld a, [wTempTMHM]
-	dec a
-	ld hl, wTMsHMs
-	ld b, 0
-	ld c, a
-	add hl, bc
-	ld a, [hl]
-	inc a
-	cp NUM_TMS * 2
-	ret nc
-	ld [hl], a
-	ret
+; .CheckHaveRoomForTMHM:
+	; ld a, [wTempTMHM]
+	; dec a
+	; ld hl, wTMsHMs
+	; ld b, 0
+	; ld c, a
+	; add hl, bc
+	; ld a, [hl]
+	; inc a
+	; cp NUM_TMS * 2
+	; ret nc
+	; ld [hl], a
+	; ret
 
-ConsumeTM:
-	call ConvertCurItemIntoCurTMHM
-	ld a, [wTempTMHM]
-	dec a
-	ld hl, wTMsHMs
-	ld b, 0
-	ld c, a
-	add hl, bc
-	ld a, [hl]
-	and a
-	ret z
-	dec a
-	ld [hl], a
-	ret nz
-	ld a, [wTMHMPocketScrollPosition]
-	and a
-	ret z
-	dec a
-	ld [wTMHMPocketScrollPosition], a
-	ret
+; ConsumeTM:
+	; call ConvertCurItemIntoCurTMHM
+	; ld a, [wTempTMHM]
+	; dec a
+	; ld hl, wTMsHMs
+	; ld b, 0
+	; ld c, a
+	; add hl, bc
+	; ld a, [hl]
+	; and a
+	; ret z
+	; dec a
+	; ld [hl], a
+	; ret nz
+	; ld a, [wTMHMPocketScrollPosition]
+	; and a
+	; ret z
+	; dec a
+	; ld [wTMHMPocketScrollPosition], a
+	; ret
 
 CountTMsHMs:
-	ld b, 0
-	ld c, NUM_TMS + NUM_HMS
 	ld hl, wTMsHMs
-.loop
-	ld a, [hli]
+	ld b, wTMsHMsEnd - wTMsHMs
+	jp CountSetBits
+
+	; ld b, 0
+	; ld c, NUM_TMS + NUM_HMS
+	; ld hl, wTMsHMs
+; .loop
+	; ld a, [hli]
+	; and a
+	; jr z, .skip
+	; inc b
+; .skip
+	; dec c
+	; jr nz, .loop
+	; ld a, b
+	; ld [wTempTMHM], a
+	; ret
+
+InnerCheckTMHM:
 	and a
-	jr z, .skip
-	inc b
-.skip
-	dec c
-	jr nz, .loop
-	ld a, b
-	ld [wTempTMHM], a
+	ret z
+	push bc
+	push de
+	dec a
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	ld a, c
+	pop de
+	pop bc
+	and a
 	ret

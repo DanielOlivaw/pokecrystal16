@@ -13,7 +13,7 @@ HiddenPowerGuy:
 	iftrue .AlreadyGotItem
 	writetext HiddenPowerGuyText1
 	buttonsound
-	verbosegiveitem TM_HIDDEN_POWER
+	verbosegivetmhm TM_HIDDEN_POWER
 	iffalse .Done
 	setevent EVENT_GOT_TM10_HIDDEN_POWER
 	writetext HiddenPowerGuyText2

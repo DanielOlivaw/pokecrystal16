@@ -464,11 +464,16 @@ UnknownText_0x1c4be3::
 	line "is evolving!"
 	done
 
-UnknownText_0x1c4bfd::
+_MartHowManyText::
 	text "How many?"
 	done
+	
+_AlreadyHaveTMText::
+	text "You already have"
+	line "that TM."
+	done
 
-UnknownText_0x1c4c08::
+_MartFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
 	text " @"
 	text_ram wStringBuffer2
@@ -477,8 +482,20 @@ UnknownText_0x1c4c08::
 	text_decimal hMoneyTemp, 3, 6
 	text "."
 	done
+	
+_TMMartFinalPriceText::
+	text "@"
+	text_ram wStringBuffer2
+	text " @"
+	text_ram wStringBuffer1
+	text ""
+	line "will be ¥@"
+	; text_decimal hMoneyTemp, 3, 7
+	text_decimal hMoneyTemp, 3, 6
+	text "."
+	done
 
-UnknownText_0x1c4c28::
+_HerbShopLadyIntroText::
 	text "Hello, dear."
 
 	para "I sell inexpensive"
@@ -493,11 +510,11 @@ UnknownText_0x1c4c28::
 	para "Hehehehe…"
 	done
 
-UnknownText_0x1c4ca3::
+_HerbalLadyHowManyText::
 	text "How many?"
 	done
 
-UnknownText_0x1c4cae::
+_HerbalLadyFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
 	text " @"
 	text_ram wStringBuffer2
@@ -507,27 +524,27 @@ UnknownText_0x1c4cae::
 	text "."
 	done
 
-UnknownText_0x1c4cce::
+_HerbalLadyThanksText::
 	text "Thank you, dear."
 	line "Hehehehe…"
 	done
 
-UnknownText_0x1c4cea::
+_HerbalLadyPackFullText::
 	text "Oh? Your PACK is"
 	line "full, dear."
 	done
 
-UnknownText_0x1c4d08::
+_HerbalLadyNoMoneyText::
 	text "Hehehe… You don't"
 	line "have the money."
 	done
 
-UnknownText_0x1c4d2a::
+_HerbalLadyComeAgainText::
 	text "Come again, dear."
 	line "Hehehehe…"
 	done
 
-UnknownText_0x1c4d47::
+_BargainShopIntroText::
 	text "Hiya! Care to see"
 	line "some bargains?"
 
@@ -538,7 +555,7 @@ UnknownText_0x1c4d47::
 	line "one of each item."
 	done
 
-UnknownText_0x1c4db0::
+_BargainShopFinalPriceText::
 	text_ram wStringBuffer2
 	text " costs"
 	line "¥@"
@@ -546,41 +563,41 @@ UnknownText_0x1c4db0::
 	text ". Want it?"
 	done
 
-UnknownText_0x1c4dcd::
+_BargainShopThanksText::
 	text "Thanks."
 	done
 
-UnknownText_0x1c4dd6::
+_BargainShopPackFullText::
 	text "Uh-oh, your PACK"
 	line "is chock-full."
 	done
 
-UnknownText_0x1c4df7::
+_BargainShopSoldOutText::
 	text "You bought that"
 	line "already. I'm all"
 	cont "sold out of it."
 	done
 
-UnknownText_0x1c4e28::
+_BargainShopNoFundsText::
 	text "Uh-oh, you're"
 	line "short on funds."
 	done
 
-UnknownText_0x1c4e46::
+_BargainShopComeAgainText::
 	text "Come by again"
 	line "sometime."
 	done
 
-UnknownText_0x1c4e5f::
+_PharmacyIntroText::
 	text "What's up? Need"
 	line "some medicine?"
 	done
 
-UnknownText_0x1c4e7e::
+_PharmacyHowManyText::
 	text "How many?"
 	done
 
-UnknownText_0x1c4e89::
+_PharmacyFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
 	text " @"
 	text_ram wStringBuffer2
@@ -590,35 +607,36 @@ UnknownText_0x1c4e89::
 	text "."
 	done
 
-UnknownText_0x1c4eab::
+_PharmacyThanksText::
 	text "Thanks much!"
 	done
 
-UnknownText_0x1c4eb9::
+_PharmacyPackFullText::
 	text "You don't have any"
 	line "more space."
 	done
 
-UnknownText_0x1c4ed8::
+_PharmacyNoMoneyText::
 	text "Huh? That's not"
 	line "enough money."
 	done
 
-UnknownText_0x1c4ef6::
+_PharmacyComeAgainText::
 	text "All right."
 	line "See you around."
 	done
 
-UnknownText_0x1c4f12::
+; unused
+_NothingToSellText::
 	text "You don't have"
 	line "anything to sell."
 	prompt
 
-UnknownText_0x1c4f33::
+_MartSellHowManyText::
 	text "How many?"
 	done
 
-UnknownText_0x1c4f3e::
+_MartSellPriceText::
 	text "I can pay you"
 	line "¥@"
 	text_decimal hMoneyTemp, 3, 6
@@ -627,41 +645,41 @@ UnknownText_0x1c4f3e::
 	para "Is that OK?"
 	done
 
-UnknownText_0x1c4f62::
+_MartWelcomeText::
 	text "Welcome! How may I"
 	line "help you?"
 	done
 
-UnknownText_0x1c4f80::
+_MartThanksText::
 	text "Here you are."
 	line "Thank you!"
 	done
 
-UnknownText_0x1c4f9a::
+_MartNoMoneyText::
 	text "You don't have"
 	line "enough money."
 	done
 
-UnknownText_0x1c4fb7::
+_MartPackFullText::
 	text "You can't carry"
 	line "any more items."
 	done
 
-UnknownText_0x1c4fd7::
+_MartCantBuyText::
 	text "Sorry, I can't buy"
 	line "that from you."
 	prompt
 
-UnknownText_0x1c4ff9::
+_MartComeAgainText::
 	text "Please come again!"
 	done
 
-UnknownText_0x1c500d::
+_MartAskMoreText::
 	text "Can I do anything"
 	line "else for you?"
 	done
 
-UnknownText_0x1c502e::
+_MartBoughtText::
 	text "Got ¥@"
 	text_decimal hMoneyTemp, 3, 6
 	text " for"

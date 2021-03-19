@@ -50,6 +50,16 @@ ReceiveItem::
 	pop bc
 	ret
 
+ReceiveTMHM:: ; d3c4
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, SET_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	scf
+	ret
+
 CheckItem::
 	push hl
 	push de
@@ -67,4 +77,22 @@ CheckItem::
 	pop bc
 	pop de
 	pop hl
+	ret
+
+CheckUniqueItemPocket::
+	ld a, [wCurPocket]
+	cp TM_HM_POCKET
+	ret z
+	cp KEY_ITEM_POCKET
+	ret
+
+CheckTMHM:: ; d3fb
+	ld a, [wCurTMHM]
+	ld e, a
+	ld d, 0
+	ld b, CHECK_FLAG
+	ld hl, wTMsHMs
+	call FlagAction
+	ret z
+	scf
 	ret

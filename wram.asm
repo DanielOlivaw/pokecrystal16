@@ -1989,6 +1989,7 @@ wListPointer:: dw ; d100
 wUnusedD102:: dw ; d102
 wItemAttributesPtr:: dw ; d104
 
+wCurTMHM:: db ; TMHM Update
 wCurItem:: db ; d106
 wCurItemQuantity:: ; d107
 wMartItemID::
@@ -2245,11 +2246,13 @@ wNiteEncounterRate::  db ; d25c
 wWaterEncounterRate:: db ; d25d
 wListMoves_MoveIndicesBuffer:: ds NUM_MOVES
 wPutativeTMHMMove:: db
+wForgettingMove:: db ; TMHM Update
 wInitListType:: db
 wBattleHasJustStarted:: db
 
 ; d265 has many different short-term uses
 wNamedObjectIndexBuffer::
+wCurTMHMBuffer:: ; TMHM Update
 wDeciramBuffer::
 wTempByteValue::
 wNumSetBits::
@@ -2673,7 +2676,7 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 
-	ds 14 ;49 ; needed space for new mons
+	ds 12 ;49 ; needed space for new mons, tm system
 
 ; fight counts
 wJackFightCount::    db ; d9f2
