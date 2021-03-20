@@ -357,7 +357,16 @@ GetIconBank:
 	cp ICON_MIME ; first icon in Icons4
 	lb bc, BANK("Mon Icons 3"), 8
 	ret c
-	ld b, BANK("Mon Icons 4")
+	cp ICON_TYPHLOSION ; first icon in Icons5
+	lb bc, BANK("Mon Icons 4"), 8
+	ret c
+	cp ICON_WOOPER ; first icon in Icons6
+	lb bc, BANK("Mon Icons 5"), 8
+	ret c
+	cp ICON_PHANPY ; first icon in Icons7
+	lb bc, BANK("Mon Icons 6"), 8
+	ret c
+	ld b, BANK("Mon Icons 7")
 	ret
 
 GetGFXUnlessMobile:

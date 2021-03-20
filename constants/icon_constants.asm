@@ -86,6 +86,7 @@
 	const ICON_PONYTA  
 	const ICON_RAPIDASH
 	const ICON_SLOWPOKE
+	const ICON_SLOWBRO
 	const ICON_MAGNEMITE 
 	const ICON_MAGNETON  
 	const ICON_FARFETCH_D
@@ -142,10 +143,93 @@
 	const ICON_DRAGONITE
 	const ICON_MEWTWO
 	const ICON_MEW
+	const ICON_CHIKORITA 
+	const ICON_BAYLEEF   
+	const ICON_MEGANIUM  
+	const ICON_CYNDAQUIL 
+	const ICON_QUILAVA   
+	const ICON_TYPHLOSION
+	const ICON_TOTODILE  
+	const ICON_CROCONAW  
+	const ICON_FERALIGATR
+	const ICON_SENTRET   
+	const ICON_FURRET    
+	const ICON_HOOTHOOT  
+	const ICON_NOCTOWL   
+	const ICON_LEDYBA    
+	const ICON_LEDIAN    
+	const ICON_SPINARAK  
+	const ICON_CROBAT  
+	const ICON_CHINCHOU
+	const ICON_LANTURN 
+	const ICON_PICHU
+	const ICON_CLEFFA
+	const ICON_IGGLYBUFF
+	const ICON_TOGEPI   
+	const ICON_TOGETIC  
+	const ICON_NATU     
+	const ICON_XATU     
+	const ICON_MAREEP   
+	const ICON_FLAAFFY  
+	const ICON_AMPHAROS 
+	const ICON_BELLOSSOM
+	const ICON_MARILL   
+	const ICON_AZUMARILL
 	const ICON_SUDOWOODO
+	const ICON_HOPPIP  
+	const ICON_SKIPLOOM
+	const ICON_JUMPLUFF
+	const ICON_YANMA   
+	const ICON_WOOPER  
+	const ICON_QUAGSIRE
+	const ICON_ESPEON  
+	const ICON_UMBREON 
+	const ICON_MURKROW 
+	const ICON_SLOWKING
+	const ICON_MISDREAVUS
 	const ICON_UNOWN
+	const ICON_GIRAFARIG 
+	const ICON_PINECO    
+	const ICON_FORRETRESS
+	const ICON_DUNSPARCE 
+	const ICON_GLIGAR    
+	const ICON_STEELIX   
+	const ICON_SNUBBULL  
+	const ICON_GRANBULL  
+	const ICON_SCYTHER_2 
+	const ICON_SHUCKLE  
+	const ICON_HERACROSS
+	const ICON_SNEASEL  
+	const ICON_TEDDIURSA
+	const ICON_URSARING 
+	const ICON_SLUGMA   
+	const ICON_MAGCARGO 
+	const ICON_SWINUB   
+	const ICON_PILOSWINE
+	const ICON_CORSOLA
+	const ICON_REMORAID 
+	const ICON_OCTILLERY
+	const ICON_MANTINE  
+	const ICON_SKARMORY 
+	const ICON_HOUNDOUR 
+	const ICON_HOUNDOOM 
+	const ICON_SEADRA_2
+	const ICON_PHANPY   
+	const ICON_DONPHAN  
+	const ICON_PORYGON2 
+	const ICON_SMEARGLE 
+	const ICON_ELEKID   
+	const ICON_MILTANK  
+	const ICON_BLISSEY  
+	const ICON_RAIKOU   
+	const ICON_ENTEI    
+	const ICON_SUICUNE  
+	const ICON_LARVITAR 
+	const ICON_PUPITAR  
+	const ICON_TYRANITAR
 	const ICON_HO_OH
 	const ICON_LUGIA
+	const ICON_CELEBI
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def
