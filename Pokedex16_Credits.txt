@@ -116,9 +116,9 @@ Kabuto                  	Game Freak						Game Freak
 Kabutops                	Game Freak						Game Freak
 Aerodactyl              	Game Freak						Game Freak
 Snorlax                 	Game Freak						Game Freak
-Articuno (Galarian)     	Enderific						Game Freak
+Articuno (Galarian)     	Enderific						  Game Freak
 Zapdos (Galarian)       	EeVeeEe1999						Game Freak
-Moltres (Galarian)      	Involuntary-Twitch				Game Freak
+Moltres (Galarian)      	Involuntary-Twitch		Game Freak
 Dratini                 	Game Freak						Game Freak
 Dragonair               	Game Freak						Game Freak
 Dragonite               	Game Freak						Game Freak
@@ -336,185 +336,185 @@ Groudon                 	Blue Emerald					bloodless
 Rayquaza                	Blue Emerald					bloodless
 Jirachi                 	Blue Emerald					bloodless
 Deoxys                  	Blue Emerald					bloodless
-Turtwig                 	bloodless						bloodless
-Grotle                  	bloodless						bloodless
-Torterra                	Bummer							bloodless
-Chimchar                	Pokekoks						Pokekoks
-Monferno                	Pokekoks						Pokekoks
-Infernape               	Pokekoks						Pokekoks
+Turtwig                 	bloodless					  	bloodless
+Grotle                  	bloodless					  	bloodless
+Torterra                	Bummer						  	bloodless
+Chimchar                	Pokekoks					  	Pokekoks
+Monferno                	Pokekoks					  	Pokekoks
+Infernape               	Pokekoks					  	Pokekoks
 Piplup                  	Game Freak						bloodless
-Prinplup                	bloodless						bloodless
-Empoleon                	COMBOY							bloodless
-Starly                  	COMBOY							bloodless
-Staravia                	bloodless						bloodless
-Staraptor               	bloodless						bloodless
-Bidoof                  	bloodless						bloodless
-Bibarel                 	COMBOY							bloodless
-Shinx                   	bloodless						bloodless
-Luxio                   	bloodless						bloodless
-Luxray                  	bloodless						bloodless
-Budew                   	bloodless						COMBOY
-Roserade                	bloodless						COMBOY
-Cranidos                	bloodless						bloodless
-Rampardos               	bloodless						bloodless
-Shieldon                	bloodless						bloodless
-Bastiodon               	bloodless						bloodless
-Combee                  	bloodless						bloodless
-Vespiquen               	bloodless						bloodless
-Pachirisu               	bloodless						COMBOY
-Buizel                  	bloodless						bloodless
-Floatzel                	bloodless						bloodless
-Shellos (West)          	bloodless						bloodless
-Shellos (East)          	COMBOY							bloodless, Linnie
-Gastrodon (West)        	bloodless						bloodless
-Gastrodon (East)        	COMBOY							COMBOY
+Prinplup                	bloodless					  	bloodless
+Empoleon                	COMBOY						  	bloodless
+Starly                  	COMBOY						  	bloodless
+Staravia                	bloodless					  	bloodless
+Staraptor               	bloodless					  	bloodless
+Bidoof                  	bloodless					  	bloodless
+Bibarel                 	COMBOY						  	bloodless
+Shinx                   	bloodless					  	bloodless
+Luxio                   	bloodless					  	bloodless
+Luxray                  	bloodless					  	bloodless
+Budew                   	bloodless					  	COMBOY
+Roserade                	bloodless					  	COMBOY
+Cranidos                	bloodless					  	bloodless
+Rampardos               	bloodless					  	bloodless
+Shieldon                	bloodless					  	bloodless
+Bastiodon               	bloodless					  	bloodless
+Combee                  	bloodless					  	bloodless
+Vespiquen               	bloodless					  	bloodless
+Pachirisu               	bloodless					  	COMBOY
+Buizel                  	bloodless					  	bloodless
+Floatzel                	bloodless					  	bloodless
+Shellos (West)          	bloodless					  	bloodless
+Shellos (East)          	COMBOY						  	bloodless, Linnie
+Gastrodon (West)        	bloodless					  	bloodless
+Gastrodon (East)        	COMBOY						  	COMBOY
 Drifloon                	Matdemo159						COMBOY
-Drifblim                	bloodless						COMBOY
-Buneary                 	bloodless						bloodless
-Lopunny                 	bloodless						bloodless
-Mismagius               	bloodless						bloodless
-Honchkrow               	bloodless						metalflygon08
-Glameow                 	COMBOY							COMBOY
-Purugly                 	bloodless						COMBOY
-Chingling               	bloodless						bloodless
-Stunky                  	bloodless						COMBOY
-Skuntank                	bloodless						COMBOY
-Bronzor                 	bloodless						bloodless
-Bronzong                	bloodless						bloodless
-Bonsly                  	bloodless						COMBOY
+Drifblim                	bloodless					  	COMBOY
+Buneary                 	bloodless					  	bloodless
+Lopunny                 	bloodless					  	bloodless
+Mismagius               	bloodless					  	bloodless
+Honchkrow               	bloodless					  	metalflygon08
+Glameow                 	COMBOY						  	COMBOY
+Purugly                 	bloodless					  	COMBOY
+Chingling               	bloodless					  	bloodless
+Stunky                  	bloodless					  	COMBOY
+Skuntank                	bloodless					  	COMBOY
+Bronzor                 	bloodless					  	bloodless
+Bronzong                	bloodless					  	bloodless
+Bonsly                  	bloodless					  	COMBOY
 Mime Jr.                	Chaos Rush						Chaos Rush
-Happiny                 	COMBOY							COMBOY
-Chatot                  	bloodless						COMBOY
-Spiritomb               	bloodless						bloodless
-Gible                   	bloodless						bloodless
-Gabite                  	bloodless						bloodless
-Garchomp                	bloodless						bloodless
-Munchlax                	bloodless						bloodless
-Riolu                   	bloodless						bloodless
-Lucario                 	bloodless						bloodless
-Hippopotas              	bloodless						COMBOY
-Hippowdon               	bloodless						COMBOY
-Skorupi                 	bloodless						bloodless
-Drapion                 	bloodless						bloodless
-Croagunk                	bloodless						bloodless
-Toxicroak               	bloodless						bloodless
-Carnivine               	bloodless						COMBOY
-Finneon                 	bloodless						COMBOY
-Lumineon                	bloodless						COMBOY
-Mantyke                 	COMBOY							COMBOY
-Snover                  	bloodless						bloodless
-Abomasnow               	bloodless						COMBOY
-Weavile                 	bloodless						bloodless
-Magnezone               	Solo993							bloodless
-Tangrowth               	COMBOY							bloodless
-Electivire              	amvz08							Chaos Rush
+Happiny                 	COMBOY						  	COMBOY
+Chatot                  	bloodless					  	COMBOY
+Spiritomb               	bloodless					  	bloodless
+Gible                   	bloodless					  	bloodless
+Gabite                  	bloodless					  	bloodless
+Garchomp                	bloodless					  	bloodless
+Munchlax                	bloodless					  	bloodless
+Riolu                   	bloodless					  	bloodless
+Lucario                 	bloodless					  	bloodless
+Hippopotas              	bloodless					  	COMBOY
+Hippowdon               	bloodless					  	COMBOY
+Skorupi                 	bloodless					  	bloodless
+Drapion                 	bloodless					  	bloodless
+Croagunk                	bloodless					  	bloodless
+Toxicroak               	bloodless					  	bloodless
+Carnivine               	bloodless					  	COMBOY
+Finneon                 	bloodless					  	COMBOY
+Lumineon                	bloodless					  	COMBOY
+Mantyke                 	COMBOY						  	COMBOY
+Snover                  	bloodless					  	bloodless
+Abomasnow               	bloodless					  	COMBOY
+Weavile                 	bloodless					  	bloodless
+Magnezone               	Solo993						  	bloodless
+Tangrowth               	COMBOY						  	bloodless
+Electivire              	amvz08						  	Chaos Rush
 Togekiss                	Kreestanala						COMBOY
-Yanmega                 	bloodless						COMBOY
-Leafeon                 	bloodless						bloodless
-Glaceon                 	bloodless						bloodless
-Gliscor                 	bloodless						bloodless
-Mamoswine               	Bummer							bloodless
-Porygon-Z               	bloodless						bloodless
-Gallade                 	bloodless						bloodless
-Probopass               	Neslug							bloodless
+Yanmega                 	bloodless				  		COMBOY
+Leafeon                 	bloodless				  		bloodless
+Glaceon                 	bloodless				  		bloodless
+Gliscor                 	bloodless				  		bloodless
+Mamoswine               	Bummer					  		bloodless
+Porygon-Z               	bloodless				  		bloodless
+Gallade                 	bloodless				  		bloodless
+Probopass               	Neslug					  		bloodless
 Dusknoir                	Game Freak						COMBOY
-Froslass                	bloodless						bloodless
-Rotom                   	bloodless						COMBOY
-Uxie                    	bloodless						Game Freak
-Mesprit                 	bloodless						Game Freak
-Azelf                   	bloodless						Game Freak
-Dialga                  	bloodless						COMBOY
-Palkia                  	bloodless						COMBOY
-Regigigas               	bloodless						COMBOY
-Giratina                	COMBOY							COMBOY
-Cresselia               	bloodless						bloodless
-Darkrai                 	bloodless						COMBOY
-Shaymin                 	bloodless, COMBOY				COMBOY
-Arceus                  	bloodless						bloodless
-Oshawott                	bloodless						COMBOY
-Dewott                  	bloodless						COMBOY
-Samurott                	N-Kin							COMBOY
+Froslass                	bloodless				  		bloodless
+Rotom                   	bloodless				  		COMBOY
+Uxie                    	bloodless				  		Game Freak
+Mesprit                 	bloodless				  		Game Freak
+Azelf                   	bloodless				  		Game Freak
+Dialga                  	bloodless				  		COMBOY
+Palkia                  	bloodless				  		COMBOY
+Regigigas               	bloodless				  		COMBOY
+Giratina                	COMBOY					  		COMBOY
+Cresselia               	bloodless				  		bloodless
+Darkrai                 	bloodless				  		COMBOY
+Shaymin                 	bloodless, COMBOY			COMBOY
+Arceus                  	bloodless					  	bloodless
+Oshawott                	bloodless					  	COMBOY
+Dewott                  	bloodless					  	COMBOY
+Samurott                	N-Kin							    COMBOY
 Lillipup                	Game Freak						Pokekoks
-Herdier                 	Pokekoks						Pokekoks
-Stoutland               	Pokekoks						Pokekoks
-Purrloin                	Pokekoks						Pokekoks
+Herdier                 	Pokekoks					  	Pokekoks
+Stoutland               	Pokekoks					  	Pokekoks
+Purrloin                	Pokekoks					  	Pokekoks
 Liepard                 	EeVeeEe1999						Pokekoks
-Munna                   	Pokekoks						Pokekoks
-Musharna                	G0LD Z!							G0LD Z!
-Roggenrola              	Bummer							COMBOY
+Munna                   	Pokekoks					  	Pokekoks
+Musharna                	G0LD Z!						  	G0LD Z!
+Roggenrola              	Bummer						  	COMBOY
 Boldore                 	Chris2Balls						COMBOY
 Gigalith                	lakeofdance						lakeofdance
-Woobat                  	Gors							COMBOY
+Woobat                  	Gors							    COMBOY
 Swoobat                 	ubasuteyama						COMBOY
-Audino                  	Wisgarus						Wisgarus
-Timburr                 	bloodless						COMBOY
+Audino                  	Wisgarus					  	Wisgarus
+Timburr                 	bloodless					  	COMBOY
 Gurdurr                 	Nicktendo DS					Bummer
-Conkeldurr              	Bummer							Bummer
-Sewaddle                	COMBOY							COMBOY
-Swadloon                	COMBOY							COMBOY
-Leavanny                	COMBOY							COMBOY
-Venipede                	Bummer							Bummer
-Whirlipede              	Bummer							Bummer
-Scolipede               	Bummer							COMBOY
-Cottonee                	bloodless						COMBOY
-Whimsicott              	Bummer							COMBOY
-Petilil                 	Jphyper							COMBOY
-Lilligant               	COMBOY							COMBOY
-Basculin                	Neslug							COMBOY
+Conkeldurr              	Bummer						  	Bummer
+Sewaddle                	COMBOY						  	COMBOY
+Swadloon                	COMBOY						  	COMBOY
+Leavanny                	COMBOY						  	COMBOY
+Venipede                	Bummer						  	Bummer
+Whirlipede              	Bummer						  	Bummer
+Scolipede               	Bummer						  	COMBOY
+Cottonee                	bloodless					  	COMBOY
+Whimsicott              	Bummer						  	COMBOY
+Petilil                 	Jphyper						  	COMBOY
+Lilligant               	COMBOY						  	COMBOY
+Basculin                	Neslug						  	COMBOY
 Sandile                 	lakeofdance						COMBOY
-Krokorok                	YumeYukimenokoTsuki				COMBOY
+Krokorok                	YumeYukimenokoTsuki		COMBOY
 Krookodile              	lakeofdance						lakeofdance
 Darumaka (Galarian)     	EeVeeEe1999						Pokekoks
 Darmanitan (Galarian)   	EeVeeEe1999						leParagon
-Maractus                	COMBOY							COMBOY
-Dwebble                 	bloodless						COMBOY
-Crustle                 	bloodless						COMBOY
-Scraggy                 	Pokekoks						Pokekoks
-Scrafty                 	Pokekoks						Pokekoks
+Maractus                	COMBOY							  COMBOY
+Dwebble                 	bloodless					  	COMBOY
+Crustle                 	bloodless					  	COMBOY
+Scraggy                 	Pokekoks					  	Pokekoks
+Scrafty                 	Pokekoks					  	Pokekoks
 Yamask (Galarian)       	Pia Carrot						Pokekoks
-Tirtouga                	COMBOY							COMBOY
+Tirtouga                	COMBOY						  	COMBOY
 Carracosta              	Chris2Balls						COMBOY
 Archen                  	lakeofdance						COMBOY
-Archeops                	Jphyper							COMBOY
+Archeops                	Jphyper							  COMBOY
 Solosis                 	Game Freak						COMBOY
 Duosion                 	lakeofdance						lakeofdance
 Reuniclus               	EeVeeEe1999						Game Freak
-Frillish (Female)           Game Freak						COMBOY
-Frillish (Male)             Pokekoks						Pokekoks
-Jellicent (Female)       	COMBOY							COMBOY
-Jellicent (Male)         	Pokekoks						Pokekoks
-Joltik                  	COMBOY							COMBOY
-Galvantula              	COMBOY							COMBOY
-Ferroseed               	Bummer							Bummer
-Ferrothorn              	Bummer							Bummer
-Tynamo                  	Bummer							COMBOY
-Eelektrik               	Bummer							COMBOY
-Eelektross              	Bummer							COMBOY
-Elgyem                  	Pokekoks						Pokekoks
-Beheeyem                	Pokekoks						Pokekoks
-Litwick                 	Bummer							Bummer
-Lampent                 	Bummer							Bummer
-Chandelure              	Bummer							Bummer
-Axew                    	Bummer							Bummer
-Fraxure                 	Bummer							Bummer
-Haxorus                 	Bummer							Bummer
+Frillish (Female)         Game Freak						COMBOY
+Frillish (Male)           Pokekoks					  	Pokekoks
+Jellicent (Female)       	COMBOY						  	COMBOY
+Jellicent (Male)         	Pokekoks					  	Pokekoks
+Joltik                  	COMBOY						  	COMBOY
+Galvantula              	COMBOY						  	COMBOY
+Ferroseed               	Bummer						  	Bummer
+Ferrothorn              	Bummer						  	Bummer
+Tynamo                  	Bummer						  	COMBOY
+Eelektrik               	Bummer						  	COMBOY
+Eelektross              	Bummer						  	COMBOY
+Elgyem                  	Pokekoks					  	Pokekoks
+Beheeyem                	Pokekoks					  	Pokekoks
+Litwick                 	Bummer						  	Bummer
+Lampent                 	Bummer						  	Bummer
+Chandelure              	Bummer						  	Bummer
+Axew                    	Bummer						  	Bummer
+Fraxure                 	Bummer						  	Bummer
+Haxorus                 	Bummer						  	Bummer
 Cubchoo                 	EeVeeEe1999						COMBOY
-Beartic                 	COMBOY							COMBOY
-Stunfisk                	Bummer							Bummer
-Mienfoo                 	COMBOY							COMBOY
-Mienshao                	COMBOY							COMBOY
-Druddigon               	gmerc							Bummer
-Golett                  	Bummer							Bummer
-Golurk                  	Bummer							Bummer
-Pawniard                	COMBOY							COMBOY
-Bisharp                 	Bummer							Bummer
-Heatmor                 	Bummer							Bummer
-Durant                  	Bummer							Bummer
-Deino                   	Bummer							COMBOY
-Zweilous                	Bummer							Bummer
+Beartic                 	COMBOY						  	COMBOY
+Stunfisk                	Bummer						  	Bummer
+Mienfoo                 	COMBOY						  	COMBOY
+Mienshao                	COMBOY						  	COMBOY
+Druddigon               	gmerc							    Bummer
+Golett                  	Bummer						  	Bummer
+Golurk                  	Bummer						  	Bummer
+Pawniard                	COMBOY						  	COMBOY
+Bisharp                 	Bummer						  	Bummer
+Heatmor                 	Bummer						  	Bummer
+Durant                  	Bummer						  	Bummer
+Deino                   	Bummer						  	COMBOY
+Zweilous                	Bummer						  	Bummer
 Hydreigon               	Bronzeswagger					Bummer
-Larvesta                	Thor							COMBOY
-Volcarona               	Thor							COMBOY
+Larvesta                	Thor						    	COMBOY
+Volcarona               	Thor						    	COMBOY
 Chespin                 	MrDollSteak						Chamber
 Quilladin               	Solo993							Chamber
 Chesnaught              	Solo993							Chamber
