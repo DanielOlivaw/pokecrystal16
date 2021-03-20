@@ -12,14 +12,14 @@ Wartortle               	Game Freak						Game Freak
 Blastoise               	Game Freak						Game Freak
 Caterpie                	Game Freak						Game Freak
 Metapod                 	Game Freak						Game Freak
-Butterfree              	Menyu							Game Freak
+Butterfree              	Menyu						    	Game Freak
 Weedle                  	Game Freak						Game Freak
 Kakuna                  	Game Freak						Game Freak
 Beedrill                	Game Freak						Game Freak
 Rattata (Alolan)        	Pia Carrot						Kevin RDS
 Raticate (Alolan)       	Pia Carrot						Game Freak
 Pikachu                 	Game Freak						Game Freak
-Raichu (Alolan)         	*								Pia Carrot
+Raichu (Alolan)         	*							      	Pia Carrot
 Sandshrew (Alolan)      	Pia Carrot						Pia Carrot
 Sandslash (Alolan)      	Pia Carrot						Pia Carrot
 Nidoran♀                	Game Freak						Game Freak
@@ -43,7 +43,7 @@ Paras                   	Game Freak						Game Freak
 Parasect                	Game Freak						Game Freak
 Venonat                 	Game Freak						Game Freak
 Venomoth                	Game Freak						Game Freak
-Meowth (Galarian)       	utytft							utytft
+Meowth (Galarian)       	utytft						  	utytft
 Psyduck                 	Game Freak						Game Freak
 Golduck                 	Game Freak						Game Freak
 Mankey                  	Game Freak						Game Freak
@@ -96,7 +96,7 @@ Horsea                  	Game Freak						Game Freak
 Seadra                  	Game Freak						Game Freak
 Staryu                  	Game Freak						Game Freak
 Starmie                 	Game Freak						Game Freak
-Mr. Mime (Galarian)     	utytft							utytft
+Mr. Mime (Galarian)     	utytft					  		utytft
 Scyther                 	Game Freak						Game Freak
 Electabuzz              	Game Freak						Game Freak
 Pinsir                  	Game Freak						Game Freak
@@ -125,17 +125,17 @@ Dragonite               	Game Freak						Game Freak
 Mewtwo                  	Game Freak						Game Freak
 Mew                     	Game Freak						Game Freak
 GS beta Tangela pre-evo 	Game Freak						Game Freak
-GS beta fish            	Rool, SoupPotato				Rool, SoupPotato
+GS beta fish            	Rool, SoupPotato			Rool, SoupPotato
 GS beta shark           	marcstuts0842					marcstuts0842
 GS beta Meowth pre-evo  	Game Freak						Game Freak
-GS beta bell cat 1      	Rool, SoupPotato				Rool, SoupPotato
-GS beta bell cat 2      	Rool, SoupPotato				Rool, SoupPotato
-GS beta electric tiger 1	Rool, SoupPotato				Rool, SoupPotato
-GS beta electric tiger 2	Rool, SoupPotato				Rool, SoupPotato
-GS beta Farfetch'd evo  	Menyu, Pia Carrot				Game Freak
-GS beta doll            	Rool, SoupPotato				Rool, SoupPotato
-GS beta panda           	Rool, SoupPotato				Rool, SoupPotato
-GS beta ice wolf 1      	Rool, SoupPotato				Rool, SoupPotato
+GS beta bell cat 1      	Rool, SoupPotato			Rool, SoupPotato
+GS beta bell cat 2      	Rool, SoupPotato			Rool, SoupPotato
+GS beta electric tiger 1	Rool, SoupPotato			Rool, SoupPotato
+GS beta electric tiger 2	Rool, SoupPotato			Rool, SoupPotato
+GS beta Farfetch'd evo  	Menyu, Pia Carrot			Game Freak
+GS beta doll            	Rool, SoupPotato			Rool, SoupPotato
+GS beta panda           	Rool, SoupPotato			Rool, SoupPotato
+GS beta ice wolf 1      	Rool, SoupPotato			Rool, SoupPotato
 GS beta ice wolf 2      	marcstuts0842					marcstuts0842
 Chikorita               	Game Freak						Game Freak
 Bayleef                 	Game Freak						Game Freak
@@ -201,7 +201,7 @@ Slugma                  	Game Freak						Game Freak
 Magcargo                	Game Freak						Game Freak
 Swinub                  	Game Freak						Game Freak
 Piloswine               	Game Freak						Game Freak
-Corsola (Galarian)      	utytft							utytft
+Corsola (Galarian)      	utytft						  	utytft
 Remoraid                	Game Freak						Game Freak
 Octillery               	Game Freak						Game Freak
 Mantine                 	Game Freak						Game Freak
@@ -212,7 +212,7 @@ Kingdra                 	Game Freak						Game Freak
 Phanpy                  	Game Freak						Game Freak
 Donphan                 	Game Freak						Game Freak
 Porygon2                	Game Freak						Game Freak
-Smeargle                	BynineB							Game Freak
+Smeargle                	BynineB						  	Game Freak
 Elekid                  	Game Freak						Game Freak
 Miltank                 	Game Freak						Game Freak
 Blissey                 	Game Freak						Game Freak
@@ -238,17 +238,17 @@ Poochyena               	Blue Emerald					bloodless
 Mightyena               	Blue Emerald					bloodless
 Zigzagoon (Galarian)    	EeVeeEe1999						bloodless
 Linoone (Galarian)      	EeVeeEe1999						bloodless
-Lotad                   	COMBOY							COMBOY
+Lotad                   	COMBOY						  	COMBOY
 Lombre                  	Blue Emerald					bloodless
 Ludicolo                	Blue Emerald					bloodless
 Seedot                  	Blue Emerald					bloodless
-Nuzleaf                 	Blue Emerald, COMBOY			bloodless
+Nuzleaf                 	Blue Emerald, COMBOY	bloodless
 Shiftry                 	Blue Emerald					COMBOY
 Wingull                 	Blue Emerald					bloodless
 Pelipper                	Blue Emerald					bloodless
 Ralts                   	Blue Emerald					bloodless
 Kirlia                  	Blue Emerald					bloodless
-Gardevoir               	COMBOY							bloodless
+Gardevoir               	COMBOY						  	bloodless
 Surskit                 	Blue Emerald					bloodless
 Masquerain              	Blue Emerald					bloodless
 Shroomish               	Blue Emerald					bloodless
@@ -258,7 +258,7 @@ Hariyama                	Blue Emerald					bloodless
 Azurill                 	Blue Emerald					bloodless
 Nosepass                	Blue Emerald					bloodless
 Skitty                  	Blue Emerald					COMBOY
-Delcatty                	COMBOY							bloodless
+Delcatty                	COMBOY					  		bloodless
 Sableye                 	Blue Emerald					bloodless
 Mawile                  	Blue Emerald					COMBOY
 Aron                    	Blue Emerald					bloodless
@@ -309,22 +309,22 @@ Duskull                 	Game Freak						bloodless
 Dusclops                	Blue Emerald					bloodless
 Tropius                 	Blue Emerald					bloodless
 Chimecho                	Blue Emerald					bloodless
-Absol                   	Bummer							COMBOY
+Absol                   	Bummer						  	COMBOY
 Snorunt                 	Blue Emerald					bloodless
 Glalie                  	Blue Emerald					bloodless
 Spheal                  	Matdemo159						bloodless
 Sealeo                  	Blue Emerald					bloodless
-Walrein                 	COMBOY							bloodless
+Walrein                 	COMBOY						  	bloodless
 Clamperl                	Blue Emerald					bloodless
-Huntail                 	COMBOY							COMBOY
+Huntail                 	COMBOY						  	COMBOY
 Gorebyss                	Blue Emerald					bloodless
 Relicanth               	Blue Emerald					bloodless
-Luvdisc                 	COMBOY							COMBOY
+Luvdisc                 	COMBOY							  COMBOY
 Bagon                   	Blue Emerald					bloodless
-Shelgon                 	QuilChess						bloodless
-Salamence               	com3tiin						bloodless
-Beldum                  	COMBOY							COMBOY
-Metang                  	COMBOY							COMBOY
+Shelgon                 	QuilChess					  	bloodless
+Salamence               	com3tiin					  	bloodless
+Beldum                  	COMBOY						  	COMBOY
+Metang                  	COMBOY						  	COMBOY
 Metagross               	Blue Emerald					bloodless
 Regirock                	Blue Emerald					bloodless
 Regice                  	Blue Emerald					bloodless
