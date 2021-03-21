@@ -15,7 +15,7 @@ TinTower4FPPUp:
 	itemball PP_UP
 
 TinTower4FEscapeRope:
-	itemball ESCAPE_ROPE
+	itemball DAWN_STONE
 
 TinTower4FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_TIN_TOWER_4F_HIDDEN_MAX_POTION
