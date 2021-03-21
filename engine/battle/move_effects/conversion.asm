@@ -12,7 +12,7 @@ BattleCommand_Conversion:
 	push de
 	ld c, 0
 	ld de, wStringBuffer1
-.loop
+; .loop
 	push hl
 	ld b, 0
 	add hl, bc
@@ -32,7 +32,7 @@ BattleCommand_Conversion:
 	inc c
 	ld a, c
 	cp NUM_MOVES
-	jr c, .loop
+	; jr c, .loop
 .okay
 	ld a, $ff
 	ld [de], a

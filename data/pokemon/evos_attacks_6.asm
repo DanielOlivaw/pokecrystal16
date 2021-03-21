@@ -78,13 +78,13 @@ ChesnaughtEvosAttacks:
 	db 0 ; no more level-up moves
 
 FennekinEvosAttacks:
-	dbbw EVOLVE_LEVEL, 16, BRAIXEN
+	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, BRAIXEN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 BraixenEvosAttacks:
-	dbbw EVOLVE_LEVEL, 36, DELPHOX
+	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, DELPHOX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves

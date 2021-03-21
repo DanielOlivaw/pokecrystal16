@@ -227,6 +227,6 @@ IconPointers:
 	dw LarvitarIcon
 	dw PupitarIcon
 	dw TyranitarIcon
-	dw Ho_ohIcon
+	dw HoOhIcon
 	dw LugiaIcon
 	dw CelebiIcon

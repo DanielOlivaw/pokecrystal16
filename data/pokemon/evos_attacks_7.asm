@@ -58,13 +58,13 @@ EvosAttacksPointers7::
 	dw BlacephlonEvosAttacks
 
 RowletEvosAttacks:
-	dbbw EVOLVE_LEVEL, 17, DARTRIX
+	dbbbw EVOLVE_LEVEL, 17, TR_ANYTIME, DARTRIX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 DartrixEvosAttacks:
-	dbbw EVOLVE_LEVEL, 34, DECIDUEYE
+	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, DECIDUEYE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves

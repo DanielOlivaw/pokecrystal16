@@ -144,13 +144,13 @@ BlazikenEvosAttacks:
 	db 0 ; no more level-up moves
 
 MudkipEvosAttacks:
-	; dbbw EVOLVE_LEVEL, 16, MARSHTOMP
+	; dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, MARSHTOMP
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 MarshtompEvosAttacks:
-	; dbbw EVOLVE_LEVEL, 36, SWAMPERT
+	; dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, SWAMPERT
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves

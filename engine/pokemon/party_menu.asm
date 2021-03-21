@@ -360,6 +360,7 @@ PlacePartyMonEvoStoneCompatibility:
 	jr z, .next
 	push hl
 	ld a, b
+	ld [wCurPartyMon], a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1Species
 	call AddNTimes
