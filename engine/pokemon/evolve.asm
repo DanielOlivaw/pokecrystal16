@@ -85,6 +85,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_LEVEL
 	jp z, .level
 
+	cp EVOLVE_LEVEL_GENDER
+	jp z, .level_gender
+
 	cp EVOLVE_HAPPINESS
 	jp z, .happiness
 
@@ -170,10 +173,39 @@ EvolveAfterBattle_MasterLoop:
 	ld b, a
 	ld a, [wTempMonLevel]
 	cp b
+	jp c, .skip_evolution_species_parameter
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+	jp .check_time
+
+.level_gender
+	; Evolve based on level and gender
+
+	; Get Pokemon's gender
+	push hl
+	farcall GetGender
+	pop hl
+	jp c, .dont_evolve_check
+
+	; Check gender (using the zero flag because a isn't returned afer a farcall)
+	call GetNextEvoAttackByte
+	jr z, .level_gender_female
+	cp MON_MALE
+	jr .level_gender_check
+.level_gender_female
+	cp MON_FEMALE
+.level_gender_check
+	jp nz, .skip_evolution_species_parameter
+	
+	; Check level
+	call GetNextEvoAttackByte
+	ld b, a
+	ld a, [wTempMonLevel]
+	cp b
 	jp c, .skip_evolution_species
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species
-	jp .checktime
+	jp .proceed
 
 .happiness
 	; Evolve based on happiness above HAPPINESS_TO_EVOLVE and time of day 
@@ -183,7 +215,7 @@ EvolveAfterBattle_MasterLoop:
 
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species_parameter
-	jp .checktime
+	jp .check_time
 
 .stat
 	; Tyrogue evolution
@@ -215,7 +247,7 @@ EvolveAfterBattle_MasterLoop:
 .move
 	; Evolve if specified move is known
 	call IsMonHoldingEverstone
-	jp z, .skip_evolution_species_two_parameters
+	jp z, .dont_evolve_check
 
 	ldh a, [hTemp]
 	push hl
@@ -233,7 +265,7 @@ EvolveAfterBattle_MasterLoop:
 	inc de
 	dec c
 	jp nz, .move_loop
-	jp .skip_evolution_species_two_parameters
+	jp .dont_evolve_check
 
 .move_found
 	; If it's going to evolve, we need to get the Pokemon it will evolve into before proceeding
@@ -242,6 +274,7 @@ EvolveAfterBattle_MasterLoop:
 	jp .proceed
 
 .move_type
+	; Evolve if a move of the specified type is known by the Pokemon
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species_parameter
 
@@ -292,12 +325,12 @@ EvolveAfterBattle_MasterLoop:
 	call GetNextEvoAttackByte
 	cp b
 	jp nz, .skip_evolution_species_parameter
-	jr .checktime
+	jr .check_time
 
 .party
 	; Evolve if specified Pokemon is in the party
 	call IsMonHoldingEverstone
-	jp z, .skip_evolution_species_two_parameters
+	jp z, .dont_evolve_check
 
 	; Check if any of the party mons are the specified one
 	ldh a, [hTemp]
@@ -307,16 +340,16 @@ EvolveAfterBattle_MasterLoop:
 	ld b, a
 	farcall FindThatSpecies
 	pop hl
-	
+
 	; If the player doesn't have the desired species, move on
-	jp z, .skip_evolution_species_two_parameters
+	jp z, .dont_evolve_check
 	
 	; If it's going to evolve, we need to get the Pokemon it will evolve into before proceeding
 	call GetNextEvoAttackByte
 	inc hl
 	jr .proceed
 	
-.checktime
+.check_time
 	; Check the time (used for EVOLVE_LEVEL, EVOLVE_HAPPINESS, and EVOLVE_HOLDING)
 	call GetNextEvoAttackByte
 	cp TR_ANYTIME
@@ -476,19 +509,14 @@ EvolveAfterBattle_MasterLoop:
 
 .dont_evolve_check
 	ld a, b
-	cp EVOLVE_LEVEL
-	jr z, .skip_evolution_species_two_parameters
-	cp EVOLVE_ITEM_GENDER
-	jr z, .skip_evolution_species_two_parameters
-	cp EVOLVE_STAT
-	jr z, .skip_evolution_species_two_parameters
-	cp EVOLVE_MOVE
-	jr z, .skip_evolution_species_two_parameters
-	cp EVOLVE_PARTY
-	jr z, .skip_evolution_species_two_parameters
-	cp EVOLVE_HOLDING
-	jr nz, .skip_evolution_species_parameter
-.skip_evolution_species_two_parameters
+	cp EVOLVE_ITEM
+	jr z, .skip_evolution_species_parameter
+	cp EVOLVE_TRADE
+	jr z, .skip_evolution_species_parameter
+	cp EVOLVE_HAPPINESS
+	jr z, .skip_evolution_species_parameter
+	cp EVOLVE_MOVE_TYPE
+	jr z, .skip_evolution_species_parameter
 	inc hl
 .skip_evolution_species_parameter
 	inc hl
@@ -798,19 +826,14 @@ SkipEvolutions::
 	inc hl
 	and a
 	ret z
-	cp EVOLVE_LEVEL
-	jr z, .extra_skip
-	cp EVOLVE_ITEM_GENDER
-	jr z, .extra_skip
-	cp EVOLVE_STAT
-	jr z, .extra_skip
-	cp EVOLVE_PARTY
-	jr z, .extra_skip
-	cp EVOLVE_MOVE
-	jr z, .extra_skip
-	cp EVOLVE_HOLDING
-	jr nz, .no_extra_skip
-.extra_skip
+	cp EVOLVE_ITEM
+	jr z, .no_extra_skip
+	cp EVOLVE_TRADE
+	jr z, .no_extra_skip
+	cp EVOLVE_HAPPINESS
+	jr z, .no_extra_skip
+	cp EVOLVE_MOVE_TYPE
+	jr z, .no_extra_skip
 	inc hl
 .no_extra_skip
 	inc hl
@@ -831,6 +854,8 @@ DetermineEvolutionItemResults::
 	and a
 	ret z
 	cp EVOLVE_LEVEL
+	jr z, .skip_species_two_parameters
+	cp EVOLVE_LEVEL_GENDER
 	jr z, .skip_species_two_parameters
 	cp EVOLVE_ITEM_GENDER
 	jr z, .skip_species_two_parameters

@@ -1,689 +1,689 @@
 
-- NAME -                	-FRONT-							-BACK-
+- NAME -                    -FRONT-                            -BACK-
 
-Bulbasaur               	Game Freak						Game Freak
-Ivysaur                 	Game Freak						Game Freak
-Venusaur                	Game Freak						Game Freak
-Charmander              	Game Freak						Game Freak
-Charmeleon              	Game Freak						Game Freak
-Charizard               	Game Freak						Game Freak
-Squirtle                	Matdemo159						Game Freak
-Wartortle               	Game Freak						Game Freak
-Blastoise               	Game Freak						Game Freak
-Caterpie                	Game Freak						Game Freak
-Metapod                 	Game Freak						Game Freak
-Butterfree              	Menyu						    	Game Freak
-Weedle                  	Game Freak						Game Freak
-Kakuna                  	Game Freak						Game Freak
-Beedrill                	Game Freak						Game Freak
-Rattata (Alolan)        	Pia Carrot						Kevin RDS
-Raticate (Alolan)       	Pia Carrot						Game Freak
-Pikachu                 	Game Freak						Game Freak
-Raichu (Alolan)         	*							      	Pia Carrot
-Sandshrew (Alolan)      	Pia Carrot						Pia Carrot
-Sandslash (Alolan)      	Pia Carrot						Pia Carrot
-Nidoran♀                	Game Freak						Game Freak
-Nidorina                	Game Freak						Game Freak
-Nidoqueen               	Game Freak						Game Freak
-Nidoran♂                	Game Freak						Game Freak
-Nidorino                	Game Freak						Game Freak
-Nidoking                	Game Freak						Game Freak
-Clefairy                	Game Freak						Game Freak
-Clefable                	Game Freak						Game Freak
-Vulpix (Alolan)         	Pia Carrot						Pia Carrot
-Ninetales (Alolan)      	Pia Carrot						Pia Carrot
-Jigglypuff              	Matdemo159						Game Freak
-Wigglytuff              	Game Freak						Game Freak
-Zubat                   	Game Freak						Game Freak
-Golbat                  	Game Freak						Game Freak
-Oddish                  	Game Freak						Game Freak
-Gloom                   	Game Freak						Game Freak
-Vileplume               	Game Freak						Game Freak
-Paras                   	Game Freak						Game Freak
-Parasect                	Game Freak						Game Freak
-Venonat                 	Game Freak						Game Freak
-Venomoth                	Game Freak						Game Freak
-Meowth (Galarian)       	utytft						  	utytft
-Psyduck                 	Game Freak						Game Freak
-Golduck                 	Game Freak						Game Freak
-Mankey                  	Game Freak						Game Freak
-Primeape                	Game Freak						Game Freak
-Growlithe               	Game Freak						Game Freak
-Arcanine                	Game Freak						Game Freak
-Abra                    	Game Freak						Game Freak
-Kadabra                 	Game Freak						Game Freak
-Alakazam                	Game Freak						Game Freak
-Machop                  	Game Freak						Game Freak
-Machoke                 	Game Freak						Game Freak
-Machamp                 	Game Freak						Game Freak
-Bellsprout              	Game Freak						Game Freak
-Weepinbell              	Game Freak						Game Freak
-Victreebel              	Game Freak						Game Freak
-Tentacool               	Game Freak						Game Freak
-Tentacruel              	Game Freak						Game Freak
-Geodude                 	Game Freak						Game Freak
-Graveler                	Game Freak						Game Freak
-Golem                   	Game Freak						Game Freak
-Ponyta                  	Game Freak						Game Freak
-Rapidash                	Game Freak						Game Freak
-Slowpoke                	Game Freak						Game Freak
-Slowbro                 	Game Freak						Game Freak
-Magnemite               	Game Freak						Game Freak
-Magneton                	Game Freak						Game Freak
-Farfetch'd              	Game Freak						Game Freak
-Seel                    	Game Freak						Game Freak
-Dewgong                 	Game Freak						Game Freak
-Grimer                  	Game Freak						Game Freak
-Muk                     	Game Freak						Game Freak
-Gastly                  	Game Freak						Game Freak
-Haunter                 	Game Freak						Game Freak
-Gengar                  	Game Freak						Game Freak
-Onix                    	Game Freak						Game Freak
-Drowzee                 	Game Freak						Game Freak
-Hypno                   	Game Freak						Game Freak
-Krabby                  	Game Freak						Game Freak
-Kingler                 	Game Freak						Game Freak
-Exeggcute               	Game Freak						Game Freak
-Exeggutor (Alolan)      	SkidMarc25						Pia Carrot
-Cubone                  	Game Freak						Game Freak
-Marowak                 	Game Freak						Game Freak
-Koffing                 	Game Freak						Game Freak
-Weezing (Galarian)      	Pia Carrot						French Cyndaquil
-Chansey                 	Matdemo159						Game Freak
-Tangela                 	Game Freak						Game Freak
-Kangaskhan              	Game Freak						Game Freak
-Horsea                  	Game Freak						Game Freak
-Seadra                  	Game Freak						Game Freak
-Staryu                  	Game Freak						Game Freak
-Starmie                 	Game Freak						Game Freak
-Mr. Mime (Galarian)     	utytft					  		utytft
-Scyther                 	Game Freak						Game Freak
-Electabuzz              	Game Freak						Game Freak
-Pinsir                  	Game Freak						Game Freak
-Tauros                  	Game Freak						Game Freak
-Magikarp                	Game Freak						Game Freak
-Gyarados                	Game Freak						Game Freak
-Lapras                  	Game Freak						Game Freak
-Ditto                   	Game Freak						Game Freak
-Eevee                   	Game Freak						Game Freak
-Flareon                 	Game Freak						Game Freak
-Jolteon                 	Game Freak						Game Freak
-Vaporeon                	Game Freak						Game Freak
-Porygon                 	Game Freak						Game Freak
-Omanyte                 	Game Freak						Game Freak
-Omastar                 	Game Freak						Game Freak
-Kabuto                  	Game Freak						Game Freak
-Kabutops                	Game Freak						Game Freak
-Aerodactyl              	Game Freak						Game Freak
-Snorlax                 	Game Freak						Game Freak
-Articuno (Galarian)     	Enderific						  Game Freak
-Zapdos (Galarian)       	EeVeeEe1999						Game Freak
-Moltres (Galarian)      	Involuntary-Twitch		Game Freak
-Dratini                 	Game Freak						Game Freak
-Dragonair               	Game Freak						Game Freak
-Dragonite               	Game Freak						Game Freak
-Mewtwo                  	Game Freak						Game Freak
-Mew                     	Game Freak						Game Freak
-GS beta Tangela pre-evo 	Game Freak						Game Freak
-GS beta fish            	Rool, SoupPotato			Rool, SoupPotato
-GS beta shark           	marcstuts0842					marcstuts0842
-GS beta Meowth pre-evo  	Game Freak						Game Freak
-GS beta bell cat 1      	Rool, SoupPotato			Rool, SoupPotato
-GS beta bell cat 2      	Rool, SoupPotato			Rool, SoupPotato
-GS beta electric tiger 1	Rool, SoupPotato			Rool, SoupPotato
-GS beta electric tiger 2	Rool, SoupPotato			Rool, SoupPotato
-GS beta Farfetch'd evo  	Menyu, Pia Carrot			Game Freak
-GS beta doll            	Rool, SoupPotato			Rool, SoupPotato
-GS beta panda           	Rool, SoupPotato			Rool, SoupPotato
-GS beta ice wolf 1      	Rool, SoupPotato			Rool, SoupPotato
-GS beta ice wolf 2      	marcstuts0842					marcstuts0842
-Chikorita               	Game Freak						Game Freak
-Bayleef                 	Game Freak						Game Freak
-Meganium                	Game Freak						Game Freak
-Cyndaquil               	Matdemo159						Game Freak
-Quilava                 	Game Freak						Game Freak
-Typhlosion              	Game Freak						Game Freak
-Totodile                	Game Freak						Game Freak
-Croconaw                	Game Freak						Game Freak
-Feraligatr              	Game Freak						Game Freak
-Sentret                 	Game Freak						Game Freak
-Furret                  	Game Freak						Game Freak
-Hoothoot                	Game Freak						Game Freak
-Noctowl                 	Game Freak						Game Freak
-Ledyba                  	Game Freak						Game Freak
-Ledian                  	Game Freak						Game Freak
-Spinarak                	Game Freak						Game Freak
-Ariados                 	Matdemo159						Game Freak
-Crobat                  	Game Freak						Game Freak
-Chinchou                	Game Freak						Game Freak
-Lanturn                 	Game Freak						Game Freak
-Pichu                   	Game Freak						Game Freak
-Cleffa                  	Game Freak						Game Freak
-Igglybuff               	Matdemo159						Game Freak
-Togepi                  	Game Freak						Game Freak
-Togetic                 	Game Freak						Game Freak
-Natu                    	Game Freak						Game Freak
-Xatu                    	Game Freak						Game Freak
-Mareep                  	Game Freak						Game Freak
-Flaaffy                 	Game Freak						Game Freak
-Ampharos                	Game Freak						Game Freak
-Bellossom               	Game Freak						Game Freak
-Marill                  	Game Freak						Game Freak
-Azumarill               	Game Freak						Game Freak
-Sudowoodo               	Game Freak						Game Freak
-Hoppip                  	Game Freak						Game Freak
-Skiploom                	Game Freak						Game Freak
-Jumpluff                	Game Freak						Game Freak
-Yanma                   	Game Freak						Game Freak
-Wooper                  	Game Freak						Game Freak
-Quagsire                	Game Freak						Game Freak
-Espeon                  	Game Freak						Game Freak
-Umbreon                 	Game Freak						Game Freak
-Murkrow                 	Game Freak						Game Freak
-Slowking                	Game Freak						Game Freak
-Misdreavus              	Game Freak						Game Freak
-Unown                   	Game Freak						Game Freak
-Girafarig               	Game Freak						Game Freak
-Pineco                  	Game Freak						Game Freak
-Forretress              	Game Freak						Game Freak
-Dunsparce               	Game Freak						Game Freak
-Gligar                  	Game Freak						Game Freak
-Steelix                 	Game Freak						Game Freak
-Snubbull                	Game Freak						Game Freak
-Granbull                	Game Freak						Game Freak
-Scizor                  	Game Freak						Game Freak
-Shuckle                 	Game Freak						Game Freak
-Heracross               	Game Freak						Game Freak
-Sneasel                 	Game Freak						Game Freak
-Teddiursa               	Game Freak						Game Freak
-Ursaring                	Game Freak						Game Freak
-Slugma                  	Game Freak						Game Freak
-Magcargo                	Game Freak						Game Freak
-Swinub                  	Game Freak						Game Freak
-Piloswine               	Game Freak						Game Freak
-Corsola (Galarian)      	utytft						  	utytft
-Remoraid                	Game Freak						Game Freak
-Octillery               	Game Freak						Game Freak
-Mantine                 	Game Freak						Game Freak
-Skarmory                	Game Freak						Game Freak
-Houndour                	Game Freak						Game Freak
-Houndoom                	Game Freak						Game Freak
-Kingdra                 	Game Freak						Game Freak
-Phanpy                  	Game Freak						Game Freak
-Donphan                 	Game Freak						Game Freak
-Porygon2                	Game Freak						Game Freak
-Smeargle                	BynineB						  	Game Freak
-Elekid                  	Game Freak						Game Freak
-Miltank                 	Game Freak						Game Freak
-Blissey                 	Game Freak						Game Freak
-Raikou                  	Game Freak						Game Freak
-Entei                   	Game Freak						Game Freak
-Suicune                 	Game Freak						Game Freak
-Larvitar                	Game Freak						Game Freak
-Pupitar                 	Game Freak						Game Freak
-Tyranitar               	Game Freak						Game Freak
-Lugia                   	Game Freak						Game Freak
-Ho-oh                   	Game Freak						Game Freak
-Celebi                  	Game Freak						Game Freak
-Treecko                 	Blue Emerald					bloodless
-Grovyle                 	Blue Emerald					bloodless
-Sceptile                	Blue Emerald					bloodless
-Torchic                 	Blue Emerald					bloodless
-Combusken               	Blue Emerald					bloodless
-Blaziken                	Blue Emerald					bloodless
-Mudkip                  	Blue Emerald					bloodless
-Marshtomp               	Blue Emerald					bloodless
-Swampert                	Blue Emerald					bloodless
-Poochyena               	Blue Emerald					bloodless
-Mightyena               	Blue Emerald					bloodless
-Zigzagoon (Galarian)    	EeVeeEe1999						bloodless
-Linoone (Galarian)      	EeVeeEe1999						bloodless
-Lotad                   	COMBOY						  	COMBOY
-Lombre                  	Blue Emerald					bloodless
-Ludicolo                	Blue Emerald					bloodless
-Seedot                  	Blue Emerald					bloodless
-Nuzleaf                 	Blue Emerald, COMBOY	bloodless
-Shiftry                 	Blue Emerald					COMBOY
-Wingull                 	Blue Emerald					bloodless
-Pelipper                	Blue Emerald					bloodless
-Ralts                   	Blue Emerald					bloodless
-Kirlia                  	Blue Emerald					bloodless
-Gardevoir               	COMBOY						  	bloodless
-Surskit                 	Blue Emerald					bloodless
-Masquerain              	Blue Emerald					bloodless
-Shroomish               	Blue Emerald					bloodless
-Breloom                 	Blue Emerald					bloodless
-Makuhita                	Blue Emerald					bloodless
-Hariyama                	Blue Emerald					bloodless
-Azurill                 	Blue Emerald					bloodless
-Nosepass                	Blue Emerald					bloodless
-Skitty                  	Blue Emerald					COMBOY
-Delcatty                	COMBOY					  		bloodless
-Sableye                 	Blue Emerald					bloodless
-Mawile                  	Blue Emerald					COMBOY
-Aron                    	Blue Emerald					bloodless
-Lairon                  	Blue Emerald					bloodless
-Aggron                  	Blue Emerald					bloodless
-Meditite                	Blue Emerald					bloodless
-Medicham                	Blue Emerald					bloodless
-Electrike               	Blue Emerald					bloodless
-Manectric               	Blue Emerald					bloodless
-Roselia                 	Blue Emerald					bloodless
-Gulpin                  	Blue Emerald					COMBOY
-Swalot                  	Blue Emerald					bloodless
-Carvanha                	Blue Emerald					bloodless
-Sharpedo                	Blue Emerald					bloodless
-Wailmer                 	Blue Emerald					bloodless
-Wailord                 	Blue Emerald					bloodless
-Numel                   	Blue Emerald					bloodless
-Camerupt                	Blue Emerald					bloodless
-Torkoal                 	Blue Emerald					bloodless
-Spoink                  	Blue Emerald					bloodless
-Grumpig                 	Blue Emerald					bloodless
-Trapinch                	Blue Emerald					bloodless
-Vibrava                 	Blue Emerald					bloodless
-Flygon                  	Blue Emerald					bloodless
-Cacnea                  	Blue Emerald					bloodless
-Cacturne                	Blue Emerald					bloodless
-Swablu                  	Blue Emerald					bloodless
-Altaria                 	Blue Emerald					bloodless
-Zangoose                	Blue Emerald					bloodless
-Seviper                 	Blue Emerald					bloodless
-Lunatone                	Blue Emerald					bloodless
-Solrock                 	Blue Emerald					bloodless
-Barboach                	Blue Emerald					bloodless
-Whiscash                	Blue Emerald					bloodless
-Corphish                	Blue Emerald					bloodless
-Crawdaunt               	Blue Emerald					bloodless
-Baltoy                  	Blue Emerald					bloodless
-Claydol                 	Blue Emerald					bloodless
-Lileep                  	Blue Emerald					bloodless
-Cradily                 	Blue Emerald					bloodless
-Anorith                 	Blue Emerald					bloodless
-Armaldo                 	Blue Emerald					bloodless
-Feebas                  	lakeofdance						lakeofdance
-Milotic                 	Blue Emerald					bloodless
-Shuppet                 	Blue Emerald					bloodless
-Banette                 	Blue Emerald					bloodless
-Duskull                 	Game Freak						bloodless
-Dusclops                	Blue Emerald					bloodless
-Tropius                 	Blue Emerald					bloodless
-Chimecho                	Blue Emerald					bloodless
-Absol                   	Bummer						  	COMBOY
-Snorunt                 	Blue Emerald					bloodless
-Glalie                  	Blue Emerald					bloodless
-Spheal                  	Matdemo159						bloodless
-Sealeo                  	Blue Emerald					bloodless
-Walrein                 	COMBOY						  	bloodless
-Clamperl                	Blue Emerald					bloodless
-Huntail                 	COMBOY						  	COMBOY
-Gorebyss                	Blue Emerald					bloodless
-Relicanth               	Blue Emerald					bloodless
-Luvdisc                 	COMBOY							  COMBOY
-Bagon                   	Blue Emerald					bloodless
-Shelgon                 	QuilChess					  	bloodless
-Salamence               	com3tiin					  	bloodless
-Beldum                  	COMBOY						  	COMBOY
-Metang                  	COMBOY						  	COMBOY
-Metagross               	Blue Emerald					bloodless
-Regirock                	Blue Emerald					bloodless
-Regice                  	Blue Emerald					bloodless
-Registeel               	Blue Emerald					bloodless
-Latias                  	Blue Emerald					bloodless
-Latios                  	Blue Emerald					bloodless
-Kyogre                  	Blue Emerald					bloodless
-Groudon                 	Blue Emerald					bloodless
-Rayquaza                	Blue Emerald					bloodless
-Jirachi                 	Blue Emerald					bloodless
-Deoxys                  	Blue Emerald					bloodless
-Turtwig                 	bloodless					  	bloodless
-Grotle                  	bloodless					  	bloodless
-Torterra                	Bummer						  	bloodless
-Chimchar                	Pokekoks					  	Pokekoks
-Monferno                	Pokekoks					  	Pokekoks
-Infernape               	Pokekoks					  	Pokekoks
-Piplup                  	Game Freak						bloodless
-Prinplup                	bloodless					  	bloodless
-Empoleon                	COMBOY						  	bloodless
-Starly                  	COMBOY						  	bloodless
-Staravia                	bloodless					  	bloodless
-Staraptor               	bloodless					  	bloodless
-Bidoof                  	bloodless					  	bloodless
-Bibarel                 	COMBOY						  	bloodless
-Shinx                   	bloodless					  	bloodless
-Luxio                   	bloodless					  	bloodless
-Luxray                  	bloodless					  	bloodless
-Budew                   	bloodless					  	COMBOY
-Roserade                	bloodless					  	COMBOY
-Cranidos                	bloodless					  	bloodless
-Rampardos               	bloodless					  	bloodless
-Shieldon                	bloodless					  	bloodless
-Bastiodon               	bloodless					  	bloodless
-Combee                  	bloodless					  	bloodless
-Vespiquen               	bloodless					  	bloodless
-Pachirisu               	bloodless					  	COMBOY
-Buizel                  	bloodless					  	bloodless
-Floatzel                	bloodless					  	bloodless
-Shellos (West)          	bloodless					  	bloodless
-Shellos (East)          	COMBOY						  	bloodless, Linnie
-Gastrodon (West)        	bloodless					  	bloodless
-Gastrodon (East)        	COMBOY						  	COMBOY
-Drifloon                	Matdemo159						COMBOY
-Drifblim                	bloodless					  	COMBOY
-Buneary                 	bloodless					  	bloodless
-Lopunny                 	bloodless					  	bloodless
-Mismagius               	bloodless					  	bloodless
-Honchkrow               	bloodless					  	metalflygon08
-Glameow                 	COMBOY						  	COMBOY
-Purugly                 	bloodless					  	COMBOY
-Chingling               	bloodless					  	bloodless
-Stunky                  	bloodless					  	COMBOY
-Skuntank                	bloodless					  	COMBOY
-Bronzor                 	bloodless					  	bloodless
-Bronzong                	bloodless					  	bloodless
-Bonsly                  	bloodless					  	COMBOY
-Mime Jr.                	Chaos Rush						Chaos Rush
-Happiny                 	COMBOY						  	COMBOY
-Chatot                  	bloodless					  	COMBOY
-Spiritomb               	bloodless					  	bloodless
-Gible                   	bloodless					  	bloodless
-Gabite                  	bloodless					  	bloodless
-Garchomp                	bloodless					  	bloodless
-Munchlax                	bloodless					  	bloodless
-Riolu                   	bloodless					  	bloodless
-Lucario                 	bloodless					  	bloodless
-Hippopotas              	bloodless					  	COMBOY
-Hippowdon               	bloodless					  	COMBOY
-Skorupi                 	bloodless					  	bloodless
-Drapion                 	bloodless					  	bloodless
-Croagunk                	bloodless					  	bloodless
-Toxicroak               	bloodless					  	bloodless
-Carnivine               	bloodless					  	COMBOY
-Finneon                 	bloodless					  	COMBOY
-Lumineon                	bloodless					  	COMBOY
-Mantyke                 	COMBOY						  	COMBOY
-Snover                  	bloodless					  	bloodless
-Abomasnow               	bloodless					  	COMBOY
-Weavile                 	bloodless					  	bloodless
-Magnezone               	Solo993						  	bloodless
-Tangrowth               	COMBOY						  	bloodless
-Electivire              	amvz08						  	Chaos Rush
-Togekiss                	Kreestanala						COMBOY
-Yanmega                 	bloodless				  		COMBOY
-Leafeon                 	bloodless				  		bloodless
-Glaceon                 	bloodless				  		bloodless
-Gliscor                 	bloodless				  		bloodless
-Mamoswine               	Bummer					  		bloodless
-Porygon-Z               	bloodless				  		bloodless
-Gallade                 	bloodless				  		bloodless
-Probopass               	Neslug					  		bloodless
-Dusknoir                	Game Freak						COMBOY
-Froslass                	bloodless				  		bloodless
-Rotom                   	bloodless				  		COMBOY
-Uxie                    	bloodless				  		Game Freak
-Mesprit                 	bloodless				  		Game Freak
-Azelf                   	bloodless				  		Game Freak
-Dialga                  	bloodless				  		COMBOY
-Palkia                  	bloodless				  		COMBOY
-Regigigas               	bloodless				  		COMBOY
-Giratina                	COMBOY					  		COMBOY
-Cresselia               	bloodless				  		bloodless
-Darkrai                 	bloodless				  		COMBOY
-Shaymin                 	bloodless, COMBOY			COMBOY
-Arceus                  	bloodless					  	bloodless
-Oshawott                	bloodless					  	COMBOY
-Dewott                  	bloodless					  	COMBOY
-Samurott                	N-Kin							    COMBOY
-Lillipup                	Game Freak						Pokekoks
-Herdier                 	Pokekoks					  	Pokekoks
-Stoutland               	Pokekoks					  	Pokekoks
-Purrloin                	Pokekoks					  	Pokekoks
-Liepard                 	EeVeeEe1999						Pokekoks
-Munna                   	Pokekoks					  	Pokekoks
-Musharna                	G0LD Z!						  	G0LD Z!
-Roggenrola              	Bummer						  	COMBOY
-Boldore                 	Chris2Balls						COMBOY
-Gigalith                	lakeofdance						lakeofdance
-Woobat                  	Gors							    COMBOY
-Swoobat                 	ubasuteyama						COMBOY
-Audino                  	Wisgarus					  	Wisgarus
-Timburr                 	bloodless					  	COMBOY
-Gurdurr                 	Nicktendo DS					Bummer
-Conkeldurr              	Bummer						  	Bummer
-Sewaddle                	COMBOY						  	COMBOY
-Swadloon                	COMBOY						  	COMBOY
-Leavanny                	COMBOY						  	COMBOY
-Venipede                	Bummer						  	Bummer
-Whirlipede              	Bummer						  	Bummer
-Scolipede               	Bummer						  	COMBOY
-Cottonee                	bloodless					  	COMBOY
-Whimsicott              	Bummer						  	COMBOY
-Petilil                 	Jphyper						  	COMBOY
-Lilligant               	COMBOY						  	COMBOY
-Basculin                	Neslug						  	COMBOY
-Sandile                 	lakeofdance						COMBOY
-Krokorok                	YumeYukimenokoTsuki		COMBOY
-Krookodile              	lakeofdance						lakeofdance
-Darumaka (Galarian)     	EeVeeEe1999						Pokekoks
-Darmanitan (Galarian)   	EeVeeEe1999						leParagon
-Maractus                	COMBOY							  COMBOY
-Dwebble                 	bloodless					  	COMBOY
-Crustle                 	bloodless					  	COMBOY
-Scraggy                 	Pokekoks					  	Pokekoks
-Scrafty                 	Pokekoks					  	Pokekoks
-Yamask (Galarian)       	Pia Carrot						Pokekoks
-Tirtouga                	COMBOY						  	COMBOY
-Carracosta              	Chris2Balls						COMBOY
-Archen                  	lakeofdance						COMBOY
-Archeops                	Jphyper							  COMBOY
-Solosis                 	Game Freak						COMBOY
-Duosion                 	lakeofdance						lakeofdance
-Reuniclus               	EeVeeEe1999						Game Freak
-Frillish (Female)         Game Freak						COMBOY
-Frillish (Male)           Pokekoks					  	Pokekoks
-Jellicent (Female)       	COMBOY						  	COMBOY
-Jellicent (Male)         	Pokekoks					  	Pokekoks
-Joltik                  	COMBOY						  	COMBOY
-Galvantula              	COMBOY						  	COMBOY
-Ferroseed               	Bummer						  	Bummer
-Ferrothorn              	Bummer						  	Bummer
-Tynamo                  	Bummer						  	COMBOY
-Eelektrik               	Bummer						  	COMBOY
-Eelektross              	Bummer						  	COMBOY
-Elgyem                  	Pokekoks					  	Pokekoks
-Beheeyem                	Pokekoks					  	Pokekoks
-Litwick                 	Bummer						  	Bummer
-Lampent                 	Bummer						  	Bummer
-Chandelure              	Bummer						  	Bummer
-Axew                    	Bummer						  	Bummer
-Fraxure                 	Bummer						  	Bummer
-Haxorus                 	Bummer						  	Bummer
-Cubchoo                 	EeVeeEe1999						COMBOY
-Beartic                 	COMBOY						  	COMBOY
-Stunfisk                	Bummer						  	Bummer
-Mienfoo                 	COMBOY						  	COMBOY
-Mienshao                	COMBOY						  	COMBOY
-Druddigon               	gmerc							    Bummer
-Golett                  	Bummer						  	Bummer
-Golurk                  	Bummer						  	Bummer
-Pawniard                	COMBOY						  	COMBOY
-Bisharp                 	Bummer						  	Bummer
-Heatmor                 	Bummer						  	Bummer
-Durant                  	Bummer						  	Bummer
-Deino                   	Bummer						  	COMBOY
-Zweilous                	Bummer						  	Bummer
-Hydreigon               	Bronzeswagger					Bummer
-Larvesta                	Thor						    	COMBOY
-Volcarona               	Thor						    	COMBOY
-Chespin                 	MrDollSteak						Chamber
-Quilladin               	Solo993							Chamber
-Chesnaught              	Solo993							Chamber
-Fennekin                	SupahSnivy						N-Kin
-Braixen                 	Zorgoth120, 					Solo993	Chamber
-Delphox                 	Solo993							Wisgarus
-Froakie                 	WAH!							Pia Carrot
-Frogadier               	Zorgoth120						Chamber
-Greninja                	Solo993							Chamber
-Fletchling              	WAH!							MrDollSteak
-Fletchindr              	Zerudez							al199288
-Talonflame              	Mr. Dollsteak, Hiraethe			MrDollSteak
-Scatterbug              	Hooded Bird						MrDollSteak
-Spewpa                  	Hooded Bird						MrDollSteak
-Vivillon                	Kyledove						Solo993
-Flabebe                 	TheCynicalPoet					leParagon
-Floette                 	Pia Carrot						Pia Carrot
-Florges                 	Monnotonnous Pixels				Pia Carrot
-Skiddo                  	Vale98PM						Bummer
-Gogoat                  	Dragonball253					Bummer
-Pancham                 	Pia Carrot						Chamber
-Pangoro                 	Chamber							Chamber
-Espurr                  	JaceDeane, SirWhibbles			Solo993
-Meowstic (Female)       	Noscium							Faintster
-Meowstic (Male)         	Pia Carrot						JaceDeane, SirWhibbles
-Honedge                 	JaceDeane, SirWhibbles			JaceDeane, SirWhibbles
-Doublade                	Bummer							Bummer
-Aegislash               	Bummer							Bummer
-Spritzee                	lakeofdance						SirWhibbles
-Aromatisse              	Bummer							SirWhibbles
-Swirlix                 	lakeofdance						COMBOY
-Slurpuff                	lakeofdance						COMBOY
-Inkay                   	leParagon						leParagon
-Malamar                 	Bummer							Bummer
-Binacle                 	Bummer							Bummer
-Barbaracle              	Bummer							Bummer
-Skrelp                  	Sleet							SirWhibbles
-Dragalge                	Pia Carrot						Chamber
-Helioptile              	Wobblebuns						Chamber
-Heliolisk               	Chamber							Chamber
-Tyrunt                  	Neslug							MrDollSteak, Bummer
-Tyrantrum               	Bummer							MrDollSteak, Bummer
-Amaura                  	Chamber							Chamber
-Aurorus                 	Chamber							SirWhibbles
-Sylveon                 	Solo993							Solo993
-Hawlucha                	Solo993							Solo993
-Dedenne                 	Solo993							Solo993
-Carbink                 	Bummer							SirWhibbles
-Goomy                   	Wobblebuns						MrDollSteak
-Sliggoo                 	COMBOY							COMBOY
-Goodra                  	Wisgarus						Wisgarus
-Klefki                  	N-Kin							MrDollSteak
-Phantump                	Dragonball253					Bummer
-Trevenant               	Pokémon Grape					Bummer
-Bergmite                	Dragonball253					MrDollSteak
-Avalugg                 	Dragonball253					Captain Cohete
-Xerneas                 	MyLittleKeldeo					Pia Carrot
-Yveltal                 	Fexiled							MrDollSteak
-Zygarde                 	Fexiled							MrDollSteak
-Diancie                 	SirWhibbles						SirWhibbles
-Volcanion               	leParagon						leParagon
-Rowlet                  	Enderific						SirWhibbles
-Dartrix                 	leParagon						leParagon
-Decidueye               	JaegarLucciano					Falgaia
-Pikipek                 	SupahSanti						leParagon
-Trumbeak                	Pia Carrot						leParagon
-Toucannon               	Pia Carrot						leParagon
-Grubbin                 	*								*
-Charjabug               	bloodless						leParagon
-Vikavolt                	falgaia							Bummer
-Crabrawler              	leParagon, Bummer				leParagon, Bummer
-Crabomable              	leParagon, Bummer				JaegerLucciano23, Z-nogyroP, leParagon, Bummer
-Cutiefly                	SupahSanti						Bummer
-Ribombee                	Bummer							leParagon
-Rockruff                	SupahSanti						leParagon
-Lycanroc (Midday)       	Pia Carrot						*
-Lycanroc (Midnight)     	JaegarLucciano					leParagon
-Mareanie                	leParagon						leParagon
-Toxapex                 	leParagon						leParagon
-Mudbray                 	SupahSanti						Bummer
-Mudsdale                	leParagon, Bummer				leParagon, Bummer
-Dewpider                	LakeOfDance						leParagon
-Araquanid               	LakeOfDance						leParagon
-Fomantis                	Pia Carrot						utytft
-Lurantis                	EeVeeEe1999						utytft
-Morelull                	leParagon, Bummer				leParagon, Bummer
-Shiinotic               	Bummer							leParagon, Bummer
-Stufful                 	SupahSanti						leParagon
-Bewear                  	SupahSanti						leParagon
-Oranguru                	SupahSanti						leParagon
-Passimian               	TheLunarNerd					leParagon
-Wimpod                  	Pia Carrot						leParagon
-Golisopod               	LakeOfDance						Falgaia
-Sandygast               	SupahSanti						Z-nogyroP, goranthegreat
-Palossand               	Pia Carrot						Z-nogyroP, Kevin RDS, goranthegreat
-Type: Null              	CopyRobot1						*
-Silvally                	leParagon						leParagon
-Komala                  	SupahSanti						leParagon
-Turtonator              	SupahSanti						leParagon
-Togedemaru              	Pia Carrot						Wisgarus
-Mimikyu                 	SupahSanti						Pia Carrot
-Drampa                  	SupahSanti						leParagon, Bummer
-Dhelmise                	lakeofdance						leParagon
-Jangmo-o                	lakeofdance						leParagon
-Hakamo-o                	leParagon						leParagon
-Kommo-o                 	lakeofdance						leParagon
-Nihilego                	lakeofdance						utytft
-Buzzwole                	lakeofdance						leParagon
-Pheromosa               	Pia Carrot						leParagon
-Xurkitree               	Pia Carrot						leParagon
-Celesteela              	JaegerLucciano23				leParagon, JaegerLucciano23
-Kartana                 	Pia Carrot						SharkGuy
-Guzzlord                	Pia Carrot						SharkGuy
-Magearna                	SupahSanti						leParagon
-Stakataka               	Pia Carrot						leParagon
-Blacephlon              	Pia Carrot						leParagon
-Grookey                 	Involuntary-Twitch				leParagon
-Thwackey                	Involuntary-Twitch				leParagon
-Rillaboom               	leParagon						leParagon
-Rookidee                	leParagon						leParagon
-Corvisquire             	leParagon						leParagon
-Corviknight             	LucasSevero						leParagon
-Blipbug                 	Enderific						utytft
-Dottler                 	Menyu							utytft
-Orbeetle                	sunny-bear						utytft
-Nickit                  	Jimmy Fraser					utytft
-Thievul                 	utytft							utytft
-Wooloo                  	Bronzeswagger					leParagon
-Dubwool                 	KingOfThe-X-Roads				leParagon
-Chewtle                 	Menyu							leParagon
-Drednaw                 	EeVeeEe1999						utytft
-Rolycoly                	EeVeeEe1999, JaceDeane			leParagon
-Carkol            	     	utytft							utytft
-Coalossal               	Menyu							utytft
-Applin                  	utytft							utytft
-Flapple                 	utytft							utytft
-Appletun                	utytft							utytft
-Arrokuda                	QuilChess						leParagon
-Baraskewda              	Menyu							Z-nogyroP
-Toxel                   	lakeofdance						utytft
-Toxtricity              	utytft							utytft
-Sizzlipede              	utytft							utytft
-Centiskrch              	utytft							utytft
-Clobbopus               	EzerArt							Game Freak
-Grapploct               	King Panloco					Game Freak
-Sinistea                	EeVeeEe1999						Game Freak
-Polteagyst              	French Cyndaquil				French Cyndaquil
-Hatenna                 	Cinnaboopa						Game Freak
-Hattrem                 	Cinnaboopa						Game Freak
-Hatterene               	LeParagon, Menyu				leParagon
-Obstagoon               	French Cyndaquil				French Cyndaquil
-Perrserker              	utytft							utytft
-Cursola                 	Menyu							Menyu
-Mr. Rime                	Menyu							utytft
-Runerigus               	EeVeeEe1999						utytft
-Milcery                 	Wisgarus						leParagon
-Alcremie                	JaceDeane						leParagon
-Pincurchin              	utytft							utytft
-Snom                    	Wisgarus						Wisgarus
-Frosmoth                	Menyu							utytft
-Cufant                  	utytft							utytft
-Copperajah              	Enderific						utytft
-Dracozolt               	lakeofdance						utytft
-Arctozolt               	lakeofdance						utytft
-Dracovish               	utytft							TheAetherPlayer
-Arctovish               	utytft							utytft
-Duraludon               	Enderific, JaceDeane			utytft
-Dreepy                  	Enderific						tlefonmann
-Drakloak                	Enderific						utytft
-Dragapult               	Menyu							tlefonmann
-Regieleki               	Pokémon Daybreak/Aprogergely	leParagon
-Regidrago               	CyndArts						leParagon
+Bulbasaur                   Game Freak                        Game Freak
+Ivysaur                     Game Freak                        Game Freak
+Venusaur                    Game Freak                        Game Freak
+Charmander                  Game Freak                        Game Freak
+Charmeleon                  Game Freak                        Game Freak
+Charizard                   Game Freak                        Game Freak
+Squirtle                    Matdemo159                        Game Freak
+Wartortle                   Game Freak                        Game Freak
+Blastoise                   Game Freak                        Game Freak
+Caterpie                    Game Freak                        Game Freak
+Metapod                     Game Freak                        Game Freak
+Butterfree                  Menyu                             Game Freak
+Weedle                      Game Freak                        Game Freak
+Kakuna                      Game Freak                        Game Freak
+Beedrill                    Game Freak                        Game Freak
+Rattata (Alolan)            Pia Carrot                        Kevin RDS
+Raticate (Alolan)           Pia Carrot                        Game Freak
+Pikachu                     Game Freak                        Game Freak
+Raichu (Alolan)             *                                 Pia Carrot
+Sandshrew (Alolan)          Pia Carrot                        Pia Carrot
+Sandslash (Alolan)          Pia Carrot                        Pia Carrot
+Nidoran♀                    Game Freak                        Game Freak
+Nidorina                    Game Freak                        Game Freak
+Nidoqueen                   Game Freak                        Game Freak
+Nidoran♂                    Game Freak                        Game Freak
+Nidorino                    Game Freak                        Game Freak
+Nidoking                    Game Freak                        Game Freak
+Clefairy                    Game Freak                        Game Freak
+Clefable                    Game Freak                        Game Freak
+Vulpix (Alolan)             Pia Carrot                        Pia Carrot
+Ninetales (Alolan)          Pia Carrot                        Pia Carrot
+Jigglypuff                  Matdemo159                        Game Freak
+Wigglytuff                  Game Freak                        Game Freak
+Zubat                       Game Freak                        Game Freak
+Golbat                      Game Freak                        Game Freak
+Oddish                      Game Freak                        Game Freak
+Gloom                       Game Freak                        Game Freak
+Vileplume                   Game Freak                        Game Freak
+Paras                       Game Freak                        Game Freak
+Parasect                    Game Freak                        Game Freak
+Venonat                     Game Freak                        Game Freak
+Venomoth                    Game Freak                        Game Freak
+Meowth (Galarian)           utytft                            utytft
+Psyduck                     Game Freak                        Game Freak
+Golduck                     Game Freak                        Game Freak
+Mankey                      Game Freak                        Game Freak
+Primeape                    Game Freak                        Game Freak
+Growlithe                   Game Freak                        Game Freak
+Arcanine                    Game Freak                        Game Freak
+Abra                        Game Freak                        Game Freak
+Kadabra                     Game Freak                        Game Freak
+Alakazam                    Game Freak                        Game Freak
+Machop                      Game Freak                        Game Freak
+Machoke                     Game Freak                        Game Freak
+Machamp                     Game Freak                        Game Freak
+Bellsprout                  Game Freak                        Game Freak
+Weepinbell                  Game Freak                        Game Freak
+Victreebel                  Game Freak                        Game Freak
+Tentacool                   Game Freak                        Game Freak
+Tentacruel                  Game Freak                        Game Freak
+Geodude                     Game Freak                        Game Freak
+Graveler                    Game Freak                        Game Freak
+Golem                       Game Freak                        Game Freak
+Ponyta                      Game Freak                        Game Freak
+Rapidash                    Game Freak                        Game Freak
+Slowpoke                    Game Freak                        Game Freak
+Slowbro                     Game Freak                        Game Freak
+Magnemite                   Game Freak                        Game Freak
+Magneton                    Game Freak                        Game Freak
+Farfetch'd                  Game Freak                        Game Freak
+Seel                        Game Freak                        Game Freak
+Dewgong                     Game Freak                        Game Freak
+Grimer                      Game Freak                        Game Freak
+Muk                         Game Freak                        Game Freak
+Gastly                      Game Freak                        Game Freak
+Haunter                     Game Freak                        Game Freak
+Gengar                      Game Freak                        Game Freak
+Onix                        Game Freak                        Game Freak
+Drowzee                     Game Freak                        Game Freak
+Hypno                       Game Freak                        Game Freak
+Krabby                      Game Freak                        Game Freak
+Kingler                     Game Freak                        Game Freak
+Exeggcute                   Game Freak                        Game Freak
+Exeggutor (Alolan)          SkidMarc25                        Pia Carrot
+Cubone                      Game Freak                        Game Freak
+Marowak                     Game Freak                        Game Freak
+Koffing                     Game Freak                        Game Freak
+Weezing (Galarian)          Pia Carrot                        French Cyndaquil
+Chansey                     Matdemo159                        Game Freak
+Tangela                     Game Freak                        Game Freak
+Kangaskhan                  Game Freak                        Game Freak
+Horsea                      Game Freak                        Game Freak
+Seadra                      Game Freak                        Game Freak
+Staryu                      Game Freak                        Game Freak
+Starmie                     Game Freak                        Game Freak
+Mr. Mime (Galarian)         utytft                            utytft
+Scyther                     Game Freak                        Game Freak
+Electabuzz                  Game Freak                        Game Freak
+Pinsir                      Game Freak                        Game Freak
+Tauros                      Game Freak                        Game Freak
+Magikarp                    Game Freak                        Game Freak
+Gyarados                    Game Freak                        Game Freak
+Lapras                      Game Freak                        Game Freak
+Ditto                       Game Freak                        Game Freak
+Eevee                       Game Freak                        Game Freak
+Flareon                     Game Freak                        Game Freak
+Jolteon                     Game Freak                        Game Freak
+Vaporeon                    Game Freak                        Game Freak
+Porygon                     Game Freak                        Game Freak
+Omanyte                     Game Freak                        Game Freak
+Omastar                     Game Freak                        Game Freak
+Kabuto                      Game Freak                        Game Freak
+Kabutops                    Game Freak                        Game Freak
+Aerodactyl                  Game Freak                        Game Freak
+Snorlax                     Game Freak                        Game Freak
+Articuno (Galarian)         Enderific                         Game Freak
+Zapdos (Galarian)           EeVeeEe1999                       Game Freak
+Moltres (Galarian)          Involuntary-Twitch                Game Freak
+Dratini                     Game Freak                        Game Freak
+Dragonair                   Game Freak                        Game Freak
+Dragonite                   Game Freak                        Game Freak
+Mewtwo                      Game Freak                        Game Freak
+Mew                         Game Freak                        Game Freak
+GS beta Tangela pre-evo     Game Freak                        Game Freak
+GS beta fish                Rool, SoupPotato                  Rool, SoupPotato
+GS beta shark               marcstuts0842                     marcstuts0842
+GS beta Meowth pre-evo      Game Freak                        Game Freak
+GS beta bell cat 1          Rool, SoupPotato                  Rool, SoupPotato
+GS beta bell cat 2          Rool, SoupPotato                  Rool, SoupPotato
+GS beta electric tiger 1    Rool, SoupPotato                  Rool, SoupPotato
+GS beta electric tiger 2    Rool, SoupPotato                  Rool, SoupPotato
+GS beta Farfetch'd evo      Menyu, Pia Carrot                 Game Freak
+GS beta doll                Rool, SoupPotato                  Rool, SoupPotato
+GS beta panda               Rool, SoupPotato                  Rool, SoupPotato
+GS beta ice wolf 1          Rool, SoupPotato                  Rool, SoupPotato
+GS beta ice wolf 2          marcstuts0842                     marcstuts0842
+Chikorita                   Game Freak                        Game Freak
+Bayleef                     Game Freak                        Game Freak
+Meganium                    Game Freak                        Game Freak
+Cyndaquil                   Matdemo159                        Game Freak
+Quilava                     Game Freak                        Game Freak
+Typhlosion                  Game Freak                        Game Freak
+Totodile                    Game Freak                        Game Freak
+Croconaw                    Game Freak                        Game Freak
+Feraligatr                  Game Freak                        Game Freak
+Sentret                     Game Freak                        Game Freak
+Furret                      Game Freak                        Game Freak
+Hoothoot                    Game Freak                        Game Freak
+Noctowl                     Game Freak                        Game Freak
+Ledyba                      Game Freak                        Game Freak
+Ledian                      Game Freak                        Game Freak
+Spinarak                    Game Freak                        Game Freak
+Ariados                     Matdemo159                        Game Freak
+Crobat                      Game Freak                        Game Freak
+Chinchou                    Game Freak                        Game Freak
+Lanturn                     Game Freak                        Game Freak
+Pichu                       Game Freak                        Game Freak
+Cleffa                      Game Freak                        Game Freak
+Igglybuff                   Matdemo159                        Game Freak
+Togepi                      Game Freak                        Game Freak
+Togetic                     Game Freak                        Game Freak
+Natu                        Game Freak                        Game Freak
+Xatu                        Game Freak                        Game Freak
+Mareep                      Game Freak                        Game Freak
+Flaaffy                     Game Freak                        Game Freak
+Ampharos                    Game Freak                        Game Freak
+Bellossom                   Game Freak                        Game Freak
+Marill                      Game Freak                        Game Freak
+Azumarill                   Game Freak                        Game Freak
+Sudowoodo                   Game Freak                        Game Freak
+Hoppip                      Game Freak                        Game Freak
+Skiploom                    Game Freak                        Game Freak
+Jumpluff                    Game Freak                        Game Freak
+Yanma                       Game Freak                        Game Freak
+Wooper                      Game Freak                        Game Freak
+Quagsire                    Game Freak                        Game Freak
+Espeon                      Game Freak                        Game Freak
+Umbreon                     Game Freak                        Game Freak
+Murkrow                     Game Freak                        Game Freak
+Slowking                    Game Freak                        Game Freak
+Misdreavus                  Game Freak                        Game Freak
+Unown                       Game Freak                        Game Freak
+Girafarig                   Game Freak                        Game Freak
+Pineco                      Game Freak                        Game Freak
+Forretress                  Game Freak                        Game Freak
+Dunsparce                   Game Freak                        Game Freak
+Gligar                      Game Freak                        Game Freak
+Steelix                     Game Freak                        Game Freak
+Snubbull                    Game Freak                        Game Freak
+Granbull                    Game Freak                        Game Freak
+Scizor                      Game Freak                        Game Freak
+Shuckle                     Game Freak                        Game Freak
+Heracross                   Game Freak                        Game Freak
+Sneasel                     Game Freak                        Game Freak
+Teddiursa                   Game Freak                        Game Freak
+Ursaring                    Game Freak                        Game Freak
+Slugma                      Game Freak                        Game Freak
+Magcargo                    Game Freak                        Game Freak
+Swinub                      Game Freak                        Game Freak
+Piloswine                   Game Freak                        Game Freak
+Corsola (Galarian)          utytft                            utytft
+Remoraid                    Game Freak                        Game Freak
+Octillery                   Game Freak                        Game Freak
+Mantine                     Game Freak                        Game Freak
+Skarmory                    Game Freak                        Game Freak
+Houndour                    Game Freak                        Game Freak
+Houndoom                    Game Freak                        Game Freak
+Kingdra                     Game Freak                        Game Freak
+Phanpy                      Game Freak                        Game Freak
+Donphan                     Game Freak                        Game Freak
+Porygon2                    Game Freak                        Game Freak
+Smeargle                    BynineB                           Game Freak
+Elekid                      Game Freak                        Game Freak
+Miltank                     Game Freak                        Game Freak
+Blissey                     Game Freak                        Game Freak
+Raikou                      Game Freak                        Game Freak
+Entei                       Game Freak                        Game Freak
+Suicune                     Game Freak                        Game Freak
+Larvitar                    Game Freak                        Game Freak
+Pupitar                     Game Freak                        Game Freak
+Tyranitar                   Game Freak                        Game Freak
+Lugia                       Game Freak                        Game Freak
+Ho-oh                       Game Freak                        Game Freak
+Celebi                      Game Freak                        Game Freak
+Treecko                     Blue Emerald                      bloodless
+Grovyle                     Blue Emerald                      bloodless
+Sceptile                    Blue Emerald                      bloodless
+Torchic                     Blue Emerald                      bloodless
+Combusken                   Blue Emerald                      bloodless
+Blaziken                    Blue Emerald                      bloodless
+Mudkip                      Blue Emerald                      bloodless
+Marshtomp                   Blue Emerald                      bloodless
+Swampert                    Blue Emerald                      bloodless
+Poochyena                   Blue Emerald                      bloodless
+Mightyena                   Blue Emerald                      bloodless
+Zigzagoon (Galarian)        EeVeeEe1999                       bloodless
+Linoone (Galarian)          EeVeeEe1999                       bloodless
+Lotad                       COMBOY                            COMBOY
+Lombre                      Blue Emerald                      bloodless
+Ludicolo                    Blue Emerald                      bloodless
+Seedot                      Blue Emerald                      bloodless
+Nuzleaf                     Blue Emerald, COMBOY              bloodless
+Shiftry                     Blue Emerald                      COMBOY
+Wingull                     Blue Emerald                      bloodless
+Pelipper                    Blue Emerald                      bloodless
+Ralts                       Blue Emerald                      bloodless
+Kirlia                      Blue Emerald                      bloodless
+Gardevoir                   COMBOY                            bloodless
+Surskit                     Blue Emerald                      bloodless
+Masquerain                  Blue Emerald                      bloodless
+Shroomish                   Blue Emerald                      bloodless
+Breloom                     Blue Emerald                      bloodless
+Makuhita                    Blue Emerald                      bloodless
+Hariyama                    Blue Emerald                      bloodless
+Azurill                     Blue Emerald                      bloodless
+Nosepass                    Blue Emerald                      bloodless
+Skitty                      Blue Emerald                      COMBOY
+Delcatty                    COMBOY                            bloodless
+Sableye                     Blue Emerald                      bloodless
+Mawile                      Blue Emerald                      COMBOY
+Aron                        Blue Emerald                      bloodless
+Lairon                      Blue Emerald                      bloodless
+Aggron                      Blue Emerald                      bloodless
+Meditite                    Blue Emerald                      bloodless
+Medicham                    Blue Emerald                      bloodless
+Electrike                   Blue Emerald                      bloodless
+Manectric                   Blue Emerald                      bloodless
+Roselia                     Blue Emerald                      bloodless
+Gulpin                      Blue Emerald                      COMBOY
+Swalot                      Blue Emerald                      bloodless
+Carvanha                    Blue Emerald                      bloodless
+Sharpedo                    Blue Emerald                      bloodless
+Wailmer                     Blue Emerald                      bloodless
+Wailord                     Blue Emerald                      bloodless
+Numel                       Blue Emerald                      bloodless
+Camerupt                    Blue Emerald                      bloodless
+Torkoal                     Blue Emerald                      bloodless
+Spoink                      Blue Emerald                      bloodless
+Grumpig                     Blue Emerald                      bloodless
+Trapinch                    Blue Emerald                      bloodless
+Vibrava                     Blue Emerald                      bloodless
+Flygon                      Blue Emerald                      bloodless
+Cacnea                      Blue Emerald                      bloodless
+Cacturne                    Blue Emerald                      bloodless
+Swablu                      Blue Emerald                      bloodless
+Altaria                     Blue Emerald                      bloodless
+Zangoose                    Blue Emerald                      bloodless
+Seviper                     Blue Emerald                      bloodless
+Lunatone                    Blue Emerald                      bloodless
+Solrock                     Blue Emerald                      bloodless
+Barboach                    Blue Emerald                      bloodless
+Whiscash                    Blue Emerald                      bloodless
+Corphish                    Blue Emerald                      bloodless
+Crawdaunt                   Blue Emerald                      bloodless
+Baltoy                      Blue Emerald                      bloodless
+Claydol                     Blue Emerald                      bloodless
+Lileep                      Blue Emerald                      bloodless
+Cradily                     Blue Emerald                      bloodless
+Anorith                     Blue Emerald                      bloodless
+Armaldo                     Blue Emerald                      bloodless
+Feebas                      lakeofdance                       lakeofdance
+Milotic                     Blue Emerald                      bloodless
+Shuppet                     Blue Emerald                      bloodless
+Banette                     Blue Emerald                      bloodless
+Duskull                     Game Freak                        bloodless
+Dusclops                    Blue Emerald                      bloodless
+Tropius                     Blue Emerald                      bloodless
+Chimecho                    Blue Emerald                      bloodless
+Absol                       Bummer                            COMBOY
+Snorunt                     Blue Emerald                      bloodless
+Glalie                      Blue Emerald                      bloodless
+Spheal                      Matdemo159                        bloodless
+Sealeo                      Blue Emerald                      bloodless
+Walrein                     COMBOY                            bloodless
+Clamperl                    Blue Emerald                      bloodless
+Huntail                     COMBOY                            COMBOY
+Gorebyss                    Blue Emerald                      bloodless
+Relicanth                   Blue Emerald                      bloodless
+Luvdisc                     COMBOY                            COMBOY
+Bagon                       Blue Emerald                      bloodless
+Shelgon                     QuilChess                         bloodless
+Salamence                   com3tiin                          bloodless
+Beldum                      COMBOY                            COMBOY
+Metang                      COMBOY                            COMBOY
+Metagross                   Blue Emerald                      bloodless
+Regirock                    Blue Emerald                      bloodless
+Regice                      Blue Emerald                      bloodless
+Registeel                   Blue Emerald                      bloodless
+Latias                      Blue Emerald                      bloodless
+Latios                      Blue Emerald                      bloodless
+Kyogre                      Blue Emerald                      bloodless
+Groudon                     Blue Emerald                      bloodless
+Rayquaza                    Blue Emerald                      bloodless
+Jirachi                     Blue Emerald                      bloodless
+Deoxys                      Blue Emerald                      bloodless
+Turtwig                     bloodless                         bloodless
+Grotle                      bloodless                         bloodless
+Torterra                    Bummer                            bloodless
+Chimchar                    Pokekoks                          Pokekoks
+Monferno                    Pokekoks                          Pokekoks
+Infernape                   Pokekoks                          Pokekoks
+Piplup                      Game Freak                        bloodless
+Prinplup                    bloodless                         bloodless
+Empoleon                    COMBOY                            bloodless
+Starly                      COMBOY                            bloodless
+Staravia                    bloodless                         bloodless
+Staraptor                   bloodless                         bloodless
+Bidoof                      bloodless                         bloodless
+Bibarel                     COMBOY                            bloodless
+Shinx                       bloodless                         bloodless
+Luxio                       bloodless                         bloodless
+Luxray                      bloodless                         bloodless
+Budew                       bloodless                         COMBOY
+Roserade                    bloodless                         COMBOY
+Cranidos                    bloodless                         bloodless
+Rampardos                   bloodless                         bloodless
+Shieldon                    bloodless                         bloodless
+Bastiodon                   bloodless                         bloodless
+Combee                      bloodless                         bloodless
+Vespiquen                   bloodless                         bloodless
+Pachirisu                   bloodless                         COMBOY
+Buizel                      bloodless                         bloodless
+Floatzel                    bloodless                         bloodless
+Shellos (West)              bloodless                         bloodless
+Shellos (East)              COMBOY                            bloodless, Linnie
+Gastrodon (West)            bloodless                         bloodless
+Gastrodon (East)            COMBOY                            COMBOY
+Drifloon                    Matdemo159                        COMBOY
+Drifblim                    bloodless                         COMBOY
+Buneary                     bloodless                         bloodless
+Lopunny                     bloodless                         bloodless
+Mismagius                   bloodless                         bloodless
+Honchkrow                   bloodless                         metalflygon08
+Glameow                     COMBOY                            COMBOY
+Purugly                     bloodless                         COMBOY
+Chingling                   bloodless                         bloodless
+Stunky                      bloodless                         COMBOY
+Skuntank                    bloodless                         COMBOY
+Bronzor                     bloodless                         bloodless
+Bronzong                    bloodless                         bloodless
+Bonsly                      bloodless                         COMBOY
+Mime Jr.                    Chaos Rush                        Chaos Rush
+Happiny                     COMBOY                            COMBOY
+Chatot                      bloodless                         COMBOY
+Spiritomb                   bloodless                         bloodless
+Gible                       bloodless                         bloodless
+Gabite                      bloodless                         bloodless
+Garchomp                    bloodless                         bloodless
+Munchlax                    bloodless                         bloodless
+Riolu                       bloodless                         bloodless
+Lucario                     bloodless                         bloodless
+Hippopotas                  bloodless                         COMBOY
+Hippowdon                   bloodless                         COMBOY
+Skorupi                     bloodless                         bloodless
+Drapion                     bloodless                         bloodless
+Croagunk                    bloodless                         bloodless
+Toxicroak                   bloodless                         bloodless
+Carnivine                   bloodless                         COMBOY
+Finneon                     bloodless                         COMBOY
+Lumineon                    bloodless                         COMBOY
+Mantyke                     COMBOY                            COMBOY
+Snover                      bloodless                         bloodless
+Abomasnow                   bloodless                         COMBOY
+Weavile                     bloodless                         bloodless
+Magnezone                   Solo993                           bloodless
+Tangrowth                   COMBOY                            bloodless
+Electivire                  amvz08                            Chaos Rush
+Togekiss                    Kreestanala                       COMBOY
+Yanmega                     bloodless                         COMBOY
+Leafeon                     bloodless                         bloodless
+Glaceon                     bloodless                         bloodless
+Gliscor                     bloodless                         bloodless
+Mamoswine                   Bummer                            bloodless
+Porygon-Z                   bloodless                         bloodless
+Gallade                     bloodless                         bloodless
+Probopass                   Neslug                            bloodless
+Dusknoir                    Game Freak                        COMBOY
+Froslass                    bloodless                         bloodless
+Rotom                       bloodless                         COMBOY
+Uxie                        bloodless                         Game Freak
+Mesprit                     bloodless                         Game Freak
+Azelf                       bloodless                         Game Freak
+Dialga                      bloodless                         COMBOY
+Palkia                      bloodless                         COMBOY
+Regigigas                   bloodless                         COMBOY
+Giratina                    COMBOY                            COMBOY
+Cresselia                   bloodless                         bloodless
+Darkrai                     bloodless                         COMBOY
+Shaymin                     bloodless, COMBOY                 COMBOY
+Arceus                      bloodless                         bloodless
+Oshawott                    bloodless                         COMBOY
+Dewott                      bloodless                         COMBOY
+Samurott                    N-Kin                             COMBOY
+Lillipup                    Game Freak                        Pokekoks
+Herdier                     Pokekoks                          Pokekoks
+Stoutland                   Pokekoks                          Pokekoks
+Purrloin                    Pokekoks                          Pokekoks
+Liepard                     EeVeeEe1999                       Pokekoks
+Munna                       Pokekoks                          Pokekoks
+Musharna                    G0LD Z!                           G0LD Z!
+Roggenrola                  Bummer                            COMBOY
+Boldore                     Chris2Balls                       COMBOY
+Gigalith                    lakeofdance                       lakeofdance
+Woobat                      Gors                              COMBOY
+Swoobat                     ubasuteyama                       COMBOY
+Audino                      Wisgarus                          Wisgarus
+Timburr                     bloodless                         COMBOY
+Gurdurr                     Nicktendo DS                      Bummer
+Conkeldurr                  Bummer                            Bummer
+Sewaddle                    COMBOY                            COMBOY
+Swadloon                    COMBOY                            COMBOY
+Leavanny                    COMBOY                            COMBOY
+Venipede                    Bummer                            Bummer
+Whirlipede                  Bummer                            Bummer
+Scolipede                   Bummer                            COMBOY
+Cottonee                    bloodless                         COMBOY
+Whimsicott                  Bummer                            COMBOY
+Petilil                     Jphyper                           COMBOY
+Lilligant                   COMBOY                            COMBOY
+Basculin                    Neslug                            COMBOY
+Sandile                     lakeofdance                       COMBOY
+Krokorok                    YumeYukimenokoTsuki               COMBOY
+Krookodile                  lakeofdance                       lakeofdance
+Darumaka (Galarian)         EeVeeEe1999                       Pokekoks
+Darmanitan (Galarian)       EeVeeEe1999                       leParagon
+Maractus                    COMBOY                            COMBOY
+Dwebble                     bloodless                         COMBOY
+Crustle                     bloodless                         COMBOY
+Scraggy                     Pokekoks                          Pokekoks
+Scrafty                     Pokekoks                          Pokekoks
+Yamask (Galarian)           Pia Carrot                        Pokekoks
+Tirtouga                    COMBOY                            COMBOY
+Carracosta                  Chris2Balls                       COMBOY
+Archen                      lakeofdance                       COMBOY
+Archeops                    Jphyper                           COMBOY
+Solosis                     Game Freak                        COMBOY
+Duosion                     lakeofdance                       lakeofdance
+Reuniclus                   EeVeeEe1999                       Game Freak
+Frillish (Female)           Game Freak                        COMBOY
+Frillish (Male)             Pokekoks                          Pokekoks
+Jellicent (Female)          COMBOY                            COMBOY
+Jellicent (Male)            Pokekoks                          Pokekoks
+Joltik                      COMBOY                            COMBOY
+Galvantula                  COMBOY                            COMBOY
+Ferroseed                   Bummer                            Bummer
+Ferrothorn                  Bummer                            Bummer
+Tynamo                      Bummer                            COMBOY
+Eelektrik                   Bummer                            COMBOY
+Eelektross                  Bummer                            COMBOY
+Elgyem                      Pokekoks                          Pokekoks
+Beheeyem                    Pokekoks                          Pokekoks
+Litwick                     Bummer                            Bummer
+Lampent                     Bummer                            Bummer
+Chandelure                  Bummer                            Bummer
+Axew                        Bummer                            Bummer
+Fraxure                     Bummer                            Bummer
+Haxorus                     Bummer                            Bummer
+Cubchoo                     EeVeeEe1999                       COMBOY
+Beartic                     COMBOY                            COMBOY
+Stunfisk                    Bummer                            Bummer
+Mienfoo                     COMBOY                            COMBOY
+Mienshao                    COMBOY                            COMBOY
+Druddigon                   gmerc                             Bummer
+Golett                      Bummer                            Bummer
+Golurk                      Bummer                            Bummer
+Pawniard                    COMBOY                            COMBOY
+Bisharp                     Bummer                            Bummer
+Heatmor                     Bummer                            Bummer
+Durant                      Bummer                            Bummer
+Deino                       Bummer                            COMBOY
+Zweilous                    Bummer                            Bummer
+Hydreigon                   Bronzeswagger                     Bummer
+Larvesta                    Thor                              COMBOY
+Volcarona                   Thor                              COMBOY
+Chespin                     MrDollSteak                       Chamber
+Quilladin                   Solo993                           Chamber
+Chesnaught                  Solo993                           Chamber
+Fennekin                    SupahSnivy                        N-Kin
+Braixen                     Zorgoth120, Solo993               Chamber
+Delphox                     Solo993                           Wisgarus
+Froakie                     WAH!                              Pia Carrot
+Frogadier                   Zorgoth120                        Chamber
+Greninja                    Solo993                           Chamber
+Fletchling                  WAH!                              MrDollSteak
+Fletchindr                  Zerudez                           al199288
+Talonflame                  Mr. Dollsteak, Hiraethe           MrDollSteak
+Scatterbug                  Hooded Bird                       MrDollSteak
+Spewpa                      Hooded Bird                       MrDollSteak
+Vivillon                    Kyledove                          Solo993
+Flabebe                     TheCynicalPoet                    leParagon
+Floette                     Pia Carrot                        Pia Carrot
+Florges                     Monnotonnous Pixels               Pia Carrot
+Skiddo                      Vale98PM                          Bummer
+Gogoat                      Dragonball253                     Bummer
+Pancham                     Pia Carrot                        Chamber
+Pangoro                     Chamber                           Chamber
+Espurr                      JaceDeane, SirWhibbles            Solo993
+Meowstic (Female)           Noscium                           Faintster
+Meowstic (Male)             Pia Carrot                        JaceDeane, SirWhibbles
+Honedge                     JaceDeane, SirWhibbles            JaceDeane, SirWhibbles
+Doublade                    Bummer                            Bummer
+Aegislash                   Bummer                            Bummer
+Spritzee                    lakeofdance                       SirWhibbles
+Aromatisse                  Bummer                            SirWhibbles
+Swirlix                     lakeofdance                       COMBOY
+Slurpuff                    lakeofdance                       COMBOY
+Inkay                       leParagon                         leParagon
+Malamar                     Bummer                            Bummer
+Binacle                     Bummer                            Bummer
+Barbaracle                  Bummer                            Bummer
+Skrelp                      Sleet                             SirWhibbles
+Dragalge                    Pia Carrot                        Chamber
+Helioptile                  Wobblebuns                        Chamber
+Heliolisk                   Chamber                           Chamber
+Tyrunt                      Neslug                            MrDollSteak, Bummer
+Tyrantrum                   Bummer                            MrDollSteak, Bummer
+Amaura                      Chamber                           Chamber
+Aurorus                     Chamber                           SirWhibbles
+Sylveon                     Solo993                           Solo993
+Hawlucha                    Solo993                           Solo993
+Dedenne                     Solo993                           Solo993
+Carbink                     Bummer                            SirWhibbles
+Goomy                       Wobblebuns                        MrDollSteak
+Sliggoo                     COMBOY                            COMBOY
+Goodra                      Wisgarus                          Wisgarus
+Klefki                      N-Kin                             MrDollSteak
+Phantump                    Dragonball253                     Bummer
+Trevenant                   Pokémon Grape                     Bummer
+Bergmite                    Dragonball253                     MrDollSteak
+Avalugg                     Dragonball253                     Captain Cohete
+Xerneas                     MyLittleKeldeo                    Pia Carrot
+Yveltal                     Fexiled                           MrDollSteak
+Zygarde                     Fexiled                           MrDollSteak
+Diancie                     SirWhibbles                       SirWhibbles
+Volcanion                   leParagon                         leParagon
+Rowlet                      Enderific                         SirWhibbles
+Dartrix                     leParagon                         leParagon
+Decidueye                   JaegarLucciano                    Falgaia
+Pikipek                     SupahSanti                        leParagon
+Trumbeak                    Pia Carrot                        leParagon
+Toucannon                   Pia Carrot                        leParagon
+Grubbin                     *                                 *
+Charjabug                   bloodless                         leParagon
+Vikavolt                    falgaia                           Bummer
+Crabrawler                  leParagon, Bummer                 leParagon, Bummer
+Crabomable                  leParagon, Bummer                 JaegerLucciano23, Z-nogyroP, leParagon, Bummer
+Cutiefly                    SupahSanti                        Bummer
+Ribombee                    Bummer                            leParagon
+Rockruff                    SupahSanti                        leParagon
+Lycanroc (Midday)           Pia Carrot                        *
+Lycanroc (Midnight)         JaegarLucciano                    leParagon
+Mareanie                    leParagon                         leParagon
+Toxapex                     leParagon                         leParagon
+Mudbray                     SupahSanti                        Bummer
+Mudsdale                    leParagon, Bummer                 leParagon, Bummer
+Dewpider                    LakeOfDance                       leParagon
+Araquanid                   LakeOfDance                       leParagon
+Fomantis                    Pia Carrot                        utytft
+Lurantis                    EeVeeEe1999                       utytft
+Morelull                    leParagon, Bummer                 leParagon, Bummer
+Shiinotic                   Bummer                            leParagon, Bummer
+Stufful                     SupahSanti                        leParagon
+Bewear                      SupahSanti                        leParagon
+Oranguru                    SupahSanti                        leParagon
+Passimian                   TheLunarNerd                      leParagon
+Wimpod                      Pia Carrot                        leParagon
+Golisopod                   LakeOfDance                       Falgaia
+Sandygast                   SupahSanti                        Z-nogyroP, goranthegreat
+Palossand                   Pia Carrot                        Z-nogyroP, Kevin RDS, goranthegreat
+Type: Null                  CopyRobot1                        *
+Silvally                    leParagon                         leParagon
+Komala                      SupahSanti                        leParagon
+Turtonator                  SupahSanti                        leParagon
+Togedemaru                  Pia Carrot                        Wisgarus
+Mimikyu                     SupahSanti                        Pia Carrot
+Drampa                      SupahSanti                        leParagon, Bummer
+Dhelmise                    lakeofdance                       leParagon
+Jangmo-o                    lakeofdance                       leParagon
+Hakamo-o                    leParagon                         leParagon
+Kommo-o                     lakeofdance                       leParagon
+Nihilego                    lakeofdance                       utytft
+Buzzwole                    lakeofdance                       leParagon
+Pheromosa                   Pia Carrot                        leParagon
+Xurkitree                   Pia Carrot                        leParagon
+Celesteela                  JaegerLucciano23                  leParagon, JaegerLucciano23
+Kartana                     Pia Carrot                        SharkGuy
+Guzzlord                    Pia Carrot                        SharkGuy
+Magearna                    SupahSanti                        leParagon
+Stakataka                   Pia Carrot                        leParagon
+Blacephlon                  Pia Carrot                        leParagon
+Grookey                     Involuntary-Twitch                leParagon
+Thwackey                    Involuntary-Twitch                leParagon
+Rillaboom                   leParagon                         leParagon
+Rookidee                    leParagon                         leParagon
+Corvisquire                 leParagon                         leParagon
+Corviknight                 LucasSevero                       leParagon
+Blipbug                     Enderific                         utytft
+Dottler                     Menyu                             utytft
+Orbeetle                    sunny-bear                        utytft
+Nickit                      Jimmy Fraser                      utytft
+Thievul                     utytft                            utytft
+Wooloo                      Bronzeswagger                     leParagon
+Dubwool                     KingOfThe-X-Roads                 leParagon
+Chewtle                     Menyu                             leParagon
+Drednaw                     EeVeeEe1999                       utytft
+Rolycoly                    EeVeeEe1999, JaceDeane            leParagon
+Carkol                      utytft                            utytft
+Coalossal                   Menyu                             utytft
+Applin                      utytft                            utytft
+Flapple                     utytft                            utytft
+Appletun                    utytft                            utytft
+Arrokuda                    QuilChess                         leParagon
+Baraskewda                  Menyu                             Z-nogyroP
+Toxel                       lakeofdance                       utytft
+Toxtricity                  utytft                            utytft
+Sizzlipede                  utytft                            utytft
+Centiskrch                  utytft                            utytft
+Clobbopus                   EzerArt                           Game Freak
+Grapploct                   King Panloco                      Game Freak
+Sinistea                    EeVeeEe1999                       Game Freak
+Polteagyst                  French Cyndaquil                  French Cyndaquil
+Hatenna                     Cinnaboopa                        Game Freak
+Hattrem                     Cinnaboopa                        Game Freak
+Hatterene                   LeParagon, Menyu                  leParagon
+Obstagoon                   French Cyndaquil                  French Cyndaquil
+Perrserker                  utytft                            utytft
+Cursola                     Menyu                             Menyu
+Mr. Rime                    Menyu                             utytft
+Runerigus                   EeVeeEe1999                       utytft
+Milcery                     Wisgarus                          leParagon
+Alcremie                    JaceDeane                         leParagon
+Pincurchin                  utytft                            utytft
+Snom                        Wisgarus                          Wisgarus
+Frosmoth                    Menyu                             utytft
+Cufant                      utytft                            utytft
+Copperajah                  Enderific                         utytft
+Dracozolt                   lakeofdance                       utytft
+Arctozolt                   lakeofdance                       utytft
+Dracovish                   utytft                            TheAetherPlayer
+Arctovish                   utytft                            utytft
+Duraludon                   Enderific, JaceDeane              utytft
+Dreepy                      Enderific                         tlefonmann
+Drakloak                    Enderific                         utytft
+Dragapult                   Menyu                             tlefonmann
+Regieleki                   Pokémon Daybreak/Aprogergely      leParagon
+Regidrago                   CyndArts                          leParagon
