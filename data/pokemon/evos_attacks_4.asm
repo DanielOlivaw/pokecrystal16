@@ -96,11 +96,13 @@ EvosAttacksPointers4::
 	dw ArceusEvosAttacks
 
 TurtwigEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, GROTLE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 GrotleEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 32, TR_ANYTIME, TORTERRA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -111,11 +113,13 @@ TorterraEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChimcharEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 14, TR_ANYTIME, MONFERNO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 MonfernoEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, INFERNAPE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -126,6 +130,7 @@ InfernapeEvosAttacks:
 	db 0 ; no more level-up moves
 
 PiplupEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, PRINPLUP
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
@@ -133,6 +138,7 @@ PiplupEvosAttacks:
 	db 0 ; no more level-up moves
 
 PrinplupEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, EMPOLEON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -143,11 +149,13 @@ EmpoleonEvosAttacks:
 	db 0 ; no more level-up moves
 
 StarlyEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 14, TR_ANYTIME, STARAVIA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 StaraviaEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, STARAPTOR
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -158,6 +166,7 @@ StaraptorEvosAttacks:
 	db 0 ; no more level-up moves
 
 BidoofEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 15 TR_ANYTIME, BIBAREL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -168,11 +177,13 @@ BibarelEvosAttacks:
 	db 0 ; no more level-up moves
 
 ShinxEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, LUXIO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 LuxioEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, LUXRAY
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -183,6 +194,7 @@ LuxrayEvosAttacks:
 	db 0 ; no more level-up moves
 
 BudewEvosAttacks:
+	dbbw  EVOLVE_HAPPINESS, TR_MORNDAY, ROSELIA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -193,6 +205,7 @@ RoseradeEvosAttacks:
 	db 0 ; no more level-up moves
 
 CranidosEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, RAMPARDOS
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -203,6 +216,7 @@ RampardosEvosAttacks:
 	db 0 ; no more level-up moves
 
 ShieldonEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, BASTIODON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -213,6 +227,7 @@ BastiodonEvosAttacks:
 	db 0 ; no more level-up moves
 
 CombeeEvosAttacks:
+	dbbbw EVOLVE_LEVEL_GENDER, MON_FEMALE, 21, VESPIQUEN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -228,6 +243,7 @@ PachirisuEvosAttacks:
 	db 0 ; no more level-up moves
 
 BuizelEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 26, TR_ANYTIME, FLOATZEL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -238,6 +254,7 @@ FloatzelEvosAttacks:
 	db 0 ; no more level-up moves
 
 ShellosEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, GASTRODON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -248,6 +265,7 @@ GastrodonEvosAttacks:
 	db 0 ; no more level-up moves
 
 DrifloonEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, DRIFBLIM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -258,6 +276,7 @@ DrifblimEvosAttacks:
 	db 0 ; no more level-up moves
 
 BunearyEvosAttacks:
+	dbbw  EVOLVE_HAPPINESS, TR_ANYTIME, LOPUNNY
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -278,6 +297,7 @@ HonchkrowEvosAttacks:
 	db 0 ; no more level-up moves
 
 GlameowEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 38, TR_ANYTIME, PURUGLY
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -288,11 +308,13 @@ PuruglyEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChinglingEvosAttacks:
+	dbbw  EVOLVE_HAPPINESS, TR_NITE, CHIMECHO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 StunkyEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, SKUNTANK
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -303,6 +325,7 @@ SkuntankEvosAttacks:
 	db 0 ; no more level-up moves
 
 BronzorEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 33, TR_ANYTIME, BRONZONG
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -313,16 +336,19 @@ BronzongEvosAttacks:
 	db 0 ; no more level-up moves
 
 BonslyEvosAttacks:
+	dbww EVOLVE_MOVE, MIMIC, SUDOWOODO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 MimeJrEvosAttacks:
+	dbww EVOLVE_MOVE, MIMIC, MR__MIME_G
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 HappinyEvosAttacks:
+	dbbbw EVOLVE_HOLDING, OVAL_STONE, TR_MORNDAY, CHANSEY
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -338,11 +364,13 @@ SpiritombEvosAttacks:
 	db 0 ; no more level-up moves
 
 GibleEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 24, TR_ANYTIME, GABITE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 GabiteEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 48, TR_ANYTIME, GARCHOMP
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -353,11 +381,13 @@ GarchompEvosAttacks:
 	db 0 ; no more level-up moves
 
 MunchlaxEvosAttacks:
+	dbbw  EVOLVE_HAPPINESS, TR_ANYTIME, SNORLAX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 RioluEvosAttacks:
+	dbbw  EVOLVE_HAPPINESS, TR_MORNDAY, LUCARIO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -368,6 +398,7 @@ LucarioEvosAttacks:
 	db 0 ; no more level-up moves
 
 HippopotasEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, HIPPOWDON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -378,6 +409,7 @@ HippowdonEvosAttacks:
 	db 0 ; no more level-up moves
 
 SkorupiEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 40, TR_ANYTIME, DRAPION
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -388,6 +420,7 @@ DrapionEvosAttacks:
 	db 0 ; no more level-up moves
 
 CroagunkEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 37, TR_ANYTIME, TOXICROAK
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -403,6 +436,7 @@ CarnivineEvosAttacks:
 	db 0 ; no more level-up moves
 
 FinneonEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 31, TR_ANYTIME, LUMINEON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -413,11 +447,13 @@ LumineonEvosAttacks:
 	db 0 ; no more level-up moves
 
 MantykeEvosAttacks:
+	EVOLVE_PARTY, REMORAID, MANTINE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 SnoverEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 40, TR_ANYTIME, ABOMASNOW
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
