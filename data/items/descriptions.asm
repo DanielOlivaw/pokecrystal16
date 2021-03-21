@@ -852,8 +852,9 @@ PolkadotBowDesc:
 	next "type moves. (HOLD)@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+		;"123456789123456789"
+	db   "A device made by"
+	next "SILPH CO. (HOLD)@"
 
 BerryDesc:
 	db   "A self-restore"

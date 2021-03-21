@@ -275,6 +275,11 @@ EvolveAfterBattle_MasterLoop:
 
 .move_type
 	; Evolve if a move of the specified type is known by the Pokemon
+	; Also requires high friendship
+	ld a, [wTempMonHappiness]
+	cp HAPPINESS_TO_EVOLVE
+	jp c, .skip_evolution_species_parameter
+
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species_parameter
 

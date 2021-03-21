@@ -382,7 +382,7 @@ RaichuAEvosAttacks:
 	db 0 ; no more level-up moves
 
 SandshrewAEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, SANDSLASH_A
+	dbbw EVOLVE_ITEM, ICE_STONE, SANDSLASH_A
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 6, DEFENSE_CURL
@@ -502,7 +502,7 @@ ClefableEvosAttacks:
 	db 0 ; no more level-up moves
 
 VulpixAEvosAttacks:
-	dbbw EVOLVE_ITEM, FIRE_STONE, NINETALES_A
+	dbbw EVOLVE_ITEM, ICE_STONE, NINETALES_A
 	db 0 ; no more evolutions
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
@@ -770,6 +770,7 @@ AbraEvosAttacks:
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, ALAKAZAM
 	dbbw EVOLVE_TRADE, -1, ALAKAZAM
 	db 0 ; no more evolutions
 	dbw 1, TELEPORT
@@ -814,6 +815,7 @@ MachopEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, MACHAMP
 	dbbw EVOLVE_TRADE, -1, MACHAMP
 	db 0 ; no more evolutions
 	dbw 1, LOW_KICK
@@ -928,6 +930,7 @@ GeodudeEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, GOLEM
 	dbbw EVOLVE_TRADE, -1, GOLEM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
@@ -992,7 +995,9 @@ RapidashEvosAttacks:
 
 SlowpokeEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 37, TR_ANYTIME, SLOWBRO
+	dbbbw EVOLVE_HOLDING, KINGS_ROCK, TR_ANYTIME, SLOWKING
 	dbbw EVOLVE_TRADE, KINGS_ROCK, SLOWKING
+	; dbww EVOLVE_PARTY, SHELLDER, SLOWBRO
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE
@@ -1036,6 +1041,7 @@ MagnemiteEvosAttacks:
 	db 0 ; no more level-up moves
 
 MagnetonEvosAttacks:
+	dbbw EVOLVE_ITEM, THUNDERSTONE, MAGNEZONE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, THUNDERSHOCK
@@ -1052,6 +1058,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
+	dbbbw EVOLVE_ITEM_GENDER, MON_FEMALE, DAWN_STONE, SWANDAME
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 7, SAND_ATTACK
@@ -1154,6 +1161,7 @@ GastlyEvosAttacks:
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, GENGAR
 	dbbw EVOLVE_TRADE, -1, GENGAR
 	db 0 ; no more evolutions
 	dbw 1, HYPNOSIS
@@ -1183,6 +1191,7 @@ GengarEvosAttacks:
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
+	dbbbw EVOLVE_HOLDING, METAL_COAT, TR_ANYTIME, STEELIX
 	dbbw EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
@@ -1356,6 +1365,7 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
+	dbww EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH
 	db 0 ; no more evolutions
 	dbw 1, CONSTRICT
 	dbw 4, SLEEP_POWDER
@@ -1395,6 +1405,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
+	dbbbw EVOLVE_HOLDING, SEA_SCALE, TR_ANYTIME, KINGDRA
 	dbbw EVOLVE_TRADE, SEA_SCALE, KINGDRA
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
@@ -1434,6 +1445,7 @@ StarmieEvosAttacks:
 	db 0 ; no more level-up moves
 
 MrMimeGEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 42, TR_ANYTIME, MR__RIME
 	db 0 ; no more evolutions
 	dbw 1, BARRIER
 	dbw 6, CONFUSION
@@ -1449,6 +1461,7 @@ MrMimeGEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
+	dbbbw EVOLVE_HOLDING, METAL_COAT, TR_ANYTIME, SCIZOR
 	dbbw EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
@@ -1464,6 +1477,8 @@ ScytherEvosAttacks:
 	db 0 ; no more level-up moves
 
 ElectabuzzEvosAttacks:
+	dbbbw EVOLVE_HOLDING, ELECTIRIZER, TR_ANYTIME, ELECTIVIRE
+	dbbw EVOLVE_TRADE, ELECTIRIZER, ELECTIVIRE
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
@@ -1545,6 +1560,9 @@ EeveeEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	dbbw EVOLVE_ITEM, WATER_STONE, VAPOREON
 	dbbw EVOLVE_ITEM, FIRE_STONE, FLAREON
+	dbbw EVOLVE_ITEM, LEAF_STONE, LEAFEON
+	dbbw EVOLVE_ITEM, ICE_STONE, GLACEON
+	dbbw EVOLVE_MOVE_TYPE, FAIRY, SYLVEON
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
 	dbbw EVOLVE_HAPPINESS, TR_NITE, UMBREON
 	db 0 ; no more evolutions
@@ -1601,6 +1619,7 @@ FlareonEvosAttacks:
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
+	dbbbw EVOLVE_HOLDING, UP_GRADE, TR_ANYTIME, PORYGON2
 	dbbw EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	dbw 1, CONVERSION2

@@ -104,11 +104,13 @@ EvosAttacksPointers2::
 	dw CelebiEvosAttacks
 
 TangelEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, TANGELA
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
 
 MolancoraEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 38, TR_ANYTIME, ANCHORRAGE
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
@@ -119,11 +121,13 @@ AnchorrageEvosAttacks:
 	db 0 ; no more level-up moves
 
 MeowsyEvosAttacks:
+	dbww EVOLVE_MOVE, METAL_CLAW, MEOWTH_G
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
 
 RinrinEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, CHIMEOW
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
@@ -134,6 +138,7 @@ ChimeowEvosAttacks:
 	db 0 ; no more level-up moves
 
 CircubEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 35, TR_ANYTIME, TIGETRIC
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
@@ -149,6 +154,7 @@ SwandameEvosAttacks:
 	db 0 ; no more level-up moves
 
 KurstrawEvosAttacks:
+	dbbbw EVOLVE_HOLDING, SPELL_TAG, TR_NITE, PANPIRE
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
@@ -159,6 +165,7 @@ PanpireEvosAttacks:
 	db 0 ; no more level-up moves
 
 WolfrostEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 35, TR_NITE, WARWOLF
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves
@@ -501,6 +508,7 @@ TogepiEvosAttacks:
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
+	dbbw EVOLVE_ITEM, SHINY_STONE, TOGEKISS
 	db 0 ; no more evolutions
 	dbw 1, GROWL
 	dbw 1, CHARM
@@ -673,6 +681,7 @@ JumpluffEvosAttacks:
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
+	dbww EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, FORESIGHT
@@ -739,6 +748,7 @@ UmbreonEvosAttacks:
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
+	dbbw EVOLVE_ITEM, DUSK_STONE, HONCHKROW
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 11, PURSUIT
@@ -762,6 +772,7 @@ SlowkingEvosAttacks:
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
+	dbbw EVOLVE_ITEM, DUSK_STONE, MISMAGIUS
 	db 0 ; no more evolutions
 	dbw 1, GROWL
 	dbw 1, PSYWAVE
@@ -832,6 +843,7 @@ DunsparceEvosAttacks:
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
+	dbbbw EVOLVE_HOLDING, RAZOR_FANG, TR_NITE, GLISCOR
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 6, SAND_ATTACK
@@ -922,6 +934,7 @@ HeracrossEvosAttacks:
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
+	dbbbw EVOLVE_HOLDING, RAZOR_CLAW, TR_NITE, WEAVILE
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
@@ -1004,6 +1017,7 @@ SwinubEvosAttacks:
 	db 0 ; no more level-up moves
 
 PiloswineEvosAttacks:
+	dbww EVOLVE_MOVE, ANCIENTPOWER, MAMOSWINE
 	db 0 ; no more evolutions
 	dbw 1, HORN_ATTACK
 	dbw 1, POWDER_SNOW
@@ -1018,6 +1032,7 @@ PiloswineEvosAttacks:
 	db 0 ; no more level-up moves
 
 CorsolaGEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 38, TR_ANYTIME, CURSOLA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 7, HARDEN
@@ -1143,6 +1158,8 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
+	dbbbw EVOLVE_HOLDING, DUBIOUS_DISC, TR_ANYTIME, PORYGON_Z
+	dbbw EVOLVE_TRADE, DUBIOUS_DISC, PORYGON_Z
 	db 0 ; no more evolutions
 	dbw 1, CONVERSION2
 	dbw 1, TACKLE
