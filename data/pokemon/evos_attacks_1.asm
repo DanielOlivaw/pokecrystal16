@@ -334,7 +334,7 @@ BeedrillEvosAttacks:
 	db 0 ; no more level-up moves
 
 RattataAEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, RATICATE_A
+	dbbbw EVOLVE_LEVEL, 20, TR_NITE, RATICATE_A
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
@@ -1395,7 +1395,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
-	dbbw EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
+	dbbw EVOLVE_TRADE, SEA_SCALE, KINGDRA
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, SMOKESCREEN

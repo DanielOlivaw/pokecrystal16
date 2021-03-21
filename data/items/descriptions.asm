@@ -150,7 +150,7 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw MysteryBerryDesc
-	dw DragonScaleDesc
+	dw SeaScaleDesc
 	dw BerserkGeneDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -189,24 +189,24 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MewMailDesc
+	dw HeartStoneDesc
+	dw IceStoneDesc
+	dw DawnStoneDesc
+	dw DuskStoneDesc
+	dw ShinyStoneDesc
+	dw OvalStoneDesc
 	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw RazorFangDesc
+	dw RazorClawDesc
+	dw ElectirizerDesc
+	dw DubiousDiscDesc
+	dw ReaperClothDesc
+	dw WhippedDreamDesc
+	dw SachetDesc
+	dw TartAppleDesc
+	dw SweetAppleDesc
+	dw CrackedPotDesc
+	dw BerrySweetDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -281,8 +281,10 @@ BicycleDesc:
 	next "for fast movement.@"
 
 MoonStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "A stone that glea-"
+	next "ms like the moon.@"
+	; db   "Evolves certain"
+	; next "kinds of #MON.@"
 
 AntidoteDesc:
 	db   "Cures poisoned"
@@ -314,7 +316,7 @@ MaxPotionDesc:
 
 HyperPotionDesc:
 	db   "Restores #MON"
-	next "HP by 200.@"
+	next "HP by 120.@"
 
 SuperPotionDesc:
 	db   "Restores #MON"
@@ -337,16 +339,16 @@ MaxElixerDesc:
 	next "PP of one #MON.@"
 
 FireStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "A gemstone with a"
+	next "fiery red heart.@"
 
 ThunderStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "A gemstone with a"
+	next "bolt pattern.@"
 
 WaterStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "A clear, light"
+	next "blue gemstone.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -381,8 +383,8 @@ XAccuracyDesc:
 	next "(1 BTL)@"
 
 LeafStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "A stone with the"
+	next "imprint of a leaf.@"
 
 MetalPowderDesc:
 	db   "Raises DEFENSE of"
@@ -426,7 +428,7 @@ DireHitDesc:
 
 FreshWaterDesc:
 	db   "Restores #MON"
-	next "HP by 50.@"
+	next "HP by 40.@"
 
 SodaPopDesc:
 	db   "Restores #MON"
@@ -664,7 +666,7 @@ PearlDesc:
 	next "Sell low.@"
 
 BigPearlDesc:
-	db   "A big, beautiful"
+	db   "A lovely large"
 	next "pearl. Sell high.@"
 
 EverStoneDesc:
@@ -680,8 +682,10 @@ RageCandyBarDesc:
 	next "HP by 20.@"
 
 GSBallDesc:
-	db   "The mysterious"
-	next "BALL.@"
+	db   "A mysterious,"
+	next "ancient # BALL.@"
+	; db   "The mysterious"
+	; next "BALL.@"
 
 BlueCardDesc:
 	db   "Card to save"
@@ -692,8 +696,8 @@ MiracleSeedDesc:
 	next "type moves. (HOLD)@"
 
 ThickClubDesc:
-	db   "A bone of some"
-	next "sort. Sell low.@"
+	db   "Raises CUBONE or"
+	next "MAROWAK's ATTACK.@"
 
 FocusBandDesc:
 	db   "May prevent faint-"
@@ -705,7 +709,7 @@ EnergyPowderDesc:
 
 EnergyRootDesc:
 	db   "Restores #MON"
-	next "HP by 200. Bitter.@"
+	next "HP by 120. Bitter.@"
 
 HealPowderDesc:
 	db   "Cures all status"
@@ -744,11 +748,12 @@ StardustDesc:
 	next "Sell high.@"
 
 StarPieceDesc:
-	db   "A hunk of red gem."
+	db   "A red gem shard."
 	next "Sell very high.@"
 
 BasementKeyDesc:
-	db   "Opens doors.@"
+	db   "Opens doors in the"
+	next "Underground.@"
 
 PassDesc:
 	db   "A ticket for the"
@@ -782,9 +787,9 @@ MysteryBerryDesc:
 	db   "A self-restore"
 	next "for PP. (HOLD)@"
 
-DragonScaleDesc:
-	db   "A rare dragon-type"
-	next "item.@"
+SeaScaleDesc:
+	db   "A scale from a sea"
+	next "serpent. (HOLD)@"
 
 BerserkGeneDesc:
 	db   "Boosts ATTACK but"
@@ -815,8 +820,8 @@ FastBallDesc:
 	next "ing fast #MON.@"
 
 LightBallDesc:
-	db   "An odd, electrical"
-	next "orb. (HOLD)@"
+	db   "An orb loved by"
+	next "PIKACHU. (HOLD)@"
 
 FriendBallDesc:
 	db   "A BALL that makes"
@@ -912,3 +917,66 @@ MusicMailDesc:
 MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
+
+HeartStoneDesc:
+	db   "A stone that holds"
+	next "a heartfelt wish.@"
+
+IceStoneDesc:
+	db   "A gemstone with a"
+	next "snowflake pattern.@"
+
+DawnStoneDesc:
+	db   "A stone that spar-"
+	next "kles like an eye.@"
+
+DuskStoneDesc:
+	db   "A gemstone as dark"
+	next "as dark can be.@"
+
+ShinyStoneDesc:
+	db   "A gemstone that"
+	next "shines with light.@"
+
+OvalStoneDesc:
+	db   "A stone as round"
+	next "as an EGG. (HOLD)@"
+
+RazorFangDesc:
+RazorClawDesc:
+	db   "May make the foe"
+	next "flinch. (HOLD)@"
+
+ElectirizerDesc:
+	db   "A box loved by"
+	next "ELECTABUZZ. (HOLD)@"
+
+ReaperClothDesc:
+	db   "A cloth loved by"
+	next "DUSCLOPS. (HOLD)@"
+
+DubiousDiscDesc:
+		;"123456789123456789"
+	db   "A box full of dub-"
+	next "ious data. (HOLD)@"
+
+WhippedDreamDesc:
+	db   "A treat loved by"
+	next "SWIRLIX. (HOLD)@"
+
+SachetDesc:
+	db   "A sachet loved by"
+	next "SPRITZEE. (HOLD)@"
+
+TartAppleDesc:
+SweetAppleDesc:
+	db   "An apple that can"
+	next "cause evolution.@"
+
+CrackedPotDesc:
+	db   "A teapot that can"
+	next "cause evolution.@"
+
+BerrySweetDesc:
+	db   "A sweet loved by"
+	next "MILCERY. (HOLD)@"

@@ -156,7 +156,7 @@
 	const ITEM_94      ; 94
 	const ITEM_95      ; 95
 	const MYSTERYBERRY ; 96
-	const DRAGON_SCALE ; 97
+	const SEA_SCALE    ; 97
 	const BERSERK_GENE ; 98
 	const ITEM_99      ; 99
 	const ITEM_9A      ; 9a
@@ -195,24 +195,24 @@
 	const BLUESKY_MAIL ; bb
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
-	const ITEM_BE      ; be
-	const ITEM_BF      ; bf
-	const ITEM_C0      ; c0
-	const ITEM_C1      ; c1
-	const ITEM_C2      ; c2
-	const ITEM_C3      ; c3
+	const HEART_STONE      ; be
+	const ICE_STONE      ; bf
+	const DAWN_STONE      ; c0
+	const DUSK_STONE      ; c1
+	const SHINY_STONE      ; c2
+	const OVAL_STONE      ; c3
 	const ITEM_C4      ; c4
-	const ITEM_C5      ; c5
-	const ITEM_C6      ; c6
-	const ITEM_C7      ; c7
-	const ITEM_C8      ; c8
-	const ITEM_C9      ; c9
-	const ITEM_CA      ; ca
-	const ITEM_CB      ; cb
-	const ITEM_CC      ; cc
-	const ITEM_CD      ; cd
-	const ITEM_CE      ; ce
-	const ITEM_CF      ; cf
+	const RAZOR_FANG      ; c5
+	const RAZOR_CLAW      ; c6
+	const ELECTIRIZER      ; c7
+	const DUBIOUS_DISC      ; c8
+	const REAPER_CLOTH      ; c9
+	const WHIPPEDDREAM      ; ca
+	const SACHET      ; cb
+	const TART_APPLE      ; cc
+	const SWEET_APPLE      ; cd
+	const CRACKED_POT      ; ce
+	const BERRY_SWEET      ; cf
 	const ITEM_D0      ; d0
 	const ITEM_D1      ; d1
 	const ITEM_D2      ; d2

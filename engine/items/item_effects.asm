@@ -163,7 +163,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_94
 	dw NoEffect            ; ITEM_95
 	dw RestorePPEffect     ; MYSTERYBERRY
-	dw NoEffect            ; DRAGON_SCALE
+	dw NoEffect            ; SEA_SCALE
 	dw NoEffect            ; BERSERK_GENE
 	dw NoEffect            ; ITEM_99
 	dw NoEffect            ; ITEM_9A
@@ -192,6 +192,34 @@ ItemEffects:
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; ITEM_B3
+	dw NoEffect            ; BRICK_PIECE 
+	dw NoEffect            ; SURF_MAIL   
+	dw NoEffect            ; LITEBLUEMAIL
+	dw NoEffect            ; PORTRAITMAIL
+	dw NoEffect            ; LOVELY_MAIL 
+	dw NoEffect            ; EON_MAIL    
+	dw NoEffect            ; MORPH_MAIL  
+	dw NoEffect            ; BLUESKY_MAIL
+	dw NoEffect            ; MUSIC_MAIL  
+	dw NoEffect            ; MIRAGE_MAIL 
+	dw EvoStoneEffect      ; HEART_STONE 
+	dw EvoStoneEffect      ; ICE_STONE   
+	dw EvoStoneEffect      ; DAWN_STONE  
+	dw EvoStoneEffect      ; DUSK_STONE  
+	dw EvoStoneEffect      ; SHINY_STONE 
+	dw NoEffect            ; OVAL_STONE  
+	dw NoEffect            ; ITEM_C4     
+	dw NoEffect            ; RAZOR_FANG  
+	dw NoEffect            ; RAZOR_CLAW  
+	dw NoEffect            ; ELECTIRIZER 
+	dw NoEffect            ; DUBIOUS_DISC
+	dw NoEffect            ; REAPER_CLOTH
+	dw NoEffect            ; WHIPPEDDREAM
+	dw NoEffect            ; SACHET      
+	dw EvoStoneEffect      ; TART_APPLE  
+	dw EvoStoneEffect      ; SWEET_APPLE 
+	dw EvoStoneEffect      ; CRACKED_POT 
+	dw NoEffect            ; BERRY_SWEET 
 
 PokeBallEffect:
 	ld a, [wBattleMode]

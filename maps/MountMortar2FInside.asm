@@ -33,7 +33,7 @@ MountMortar2FInsideRareCandy:
 	; itemball TM_DEFENSE_CURL
 
 MountMortar2FInsideDragonScale:
-	itemball DRAGON_SCALE
+	itemball SEA_SCALE
 
 MountMortar2FInsideElixer:
 	itemball ELIXER

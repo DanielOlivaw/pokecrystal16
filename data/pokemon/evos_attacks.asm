@@ -14,9 +14,9 @@ SECTION "Evolutions and Attacks Pointers", ROMX
 ; New evo methods from code by pfero
 EvoTypeSizes::
 	db 3 ; dbbbw: EVOLVE_LEVEL, level, TR_* constant (ANYTIME, MORNDAY, NITE), species
-	db 3 ; dbbbw: EVOLVE_LEVEL_GENDER, gender, level, species
+	db 3 ; dbbbw: EVOLVE_LEVEL_GENDER, MON_* constant (MALE, FEMALE), level, species
 	db 2 ; dbbw:  EVOLVE_ITEM, used item, species
-	db 3 ; dbbbw: EVOLVE_ITEM_GENDER, gender, used item, species
+	db 3 ; dbbbw: EVOLVE_ITEM_GENDER, MON_* constant (MALE, FEMALE), used item, species
 	db 2 ; dbbw:  EVOLVE_TRADE, held item (or -1 for none), species
 	db 2 ; dbbw:  EVOLVE_HAPPINESS, TR_* constant (ANYTIME, MORNDAY, NITE), species
 	db 3 ; dbbbw: EVOLVE_STAT, level, ATK_*_DEF constant (LT, GT, EQ), species
@@ -26,7 +26,6 @@ EvoTypeSizes::
 	db 3 ; dbww:  EVOLVE_PARTY, party member, species
 	
 ; Party menu display is incorrect for EVOLVE_ITEM_GENDER
-; Need an EVOLVE_LEVEL_GENDER for Combee (hopefully not too difficult?)
 
 EvosAttacksPointers::
 	indirect_table 2, 1
