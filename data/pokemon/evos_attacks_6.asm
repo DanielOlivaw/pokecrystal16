@@ -216,6 +216,7 @@ AegislashEvosAttacks:
 
 SpritzeeEvosAttacks:
 	dbbbw EVOLVE_HOLDING, SACHET, TR_ANYTIME, AROMATISSE
+	dbbw EVOLVE_TRADE, SACHET, AROMATISSE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -227,6 +228,7 @@ AromatisseEvosAttacks:
 
 SwirlixEvosAttacks:
 	dbbbw EVOLVE_HOLDING, WHIPPEDDREAM, TR_ANYTIME, SLURPUFF
+	dbbw EVOLVE_TRADE, WHIPPEDDREAM, SLURPUFF
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves

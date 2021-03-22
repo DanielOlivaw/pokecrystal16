@@ -299,6 +299,7 @@ EvolveAfterBattle_MasterLoop:
 	ld l, a
 	ld a, MOVE_TYPE
 	call GetMoveAttribute
+	and TYPE_MASK
 	pop bc
 	pop hl
 	cp b
