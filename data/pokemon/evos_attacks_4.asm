@@ -166,7 +166,7 @@ StaraptorEvosAttacks:
 	db 0 ; no more level-up moves
 
 BidoofEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 15 TR_ANYTIME, BIBAREL
+	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, BIBAREL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
@@ -447,7 +447,7 @@ LumineonEvosAttacks:
 	db 0 ; no more level-up moves
 
 MantykeEvosAttacks:
-	EVOLVE_PARTY, REMORAID, MANTINE
+	dbww EVOLVE_PARTY, REMORAID, MANTINE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	db 0 ; no more level-up moves
