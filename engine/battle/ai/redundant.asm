@@ -14,36 +14,34 @@ AI_Redundant:
 	jp hl
 
 .Moves:
-	dbw EFFECT_DREAM_EATER,  .DreamEater
-	dbw EFFECT_HEAL,         .Heal
-	dbw EFFECT_LIGHT_SCREEN, .LightScreen
-	dbw EFFECT_MIST,         .Mist
-	dbw EFFECT_FOCUS_ENERGY, .FocusEnergy
-	dbw EFFECT_CONFUSE,      .Confuse
-	dbw EFFECT_TRANSFORM,    .Transform
-	dbw EFFECT_REFLECT,      .Reflect
-	dbw EFFECT_SUBSTITUTE,   .Substitute
-	dbw EFFECT_LEECH_SEED,   .LeechSeed
-	dbw EFFECT_DISABLE,      .Disable
-	dbw EFFECT_ENCORE,       .Encore
-	dbw EFFECT_SNORE,        .Snore
-	dbw EFFECT_SLEEP_TALK,   .SleepTalk
-	dbw EFFECT_MEAN_LOOK,    .MeanLook
-	dbw EFFECT_NIGHTMARE,    .Nightmare
-	dbw EFFECT_SPIKES,       .Spikes
-	dbw EFFECT_FORESIGHT,    .Foresight
-	dbw EFFECT_PERISH_SONG,  .PerishSong
-	dbw EFFECT_SANDSTORM,    .Sandstorm
-	dbw EFFECT_ATTRACT,      .Attract
-	dbw EFFECT_SAFEGUARD,    .Safeguard
-	dbw EFFECT_RAIN_DANCE,   .RainDance
-	dbw EFFECT_SUNNY_DAY,    .SunnyDay
-	dbw EFFECT_TELEPORT,     .Teleport
-	dbw EFFECT_MORNING_SUN,  .MorningSun
-	dbw EFFECT_SYNTHESIS,    .Synthesis
-	dbw EFFECT_MOONLIGHT,    .Moonlight
-	dbw EFFECT_SWAGGER,      .Swagger
-	dbw EFFECT_FUTURE_SIGHT, .FutureSight
+	dbw EFFECT_DREAM_EATER,   .DreamEater
+	dbw EFFECT_HEAL,          .Heal
+	dbw EFFECT_LIGHT_SCREEN,  .LightScreen
+	dbw EFFECT_MIST,          .Mist
+	dbw EFFECT_FOCUS_ENERGY,  .FocusEnergy
+	dbw EFFECT_CONFUSE,       .Confuse
+	dbw EFFECT_TRANSFORM,     .Transform
+	dbw EFFECT_REFLECT,       .Reflect
+	dbw EFFECT_SUBSTITUTE,    .Substitute
+	dbw EFFECT_LEECH_SEED,    .LeechSeed
+	dbw EFFECT_DISABLE,       .Disable
+	dbw EFFECT_ENCORE,        .Encore
+	dbw EFFECT_SNORE,         .Snore
+	dbw EFFECT_SLEEP_TALK,    .SleepTalk
+	dbw EFFECT_MEAN_LOOK,     .MeanLook
+	dbw EFFECT_NIGHTMARE,     .Nightmare
+	dbw EFFECT_SPIKES,        .Spikes
+	dbw EFFECT_FORESIGHT,     .Foresight
+	dbw EFFECT_PERISH_SONG,   .PerishSong
+	dbw EFFECT_SANDSTORM,     .Sandstorm
+	dbw EFFECT_ATTRACT,       .Attract
+	dbw EFFECT_SAFEGUARD,     .Safeguard
+	dbw EFFECT_RAIN_DANCE,    .RainDance
+	dbw EFFECT_SUNNY_DAY,     .SunnyDay
+	dbw EFFECT_TELEPORT,      .Teleport
+	dbw EFFECT_SUNLIGHT_HEAL, .Heal
+	dbw EFFECT_SWAGGER,       .Swagger
+	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
 	db -1
 
 .LightScreen:
@@ -181,9 +179,6 @@ AI_Redundant:
 	ret
 
 .Heal:
-.MorningSun:
-.Synthesis:
-.Moonlight:
 	farcall AICheckEnemyMaxHP
 	jr nc, .NotRedundant
 

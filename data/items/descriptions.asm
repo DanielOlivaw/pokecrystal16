@@ -944,9 +944,12 @@ OvalStoneDesc:
 	next "as an EGG. (HOLD)@"
 
 RazorFangDesc:
-RazorClawDesc:
 	db   "May make the foe"
 	next "flinch. (HOLD)@"
+
+RazorClawDesc:
+	db   "Raises critical"
+	next "hit ratio. (HOLD)@"
 
 ElectirizerDesc:
 	db   "A box loved by"

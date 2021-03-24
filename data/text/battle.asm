@@ -451,13 +451,10 @@ UsedBindText:
 	prompt
 
 WhirlpoolTrapText:
-	text "<TARGET>"
-	line "was trapped!"
-	prompt
-
 FireSpinTrapText:
 	text "<TARGET>"
-	line "was trapped!"
+	line "was trapped in the"
+	cont "vortex!"
 	prompt
 
 WrappedByText:
@@ -480,6 +477,13 @@ StoringEnergyText:
 UnleashedEnergyText:
 	text "<USER>"
 	line "unleashed energy!"
+	prompt
+
+CloakedInHarshLightText:
+		;"123456789123456789"
+	text "<USER>"
+	line "became cloaked in"
+	cont "a harsh light!"
 	prompt
 
 HungOnText:
@@ -883,7 +887,7 @@ ReflectEffectText:
 
 NothingHappenedText:
 	text "But nothing"
-	line "happened."
+	line "happened!"
 	prompt
 
 ButItFailedText:

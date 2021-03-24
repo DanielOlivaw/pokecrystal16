@@ -200,6 +200,7 @@ ROMX $4a
 ROMX $4b
 	"Events"
 ROMX $4c
+	"Effect Commands 2"
 ROMX $4d
 ROMX $4e
 ROMX $4f

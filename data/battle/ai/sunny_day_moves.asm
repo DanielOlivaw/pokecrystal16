@@ -9,4 +9,7 @@ SunnyDayMoves:
 	dw SACRED_FIRE
 	dw MORNING_SUN
 	dw SYNTHESIS
+	dw SOLARBEAM
+	dw FLAME_WHEEL
+	dw GROWTH
 	dw -1 ; end

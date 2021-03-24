@@ -727,11 +727,6 @@ UnknownText_0x1c0d3a::
 	line "lowered its head!"
 	prompt
 
-UnknownText_0x1c0d4e::
-	text_start
-	line "is glowing!"
-	prompt
-
 UnknownText_0x1c0d5c::
 	text_start
 	line "flew up high!"

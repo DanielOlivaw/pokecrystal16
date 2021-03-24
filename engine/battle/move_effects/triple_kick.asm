@@ -1,4 +1,4 @@
-BattleCommand_TripleKick:
+TripleKickEffect:
 ; triplekick
 
 	ld a, [wKickCounter]

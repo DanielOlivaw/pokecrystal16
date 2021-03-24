@@ -896,6 +896,27 @@ PoisonMultiHit:
 	poisontarget
 	endmove
 
+LowKick:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	lowkick
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
 FlinchHit:
 	checkobedience
 	usedmovetext
@@ -932,6 +953,7 @@ OHKOHit:
 	buildopponentrage
 	endmove
 
+Struggle:
 RecoilHit:
 	checkobedience
 	usedmovetext
@@ -1037,6 +1059,27 @@ TriAttack:
 	checkfaint
 	buildopponentrage
 	tristatuschance
+	endmove
+	
+Cut:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	cutgrass
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove
 
 Toxic:
@@ -1237,6 +1280,28 @@ TrapTarget:
 	traptarget
 	endmove
 
+BodySlam:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleminimizedamage
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	paralyzetarget
+	endmove
+
 SuperFang:
 Psywave:
 StaticDamage:
@@ -1345,12 +1410,12 @@ Sketch:
 	sketch
 	endmove
 
-DefrostOpponent:
-	checkobedience
-	usedmovetext
-	doturn
-	defrostopponent
-	endmove
+; DefrostOpponent:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; defrostopponent
+	; endmove
 
 SleepTalk:
 	checkobedience
@@ -1463,6 +1528,7 @@ Nightmare:
 	checkobedience
 	usedmovetext
 	doturn
+	checkhit
 	nightmare
 	endmove
 
@@ -1493,6 +1559,13 @@ Curse:
 	usedmovetext
 	doturn
 	curse
+	endmove
+
+Growth:
+	checkobedience
+	usedmovetext
+	doturn
+	growth
 	endmove
 
 Protect:
@@ -1759,36 +1832,47 @@ RapidSpin:
 	stab
 	damagevariation
 	checkhit
+	effectchance
 	moveanim
 	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext
 	clearhazards
+	speedup
+	statupmessage
 	checkfaint
 	buildopponentrage
 	kingsrock
 	endmove
 
-MorningSun:
+FireSpin:
 	checkobedience
 	usedmovetext
 	doturn
-	healmorn
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	defrostopponent
+	traptarget
 	endmove
 
-Synthesis:
+SunlightHeal:
 	checkobedience
 	usedmovetext
 	doturn
-	healday
-	endmove
-
-Moonlight:
-	checkobedience
-	usedmovetext
-	doturn
-	healnite
+	healsun
 	endmove
 
 HiddenPower:
@@ -1935,14 +2019,18 @@ FutureSight:
 	checkobedience
 	usedmovetext
 	doturn
+	critical
 	damagestats
 	damagecalc
+	stab
 	futuresight
 	damagevariation ; skip here if last turn
 	checkhit
 	moveanimnosub
 	failuretext
 	applydamage
+	criticaltext
+	supereffectivetext
 	checkfaint
 	buildopponentrage
 	endmove
@@ -2052,12 +2140,14 @@ BeatUp:
 	critical
 	beatup
 	damagecalc
+	stab
 	damagevariation
 	clearmissdamage
 	moveanimnosub
 	failuretext
 	applydamage
 	criticaltext
+	supereffectivetext
 	cleartext
 	supereffectivetext
 	checkfaint

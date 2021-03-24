@@ -317,8 +317,8 @@ SwordsDanceDescription:
 	next "creases ATTACK.@"
 
 CutDescription:
-	db   "Cuts using claws,"
-	next "scythes, etc.@"
+	db   "Stronger against"
+	next "grass #MON.@"
 
 GustDescription:
 	db   "Whips up a strong"
@@ -525,8 +525,8 @@ SubmissionDescription:
 	next "so hurts the user.@"
 
 LowKickDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
+	db   "Deals more damage"
+	next "to heavier foes.@"
 
 CounterDescription:
 	db   "Returns a physical"
@@ -553,8 +553,8 @@ LeechSeedDescription:
 	next "foe on every turn.@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "Grows to boost"
+	next "ATTACK & SPCL.ATK.@"
 
 RazorLeafDescription:
 	db   "Has a high criti-"
@@ -1193,16 +1193,11 @@ VitalThrowDescription:
 	next "that never misses.@"
 
 MorningSunDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
-
 SynthesisDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
-
 MoonlightDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+		;"123456789123456789"
+	db   "Restores HP based"
+	next "on the weather.@"
 
 HiddenPowerDescription:
 	db   "The power varies"

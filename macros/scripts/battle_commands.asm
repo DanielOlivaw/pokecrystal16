@@ -64,7 +64,7 @@ ENDM
 	command charge                  ; 39
 	command checkcharge             ; 3a
 	command traptarget              ; 3b
-	command effect0x3c              ; 3c
+	command cutgrass                ; 3c
 	command rampage                 ; 3d
 	command checkrampage            ; 3e
 	command constantdamage          ; 3f
@@ -97,7 +97,7 @@ ENDM
 	command endure                  ; 5a
 	command checkcurl               ; 5b
 	command rolloutpower            ; 5c
-	command effect0x5d              ; 5d
+	command lowkick                 ; 5d
 	command furycutter              ; 5e
 	command attract                 ; 5f
 	command happinesspower          ; 60
@@ -110,9 +110,9 @@ ENDM
 	command batonpass               ; 67
 	command pursuit                 ; 68
 	command clearhazards            ; 69
-	command healmorn                ; 6a
-	command healday                 ; 6b
-	command healnite                ; 6c
+	command healsun                 ; 6a
+	; command healday                 ; 6b
+	; command healnite                ; 6c
 	command hiddenpower             ; 6d
 	command startrain               ; 6e
 	command startsun                ; 6f
@@ -180,6 +180,7 @@ ENDM
 	command supereffectivelooptext  ; ad
 	command startloop               ; ae
 	command curl                    ; af
+	command growth                  ; b0
 
 	enum_start $fe
 	command endturn                 ; fe

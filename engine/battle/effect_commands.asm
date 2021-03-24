@@ -1224,7 +1224,8 @@ BattleCommand_Critical:
 	bit SUBSTATUS_FOCUS_ENERGY, a
 	jr z, .CheckCritical
 
-; +1 critical level
+; +2 critical level
+	inc c
 	inc c
 
 .CheckCritical:
@@ -1240,8 +1241,7 @@ BattleCommand_Critical:
 	pop bc
 	jr nc, .ScopeLens
 
-; +2 critical level
-	inc c
+; +1 critical level
 	inc c
 
 .ScopeLens:
@@ -1270,7 +1270,9 @@ INCLUDE "data/moves/critical_hit_moves.asm"
 
 INCLUDE "data/battle/critical_hit_chances.asm"
 
-INCLUDE "engine/battle/move_effects/triple_kick.asm"
+BattleCommand_TripleKick:
+	farcall TripleKickEffect
+	ret
 
 BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
@@ -1633,6 +1635,9 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
+	call .ToxicPoison
+	ret z
+
 	call .XAccuracy
 	ret nz
 
@@ -1640,6 +1645,22 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_ALWAYS_HIT
+	ret z
+	cp EFFECT_MIMIC
+	ret z
+	cp EFFECT_BIDE
+	ret z
+	cp EFFECT_FORCE_SWITCH
+	ret z
+	cp EFFECT_CONVERSION2
+	ret z
+	cp EFFECT_FORESIGHT
+	ret z
+	cp EFFECT_LOCK_ON
+	ret z
+	cp EFFECT_PAIN_SPLIT
+	ret z
+	cp EFFECT_STRUGGLE
 	ret z
 
 	call .StatModifiers
@@ -1772,6 +1793,11 @@ BattleCommand_CheckHit:
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
 	ret z
 
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TOXIC
+	jr z, .ToxicPoison
+
 	bit SUBSTATUS_FLYING, a
 	ld hl, .FlyMoves
 	jr z, .check_move_in_list
@@ -1787,7 +1813,6 @@ BattleCommand_CheckHit:
 
 .FlyMoves:
 	dw GUST
-	dw WHIRLWIND
 	dw THUNDER
 	dw TWISTER
 	dw -1
@@ -1797,6 +1822,26 @@ BattleCommand_CheckHit:
 	dw FISSURE
 	dw MAGNITUDE
 	dw -1
+
+.ToxicPoison:
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TOXIC
+	ret nz
+
+	ld de, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .CheckPoison
+	ld de, wEnemyMonType1
+.CheckPoison:
+	ld a, [de]
+	cp POISON
+	ret z
+	inc de
+	ld a, [de]
+	cp POISON
+	ret
 
 .ThunderRain:
 ; Return z if the current move always hits in rain, and it is raining.
@@ -2314,10 +2359,10 @@ GetFailureResultText:
 	ld hl, wCurDamage
 	ld a, [hli]
 	ld b, [hl]
-rept 3
+; rept 3
 	srl a
 	rr b
-endr
+; endr
 	ld [hl], b
 	dec hl
 	ld [hli], a
@@ -3056,15 +3101,7 @@ BattleCommand_DamageCalc:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
-; Selfdestruct and Explosion halve defense.
-	cp EFFECT_SELFDESTRUCT
-	jr nz, .dont_selfdestruct
-
-	srl c
-	jr nz, .dont_selfdestruct
-	inc c
-
-.dont_selfdestruct
+; Selfdestruct and Explosion DON'T halve defense.
 
 ; Variable-hit moves and Conversion can have a power of 0.
 	cp EFFECT_MULTI_HIT
@@ -3463,41 +3500,19 @@ INCLUDE "engine/battle/move_effects/lock_on.asm"
 
 INCLUDE "engine/battle/move_effects/sketch.asm"
 
-BattleCommand_DefrostOpponent:
-; defrostopponent
-; Thaw the opponent if frozen, and
-; raise the user's Attack one stage.
-
-	call AnimateCurrentMove
-
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	call Defrost
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVarAddr
-	ld a, [hl]
-	push hl
-	push af
-
-	ld a, EFFECT_ATTACK_UP
-	ld [hl], a
-	call BattleCommand_StatUp
-
-	pop af
-	pop hl
-	ld [hl], a
-	ret
-
 INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
 INCLUDE "engine/battle/move_effects/destiny_bond.asm"
 
-INCLUDE "engine/battle/move_effects/spite.asm"
-
-INCLUDE "engine/battle/move_effects/false_swipe.asm"
-
 INCLUDE "engine/battle/move_effects/heal_bell.asm"
+
+BattleCommand_FalseSwipe:
+	farcall FalseSwipeEffect
+	ret
+
+BattleCommand_Spite:
+	farcall SpiteEffect
+	ret
 
 FarPlayBattleAnimation:
 ; play animation de
@@ -3823,7 +3838,7 @@ BattleCommand_PoisonTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
-	call CheckIfTargetIsPoisonType
+	call CheckIfTargetIsPoisonOrSteelType
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -3854,7 +3869,7 @@ BattleCommand_Poison:
 	and $7f
 	jp z, .failed
 
-	call CheckIfTargetIsPoisonType
+	call CheckIfTargetIsPoisonOrSteelType
 	jp z, .failed
 
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -3953,7 +3968,7 @@ BattleCommand_Poison:
 	cp EFFECT_TOXIC
 	ret
 
-CheckIfTargetIsPoisonType:
+CheckIfTargetIsPoisonOrSteelType:
 	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
@@ -3964,8 +3979,12 @@ CheckIfTargetIsPoisonType:
 	inc de
 	cp POISON
 	ret z
+	cp STEEL
+	ret z
 	ld a, [de]
 	cp POISON
+	ret z
+	cp STEEL
 	ret
 
 PoisonOpponent:
@@ -4120,6 +4139,14 @@ BattleCommand_BurnTarget:
 	farcall UseHeldStatusHealingItem
 	ret
 
+BattleCommand_DefrostOpponent:
+; defrostopponent
+; Thaw the opponent if frozen
+
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	; fallthrough
+
 Defrost:
 	ld a, [hl]
 	and 1 << FRZ
@@ -4233,6 +4260,69 @@ BattleCommand_ParalyzeTarget:
 	call PrintParalyze
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
+
+BattleCommand_BulkUp:
+	lb bc, ATTACK, DEFENSE
+	jr DoubleUp
+BattleCommand_CalmMind:
+	lb bc, SP_ATTACK, SP_DEFENSE
+	jr DoubleUp
+BattleCommand_DragonDance:
+	lb bc, ATTACK, SPEED
+	jr DoubleUp
+BattleCommand_CosmicPower:
+	lb bc, DEFENSE, SP_DEFENSE
+	jr DoubleUp
+BattleCommand_Growth:
+	lb bc, ATTACK, SP_ATTACK
+	ld a, [wBattleWeather]
+	cp WEATHER_SUN
+	jr nz, DoubleUp
+	lb bc, ($10 | ATTACK), ($10 | SP_ATTACK)
+	jr DoubleUp
+BattleCommand_HoneClaws:
+	lb bc, ATTACK, ACCURACY
+DoubleUp:
+; stats to raise are in bc
+	push bc ; StatUp clobbers c (via CheckIfStatCanBeRaised), which we want to retain
+	call ResetMiss
+	call BattleCommand_StatUp
+	ld a, [wFailedMessage]
+	ld d, a ; note for 2nd stat
+	ld e, 0	; track if we've shown animation
+	and a
+	call z, .msg_animate
+	pop bc
+	ld b, c
+	push de
+	call ResetMiss
+	call BattleCommand_StatUp
+	pop de
+	ld a, [wFailedMessage]
+	and a
+	jr z, .msg_animate
+	and d ; if this result in a being nonzero, we want to give a failure message
+	ret z
+	ld b, ABILITY + 1
+	call GetStatName
+	call AnimateFailedMove
+	ld hl, WontRiseAnymoreText
+	jp StdBattleTextbox
+.msg_animate
+	ld a, e
+	and a
+	push de
+	jr nz, .statupmessage
+	inc a
+	ld [wKickCounter], a
+	call AnimateCurrentMove
+	pop de
+	inc e
+	push de
+.statupmessage
+	call BattleCommand_StatUpMessage
+	pop de
+	ret
 
 BattleCommand_AttackUp:
 ; attackup
@@ -5792,7 +5882,7 @@ BattleCommand_Charge:
 	dw RAZOR_WIND, .RazorWind
 	dw SOLARBEAM,  .Solarbeam
 	dw SKULL_BASH, .SkullBash
-	dw SKY_ATTACK, .SkyAttack
+	dw SKY_ATTACK, CloakedInHarshLightText
 	dw FLY,        .Fly
 	dw DIG,        .Dig
 	dw -1
@@ -5810,11 +5900,6 @@ BattleCommand_Charge:
 .SkullBash:
 ; 'lowered its head!'
 	text_far UnknownText_0x1c0d3a
-	text_end
-
-.SkyAttack:
-; 'is glowing!'
-	text_far UnknownText_0x1c0d4e
 	text_end
 
 .Fly:
@@ -6231,8 +6316,6 @@ DoubleDamage:
 
 INCLUDE "engine/battle/move_effects/mimic.asm"
 
-INCLUDE "engine/battle/move_effects/leech_seed.asm"
-
 INCLUDE "engine/battle/move_effects/splash.asm"
 
 INCLUDE "engine/battle/move_effects/disable.asm"
@@ -6240,6 +6323,10 @@ INCLUDE "engine/battle/move_effects/disable.asm"
 INCLUDE "engine/battle/move_effects/pay_day.asm"
 
 INCLUDE "engine/battle/move_effects/conversion.asm"
+
+BattleCommand_LeechSeed:
+	farcall LeechSeedEffect
+	ret
 
 BattleCommand_ResetStats:
 ; resetstats
@@ -6549,6 +6636,22 @@ BattleCommand_ArenaTrap:
 	call GetBattleVarAddr
 	bit SUBSTATUS_CANT_RUN, [hl]
 	jr nz, .failed
+	
+; Doesn't work on ghost-types.
+
+	ld de, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .CheckGhost
+	ld de, wEnemyMonType1
+.CheckGhost:
+	ld a, [de]
+	cp GHOST
+	jr z, .failed
+	inc de
+	ld a, [de]
+	cp GHOST
+	jr z, .failed
 
 ; Otherwise trap the opponent.
 
@@ -6610,9 +6713,9 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-BattleCommand5d:
+; BattleCommand5d:
 ; unused
-	ret
+	; ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
@@ -6625,6 +6728,14 @@ INCLUDE "engine/battle/move_effects/present.asm"
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/safeguard.asm"
+
+BattleCommand_Cut:
+	farcall CutEffect
+	ret
+
+BattleCommand_LowKick:
+	farcall LowKickEffect
+	ret
 
 SafeCheckSafeguard:
 	push hl
@@ -6664,23 +6775,28 @@ INCLUDE "engine/battle/move_effects/pursuit.asm"
 
 INCLUDE "engine/battle/move_effects/rapid_spin.asm"
 
-BattleCommand_HealMorn:
-; healmorn
-	ld b, MORN_F
-	jr BattleCommand_TimeBasedHealContinue
+GetThirdMaxHP::
+; Assumes HP<768
+	ld hl, GetMaxHP
+	call CallBattleCore
+	xor a
+	inc b
+.loop
+	dec b
+	inc a
+	dec bc
+	dec bc
+	dec bc
+	inc b
+	jr nz, .loop
+	dec a
+	ld c, a
+	ret nz
+	inc c
+	ret
 
-BattleCommand_HealDay:
-; healday
-	ld b, DAY_F
-	jr BattleCommand_TimeBasedHealContinue
-
-BattleCommand_HealNite:
-; healnite
-	ld b, NITE_F
-	; fallthrough
-
-BattleCommand_TimeBasedHealContinue:
-; Time- and weather-sensitive heal.
+BattleCommand_HealSun:
+; Weather-sensitive heal.
 
 	ld hl, wBattleMonMaxHP
 	ld de, wBattleMonHP
@@ -6693,7 +6809,8 @@ BattleCommand_TimeBasedHealContinue:
 .start
 ; Index for .Multipliers
 ; Default restores half max HP.
-	ld c, 2
+	ld c, 0
+	ld b, 0
 
 ; Don't bother healing if HP is already full.
 	push bc
@@ -6701,41 +6818,27 @@ BattleCommand_TimeBasedHealContinue:
 	pop bc
 	jr z, .Full
 
-; Don't factor in time of day in link battles.
-	ld a, [wLinkMode]
-	and a
-	jr nz, .Weather
-
-	ld a, [wTimeOfDay]
-	cp b
-	jr z, .Weather
-	dec c ; double
-
-.Weather:
+; Get current weather
 	ld a, [wBattleWeather]
-	and a
-	jr z, .Heal
-
-; x2 in sun
-; /2 in rain/sandstorm
-	inc c
+; Heal 2/3 max HP in sun
 	cp WEATHER_SUN
-	jr z, .Heal
-	dec c
-	dec c
+	jr z, .Sun
+; Heal 1/4 max HP in other weather
+	and a
+	jr nz, .OtherWeather
+; Heal 1/2 max HP in no weather
+	callfar GetHalfMaxHP
+	jr .Heal
 
+.OtherWeather:
+	callfar GetQuarterMaxHP
+	jr .Heal
+
+.Sun:
+	call GetThirdMaxHP
+	sla c
+	rl b
 .Heal:
-	ld b, 0
-	ld hl, .Multipliers
-	add hl, bc
-	add hl, bc
-
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld a, BANK(GetMaxHP)
-	rst FarCall
-
 	call AnimateCurrentMove
 	call BattleCommand_SwitchTurn
 
@@ -6754,12 +6857,6 @@ BattleCommand_TimeBasedHealContinue:
 ; 'hp is full!'
 	ld hl, HPIsFullText
 	jp StdBattleTextbox
-
-.Multipliers:
-	dw GetEighthMaxHP
-	dw GetQuarterMaxHP
-	dw GetHalfMaxHP
-	dw GetMaxHP
 
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
 

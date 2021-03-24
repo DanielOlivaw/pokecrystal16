@@ -22,26 +22,29 @@ BattleCommand_Teleport:
 ; Can't teleport from a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .failed
+	; jr nz, .failed
+	jr z, .run_away
+	; fallthrough
+	
 ; If your level is greater than the opponent's, you run without fail.
-	ld a, [wCurPartyLevel]
-	ld b, a
-	ld a, [wBattleMonLevel]
-	cp b
-	jr nc, .run_away
+	; ld a, [wCurPartyLevel]
+	; ld b, a
+	; ld a, [wBattleMonLevel]
+	; cp b
+	; jr nc, .run_away
 ; Generate a number between 0 and (YourLevel + TheirLevel).
-	add b
-	ld c, a
-	inc c
-.loop_player
-	call BattleRandom
-	cp c
-	jr nc, .loop_player
+	; add b
+	; ld c, a
+	; inc c
+; .loop_player
+	; call BattleRandom
+	; cp c
+	; jr nc, .loop_player
 ; If that number is greater than 4 times your level, run away.
-	srl b
-	srl b
-	cp b
-	jr nc, .run_away
+	; srl b
+	; srl b
+	; cp b
+	; jr nc, .run_away
 
 .failed
 	call AnimateFailedMove

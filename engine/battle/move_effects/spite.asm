@@ -1,4 +1,4 @@
-BattleCommand_Spite:
+SpiteEffect:
 ; spite
 
 	ld a, [wAttackMissed]
@@ -18,7 +18,7 @@ BattleCommand_Spite:
 	ld b, a
 	push bc
 	ld bc, STRUGGLE
-	call CompareMove
+	farcall CompareMove
 	pop bc
 	jr z, .failed
 	ld c, -1
@@ -78,7 +78,7 @@ BattleCommand_Spite:
 	ld [hl], e
 .transformed
 	push de
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	pop de
 	ld a, d
 	ld [wDeciramBuffer], a
@@ -86,4 +86,5 @@ BattleCommand_Spite:
 	jp StdBattleTextbox
 
 .failed
-	jp PrintDidntAffect2
+	farcall PrintDidntAffect2
+	ret
