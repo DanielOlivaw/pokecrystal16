@@ -269,3 +269,5 @@ Moves1:
 	move EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING, PHYSICAL, 100, 15,  50 ; ROCK_SMASH
 	move EFFECT_TRAP_TARGET,        35, WATER,    SPECIAL,   85, 15,   0 ; WHIRLPOOL
 	move EFFECT_BEAT_UP,            10, DARK,     PHYSICAL, 100, 10,   0 ; BEAT_UP
+	move EFFECT_NORMAL_HIT,         80, GRASS,    PHYSICAL, 100, 15,   0 ; SEED_BOMB
+	;    Effect                   Power Type      Category  Acc  PP   EC   Name

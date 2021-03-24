@@ -275,6 +275,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+	dw BattleAnim_SeedBomb
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -643,6 +644,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_SeedBomb:
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_POUND
@@ -2979,13 +2981,13 @@ BattleAnim_PsychicM:
 	anim_wait 4
 	anim_ret
 
-BattleAnim_Sludge:
+BattleAnim_Toxic:
 	anim_1gfx ANIM_GFX_POISON
 	anim_call BattleAnim_Sludge_branch_cbc15
 	anim_wait 56
 	anim_ret
 
-BattleAnim_Toxic:
+BattleAnim_Sludge:
 	anim_1gfx ANIM_GFX_POISON
 	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
 	anim_call BattleAnim_Toxic_branch_cbc35

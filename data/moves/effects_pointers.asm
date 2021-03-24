@@ -96,7 +96,7 @@ MoveEffectsPointers:
 	dw Conversion2
 	dw LockOn
 	dw Sketch
-	dw Struggle
+	dw RecoilHit
 	dw SleepTalk
 	dw DestinyBond
 	dw Reversal

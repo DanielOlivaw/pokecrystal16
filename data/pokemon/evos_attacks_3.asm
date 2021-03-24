@@ -116,7 +116,7 @@ EvosAttacksPointers3::
 TreeckoEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, GROVYLE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SEED_BOMB
 	db 0 ; no more level-up moves
 
 GrovyleEvosAttacks:

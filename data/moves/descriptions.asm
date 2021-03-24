@@ -256,6 +256,7 @@ MoveDescriptions1:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw SeedBombDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1258,3 +1259,8 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+SeedBombDescription:
+	db   "Slams down hard"
+	next "seeds from above.@"
+		;"123456789123456789"

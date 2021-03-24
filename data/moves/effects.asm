@@ -953,7 +953,6 @@ OHKOHit:
 	buildopponentrage
 	endmove
 
-Struggle:
 RecoilHit:
 	checkobedience
 	usedmovetext
