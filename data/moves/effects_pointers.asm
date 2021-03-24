@@ -131,10 +131,10 @@ MoveEffectsPointers:
 	dw Pursuit
 	dw RapidSpin
 	dw FireSpin
-	dw NormalHit
+	dw BugBite
 	dw SunlightHeal
 	dw NormalHit
-	dw NormalHit
+	dw ShellSmash
 	dw HiddenPower
 	dw RainDance
 	dw SunnyDay
@@ -157,3 +157,7 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
+	dw FireFang
+	dw IceFang
+	dw ThunderFang
+	dw FlareBlitz

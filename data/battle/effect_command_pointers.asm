@@ -110,8 +110,6 @@ BattleCommandPointers:
 	dw BattleCommand_Pursuit
 	dw BattleCommand_ClearHazards
 	dw BattleCommand_HealSun
-	; dw BattleCommand_HealDay
-	; dw BattleCommand_HealNite
 	dw BattleCommand_HiddenPower
 	dw BattleCommand_StartRain
 	dw BattleCommand_StartSun
@@ -180,3 +178,8 @@ BattleCommandPointers:
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
 	dw BattleCommand_Growth
+	dw BattleCommand_FireFang
+	dw BattleCommand_IceFang
+	dw BattleCommand_ThunderFang
+	dw BattleCommand_ShellSmash
+	dw BattleCommand_BugBite

@@ -256,7 +256,22 @@ MoveDescriptions1:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+
 	dw SeedBombDescription
+	dw PetalStormDescription
+	dw FireFangDescription
+	dw IceFangDescription
+	dw ThunderFangDescription
+	dw InfernoDescription
+	dw FlareBlitzDescription
+	dw AirSlashDescription
+	dw DragonClawDescription
+	dw HeatWaveDescription
+	dw WaterPulseDescription
+	dw AquaTailDescription
+	dw ShellSmashDescription
+	dw IronDefenseDescription
+	dw FlashCannonDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1263,4 +1278,65 @@ BeatUpDescription:
 SeedBombDescription:
 	db   "Slams down hard"
 	next "seeds from above.@"
+
+PetalStormDescription:
+	db   "Attacks with a bl-"
+	next "izzard of petals.@"
+		;"123456789123456789"
+
+FireFangDescription:
+	db   "May cause a burn"
+	next "or flinching.@"
+
+IceFangDescription:
+	db   "May freeze or"
+	next "cause flinching.@"
+
+ThunderFangDescription:
+	db   "May paralyze or"
+	next "cause flinching.@"
+
+InfernoDescription:
+	db   "An attack that"
+	next "always burns.@"
+
+FlareBlitzDescription:
+	db   "Hurts the user and"
+	next "may cause a burn.@"
+
+AirSlashDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+DragonClawDescription:
+	db   "Slashes the foe"
+	next "with sharp claws.@"
+
+HeatWaveDescription:
+	db   "Hot breath that"
+	next "may cause a burn.@"
+
+WaterPulseDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
+
+AquaTailDescription:
+	db   "Swings a tail like"
+	next "a vicious wave.@"
+
+ShellSmashDescription:
+	db   "Breaks the shell"
+	next "to boost offense.@"
+
+IronDefenseDescription:
+	db   "Sharply raises the"
+	next "user's DEFENSE.@"
+
+FlashCannonDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+
+BugBiteDescription:
+	db   "Attacks and eats"
+	next "the foe's berry.@"
 		;"123456789123456789"

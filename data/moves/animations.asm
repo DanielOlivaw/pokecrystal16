@@ -275,7 +275,24 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+
 	dw BattleAnim_SeedBomb
+	dw BattleAnim_PetalStorm
+	dw BattleAnim_FireFang
+	dw BattleAnim_IceFang
+	dw BattleAnim_ThunderFang
+	dw BattleAnim_Inferno
+	dw BattleAnim_FlareBlitz
+	dw BattleAnim_AirSlash
+	dw BattleAnim_DragonClaw
+	dw BattleAnim_HeatWave
+	dw BattleAnim_WaterPulse
+	dw BattleAnim_AquaTail
+	dw BattleAnim_ShellSmash
+	dw BattleAnim_IronDefense
+	dw BattleAnim_FlashCannon
+	dw BattleAnim_BugBite
+
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -644,6 +661,21 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_BugBite:
+BattleAnim_IronDefense:
+BattleAnim_FlashCannon:
+BattleAnim_ShellSmash:
+BattleAnim_PetalStorm:
+BattleAnim_FireFang:
+BattleAnim_IceFang:
+BattleAnim_ThunderFang:
+BattleAnim_Inferno:
+BattleAnim_FlareBlitz:
+BattleAnim_AirSlash:
+BattleAnim_DragonClaw:
+BattleAnim_HeatWave:
+BattleAnim_WaterPulse:
+BattleAnim_AquaTail:
 BattleAnim_SeedBomb:
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

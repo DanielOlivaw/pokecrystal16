@@ -181,6 +181,11 @@ ENDM
 	command startloop               ; ae
 	command curl                    ; af
 	command growth                  ; b0
+	command firefang
+	command icefang
+	command thunderfang
+	command shellsmash
+	command bugbite
 
 	enum_start $fe
 	command endturn                 ; fe

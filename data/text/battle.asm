@@ -955,6 +955,25 @@ StoleText:
 	cont "from its foe!"
 	prompt
 
+StoleBerryText:
+	text "<USER>"
+	line "ate its foe's"
+	; cont "BERRY!"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
+StoleBerryRecoveryText:
+	text "<USER>"
+	line "recovered using"
+	; cont "the foe's BERRY!"
+	cont "the foe's"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 CantEscapeNowText:
 	text "<TARGET>"
 	line "can't escape now!"

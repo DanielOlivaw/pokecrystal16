@@ -4939,6 +4939,8 @@ ResetMiss:
 	ld [wAttackMissed], a
 	ret
 
+LowerStatFar:
+	ld a, [wLoweredStat]
 LowerStat:
 	ld [wLoweredStat], a
 
@@ -5030,6 +5032,30 @@ BattleCommand_TriStatusChance:
 	dw BattleCommand_ParalyzeTarget ; paralyze
 	dw BattleCommand_FreezeTarget ; freeze
 	dw BattleCommand_BurnTarget ; burn
+
+BattleCommand_FireFang:
+	; equal, independent chance to burn or flinch
+	call BattleCommand_EffectChance
+	call BattleCommand_BurnTarget
+
+	call BattleCommand_EffectChance
+	jp BattleCommand_FlinchTarget
+
+BattleCommand_IceFang:
+	; equal, independent chance to freeze or flinch
+	call BattleCommand_EffectChance
+	call BattleCommand_FreezeTarget
+
+	call BattleCommand_EffectChance
+	jp BattleCommand_FlinchTarget
+
+BattleCommand_ThunderFang:
+	; equal, independent chance to paralyze or flinch
+	call BattleCommand_EffectChance
+	call BattleCommand_ParalyzeTarget
+
+	call BattleCommand_EffectChance
+	jp BattleCommand_FlinchTarget
 
 BattleCommand_Curl:
 ; curl
@@ -6735,6 +6761,14 @@ BattleCommand_Cut:
 
 BattleCommand_LowKick:
 	farcall LowKickEffect
+	ret
+
+BattleCommand_ShellSmash:
+	farcall ShellSmashEffect
+	ret
+
+BattleCommand_BugBite:
+	farcall BugBiteEffect
 	ret
 
 SafeCheckSafeguard:

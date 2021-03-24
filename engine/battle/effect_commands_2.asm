@@ -9,3 +9,7 @@ INCLUDE "engine/battle/move_effects/spite.asm"
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
+
+INCLUDE "engine/battle/move_effects/shell_smash.asm"
+
+INCLUDE "engine/battle/move_effects/bug_bite.asm"

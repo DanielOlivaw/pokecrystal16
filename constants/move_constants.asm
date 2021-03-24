@@ -259,6 +259,21 @@
 	const BEAT_UP      ; fb
 
 	const SEED_BOMB
+	const PETAL_STORM
+	const FIRE_FANG
+	const ICE_FANG
+	const THUNDER_FANG
+	const INFERNO
+	const FLARE_BLITZ
+	const AIR_SLASH
+	const DRAGON_CLAW
+	const HEAT_WAVE
+	const WATER_PULSE
+	const AQUA_TAIL
+	const SHELL_SMASH
+	const IRON_DEFENSE
+	const FLASH_CANNON
+	const BUG_BITE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
