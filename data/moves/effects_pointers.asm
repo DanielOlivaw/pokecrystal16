@@ -161,3 +161,7 @@ MoveEffectsPointers:
 	dw IceFang
 	dw ThunderFang
 	dw FlareBlitz
+	dw QuiverDance
+	dw Venoshock
+	dw SuckerPunch
+	dw AttackDown

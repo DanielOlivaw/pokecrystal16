@@ -2285,3 +2285,52 @@ BugBite:
 	buildopponentrage
 	kingsrock
 	endmove
+
+QuiverDance:
+	checkobedience
+	usedmovetext
+	doturn
+	quiverdance
+	endmove
+	
+Venoshock:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	venoshock
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+SuckerPunch:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	suckerpunch
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

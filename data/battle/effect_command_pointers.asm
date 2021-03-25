@@ -183,3 +183,6 @@ BattleCommandPointers:
 	dw BattleCommand_ThunderFang
 	dw BattleCommand_ShellSmash
 	dw BattleCommand_BugBite
+	dw BattleCommand_QuiverDance
+	dw BattleCommand_Venoshock
+	dw BattleCommand_SuckerPunch

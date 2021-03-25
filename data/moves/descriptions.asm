@@ -272,6 +272,17 @@ MoveDescriptions1:
 	dw ShellSmashDescription
 	dw IronDefenseDescription
 	dw FlashCannonDescription
+	dw BugBiteDescription
+	dw BugBuzzDescription
+	dw QuiverDanceDescription
+	dw VenoshockDescription
+	dw PoisonJabDescription
+	dw SuckerPunchDescription
+	dw PlayNiceDescription
+	dw NuzzleDescription
+	dw NastyPlotDescription
+	dw DischargeDescription
+	dw IronHeadDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -390,7 +401,7 @@ SandAttackDescription:
 
 HeadbuttDescription:
 	db   "An attack that may"
-	next "make foe flinch.@"
+	next "cause flinching.@"
 
 HornAttackDescription:
 	db   "An attack using a"
@@ -1339,4 +1350,44 @@ FlashCannonDescription:
 BugBiteDescription:
 	db   "Attacks and eats"
 	next "the foe's berry.@"
+
+BugBuzzDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+
+QuiverDanceDescription:
+	db   "Boosts SPEED and"
+	next "both SPCL. stats.@"
+
+VenoshockDescription:
+	db   "Stronger against"
+	next "poisoned targets.@"
+
+PoisonJabDescription:
+	db   "An attack that may"
+	next "poison the foe.@"
+
+SuckerPunchDescription:
+	db   "Attacks first if"
+	next "the foe attacks.@"
+
+PlayNiceDescription:
+	db   "Reduces the foe's"
+	next "ATTACK.@"
+
+NuzzleDescription:
+	db   "An attack that"
+	next "always paralyzes.@"
+
+NastyPlotDescription:
+	db   "Sharply increases"
+	next "user's SPCL.ATK.@"
+
+DischargeDescription:
+	db   "An attack that may"
+	next "cause paralysis.@"
+
+IronHeadDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
 		;"123456789123456789"

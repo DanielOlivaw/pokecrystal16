@@ -274,6 +274,16 @@
 	const IRON_DEFENSE
 	const FLASH_CANNON
 	const BUG_BITE
+	const BUG_BUZZ
+	const QUIVER_DANCE
+	const VENOSHOCK
+	const POISON_JAB
+	const SUCKER_PUNCH
+	const PLAY_NICE
+	const NUZZLE
+	const NASTY_PLOT
+	const DISCHARGE
+	const IRON_HEAD
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

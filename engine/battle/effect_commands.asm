@@ -1662,6 +1662,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_STRUGGLE
 	ret z
+	cp EFFECT_PLAY_NICE
+	ret z
 
 	call .StatModifiers
 
@@ -6769,6 +6771,18 @@ BattleCommand_ShellSmash:
 
 BattleCommand_BugBite:
 	farcall BugBiteEffect
+	ret
+
+BattleCommand_QuiverDance:
+	farcall QuiverDanceEffect
+	ret
+
+BattleCommand_Venoshock:
+	farcall VenoshockEffect
+	ret
+
+BattleCommand_SuckerPunch:
+	farcall SuckerPunchEffect
 	ret
 
 SafeCheckSafeguard:

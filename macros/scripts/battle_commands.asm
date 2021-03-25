@@ -186,6 +186,9 @@ ENDM
 	command thunderfang
 	command shellsmash
 	command bugbite
+	command quiverdance
+	command venoshock
+	command suckerpunch
 
 	enum_start $fe
 	command endturn                 ; fe

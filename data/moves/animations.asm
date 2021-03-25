@@ -292,6 +292,16 @@ BattleAnimations::
 	dw BattleAnim_IronDefense
 	dw BattleAnim_FlashCannon
 	dw BattleAnim_BugBite
+	dw BattleAnim_BugBuzz
+	dw BattleAnim_QuiverDance
+	dw BattleAnim_Venoshock
+	dw BattleAnim_PoisonJab
+	dw BattleAnim_SuckerPunch
+	dw BattleAnim_PlayNice
+	dw BattleAnim_Nuzzle
+	dw BattleAnim_NastyPlot
+	dw BattleAnim_Discharge
+	dw BattleAnim_IronHead
 
 	dw BattleAnim_SweetScent2
 
@@ -661,6 +671,16 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Nuzzle:
+BattleAnim_NastyPlot:
+BattleAnim_Discharge:
+BattleAnim_IronHead:
+BattleAnim_PlayNice:
+BattleAnim_SuckerPunch:
+BattleAnim_PoisonJab:
+BattleAnim_Venoshock:
+BattleAnim_QuiverDance:
+BattleAnim_BugBuzz:
 BattleAnim_BugBite:
 BattleAnim_IronDefense:
 BattleAnim_FlashCannon:
