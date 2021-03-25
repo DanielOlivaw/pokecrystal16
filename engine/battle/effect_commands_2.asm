@@ -19,3 +19,5 @@ INCLUDE "engine/battle/move_effects/quiver_dance.asm"
 INCLUDE "engine/battle/move_effects/venoshock.asm"
 
 INCLUDE "engine/battle/move_effects/sucker_punch.asm"
+
+INCLUDE "engine/battle/move_effects/hail.asm"

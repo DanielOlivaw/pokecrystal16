@@ -284,6 +284,7 @@
 	const NASTY_PLOT
 	const DISCHARGE
 	const IRON_HEAD
+	const HAIL
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
@@ -293,7 +294,7 @@ NUM_ATTACKS EQU const_value + -1
 ; Battle animations use the same constants as the moves
 	const ANIM_SWEET_SCENT_2     ; fc
 ; Animations with negative IDs will play even when animations are disabled
-const_value = -$16 ;fix if more negative values are added
+const_value = -$19 ;fix if more negative values are added
 	const ANIM_THROW_POKE_BALL   ; -16 (ffea)
 	const ANIM_SEND_OUT_MON      ; -15 (ffeb)
 	const ANIM_RETURN_MON        ; -14 (ffec)
@@ -317,6 +318,9 @@ const_value = -$16 ;fix if more negative values are added
 	const ANIM_WOBBLE            ;  -3 (fffd)
 	const ANIM_SHAKE             ;  -2 (fffe)
 	const ANIM_HIT_CONFUSION     ;  -1 (ffff)
+	const ANIM_IN_HAIL           ;  -1 (ffff)
+	const ANIM_IN_FOG            ;  -1 (ffff)
+	const ANIM_IN_STORM          ;  -1 (ffff)
 
 	if const_value
 		fail "Please adjust the initial constant value to ensure that the last animation constant has a value of -1"

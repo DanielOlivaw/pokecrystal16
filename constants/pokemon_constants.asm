@@ -250,7 +250,7 @@ JOHTO_POKEMON EQU const_value
 	const TORCHIC
 	const COMBUSKEN
 	const BLAZIKEN
-	const MUDKIP ; Mudkip
+	const MUDKIP
 	const MARSHTOMP
 	const SWAMPERT
 	const POOCHYENA

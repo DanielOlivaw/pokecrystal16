@@ -322,8 +322,6 @@ UnknownText_0x1c0609::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 _UsedSurfText::
 	text_ram wStringBuffer2
 	text " used"
@@ -368,7 +366,7 @@ UnknownText_0x1c06de::
 	done
 
 UnknownText_0x1c06ed::
-	text "<PLAYER> used an"
+	text "<PLAYER> used the"
 	line "ESCAPE ROPE."
 	done
 
@@ -550,14 +548,17 @@ UnknownText_0x1c0a4e::
 	done
 
 UnknownText_0x1c0a77::
-	text "Yes! ITEMFINDER"
-	line "indicates there's"
-	cont "an item nearby."
+	text "Yes! The DOWSING"
+	line "MCHN indicates"
+
+	para "there's an item"
+	line "nearby."
 	prompt
 
 UnknownText_0x1c0aa9::
-	text "Nope! ITEMFINDER"
-	line "isn't responding."
+	text "Nope! The DOWSING"
+	line "MCHN isn't"
+	cont "responding."
 	prompt
 
 UnknownText_0x1c0acc::
@@ -680,15 +681,13 @@ UnknownText_0x1c0cc6::
 	text_ram wStringBuffer2
 	text_end
 
-	; text_end ; unused
-
 UnknownText_0x1c0cd0::
 	text_pause
-	text "<SCROLL>went way up!"
+	text "<SCROLL>rose sharply!"
 	prompt
 
 UnknownText_0x1c0ce0::
-	text " went up!"
+	text " rose!"
 	prompt
 
 UnknownText_0x1c0ceb::
@@ -697,11 +696,9 @@ UnknownText_0x1c0ceb::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c0cf5::
 	text_pause
-	text "<SCROLL>sharply fell!"
+	text "<SCROLL>harshly fell!"
 	prompt
 
 UnknownText_0x1c0d06::

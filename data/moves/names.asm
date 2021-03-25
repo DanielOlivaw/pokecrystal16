@@ -277,4 +277,5 @@ MoveNames::
 	db "NASTY PLOT@"
 	db "DISCHARGE@"
 	db "IRON HEAD@"
+	db "HAIL@"
 	  ;"123456123456@"

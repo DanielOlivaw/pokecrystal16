@@ -719,6 +719,13 @@ SECTION "Mobile Stadium 2", ROMX
 
 INCBIN "mobile/stadium/stadium2.bin"
 
+
+SECTION "Battle Weather Images", ROMX
+
+INCLUDE "gfx/weather_images.asm"
+INCLUDE "engine/battle/get_weather_image.asm"
+
+
 SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"

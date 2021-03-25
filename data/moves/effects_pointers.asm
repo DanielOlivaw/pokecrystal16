@@ -165,3 +165,5 @@ MoveEffectsPointers:
 	dw Venoshock
 	dw SuckerPunch
 	dw AttackDown
+	dw Hail
+	dw Blizzard

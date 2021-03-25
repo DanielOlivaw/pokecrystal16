@@ -22,6 +22,9 @@
 	dw BattleAnim_Wobble
 	dw BattleAnim_Shake
 	dw BattleAnim_HitConfusion
+	dw BattleAnim_InHail
+	dw BattleAnim_InFog
+	dw BattleAnim_InStorm
 BattleAnimations::
 	dw BattleAnim_0
 	dw BattleAnim_Pound
@@ -302,6 +305,7 @@ BattleAnimations::
 	dw BattleAnim_NastyPlot
 	dw BattleAnim_Discharge
 	dw BattleAnim_IronHead
+	dw BattleAnim_Hail
 
 	dw BattleAnim_SweetScent2
 
@@ -595,6 +599,20 @@ BattleAnim_InSandstorm:
 	anim_obj ANIM_OBJ_SANDSTORM, 72, 0, $1
 	anim_wait 8
 	anim_obj ANIM_OBJ_SANDSTORM, 56, 0, $2
+.loop
+	anim_sound 0, 1, SFX_MENU
+	anim_wait 8
+	anim_loop 6, .loop
+	anim_wait 8
+	anim_ret
+
+BattleAnim_InHail:
+	anim_1gfx ANIM_GFX_POWDER
+	anim_obj ANIM_OBJ_HAIL, 88, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 72, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 56, 0, $2
 .loop
 	anim_sound 0, 1, SFX_MENU
 	anim_wait 8
@@ -2265,6 +2283,19 @@ BattleAnim_Mist:
 	anim_wait 96
 	anim_ret
 
+BattleAnim_InFog:
+	anim_obp0 $54
+	anim_1gfx ANIM_GFX_HAZE
+	; anim_sound 0, 0, SFX_SURF
+.loop
+	anim_obj ANIM_OBJ_MIST, 48, 56, $0
+	anim_obj ANIM_OBJ_MIST, 132, 16, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_MENU
+	anim_loop 6, .loop
+	anim_wait 96
+	anim_ret
+
 BattleAnim_Smog:
 	anim_1gfx ANIM_GFX_HAZE
 	anim_sound 0, 1, SFX_BUBBLEBEAM
@@ -3746,6 +3777,20 @@ BattleAnim_Sandstorm:
 	anim_wait 8
 	anim_ret
 
+BattleAnim_Hail:
+	anim_1gfx ANIM_GFX_POWDER
+	anim_obj ANIM_OBJ_HAIL, 88, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 72, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL, 56, 0, $2
+.loop
+	anim_sound 0, 1, SFX_MENU
+	anim_wait 8
+	anim_loop 16, .loop
+	anim_wait 8
+	anim_ret
+
 BattleAnim_GigaDrain:
 	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_CHARGE
 	anim_call BattleAnim_TargetObj_1Row
@@ -4466,6 +4511,25 @@ BattleAnim_RainDance:
 	anim_wait 8
 	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
 	anim_wait 128
+	anim_ret
+
+BattleAnim_InStorm:
+	anim_1gfx ANIM_GFX_WATER
+	anim_bgp $f8
+	anim_obp0 $7c
+	anim_sound 0, 1, SFX_RAIN_DANCE
+	anim_obj ANIM_OBJ_RAIN, 88, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAIN, 88, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
+	anim_wait 12
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
+	anim_sound 0, 1, SFX_THUNDER
+	anim_wait 72
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
+	anim_sound 0, 1, SFX_THUNDER
+	anim_wait 44
 	anim_ret
 
 BattleAnim_SunnyDay:

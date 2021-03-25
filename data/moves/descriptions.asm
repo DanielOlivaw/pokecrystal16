@@ -283,6 +283,7 @@ MoveDescriptions1:
 	dw NastyPlotDescription
 	dw DischargeDescription
 	dw IronHeadDescription
+	dw HailDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1390,4 +1391,8 @@ DischargeDescription:
 IronHeadDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
+
+HailDescription:
+	db   "Hail inflicts"
+	next "damage every turn.@"
 		;"123456789123456789"

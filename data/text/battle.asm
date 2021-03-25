@@ -40,6 +40,11 @@ WantsToBattleText::
 	line "wants to battle!"
 	prompt
 
+WantToBattlePluralText::
+	text "<ENEMY>"
+	line "want to battle!"
+	prompt
+
 BattleText_WildFled:
 	text "Wild @"
 	text_ram wEnemyMonNick
@@ -75,13 +80,21 @@ HasANightmareText:
 	prompt
 
 HurtByCurseText:
-	text "<USER>'s"
-	line "hurt by the CURSE!"
+	text "<USER>"
+	line "is hurt by the"
+	cont "CURSE!"
 	prompt
 
 SandstormHitsText:
-	text "The SANDSTORM hits"
-	line "<USER>!"
+	text "<USER>"
+	line "is buffeted by the"
+	cont "sandstorm!"
+	prompt
+
+HailHitsText:
+	text "<USER>"
+	line "is buffeted by the"
+	cont "hail!"
 	prompt
 
 PerishCountText:
@@ -141,8 +154,17 @@ BattleText_TheSunlightIsStrong:
 	prompt
 
 BattleText_TheSandstormRages:
-	text "The SANDSTORM"
+	text "The sandstorm"
 	line "rages."
+	prompt
+
+BattleText_TheStormRages:
+	text "The storm rages."
+	prompt
+
+BattleText_HailContinuesToFall:
+	text "Hail continues to"
+	line "fall."
 	prompt
 
 BattleText_TheRainStopped:
@@ -150,13 +172,26 @@ BattleText_TheRainStopped:
 	prompt
 
 BattleText_TheSunlightFaded:
-	text "The sunlight"
+	text "The harsh sunlight"
 	line "faded."
 	prompt
 
 BattleText_TheSandstormSubsided:
-	text "The SANDSTORM"
+	text "The sandstorm"
 	line "subsided."
+	prompt
+
+BattleText_TheStormSubsided:
+	text "The storm"
+	line "subsided."
+	prompt
+
+BattleText_TheHailStopped:
+	text "The hail stopped."
+	prompt
+
+BattleText_TheFogLifted:
+	text "The fog lifted."
 	prompt
 
 BattleText_EnemyMonFainted:
@@ -176,6 +211,11 @@ GotMoneyForWinningText:
 BattleText_EnemyWasDefeated:
 	text "<ENEMY>"
 	line "was defeated!"
+	prompt
+
+BattleText_PluralEnemyWereDefeated:
+	text "<ENEMY>"
+	line "were defeated!"
 	prompt
 
 TiedAgainstText:
@@ -229,6 +269,17 @@ LostAgainstText:
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	text "<ENEMY>"
 	line "is about to use"
+	cont "@"
+	text_ram wEnemyMonNick
+	text "."
+
+	para "Will <PLAYER>"
+	line "change #MON?"
+	done
+
+BattleText_PluralEnemyAreAboutToUseWillPlayerChangeMon:
+	text "<ENEMY>"
+	line "are about to use"
 	cont "@"
 	text_ram wEnemyMonNick
 	text "."
@@ -436,6 +487,14 @@ BattleText_UsersHurtByStringBuffer1:
 	text "!"
 	prompt
 
+BattleText_UsersTrappedByStringBuffer1:
+	text "<USER>'s"
+	line "trapped by"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 BattleText_UserWasReleasedFromStringBuffer1:
 	text "<USER>"
 	line "was released from"
@@ -446,15 +505,15 @@ BattleText_UserWasReleasedFromStringBuffer1:
 
 UsedBindText:
 	text "<USER>"
-	line "used BIND on"
+	line "was squeezed by"
 	cont "<TARGET>!"
 	prompt
 
 WhirlpoolTrapText:
 FireSpinTrapText:
 	text "<TARGET>"
-	line "was trapped in the"
-	cont "vortex!"
+	line "became trapped in"
+	cont "the vortex!"
 	prompt
 
 WrappedByText:
@@ -610,6 +669,12 @@ DoesntAffectText:
 	line "<TARGET>!"
 	prompt
 
+FogProtectionText:
+	text "<TARGET>"
+	line "is protected by"
+	cont "the fog!"
+	prompt
+
 CriticalHitText:
 	text "A critical hit!"
 	prompt
@@ -683,6 +748,12 @@ BellChimedText:
 	line ""
 	prompt
 
+SoothingAromaText:
+	text "A soothing aroma"
+	line "wafted through the"
+	cont "area!"
+	prompt
+
 FellAsleepText:
 	text "<TARGET>"
 	line "fell asleep!"
@@ -738,7 +809,7 @@ WontRiseAnymoreText:
 	line "@"
 	text_ram wStringBuffer2
 	text " won't"
-	cont "rise anymore!"
+	cont "go any higher!"
 	prompt
 
 WontDropAnymoreText:
@@ -746,7 +817,7 @@ WontDropAnymoreText:
 	line "@"
 	text_ram wStringBuffer2
 	text " won't"
-	cont "drop anymore!"
+	cont "go any lower!"
 	prompt
 
 FledFromBattleText::
@@ -859,7 +930,7 @@ TransformedTypeText:
 	line "transformed into"
 	cont "the @"
 	text_ram wStringBuffer1
-	text "-type!"
+	text " type!"
 	prompt
 
 EliminatedStatsText:
@@ -876,13 +947,26 @@ TransformedText:
 	prompt
 
 LightScreenEffectText:
-	text "<USER>'s"
-	line "SPCL.DEF rose!"
+	text "LIGHT SCREEN"
+	line "raised the team's"
+	cont "SPCL.DEF!"
 	prompt
 
 ReflectEffectText:
-	text "<USER>'s"
-	line "DEFENSE rose!"
+	text "REFLECT raised the"
+	line "team's DEFENSE!"
+	prompt
+
+BrokeLightScreenText:
+	text "<USER>"
+	line "broke the target's"
+	cont "LIGHT SCREEN!"
+	prompt
+
+BrokeReflectText:
+	text "<USER>"
+	line "broke the target's"
+	cont "REFLECT!"
 	prompt
 
 NothingHappenedText:
@@ -925,13 +1009,19 @@ ParalyzedText:
 	prompt
 
 FullyParalyzedText:
-	text "<USER>'s"
-	line "fully paralyzed!"
+	text "<USER>"
+	line "is paralyzed!"
+	cont "It can't move!"
 	prompt
 
 AlreadyParalyzedText:
 	text "<TARGET>'s"
 	line "already paralyzed!"
+	prompt
+
+AlreadyBurnedText:
+	text "<TARGET>'s"
+	line "already burned!"
 	prompt
 
 ProtectedByText:
@@ -1026,8 +1116,8 @@ StartPerishText:
 	prompt
 
 SandstormBrewedText:
-	text "A SANDSTORM"
-	line "brewed!"
+	text "A sandstorm"
+	line "kicked up!"
 	prompt
 
 BracedItselfText:
@@ -1074,13 +1164,45 @@ BlewSpikesText:
 	prompt
 
 DownpourText:
-	text "A downpour"
-	line "started!"
+	text "It started to"
+	line "rain!"
 	prompt
 
 SunGotBrightText:
-	text "The sunlight got"
-	line "bright!"
+	text "The sunlight"
+	line "turned harsh!"
+	prompt
+
+HailStartedText:
+	text "It started to"
+	line "hail!"
+	prompt
+
+AutomaticRainText:
+	text "It's raining!"
+	prompt
+
+AutomaticSunText:
+	text "The sunlight is"
+	line "harsh!"
+	prompt
+
+AutomaticSandstormText:
+	text "The sandstorm is"
+	line "raging!"
+	prompt
+
+AutomaticHailText:
+	text "It's hailing!"
+	prompt
+	
+AutomaticStormText:
+	text "The storm is"
+	line "raging!"
+	prompt
+
+FogIsDeepText:
+	text "The fog is deep…"
 	prompt
 
 BellyDrumText:
@@ -1129,3 +1251,12 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+
+PlateTypeText:
+	text "<USER>'s"
+	line "PLATE transformed"
+	cont "it into the"
+	cont "@"
+	text_ram wStringBuffer1
+	text " type!"
+	prompt

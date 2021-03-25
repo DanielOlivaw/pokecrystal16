@@ -115,6 +115,28 @@ FreezeHit:
 	freezetarget
 	endmove
 
+Blizzard:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	blizzardaccuracy
+	checkhit
+	effectchance
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	freezetarget
+	endmove
+
 ParalyzeHit:
 	checkobedience
 	usedmovetext
@@ -1601,6 +1623,13 @@ Sandstorm:
 	usedmovetext
 	doturn
 	startsandstorm
+	endmove
+
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
 	endmove
 
 Endure:

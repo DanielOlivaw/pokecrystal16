@@ -1635,6 +1635,9 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
+	call .BlizzardHail
+	ret z
+
 	call .ToxicPoison
 	ret z
 
@@ -1854,6 +1857,19 @@ BattleCommand_CheckHit:
 
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
+	ret z
+	cp WEATHER_STORM
+	ret
+
+.BlizzardHail:
+; Return z if the current move always hits in hail, and it is hailing.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_BLIZZARD
+	ret nz
+
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
 	ret
 
 .XAccuracy:
@@ -6785,6 +6801,10 @@ BattleCommand_SuckerPunch:
 	farcall SuckerPunchEffect
 	ret
 
+BattleCommand_Hail:
+	farcall HailEffect
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens
@@ -6950,7 +6970,7 @@ BattleCommand_SkipSunCharge:
 
 INCLUDE "engine/battle/move_effects/future_sight.asm"
 
-INCLUDE "engine/battle/move_effects/thunder.asm"
+INCLUDE "engine/battle/move_effects/weather_accuracy.asm"
 
 CheckHiddenOpponent:
 	; ld a, BATTLE_VARS_SUBSTATUS3_OPP

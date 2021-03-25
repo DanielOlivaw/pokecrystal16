@@ -76,7 +76,7 @@ Moves1:
 	move EFFECT_NORMAL_HIT,        110, WATER,    SPECIAL,   80,  5,   0 ; HYDRO_PUMP
 	move EFFECT_NORMAL_HIT,         90, WATER,    SPECIAL,  100, 15,   0 ; SURF
 	move EFFECT_FREEZE_HIT,         90, ICE,      SPECIAL,  100, 10,  10 ; ICE_BEAM
-	move EFFECT_FREEZE_HIT,        110, ICE,      SPECIAL,   70,  5,  10 ; BLIZZARD
+	move EFFECT_BLIZZARD,          110, ICE,      SPECIAL,   70,  5,  10 ; BLIZZARD
 	move EFFECT_CONFUSE_HIT,        65, PSYCHIC,  SPECIAL,  100, 20,  10 ; PSYBEAM
 	move EFFECT_SPEED_DOWN_HIT,     65, WATER,    SPECIAL,  100, 20,  10 ; BUBBLEBEAM
 	move EFFECT_ATTACK_DOWN_HIT,    65, ICE,      SPECIAL,  100, 20,  10 ; AURORA_BEAM
@@ -295,4 +295,5 @@ Moves1:
 	move EFFECT_SP_ATK_UP_2,         0, DARK,     STATUS,   100, 20,   0 ; NASTY_PLOT
 	move EFFECT_PARALYZE_HIT,       80, ELECTRIC, SPECIAL,  100, 15,  30 ; DISCHARGE
 	move EFFECT_FLINCH_HIT,         80, STEEL,    PHYSICAL, 100, 15,  30 ; IRON_HEAD
+	move EFFECT_HAIL,                0, ICE,      STATUS,   100, 10,   0 ; HAIL
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

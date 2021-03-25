@@ -647,9 +647,15 @@ wBattleWeather:: ; c70a
 ; 01 rain
 ; 02 sun
 ; 03 sandstorm
-; 04 rain stopped
-; 05 sunliight faded
-; 06 sandstorm subsided
+; 04 hail
+; 05 fog
+; 06 storm
+; 07 rain stopped
+; 08 sunliight faded
+; 09 sandstorm subsided
+; 10 hail stopped
+; 11 fog stopped
+; 12 storm stopped
 	db
 
 wWeatherCount:: ; c70b

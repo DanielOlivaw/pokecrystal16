@@ -110,10 +110,67 @@ DoBattle:
 	call SpikesDamage
 
 .not_linked_2
+	call StartAutomaticBattleWeather
 	jp BattleTurn
 
 .tutorial_debug
 	jp BattleMenu
+
+StartAutomaticBattleWeather:
+	call GetAutomaticBattleWeather
+	and a
+	ret z
+; get current AutomaticWeatherEffects entry
+	dec a
+	ld hl, AutomaticWeatherEffects
+	ld bc, 5 ; size of one entry
+	call AddNTimes
+; [wBattleWeather] = weather
+	ld a, [hli]
+	ld [wBattleWeather], a
+; de = animation
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+; hl = text pointer
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+; start weather for 255 turns
+	ld a, 255
+	ld [wWeatherCount], a
+	push hl
+	call Call_PlayBattleAnim ; uses de
+	pop hl
+	call StdBattleTextbox ; uses hl
+	jp EmptyBattleTextbox
+
+GetAutomaticBattleWeather:
+	ld hl, AutomaticWeatherMaps
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+.loop
+	ld a, [hli] ; group
+	and a
+	ret z ; end
+	cp b
+	jr nz, .wrong_group
+	ld a, [hli] ; map
+	cp c
+	jr nz, .wrong_map
+	ld a, [hl] ; weather
+	ret
+
+.wrong_group:
+	inc hl ; skip map
+.wrong_map
+	inc hl ; skip weather
+	jr .loop
+
+INCLUDE "data/battle/automatic_weather.asm"
 
 WildFled_EnemyFled_LinkBattleCanceled:
 	call Call_LoadTempTileMapToTileMap
@@ -196,6 +253,9 @@ BattleTurn:
 	jr nz, .quit
 .skip_iteration
 	call ParsePlayerAction
+	push af
+	call ClearSprites
+	pop af
 	jr nz, .loop1
 
 	call EnemyTriesToFlee
@@ -1760,25 +1820,61 @@ HandleWeather:
 	call .PrintWeatherMessage
 
 	ld a, [wBattleWeather]
+	cp WEATHER_RAIN
+	jp z, .AnimRain
+	cp WEATHER_SUN
+	jp z, .AnimSun
+	; cp WEATHER_FOG
+	; jp z, .AnimFog
+	cp WEATHER_STORM
+	jp z, .AnimStorm
 	cp WEATHER_SANDSTORM
-	ret nz
+	jr z, .AnimSandstorm
+	cp WEATHER_HAIL
+	jr z, .AnimHail
+	ret
 
+.ended
+	ld hl, .WeatherEndedMessages
+	call .PrintWeatherMessage
+	xor a
+	ld [wBattleWeather], a
+	ret
+
+.AnimHail
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_IN_HAIL
+	call Call_PlayBattleAnim
+	call SwitchTurnCore
+	jr .SandstormOrHail
+
+.AnimSandstorm
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_IN_SANDSTORM
+	call Call_PlayBattleAnim
+	call SwitchTurnCore
+
+.SandstormOrHail
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .enemy_first
 
 .player_first
 	call SetPlayerTurn
-	call .SandstormDamage
+	call .WeatherDamage
 	call SetEnemyTurn
-	jr .SandstormDamage
+	jr .WeatherDamage
 
 .enemy_first
 	call SetEnemyTurn
-	call .SandstormDamage
+	call .WeatherDamage
 	call SetPlayerTurn
 
-.SandstormDamage:
+.WeatherDamage:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVar
 	bit SUBSTATUS_UNDERGROUND, a
@@ -1790,6 +1886,10 @@ HandleWeather:
 	jr z, .ok
 	ld hl, wEnemyMonType1
 .ok
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	jr z, .HailDamage
+
 	ld a, [hli]
 	cp ROCK
 	ret z
@@ -1806,23 +1906,58 @@ HandleWeather:
 	cp STEEL
 	ret z
 
-	call SwitchTurnCore
-	xor a
-	ld [wNumHits], a
-	ld de, ANIM_IN_SANDSTORM
-	call Call_PlayBattleAnim
-	call SwitchTurnCore
 	call GetSixteenthMaxHP
 	call SubtractHPFromUser
 
 	ld hl, SandstormHitsText
 	jp StdBattleTextbox
+	
+.HailDamage
+	ld a, [hli]
+	cp ICE
+	ret z
 
-.ended
-	ld hl, .WeatherEndedMessages
-	call .PrintWeatherMessage
+	ld a, [hl]
+	cp ICE
+	ret z
+	
+	call GetSixteenthMaxHP
+	call SubtractHPFromUser
+
+	ld hl, HailHitsText
+	jp StdBattleTextbox
+
+.AnimRain
+	call SwitchTurnCore
 	xor a
-	ld [wBattleWeather], a
+	ld [wNumHits], a
+	ld de, RAIN_DANCE
+	jr .FinishAnimNoDamage
+
+.AnimSun
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, SUNNY_DAY
+	jr .FinishAnimNoDamage
+
+.AnimFog
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_IN_FOG
+	jr .FinishAnimNoDamage
+
+.AnimStorm
+	call SwitchTurnCore
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_IN_STORM
+	jr .FinishAnimNoDamage
+	
+.FinishAnimNoDamage
+	call Call_PlayBattleAnim
+	call SwitchTurnCore
 	ret
 
 .PrintWeatherMessage:
@@ -1842,12 +1977,18 @@ HandleWeather:
 	dw BattleText_RainContinuesToFall
 	dw BattleText_TheSunlightIsStrong
 	dw BattleText_TheSandstormRages
+	dw BattleText_HailContinuesToFall
+	dw FogIsDeepText
+	dw BattleText_TheStormRages
 
 .WeatherEndedMessages:
 ; entries correspond to WEATHER_* constants
 	dw BattleText_TheRainStopped
 	dw BattleText_TheSunlightFaded
 	dw BattleText_TheSandstormSubsided
+	dw BattleText_TheHailStopped
+	dw BattleText_TheFogLifted
+	dw BattleText_TheStormSubsided
 
 SubtractHPFromTarget:
 	call SubtractHP
@@ -5514,6 +5655,7 @@ MoveSelectionScreen:
 
 .battle_player_moves
 	call MoveInfoBox
+	farcall GetWeatherImage
 	ld a, [wMoveSwapBuffer]
 	and a
 	jr z, .interpret_joypad
@@ -5600,6 +5742,9 @@ MoveSelectionScreen:
 	ld hl, BattleText_TheresNoPPLeftForThisMove
 
 .place_textbox_start_over
+	push hl
+	call ClearSprites
+	pop hl
 	call StdBattleTextbox
 	call Call_LoadTempTileMapToTileMap
 	jp MoveSelectionScreen

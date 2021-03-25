@@ -186,3 +186,5 @@ BattleCommandPointers:
 	dw BattleCommand_QuiverDance
 	dw BattleCommand_Venoshock
 	dw BattleCommand_SuckerPunch
+	dw BattleCommand_Hail
+	dw BattleCommand_BlizzardAccuracy

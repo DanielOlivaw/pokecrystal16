@@ -389,6 +389,7 @@ AI_Smart:
 	dbw EFFECT_FLY,              AI_Smart_Fly
 	dbw EFFECT_CUT,              AI_Smart_Cut
 	dbw EFFECT_GROWTH,           AI_Smart_Growth
+	dbw EFFECT_HAIL,             AI_Smart_Hail
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2091,6 +2092,54 @@ AI_Smart_Sandstorm:
 	db ROCK
 	db GROUND
 	db STEEL
+	db -1 ; end
+
+AI_Smart_Hail:
+; Greatly discourage this move if the player is immune to Hail damage.
+	ld a, [wBattleMonType1]
+	push hl
+	ld hl, .HailImmuneTypes
+	ld de, 1
+	call IsInArray
+	pop hl
+	jr c, .asm_38fa5
+
+	ld a, [wBattleMonType2]
+	push hl
+	ld hl, .HailImmuneTypes
+	ld de, 1
+	call IsInArray
+	pop hl
+	jr c, .asm_38fa5
+
+; Discourage this move if player's HP is below 50%.
+	call AICheckPlayerHalfHP
+	jr nc, .asm_38fa6
+
+; 50% chance to encourage this move otherwise.
+	; call AI_50_50
+	; ret c
+
+	; dec [hl]
+	; ret
+	push hl
+	ld hl, .HailMoves
+	jp AI_Smart_WeatherMove
+
+.asm_38fa5
+	inc [hl]
+
+.asm_38fa6
+	inc [hl]
+	ret
+
+.HailImmuneTypes:
+	db ICE
+	db -1 ; end
+
+.HailMoves:
+; AI_SMART prefers these moves during hail.
+	dw BLIZZARD
 	db -1 ; end
 
 AI_Smart_Endure:

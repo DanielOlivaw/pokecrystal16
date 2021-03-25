@@ -189,6 +189,8 @@ ENDM
 	command quiverdance
 	command venoshock
 	command suckerpunch
+	command starthail
+	command blizzardaccuracy
 
 	enum_start $fe
 	command endturn                 ; fe
