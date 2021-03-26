@@ -29,3 +29,5 @@ INCLUDE "engine/battle/move_effects/sucker_punch.asm"
 INCLUDE "engine/battle/move_effects/hail.asm"
 
 INCLUDE "engine/battle/move_effects/metal_burst.asm"
+
+INCLUDE "engine/battle/move_effects/round.asm"

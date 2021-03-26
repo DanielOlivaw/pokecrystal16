@@ -300,6 +300,20 @@
 	const EXTRASENSORY
 	const SHEER_COLD
 	const AURORA_VEIL
+	const DAZZLE_GLEAM
+	const ECHOED_VOICE
+	const COVET
+	const ROUND_M
+	const HYPER_VOICE
+	const PLAY_ROUGH
+	const POISON_FANG
+	const AIR_CUTTER
+	const AROMATHERAPY
+	const X_SCISSOR
+	const CROSS_POISON
+	const SIGNAL_BEAM
+	const ZEN_HEADBUTT
+	const SILVER_WIND
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

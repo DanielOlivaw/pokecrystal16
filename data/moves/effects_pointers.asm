@@ -173,3 +173,6 @@ MoveEffectsPointers:
 	dw CosmicPower
 	dw OHKOHit
 	dw Screen
+	dw RoundMove
+	dw PoisonHit
+	dw HealBell

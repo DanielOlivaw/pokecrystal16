@@ -750,8 +750,7 @@ BellChimedText:
 
 SoothingAromaText:
 	text "A soothing aroma"
-	line "wafted through the"
-	cont "area!"
+	line "wafted through!"
 	prompt
 
 FellAsleepText:
@@ -1004,6 +1003,16 @@ DidntAffect2Text:
 HPIsFullText:
 	text "<USER>'s"
 	line "HP is full!"
+	prompt
+
+CantSleepText:
+	text "<USER>"
+	line "can't fall asleep!"
+	prompt
+
+CantBePutToSleepText:
+	text "<TARGET>"
+	line "can't fall asleep!"
 	prompt
 
 DraggedOutText:

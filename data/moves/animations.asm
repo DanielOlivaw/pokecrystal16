@@ -321,7 +321,21 @@ BattleAnimations::
 	dw BattleAnim_Extrasensory
 	dw BattleAnim_SheerCold
 	dw BattleAnim_AuroraVeil
-
+	dw BattleAnim_DazzleGleam
+	dw BattleAnim_EchoedVoice
+	dw BattleAnim_Covet
+	dw BattleAnim_Round
+	dw BattleAnim_HyperVoice
+	dw BattleAnim_PlayRough
+	dw BattleAnim_PoisonFang
+	dw BattleAnim_AirCutter
+	dw BattleAnim_Aromatherapy
+	dw BattleAnim_XScissor
+	dw BattleAnim_CrossPoison
+	dw BattleAnim_SignalBeam
+	dw BattleAnim_ZenHeadbutt
+	dw BattleAnim_SilverWind
+	
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -704,6 +718,20 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DazzleGleam:
+BattleAnim_EchoedVoice:
+BattleAnim_Covet:
+BattleAnim_Round:
+BattleAnim_HyperVoice:
+BattleAnim_PlayRough:
+BattleAnim_PoisonFang:
+BattleAnim_AirCutter:
+BattleAnim_Aromatherapy:
+BattleAnim_XScissor:
+BattleAnim_CrossPoison:
+BattleAnim_SignalBeam:
+BattleAnim_ZenHeadbutt:
+BattleAnim_SilverWind:
 BattleAnim_AuroraVeil:
 BattleAnim_CharmVoice:
 BattleAnim_LifeDew:

@@ -2421,3 +2421,24 @@ CosmicPower:
 	doturn
 	cosmicpower
 	endmove
+
+RoundMove:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	roundcheck
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

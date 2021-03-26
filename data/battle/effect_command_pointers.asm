@@ -191,3 +191,4 @@ BattleCommandPointers:
 	dw BattleCommand_MetalBurst
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
+	dw BattleCommand_Round

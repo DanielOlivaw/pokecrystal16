@@ -192,6 +192,7 @@ ENDM
 	command metalburst              ; b9
 	command superpower              ; ba
 	command cosmicpower             ; bb
+	command roundcheck              ; bc
 
 	enum_start $fe
 	command endturn                 ; fe

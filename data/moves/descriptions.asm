@@ -299,6 +299,20 @@ MoveDescriptions1:
 	dw ExtrasensoryDescription
 	dw SheerColdDescription
 	dw AuroraVeilDescription
+	dw DazzleGleamDescription
+	dw EchoedVoiceDescription
+	dw CovetDescription
+	dw RoundDescription
+	dw HyperVoiceDescription
+	dw PlayRoughDescription
+	dw PoisonFangDescription
+	dw AirCutterDescription
+	dw AromatherapyDescription
+	dw XScissorDescription
+	dw CrossPoisonDescription
+	dw SignalBeamDescription
+	dw ZenHeadbuttDescription
+	dw SilverWindDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1470,4 +1484,60 @@ SheerColdDescription:
 AuroraVeilDescription:
 	db   "Reduces damage,"
 	next "but only in hail.@"
+
+DazzleGleamDescription:
+	db   "Emits a powerful"
+	next "flash of light.@"
+
+EchoedVoiceDescription:
+	db   "Successive hits"
+	next "raise power.@"
+
+CovetDescription:
+	db   "An attack that may"
+	next "steal a held item.@"
+
+RoundDescription:
+	db   "Joining in doubles"
+	next "the damage dealt.@"
+
+HyperVoiceDescription:
+	db   "Lets loose a horr-"
+	next "ibly loud shout.@"
+
+PlayRoughDescription:
+	db   "An attack that may"
+	next "lower ATTACK.@"
+
+PoisonFangDescription:
+	db   "An attack that may"
+	next "badly poison.@"
+
+AirCutterDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+AromatherapyDescription:
+	db   "Eliminates all"
+	next "status problems.@"
+
+XScissorDescription:
+	db   "Slashes with"
+	next "crossed claws.@"
+
+CrossPoisonDescription:
+	db   "May cause poison."
+	next "High crit ratio.@"
+
+SignalBeamDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
+
+ZenHeadbuttDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+SilverWindDescription:
+	db   "An attack that may"
+	next "raise all stats.@"
 		;"123456789123456789"

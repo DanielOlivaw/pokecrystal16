@@ -25,7 +25,19 @@ BattleCommand_HealBell:
 	jr nz, .loop
 	call AnimateCurrentMove
 
+; Aromatherapy and Heal Bell do the same thing, but display different text
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_AROMATHERAPY
+	jr z, .aromatherapy
+
+; Heal Bell
 	ld hl, BellChimedText
+	jr .done
+
+.aromatherapy:
+	ld hl, SoothingAromaText
+.done:
 	call StdBattleTextbox
 
 	ldh a, [hBattleTurn]

@@ -3748,6 +3748,11 @@ UpdateMoveData:
 BattleCommand_SleepTarget:
 ; sleeptarget
 
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .fog
+	cp WEATHER_STORM
+	jr z, .storm
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_SLEEP
@@ -3774,8 +3779,6 @@ BattleCommand_SleepTarget:
 	jp nz, PrintDidntAffect2
 
 	ld hl, DidntAffect1Text
-	call .CheckAIRandomFail
-	jr c, .fail
 
 	ld a, [de]
 	and a
@@ -3815,34 +3818,15 @@ BattleCommand_SleepTarget:
 	call AnimateFailedMove
 	pop hl
 	jp StdBattleTextbox
-
-.CheckAIRandomFail:
-	; Enemy turn
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .dont_fail
-
-	; Not in link battle
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_fail
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_fail
-
-	; Not locked-on by the enemy
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_fail
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	ret c
-
-.dont_fail
-	xor a
-	ret
+	
+.fog
+	call AnimateFailedMove
+	jp PrintFogProtection
+	
+.storm
+	call AnimateFailedMove
+	ld hl, CantBePutToSleepText
+	jp StdBattleTextbox
 
 BattleCommand_PoisonTarget:
 ; poisontarget
@@ -3858,6 +3842,9 @@ BattleCommand_PoisonTarget:
 	ret z
 	call CheckIfTargetIsPoisonOrSteelType
 	ret z
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_POISON
@@ -3867,16 +3854,45 @@ BattleCommand_PoisonTarget:
 	ret nz
 	call SafeCheckSafeguard
 	ret nz
-
-	call PoisonOpponent
-	ld de, ANIM_PSN
-	call PlayOpponentBattleAnim
-	call RefreshBattleHuds
+	call .check_toxic
+	jr z, .toxic
+	call .apply_poison
 
 	ld hl, WasPoisonedText
 	call StdBattleTextbox
 
+	jr .finished
+
+.toxic
+	set SUBSTATUS_TOXIC, [hl]
+	xor a
+	ld [de], a
+	call .apply_poison
+
+	ld hl, BadlyPoisonedText
+	call StdBattleTextbox
+.finished
 	farcall UseHeldStatusHealingItem
+	ret
+
+.apply_poison
+	call PoisonOpponent
+	ld de, ANIM_PSN
+	call PlayOpponentBattleAnim
+	jp RefreshBattleHuds
+
+.check_toxic
+	ld a, BATTLE_VARS_SUBSTATUS5_OPP
+	call GetBattleVarAddr
+	ldh a, [hBattleTurn]
+	and a
+	ld de, wEnemyToxicCount
+	jr z, .ok
+	ld de, wPlayerToxicCount
+.ok
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TOXIC_HIT
 	ret
 
 BattleCommand_Poison:
@@ -3897,6 +3913,9 @@ BattleCommand_Poison:
 	and 1 << PSN
 	jp nz, .failed
 
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .fog
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_POISON
@@ -3914,27 +3933,6 @@ BattleCommand_Poison:
 	and a
 	jr nz, .failed
 
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .dont_sample_failure
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_sample_failure
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .failed
-
-.dont_sample_failure
 	call CheckSubstituteOpp
 	jr nz, .failed
 	ld a, [wAttackMissed]
@@ -3966,6 +3964,10 @@ BattleCommand_Poison:
 	call AnimateFailedMove
 	pop hl
 	jp StdBattleTextbox
+	
+.fog
+	call AnimateFailedMove
+	jp PrintFogProtection
 
 .apply_poison
 	call AnimateCurrentMove
@@ -4124,6 +4126,9 @@ BattleCommand_BurnTarget:
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit BRN, a
+	jr nz, .burned
 	call GetBattleVarAddr
 	and a
 	jp nz, Defrost
@@ -4131,6 +4136,9 @@ BattleCommand_BurnTarget:
 	and $7f
 	ret z
 	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+	ret z
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -4156,6 +4164,11 @@ BattleCommand_BurnTarget:
 
 	farcall UseHeldStatusHealingItem
 	ret
+	
+.burned
+	call AnimateFailedMove
+	ld hl, AlreadyBurnedText
+	jp StdBattleTextbox
 
 BattleCommand_DefrostOpponent:
 ; defrostopponent
@@ -4207,6 +4220,8 @@ BattleCommand_FreezeTarget:
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
 	ret z
+	cp WEATHER_FOG
+	ret z
 	call CheckMoveTypeMatchesTarget ; Don't freeze an Ice-type
 	ret z
 	call GetOpponentItem
@@ -4256,6 +4271,9 @@ BattleCommand_ParalyzeTarget:
 	ret nz
 	ld a, [wTypeModifier]
 	and $7f
+	ret z
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -4686,41 +4704,12 @@ BattleCommand_StatDown:
 ; Sharply lower the stat if applicable.
 	ld a, [wLoweredStat]
 	and $f0
-	jr z, .ComputerMiss
+	jr z, .GotAmountToLower
 	dec b
-	jr nz, .ComputerMiss
+	jr nz, .GotAmountToLower
 	inc b
 
-.ComputerMiss:
-; Computer opponents have a 25% chance of failing.
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .DidntMiss
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .DidntMiss
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .DidntMiss
-
-; Lock-On still always works.
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .DidntMiss
-
-; Attacking moves that also lower accuracy are unaffected.
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_ACCURACY_DOWN_HIT
-	jr z, .DidntMiss
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .Failed
-
-.DidntMiss:
+.GotAmountToLower:
 	call CheckSubstituteOpp
 	jr nz, .Failed
 
@@ -6148,6 +6137,9 @@ BattleCommand_Recoil:
 BattleCommand_ConfuseTarget:
 ; confusetarget
 
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_CONFUSE
@@ -6168,6 +6160,9 @@ BattleCommand_ConfuseTarget:
 BattleCommand_Confuse:
 ; confuse
 
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .fog
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_CONFUSE
@@ -6178,6 +6173,10 @@ BattleCommand_Confuse:
 	call AnimateFailedMove
 	ld hl, ProtectedByText
 	jp StdBattleTextbox
+	
+.fog
+	call AnimateFailedMove
+	jp PrintFogProtection
 
 .no_item_protection
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
@@ -6258,6 +6257,9 @@ BattleCommand_Paralyze:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .didnt_affect
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .fog
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
@@ -6270,27 +6272,6 @@ BattleCommand_Paralyze:
 	jp StdBattleTextbox
 
 .no_item_protection
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .dont_sample_failure
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_sample_failure
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .failed
-
-.dont_sample_failure
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	and a
@@ -6327,6 +6308,10 @@ BattleCommand_Paralyze:
 .didnt_affect
 	call AnimateFailedMove
 	jp PrintDoesntAffect
+	
+.fog
+	call AnimateFailedMove
+	jp PrintFogProtection
 
 CheckMoveTypeMatchesTarget:
 ; Compare move type to opponent type.
@@ -6488,6 +6473,16 @@ BattleCommand_Heal:
 	call CompareMove
 	jr nz, .not_rest
 
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jp z, .cant_sleep
+	cp WEATHER_STORM
+	jp z, .cant_sleep
+	call GetUserItem
+	ld a, b
+	cp HELD_PREVENT_SLEEP
+	jp z, .cant_sleep
+
 	push hl
 	push de
 	push af
@@ -6541,6 +6536,11 @@ BattleCommand_Heal:
 .hp_full
 	call AnimateFailedMove
 	ld hl, HPIsFullText
+	jp StdBattleTextbox
+	
+.cant_sleep
+	call AnimateFailedMove
+	ld hl, CantSleepText
 	jp StdBattleTextbox
 
 INCLUDE "engine/battle/move_effects/transform.asm"
@@ -6658,6 +6658,10 @@ BattleCommand_Screen:
 PrintDoesntAffect:
 ; 'it doesn't affect'
 	ld hl, DoesntAffectText
+	jp StdBattleTextbox
+
+PrintFogProtection:
+	ld hl, FogProtectionText
 	jp StdBattleTextbox
 
 PrintNothingHappened:
@@ -6901,6 +6905,10 @@ BattleCommand_Hail:
 
 BattleCommand_MetalBurst:
 	farcall MetalBurstEffect
+	ret
+
+BattleCommand_Round:
+	farcall RoundEffect
 	ret
 
 SafeCheckSafeguard:
