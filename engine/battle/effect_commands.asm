@@ -4279,6 +4279,51 @@ BattleCommand_ParalyzeTarget:
 	ld hl, UseHeldStatusHealingItem
 	jp CallBattleCore
 
+BattleCommand_HammerArm:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	ld b, SPEED
+	jr BattleCommand_SelfStatDownHit
+BattleCommand_Overheat:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	ld b, $10 | SP_ATTACK
+	jr BattleCommand_SelfStatDownHit
+BattleCommand_Superpower:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	lb bc, ATTACK, DEFENSE
+	jr BattleCommand_SelfStatDownHitTwice
+BattleCommand_CloseCombat:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	lb bc, DEFENSE, SP_DEFENSE
+BattleCommand_SelfStatDownHitTwice:
+; input: 1-2 stats to decrease in b and c respectively
+	push bc
+	call BattleCommand_SelfStatDownHit
+	pop bc
+	ld b, c
+BattleCommand_SelfStatDownHit:
+	ld a, b
+	and a
+	ret z
+	push bc
+	call ResetMiss
+	pop bc
+	ld a, b
+	call LowerStat
+	call BattleCommand_SwitchTurn
+	ld a, [wLoweredStat]
+	or $80
+	ld [wLoweredStat], a
+	call BattleCommand_StatDownMessage
+	jp BattleCommand_SwitchTurn
+
 BattleCommand_BulkUp:
 	lb bc, ATTACK, DEFENSE
 	jr DoubleUp
@@ -4808,7 +4853,7 @@ BattleCommand_StatDownMessage:
 	text_asm
 	ld hl, .fell
 	ld a, [wLoweredStat]
-	and $f0
+	and $70
 	ret z
 	ld hl, .sharplyfell
 	ret
@@ -5764,6 +5809,16 @@ BattleCommand_OHKO:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .no_effect
+	
+; Sheer Cold doesn't affect ice types
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SHEER_COLD
+	jr nz, .get_level
+	call CheckMoveTypeMatchesTarget
+	jr z, .no_effect
+	
+.get_level
 	ld hl, wEnemyMonLevel
 	ld de, wBattleMonLevel
 	ld bc, wPlayerMoveStruct + MOVE_ACC
@@ -6536,6 +6591,8 @@ BattleCommand_Screen:
 .got_screens_pointer
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_AURORA_VEIL
+	jr z, .AuroraVeil
 	cp EFFECT_LIGHT_SCREEN
 	jr nz, .Reflect
 
@@ -6566,6 +6623,37 @@ BattleCommand_Screen:
 .failed
 	call AnimateFailedMove
 	jp PrintButItFailed
+
+.AuroraVeil:
+; Only works in hail
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	jr nz, .failed
+
+; Cheat a little by setting both Reflect and Light Screen
+; rather than creating a new screen type
+	bit SCREENS_LIGHT_SCREEN, [hl]
+	jr nz, .LightScreenAlreadyUp
+	set SCREENS_LIGHT_SCREEN, [hl]
+; Set LightScreenCount to 5
+	ld a, 5
+	ld [bc], a
+
+	bit SCREENS_REFLECT, [hl]
+.AuroraVeilContinue
+	set SCREENS_REFLECT, [hl]
+; Set ReflectCount to 5
+	inc bc
+	ld [bc], a
+
+	ld hl, AuroraVeilEffectText
+	jr .good
+
+; Only fails if BOTH Light Screen and Reflect are already up
+.LightScreenAlreadyUp:
+	bit SCREENS_REFLECT, [hl]
+	jr nz, .failed
+	jr .AuroraVeilContinue
 
 PrintDoesntAffect:
 ; 'it doesn't affect'
@@ -6620,8 +6708,6 @@ CheckSubstituteOpp:
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret
 
-INCLUDE "engine/battle/move_effects/selfdestruct.asm"
-
 INCLUDE "engine/battle/move_effects/mirror_move.asm"
 
 INCLUDE "engine/battle/move_effects/metronome.asm"
@@ -6663,8 +6749,6 @@ ResetTurn:
 	ld [wAlreadyDisobeyed], a
 	call DoMove
 	jp EndMoveEffect
-
-INCLUDE "engine/battle/move_effects/thief.asm"
 
 BattleCommand_ArenaTrap:
 ; arenatrap
@@ -6771,7 +6855,17 @@ INCLUDE "engine/battle/move_effects/present.asm"
 
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
-INCLUDE "engine/battle/move_effects/safeguard.asm"
+BattleCommand_Selfdestruct:
+	farcall SelfdestructEffect
+	ret
+
+BattleCommand_Safeguard:
+	farcall SafeguardEffect
+	ret
+
+BattleCommand_Thief:
+	farcall ThiefEffect
+	ret
 
 BattleCommand_Cut:
 	farcall CutEffect
@@ -6803,6 +6897,10 @@ BattleCommand_SuckerPunch:
 
 BattleCommand_Hail:
 	farcall HailEffect
+	ret
+
+BattleCommand_MetalBurst:
+	farcall MetalBurstEffect
 	ret
 
 SafeCheckSafeguard:

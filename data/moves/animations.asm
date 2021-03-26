@@ -306,6 +306,21 @@ BattleAnimations::
 	dw BattleAnim_Discharge
 	dw BattleAnim_IronHead
 	dw BattleAnim_Hail
+	dw BattleAnim_IcicleSpear
+	dw BattleAnim_IcicleCrash
+	dw BattleAnim_MetalBurst
+	dw BattleAnim_Flatter
+	dw BattleAnim_EarthPower
+	dw BattleAnim_Superpower
+	dw BattleAnim_CharmVoice
+	dw BattleAnim_LifeDew
+	dw BattleAnim_MeteorMash
+	dw BattleAnim_CosmicPower
+	dw BattleAnim_Moonblast
+	dw BattleAnim_IceShard
+	dw BattleAnim_Extrasensory
+	dw BattleAnim_SheerCold
+	dw BattleAnim_AuroraVeil
 
 	dw BattleAnim_SweetScent2
 
@@ -689,6 +704,21 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_AuroraVeil:
+BattleAnim_CharmVoice:
+BattleAnim_LifeDew:
+BattleAnim_MeteorMash:
+BattleAnim_CosmicPower:
+BattleAnim_Moonblast:
+BattleAnim_IceShard:
+BattleAnim_Extrasensory:
+BattleAnim_SheerCold:
+BattleAnim_EarthPower:
+BattleAnim_Superpower:
+BattleAnim_Flatter:
+BattleAnim_MetalBurst:
+BattleAnim_IcicleSpear:
+BattleAnim_IcicleCrash:
 BattleAnim_Nuzzle:
 BattleAnim_NastyPlot:
 BattleAnim_Discharge:

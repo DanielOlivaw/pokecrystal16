@@ -1054,8 +1054,7 @@ Transform:
 	transform
 	endmove
 
-LightScreen:
-Reflect:
+Screen:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2362,4 +2361,63 @@ SuckerPunch:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+MetalBurst:
+	checkobedience
+	usedmovetext
+	doturn
+	metalburst
+	moveanim
+	failuretext
+	applydamage
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+Flatter:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	switchturn
+	specialattackup
+	switchturn
+	lowersub
+	statupanim
+	raisesub
+	failuretext
+	switchturn
+	statupmessage
+	switchturn
+	confusetarget
+	endmove
+
+Superpower:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	superpower
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+CosmicPower:
+	checkobedience
+	usedmovetext
+	doturn
+	cosmicpower
 	endmove

@@ -111,86 +111,87 @@ ENDM
 	command pursuit                 ; 68
 	command clearhazards            ; 69
 	command healsun                 ; 6a
-	; command healday                 ; 6b
-	; command healnite                ; 6c
-	command hiddenpower             ; 6d
-	command startrain               ; 6e
-	command startsun                ; 6f
-	command attackup                ; 70
-	command defenseup               ; 71
-	command speedup                 ; 72
-	command specialattackup         ; 73
-	command specialdefenseup        ; 74
-	command accuracyup              ; 75
-	command evasionup               ; 76
-	command attackup2               ; 77
-	command defenseup2              ; 78
-	command speedup2                ; 79
-	command specialattackup2        ; 7a
-	command specialdefenseup2       ; 7b
-	command accuracyup2             ; 7c
-	command evasionup2              ; 7d
-	command attackdown              ; 7e
-	command defensedown             ; 7f
-	command speeddown               ; 80
-	command specialattackdown       ; 81
-	command specialdefensedown      ; 82
-	command accuracydown            ; 83
-	command evasiondown             ; 84
-	command attackdown2             ; 85
-	command defensedown2            ; 86
-	command speeddown2              ; 87
-	command specialattackdown2      ; 88
-	command specialdefensedown2     ; 89
-	command accuracydown2           ; 8a
-	command evasiondown2            ; 8b
-	command statupmessage           ; 8c
-	command statdownmessage         ; 8d
-	command statupfailtext          ; 8e
-	command statdownfailtext        ; 8f
-	command effectchance            ; 90
-	command statdownanim            ; 91
-	command statupanim              ; 92
-	command switchturn              ; 93
-	command fakeout                 ; 94
-	command bellydrum               ; 95
-	command psychup                 ; 96
-	command rage                    ; 97
-	command doubleflyingdamage      ; 98
-	command doubleundergrounddamage ; 99
-	command mirrorcoat              ; 9a
-	command checkfuturesight        ; 9b
-	command futuresight             ; 9c
-	command doubleminimizedamage    ; 9d
-	command skipsuncharge           ; 9e
-	command thunderaccuracy         ; 9f
-	command teleport                ; a0
-	command beatup                  ; a1
-	command ragedamage              ; a2
-	command resettypematchup        ; a3
-	command allstatsup              ; a4
-	command bidefailtext            ; a5
-	command raisesubnoanim          ; a6
-	command lowersubnoanim          ; a7
-	command beatupfailtext          ; a8
-	command clearmissdamage         ; a9
-	command movedelay               ; aa
-	command moveanim                ; ab
-	command tristatuschance         ; ac
-	command supereffectivelooptext  ; ad
-	command startloop               ; ae
-	command curl                    ; af
-	command growth                  ; b0
-	command firefang
-	command icefang
-	command thunderfang
-	command shellsmash
-	command bugbite
-	command quiverdance
-	command venoshock
-	command suckerpunch
-	command starthail
-	command blizzardaccuracy
+	command hiddenpower             ; 6b
+	command startrain               ; 6c
+	command startsun                ; 6d
+	command attackup                ; 6e
+	command defenseup               ; 6f
+	command speedup                 ; 70
+	command specialattackup         ; 71
+	command specialdefenseup        ; 72
+	command accuracyup              ; 73
+	command evasionup               ; 74
+	command attackup2               ; 75
+	command defenseup2              ; 76
+	command speedup2                ; 77
+	command specialattackup2        ; 78
+	command specialdefenseup2       ; 79
+	command accuracyup2             ; 7a
+	command evasionup2              ; 7b
+	command attackdown              ; 7c
+	command defensedown             ; 7d
+	command speeddown               ; 7e
+	command specialattackdown       ; 7f
+	command specialdefensedown      ; 80
+	command accuracydown            ; 81
+	command evasiondown             ; 82
+	command attackdown2             ; 83
+	command defensedown2            ; 84
+	command speeddown2              ; 85
+	command specialattackdown2      ; 86
+	command specialdefensedown2     ; 87
+	command accuracydown2           ; 88
+	command evasiondown2            ; 89
+	command statupmessage           ; 8a
+	command statdownmessage         ; 8b
+	command statupfailtext          ; 8c
+	command statdownfailtext        ; 8d
+	command effectchance            ; 8e
+	command statdownanim            ; 8f
+	command statupanim              ; 90
+	command switchturn              ; 91
+	command fakeout                 ; 92
+	command bellydrum               ; 93
+	command psychup                 ; 94
+	command rage                    ; 95
+	command doubleflyingdamage      ; 96
+	command doubleundergrounddamage ; 97
+	command mirrorcoat              ; 98
+	command checkfuturesight        ; 99
+	command futuresight             ; 9a
+	command doubleminimizedamage    ; 9b
+	command skipsuncharge           ; 9c
+	command thunderaccuracy         ; 9d
+	command teleport                ; 9e
+	command beatup                  ; 9f
+	command ragedamage              ; a0
+	command resettypematchup        ; a1
+	command allstatsup              ; a2
+	command bidefailtext            ; a3
+	command raisesubnoanim          ; a4
+	command lowersubnoanim          ; a5
+	command beatupfailtext          ; a6
+	command clearmissdamage         ; a7
+	command movedelay               ; a8
+	command moveanim                ; a9
+	command tristatuschance         ; aa
+	command supereffectivelooptext  ; ab
+	command startloop               ; ac
+	command curl                    ; ad
+	command growth                  ; ae
+	command firefang                ; af
+	command icefang                 ; b0
+	command thunderfang             ; b1
+	command shellsmash              ; b2
+	command bugbite                 ; b3
+	command quiverdance             ; b4
+	command venoshock               ; b5
+	command suckerpunch             ; b6
+	command starthail               ; b7
+	command blizzardaccuracy        ; b8
+	command metalburst              ; b9
+	command superpower              ; ba
+	command cosmicpower             ; bb
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -957,6 +957,15 @@ ReflectEffectText:
 	line "team's DEFENSE!"
 	prompt
 
+AuroraVeilEffectText:
+		;"123456789123456789"
+	text "AURORA VEIL made"
+	line "the team stronger"
+
+	para "against PHYSICAL"
+	line "and SPECIAL moves!"
+	prompt
+
 BrokeLightScreenText:
 	text "<USER>"
 	line "broke the target's"

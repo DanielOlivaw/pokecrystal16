@@ -35,7 +35,7 @@ MoveEffectsPointers:
 	dw Heal
 	dw Toxic
 	dw PayDay
-	dw LightScreen
+	dw Screen
 	dw TriAttack
 	dw Cut
 	dw OHKOHit
@@ -65,7 +65,7 @@ MoveEffectsPointers:
 	dw SpecialDefenseDown2
 	dw AccuracyDown2
 	dw EvasionDown2
-	dw Reflect
+	dw Screen
 	dw DoPoison
 	dw DoParalyze
 	dw AttackDownHit
@@ -167,3 +167,9 @@ MoveEffectsPointers:
 	dw AttackDown
 	dw Hail
 	dw Blizzard
+	dw MetalBurst
+	dw Flatter
+	dw Superpower
+	dw CosmicPower
+	dw OHKOHit
+	dw Screen

@@ -6,6 +6,12 @@ INCLUDE "engine/battle/move_effects/leech_seed.asm"
 
 INCLUDE "engine/battle/move_effects/spite.asm"
 
+INCLUDE "engine/battle/move_effects/safeguard.asm"
+
+INCLUDE "engine/battle/move_effects/selfdestruct.asm"
+
+INCLUDE "engine/battle/move_effects/thief.asm"
+
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
@@ -21,3 +27,5 @@ INCLUDE "engine/battle/move_effects/venoshock.asm"
 INCLUDE "engine/battle/move_effects/sucker_punch.asm"
 
 INCLUDE "engine/battle/move_effects/hail.asm"
+
+INCLUDE "engine/battle/move_effects/metal_burst.asm"

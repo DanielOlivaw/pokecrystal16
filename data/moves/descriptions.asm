@@ -284,6 +284,21 @@ MoveDescriptions1:
 	dw DischargeDescription
 	dw IronHeadDescription
 	dw HailDescription
+	dw IcicleSpearDescription
+	dw IcicleCrashDescription
+	dw MetalBurstDescription
+	dw FlatterDescription
+	dw EarthPowerDescription
+	dw SuperpowerDescription
+	dw CharmVoiceDescription
+	dw LifeDewDescription
+	dw MeteorMashDescription
+	dw CosmicPowerDescription
+	dw MoonblastDescription
+	dw IceShardDescription
+	dw ExtrasensoryDescription
+	dw SheerColdDescription
+	dw AuroraVeilDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1395,4 +1410,64 @@ IronHeadDescription:
 HailDescription:
 	db   "Hail inflicts"
 	next "damage every turn.@"
+
+IcicleSpearDescription:
+	db   "Launches icicles"
+	next "to hit 2-5 times.@"
+
+IcicleCrashDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+MetalBurstDescription:
+	db   "Retaliates with"
+	next "greater force.@"
+
+FlatterDescription:
+	db   "Confuses and"
+	next "raises SPCL.ATK.@"
+
+EarthPowerDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+
+SuperpowerDescription:
+	db   "Lowers the user's"
+	next "ATTACK & DEFENSE.@"
+
+CharmVoiceDescription:
+	db   "An attack that"
+	next "never misses.@"
+
+LifeDewDescription:
+	db   "Restores HP by 1/2"
+	next "the max HP.@"
+
+MeteorMashDescription:
+	db   "An attack that may"
+	next "up user's ATTACK.@"
+
+CosmicPowerDescription:
+	db   "Heightens DEFENSE"
+	next "and SPCL.DEF.@"
+
+MoonblastDescription:
+	db   "An attack that may"
+	next "lower SPCL.ATK.@"
+
+IceShardDescription:
+	db   "Chunks of ice that"
+	next "strike first.@"
+
+ExtrasensoryDescription:
+	db   "Odd power that may"
+	next "cause flinching.@"
+
+SheerColdDescription:
+	db   "An ice-type, one-"
+	next "hit KO attack.@"
+
+AuroraVeilDescription:
+	db   "Reduces damage,"
+	next "but only in hail.@"
 		;"123456789123456789"

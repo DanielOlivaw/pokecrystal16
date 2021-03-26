@@ -188,3 +188,6 @@ BattleCommandPointers:
 	dw BattleCommand_SuckerPunch
 	dw BattleCommand_Hail
 	dw BattleCommand_BlizzardAccuracy
+	dw BattleCommand_MetalBurst
+	dw BattleCommand_Superpower
+	dw BattleCommand_CosmicPower

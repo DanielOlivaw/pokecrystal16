@@ -285,6 +285,21 @@
 	const DISCHARGE
 	const IRON_HEAD
 	const HAIL
+	const ICICLE_SPEAR
+	const ICICLE_CRASH
+	const METAL_BURST
+	const FLATTER
+	const EARTH_POWER
+	const SUPERPOWER
+	const CHARM_VOICE
+	const LIFE_DEW
+	const METEOR_MASH
+	const COSMIC_POWER
+	const MOONBLAST
+	const ICE_SHARD
+	const EXTRASENSORY
+	const SHEER_COLD
+	const AURORA_VEIL
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

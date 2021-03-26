@@ -1,4 +1,4 @@
-BattleCommand_Safeguard:
+SafeguardEffect:
 ; safeguard
 
 	ld hl, wPlayerScreens
@@ -14,10 +14,11 @@ BattleCommand_Safeguard:
 	set SCREENS_SAFEGUARD, [hl]
 	ld a, 5
 	ld [de], a
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, CoveredByVeilText
 	jp StdBattleTextbox
 
 .failed
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret
