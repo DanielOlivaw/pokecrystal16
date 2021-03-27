@@ -335,6 +335,16 @@ BattleAnimations::
 	dw BattleAnim_SignalBeam
 	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_SilverWind
+	; dw BattleAnim_FakeOut
+	dw BattleAnim_HoneClaws
+	dw BattleAnim_MetalSound
+	dw BattleAnim_AquaJet
+	dw BattleAnim_CloseCombat
+	dw BattleAnim_Howl
+	dw BattleAnim_BurnUp
+	dw BattleAnim_PsychoCut
+	dw BattleAnim_CalmMind
+	dw BattleAnim_LowSweep
 	
 	dw BattleAnim_SweetScent2
 
@@ -718,6 +728,16 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_LowSweep:
+BattleAnim_PsychoCut:
+BattleAnim_CalmMind:
+BattleAnim_BurnUp:
+BattleAnim_HoneClaws:
+BattleAnim_MetalSound:
+BattleAnim_AquaJet:
+BattleAnim_CloseCombat:
+BattleAnim_Howl:
+; BattleAnim_FakeOut:
 BattleAnim_DazzleGleam:
 BattleAnim_EchoedVoice:
 BattleAnim_Covet:

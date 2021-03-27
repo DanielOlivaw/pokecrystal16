@@ -199,7 +199,7 @@ CheckPlayerTurn:
 	bit FRZ, [hl]
 	jr z, .not_frozen
 
-	; Flame Wheel and Sacred Fire thaw the user.
+	; Some moves (listed below) thaw the user.
 	ld a, [wCurPlayerMove]
 	ld hl, .thawing_moves
 	call CheckMoveInList
@@ -214,6 +214,8 @@ CheckPlayerTurn:
 .thawing_moves
 	dw FLAME_WHEEL
 	dw SACRED_FIRE
+	dw FLARE_BLITZ
+	dw BURN_UP
 	dw -1
 
 .not_frozen
@@ -1617,6 +1619,8 @@ BattleCommand_DamageVariation:
 BattleCommand_CheckHit:
 ; checkhit
 
+	call .BurnUp
+
 	call .DreamEater
 	jp z, .Miss
 
@@ -1730,6 +1734,28 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	and SLP
+	ret
+
+.BurnUp:
+; Burn Up misses if used by a non-fire-type
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_BURN_UP
+	ret nz
+
+	ld de, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, wEnemyMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp FIRE
+	ret z
+	ld a, [de]
+	cp FIRE
+	jr nz, .Miss
 	ret
 
 .Protect:
@@ -2354,6 +2380,11 @@ GetFailureResultText:
 	ld hl, ButItFailedText
 	ld de, ItFailedText
 	jr z, .got_text
+	cp EFFECT_BURN_UP
+	ld hl, ButItFailedText
+	ld de, ItFailedText
+	jr z, .check_burn_up
+.miss_text
 	ld hl, AttackMissedText
 	ld de, AttackMissed2Text
 	ld a, [wCriticalHit]
@@ -2399,6 +2430,32 @@ GetFailureResultText:
 	and a
 	jp nz, DoEnemyDamage
 	jp DoPlayerDamage
+
+.check_burn_up:
+; Burn Up prints miss text if used by a fire-type but failure text otherwise
+	push hl
+	push de
+	ld de, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, wEnemyMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp FIRE
+	jr z, .found_fire
+	ld a, [de]
+	cp FIRE
+	jr z, .found_fire
+	pop hl
+	pop de
+	jr .got_text
+
+.found_fire
+	pop hl
+	pop de
+	jr .miss_text
 
 FailText_CheckOpponentProtect:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
@@ -3522,14 +3579,16 @@ INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
 INCLUDE "engine/battle/move_effects/destiny_bond.asm"
 
-INCLUDE "engine/battle/move_effects/heal_bell.asm"
-
 BattleCommand_FalseSwipe:
 	farcall FalseSwipeEffect
 	ret
 
 BattleCommand_Spite:
 	farcall SpiteEffect
+	ret
+
+BattleCommand_HealBell:
+	farcall HealBellEffect
 	ret
 
 FarPlayBattleAnimation:
@@ -5707,26 +5766,17 @@ BattleCommand_EndLoop:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-BattleCommand_FakeOut:
-	ld a, [wAttackMissed]
-	and a
-	ret nz
+; BattleCommand_FakeOut:
+	; ld a, [wAttackMissed]
+	; and a
+	; ret nz
 
-	call CheckSubstituteOpp
-	jr nz, .fail
+	; ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
+	; call GetBattleVar
+	; and a
+	; ret nz
 
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	and 1 << FRZ | SLP
-	jr nz, .fail
-
-	call CheckOpponentWentFirst
-	jr z, FlinchTarget
-
-.fail
-	ld a, 1
-	ld [wAttackMissed], a
-	ret
+	; ret
 
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp
@@ -6909,6 +6959,10 @@ BattleCommand_MetalBurst:
 
 BattleCommand_Round:
 	farcall RoundEffect
+	ret
+
+BattleCommand_BurnUp:
+	farcall BurnUpEffect
 	ret
 
 SafeCheckSafeguard:

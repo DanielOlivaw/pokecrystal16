@@ -314,6 +314,16 @@
 	const SIGNAL_BEAM
 	const ZEN_HEADBUTT
 	const SILVER_WIND
+	; const FAKE_OUT
+	const HONE_CLAWS
+	const METAL_SOUND
+	const AQUA_JET
+	const CLOSE_COMBAT
+	const HOWL
+	const BURN_UP
+	const PSYCHO_CUT
+	const CALM_MIND
+	const LOW_SWEEP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

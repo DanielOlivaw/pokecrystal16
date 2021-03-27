@@ -149,7 +149,7 @@ BattleCommandPointers:
 	dw BattleCommand_StatDownAnim
 	dw BattleCommand_StatUpAnim
 	dw BattleCommand_SwitchTurn
-	dw BattleCommand_FakeOut
+	; dw BattleCommand_FakeOut
 	dw BattleCommand_BellyDrum
 	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
@@ -192,3 +192,7 @@ BattleCommandPointers:
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
 	dw BattleCommand_Round
+	dw BattleCommand_HoneClaws
+	dw BattleCommand_CloseCombat
+	dw BattleCommand_BurnUp
+	dw BattleCommand_CalmMind

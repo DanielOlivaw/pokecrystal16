@@ -1,4 +1,4 @@
-BattleCommand_HealBell:
+HealBellEffect:
 ; healbell
 
 	ld a, BATTLE_VARS_SUBSTATUS1
@@ -23,7 +23,7 @@ BattleCommand_HealBell:
 	add hl, bc
 	dec d
 	jr nz, .loop
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 ; Aromatherapy and Heal Bell do the same thing, but display different text
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -42,5 +42,14 @@ BattleCommand_HealBell:
 
 	ldh a, [hBattleTurn]
 	and a
-	jp z, CalcPlayerStats
-	jp CalcEnemyStats
+	jr z, .player
+	jr .enemy
+
+.player:
+	farcall CalcPlayerStats
+	ret
+	
+.enemy:
+	farcall CalcEnemyStats
+	ret
+	

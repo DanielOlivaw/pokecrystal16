@@ -1,6 +1,7 @@
 MoveEffectPriorities:
 	db EFFECT_PROTECT,      5
 	db EFFECT_ENDURE,       5
+	; db EFFECT_FAKE_OUT,     4
 	db EFFECT_EXTREMESPEED, 3
 	db EFFECT_PRIORITY_HIT, 2
 	db EFFECT_SUCKER_PUNCH, 2

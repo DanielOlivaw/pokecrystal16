@@ -18,7 +18,7 @@
 	const STEEL
 
 UNUSED_TYPES EQU const_value
-	; const TYPE_10
+	const TYPE_NONE
 	; const TYPE_11
 	; const TYPE_12
 	; const TYPE_13

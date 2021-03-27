@@ -12,6 +12,8 @@ INCLUDE "engine/battle/move_effects/selfdestruct.asm"
 
 INCLUDE "engine/battle/move_effects/thief.asm"
 
+INCLUDE "engine/battle/move_effects/heal_bell.asm"
+
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
@@ -31,3 +33,5 @@ INCLUDE "engine/battle/move_effects/hail.asm"
 INCLUDE "engine/battle/move_effects/metal_burst.asm"
 
 INCLUDE "engine/battle/move_effects/round.asm"
+
+INCLUDE "engine/battle/move_effects/burn_up.asm"

@@ -1936,15 +1936,26 @@ SunnyDay:
 	startsun
 	endmove
 
-FakeOut:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	fakeout
-	moveanim
-	failuretext
-	endmove
+; FakeOut:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; critical
+	; damagestats
+	; damagecalc
+	; stab
+	; damagevariation
+	; checkhit
+	; fakeout
+	; moveanim
+	; failuretext
+	; applydamage
+	; criticaltext
+	; supereffectivetext
+	; checkfaint
+	; buildopponentrage
+	; flinchtarget
+	; endmove
 
 BellyDrum:
 	checkobedience
@@ -2441,4 +2452,62 @@ RoundMove:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+HoneClaws:
+	checkobedience
+	usedmovetext
+	doturn
+	honeclaws
+	endmove
+
+CloseCombat:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	closecombat
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+BurnUp:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	defrost
+	burnup
+	checkfaint
+	buildopponentrage
+	defrostopponent
+	kingsrock
+	endmove
+
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	calmmind
 	endmove

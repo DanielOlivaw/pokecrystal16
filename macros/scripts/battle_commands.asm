@@ -150,7 +150,7 @@ ENDM
 	command statdownanim            ; 8f
 	command statupanim              ; 90
 	command switchturn              ; 91
-	command fakeout                 ; 92
+	; command fakeout                 ; 92
 	command bellydrum               ; 93
 	command psychup                 ; 94
 	command rage                    ; 95
@@ -193,6 +193,10 @@ ENDM
 	command superpower              ; ba
 	command cosmicpower             ; bb
 	command roundcheck              ; bc
+	command honeclaws               ; bd
+	command closecombat             ; be
+	command burnup                  ; bf
+	command calmmind                ; c0
 
 	enum_start $fe
 	command endturn                 ; fe

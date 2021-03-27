@@ -141,7 +141,7 @@ MoveEffectsPointers:
 	dw DefenseUpHit
 	dw AttackUpHit
 	dw AllUpHit
-	dw FakeOut
+	; dw FakeOut
 	dw BellyDrum
 	dw PsychUp
 	dw MirrorCoat
@@ -176,3 +176,7 @@ MoveEffectsPointers:
 	dw RoundMove
 	dw PoisonHit
 	dw HealBell
+	dw HoneClaws
+	dw CloseCombat
+	dw BurnUp
+	dw CalmMind

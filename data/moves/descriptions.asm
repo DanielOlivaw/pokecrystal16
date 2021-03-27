@@ -313,6 +313,16 @@ MoveDescriptions1:
 	dw SignalBeamDescription
 	dw ZenHeadbuttDescription
 	dw SilverWindDescription
+	; dw FakeOutDescription
+	dw HoneClawsDescription
+	dw MetalSoundDescription
+	dw AquaJetDescription
+	dw CloseCombatDescription
+	dw HowlDescription
+	dw BurnUpDescription
+	dw PsychoCutDescription
+	dw CalmMindDescription
+	dw LowSweepDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1540,4 +1550,44 @@ ZenHeadbuttDescription:
 SilverWindDescription:
 	db   "An attack that may"
 	next "raise all stats.@"
+
+; FakeOutDescription:
+	; db   "A first-turn,"
+	; next "first-strike move.@"
+
+HoneClawsDescription:
+	db   "Increases ATTACK"
+	next "and accuracy.@"
+
+MetalSoundDescription:
+	db   "Sharply lowers the"
+	next "foe's SPCL.DEF.@"
+
+AquaJetDescription:
+	db   "A quick lunge that"
+	next "strikes first.@"
+
+CloseCombatDescription:
+	db   "Sacrifices DEFENSE"
+	next "and SPCL.DEF.@"
+
+HowlDescription:
+	db   "Howls to raise the"
+	next "user's ATTACK.@"
+
+BurnUpDescription:
+	db   "Burns out the user"
+	next "to inflict damage.@"
+
+PsychoCutDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+CalmMindDescription:
+	db   "Increases SPCL.ATK"
+	next "and SPCL.DEF.@"
+
+LowSweepDescription:
+	db   "A leg attack that"
+	next "lowers SPEED.@"
 		;"123456789123456789"

@@ -932,6 +932,11 @@ TransformedTypeText:
 	text " type!"
 	prompt
 
+BurnedItselfOutText:
+	text "<USER>"
+	line "burned itself out!"
+	prompt
+
 EliminatedStatsText:
 	text "All stat changes"
 	line "were eliminated!"
