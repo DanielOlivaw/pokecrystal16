@@ -635,11 +635,13 @@ wEnemyScreens:: ; c700
 wPlayerSafeguardCount:: db ; c701
 wPlayerLightScreenCount:: db ; c702
 wPlayerReflectCount:: db ; c703
+wPlayerAuroraVeilCount:: db ; c703
 	ds 1
 
 wEnemySafeguardCount:: db ; c705
 wEnemyLightScreenCount:: db ; c706
 wEnemyReflectCount:: db ; c707
+wEnemyAuroraVeilCount:: db ; c707
 	ds 2
 
 wBattleWeather:: ; c70a

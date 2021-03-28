@@ -2798,7 +2798,10 @@ PlayerAttackDamage:
 
 	ld a, [wEnemyScreens]
 	bit SCREENS_REFLECT, a
+	jr nz, .physicalscreen
+	bit SCREENS_AURORA_VEIL, a
 	jr z, .physicalcrit
+.physicalscreen
 	sla c
 	rl b
 
@@ -2822,7 +2825,10 @@ PlayerAttackDamage:
 
 	ld a, [wEnemyScreens]
 	bit SCREENS_LIGHT_SCREEN, a
+	jr nz, .specialscreen
+	bit SCREENS_AURORA_VEIL, a
 	jr z, .specialcrit
+.specialscreen
 	sla c
 	rl b
 
@@ -3062,7 +3068,10 @@ EnemyAttackDamage:
 
 	ld a, [wPlayerScreens]
 	bit SCREENS_REFLECT, a
+	jr nz, .physicalscreen
+	bit SCREENS_AURORA_VEIL, a
 	jr z, .physicalcrit
+.physicalscreen
 	sla c
 	rl b
 
@@ -3086,7 +3095,10 @@ EnemyAttackDamage:
 
 	ld a, [wPlayerScreens]
 	bit SCREENS_LIGHT_SCREEN, a
+	jr nz, .specialscreen
+	bit SCREENS_AURORA_VEIL, a
 	jr z, .specialcrit
+.specialscreen
 	sla c
 	rl b
 
@@ -3147,8 +3159,10 @@ HitSelfInConfusion:
 	ld c, [hl]
 	ld a, [de]
 	bit SCREENS_REFLECT, a
+	jr nz, .found_screen
+	bit SCREENS_AURORA_VEIL, a
 	jr z, .mimic_screen
-
+.found_screen
 	sla c
 	rl b
 .mimic_screen
@@ -6680,30 +6694,18 @@ BattleCommand_Screen:
 	cp WEATHER_HAIL
 	jr nz, .failed
 
-; Cheat a little by setting both Reflect and Light Screen
-; rather than creating a new screen type
-	bit SCREENS_LIGHT_SCREEN, [hl]
-	jr nz, .LightScreenAlreadyUp
-	set SCREENS_LIGHT_SCREEN, [hl]
-; Set LightScreenCount to 5
+	bit SCREENS_AURORA_VEIL, [hl]
+	jr nz, .failed
+	set SCREENS_AURORA_VEIL, [hl]
+	
+	; LightScreenCount -> AuroraVeilCount
+	inc bc
+	inc bc
+
 	ld a, 5
 	ld [bc], a
-
-	bit SCREENS_REFLECT, [hl]
-.AuroraVeilContinue
-	set SCREENS_REFLECT, [hl]
-; Set ReflectCount to 5
-	inc bc
-	ld [bc], a
-
 	ld hl, AuroraVeilEffectText
 	jr .good
-
-; Only fails if BOTH Light Screen and Reflect are already up
-.LightScreenAlreadyUp:
-	bit SCREENS_REFLECT, [hl]
-	jr nz, .failed
-	jr .AuroraVeilContinue
 
 PrintDoesntAffect:
 ; 'it doesn't affect'

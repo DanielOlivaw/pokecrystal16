@@ -273,35 +273,35 @@ got_palette_pointer_8bd7:
 	call LoadPalette_White_Col1_Col2_Black
 	ret
 
-Unreferenced_Function8bec:
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wPlayerLightScreenCount
-	jp PushSGBPals
+; Unreferenced_Function8bec:
+	; ldh a, [hCGB]
+	; and a
+	; jr nz, .cgb
+	; ld hl, wPlayerLightScreenCount
+	; jp PushSGBPals
 
-.cgb
-	ld a, [wEnemyLightScreenCount] ; col
-	ld c, a
-	ld a, [wEnemyReflectCount] ; row
-	hlcoord 0, 0, wAttrMap
-	ld de, SCREEN_WIDTH
-.loop
-	and a
-	jr z, .done
-	add hl, de
-	dec a
-	jr .loop
+; .cgb
+	; ld a, [wEnemyLightScreenCount] ; col
+	; ld c, a
+	; ld a, [wEnemyReflectCount] ; row
+	; hlcoord 0, 0, wAttrMap
+	; ld de, SCREEN_WIDTH
+; .loop
+	; and a
+	; jr z, .done
+	; add hl, de
+	; dec a
+	; jr .loop
 
-.done
-	ld b, $0
-	add hl, bc
-	lb bc, 6, 4
-	ld a, [wEnemySafeguardCount] ; value
-	and $3
-	call FillBoxCGB
-	call CopyTilemapAtOnce
-	ret
+; .done
+	; ld b, $0
+	; add hl, bc
+	; lb bc, 6, 4
+	; ld a, [wEnemySafeguardCount] ; value
+	; and $3
+	; call FillBoxCGB
+	; call CopyTilemapAtOnce
+	; ret
 
 ApplyMonOrTrainerPals:
 	call CheckCGB

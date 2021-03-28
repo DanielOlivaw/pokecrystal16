@@ -143,6 +143,12 @@ BattleText_MonsReflectFaded:
 	line "REFLECT faded!"
 	prompt
 
+BattleText_MonsAuroraVeilFaded:
+	text_ram wStringBuffer1
+	text " #MON's"
+	line "AURORA VEIL faded!"
+	prompt
+
 BattleText_RainContinuesToFall:
 	text "Rain continues to"
 	line "fall."
@@ -389,6 +395,11 @@ BattleText_MonHasNoMovesLeft:
 BattleText_TargetsEncoreEnded:
 	text "<TARGET>'s"
 	line "ENCORE ended!"
+	prompt
+
+BattleText_TargetsTauntEnded:
+	text "<TARGET>'s"
+	line "taunted no more!"
 	prompt
 
 BattleText_StringBuffer1GrewToLevel:

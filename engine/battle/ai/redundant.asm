@@ -43,6 +43,7 @@ AI_Redundant:
 	dbw EFFECT_SWAGGER,       .Swagger
 	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
 	dbw EFFECT_HAIL,          .Hail
+	dbw EFFECT_AURORA_VEIL,   .AuroraVeil
 	db -1
 
 .LightScreen:
@@ -102,8 +103,8 @@ AI_Redundant:
 .SleepTalk:
 	ld a, [wEnemyMonStatus]
 	and SLP
-	jr z, .Redundant
-	jr .NotRedundant
+	jp z, .Redundant
+	jp .NotRedundant
 
 .MeanLook:
 	ld a, [wEnemySubStatus5]
@@ -144,6 +145,11 @@ AI_Redundant:
 	cp WEATHER_HAIL
 	jr z, .Redundant
 	jr .NotRedundant
+
+.AuroraVeil:
+	ld a, [wEnemyScreens]
+	bit SCREENS_AURORA_VEIL, a
+	ret
 
 .Attract:
 	farcall CheckOppositeGender

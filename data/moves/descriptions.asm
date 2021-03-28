@@ -1267,7 +1267,7 @@ MoonlightDescription:
 	next "on the weather.@"
 
 HiddenPowerDescription:
-	db   "The power varies"
+	db   "Its type varies"
 	next "with the #MON.@"
 
 CrossChopDescription:

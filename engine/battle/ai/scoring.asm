@@ -390,6 +390,7 @@ AI_Smart:
 	dbw EFFECT_CUT,              AI_Smart_Cut
 	dbw EFFECT_GROWTH,           AI_Smart_Growth
 	dbw EFFECT_HAIL,             AI_Smart_Hail
+	dbw EFFECT_AURORA_VEIL,      AI_Smart_AuroraVeil
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -971,6 +972,21 @@ AI_Smart_LightScreen:
 AI_Smart_Reflect:
 ; Over 90% chance to discourage this move unless enemy's HP is full.
 
+	call AICheckEnemyMaxHP
+	ret c
+	call Random
+	cp 8 percent
+	ret c
+	inc [hl]
+	ret
+
+AI_Smart_AuroraVeil:
+; Dismiss this move if the weather is not hail
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	jp z, AIDiscourageMove
+
+; Over 90% chance to discourage this move unless enemy's HP is full.
 	call AICheckEnemyMaxHP
 	ret c
 	call Random

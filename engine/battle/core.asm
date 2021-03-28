@@ -1772,6 +1772,8 @@ HandleScreens:
 	call nz, .LightScreenTick
 	bit SCREENS_REFLECT, [hl]
 	call nz, .ReflectTick
+	bit SCREENS_AURORA_VEIL, [hl]
+	call nz, .AuroraVeilTick
 	ret
 
 .Copy:
@@ -1805,6 +1807,17 @@ HandleScreens:
 	ret nz
 	res SCREENS_REFLECT, [hl]
 	ld hl, BattleText_MonsReflectFaded
+	jp StdBattleTextbox
+
+.AuroraVeilTick:
+	inc de
+	inc de
+	ld a, [de]
+	dec a
+	ld [de], a
+	ret nz
+	res SCREENS_AURORA_VEIL, [hl]
+	ld hl, BattleText_MonsAuroraVeilFaded
 	jp StdBattleTextbox
 
 HandleWeather:
