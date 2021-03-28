@@ -197,6 +197,8 @@ ENDM
 	command closecombat             ; be
 	command burnup                  ; bf
 	command calmmind                ; c0
+	command knockoff                ; c1
+	command bulkup                  ; c2
 
 	enum_start $fe
 	command endturn                 ; fe

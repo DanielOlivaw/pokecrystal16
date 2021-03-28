@@ -196,3 +196,5 @@ BattleCommandPointers:
 	dw BattleCommand_CloseCombat
 	dw BattleCommand_BurnUp
 	dw BattleCommand_CalmMind
+	dw BattleCommand_KnockOff
+	dw BattleCommand_BulkUp

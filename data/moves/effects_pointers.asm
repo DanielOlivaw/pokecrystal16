@@ -180,3 +180,5 @@ MoveEffectsPointers:
 	dw CloseCombat
 	dw BurnUp
 	dw CalmMind
+	dw KnockOff
+	dw BulkUp

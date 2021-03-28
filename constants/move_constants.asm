@@ -324,6 +324,9 @@
 	const PSYCHO_CUT
 	const CALM_MIND
 	const LOW_SWEEP
+	const KNOCK_OFF
+	const DUAL_CHOP
+	const BULK_UP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

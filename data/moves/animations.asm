@@ -345,6 +345,9 @@ BattleAnimations::
 	dw BattleAnim_PsychoCut
 	dw BattleAnim_CalmMind
 	dw BattleAnim_LowSweep
+	dw BattleAnim_KnockOff
+	dw BattleAnim_DualChop
+	dw BattleAnim_BulkUp
 	
 	dw BattleAnim_SweetScent2
 
@@ -728,6 +731,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DualChop:
+BattleAnim_BulkUp:
+BattleAnim_KnockOff:
 BattleAnim_LowSweep:
 BattleAnim_PsychoCut:
 BattleAnim_CalmMind:

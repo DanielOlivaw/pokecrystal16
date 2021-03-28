@@ -1079,6 +1079,16 @@ StoleText:
 	cont "from its foe!"
 	prompt
 
+KnockedOffText:
+	text "<USER>"
+		;"123456789123456789"
+	line "knocked off"
+	para "<TARGET>'s"
+	line "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 StoleBerryText:
 	text "<USER>"
 	line "ate its foe's"
@@ -1092,8 +1102,8 @@ StoleBerryRecoveryText:
 	text "<USER>"
 	line "recovered using"
 	; cont "the foe's BERRY!"
-	cont "the foe's"
-	cont "@"
+	para "the foe's"
+	line "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt

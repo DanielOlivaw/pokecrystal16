@@ -35,3 +35,5 @@ INCLUDE "engine/battle/move_effects/metal_burst.asm"
 INCLUDE "engine/battle/move_effects/round.asm"
 
 INCLUDE "engine/battle/move_effects/burn_up.asm"
+
+INCLUDE "engine/battle/move_effects/knock_off.asm"

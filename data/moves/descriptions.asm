@@ -323,6 +323,9 @@ MoveDescriptions1:
 	dw PsychoCutDescription
 	dw CalmMindDescription
 	dw LowSweepDescription
+	dw KnockOffDescription
+	dw DualChopDescription
+	dw BulkUpDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1590,4 +1593,16 @@ CalmMindDescription:
 LowSweepDescription:
 	db   "A leg attack that"
 	next "lowers SPEED.@"
+
+KnockOffDescription:
+	db   "Knocks down the"
+	next "foe's held item.@"
+
+DualChopDescription:
+	db   "Hits twice with"
+	next "brutal strikes.@"
+
+BulkUpDescription:
+	db   "Increases ATTACK"
+	next "and DEFENSE.@"
 		;"123456789123456789"

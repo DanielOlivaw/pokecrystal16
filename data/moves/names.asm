@@ -317,4 +317,7 @@ MoveNames::
 	db "PSYCHO CUT@"
 	db "CALM MIND@"
 	db "LOW SWEEP@"
+	db "KNOCK OFF@"
+	db "DUAL CHOP@"
+	db "BULK UP@"
 	  ;"123456123456@"

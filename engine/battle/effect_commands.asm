@@ -6967,6 +6967,10 @@ BattleCommand_BurnUp:
 	farcall BurnUpEffect
 	ret
 
+BattleCommand_KnockOff:
+	farcall KnockOffEffect
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens

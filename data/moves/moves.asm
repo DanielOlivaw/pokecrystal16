@@ -335,4 +335,7 @@ Moves1:
 	move EFFECT_NORMAL_HIT,         70, PSYCHIC,  PHYSICAL, 100, 20,   0 ; PSYCHO_CUT
 	move EFFECT_CALM_MIND,           0, PSYCHIC,  STATUS,   100, 20,   0 ; CALM_MIND
 	move EFFECT_SPEED_DOWN_HIT,     65, FIGHTING, PHYSICAL, 100, 20, 100 ; LOW_SWEEP
+	move EFFECT_KNOCK_OFF,          65, DARK,     PHYSICAL, 100, 20, 100 ; KNOCK_OFF
+	move EFFECT_DOUBLE_HIT,         40, DRAGON,   PHYSICAL,  90, 15,   0 ; DUAL_CHOP
+	move EFFECT_BULK_UP,             0, FIGHTING, STATUS,   100, 20,   0 ; BULK_UP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
