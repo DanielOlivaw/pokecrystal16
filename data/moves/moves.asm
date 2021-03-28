@@ -338,4 +338,9 @@ Moves1:
 	move EFFECT_KNOCK_OFF,          65, DARK,     PHYSICAL, 100, 20, 100 ; KNOCK_OFF
 	move EFFECT_DOUBLE_HIT,         40, DRAGON,   PHYSICAL,  90, 15,   0 ; DUAL_CHOP
 	move EFFECT_BULK_UP,             0, FIGHTING, STATUS,   100, 20,   0 ; BULK_UP
+	move EFFECT_WATER_SPOUT,       150, FIRE,     SPECIAL,  100,  5,   0 ; ERUPTION
+	move EFFECT_WATER_SPOUT,       150, WATER,    SPECIAL,  100,  5,   0 ; WATER_SPOUT
+	move EFFECT_WATER_SPOUT,       150, DRAGON,   SPECIAL,  100,  5,   0 ; DRAGONENERGY
+	move EFFECT_WRING_OUT,           1, NORMAL,   SPECIAL,  100,  5,   0 ; WRING_OUT
+	move EFFECT_WRING_OUT,           1, NORMAL,   PHYSICAL, 100,  5,   0 ; CRUSH_GRIP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

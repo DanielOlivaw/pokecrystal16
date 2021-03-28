@@ -348,6 +348,11 @@ BattleAnimations::
 	dw BattleAnim_KnockOff
 	dw BattleAnim_DualChop
 	dw BattleAnim_BulkUp
+	dw BattleAnim_Eruption
+	dw BattleAnim_WaterSpout
+	dw BattleAnim_DragonEnergy
+	dw BattleAnim_WringOut
+	dw BattleAnim_CrushGrip
 	
 	dw BattleAnim_SweetScent2
 
@@ -731,6 +736,11 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Eruption:
+BattleAnim_WaterSpout:
+BattleAnim_DragonEnergy:
+BattleAnim_WringOut:
+BattleAnim_CrushGrip:
 BattleAnim_DualChop:
 BattleAnim_BulkUp:
 BattleAnim_KnockOff:

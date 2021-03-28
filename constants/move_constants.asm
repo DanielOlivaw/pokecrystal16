@@ -327,6 +327,11 @@
 	const KNOCK_OFF
 	const DUAL_CHOP
 	const BULK_UP
+	const ERUPTION
+	const WATER_SPOUT
+	const DRAGONENERGY
+	const WRING_OUT
+	const CRUSH_GRIP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

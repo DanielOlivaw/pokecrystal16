@@ -3442,6 +3442,11 @@ BattleCommand_ConstantDamage:
 
 	cp EFFECT_REVERSAL
 	jr z, .reversal
+	cp EFFECT_WATER_SPOUT
+	jr z, .reversal
+
+	cp EFFECT_WRING_OUT
+	jr z, .wring_out
 
 	ld a, BATTLE_VARS_MOVE_POWER
 	call GetBattleVar
@@ -3492,6 +3497,16 @@ BattleCommand_ConstantDamage:
 	ld [hli], a
 	ld [hl], b
 	ret
+	
+.wring_out
+; Wring Out will borrow the Reversal formula,
+; but loads the opponent's HP instead of the user's.
+	ld hl, wEnemyMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .reversal_got_hp
+	ld hl, wBattleMonHP
+	jr .reversal_got_hp
 
 .reversal
 	ld hl, wBattleMonHP
@@ -3540,8 +3555,25 @@ BattleCommand_ConstantDamage:
 	call Divide
 	ldh a, [hQuotient + 3]
 	ld b, a
-	ld hl, FlailReversalPower
 
+; Water Spout uses the same formula as Reversal,
+; but loads a different table of values.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_WATER_SPOUT
+	jr z, .eruption_water_spout_power
+	cp EFFECT_WRING_OUT
+	jr z, .wring_out_power
+
+	ld hl, FlailReversalPower
+	jr .reversal_loop
+
+.wring_out_power:
+	ld hl, WringOutPower
+	jr .reversal_loop
+
+.eruption_water_spout_power:
+	ld hl, EruptionWaterSpoutPower
 .reversal_loop
 	ld a, [hli]
 	cp b
@@ -3575,11 +3607,13 @@ BattleCommand_ConstantDamage:
 
 INCLUDE "data/moves/flail_reversal_power.asm"
 
+INCLUDE "data/moves/eruption_water_spout_power.asm"
+
+INCLUDE "data/moves/wring_out_power.asm"
+
 INCLUDE "engine/battle/move_effects/counter.asm"
 
 INCLUDE "engine/battle/move_effects/encore.asm"
-
-INCLUDE "engine/battle/move_effects/pain_split.asm"
 
 INCLUDE "engine/battle/move_effects/snore.asm"
 
@@ -3603,6 +3637,10 @@ BattleCommand_Spite:
 
 BattleCommand_HealBell:
 	farcall HealBellEffect
+	ret
+
+BattleCommand_PainSplit:
+	farcall PainSplitEffect
 	ret
 
 FarPlayBattleAnimation:

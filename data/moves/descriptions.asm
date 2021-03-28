@@ -326,6 +326,11 @@ MoveDescriptions1:
 	dw KnockOffDescription
 	dw DualChopDescription
 	dw BulkUpDescription
+	dw EruptionDescription
+	dw WaterSpoutDescription
+	dw DragonEnergyDescription
+	dw WringOutDescription
+	dw CrushGripDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1605,4 +1610,24 @@ DualChopDescription:
 BulkUpDescription:
 	db   "Increases ATTACK"
 	next "and DEFENSE.@"
+
+EruptionDescription:
+	db   "Stronger if the"
+	next "user's HP is high.@"
+
+WaterSpoutDescription:
+	db   "Stronger if the"
+	next "user's HP is high.@"
+
+DragonEnergyDescription:
+	db   "Stronger if the"
+	next "user's HP is high.@"
+
+WringOutDescription:
+	db   "Stronger if the"
+	next "foe's HP is high.@"
+
+CrushGripDescription:
+	db   "Stronger if the"
+	next "foe's HP is high.@"
 		;"123456789123456789"

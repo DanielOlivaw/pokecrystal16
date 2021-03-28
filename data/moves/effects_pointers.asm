@@ -99,7 +99,7 @@ MoveEffectsPointers:
 	dw RecoilHit
 	dw SleepTalk
 	dw DestinyBond
-	dw Reversal
+	dw HPBasedDamage
 	dw Spite
 	dw FalseSwipe
 	dw HealBell
@@ -182,3 +182,5 @@ MoveEffectsPointers:
 	dw CalmMind
 	dw KnockOff
 	dw BulkUp
+	dw HPBasedDamage
+	dw HPBasedDamage

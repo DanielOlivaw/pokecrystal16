@@ -1340,11 +1340,13 @@ StaticDamage:
 	endmove
 
 Reversal:
+HPBasedDamage:
 	checkobedience
 	usedmovetext
 	doturn
 	constantdamage
 	stab
+	damagevariation
 	checkhit
 	moveanim
 	failuretext
