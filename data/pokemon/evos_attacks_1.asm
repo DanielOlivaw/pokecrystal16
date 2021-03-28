@@ -336,8 +336,10 @@ BeedrillEvosAttacks:
 RattataAEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_NITE, RATICATE_A
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
-	dbw 1, TAIL_WHIP
+	; dbw 1, TACKLE
+	; dbw 1, TAIL_WHIP
+	dbw 1, SPIKES
+	dbw 1, TOXIC_SPIKES
 	dbw 7, QUICK_ATTACK
 	dbw 13, HYPER_FANG
 	dbw 20, FOCUS_ENERGY

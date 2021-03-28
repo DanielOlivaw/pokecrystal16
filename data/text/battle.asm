@@ -1148,6 +1148,12 @@ SpikesText:
 	cont "<TARGET>!"
 	prompt
 
+ToxicSpikesText:
+	text "TOXIC SPIKES scat-"
+	line "tered all around"
+	cont "<TARGET>!"
+	prompt
+
 IdentifiedText:
 	text "<USER>"
 	line "identified"
@@ -1204,7 +1210,20 @@ ShedLeechSeedText:
 
 BlewSpikesText:
 	text "<USER>"
-	line "blew away SPIKES!"
+	line "blew away the"
+	cont "SPIKES!"
+	prompt
+
+BlewToxicSpikesText:
+	text "<USER>"
+	line "blew away the"
+	cont "TOXIC SPIKES!"
+	prompt
+
+AbsorbedToxicSpikesText:
+	text "<USER>"
+	line "absorbed the"
+	cont "TOXIC SPIKES!"
 	prompt
 
 DownpourText:

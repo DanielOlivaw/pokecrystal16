@@ -4336,21 +4336,26 @@ BreakAttraction:
 	ret
 
 SpikesDamage:
+	call .Spikes
+	jr .ToxicSpikes
+
+.Spikes
 	ld hl, wPlayerScreens
 	ld de, wBattleMonType
 	ld bc, UpdatePlayerHUD
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .ok
+	jr z, .Spikes_ok
 	ld hl, wEnemyScreens
 	ld de, wEnemyMonType
 	ld bc, UpdateEnemyHUD
-.ok
+.Spikes_ok
 
+; End if there aren't Spikes down.
 	bit SCREENS_SPIKES, [hl]
 	ret z
 
-	; Flying-types aren't affected by Spikes.
+; Flying-types aren't affected by Spikes.
 	ld a, [de]
 	cp FLYING
 	ret z
@@ -4374,6 +4379,102 @@ SpikesDamage:
 
 .hl
 	jp hl
+
+.ToxicSpikes:
+	ld hl, wPlayerScreens
+	ld de, wBattleMonType
+	ld bc, UpdatePlayerHUD
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ToxicSpikes_ok
+	ld hl, wEnemyScreens
+	ld de, wEnemyMonType
+	ld bc, UpdateEnemyHUD
+.ToxicSpikes_ok
+
+; End if there aren't Toxic Spikes down.
+	bit SCREENS_TOXIC_SPIKES, [hl]
+	ret z
+
+; Toxic Spikes can't poison a Flying-, Steel-, or Poison-type
+	ld a, [de]
+	cp FLYING
+	ret z
+	cp STEEL
+	ret z
+	cp POISON
+	jr z, .AbsorbToxicSpikes
+	inc de
+	ld a, [de]
+	cp FLYING
+	ret z
+	cp STEEL
+	ret z
+	cp POISON
+	jr z, .AbsorbToxicSpikes
+
+; Toxic Spikes can't poison in fog
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	ret z
+
+; Toxic Spikes can't poison a Safeguarded target
+	farcall SafeCheckSafeguard
+	ret nz
+
+; Toxic Spikes can't poison a Pokemon with a Poison-preventing item
+	farcall GetUserItem
+	ld a, d
+	cp HELD_PREVENT_POISON
+	ret z
+
+	push bc
+	push hl
+	push de
+; Toxic Spikes can't poison a Pokemon that already has a status condition
+	ld a, BATTLE_VARS_STATUS
+	call GetBattleVarAddr
+	and a
+	ret nz
+
+; Apply poison
+	set PSN, [hl]
+	ld de, ANIM_PSN
+	call Call_PlayBattleAnim
+	call RefreshBattleHuds
+	pop de
+	pop hl
+	pop bc
+
+	ld hl, WasPoisonedText
+	call SwitchTurnCore
+	call StdBattleTextbox
+	call SwitchTurnCore
+
+	; push hl
+	; ld hl, ProtectingItselfText
+	; call StdBattleTextbox
+	; pop hl
+	ret
+
+	; pop hl
+	; call .hl
+
+	; jp WaitBGMap
+
+.AbsorbToxicSpikes:
+; Poison/Flying Pokemon won't absorb toxic spikes
+	inc de
+	ld a, [de]
+	cp FLYING
+	ret z
+
+	res SCREENS_TOXIC_SPIKES, [hl]
+	ld hl, AbsorbedToxicSpikesText
+	push de
+	call StdBattleTextbox
+	pop de
+	ret
 
 PursuitSwitch:
 	ld a, BATTLE_VARS_MOVE

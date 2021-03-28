@@ -620,12 +620,12 @@ wPlayerScreens:: ; c6ff
 ; bit
 ; 7
 ; 6
-; 5
-; 4 reflect
-; 3 light screen
-; 2 safeguard
-; 1
-; 0 spikes
+; 5 reflect
+; 4 light screen
+; 3 safeguard
+; 2 aurora veil
+; 1 spikes
+; 0 toxic spikes
 	db
 
 wEnemyScreens:: ; c700

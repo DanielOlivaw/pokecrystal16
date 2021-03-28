@@ -343,4 +343,5 @@ Moves1:
 	move EFFECT_WATER_SPOUT,       150, DRAGON,   SPECIAL,  100,  5,   0 ; DRAGONENERGY
 	move EFFECT_WRING_OUT,           1, NORMAL,   SPECIAL,  100,  5,   0 ; WRING_OUT
 	move EFFECT_WRING_OUT,           1, NORMAL,   PHYSICAL, 100,  5,   0 ; CRUSH_GRIP
+	move EFFECT_TOXIC_SPIKES,        0, POISON,   STATUS,   100, 20,   0 ; TOXIC_SPIKES
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -353,6 +353,7 @@ BattleAnimations::
 	dw BattleAnim_DragonEnergy
 	dw BattleAnim_WringOut
 	dw BattleAnim_CrushGrip
+	dw BattleAnim_ToxicSpikes
 	
 	dw BattleAnim_SweetScent2
 
@@ -3702,6 +3703,7 @@ BattleAnim_Octazooka:
 .done
 	anim_ret
 
+BattleAnim_ToxicSpikes:
 BattleAnim_Spikes:
 	anim_1gfx ANIM_GFX_MISC
 	anim_sound 6, 2, SFX_MENU

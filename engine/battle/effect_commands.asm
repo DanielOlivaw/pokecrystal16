@@ -6925,8 +6925,6 @@ INCLUDE "engine/battle/move_effects/protect.asm"
 
 INCLUDE "engine/battle/move_effects/endure.asm"
 
-INCLUDE "engine/battle/move_effects/spikes.asm"
-
 INCLUDE "engine/battle/move_effects/foresight.asm"
 
 INCLUDE "engine/battle/move_effects/perish_song.asm"
@@ -6959,6 +6957,10 @@ BattleCommand_Safeguard:
 
 BattleCommand_Thief:
 	farcall ThiefEffect
+	ret
+
+BattleCommand_Spikes:
+	farcall SpikesEffect
 	ret
 
 BattleCommand_Cut:

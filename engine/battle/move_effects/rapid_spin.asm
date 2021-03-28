@@ -26,7 +26,15 @@ BattleCommand_ClearHazards:
 	call StdBattleTextbox
 	pop de
 .no_spikes
+	bit SCREENS_SPIKES, [hl]
+	jr z, .no_toxic_spikes
+	res SCREENS_SPIKES, [hl]
+	ld hl, BlewToxicSpikesText
+	push de
+	call StdBattleTextbox
+	pop de
 
+.no_toxic_spikes
 	ld a, [de]
 	and a
 	ret z

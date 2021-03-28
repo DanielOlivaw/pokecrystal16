@@ -184,3 +184,4 @@ MoveEffectsPointers:
 	dw BulkUp
 	dw HPBasedDamage
 	dw HPBasedDamage
+	dw Spikes

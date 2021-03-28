@@ -325,4 +325,5 @@ MoveNames::
 	db "DRAGO ENERGY@"
 	db "WRING OUT@"
 	db "CRUSH GRIP@"
+	db "TOXIC SPIKES@"
 	  ;"123456123456@"

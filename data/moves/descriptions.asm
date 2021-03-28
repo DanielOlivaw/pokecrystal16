@@ -331,6 +331,7 @@ MoveDescriptions1:
 	dw DragonEnergyDescription
 	dw WringOutDescription
 	dw CrushGripDescription
+	dw ToxicSpikesDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1097,7 +1098,7 @@ OctazookaDescription:
 
 SpikesDescription:
 	db   "Hurts foes when"
-	next "they switch out.@"
+	next "they switch in.@"
 
 ZapCannonDescription:
 	db   "An attack that"
@@ -1630,4 +1631,8 @@ WringOutDescription:
 CrushGripDescription:
 	db   "Stronger if the"
 	next "foe's HP is high.@"
+
+ToxicSpikesDescription:
+	db   "Poisons foes when"
+	next "they switch in.@"
 		;"123456789123456789"

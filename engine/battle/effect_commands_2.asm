@@ -16,6 +16,8 @@ INCLUDE "engine/battle/move_effects/heal_bell.asm"
 
 INCLUDE "engine/battle/move_effects/pain_split.asm"
 
+INCLUDE "engine/battle/move_effects/spikes.asm"
+
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"

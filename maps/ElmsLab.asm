@@ -252,6 +252,10 @@ ElmDirectionsScript:
 	opentext
 	writetext ElmDirectionsText1
 	waitbutton
+	givepoke REMORAID, 5, BERRY
+	givepoke GRIMER, 5, BERRY
+	givepoke ZUBAT, 5, BERRY
+	givepoke MAGNEMITE, 5, BERRY
 	closetext
 	addcellnum PHONE_ELM
 	opentext
