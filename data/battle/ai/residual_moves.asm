@@ -13,4 +13,7 @@ ResidualMoves:
 	dw CONVERSION
 	dw SUBSTITUTE
 	dw SPIKES
+	dw TOXIC_SPIKES
+	dw STEALTH_ROCK
+	dw STICKY_WEB
 	dw -1 ; end

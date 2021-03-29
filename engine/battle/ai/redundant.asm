@@ -44,6 +44,9 @@ AI_Redundant:
 	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
 	dbw EFFECT_HAIL,          .Hail
 	dbw EFFECT_AURORA_VEIL,   .AuroraVeil
+	dbw EFFECT_TOXIC_SPIKES,  .ToxicSpikes
+	dbw EFFECT_STEALTH_ROCK,  .StealthRock
+	dbw EFFECT_STICKY_WEB,    .StickyWeb
 	db -1
 
 .LightScreen:
@@ -114,7 +117,7 @@ AI_Redundant:
 .Nightmare:
 	ld a, [wBattleMonStatus]
 	and a
-	jr z, .Redundant
+	jp z, .Redundant
 	ld a, [wPlayerSubStatus1]
 	bit SUBSTATUS_NIGHTMARE, a
 	ret
@@ -122,6 +125,21 @@ AI_Redundant:
 .Spikes:
 	ld a, [wPlayerScreens]
 	bit SCREENS_SPIKES, a
+	ret
+
+.ToxicSpikes:
+	ld a, [wPlayerScreens]
+	bit SCREENS_TOXIC_SPIKES, a
+	ret
+
+.StealthRock:
+	ld a, [wPlayerScreens]
+	bit SCREENS_STEALTH_ROCK, a
+	ret
+
+.StickyWeb:
+	ld a, [wPlayerScreens]
+	bit SCREENS_STICKY_WEB, a
 	ret
 
 .Foresight:

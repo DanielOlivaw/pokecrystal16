@@ -332,6 +332,8 @@ MoveDescriptions1:
 	dw WringOutDescription
 	dw CrushGripDescription
 	dw ToxicSpikesDescription
+	dw StealthRockDescription
+	dw StickyWebDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1634,5 +1636,13 @@ CrushGripDescription:
 
 ToxicSpikesDescription:
 	db   "Poisons foes when"
+	next "they switch in.@"
+
+StealthRockDescription:
+	db   "Hurts foes when"
+	next "they switch in.@"
+
+StickyWebDescription:
+	db   "Slows foes when"
 	next "they switch in.@"
 		;"123456789123456789"

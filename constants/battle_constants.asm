@@ -208,13 +208,15 @@ SUBSTATUS_CURLED EQU 0
 	enum SUBSTATUS_TOXIC
 
 ; wPlayerScreens or wEnemyScreens bit flags
-	enum_start 5, -1
+	enum_start 7, -1
 	enum SCREENS_REFLECT
 	enum SCREENS_LIGHT_SCREEN
 	enum SCREENS_SAFEGUARD
 	enum SCREENS_AURORA_VEIL
 	enum SCREENS_SPIKES
 	enum SCREENS_TOXIC_SPIKES
+	enum SCREENS_STEALTH_ROCK
+	enum SCREENS_STICKY_WEB
 
 ; values in wBattleWeather
 	const_def

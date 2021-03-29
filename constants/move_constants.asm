@@ -333,6 +333,8 @@
 	const WRING_OUT
 	const CRUSH_GRIP
 	const TOXIC_SPIKES
+	const STEALTH_ROCK
+	const STICKY_WEB
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

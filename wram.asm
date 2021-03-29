@@ -618,14 +618,14 @@ wBattleLowHealthAlarm:: db ; c6fd
 wPlayerMinimized:: db ; c6fe
 wPlayerScreens:: ; c6ff
 ; bit
-; 7
-; 6
-; 5 reflect
-; 4 light screen
-; 3 safeguard
-; 2 aurora veil
-; 1 spikes
-; 0 toxic spikes
+; 7 reflect
+; 6 light screen
+; 5 safeguard
+; 4 aurora veil
+; 3 spikes
+; 2 toxic spikes
+; 1 stealth rock
+; 0 sticky web
 	db
 
 wEnemyScreens:: ; c700

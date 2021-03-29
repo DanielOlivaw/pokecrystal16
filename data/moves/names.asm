@@ -326,4 +326,6 @@ MoveNames::
 	db "WRING OUT@"
 	db "CRUSH GRIP@"
 	db "TOXIC SPIKES@"
+	db "STEALTH ROCK@"
+	db "STICKY WEB@"
 	  ;"123456123456@"

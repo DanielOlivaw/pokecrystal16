@@ -2043,6 +2043,20 @@ SubtractHP:
 	ld [wBuffer6], a
 	ret
 
+GetThirtySecondMaxHP:
+	call GetQuarterMaxHP
+	; eighth result
+	srl c
+	srl c
+	srl c
+	; round up
+	ld a, c
+	and a
+	jr nz, .ok
+	inc c
+.ok
+	ret
+
 GetSixteenthMaxHP:
 	call GetQuarterMaxHP
 	; quarter result
@@ -4336,20 +4350,22 @@ BreakAttraction:
 	ret
 
 SpikesDamage:
-	call .Spikes
-	jr .ToxicSpikes
-
-.Spikes
 	ld hl, wPlayerScreens
 	ld de, wBattleMonType
 	ld bc, UpdatePlayerHUD
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .Spikes_ok
+	jr z, .ok
 	ld hl, wEnemyScreens
 	ld de, wEnemyMonType
 	ld bc, UpdateEnemyHUD
-.Spikes_ok
+.ok
+	call .Spikes
+	call .StealthRock
+	call .ToxicSpikes
+	jp .StickyWeb
+
+.Spikes
 
 ; End if there aren't Spikes down.
 	bit SCREENS_SPIKES, [hl]
@@ -4361,36 +4377,83 @@ SpikesDamage:
 	ret z
 	inc de
 	ld a, [de]
+	dec de
 	cp FLYING
 	ret z
 
 	push bc
-
+	push hl
+	push de
 	ld hl, BattleText_UserHurtBySpikes ; "hurt by SPIKES!"
 	call StdBattleTextbox
 
 	call GetEighthMaxHP
 	call SubtractHPFromTarget
 
+	call WaitBGMap
+	jr .pop
+
+.pop
+	pop de
 	pop hl
-	call .hl
+	pop bc
+	ret
 
-	jp WaitBGMap
+.StealthRock
 
-.hl
-	jp hl
+; End if there aren't rocks down.
+	bit SCREENS_STEALTH_ROCK, [hl]
+	ret z
+
+; Every type is affected by Stealth Rock.
+
+	push bc
+	push hl
+	push de
+	ld hl, BattleText_UserHurtByStealthRock
+	call StdBattleTextbox
+	pop de
+
+	ld h, d
+	ld l, e
+	callfar CheckStealthRockTypeMatchup
+	push de
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE + 6 ; 1.0 + 0.6
+	jr nc, .StealthRockQuadrupleDamage
+	cp EFFECTIVE + 1 ; 1.0 + 0.1
+	jr nc, .StealthRockDoubleDamage
+	cp EFFECTIVE ; 1.0
+	jr nc, .StealthRockNeutralDamage
+	cp EFFECTIVE - 6 ; 1.0 - 0.6
+	jr nc, .StealthRockHalfDamage
+
+.StealthRockQuarterDamage ; double resistance to rock
+	call GetThirtySecondMaxHP
+
+.StealthRockSubtractHP
+	call SubtractHPFromTarget
+
+	call WaitBGMap
+	jr .pop
+
+.StealthRockQuadrupleDamage ; double weakness to rock
+	call GetHalfMaxHP
+	jr .StealthRockSubtractHP
+
+.StealthRockDoubleDamage ; single weakness to rock
+	call GetQuarterMaxHP
+	jr .StealthRockSubtractHP
+
+.StealthRockNeutralDamage ; neutral matchup to rock
+	call GetEighthMaxHP
+	jr .StealthRockSubtractHP
+
+.StealthRockHalfDamage ; single resistance to rock
+	call GetSixteenthMaxHP
+	jr .StealthRockSubtractHP
 
 .ToxicSpikes:
-	ld hl, wPlayerScreens
-	ld de, wBattleMonType
-	ld bc, UpdatePlayerHUD
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ToxicSpikes_ok
-	ld hl, wEnemyScreens
-	ld de, wEnemyMonType
-	ld bc, UpdateEnemyHUD
-.ToxicSpikes_ok
 
 ; End if there aren't Toxic Spikes down.
 	bit SCREENS_TOXIC_SPIKES, [hl]
@@ -4406,6 +4469,7 @@ SpikesDamage:
 	jr z, .AbsorbToxicSpikes
 	inc de
 	ld a, [de]
+	dec de
 	cp FLYING
 	ret z
 	cp STEEL
@@ -4413,68 +4477,87 @@ SpikesDamage:
 	cp POISON
 	jr z, .AbsorbToxicSpikes
 
+	push bc
+	push hl
+	push de
 ; Toxic Spikes can't poison in fog
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
-	ret z
+	jr z, .pop
 
 ; Toxic Spikes can't poison a Safeguarded target
 	farcall SafeCheckSafeguard
-	ret nz
+	jr nz, .pop
 
 ; Toxic Spikes can't poison a Pokemon with a Poison-preventing item
 	farcall GetUserItem
 	ld a, d
 	cp HELD_PREVENT_POISON
-	ret z
+	jp z, .pop
 
-	push bc
-	push hl
-	push de
 ; Toxic Spikes can't poison a Pokemon that already has a status condition
 	ld a, BATTLE_VARS_STATUS
 	call GetBattleVarAddr
 	and a
-	ret nz
+	jp nz, .pop
 
 ; Apply poison
 	set PSN, [hl]
 	ld de, ANIM_PSN
 	call Call_PlayBattleAnim
 	call RefreshBattleHuds
-	pop de
-	pop hl
-	pop bc
 
 	ld hl, WasPoisonedText
 	call SwitchTurnCore
 	call StdBattleTextbox
 	call SwitchTurnCore
-
-	; push hl
-	; ld hl, ProtectingItselfText
-	; call StdBattleTextbox
-	; pop hl
-	ret
-
-	; pop hl
-	; call .hl
-
-	; jp WaitBGMap
+	jp .pop
 
 .AbsorbToxicSpikes:
 ; Poison/Flying Pokemon won't absorb toxic spikes
 	inc de
 	ld a, [de]
+	dec de
 	cp FLYING
 	ret z
 
+	push bc
+	push hl
+	push de
 	res SCREENS_TOXIC_SPIKES, [hl]
 	ld hl, AbsorbedToxicSpikesText
-	push de
 	call StdBattleTextbox
-	pop de
-	ret
+	jp .pop
+
+.StickyWeb:
+
+; End if there isn't a Sticky Web down.
+	bit SCREENS_STICKY_WEB, [hl]
+	ret z
+
+; Flying-types aren't affected by Sticky Web.
+	ld a, [de]
+	cp FLYING
+	ret z
+	inc de
+	ld a, [de]
+	dec de
+	cp FLYING
+	ret z
+	
+	push bc
+	push hl
+	push de
+	ld de, ANIM_ENEMY_STAT_DOWN
+	call SwitchTurnCore
+	call Call_PlayBattleAnim
+	farcall BattleCommand_SpeedDown
+	ld a, SPEED
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+	call SwitchTurnCore
+
+	jp .pop
 
 PursuitSwitch:
 	ld a, BATTLE_VARS_MOVE

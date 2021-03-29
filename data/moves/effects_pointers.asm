@@ -185,3 +185,5 @@ MoveEffectsPointers:
 	dw HPBasedDamage
 	dw HPBasedDamage
 	dw Spikes
+	dw Spikes
+	dw Spikes

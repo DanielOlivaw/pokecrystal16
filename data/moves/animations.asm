@@ -354,6 +354,8 @@ BattleAnimations::
 	dw BattleAnim_WringOut
 	dw BattleAnim_CrushGrip
 	dw BattleAnim_ToxicSpikes
+	dw BattleAnim_StealthRock
+	dw BattleAnim_StickyWeb
 	
 	dw BattleAnim_SweetScent2
 
@@ -737,6 +739,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_StealthRock:
 BattleAnim_Eruption:
 BattleAnim_WaterSpout:
 BattleAnim_DragonEnergy:
@@ -3333,6 +3336,7 @@ BattleAnim_Thief:
 	anim_wait 64
 	anim_ret
 
+BattleAnim_StickyWeb:
 BattleAnim_SpiderWeb:
 	anim_1gfx ANIM_GFX_WEB
 	anim_bgeffect ANIM_BG_07, $0, $2, $0

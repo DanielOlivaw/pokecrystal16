@@ -1463,6 +1463,16 @@ BattleCommand_Stab:
 	ld [wTypeModifier], a
 	ret
 
+CheckStealthRockTypeMatchup:
+	ld hl, wBattleMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .get_type
+	ld hl, wEnemyMonType1
+.get_type
+	ld a, ROCK
+	jr CheckTypeMatchup
+
 BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
@@ -6170,7 +6180,9 @@ BattleCommand_TrapTarget:
 
 INCLUDE "engine/battle/move_effects/mist.asm"
 
-INCLUDE "engine/battle/move_effects/focus_energy.asm"
+BattleCommand_FocusEnergy:
+	farcall FocusEnergyEffect
+	ret
 
 BattleCommand_Recoil:
 ; recoil

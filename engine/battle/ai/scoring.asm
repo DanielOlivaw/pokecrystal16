@@ -2383,6 +2383,12 @@ AI_Smart_RapidSpin:
 	ld a, [wEnemyScreens]
 	bit SCREENS_SPIKES, a
 	ret z
+	bit SCREENS_TOXIC_SPIKES, a
+	ret z
+	bit SCREENS_STEALTH_ROCK, a
+	ret z
+	bit SCREENS_STICKY_WEB, a
+	ret z
 
 .asm_39097
 	call AI_80_20
