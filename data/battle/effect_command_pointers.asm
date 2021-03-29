@@ -155,7 +155,7 @@ BattleCommandPointers:
 	dw BattleCommand_Rage
 	dw BattleCommand_DoubleFlyingDamage
 	dw BattleCommand_DoubleUndergroundDamage
-	dw BattleCommand_MirrorCoat
+	; dw BattleCommand_MirrorCoat
 	dw BattleCommand_CheckFutureSight
 	dw BattleCommand_FutureSight
 	dw BattleCommand_DoubleMinimizeDamage
@@ -188,7 +188,6 @@ BattleCommandPointers:
 	dw BattleCommand_SuckerPunch
 	dw BattleCommand_Hail
 	dw BattleCommand_BlizzardAccuracy
-	dw BattleCommand_MetalBurst
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
 	dw BattleCommand_Round
@@ -198,3 +197,5 @@ BattleCommandPointers:
 	dw BattleCommand_CalmMind
 	dw BattleCommand_KnockOff
 	dw BattleCommand_BulkUp
+	dw BattleCommand_Overheat
+	dw BattleCommand_Hex

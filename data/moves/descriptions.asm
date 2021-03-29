@@ -334,6 +334,14 @@ MoveDescriptions1:
 	dw ToxicSpikesDescription
 	dw StealthRockDescription
 	dw StickyWebDescription
+	dw PsyshockDescription
+	dw PsystrikeDescription
+	dw FoulPlayDescription
+	dw LeafTornadoDescription
+	dw LeafStormDescription
+	dw LeafBladeDescription
+	dw HexDescription
+	dw SludgeWaveDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1645,4 +1653,33 @@ StealthRockDescription:
 StickyWebDescription:
 	db   "Slows foes when"
 	next "they switch in.@"
+
+PsyshockDescription:
+PsystrikeDescription:
+	db   "A move that does"
+	next "physical damage.@"
+
+FoulPlayDescription:
+	db   "Turns the target's"
+	next "power against it.@"
+
+LeafTornadoDescription:
+	db   "An attack that may"
+	next "reduce accuracy.@"
+
+LeafStormDescription:
+	db   "Sharply reduces"
+	next "user's SPCL.ATK.@"
+
+LeafBladeDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+HexDescription:
+	db   "Stronger against"
+	next "foes with status.@"
+
+SludgeWaveDescription:
+	db   "An attack that may"
+	next "poison the foe.@"
 		;"123456789123456789"

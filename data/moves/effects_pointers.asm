@@ -144,7 +144,7 @@ MoveEffectsPointers:
 	; dw FakeOut
 	dw BellyDrum
 	dw PsychUp
-	dw MirrorCoat
+	dw Counter ;MirrorCoat
 	dw SkullBash
 	dw Twister
 	dw Earthquake
@@ -167,7 +167,7 @@ MoveEffectsPointers:
 	dw AttackDown
 	dw Hail
 	dw Blizzard
-	dw MetalBurst
+	dw Counter
 	dw Flatter
 	dw Superpower
 	dw CosmicPower
@@ -187,3 +187,7 @@ MoveEffectsPointers:
 	dw Spikes
 	dw Spikes
 	dw Spikes
+	dw NormalHit
+	dw NormalHit
+	dw DracoMeteor
+	dw Hex

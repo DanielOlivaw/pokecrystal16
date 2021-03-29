@@ -346,4 +346,12 @@ Moves1:
 	move EFFECT_TOXIC_SPIKES,        0, POISON,   STATUS,   100, 20,   0 ; TOXIC_SPIKES
 	move EFFECT_STEALTH_ROCK,        0, ROCK,     STATUS,   100, 20,   0 ; STEALTH_ROCK
 	move EFFECT_STICKY_WEB,          0, BUG,      STATUS,   100, 10,   0 ; STICKY_WEB
+	move EFFECT_PSYSHOCK,           80, PSYCHIC,  SPECIAL,  100, 10,   0 ; PSYSHOCK
+	move EFFECT_PSYSHOCK,          100, PSYCHIC,  SPECIAL,  100, 10,   0 ; PSYSTRIKE
+	move EFFECT_FOUL_PLAY,          95, DARK,     PHYSICAL, 100, 15,   0 ; FOUL_PLAY
+	move EFFECT_ACCURACY_DOWN_HIT,  65, GRASS,    SPECIAL,   90, 10,  50 ; LEAF_TORNADO
+	move EFFECT_DRACO_METEOR,      130, GRASS,    SPECIAL,   90,  5,   0 ; LEAF_STORM
+	move EFFECT_NORMAL_HIT,         90, GRASS,    PHYSICAL, 100, 15,   0 ; LEAF_BLADE
+	move EFFECT_HEX,                65, GHOST,    SPECIAL,  100, 10,   0 ; HEX
+	move EFFECT_POISON_HIT,         95, POISON,   SPECIAL,  100, 10,  10 ; SLUDGE_WAVE
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

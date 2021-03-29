@@ -356,6 +356,14 @@ BattleAnimations::
 	dw BattleAnim_ToxicSpikes
 	dw BattleAnim_StealthRock
 	dw BattleAnim_StickyWeb
+	dw BattleAnim_Psyshock
+	dw BattleAnim_Psystrike
+	dw BattleAnim_FoulPlay
+	dw BattleAnim_LeafTornado
+	dw BattleAnim_LeafStorm
+	dw BattleAnim_LeafBlade
+	dw BattleAnim_Hex
+	dw BattleAnim_SludgeWave
 	
 	dw BattleAnim_SweetScent2
 
@@ -739,6 +747,13 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_LeafTornado:
+BattleAnim_LeafStorm:
+BattleAnim_LeafBlade:
+BattleAnim_Hex:
+BattleAnim_FoulPlay:
+BattleAnim_Psyshock:
+BattleAnim_Psystrike:
 BattleAnim_StealthRock:
 BattleAnim_Eruption:
 BattleAnim_WaterSpout:
@@ -3168,6 +3183,7 @@ BattleAnim_Toxic:
 	anim_wait 56
 	anim_ret
 
+BattleAnim_SludgeWave:
 BattleAnim_Sludge:
 	anim_1gfx ANIM_GFX_POISON
 	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0

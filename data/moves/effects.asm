@@ -1973,18 +1973,18 @@ PsychUp:
 	psychup
 	endmove
 
-MirrorCoat:
-	checkobedience
-	usedmovetext
-	doturn
-	mirrorcoat
-	moveanim
-	failuretext
-	applydamage
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
+; MirrorCoat:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; mirrorcoat
+	; moveanim
+	; failuretext
+	; applydamage
+	; checkfaint
+	; buildopponentrage
+	; kingsrock
+	; endmove
 
 SkullBash:
 	checkcharge
@@ -2376,19 +2376,6 @@ SuckerPunch:
 	kingsrock
 	endmove
 
-MetalBurst:
-	checkobedience
-	usedmovetext
-	doturn
-	metalburst
-	moveanim
-	failuretext
-	applydamage
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
 Flatter:
 	checkobedience
 	usedmovetext
@@ -2541,4 +2528,46 @@ BulkUp:
 	usedmovetext
 	doturn
 	bulkup
+	endmove
+
+DracoMeteor:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	overheat
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+	
+Hex:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	hex
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove

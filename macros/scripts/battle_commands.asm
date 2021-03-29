@@ -156,7 +156,7 @@ ENDM
 	command rage                    ; 95
 	command doubleflyingdamage      ; 96
 	command doubleundergrounddamage ; 97
-	command mirrorcoat              ; 98
+	; command mirrorcoat              ; 98
 	command checkfuturesight        ; 99
 	command futuresight             ; 9a
 	command doubleminimizedamage    ; 9b
@@ -189,16 +189,17 @@ ENDM
 	command suckerpunch             ; b6
 	command starthail               ; b7
 	command blizzardaccuracy        ; b8
-	command metalburst              ; b9
-	command superpower              ; ba
-	command cosmicpower             ; bb
-	command roundcheck              ; bc
-	command honeclaws               ; bd
-	command closecombat             ; be
-	command burnup                  ; bf
-	command calmmind                ; c0
-	command knockoff                ; c1
-	command bulkup                  ; c2
+	command superpower              ; b9
+	command cosmicpower             ; ba
+	command roundcheck              ; bb
+	command honeclaws               ; bc
+	command closecombat             ; bd
+	command burnup                  ; be
+	command calmmind                ; bf
+	command knockoff                ; c0
+	command bulkup                  ; c1
+	command overheat                ; c2
+	command hex                     ; c3
 
 	enum_start $fe
 	command endturn                 ; fe

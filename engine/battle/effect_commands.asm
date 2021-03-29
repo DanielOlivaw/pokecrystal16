@@ -2816,6 +2816,12 @@ PlayerAttackDamage:
 	rl b
 
 .physicalcrit
+; Foul Play uses the target's attack stat instead of the user's.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FOUL_PLAY
+	jr z, .foul_play
+
 	ld hl, wBattleMonAttack
 	call CheckDamageStatsCritical
 	jr c, .thickclub
@@ -2828,7 +2834,17 @@ PlayerAttackDamage:
 	jr .thickclub
 
 .special
+; Psyshock is a special move, but targets the foe's defense stat.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
+	jr nz, .get_special_defense
+	ld hl, wEnemyMonDefense
+	jr .psyshock_done
+
+.get_special_defense
 	ld hl, wEnemyMonSpclDef
+.psyshock_done
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2872,6 +2888,18 @@ PlayerAttackDamage:
 	ld a, 1
 	and a
 	ret
+
+.foul_play
+	ld hl, wEnemyMonAttack
+	call CheckDamageStatsCritical
+	jr c, .thickclub
+
+	ld hl, wEnemyDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wEnemyAttack
+	jr .thickclub
 
 TruncateHL_BC:
 .loop
@@ -3086,6 +3114,12 @@ EnemyAttackDamage:
 	rl b
 
 .physicalcrit
+; Foul Play uses the target's attack stat instead of the user's.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FOUL_PLAY
+	jr z, .foul_play
+
 	ld hl, wEnemyMonAttack
 	call CheckDamageStatsCritical
 	jr c, .thickclub
@@ -3098,7 +3132,17 @@ EnemyAttackDamage:
 	jr .thickclub
 
 .Special:
+; Psyshock is a special move, but targets the player's defense stat.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
+	jr nz, .get_special_defense
+	ld hl, wBattleMonDefense
+	jr .psyshock_done
+
+.get_special_defense
 	ld hl, wBattleMonSpclDef
+.psyshock_done
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -3139,6 +3183,18 @@ EnemyAttackDamage:
 	ld a, 1
 	and a
 	ret
+
+.foul_play
+	ld hl, wBattleMonAttack
+	call CheckDamageStatsCritical
+	jr c, .thickclub
+
+	ld hl, wPlayerDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wPlayerAttack
+	jr .thickclub
 
 INCLUDE "engine/battle/move_effects/beat_up.asm"
 
@@ -3620,8 +3676,6 @@ INCLUDE "data/moves/flail_reversal_power.asm"
 INCLUDE "data/moves/eruption_water_spout_power.asm"
 
 INCLUDE "data/moves/wring_out_power.asm"
-
-INCLUDE "engine/battle/move_effects/counter.asm"
 
 INCLUDE "engine/battle/move_effects/encore.asm"
 
@@ -6959,6 +7013,8 @@ INCLUDE "engine/battle/move_effects/present.asm"
 
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
+INCLUDE "engine/battle/move_effects/hex.asm"
+
 BattleCommand_Selfdestruct:
 	farcall SelfdestructEffect
 	ret
@@ -7007,8 +7063,8 @@ BattleCommand_Hail:
 	farcall HailEffect
 	ret
 
-BattleCommand_MetalBurst:
-	farcall MetalBurstEffect
+BattleCommand_Counter:
+	farcall CounterEffect
 	ret
 
 BattleCommand_Round:
@@ -7153,8 +7209,6 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
 INCLUDE "engine/battle/move_effects/psych_up.asm"
-
-INCLUDE "engine/battle/move_effects/mirror_coat.asm"
 
 BattleCommand_DoubleMinimizeDamage:
 ; doubleminimizedamage

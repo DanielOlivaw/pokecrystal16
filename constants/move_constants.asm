@@ -335,6 +335,14 @@
 	const TOXIC_SPIKES
 	const STEALTH_ROCK
 	const STICKY_WEB
+	const PSYSHOCK
+	const PSYSTRIKE
+	const FOUL_PLAY
+	const LEAF_TORNADO
+	const LEAF_STORM
+	const LEAF_BLADE
+	const HEX
+	const SLUDGE_WAVE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

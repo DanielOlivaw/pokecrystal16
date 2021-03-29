@@ -134,7 +134,6 @@ TorchicEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, COMBUSKEN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, GROWL
 	db 0 ; no more level-up moves
 
 CombuskenEvosAttacks:
