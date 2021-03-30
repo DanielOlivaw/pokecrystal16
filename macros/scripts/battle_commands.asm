@@ -200,6 +200,11 @@ ENDM
 	command bulkup                  ; c1
 	command overheat                ; c2
 	command hex                     ; c3
+	command reflecttype             ; c4
+	command brine                   ; c5
+	command venomdrench             ; c6
+	command venomdrenchmessage      ; c7
+	command payback                 ; c8
 
 	enum_start $fe
 	command endturn                 ; fe

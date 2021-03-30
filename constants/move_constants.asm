@@ -343,6 +343,24 @@
 	const LEAF_BLADE
 	const HEX
 	const SLUDGE_WAVE
+	const REFLECT_TYPE
+	const ROCK_POLISH
+	const BULLDOZE
+	const ROCK_BLAST
+	const STONE_EDGE
+	const STEAMROLLER
+	const FLAME_CHARGE
+	const SMART_STRIKE
+	const SLACK_OFF
+	const AERIAL_ACE
+	const BRAVE_BIRD
+	const BRINE
+	const MUD_BOMB
+	const GUNK_SHOT
+	const VENOM_DRENCH
+	const RAZOR_SHELL
+	const PAYBACK
+	const DARK_PULSE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

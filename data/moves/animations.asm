@@ -364,6 +364,24 @@ BattleAnimations::
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_Hex
 	dw BattleAnim_SludgeWave
+	dw BattleAnim_ReflectType
+	dw BattleAnim_RockPolish
+	dw BattleAnim_Bulldoze
+	dw BattleAnim_RockBlast
+	dw BattleAnim_StoneEdge
+	dw BattleAnim_Steamroller
+	dw BattleAnim_FlameCharge
+	dw BattleAnim_SmartStrike
+	dw BattleAnim_SlackOff
+	dw BattleAnim_AerialAce
+	dw BattleAnim_BraveBird
+	dw BattleAnim_Brine
+	dw BattleAnim_MudBomb
+	dw BattleAnim_GunkShot
+	dw BattleAnim_VenomDrench
+	dw BattleAnim_RazorShell
+	dw BattleAnim_Payback
+	dw BattleAnim_DarkPulse
 	
 	dw BattleAnim_SweetScent2
 
@@ -747,6 +765,24 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DarkPulse:
+BattleAnim_Payback:
+BattleAnim_FlameCharge:
+BattleAnim_SmartStrike:
+BattleAnim_SlackOff:
+BattleAnim_AerialAce:
+BattleAnim_BraveBird:
+BattleAnim_Brine:
+BattleAnim_MudBomb:
+BattleAnim_GunkShot:
+BattleAnim_VenomDrench:
+BattleAnim_RazorShell:
+BattleAnim_ReflectType:
+BattleAnim_RockPolish:
+BattleAnim_Bulldoze:
+BattleAnim_RockBlast:
+BattleAnim_StoneEdge:
+BattleAnim_Steamroller:
 BattleAnim_LeafTornado:
 BattleAnim_LeafStorm:
 BattleAnim_LeafBlade:

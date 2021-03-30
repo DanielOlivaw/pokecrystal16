@@ -199,3 +199,8 @@ BattleCommandPointers:
 	dw BattleCommand_BulkUp
 	dw BattleCommand_Overheat
 	dw BattleCommand_Hex
+	dw BattleCommand_ReflectType
+	dw BattleCommand_Brine
+	dw BattleCommand_VenomDrench
+	dw BattleCommand_VenomDrenchMessage
+	dw BattleCommand_Payback

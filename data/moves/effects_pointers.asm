@@ -183,6 +183,7 @@ MoveEffectsPointers:
 	dw KnockOff
 	dw BulkUp
 	dw HPBasedDamage
+	dw Eruption
 	dw HPBasedDamage
 	dw Spikes
 	dw Spikes
@@ -191,3 +192,8 @@ MoveEffectsPointers:
 	dw NormalHit
 	dw DracoMeteor
 	dw Hex
+	dw ReflectType
+	dw FlameCharge
+	dw Brine
+	dw VenomDrench
+	dw Payback

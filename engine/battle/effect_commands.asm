@@ -1681,6 +1681,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_PLAY_NICE
 	ret z
+	cp EFFECT_REFLECT_TYPE
+	ret z
 
 	call .StatModifiers
 
@@ -4853,9 +4855,9 @@ BattleCommand_EvasionDown2:
 
 BattleCommand_StatDown:
 ; statdown
-
 	ld [wLoweredStat], a
 
+StatDownFar:
 	call CheckMist
 	jp nz, .Mist
 
@@ -5112,6 +5114,11 @@ BattleCommand_StatDownFailText:
 	ld hl, WontDropAnymoreText
 	jp StdBattleTextbox
 
+GetLoweredStatNameFar:
+	ld a, [wLoweredStat]
+	and $f
+	ld b, a
+	inc b
 GetStatName:
 	ld hl, StatNames
 	ld c, "@"
@@ -7077,6 +7084,26 @@ BattleCommand_BurnUp:
 
 BattleCommand_KnockOff:
 	farcall KnockOffEffect
+	ret
+
+BattleCommand_ReflectType:
+	farcall ReflectTypeEffect
+	ret
+
+BattleCommand_Brine:
+	farcall BrineEffect
+	ret
+
+BattleCommand_VenomDrench:
+	farcall VenomDrenchEffect
+	ret
+
+BattleCommand_VenomDrenchMessage:
+	farcall VenomDrenchMessage
+	ret
+
+BattleCommand_Payback:
+	farcall PaybackEffect
 	ret
 
 SafeCheckSafeguard:

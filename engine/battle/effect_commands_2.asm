@@ -43,3 +43,11 @@ INCLUDE "engine/battle/move_effects/round.asm"
 INCLUDE "engine/battle/move_effects/burn_up.asm"
 
 INCLUDE "engine/battle/move_effects/knock_off.asm"
+
+INCLUDE "engine/battle/move_effects/reflect_type.asm"
+
+INCLUDE "engine/battle/move_effects/brine.asm"
+
+INCLUDE "engine/battle/move_effects/venom_drench.asm"
+
+INCLUDE "engine/battle/move_effects/payback.asm"

@@ -342,6 +342,23 @@ MoveDescriptions1:
 	dw LeafBladeDescription
 	dw HexDescription
 	dw SludgeWaveDescription
+	dw ReflectTypeDescription
+	dw RockPolishDescription
+	dw BulldozeDescription
+	dw RockBlastDescription
+	dw StoneEdgeDescription
+	dw SteamrollerDescription
+	dw FlameChargeDescription
+	dw SmartStrikeDescription
+	dw SlackOffDescription
+	dw AerialAceDescription
+	dw BraveBirdDescription
+	dw BrineDescription
+	dw MudBombDescription
+	dw GunkShotDescription
+	dw VenomDrenchDescription
+	dw RazorShellDescription
+	dw PaybackDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -548,7 +565,7 @@ DisableDescription:
 
 AcidDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower SPCL.DEF.@"
 
 EmberDescription:
 	db   "An attack that may"
@@ -764,7 +781,7 @@ DoubleTeamDescription:
 
 RecoverDescription:
 	db   "Restores HP by 1/2"
-	next "the max HP.@"
+	next "the user's max HP.@"
 
 HardenDescription:
 	db   "Raises the user's"
@@ -1176,7 +1193,7 @@ SwaggerDescription:
 
 MilkDrinkDescription:
 	db   "Restores HP by 1/2"
-	next "the max HP.@"
+	next "the user's max HP.@"
 
 SparkDescription:
 	db   "An attack that may"
@@ -1484,7 +1501,7 @@ CharmVoiceDescription:
 
 LifeDewDescription:
 	db   "Restores HP by 1/2"
-	next "the max HP.@"
+	next "the user's max HP.@"
 
 MeteorMashDescription:
 	db   "An attack that may"
@@ -1682,4 +1699,80 @@ HexDescription:
 SludgeWaveDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
+
+ReflectTypeDescription:
+	db   "The user takes on"
+	next "the target's type.@"
+
+RockPolishDescription:
+	db   "Sharply increases"
+	next "the user's SPEED.@"
+
+BulldozeDescription:
+	db   "A stomping attack"
+	next "that lowers SPEED.@"
+
+RockBlastDescription:
+	db   "Hurls 2-5 rocks in"
+	next "a row at the foe.@"
+
+StoneEdgeDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+SteamrollerDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+FlameChargeDescription:
+	db   "A fiery tackle"
+	next "that raises SPEED.@"
+
+SmartStrikeDescription:
+	db   "An attack that"
+	next "never misses.@"
+
+SlackOffDescription:
+	db   "Restores HP by 1/2"
+	next "the user's max HP.@"
+
+AerialAceDescription:
+	db   "An attack that"
+	next "never misses.@"
+
+BraveBirdDescription:
+	db   "A charge that also"
+	next "hurts the user.@"
+
+BrineDescription:
+	db   "Stronger if foe"
+	next "is below 1/2 HP.@"
+
+MudBombDescription:
+	db   "An attack that may"
+	next "reduce accuracy.@"
+
+GunkShotDescription:
+	db   "An attack that may"
+	next "poison the foe.@"
+
+VenomDrenchDescription:
+	db   "Lowers the stats"
+	next "of a poisoned foe.@"
+
+RazorShellDescription:
+	db   "An attack that may"
+	next "lower DEFENSE.@"
+
+PaybackDescription:
+	db   "Stronger if the"
+	next "user moves last.@"
+
+PaybackDescription:
+	db   "Stronger if the"
+	next "user moves last.@"
+
+DarkPulseDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
 		;"123456789123456789"

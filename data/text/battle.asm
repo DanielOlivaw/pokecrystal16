@@ -836,6 +836,14 @@ WontDropAnymoreText:
 	cont "go any lower!"
 	prompt
 
+StatsWontDropAnymoreText:
+	text "<TARGET>'s"
+	line "stats won't go any"
+	cont "lower!"
+	prompt
+
+		;"123456789123456789"
+
 FledFromBattleText::
 	text "<USER>"
 	line "fled from battle!"
@@ -953,6 +961,15 @@ BurnedItselfOutText:
 	text "<USER>"
 	line "burned itself out!"
 	prompt
+
+ReflectTypeText:
+	text "<USER>"
+	line "changed its type"
+	para "to match"
+	line "<TARGET>'s!"
+	prompt
+
+		;"123456789123456789"
 
 EliminatedStatsText:
 	text "All stat changes"
