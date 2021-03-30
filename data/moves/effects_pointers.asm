@@ -198,3 +198,7 @@ MoveEffectsPointers:
 	dw VenomDrench
 	dw Payback
 	dw CureStatusHit
+	dw Trick
+	dw HammerArm
+	dw ResetStatsHit
+	dw MistyTerrain

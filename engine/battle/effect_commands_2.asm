@@ -53,3 +53,9 @@ INCLUDE "engine/battle/move_effects/venom_drench.asm"
 INCLUDE "engine/battle/move_effects/payback.asm"
 
 INCLUDE "engine/battle/move_effects/smelling_salts_wake_up_slap.asm"
+
+INCLUDE "engine/battle/move_effects/trick.asm"
+
+INCLUDE "engine/battle/move_effects/reset_stats_target.asm"
+
+INCLUDE "engine/battle/move_effects/misty_terrain.asm"

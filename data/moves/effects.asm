@@ -2784,3 +2784,62 @@ CureStatusHit:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Trick:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	trick
+	endmove
+
+HammerArm:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	hammerarm
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+ResetStatsHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	resetstatstarget
+	kingsrock
+	endmove
+
+MistyTerrain:
+	checkobedience
+	usedmovetext
+	doturn
+	startfog
+	endmove
+

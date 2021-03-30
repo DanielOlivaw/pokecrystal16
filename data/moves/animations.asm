@@ -384,6 +384,16 @@ BattleAnimations::
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_SandTomb
 	dw BattleAnim_WakeUpSlap
+	dw BattleAnim_Trick
+	dw BattleAnim_Switcheroo
+	dw BattleAnim_MudShot
+	dw BattleAnim_HammerArm
+	dw BattleAnim_BulletSeed
+	dw BattleAnim_DragonHammer
+	dw BattleAnim_WoodHammer
+	dw BattleAnim_ClearSmog
+	dw BattleAnim_MistyTerrain
+	dw BattleAnim_StrangeSteam
 	
 	dw BattleAnim_SweetScent2
 
@@ -767,6 +777,16 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_StrangeSteam:
+BattleAnim_MistyTerrain:
+BattleAnim_MudShot:
+BattleAnim_HammerArm:
+BattleAnim_BulletSeed:
+BattleAnim_DragonHammer:
+BattleAnim_WoodHammer:
+BattleAnim_ClearSmog:
+BattleAnim_Trick:
+BattleAnim_Switcheroo:
 BattleAnim_WakeUpSlap:
 BattleAnim_SandTomb:
 BattleAnim_DarkPulse:

@@ -987,6 +987,12 @@ EliminatedStatsText:
 	line "were eliminated!"
 	prompt
 
+EliminatedTargetStatsText:
+	text "<TARGET>'s"
+	line "stat changes were"
+	cont "eliminated!"
+	prompt
+
 TransformedText:
 	text "<USER>"
 	line "TRANSFORMED into"
@@ -1113,9 +1119,31 @@ StoleText:
 	cont "from its foe!"
 	prompt
 
+TrickText:
+	text "<USER>"
+	line "switched items"
+	cont "with its target!"
+		;"123456789123456789"
+	prompt
+
+TrickUserObtainedText:
+	text "<USER>"
+	line "obtained one"
+	cont "@"
+	text_ram wStringBuffer1
+	text "."
+	prompt
+
+TrickTargetObtainedText:
+	text "<TARGET>"
+	line "obtained one"
+	cont "@"
+	text_ram wStringBuffer1
+	text "."
+	prompt
+
 KnockedOffText:
 	text "<USER>"
-		;"123456789123456789"
 	line "knocked off"
 	para "<TARGET>'s"
 	line "@"
@@ -1298,6 +1326,11 @@ SunGotBrightText:
 HailStartedText:
 	text "It started to"
 	line "hail!"
+	prompt
+
+MistSwirlsText:
+	text "Mist swirls around"
+	line "the battlefield!"
 	prompt
 
 AutomaticRainText:

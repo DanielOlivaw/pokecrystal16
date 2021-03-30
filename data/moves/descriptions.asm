@@ -362,6 +362,16 @@ MoveDescriptions1:
 	dw DarkPulseDescription
 	dw SandTombDescription
 	dw WakeUpSlapDescription
+	dw TrickDescription
+	dw SwitcherooDescription
+	dw MudShotDescription
+	dw HammerArmDescription
+	dw BulletSeedDescription
+	dw DragonHammerDescription
+	dw WoodHammerDescription
+	dw ClearSmogDescription
+	dw MistyTerrainDescription
+	dw StrangeSteamDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1167,8 +1177,8 @@ OutrageDescription:
 	next "and confuses user.@"
 
 SandstormDescription:
-	db   "Inflicts damage"
-	next "every turn.@"
+	db   "Sand inflicts"
+	next "damage every turn.@"
 
 GigaDrainDescription:
 	db   "Steals 1/2 of the"
@@ -1782,4 +1792,44 @@ SandTombDescription:
 WakeUpSlapDescription:
 	db   "Highly damages and"
 	next "wakes a sleeper.@"
+
+TrickDescription:
+	db   "Tricks the foe in-"
+	next "to trading items.@"
+
+SwitcherooDescription:
+	db   "Tricks the foe in-"
+	next "to trading items.@"
+
+MudShotDescription:
+	db   "A blob of mud that"
+	next "lowers SPEED.@"
+
+HammerArmDescription:
+	db   "Lowers the user's"
+	next "SPEED.@"
+
+BulletSeedDescription:
+	db   "Shoots seeds that"
+	next "strike 2-5 times.@"
+
+DragonHammerDescription:
+	db   "Hits with the body"
+	next "like a hammer.@"
+
+WoodHammerDescription:
+	db   "A slam that also"
+	next "hurts the user.@"
+
+ClearSmogDescription:
+	db   "Eliminates foe's"
+	next "stat changes.@"
+
+MistyTerrainDescription:
+	db   "Prevents status"
+	next "for 5 turns.@"
+
+StrangeSteamDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
 		;"123456789123456789"

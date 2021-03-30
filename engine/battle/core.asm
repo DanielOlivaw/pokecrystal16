@@ -1837,8 +1837,8 @@ HandleWeather:
 	jp z, .AnimRain
 	cp WEATHER_SUN
 	jp z, .AnimSun
-	; cp WEATHER_FOG
-	; jp z, .AnimFog
+	cp WEATHER_FOG
+	jp z, .AnimFog
 	cp WEATHER_STORM
 	jp z, .AnimStorm
 	cp WEATHER_SANDSTORM

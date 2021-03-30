@@ -206,3 +206,7 @@ BattleCommandPointers:
 	dw BattleCommand_Payback
 	dw BattleCommand_CureStatusDoubleDamage
 	dw BattleCommand_DoCureStatus
+	dw BattleCommand_Trick
+	dw BattleCommand_HammerArm
+	dw BattleCommand_ResetStatsTarget
+	dw BattleCommand_MistyTerrain

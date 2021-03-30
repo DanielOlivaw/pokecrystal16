@@ -207,6 +207,10 @@ ENDM
 	command payback                 ; c8
 	command curestatusdoubledamage  ; c9
 	command docurestatus            ; ca
+	command trick                   ; cb
+	command hammerarm               ; cc
+	command resetstatstarget        ; cd
+	command startfog                ; ce
 
 	enum_start $fe
 	command endturn                 ; fe

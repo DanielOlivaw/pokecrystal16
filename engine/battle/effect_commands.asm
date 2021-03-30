@@ -1683,6 +1683,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_REFLECT_TYPE
 	ret z
+	cp EFFECT_RESET_STATS_HIT
+	ret z
 
 	call .StatModifiers
 
@@ -6935,11 +6937,11 @@ BattleCommand_ArenaTrap:
 	
 ; Doesn't work on ghost-types.
 
-	ld de, wBattleMonType1
+	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .CheckGhost
-	ld de, wEnemyMonType1
+	ld de, wBattleMonType1
 .CheckGhost:
 	ld a, [de]
 	cp GHOST
@@ -7113,6 +7115,18 @@ BattleCommand_CureStatusDoubleDamage:
 
 BattleCommand_DoCureStatus:
 	farcall DoCureStatusHit
+	ret
+
+BattleCommand_Trick:
+	farcall TrickEffect
+	ret
+
+BattleCommand_ResetStatsTarget:
+	farcall ResetStatsTargetEffect
+	ret
+
+BattleCommand_MistyTerrain:
+	farcall MistyTerrainEffect
 	ret
 
 SafeCheckSafeguard:
