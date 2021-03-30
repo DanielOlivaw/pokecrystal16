@@ -51,3 +51,5 @@ INCLUDE "engine/battle/move_effects/brine.asm"
 INCLUDE "engine/battle/move_effects/venom_drench.asm"
 
 INCLUDE "engine/battle/move_effects/payback.asm"
+
+INCLUDE "engine/battle/move_effects/smelling_salts_wake_up_slap.asm"

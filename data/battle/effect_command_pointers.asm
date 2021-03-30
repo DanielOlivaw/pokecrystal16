@@ -204,3 +204,5 @@ BattleCommandPointers:
 	dw BattleCommand_VenomDrench
 	dw BattleCommand_VenomDrenchMessage
 	dw BattleCommand_Payback
+	dw BattleCommand_CureStatusDoubleDamage
+	dw BattleCommand_DoCureStatus

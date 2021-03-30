@@ -2762,3 +2762,25 @@ Payback:
 	buildopponentrage
 	kingsrock
 	endmove
+	
+CureStatusHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	curestatusdoubledamage
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	docurestatus
+	buildopponentrage
+	kingsrock
+	endmove

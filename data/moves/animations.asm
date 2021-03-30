@@ -382,6 +382,8 @@ BattleAnimations::
 	dw BattleAnim_RazorShell
 	dw BattleAnim_Payback
 	dw BattleAnim_DarkPulse
+	dw BattleAnim_SandTomb
+	dw BattleAnim_WakeUpSlap
 	
 	dw BattleAnim_SweetScent2
 
@@ -765,6 +767,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_WakeUpSlap:
+BattleAnim_SandTomb:
 BattleAnim_DarkPulse:
 BattleAnim_Payback:
 BattleAnim_FlameCharge:

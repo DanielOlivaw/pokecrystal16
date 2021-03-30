@@ -197,3 +197,4 @@ MoveEffectsPointers:
 	dw Brine
 	dw VenomDrench
 	dw Payback
+	dw CureStatusHit

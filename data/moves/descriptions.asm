@@ -359,6 +359,9 @@ MoveDescriptions1:
 	dw VenomDrenchDescription
 	dw RazorShellDescription
 	dw PaybackDescription
+	dw DarkPulseDescription
+	dw SandTombDescription
+	dw WakeUpSlapDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1768,11 +1771,15 @@ PaybackDescription:
 	db   "Stronger if the"
 	next "user moves last.@"
 
-PaybackDescription:
-	db   "Stronger if the"
-	next "user moves last.@"
-
 DarkPulseDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
+
+SandTombDescription:
+	db   "Traps the foe for"
+	next "2-5 turns.@"
+
+WakeUpSlapDescription:
+	db   "Highly damages and"
+	next "wakes a sleeper.@"
 		;"123456789123456789"

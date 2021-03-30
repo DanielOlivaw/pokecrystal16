@@ -361,6 +361,8 @@
 	const RAZOR_SHELL
 	const PAYBACK
 	const DARK_PULSE
+	const SAND_TOMB
+	const WAKE_UP_SLAP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

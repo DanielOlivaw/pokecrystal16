@@ -27,4 +27,3 @@ ReflectTypeEffect:
 	farcall AnimateCurrentMove
 	ld hl, ReflectTypeText
 	jp StdBattleTextbox
-	

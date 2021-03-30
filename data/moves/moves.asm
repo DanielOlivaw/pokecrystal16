@@ -372,4 +372,6 @@ Moves1:
 	move EFFECT_DEFENSE_DOWN_HIT,   75, WATER,    PHYSICAL,  95, 10,  50 ; RAZOR_SHELL
 	move EFFECT_PAYBACK,            50, DARK,     PHYSICAL, 100, 10,   0 ; PAYBACK
 	move EFFECT_FLINCH_HIT,         80, DARK,     SPECIAL,  100, 15,  20 ; DARK_PULSE
+	move EFFECT_TRAP_TARGET,        35, GROUND,   PHYSICAL,  85, 15,   0 ; SAND_TOMB
+	move EFFECT_CURE_STATUS_HIT,    70, FIGHTING, PHYSICAL, 100, 10,   0 ; WAKE_UP_SLAP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

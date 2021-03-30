@@ -205,6 +205,8 @@ ENDM
 	command venomdrench             ; c6
 	command venomdrenchmessage      ; c7
 	command payback                 ; c8
+	command curestatusdoubledamage  ; c9
+	command docurestatus            ; ca
 
 	enum_start $fe
 	command endturn                 ; fe

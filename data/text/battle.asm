@@ -443,6 +443,11 @@ WokeUpText:
 	line "woke up!"
 	prompt
 
+TargetWokeUpText:
+	text "<TARGET>"
+	line "woke up!"
+	prompt
+
 FrozenSolidText:
 	text "<USER>"
 	line "is frozen solid!"
@@ -531,6 +536,12 @@ FireSpinTrapText:
 	text "<TARGET>"
 	line "became trapped in"
 	cont "the vortex!"
+	prompt
+
+SandTombTrapText:
+	text "<TARGET>"
+	line "became trapped by"
+	cont "SAND TOMB!"
 	prompt
 
 WrappedByText:

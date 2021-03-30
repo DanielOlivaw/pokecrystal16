@@ -354,4 +354,6 @@ MoveNames::
 	db "RAZOR SHELL@"
 	db "PAYBACK@"
 	db "DARK PULSE@"
+	db "SAND TOMB@"
+	db "WAKE-UP SLAP@"
 	  ;"123456123456@"
