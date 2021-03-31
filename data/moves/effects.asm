@@ -1163,27 +1163,6 @@ TriAttack:
 	kingsrock
 	tristatuschance
 	endmove
-	
-Cut:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	cutgrass
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
 
 Toxic:
 DoPoison:
@@ -1394,7 +1373,7 @@ BodySlam:
 	damagecalc
 	stab
 	damagevariation
-	doubleminimizedamage
+	conditionalboost ;doubleminimizedamage
 	checkhit
 	effectchance
 	moveanim
@@ -1917,7 +1896,7 @@ Magnitude:
 	stab
 	damagevariation
 	checkhit
-	doubleundergrounddamage
+	conditionalboost ;doubleundergrounddamage
 	moveanim
 	failuretext
 	applydamage
@@ -2126,7 +2105,7 @@ Twister:
 	damagecalc
 	stab
 	damagevariation
-	doubleflyingdamage
+	conditionalboost ;doubleflyingdamage
 	checkhit
 	effectchance
 	moveanim
@@ -2148,7 +2127,7 @@ Earthquake:
 	damagecalc
 	stab
 	damagevariation
-	doubleundergrounddamage
+	conditionalboost ;doubleundergrounddamage
 	checkhit
 	effectchance
 	moveanim
@@ -2182,27 +2161,6 @@ FutureSight:
 	buildopponentrage
 	endmove
 
-Gust:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	doubleflyingdamage
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
 Stomp:
 	checkobedience
 	usedmovetext
@@ -2212,7 +2170,7 @@ Stomp:
 	damagecalc
 	stab
 	damagevariation
-	doubleminimizedamage
+	conditionalboost ;doubleminimizedamage
 	checkhit
 	effectchance
 	moveanim
@@ -2440,7 +2398,7 @@ QuiverDance:
 	quiverdance
 	endmove
 	
-Venoshock:
+ConditionalBoost:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2449,7 +2407,7 @@ Venoshock:
 	damagecalc
 	stab
 	damagevariation
-	venoshock
+	conditionalboost
 	checkhit
 	moveanim
 	failuretext
@@ -2526,27 +2484,6 @@ CosmicPower:
 	usedmovetext
 	doturn
 	cosmicpower
-	endmove
-
-RoundMove:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	roundcheck
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
 	endmove
 
 HoneClaws:
@@ -2656,27 +2593,6 @@ DracoMeteor:
 	buildopponentrage
 	kingsrock
 	endmove
-	
-Hex:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	hex
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
 
 ReflectType:
 	checkobedience
@@ -2708,27 +2624,6 @@ FlameCharge:
 	defrostopponent
 	kingsrock
 	endmove
-	
-Brine:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	brine
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
 
 VenomDrench:
 	checkobedience
@@ -2742,27 +2637,6 @@ VenomDrench:
 	venomdrenchmessage
 	endmove
 	
-Payback:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	payback
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-	
 CureStatusHit:
 	checkobedience
 	usedmovetext
@@ -2772,7 +2646,7 @@ CureStatusHit:
 	damagecalc
 	stab
 	damagevariation
-	curestatusdoubledamage
+	conditionalboost ;curestatusdoubledamage
 	checkhit
 	moveanim
 	failuretext
@@ -2843,3 +2717,16 @@ MistyTerrain:
 	startfog
 	endmove
 
+Defog:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	evasiondown
+	lowersub
+	statdownanim
+	raisesub
+	defog
+	statdownmessage
+	statdownfailtext
+	endmove

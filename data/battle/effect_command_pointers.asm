@@ -63,7 +63,6 @@ BattleCommandPointers:
 	dw BattleCommand_Charge
 	dw BattleCommand_CheckCharge
 	dw BattleCommand_TrapTarget
-	dw BattleCommand_Cut
 	dw BattleCommand_Rampage
 	dw BattleCommand_CheckRampage
 	dw BattleCommand_ConstantDamage
@@ -153,12 +152,8 @@ BattleCommandPointers:
 	dw BattleCommand_BellyDrum
 	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
-	dw BattleCommand_DoubleFlyingDamage
-	dw BattleCommand_DoubleUndergroundDamage
-	; dw BattleCommand_MirrorCoat
 	dw BattleCommand_CheckFutureSight
 	dw BattleCommand_FutureSight
-	dw BattleCommand_DoubleMinimizeDamage
 	dw BattleCommand_SkipSunCharge
 	dw BattleCommand_ThunderAccuracy
 	dw BattleCommand_Teleport
@@ -184,13 +179,12 @@ BattleCommandPointers:
 	dw BattleCommand_ShellSmash
 	dw BattleCommand_BugBite
 	dw BattleCommand_QuiverDance
-	dw BattleCommand_Venoshock
+	dw BattleCommand_ConditionalBoost
 	dw BattleCommand_SuckerPunch
 	dw BattleCommand_Hail
 	dw BattleCommand_BlizzardAccuracy
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
-	dw BattleCommand_Round
 	dw BattleCommand_HoneClaws
 	dw BattleCommand_CloseCombat
 	dw BattleCommand_BurnUp
@@ -198,15 +192,12 @@ BattleCommandPointers:
 	dw BattleCommand_KnockOff
 	dw BattleCommand_BulkUp
 	dw BattleCommand_Overheat
-	dw BattleCommand_Hex
 	dw BattleCommand_ReflectType
-	dw BattleCommand_Brine
 	dw BattleCommand_VenomDrench
 	dw BattleCommand_VenomDrenchMessage
-	dw BattleCommand_Payback
-	dw BattleCommand_CureStatusDoubleDamage
 	dw BattleCommand_DoCureStatus
 	dw BattleCommand_Trick
 	dw BattleCommand_HammerArm
 	dw BattleCommand_ResetStatsTarget
 	dw BattleCommand_MistyTerrain
+	dw BattleCommand_Defog

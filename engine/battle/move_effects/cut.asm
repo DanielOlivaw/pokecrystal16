@@ -1,4 +1,4 @@
-CutEffect:
+BattleCommand_Cut:
 	; cut
 
 	ld de, wEnemyMonType1
@@ -21,6 +21,5 @@ CutEffect:
 	ret
 
 .grass
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage
 	

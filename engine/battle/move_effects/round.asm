@@ -1,4 +1,4 @@
-RoundEffect:
+BattleCommand_Round:
 ; round
 ; Get opponent's last move (end if none)
 	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
@@ -14,5 +14,4 @@ RoundEffect:
 	ret nz
 
 ; If so, deal double damage
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage

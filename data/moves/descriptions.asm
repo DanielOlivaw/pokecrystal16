@@ -372,6 +372,7 @@ MoveDescriptions1:
 	dw ClearSmogDescription
 	dw MistyTerrainDescription
 	dw StrangeSteamDescription
+	dw DefogDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1832,4 +1833,8 @@ MistyTerrainDescription:
 StrangeSteamDescription:
 	db   "An attack that may"
 	next "confuse the foe.@"
+
+DefogDescription:
+	db   "Strong wind blows"
+	next "away barriers.@"
 		;"123456789123456789"

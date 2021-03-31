@@ -1,4 +1,4 @@
-BrineEffect:
+BattleCommand_Brine:
 ; brine
 ; Get target's HP
 	ld de, wEnemyMonHP + 1
@@ -36,5 +36,4 @@ BrineEffect:
 	ret
 
 .doubledamage
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage

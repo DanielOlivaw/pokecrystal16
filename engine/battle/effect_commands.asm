@@ -6546,36 +6546,6 @@ EndRechargeOpp:
 
 INCLUDE "engine/battle/move_effects/rage.asm"
 
-BattleCommand_DoubleFlyingDamage:
-; doubleflyingdamage
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	call GetBattleVar
-	bit SUBSTATUS_FLYING, a
-	ret z
-	jr DoubleDamage
-
-BattleCommand_DoubleUndergroundDamage:
-; doubleundergrounddamage
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	call GetBattleVar
-	bit SUBSTATUS_UNDERGROUND, a
-	ret z
-
-	; fallthrough
-
-DoubleDamage:
-	ld hl, wCurDamage + 1
-	sla [hl]
-	dec hl
-	rl [hl]
-	jr nc, .quit
-
-	ld a, $ff
-	ld [hli], a
-	ld [hl], a
-.quit
-	ret
-
 INCLUDE "engine/battle/move_effects/mimic.asm"
 
 INCLUDE "engine/battle/move_effects/splash.asm"
@@ -7023,7 +6993,9 @@ INCLUDE "engine/battle/move_effects/present.asm"
 
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
-INCLUDE "engine/battle/move_effects/hex.asm"
+BattleCommand_ConditionalBoost:
+	farcall FindConditionalBoost
+	ret
 
 BattleCommand_Selfdestruct:
 	farcall SelfdestructEffect
@@ -7039,10 +7011,6 @@ BattleCommand_Thief:
 
 BattleCommand_Spikes:
 	farcall SpikesEffect
-	ret
-
-BattleCommand_Cut:
-	farcall CutEffect
 	ret
 
 BattleCommand_LowKick:
@@ -7061,10 +7029,6 @@ BattleCommand_QuiverDance:
 	farcall QuiverDanceEffect
 	ret
 
-BattleCommand_Venoshock:
-	farcall VenoshockEffect
-	ret
-
 BattleCommand_SuckerPunch:
 	farcall SuckerPunchEffect
 	ret
@@ -7075,10 +7039,6 @@ BattleCommand_Hail:
 
 BattleCommand_Counter:
 	farcall CounterEffect
-	ret
-
-BattleCommand_Round:
-	farcall RoundEffect
 	ret
 
 BattleCommand_BurnUp:
@@ -7093,24 +7053,12 @@ BattleCommand_ReflectType:
 	farcall ReflectTypeEffect
 	ret
 
-BattleCommand_Brine:
-	farcall BrineEffect
-	ret
-
 BattleCommand_VenomDrench:
 	farcall VenomDrenchEffect
 	ret
 
 BattleCommand_VenomDrenchMessage:
 	farcall VenomDrenchMessage
-	ret
-
-BattleCommand_Payback:
-	farcall PaybackEffect
-	ret
-
-BattleCommand_CureStatusDoubleDamage:
-	farcall CureStatusDoubleDamage
 	ret
 
 BattleCommand_DoCureStatus:
@@ -7127,6 +7075,10 @@ BattleCommand_ResetStatsTarget:
 
 BattleCommand_MistyTerrain:
 	farcall MistyTerrainEffect
+	ret
+
+BattleCommand_Defog:
+	farcall DefogEffect
 	ret
 
 SafeCheckSafeguard:
@@ -7259,28 +7211,6 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
 INCLUDE "engine/battle/move_effects/psych_up.asm"
-
-BattleCommand_DoubleMinimizeDamage:
-; doubleminimizedamage
-
-	ld hl, wEnemyMinimized
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wPlayerMinimized
-.ok
-	ld a, [hl]
-	and a
-	ret z
-	ld hl, wCurDamage + 1
-	sla [hl]
-	dec hl
-	rl [hl]
-	ret nc
-	ld a, $ff
-	ld [hli], a
-	ld [hl], a
-	ret
 
 BattleCommand_SkipSunCharge:
 ; mimicsuncharge

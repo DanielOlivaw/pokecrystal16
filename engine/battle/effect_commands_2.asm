@@ -1,3 +1,6 @@
+INCLUDE "engine/battle/move_effects/conditional_boost.asm"
+
+
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
 INCLUDE "engine/battle/move_effects/false_swipe.asm"
@@ -59,3 +62,7 @@ INCLUDE "engine/battle/move_effects/trick.asm"
 INCLUDE "engine/battle/move_effects/reset_stats_target.asm"
 
 INCLUDE "engine/battle/move_effects/misty_terrain.asm"
+
+INCLUDE "engine/battle/move_effects/defog.asm"
+
+INCLUDE "engine/battle/move_effects/hex.asm"

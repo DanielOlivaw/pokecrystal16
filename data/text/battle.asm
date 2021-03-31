@@ -1307,6 +1307,41 @@ BlewStickyWebText:
 	cont "STICKY WEB!"
 	prompt
 
+BlewReflectText:
+	text "<USER>"
+	line "blew away"
+	para "<TARGET>'s"
+	line "REFLECT!"
+	prompt
+
+BlewLightScreenText:
+	text "<USER>"
+	line "blew away"
+	para "<TARGET>'s"
+	line "LIGHT SCREEN!"
+	prompt
+
+BlewSafeguardText:
+	text "<USER>"
+	line "blew away"
+	para "<TARGET>'s"
+	line "SAFEGUARD!"
+	prompt
+
+BlewMistText:
+	text "<USER>"
+	line "blew away"
+	para "<TARGET>'s"
+	line "MIST!"
+	prompt
+
+BlewAuroraVeilText:
+	text "<USER>"
+	line "blew away"
+	para "<TARGET>'s"
+	line "AURORA VEIL!"
+	prompt
+
 AbsorbedToxicSpikesText:
 	text "<USER>"
 	line "absorbed the"

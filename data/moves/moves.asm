@@ -384,4 +384,5 @@ Moves1:
 	move EFFECT_RESET_STATS_HIT,    50, POISON,   SPECIAL,  100, 15,   0 ; CLEAR_SMOG
 	move EFFECT_MISTY_TERRAIN,       0, FAIRY,    STATUS,   100, 10,   0 ; MISTY_TERRAIN
 	move EFFECT_CONFUSE_HIT,        90, FAIRY,    SPECIAL,   95, 10,  20 ; STRANGE_STEAM
+	move EFFECT_DEFOG,               0, FLYING,   STATUS,   100, 15,   0 ; DEFOG
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

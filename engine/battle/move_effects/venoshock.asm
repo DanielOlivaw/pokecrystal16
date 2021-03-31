@@ -1,4 +1,4 @@
-VenoshockEffect:
+BattleCommand_Venoshock:
 ; venoshock
 ; get the opponent's status condition
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -8,5 +8,4 @@ VenoshockEffect:
 	and 1 << PSN
 	ret z
 ; if poisoned, deal double damage
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage

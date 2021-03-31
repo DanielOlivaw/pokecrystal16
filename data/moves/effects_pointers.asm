@@ -37,7 +37,7 @@ MoveEffectsPointers:
 	dw PayDay
 	dw Screen
 	dw TriAttack
-	dw Cut
+	dw ConditionalBoost
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
@@ -149,7 +149,7 @@ MoveEffectsPointers:
 	dw Twister
 	dw Earthquake
 	dw FutureSight
-	dw Gust
+	dw ConditionalBoost
 	dw Stomp
 	dw Solarbeam
 	dw Thunder
@@ -162,7 +162,7 @@ MoveEffectsPointers:
 	dw ThunderFang
 	dw FlareBlitz
 	dw QuiverDance
-	dw Venoshock
+	dw ConditionalBoost
 	dw SuckerPunch
 	dw AttackDown
 	dw Hail
@@ -173,7 +173,7 @@ MoveEffectsPointers:
 	dw CosmicPower
 	dw OHKOHit
 	dw Screen
-	dw RoundMove
+	dw ConditionalBoost
 	dw PoisonHit
 	dw HealBell
 	dw HoneClaws
@@ -191,14 +191,15 @@ MoveEffectsPointers:
 	dw NormalHit
 	dw NormalHit
 	dw DracoMeteor
-	dw Hex
+	dw ConditionalBoost
 	dw ReflectType
 	dw FlameCharge
-	dw Brine
+	dw ConditionalBoost
 	dw VenomDrench
-	dw Payback
+	dw ConditionalBoost
 	dw CureStatusHit
 	dw Trick
 	dw HammerArm
 	dw ResetStatsHit
 	dw MistyTerrain
+	dw Defog

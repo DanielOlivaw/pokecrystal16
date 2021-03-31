@@ -394,6 +394,7 @@ BattleAnimations::
 	dw BattleAnim_ClearSmog
 	dw BattleAnim_MistyTerrain
 	dw BattleAnim_StrangeSteam
+	dw BattleAnim_Defog
 	
 	dw BattleAnim_SweetScent2
 
@@ -777,6 +778,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Defog:
 BattleAnim_StrangeSteam:
 BattleAnim_MistyTerrain:
 BattleAnim_MudShot:

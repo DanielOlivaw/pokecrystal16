@@ -21,34 +21,42 @@ BattleCommand_ClearHazards:
 	bit SCREENS_SPIKES, [hl]
 	jr z, .no_spikes
 	res SCREENS_SPIKES, [hl]
-	ld hl, BlewSpikesText
+	push hl
 	push de
+	ld hl, BlewSpikesText
 	call StdBattleTextbox
 	pop de
+	pop hl
 .no_spikes
 	bit SCREENS_TOXIC_SPIKES, [hl]
 	jr z, .no_toxic_spikes
 	res SCREENS_TOXIC_SPIKES, [hl]
-	ld hl, BlewToxicSpikesText
+	push hl
 	push de
+	ld hl, BlewToxicSpikesText
 	call StdBattleTextbox
 	pop de
+	pop hl
 .no_toxic_spikes
 	bit SCREENS_STEALTH_ROCK, [hl]
 	jr z, .no_stealth_rock
 	res SCREENS_STEALTH_ROCK, [hl]
-	ld hl, BlewStealthRockText
+	push hl
 	push de
+	ld hl, BlewStealthRockText
 	call StdBattleTextbox
 	pop de
+	pop hl
 .no_stealth_rock
 	bit SCREENS_STICKY_WEB, [hl]
 	jr z, .no_sticky_web
 	res SCREENS_STICKY_WEB, [hl]
-	ld hl, BlewStickyWebText
+	push hl
 	push de
+	ld hl, BlewStickyWebText
 	call StdBattleTextbox
 	pop de
+	pop hl
 
 .no_sticky_web
 	ld a, [de]

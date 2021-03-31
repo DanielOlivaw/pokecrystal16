@@ -1,4 +1,4 @@
-PaybackEffect:
+BattleCommand_Payback:
 	push bc
 	ld a, [wEnemyGoesFirst] ; 0 if player went first
 	ld b, a
@@ -8,5 +8,4 @@ PaybackEffect:
 	ret z
 
 ; double damage if the user moves after the opponent
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage

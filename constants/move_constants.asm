@@ -373,6 +373,7 @@
 	const CLEAR_SMOG
 	const MISTY_TERRAIN
 	const STRANGE_STEAM
+	const DEFOG
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

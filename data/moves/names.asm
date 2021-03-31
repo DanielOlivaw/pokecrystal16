@@ -366,4 +366,5 @@ MoveNames::
 	db "CLEAR SMOG@"
 	db "MISTY FIELD@"
 	db "WONDER STEAM@"
+	db "DEFOG@"
 	  ;"123456123456@"

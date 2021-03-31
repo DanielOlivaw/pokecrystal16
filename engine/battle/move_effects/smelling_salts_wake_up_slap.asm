@@ -1,4 +1,4 @@
-CureStatusDoubleDamage:
+BattleCommand_CureStatusDoubleDamage:
 ; smelling salts & wake-up slap
 
 ; get the opponent's status condition
@@ -9,8 +9,7 @@ CureStatusDoubleDamage:
 	and SLP
 	ret z
 ; if asleep, deal double damage
-	farcall DoubleDamage
-	ret
+	jp DoubleDamage
 	
 DoCureStatusHit:
 	ld a, [wAttackMissed]
