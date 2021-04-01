@@ -1,4 +1,4 @@
-FindConditionalBoost:
+Find_ConditionalBoost:
 ; All move effects that double damage
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -11,6 +11,8 @@ FindConditionalBoost:
 	jp z, BattleCommand_Cut
 	cp EFFECT_HEX
 	jp z, BattleCommand_Hex
+	cp EFFECT_FREEZE_DRY
+	jp z, BattleCommand_FreezeDry
 	cp EFFECT_PAYBACK
 	jp z, BattleCommand_Payback
 	cp EFFECT_ROUND

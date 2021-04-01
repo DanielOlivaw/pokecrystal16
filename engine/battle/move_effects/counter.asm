@@ -19,7 +19,7 @@ CounterEffect:
 	and a
 	ret z
 
-; Don't counter a Counter or Metal Burst
+; Don't counter a Counter, Metal Burst, or OHKO move
 ; Phys/Spec check later will filter out Mirror Coat
 	ld b, a
 	callfar GetMoveEffect
@@ -27,6 +27,8 @@ CounterEffect:
 	cp EFFECT_COUNTER
 	ret z
 	cp EFFECT_METAL_BURST
+	ret z
+	cp EFFECT_OHKO
 	ret z
 
 ; (Not sure--checking for type immunity?)
@@ -92,12 +94,14 @@ CounterEffect:
 	and a
 	ret z
 
-; Don't mirror a Mirror Coat
+; Don't mirror a Mirror Coat or OHKO move
 ; Phys/Spec check later will filter out Counter and Metal Burst
 	ld b, a
 	callfar GetMoveEffect
 	ld a, b
 	cp EFFECT_MIRROR_COAT
+	ret z
+	cp EFFECT_OHKO
 	ret z
 
 ; (Not sure--checking for type immunity?)
@@ -136,7 +140,7 @@ CounterEffect:
 	and a
 	ret z
 
-; Don't counter a Counter, Mirror Coat, or Metal Burst
+; Don't counter a Counter, Mirror Coat, Metal Burst, or OHKO move
 	ld b, a
 	callfar GetMoveEffect
 	ld a, b
@@ -145,6 +149,8 @@ CounterEffect:
 	cp EFFECT_MIRROR_COAT
 	ret z
 	cp EFFECT_METAL_BURST
+	ret z
+	cp EFFECT_OHKO
 	ret z
 
 ; (Not sure--checking for type immunity?)

@@ -1162,6 +1162,17 @@ BattleCommand_Critical:
 	and a
 	ret z
 
+; Moves with EFFECT_ALWAYS_CRIT will always result in a critical hit.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+
+	cp EFFECT_ALWAYS_CRIT
+	jr nz, .get_critical_chance
+	ld a, 1
+	ld [wCriticalHit], a
+	ret
+
+.get_critical_chance
 	ldh a, [hBattleTurn]
 	and a
 	ld hl, wEnemyMonItem
@@ -1860,6 +1871,7 @@ BattleCommand_CheckHit:
 	dw GUST
 	dw THUNDER
 	dw TWISTER
+	dw HURRICANE
 	dw -1
 
 .DigMoves:
@@ -1893,8 +1905,11 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_THUNDER
+	jr z, .ThunderHurricane
+	cp EFFECT_HURRICANE
 	ret nz
 
+.ThunderHurricane
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
 	ret z
@@ -3703,10 +3718,6 @@ BattleCommand_Spite:
 	farcall SpiteEffect
 	ret
 
-BattleCommand_HealBell:
-	farcall HealBellEffect
-	ret
-
 BattleCommand_PainSplit:
 	farcall PainSplitEffect
 	ret
@@ -4349,6 +4360,83 @@ BattleCommand_BurnTarget:
 	ld hl, AlreadyBurnedText
 	jp StdBattleTextbox
 
+BattleCommand_Burn:
+; burn
+
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit BRN, a
+	jr nz, .burned
+	call GetBattleVarAddr
+	and a
+	jp nz, Defrost
+	ld a, [wTypeModifier]
+	and $7f
+	jr z, .didnt_affect
+	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+	jr z, .didnt_affect
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .fog
+	call GetOpponentItem
+	ld a, b
+	cp HELD_PREVENT_BURN
+	jr nz, .no_item_protection
+	ld a, [hl]
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	call AnimateFailedMove
+	ld hl, ProtectedByText
+	jp StdBattleTextbox
+
+.no_item_protection
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	jr nz, .failed
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+	call CheckSubstituteOpp
+	jr nz, .failed
+	ld c, 30
+	call DelayFrames
+	call AnimateCurrentMove
+	ld a, $1
+	ldh [hBGMapMode], a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	set BRN, [hl]
+	call UpdateOpponentInParty
+	ld hl, ApplyBrnEffectOnAttack
+	call CallBattleCore
+	; call UpdateBattleHuds
+	ld de, ANIM_BRN
+	call PlayOpponentBattleAnim
+	call RefreshBattleHuds
+
+	ld hl, WasBurnedText
+	call StdBattleTextbox
+
+	farcall UseHeldStatusHealingItem
+	ret
+
+.burned
+	call AnimateFailedMove
+	ld hl, AlreadyBurnedText
+	jp StdBattleTextbox
+
+.failed
+	jp PrintDidntAffect2
+
+.didnt_affect
+	call AnimateFailedMove
+	jp PrintDoesntAffect
+	
+.fog
+	call AnimateFailedMove
+	jp PrintFogProtection
+
 BattleCommand_DefrostOpponent:
 ; defrostopponent
 ; Thaw the opponent if frozen
@@ -4521,6 +4609,9 @@ BattleCommand_SelfStatDownHit:
 	call BattleCommand_StatDownMessage
 	jp BattleCommand_SwitchTurn
 
+BattleCommand_WorkUp:
+	lb bc, ATTACK, SP_ATTACK
+	jr DoubleUp
 BattleCommand_BulkUp:
 	lb bc, ATTACK, DEFENSE
 	jr DoubleUp
@@ -6175,10 +6266,6 @@ BattleCommand_Charge:
 	text_far UnknownText_0x1c0d6c
 	text_end
 
-BattleCommand3c:
-; unused
-	ret
-
 BattleCommand_TrapTarget:
 ; traptarget
 
@@ -6243,10 +6330,6 @@ BattleCommand_TrapTarget:
 	dw SAND_TOMB, SandTombTrapText  ; 'was trapped!'
 
 INCLUDE "engine/battle/move_effects/mist.asm"
-
-BattleCommand_FocusEnergy:
-	farcall FocusEnergyEffect
-	ret
 
 BattleCommand_Recoil:
 ; recoil
@@ -6890,48 +6973,6 @@ ResetTurn:
 	call DoMove
 	jp EndMoveEffect
 
-BattleCommand_ArenaTrap:
-; arenatrap
-
-; Doesn't work on an absent opponent.
-
-	call CheckHiddenOpponent
-	jr nz, .failed
-
-; Don't trap if the opponent is already trapped.
-
-	ld a, BATTLE_VARS_SUBSTATUS5
-	call GetBattleVarAddr
-	bit SUBSTATUS_CANT_RUN, [hl]
-	jr nz, .failed
-	
-; Doesn't work on ghost-types.
-
-	ld de, wEnemyMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .CheckGhost
-	ld de, wBattleMonType1
-.CheckGhost:
-	ld a, [de]
-	cp GHOST
-	jr z, .failed
-	inc de
-	ld a, [de]
-	cp GHOST
-	jr z, .failed
-
-; Otherwise trap the opponent.
-
-	set SUBSTATUS_CANT_RUN, [hl]
-	call AnimateCurrentMove
-	ld hl, CantEscapeNowText
-	jp StdBattleTextbox
-
-.failed
-	call AnimateFailedMove
-	jp PrintButItFailed
-
 INCLUDE "engine/battle/move_effects/nightmare.asm"
 
 BattleCommand_Defrost:
@@ -6975,8 +7016,6 @@ INCLUDE "engine/battle/move_effects/foresight.asm"
 
 INCLUDE "engine/battle/move_effects/perish_song.asm"
 
-INCLUDE "engine/battle/move_effects/sandstorm.asm"
-
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
 ; BattleCommand5d:
@@ -6994,47 +7033,31 @@ INCLUDE "engine/battle/move_effects/present.asm"
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
 BattleCommand_ConditionalBoost:
-	farcall FindConditionalBoost
+	farcall Find_ConditionalBoost
+	ret
+
+BattleCommand_StatusTargetSelf:
+	farcall Find_StatusTargetSelf
 	ret
 
 BattleCommand_Selfdestruct:
 	farcall SelfdestructEffect
 	ret
 
-BattleCommand_Safeguard:
-	farcall SafeguardEffect
-	ret
-
 BattleCommand_Thief:
 	farcall ThiefEffect
-	ret
-
-BattleCommand_Spikes:
-	farcall SpikesEffect
 	ret
 
 BattleCommand_LowKick:
 	farcall LowKickEffect
 	ret
 
-BattleCommand_ShellSmash:
-	farcall ShellSmashEffect
-	ret
-
 BattleCommand_BugBite:
 	farcall BugBiteEffect
 	ret
 
-BattleCommand_QuiverDance:
-	farcall QuiverDanceEffect
-	ret
-
 BattleCommand_SuckerPunch:
 	farcall SuckerPunchEffect
-	ret
-
-BattleCommand_Hail:
-	farcall HailEffect
 	ret
 
 BattleCommand_Counter:
@@ -7049,16 +7072,12 @@ BattleCommand_KnockOff:
 	farcall KnockOffEffect
 	ret
 
-BattleCommand_ReflectType:
-	farcall ReflectTypeEffect
+BattleCommand_MultiStatDown:
+	farcall MultiStatDownEffect
 	ret
 
-BattleCommand_VenomDrench:
-	farcall VenomDrenchEffect
-	ret
-
-BattleCommand_VenomDrenchMessage:
-	farcall VenomDrenchMessage
+BattleCommand_MultiStatDownMessage:
+	farcall MultiStatDownMessage
 	ret
 
 BattleCommand_DoCureStatus:
@@ -7073,12 +7092,12 @@ BattleCommand_ResetStatsTarget:
 	farcall ResetStatsTargetEffect
 	ret
 
-BattleCommand_MistyTerrain:
-	farcall MistyTerrainEffect
-	ret
-
 BattleCommand_Defog:
 	farcall DefogEffect
+	ret
+
+BattleCommand_PsychoShift:
+	farcall PsychoShiftEffect
 	ret
 
 SafeCheckSafeguard:
@@ -7119,94 +7138,7 @@ INCLUDE "engine/battle/move_effects/pursuit.asm"
 
 INCLUDE "engine/battle/move_effects/rapid_spin.asm"
 
-GetThirdMaxHP::
-; Assumes HP<768
-	ld hl, GetMaxHP
-	call CallBattleCore
-	xor a
-	inc b
-.loop
-	dec b
-	inc a
-	dec bc
-	dec bc
-	dec bc
-	inc b
-	jr nz, .loop
-	dec a
-	ld c, a
-	ret nz
-	inc c
-	ret
-
-BattleCommand_HealSun:
-; Weather-sensitive heal.
-
-	ld hl, wBattleMonMaxHP
-	ld de, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .start
-	ld hl, wEnemyMonMaxHP
-	ld de, wEnemyMonHP
-
-.start
-; Index for .Multipliers
-; Default restores half max HP.
-	ld c, 0
-	ld b, 0
-
-; Don't bother healing if HP is already full.
-	push bc
-	call CompareBytes
-	pop bc
-	jr z, .Full
-
-; Get current weather
-	ld a, [wBattleWeather]
-; Heal 2/3 max HP in sun
-	cp WEATHER_SUN
-	jr z, .Sun
-; Heal 1/4 max HP in other weather
-	and a
-	jr nz, .OtherWeather
-; Heal 1/2 max HP in no weather
-	callfar GetHalfMaxHP
-	jr .Heal
-
-.OtherWeather:
-	callfar GetQuarterMaxHP
-	jr .Heal
-
-.Sun:
-	call GetThirdMaxHP
-	sla c
-	rl b
-.Heal:
-	call AnimateCurrentMove
-	call BattleCommand_SwitchTurn
-
-	callfar RestoreHP
-
-	call BattleCommand_SwitchTurn
-	call UpdateUserInParty
-
-; 'regained health!'
-	ld hl, RegainedHealthText
-	jp StdBattleTextbox
-
-.Full:
-	call AnimateFailedMove
-
-; 'hp is full!'
-	ld hl, HPIsFullText
-	jp StdBattleTextbox
-
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
-
-INCLUDE "engine/battle/move_effects/rain_dance.asm"
-
-INCLUDE "engine/battle/move_effects/sunny_day.asm"
 
 INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
@@ -7225,9 +7157,9 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 INCLUDE "engine/battle/move_effects/weather_accuracy.asm"
 
 CheckHiddenOpponent:
-	; ld a, BATTLE_VARS_SUBSTATUS3_OPP
-	; call GetBattleVar
-	; and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	call GetBattleVar
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
 	xor a
 	ret
 

@@ -1,4 +1,4 @@
-SpikesEffect:
+BattleCommand_Spikes:
 ; spikes
 
 	ld hl, wEnemyScreens

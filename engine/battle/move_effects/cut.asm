@@ -22,4 +22,3 @@ BattleCommand_Cut:
 
 .grass
 	jp DoubleDamage
-	

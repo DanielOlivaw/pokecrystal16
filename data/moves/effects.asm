@@ -1084,11 +1084,11 @@ Mist:
 	mist
 	endmove
 
-FocusEnergy:
+StatusTargetSelf:
 	checkobedience
 	usedmovetext
 	doturn
-	focusenergy
+	statustargetself
 	endmove
 
 DoConfuse:
@@ -1564,13 +1564,6 @@ FalseSwipe:
 	kingsrock
 	endmove
 
-HealBell:
-	checkobedience
-	usedmovetext
-	doturn
-	healbell
-	endmove
-
 TripleKick:
 	checkobedience
 	usedmovetext
@@ -1619,13 +1612,6 @@ Thief:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-MeanLook:
-	checkobedience
-	usedmovetext
-	doturn
-	arenatrap
 	endmove
 
 Nightmare:
@@ -1680,13 +1666,6 @@ Protect:
 	protect
 	endmove
 
-Spikes:
-	checkobedience
-	usedmovetext
-	doturn
-	spikes
-	endmove
-
 Foresight:
 	checkobedience
 	usedmovetext
@@ -1700,20 +1679,6 @@ PerishSong:
 	usedmovetext
 	doturn
 	perishsong
-	endmove
-
-Sandstorm:
-	checkobedience
-	usedmovetext
-	doturn
-	startsandstorm
-	endmove
-
-Hail:
-	checkobedience
-	usedmovetext
-	doturn
-	starthail
 	endmove
 
 Endure:
@@ -1855,13 +1820,6 @@ Frustration:
 	kingsrock
 	endmove
 
-Safeguard:
-	checkobedience
-	usedmovetext
-	doturn
-	safeguard
-	endmove
-
 SacredFire:
 	checkobedience
 	usedmovetext
@@ -1982,13 +1940,6 @@ FireSpin:
 	traptarget
 	endmove
 
-SunlightHeal:
-	checkobedience
-	usedmovetext
-	doturn
-	healsun
-	endmove
-
 HiddenPower:
 	checkobedience
 	usedmovetext
@@ -2007,20 +1958,6 @@ HiddenPower:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-RainDance:
-	checkobedience
-	usedmovetext
-	doturn
-	startrain
-	endmove
-
-SunnyDay:
-	checkobedience
-	usedmovetext
-	doturn
-	startsun
 	endmove
 
 ; FakeOut:
@@ -2363,13 +2300,6 @@ FlareBlitz:
 	burntarget
 	endmove
 
-ShellSmash:
-	checkobedience
-	usedmovetext
-	doturn
-	shellsmash
-	endmove
-
 BugBite:
 	checkobedience
 	usedmovetext
@@ -2389,13 +2319,6 @@ BugBite:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-QuiverDance:
-	checkobedience
-	usedmovetext
-	doturn
-	quiverdance
 	endmove
 	
 ConditionalBoost:
@@ -2594,13 +2517,6 @@ DracoMeteor:
 	kingsrock
 	endmove
 
-ReflectType:
-	checkobedience
-	usedmovetext
-	doturn
-	reflecttype
-	endmove
-
 FlameCharge:
 	checkobedience
 	usedmovetext
@@ -2625,16 +2541,16 @@ FlameCharge:
 	kingsrock
 	endmove
 
-VenomDrench:
+MultiStatDown:
 	checkobedience
 	usedmovetext
 	doturn
 	checkhit
-	venomdrench
+	multistatdown
 	lowersub
 	statdownanim
 	raisesub
-	venomdrenchmessage
+	multistatdownmessage
 	endmove
 	
 CureStatusHit:
@@ -2710,13 +2626,6 @@ ResetStatsHit:
 	kingsrock
 	endmove
 
-MistyTerrain:
-	checkobedience
-	usedmovetext
-	doturn
-	startfog
-	endmove
-
 Defog:
 	checkobedience
 	usedmovetext
@@ -2729,4 +2638,73 @@ Defog:
 	defog
 	statdownmessage
 	statdownfailtext
+	endmove
+
+DragonDance:
+	checkobedience
+	usedmovetext
+	doturn
+	dragondance
+	endmove
+
+FreezeDry:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	freezetarget
+	endmove
+
+WorkUp:
+	checkobedience
+	usedmovetext
+	doturn
+	workup
+	endmove
+
+Hurricane:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	thunderaccuracy
+	checkhit
+	effectchance
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	confusetarget
+	endmove
+
+PsychoShift:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	checksafeguard
+	psychoshift
 	endmove

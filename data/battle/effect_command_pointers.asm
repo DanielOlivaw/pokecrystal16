@@ -44,7 +44,7 @@ BattleCommandPointers:
 	dw BattleCommand_OHKO
 	dw BattleCommand_Recoil
 	dw BattleCommand_Mist
-	dw BattleCommand_FocusEnergy
+	dw BattleCommand_StatusTargetSelf
 	dw BattleCommand_Confuse
 	dw BattleCommand_ConfuseTarget
 	dw BattleCommand_Heal
@@ -78,20 +78,16 @@ BattleCommandPointers:
 	dw BattleCommand_DestinyBond
 	dw BattleCommand_Spite
 	dw BattleCommand_FalseSwipe
-	dw BattleCommand_HealBell
 	dw BattleCommand_HeldFlinch
 	dw BattleCommand_TripleKick
 	dw BattleCommand_KickCounter
 	dw BattleCommand_Thief
-	dw BattleCommand_ArenaTrap
 	dw BattleCommand_Nightmare
 	dw BattleCommand_Defrost
 	dw BattleCommand_Curse
 	dw BattleCommand_Protect
-	dw BattleCommand_Spikes
 	dw BattleCommand_Foresight
 	dw BattleCommand_PerishSong
-	dw BattleCommand_StartSandstorm
 	dw BattleCommand_Endure
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
@@ -102,16 +98,12 @@ BattleCommandPointers:
 	dw BattleCommand_Present
 	dw BattleCommand_DamageCalc
 	dw BattleCommand_FrustrationPower
-	dw BattleCommand_Safeguard
 	dw BattleCommand_CheckSafeguard
 	dw BattleCommand_GetMagnitude
 	dw BattleCommand_BatonPass
 	dw BattleCommand_Pursuit
 	dw BattleCommand_ClearHazards
-	dw BattleCommand_HealSun
 	dw BattleCommand_HiddenPower
-	dw BattleCommand_StartRain
-	dw BattleCommand_StartSun
 	dw BattleCommand_AttackUp
 	dw BattleCommand_DefenseUp
 	dw BattleCommand_SpeedUp
@@ -176,12 +168,9 @@ BattleCommandPointers:
 	dw BattleCommand_FireFang
 	dw BattleCommand_IceFang
 	dw BattleCommand_ThunderFang
-	dw BattleCommand_ShellSmash
 	dw BattleCommand_BugBite
-	dw BattleCommand_QuiverDance
 	dw BattleCommand_ConditionalBoost
 	dw BattleCommand_SuckerPunch
-	dw BattleCommand_Hail
 	dw BattleCommand_BlizzardAccuracy
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
@@ -192,12 +181,13 @@ BattleCommandPointers:
 	dw BattleCommand_KnockOff
 	dw BattleCommand_BulkUp
 	dw BattleCommand_Overheat
-	dw BattleCommand_ReflectType
-	dw BattleCommand_VenomDrench
-	dw BattleCommand_VenomDrenchMessage
+	dw BattleCommand_MultiStatDown
+	dw BattleCommand_MultiStatDownMessage
 	dw BattleCommand_DoCureStatus
 	dw BattleCommand_Trick
 	dw BattleCommand_HammerArm
 	dw BattleCommand_ResetStatsTarget
-	dw BattleCommand_MistyTerrain
 	dw BattleCommand_Defog
+	dw BattleCommand_DragonDance
+	dw BattleCommand_WorkUp
+	dw BattleCommand_PsychoShift

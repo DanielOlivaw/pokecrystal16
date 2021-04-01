@@ -1,4 +1,4 @@
-MistyTerrainEffect:
+BattleCommand_MistyTerrain:
 ; startfog
 	ld a, WEATHER_FOG
 	ld [wBattleWeather], a

@@ -1,4 +1,4 @@
-ReflectTypeEffect:
+BattleCommand_ReflectType:
 ; change user's type to match target's
 
 	ld hl, wBattleMonType1

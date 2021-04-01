@@ -1,4 +1,4 @@
-SafeguardEffect:
+BattleCommand_Safeguard:
 ; safeguard
 
 	ld hl, wPlayerScreens

@@ -1450,3 +1450,28 @@ PlateTypeText:
 	text_ram wStringBuffer1
 	text " type!"
 	prompt
+
+UserCuredOfPoisonText:
+	text "<USER>'s"
+	line "cured of poison!"
+	prompt
+
+UserRidOfParalysisText::
+	text "<USER>'s"
+	line "rid of paralysis!"
+	prompt
+
+UserBurnWasHealedText::
+	text "<USER>'s"
+	line "burn was healed!"
+	prompt
+
+; UserWasDefrostedText::
+	; text "<USER>"
+	; line "was defrosted!"
+	; prompt
+
+UserWokeUpText::
+	text "<USER>"
+	line "woke up!"
+	prompt

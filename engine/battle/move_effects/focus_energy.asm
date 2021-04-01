@@ -1,4 +1,4 @@
-FocusEnergyEffect:
+BattleCommand_FocusEnergy:
 ; focusenergy
 
 	ld a, BATTLE_VARS_SUBSTATUS4

@@ -12,4 +12,5 @@ CriticalHitMoves:
 	dw PSYCHO_CUT
 	dw LEAF_BLADE
 	dw STONE_EDGE
+	dw NIGHT_SLASH
 	dw -1

@@ -138,12 +138,8 @@ SECTION "bankB", ROMX
 
 INCLUDE "engine/battle/trainer_huds.asm"
 INCLUDE "data/trainers/class_names.asm"
-INCLUDE "engine/battle/ai/redundant.asm"
 INCLUDE "engine/events/move_deleter.asm"
 INCLUDE "engine/link/mystery_gift_2.asm"
-INCLUDE "engine/items/tmhm.asm"
-INCLUDE "engine/pokemon/print_move_description.asm"
-INCLUDE "data/moves/descriptions.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
@@ -157,6 +153,14 @@ INCLUDE "engine/battle/effect_commands.asm"
 SECTION "Effect Commands 2", ROMX
 
 INCLUDE "engine/battle/effect_commands_2.asm"
+
+
+SECTION "Move Data", ROMX
+
+INCLUDE "engine/battle/ai/redundant.asm"
+INCLUDE "engine/items/tmhm.asm"
+INCLUDE "engine/pokemon/print_move_description.asm"
+INCLUDE "data/moves/descriptions.asm"
 
 
 SECTION "Enemy Trainers", ROMX

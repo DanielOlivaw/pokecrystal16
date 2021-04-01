@@ -1,4 +1,4 @@
-QuiverDanceEffect:
+BattleCommand_QuiverDance:
 ; Raises Special Attack, Special Defense, and Speed.
 
 ; Get user's stats

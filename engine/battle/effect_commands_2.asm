@@ -1,5 +1,7 @@
 INCLUDE "engine/battle/move_effects/conditional_boost.asm"
 
+INCLUDE "engine/battle/move_effects/status_target_self.asm"
+
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
@@ -24,6 +26,16 @@ INCLUDE "engine/battle/move_effects/spikes.asm"
 INCLUDE "engine/battle/move_effects/focus_energy.asm"
 
 INCLUDE "engine/battle/move_effects/counter.asm"
+
+INCLUDE "engine/battle/move_effects/arena_trap.asm"
+
+INCLUDE "engine/battle/move_effects/rain_dance.asm"
+
+INCLUDE "engine/battle/move_effects/sunny_day.asm"
+
+INCLUDE "engine/battle/move_effects/sandstorm.asm"
+
+INCLUDE "engine/battle/move_effects/heal_sun.asm"
 
 INCLUDE "engine/battle/move_effects/cut.asm"
 
@@ -51,7 +63,7 @@ INCLUDE "engine/battle/move_effects/reflect_type.asm"
 
 INCLUDE "engine/battle/move_effects/brine.asm"
 
-INCLUDE "engine/battle/move_effects/venom_drench.asm"
+INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
 
 INCLUDE "engine/battle/move_effects/payback.asm"
 
@@ -66,3 +78,7 @@ INCLUDE "engine/battle/move_effects/misty_terrain.asm"
 INCLUDE "engine/battle/move_effects/defog.asm"
 
 INCLUDE "engine/battle/move_effects/hex.asm"
+
+INCLUDE "engine/battle/move_effects/freeze_dry.asm"
+
+INCLUDE "engine/battle/move_effects/psycho_shift.asm"

@@ -373,6 +373,31 @@ MoveDescriptions1:
 	dw MistyTerrainDescription
 	dw StrangeSteamDescription
 	dw DefogDescription
+	dw FairyWindDescription
+	dw DoubleHitDescription
+	dw TickleDescription
+	dw PowerWhipDescription
+	dw DragonPulseDescription
+	dw DragonDanceDescription
+	dw PowerGemDescription
+	dw StockpileDescription
+	dw FreezeDryDescription
+	dw TeeterDanceDescription
+	dw ShockWaveDescription
+	dw GigaImpactDescription
+	dw StormThrowDescription
+	dw WorkUpDescription
+	dw HurricaneDescription
+	dw BabyDollEyesDescription
+	dw MuddyWaterDescription
+	dw LavaPlumeDescription
+	dw LiquidationDescription
+	dw NightSlashDescription
+	dw BlockDescription
+	dw HighHorsepowerDescription
+	dw PsychoShiftDescription
+	dw FreezingGlareDescription
+	dw PluckDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -434,8 +459,8 @@ SwordsDanceDescription:
 	next "creases ATTACK.@"
 
 CutDescription:
-	db   "Stronger against"
-	next "grass #MON.@"
+	db   "Deals extra damage"
+	next "to GRASS types.@"
 
 GustDescription:
 	db   "Whips up a strong"
@@ -606,7 +631,7 @@ SurfDescription:
 	next "type attack.@"
 
 IceBeamDescription:
-	db   "An attack that may"
+	db   "A beam that may"
 	next "freeze the foe.@"
 
 BlizzardDescription:
@@ -722,7 +747,7 @@ ThunderWaveDescription:
 	next "cause paralysis.@"
 
 ThunderDescription:
-	db   "An attack that may"
+	db   "A move that may"
 	next "cause paralysis.@"
 
 RockThrowDescription:
@@ -890,8 +915,8 @@ ClampDescription:
 	next "2-5 turns.@"
 
 SwiftDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "Star-shaped rays"
+	next "that never miss.@"
 
 SkullBashDescription:
 	db   "1st turn: Prepare"
@@ -1114,8 +1139,8 @@ ScaryFaceDescription:
 	next "the foe's SPEED.@"
 
 FaintAttackDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "A sucker punch"
+	next "that never misses.@"
 
 SweetKissDescription:
 	db   "A move that causes"
@@ -1510,8 +1535,8 @@ SuperpowerDescription:
 	next "ATTACK & DEFENSE.@"
 
 CharmVoiceDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "A charming cry"
+	next "that never misses.@"
 
 LifeDewDescription:
 	db   "Restores HP by 1/2"
@@ -1743,7 +1768,7 @@ FlameChargeDescription:
 	next "that raises SPEED.@"
 
 SmartStrikeDescription:
-	db   "An attack that"
+	db   "A horn attack that"
 	next "never misses.@"
 
 SlackOffDescription:
@@ -1751,8 +1776,8 @@ SlackOffDescription:
 	next "the user's max HP.@"
 
 AerialAceDescription:
-	db   "An attack that"
-	next "never misses.@"
+	db   "A quick slash"
+	next "that never misses.@"
 
 BraveBirdDescription:
 	db   "A charge that also"
@@ -1837,4 +1862,104 @@ StrangeSteamDescription:
 DefogDescription:
 	db   "Strong wind blows"
 	next "away barriers.@"
+
+FairyWindDescription:
+	db   "Stirs up a fairy"
+	next "wind to attack.@"
+
+DoubleHitDescription:
+	db   "Hits twice with a"
+	next "tail, vines, etc.@"
+
+TickleDescription:
+	db   "Reduces ATTACK"
+	next "and DEFENSE.@"
+
+PowerWhipDescription:
+	db   "Lashes with vines"
+	next "or tentacles.@"
+
+DragonPulseDescription:
+	db   "A shockwave from"
+	next "the user's mouth.@"
+
+DragonDanceDescription:
+	db   "Increases ATTACK"
+	next "and SPEED.@"
+
+PowerGemDescription:
+	db   "Attacks with a ray"
+	next "of bright light.@"
+
+StockpileDescription:
+	db   "Heightens DEFENSE"
+	next "and SPCL.DEF.@"
+
+FreezeDryDescription:
+	db   "Deals extra damage"
+	next "to WATER types.@"
+
+TeeterDanceDescription:
+	db   "A dance that"
+	next "causes confusion.@"
+
+ShockWaveDescription:
+	db   "An electric jolt"
+	next "that never misses.@"
+
+GigaImpactDescription:
+	db   "1st turn: Attack"
+	next "2nd turn: Rest@"
+
+StormThrowDescription:
+	db   "Always results in"
+	next "a critical hit.@"
+
+WorkUpDescription:
+	db   "Increases ATTACK"
+	next "and SPCL.ATK.@"
+
+HurricaneDescription:
+	db   "An attack that may"
+	next "cause confusion.@"
+
+BabyDollEyesDescription:
+	db   "Lowers ATTACK."
+	next "Always goes first.@"
+
+MuddyWaterDescription:
+	db   "An attack that may"
+	next "reduce accuracy.@"
+
+LavaPlumeDescription:
+	db   "An attack that may"
+	next "inflict a burn.@"
+
+LiquidationDescription:
+	db   "An attack that may"
+	next "reduce DEFENSE.@"
+
+NightSlashDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+BlockDescription:
+	db   "Blocks escape with"
+	next "arms spread wide.@"
+
+HighHorsepowerDescription:
+	db   "Attacks using the"
+	next "entire body.@"
+
+PsychoShiftDescription:
+	db   "Transfers status"
+	next "to the target.@"
+
+FreezingGlareDescription:
+	db   "A beam that may"
+	next "freeze the foe.@"
+
+PluckDescription:
+	db   "Attacks and eats"
+	next "the foe's berry.@"
 		;"123456789123456789"

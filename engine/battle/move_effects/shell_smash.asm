@@ -1,4 +1,4 @@
-ShellSmashEffect:
+BattleCommand_ShellSmash:
 ; Raises Attack, Special Attack, and Speed by two stages each
 ; and lowers Defense and Special Defense by one stage each
 

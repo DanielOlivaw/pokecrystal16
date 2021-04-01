@@ -374,6 +374,31 @@
 	const MISTY_TERRAIN
 	const STRANGE_STEAM
 	const DEFOG
+	const FAIRY_WIND
+	const DOUBLE_HIT
+	const TICKLE
+	const POWER_WHIP
+	const DRAGON_PULSE
+	const DRAGON_DANCE
+	const POWER_GEM
+	const STOCKPILE
+	const FREEZE_DRY
+	const TEETER_DANCE
+	const SHOCK_WAVE
+	const GIGA_IMPACT
+	const STORM_THROW
+	const WORK_UP
+	const HURRICANE
+	const BABY_DOLL_EYES
+	const MUDDY_WATER
+	const LAVA_PLUME
+	const LIQUIDATION
+	const NIGHT_SLASH
+	const BLOCK
+	const HIGH_HORSEPOWER
+	const PSYCHO_SHIFT
+	const FREEZING_GLARE
+	const PLUCK
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

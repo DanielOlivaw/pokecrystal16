@@ -47,7 +47,7 @@ MoveEffectsPointers:
 	dw MultiHit
 	dw NormalHit
 	dw Mist
-	dw FocusEnergy
+	dw StatusTargetSelf ;FocusEnergy
 	dw RecoilHit
 	dw DoConfuse
 	dw AttackUp2
@@ -102,20 +102,20 @@ MoveEffectsPointers:
 	dw HPBasedDamage
 	dw Spite
 	dw FalseSwipe
-	dw HealBell
+	dw StatusTargetSelf ;HealBell
 	dw NormalHit
 	dw TripleKick
 	dw Thief
-	dw MeanLook
+	dw StatusTargetSelf ;MeanLook
 	dw Nightmare
 	dw FlameWheel
 	dw Curse
 	dw Growth
 	dw Protect
-	dw Spikes
+	dw StatusTargetSelf ;Spikes
 	dw Foresight
 	dw PerishSong
-	dw Sandstorm
+	dw StatusTargetSelf ;Sandstorm
 	dw Endure
 	dw Rollout
 	dw Swagger
@@ -124,7 +124,7 @@ MoveEffectsPointers:
 	dw Return
 	dw Present
 	dw Frustration
-	dw Safeguard
+	dw StatusTargetSelf ;Safeguard
 	dw SacredFire
 	dw Magnitude
 	dw BatonPass
@@ -132,12 +132,12 @@ MoveEffectsPointers:
 	dw RapidSpin
 	dw FireSpin
 	dw BugBite
-	dw SunlightHeal
+	dw StatusTargetSelf ;SunlightHeal
 	dw NormalHit
-	dw ShellSmash
+	dw StatusTargetSelf ;ShellSmash
 	dw HiddenPower
-	dw RainDance
-	dw SunnyDay
+	dw StatusTargetSelf ;RainDance
+	dw StatusTargetSelf ;SunnyDay
 	dw DefenseUpHit
 	dw AttackUpHit
 	dw AllUpHit
@@ -161,11 +161,11 @@ MoveEffectsPointers:
 	dw IceFang
 	dw ThunderFang
 	dw FlareBlitz
-	dw QuiverDance
+	dw StatusTargetSelf ;QuiverDance
 	dw ConditionalBoost
 	dw SuckerPunch
 	dw AttackDown
-	dw Hail
+	dw StatusTargetSelf ;Hail
 	dw Blizzard
 	dw Counter
 	dw Flatter
@@ -175,7 +175,7 @@ MoveEffectsPointers:
 	dw Screen
 	dw ConditionalBoost
 	dw PoisonHit
-	dw HealBell
+	dw StatusTargetSelf ;HealBell
 	dw HoneClaws
 	dw CloseCombat
 	dw BurnUp
@@ -185,21 +185,29 @@ MoveEffectsPointers:
 	dw HPBasedDamage
 	dw Eruption
 	dw HPBasedDamage
-	dw Spikes
-	dw Spikes
-	dw Spikes
+	dw StatusTargetSelf ;Spikes
+	dw StatusTargetSelf ;Spikes
+	dw StatusTargetSelf ;Spikes
 	dw NormalHit
 	dw NormalHit
 	dw DracoMeteor
 	dw ConditionalBoost
-	dw ReflectType
+	dw StatusTargetSelf ;ReflectType
 	dw FlameCharge
 	dw ConditionalBoost
-	dw VenomDrench
+	dw MultiStatDown
 	dw ConditionalBoost
 	dw CureStatusHit
 	dw Trick
 	dw HammerArm
 	dw ResetStatsHit
-	dw MistyTerrain
+	dw StatusTargetSelf ;MistyTerrain
 	dw Defog
+	dw MultiStatDown
+	dw DragonDance
+	dw FreezeDry
+	dw NormalHit
+	dw WorkUp
+	dw Hurricane
+	dw AttackDown
+	dw PsychoShift

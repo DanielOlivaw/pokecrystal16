@@ -1,4 +1,4 @@
-HailEffect:
+BattleCommand_StartHail:
 ; starthail
 
 	ld a, [wBattleWeather]

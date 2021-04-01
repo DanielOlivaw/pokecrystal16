@@ -395,6 +395,31 @@ BattleAnimations::
 	dw BattleAnim_MistyTerrain
 	dw BattleAnim_StrangeSteam
 	dw BattleAnim_Defog
+	dw BattleAnim_FairyWind
+	dw BattleAnim_DoubleHit
+	dw BattleAnim_Tickle
+	dw BattleAnim_PowerWhip
+	dw BattleAnim_DragonPulse
+	dw BattleAnim_DragonDance
+	dw BattleAnim_PowerGem
+	dw BattleAnim_Stockpile
+	dw BattleAnim_FreezeDry
+	dw BattleAnim_TeeterDance
+	dw BattleAnim_ShockWave
+	dw BattleAnim_GigaImpact
+	dw BattleAnim_StormThrow
+	dw BattleAnim_WorkUp
+	dw BattleAnim_Hurricane
+	dw BattleAnim_BabyDollEyes
+	dw BattleAnim_MuddyWater
+	dw BattleAnim_LavaPlume
+	dw BattleAnim_Liquidation
+	dw BattleAnim_NightSlash
+	dw BattleAnim_Block
+	dw BattleAnim_HighHorsepower
+	dw BattleAnim_PsychoShift
+	dw BattleAnim_FreezingGlare
+	dw BattleAnim_Pluck
 	
 	dw BattleAnim_SweetScent2
 
@@ -778,6 +803,31 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_PsychoShift:
+BattleAnim_FreezingGlare:
+BattleAnim_Pluck:
+BattleAnim_Hurricane:
+BattleAnim_BabyDollEyes:
+BattleAnim_MuddyWater:
+BattleAnim_LavaPlume:
+BattleAnim_Liquidation:
+BattleAnim_NightSlash:
+BattleAnim_Block:
+BattleAnim_HighHorsepower:
+BattleAnim_FreezeDry:
+BattleAnim_TeeterDance:
+BattleAnim_ShockWave:
+BattleAnim_GigaImpact:
+BattleAnim_StormThrow:
+BattleAnim_WorkUp:
+BattleAnim_Stockpile:
+BattleAnim_Tickle:
+BattleAnim_PowerWhip:
+BattleAnim_DragonPulse:
+BattleAnim_DragonDance:
+BattleAnim_PowerGem:
+BattleAnim_FairyWind:
+BattleAnim_DoubleHit:
 BattleAnim_Defog:
 BattleAnim_StrangeSteam:
 BattleAnim_MistyTerrain:

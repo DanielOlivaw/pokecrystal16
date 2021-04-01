@@ -1,4 +1,4 @@
-HealBellEffect:
+BattleCommand_HealBell:
 ; healbell
 
 	ld a, BATTLE_VARS_SUBSTATUS1
