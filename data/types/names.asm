@@ -10,16 +10,9 @@ TypeNames:
 	dw Bug
 	dw Ghost
 	dw Steel
-	dw UnknownType
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	; dw Normal
-	dw UnknownType
+	dw UnknownType ; TYPE_BURN_UP_TYPELESS
+	dw UnknownType ; TYPE_ROOST_TYPELESS
+	dw UnknownType ; CURSE_TYPE
 	dw Fire
 	dw Water
 	dw Grass

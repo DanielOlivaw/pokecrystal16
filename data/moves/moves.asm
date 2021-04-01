@@ -410,4 +410,5 @@ Moves1:
 	move EFFECT_PSYCHO_SHIFT,        0, PSYCHIC,  STATUS,   100, 10,   0 ; PSYCHO_SHIFT
 	move EFFECT_FREEZE_HIT,         90, PSYCHIC,  SPECIAL,  100, 10,  10 ; FREEZING_GLARE
 	move EFFECT_BUG_BITE,           60, FLYING,   PHYSICAL, 100, 20,   0 ; PLUCK
+	move EFFECT_ROOST,               0, FLYING,   STATUS,   100, 10,   0 ; ROOST
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -398,6 +398,7 @@ MoveDescriptions1:
 	dw PsychoShiftDescription
 	dw FreezingGlareDescription
 	dw PluckDescription
+	dw RoostDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1962,4 +1963,8 @@ FreezingGlareDescription:
 PluckDescription:
 	db   "Attacks and eats"
 	next "the foe's berry.@"
+
+RoostDescription:
+	db   "Restores HP by 1/2"
+	next "the user's max HP.@"
 		;"123456789123456789"

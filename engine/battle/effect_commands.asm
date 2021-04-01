@@ -1775,12 +1775,12 @@ BattleCommand_CheckHit:
 	ld de, wEnemyMonType1
 .ok
 	ld a, [de]
-	inc de
 	cp FIRE
 	ret z
+	inc de
 	ld a, [de]
 	cp FIRE
-	jr nz, .Miss
+	jr nz, .Missed
 	ret
 
 .Protect:
@@ -6679,6 +6679,9 @@ BattleCommand_ResetStats:
 BattleCommand_Heal:
 ; heal
 
+	xor a
+	ld [wAttackMissed], a
+
 	ld de, wBattleMonHP
 	ld hl, wBattleMonMaxHP
 	ldh a, [hBattleTurn]
@@ -6765,11 +6768,15 @@ BattleCommand_Heal:
 	jp StdBattleTextbox
 
 .hp_full
+	ld a, 1
+	ld [wAttackMissed], a
 	call AnimateFailedMove
 	ld hl, HPIsFullText
 	jp StdBattleTextbox
 	
 .cant_sleep
+	ld a, 1
+	ld [wAttackMissed], a
 	call AnimateFailedMove
 	ld hl, CantSleepText
 	jp StdBattleTextbox
@@ -7098,6 +7105,10 @@ BattleCommand_Defog:
 
 BattleCommand_PsychoShift:
 	farcall PsychoShiftEffect
+	ret
+
+BattleCommand_Roost:
+	farcall RoostEffect
 	ret
 
 SafeCheckSafeguard:

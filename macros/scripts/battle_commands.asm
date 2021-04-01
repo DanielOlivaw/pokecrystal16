@@ -192,6 +192,7 @@ ENDM
 	command dragondance             ; b9
 	command workup                  ; ba
 	command psychoshift             ; bb
+	command roost                   ; bc
 
 	enum_start $fe
 	command endturn                 ; fe

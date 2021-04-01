@@ -191,3 +191,4 @@ BattleCommandPointers:
 	dw BattleCommand_DragonDance
 	dw BattleCommand_WorkUp
 	dw BattleCommand_PsychoShift
+	dw BattleCommand_Roost

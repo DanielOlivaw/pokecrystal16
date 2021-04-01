@@ -315,6 +315,9 @@ HandleBetweenTurnEffects:
 	call HandleFutureSight
 	call CheckFaint_PlayerThenEnemy
 	ret c
+	call HandleResidualDamage
+	call CheckFaint_PlayerThenEnemy
+	ret c
 	call HandleWeather
 	call CheckFaint_PlayerThenEnemy
 	ret c
@@ -332,6 +335,9 @@ HandleBetweenTurnEffects:
 	call HandleFutureSight
 	call CheckFaint_EnemyThenPlayer
 	ret c
+	call HandleResidualDamage
+	call CheckFaint_EnemyThenPlayer
+	ret c
 	call HandleWeather
 	call CheckFaint_EnemyThenPlayer
 	ret c
@@ -343,6 +349,7 @@ HandleBetweenTurnEffects:
 	ret c
 
 .NoMoreFaintingConditions:
+	call EndRoostEffect
 	call HandleLeftovers
 	call HandleMysteryberry
 	call HandleDefrost
@@ -994,8 +1001,8 @@ Battle_EnemyFirst:
 
 .switch_item
 	call SetEnemyTurn
-	call ResidualDamage
-	jp z, HandleEnemyMonFaint
+	; call ResidualDamage
+	; jp z, HandleEnemyMonFaint
 	call RefreshBattleHuds
 	call PlayerTurn_EndOpponentProtectEndureDestinyBond
 	call CheckMobileBattleError
@@ -1008,8 +1015,8 @@ Battle_EnemyFirst:
 	call HasPlayerFainted
 	jp z, HandlePlayerMonFaint
 	call SetPlayerTurn
-	call ResidualDamage
-	jp z, HandlePlayerMonFaint
+	; call ResidualDamage
+	; jp z, HandlePlayerMonFaint
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
@@ -1032,11 +1039,11 @@ Battle_PlayerFirst:
 	jp z, HandleEnemyMonFaint
 	call HasPlayerFainted
 	jp z, HandlePlayerMonFaint
-	push bc
-	call SetPlayerTurn
-	call ResidualDamage
-	pop bc
-	jp z, HandlePlayerMonFaint
+	; push bc
+	; call SetPlayerTurn
+	; call ResidualDamage
+	; pop bc
+	; jp z, HandlePlayerMonFaint
 	push bc
 	call RefreshBattleHuds
 	pop af
@@ -1057,8 +1064,8 @@ Battle_PlayerFirst:
 
 .switched_or_used_item
 	call SetEnemyTurn
-	call ResidualDamage
-	jp z, HandleEnemyMonFaint
+	; call ResidualDamage
+	; jp z, HandleEnemyMonFaint
 	call RefreshBattleHuds
 	xor a ; BATTLEPLAYERACTION_USEMOVE
 	ld [wBattlePlayerAction], a
@@ -1107,6 +1114,23 @@ CheckIfHPIsZero:
 	ld a, [hli]
 	or [hl]
 	ret
+
+HandleResidualDamage:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+
+	call SetPlayerTurn
+	call ResidualDamage
+	call SetEnemyTurn
+	jp ResidualDamage
+
+.DoEnemyFirst
+	call SetEnemyTurn
+	call ResidualDamage
+	call SetPlayerTurn
+
+; fallthrough
 
 ResidualDamage:
 ; Return z if the user fainted before
@@ -1385,6 +1409,38 @@ SwitchTurnCore:
 	ldh a, [hBattleTurn]
 	xor 1
 	ldh [hBattleTurn], a
+	ret
+
+EndRoostEffect:
+; At the end of the turn, Pokemon turned typeless by Roost get their Flying type back.
+
+; Check player types
+	ld de, wBattleMonType1
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ld de, wBattleMonType1
+	inc de
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ret
+
+; Check Enemy Types
+	ld de, wEnemyMonType1
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ld de, wEnemyMonType1
+	inc de
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ret
+
+.restore_flying_type
+	ld a, FLYING
+	ld [de], a
 	ret
 
 HandleLeftovers:

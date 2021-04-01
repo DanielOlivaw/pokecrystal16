@@ -420,6 +420,7 @@ BattleAnimations::
 	dw BattleAnim_PsychoShift
 	dw BattleAnim_FreezingGlare
 	dw BattleAnim_Pluck
+	dw BattleAnim_Roost
 	
 	dw BattleAnim_SweetScent2
 
@@ -803,6 +804,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Roost:
 BattleAnim_PsychoShift:
 BattleAnim_FreezingGlare:
 BattleAnim_Pluck:

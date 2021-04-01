@@ -2708,3 +2708,11 @@ PsychoShift:
 	checksafeguard
 	psychoshift
 	endmove
+
+Roost:
+	checkobedience
+	usedmovetext
+	doturn
+	heal
+	roost
+	endmove

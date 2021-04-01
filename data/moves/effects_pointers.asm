@@ -211,3 +211,4 @@ MoveEffectsPointers:
 	dw Hurricane
 	dw AttackDown
 	dw PsychoShift
+	dw Roost
