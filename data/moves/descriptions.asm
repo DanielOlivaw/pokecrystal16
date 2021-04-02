@@ -408,6 +408,13 @@ MoveDescriptions1:
 	dw AnchorShotDescription
 	dw EerieChimeDescription
 	dw NailDownDescription
+	dw DynamoRushDescription
+	dw ShatterClawDescription
+	dw WildFuryDescription
+	dw WindRideDescription
+	dw BrightMossDescription
+	dw ShieldBashDescription
+	dw SacredSwordDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2009,11 +2016,35 @@ EerieChimeDescription:
 	db   "Successive chimes"
 	next "raise power.@"
 
-; FlashStrikeDescription:
-	; db   "Strikes first with"
-	; next "lightning speed.@"
-
 NailDownDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
+
+DynamoRushDescription:
+	db   "Paralyzes if the"
+	next "user raised SPEED.@"
+
+ShatterClawDescription:
+	db   "Shatters a frozen"
+	next "target with claws.@"
+
+WildFuryDescription:
+	db   "Increases ATTACK"
+	next "and SPEED.@"
+
+WindRideDescription:
+	db   "An airborne tackle"
+	next "that raises SPEED.@"
+
+BrightMossDescription:
+	db   "Raises ACCURACY"
+	next "for both sides.@"
+
+ShieldBashDescription:
+	db   "Raising DEFENSE"
+	next "boosts damage.@"
+
+SacredSwordDescription:
+	db   "Ignores the foe's"
+	next "stat changes.@"
 		;"123456789123456789"

@@ -195,6 +195,8 @@ ENDM
 	command roost                   ; bc
 	command brickbreak              ; bd
 	command traphit                 ; be
+	command dynamorush              ; bf
+	command brightmoss              ; c0
 
 	enum_start $fe
 	command endturn                 ; fe

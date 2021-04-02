@@ -409,6 +409,13 @@
 	const ANCHOR_SHOT
 	const EERIE_CHIME
 	const NAIL_DOWN
+	const DYNAMO_RUSH
+	const SHATTER_CLAW
+	const WILD_FURY
+	const WIND_RIDE
+	const BRIGHT_MOSS
+	const SHIELD_BASH
+	const SACRED_SWORD
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

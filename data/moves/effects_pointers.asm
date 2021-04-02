@@ -217,3 +217,9 @@ MoveEffectsPointers:
 	dw ForceSwitchHit
 	dw TrapHit
 	dw NailDown
+	dw DynamoRush
+	dw ShatterClaw
+	dw SpeedUpHit
+	dw StatusTargetSelf
+	dw ConditionalBoost
+	dw NormalHit

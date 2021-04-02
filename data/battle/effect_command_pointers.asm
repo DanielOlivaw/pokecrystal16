@@ -194,3 +194,5 @@ BattleCommandPointers:
 	dw BattleCommand_Roost
 	dw BattleCommand_BrickBreak
 	dw BattleCommand_TrapHit
+	dw BattleCommand_DynamoRush
+	dw BattleCommand_BrightMoss

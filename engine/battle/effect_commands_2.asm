@@ -88,3 +88,9 @@ INCLUDE "engine/battle/move_effects/roost.asm"
 INCLUDE "engine/battle/move_effects/brick_break.asm"
 
 INCLUDE "engine/battle/move_effects/trap_hit.asm"
+
+INCLUDE "engine/battle/move_effects/dynamo_rush.asm"
+
+INCLUDE "engine/battle/move_effects/bright_moss.asm"
+
+INCLUDE "engine/battle/move_effects/shield_bash.asm"

@@ -430,6 +430,13 @@ BattleAnimations::
 	dw BattleAnim_AnchorShot
 	dw BattleAnim_EerieChime
 	dw BattleAnim_NailDown
+	dw BattleAnim_DynamoRush
+	dw BattleAnim_ShatterClaw
+	dw BattleAnim_WildFury
+	dw BattleAnim_WindRide
+	dw BattleAnim_BrightMoss
+	dw BattleAnim_ShieldBash
+	dw BattleAnim_SacredSword
 	
 	dw BattleAnim_SweetScent2
 
@@ -813,6 +820,13 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_BrightMoss:
+BattleAnim_ShieldBash:
+BattleAnim_SacredSword:
+BattleAnim_DynamoRush:
+BattleAnim_ShatterClaw:
+BattleAnim_WildFury:
+BattleAnim_WindRide:
 BattleAnim_AnchorShot:
 BattleAnim_EerieChime:
 BattleAnim_NailDown:

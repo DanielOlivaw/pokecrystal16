@@ -22,6 +22,8 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_QuiverDance
 	cp EFFECT_REFLECT_TYPE
 	jp z, BattleCommand_ReflectType
+	cp EFFECT_BRIGHT_MOSS
+	jp z, BattleCommand_BrightMoss
 
 	cp EFFECT_SPIKES
 	jp z, BattleCommand_Spikes

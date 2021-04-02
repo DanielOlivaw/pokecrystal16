@@ -2804,3 +2804,48 @@ NailDown:
 	kingsrock
 	traptarget
 	endmove
+
+DynamoRush:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	dynamorush
+	endmove
+
+ShatterClaw:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	docurestatus
+	buildopponentrage
+	defrostopponent
+	kingsrock
+	endmove

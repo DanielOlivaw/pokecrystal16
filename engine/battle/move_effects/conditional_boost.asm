@@ -17,8 +17,13 @@ Find_ConditionalBoost:
 	jp z, BattleCommand_Payback
 	cp EFFECT_ROUND
 	jp z, BattleCommand_Round
+	cp EFFECT_SHIELD_BASH
+	jp z, BattleCommand_ShieldBash
 	cp EFFECT_VENOSHOCK
 	jp z, BattleCommand_Venoshock
+
+	cp EFFECT_SHATTER_CLAW
+	jr z, BattleCommand_ShatterClaw
 
 	cp EFFECT_BODY_SLAM
 	jr z, BattleCommand_DoubleMinimizeDamage
@@ -33,6 +38,14 @@ Find_ConditionalBoost:
 	cp EFFECT_TWISTER
 	jr z, BattleCommand_DoubleFlyingDamage
 	ret
+
+BattleCommand_ShatterClaw:
+; Double damage if the target is frozen
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	bit FRZ, [hl]
+	ret z
+	jr DoubleDamage
 
 BattleCommand_DoubleFlyingDamage:
 ; doubleflyingdamage

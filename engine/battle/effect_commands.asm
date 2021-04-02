@@ -1682,8 +1682,6 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_FORCE_SWITCH
 	ret z
-	cp EFFECT_CONVERSION2
-	ret z
 	cp EFFECT_FORESIGHT
 	ret z
 	cp EFFECT_LOCK_ON
@@ -1955,10 +1953,16 @@ BattleCommand_CheckHit:
 	ld c, a
 
 .got_acc_eva
-	cp b
-	jr c, .skip_foresight_check
+	cp BASE_STAT_LEVEL
+	jr z, .skip_foresight_check
 
-	; if the target's evasion is greater than the user's accuracy,
+	; Sacred Sword ignores evasion changes
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SACRED_SWORD
+	ret z
+
+	; if the target's evasion has changed,
 	; check the target's foresight status
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
 	call GetBattleVar
@@ -2848,10 +2852,13 @@ PlayerAttackDamage:
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
 	jr z, .foul_play
+	cp EFFECT_SACRED_SWORD
+	jr z, .sacred_sword
 
+.check_physicalcrit
 	ld hl, wBattleMonAttack
 	call CheckDamageStatsCritical
-	jr c, .thickclub
+	jr c, .thickclub ; Use boosted stats
 
 	ld hl, wEnemyDefense
 	ld a, [hli]
@@ -2888,7 +2895,7 @@ PlayerAttackDamage:
 .specialcrit
 	ld hl, wBattleMonSpclAtk
 	call CheckDamageStatsCritical
-	jr c, .lightball
+	jr c, .lightball ; Use boosted stats
 
 	ld hl, wEnemySpDef
 	ld a, [hli]
@@ -2917,9 +2924,10 @@ PlayerAttackDamage:
 	ret
 
 .foul_play
+; Use enemy's attack stat for Foul Play
 	ld hl, wEnemyMonAttack
 	call CheckDamageStatsCritical
-	jr c, .thickclub
+	jr c, .thickclub ; Use boosted stats
 
 	ld hl, wEnemyDefense
 	ld a, [hli]
@@ -2927,6 +2935,14 @@ PlayerAttackDamage:
 	ld c, [hl]
 	ld hl, wEnemyAttack
 	jr .thickclub
+
+.sacred_sword
+; Ignore enemy's defense changes for Sacred Sword
+	ld hl, wEnemyDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	jr .check_physicalcrit
 
 TruncateHL_BC:
 .loop
@@ -3146,10 +3162,13 @@ EnemyAttackDamage:
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
 	jr z, .foul_play
+	cp EFFECT_SACRED_SWORD
+	jr z, .sacred_sword
 
+.check_physicalcrit
 	ld hl, wEnemyMonAttack
 	call CheckDamageStatsCritical
-	jr c, .thickclub
+	jr c, .thickclub ; Use boosted stats
 
 	ld hl, wPlayerDefense
 	ld a, [hli]
@@ -3186,7 +3205,7 @@ EnemyAttackDamage:
 .specialcrit
 	ld hl, wEnemyMonSpclAtk
 	call CheckDamageStatsCritical
-	jr c, .lightball
+	jr c, .lightball ; Use boosted stats
 	ld hl, wPlayerSpDef
 	ld a, [hli]
 	ld b, a
@@ -3212,9 +3231,10 @@ EnemyAttackDamage:
 	ret
 
 .foul_play
+; Use player's attack stat for Foul Play
 	ld hl, wBattleMonAttack
 	call CheckDamageStatsCritical
-	jr c, .thickclub
+	jr c, .thickclub ; Use boosted stats
 
 	ld hl, wPlayerDefense
 	ld a, [hli]
@@ -3222,6 +3242,14 @@ EnemyAttackDamage:
 	ld c, [hl]
 	ld hl, wPlayerAttack
 	jr .thickclub
+
+.sacred_sword
+; Ignore player's defense changes for Sacred Sword
+	ld hl, wPlayerDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	jr .check_physicalcrit
 
 INCLUDE "engine/battle/move_effects/beat_up.asm"
 
@@ -7138,6 +7166,10 @@ BattleCommand_BrickBreak:
 
 BattleCommand_TrapHit:
 	farcall TrapHitEffect
+	ret
+
+BattleCommand_DynamoRush:
+	farcall DynamoRushEffect
 	ret
 
 SafeCheckSafeguard:
