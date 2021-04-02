@@ -399,6 +399,15 @@ MoveDescriptions1:
 	dw FreezingGlareDescription
 	dw PluckDescription
 	dw RoostDescription
+	dw BrickBreakDescription
+	dw ThunderousKickDescription
+	dw FieryWrathDescription
+	dw DragonTailDescription
+	dw DragonRushDescription
+	dw AuraSphereDescription
+	dw AnchorShotDescription
+	dw EerieChimeDescription
+	dw NailDownDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1133,7 +1142,7 @@ ProtectDescription:
 
 MachPunchDescription:
 	db   "A fast punch that"
-	next "lands first.@"
+	next "strikes first.@"
 
 ScaryFaceDescription:
 	db   "Sharply reduces"
@@ -1967,4 +1976,44 @@ PluckDescription:
 RoostDescription:
 	db   "Restores HP by 1/2"
 	next "the user's max HP.@"
+
+BrickBreakDescription:
+	db   "Breaks screens"
+	next "like REFLECT.@"
+
+ThunderousKickDescription:
+	db   "An attack that"
+	next "lowers DEFENSE.@"
+
+FieryWrathDescription:
+	db   "An aura that may"
+	next "cause flinching.@"
+
+DragonTailDescription:
+	db   "Knocks away foes"
+	next "to end battle.@"
+
+DragonRushDescription:
+	db   "A tackle that may"
+	next "cause flinching.@"
+
+AuraSphereDescription:
+	db   "A blast of power"
+	next "that never misses.@"
+
+AnchorShotDescription:
+	db   "An attack that"
+	next "prevents escape.@"
+
+EerieChimeDescription:
+	db   "Successive chimes"
+	next "raise power.@"
+
+; FlashStrikeDescription:
+	; db   "Strikes first with"
+	; next "lightning speed.@"
+
+NailDownDescription:
+	db   "Traps the foe for"
+	next "2-5 turns.@"
 		;"123456789123456789"

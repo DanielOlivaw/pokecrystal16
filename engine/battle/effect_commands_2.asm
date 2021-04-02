@@ -84,3 +84,7 @@ INCLUDE "engine/battle/move_effects/freeze_dry.asm"
 INCLUDE "engine/battle/move_effects/psycho_shift.asm"
 
 INCLUDE "engine/battle/move_effects/roost.asm"
+
+INCLUDE "engine/battle/move_effects/brick_break.asm"
+
+INCLUDE "engine/battle/move_effects/trap_hit.asm"

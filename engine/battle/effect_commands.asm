@@ -1674,6 +1674,8 @@ BattleCommand_CheckHit:
 	call GetBattleVar
 	cp EFFECT_ALWAYS_HIT
 	ret z
+	cp EFFECT_VITAL_THROW
+	ret z
 	cp EFFECT_MIMIC
 	ret z
 	cp EFFECT_BIDE
@@ -2824,6 +2826,12 @@ PlayerAttackDamage:
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
+
+; Brick Break ignores Reflect/Aurora Veil
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_BRICK_BREAK
+	jr z, .physicalcrit
 
 	ld a, [wEnemyScreens]
 	bit SCREENS_REFLECT, a
@@ -5651,9 +5659,9 @@ BattleCommand_ForceSwitch:
 .trainer
 	call FindAliveEnemyMons
 	jr c, .switch_fail
-	ld a, [wEnemyGoesFirst]
-	and a
-	jr z, .switch_fail
+	; ld a, [wEnemyGoesFirst]
+	; and a
+	; jr z, .switch_fail
 	call UpdateEnemyMonInParty
 	ld a, $1
 	ld [wKickCounter], a
@@ -5745,9 +5753,9 @@ BattleCommand_ForceSwitch:
 	call CheckPlayerHasMonToSwitchTo
 	jr c, .fail
 
-	ld a, [wEnemyGoesFirst]
-	cp $1
-	jr z, .switch_fail
+	; ld a, [wEnemyGoesFirst]
+	; cp $1
+	; jr z, .switch_fail
 
 	call UpdateBattleMonInParty
 	ld a, $1
@@ -5795,6 +5803,11 @@ BattleCommand_ForceSwitch:
 	jp CallBattleCore
 
 .fail
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FORCE_SWITCH_HIT
+	ret z
+
 	call BattleCommand_LowerSub
 	call BattleCommand_MoveDelay
 	call BattleCommand_RaiseSub
@@ -5805,9 +5818,16 @@ BattleCommand_ForceSwitch:
 	call SetBattleDraw
 	ld a, $1
 	ld [wKickCounter], a
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FORCE_SWITCH_HIT
+	jr z, .skip_animation
+
 	call AnimateCurrentMove
 	ld c, 20
 	call DelayFrames
+.skip_animation
 	pop af
 
 	ld hl, FledInFearText
@@ -6328,6 +6348,7 @@ BattleCommand_TrapTarget:
 	dw CLAMP,     ClampedByText     ; 'was CLAMPED by'
 	dw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 	dw SAND_TOMB, SandTombTrapText  ; 'was trapped!'
+	dw NAIL_DOWN, NailDownTrapText  ; 'was NAILED DOWN by'
 
 INCLUDE "engine/battle/move_effects/mist.asm"
 
@@ -7109,6 +7130,14 @@ BattleCommand_PsychoShift:
 
 BattleCommand_Roost:
 	farcall RoostEffect
+	ret
+
+BattleCommand_BrickBreak:
+	farcall BrickBreakEffect
+	ret
+
+BattleCommand_TrapHit:
+	farcall TrapHitEffect
 	ret
 
 SafeCheckSafeguard:

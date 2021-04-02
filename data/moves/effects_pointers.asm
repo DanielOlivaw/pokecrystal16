@@ -212,3 +212,8 @@ MoveEffectsPointers:
 	dw AttackDown
 	dw PsychoShift
 	dw Roost
+	dw BrickBreak
+	dw NormalHit
+	dw ForceSwitchHit
+	dw TrapHit
+	dw NailDown

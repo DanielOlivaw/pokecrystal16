@@ -193,6 +193,8 @@ ENDM
 	command workup                  ; ba
 	command psychoshift             ; bb
 	command roost                   ; bc
+	command brickbreak              ; bd
+	command traphit                 ; be
 
 	enum_start $fe
 	command endturn                 ; fe

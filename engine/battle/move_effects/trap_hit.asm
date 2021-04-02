@@ -1,15 +1,20 @@
-BattleCommand_ArenaTrap:
-; arenatrap
+TrapHitEffect:
+; anchor shot and spirit shackle
+
+; Doesn't activate if the attack missed.
+	ld a, [wAttackMissed]
+	and a
+	ret nz
 
 ; Doesn't work on an absent opponent.
 	farcall CheckHiddenOpponent
-	jr nz, .failed
+	ret nz
 
 ; Don't trap if the opponent is already trapped.
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr
 	bit SUBSTATUS_CANT_RUN, [hl]
-	jr nz, .failed
+	ret nz
 	
 ; Doesn't work on ghost-types.
 	ld de, wEnemyMonType1
@@ -20,19 +25,13 @@ BattleCommand_ArenaTrap:
 .CheckGhost:
 	ld a, [de]
 	cp GHOST
-	jr z, .failed
+	ret z
 	inc de
 	ld a, [de]
 	cp GHOST
-	jr z, .failed
+	ret z
 
 ; Otherwise trap the opponent.
 	set SUBSTATUS_CANT_RUN, [hl]
-	farcall AnimateCurrentMove
 	ld hl, CantEscapeNowText
 	jp StdBattleTextbox
-
-.failed
-	farcall AnimateFailedMove
-	farcall PrintButItFailed
-	ret

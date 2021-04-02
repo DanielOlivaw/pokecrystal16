@@ -400,6 +400,15 @@
 	const FREEZING_GLARE
 	const PLUCK
 	const ROOST
+	const BRICK_BREAK
+	const THUNDEROUS_KICK
+	const FIERY_WRATH
+	const DRAGON_TAIL
+	const DRAGON_RUSH
+	const AURA_SPHERE
+	const ANCHOR_SHOT
+	const EERIE_CHIME
+	const NAIL_DOWN
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

@@ -526,9 +526,9 @@ BattleText_UserWasReleasedFromStringBuffer1:
 	prompt
 
 UsedBindText:
-	text "<USER>"
+	text "<TARGET>"
 	line "was squeezed by"
-	cont "<TARGET>!"
+	cont "<USER>!"
 	prompt
 
 WhirlpoolTrapText:
@@ -542,6 +542,12 @@ SandTombTrapText:
 	text "<TARGET>"
 	line "became trapped by"
 	cont "SAND TOMB!"
+	prompt
+
+NailDownTrapText:
+	text "<TARGET>"
+	line "was NAILED DOWN by"
+	cont "<USER>!"
 	prompt
 
 WrappedByText:
@@ -1022,15 +1028,22 @@ AuroraVeilEffectText:
 	prompt
 
 BrokeLightScreenText:
-	text "<USER>"
-	line "broke the target's"
-	cont "LIGHT SCREEN!"
+	text "<TARGET>'s"
+	line "LIGHT SCREEN"
+	cont "shattered!"
 	prompt
 
 BrokeReflectText:
-	text "<USER>"
-	line "broke the target's"
-	cont "REFLECT!"
+	text "<TARGET>'s"
+	line "REFLECT shattered!"
+	prompt
+
+		;"123456789123456789"
+
+BrokeAuroraVeilText:
+	text "<TARGET>'s"
+	line "AURORA VEIL"
+	cont "shattered!"
 	prompt
 
 NothingHappenedText:

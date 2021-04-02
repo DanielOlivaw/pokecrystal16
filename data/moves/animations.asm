@@ -421,6 +421,15 @@ BattleAnimations::
 	dw BattleAnim_FreezingGlare
 	dw BattleAnim_Pluck
 	dw BattleAnim_Roost
+	dw BattleAnim_BrickBreak
+	dw BattleAnim_ThunderousKick
+	dw BattleAnim_FieryWrath
+	dw BattleAnim_DragonTail
+	dw BattleAnim_DragonRush
+	dw BattleAnim_AuraSphere
+	dw BattleAnim_AnchorShot
+	dw BattleAnim_EerieChime
+	dw BattleAnim_NailDown
 	
 	dw BattleAnim_SweetScent2
 
@@ -804,6 +813,15 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_AnchorShot:
+BattleAnim_EerieChime:
+BattleAnim_NailDown:
+BattleAnim_DragonTail:
+BattleAnim_DragonRush:
+BattleAnim_AuraSphere:
+BattleAnim_BrickBreak:
+BattleAnim_ThunderousKick:
+BattleAnim_FieryWrath:
 BattleAnim_Roost:
 BattleAnim_PsychoShift:
 BattleAnim_FreezingGlare:

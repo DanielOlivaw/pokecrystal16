@@ -192,3 +192,5 @@ BattleCommandPointers:
 	dw BattleCommand_WorkUp
 	dw BattleCommand_PsychoShift
 	dw BattleCommand_Roost
+	dw BattleCommand_BrickBreak
+	dw BattleCommand_TrapHit
