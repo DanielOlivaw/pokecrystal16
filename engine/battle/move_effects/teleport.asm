@@ -16,9 +16,9 @@ BattleCommand_Teleport:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .failed
 ; Only need to check these next things if it's your turn
-	ldh a, [hBattleTurn]
-	and a
-	jr nz, .enemy_turn
+	; ldh a, [hBattleTurn]
+	; and a
+	; jr nz, .enemy_turn
 ; Can't teleport from a trainer battle
 	ld a, [wBattleMode]
 	dec a
@@ -50,26 +50,26 @@ BattleCommand_Teleport:
 	call AnimateFailedMove
 	jp PrintButItFailed
 
-.enemy_turn
-	ld a, [wBattleMode]
-	dec a
-	jr nz, .failed
-	ld a, [wBattleMonLevel]
-	ld b, a
-	ld a, [wCurPartyLevel]
-	cp b
-	jr nc, .run_away
-	add b
-	ld c, a
-	inc c
-.loop_enemy
-	call BattleRandom
-	cp c
-	jr nc, .loop_enemy
-	srl b
-	srl b
-	cp b
-	jr c, .failed
+; .enemy_turn
+	; ld a, [wBattleMode]
+	; dec a
+	; jr nz, .failed
+	; ld a, [wBattleMonLevel]
+	; ld b, a
+	; ld a, [wCurPartyLevel]
+	; cp b
+	; jr nc, .run_away
+	; add b
+	; ld c, a
+	; inc c
+; .loop_enemy
+	; call BattleRandom
+	; cp c
+	; jr nc, .loop_enemy
+	; srl b
+	; srl b
+	; cp b
+	; jr c, .failed
 .run_away
 	call UpdateBattleMonInParty
 	xor a

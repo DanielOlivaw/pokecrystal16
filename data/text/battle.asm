@@ -104,6 +104,12 @@ PerishCountText:
 	text "!"
 	prompt
 
+AbsorbedNutrientsText:
+	text "<TARGET>"
+	line "absorbed nutrients"
+	cont "with its roots!"
+	prompt
+
 BattleText_TargetRecoveredWithItem:
 	text "<TARGET>"
 	line "recovered with"
@@ -896,6 +902,18 @@ MistText:
 ProtectedByMistText:
 	text "<TARGET>'s"
 	line "protected by MIST."
+	prompt
+
+PlantedRootsText:
+	text_pause
+	text "<USER>"
+	line "planted its roots!"
+	prompt
+
+ToreUpRootsText:
+	text_pause
+	text "<USER>"
+	line "tore up its roots!"
 	prompt
 
 GettingPumpedText:

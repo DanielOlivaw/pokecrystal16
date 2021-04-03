@@ -437,6 +437,10 @@ BattleAnimations::
 	dw BattleAnim_BrightMoss
 	dw BattleAnim_ShieldBash
 	dw BattleAnim_SacredSword
+	dw BattleAnim_Ingrain
+	dw BattleAnim_Uproot
+	dw BattleAnim_MagicalLeaf
+	dw BattleAnim_ChipAway
 	
 	dw BattleAnim_SweetScent2
 
@@ -820,6 +824,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_MagicalLeaf:
+BattleAnim_ChipAway:
+BattleAnim_Uproot:
+BattleAnim_Ingrain:
 BattleAnim_BrightMoss:
 BattleAnim_ShieldBash:
 BattleAnim_SacredSword:

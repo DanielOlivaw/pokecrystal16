@@ -416,6 +416,10 @@
 	const BRIGHT_MOSS
 	const SHIELD_BASH
 	const SACRED_SWORD
+	const INGRAIN
+	const UPROOT
+	const MAGICAL_LEAF
+	const CHIP_AWAY
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

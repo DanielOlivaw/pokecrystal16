@@ -196,3 +196,4 @@ BattleCommandPointers:
 	dw BattleCommand_TrapHit
 	dw BattleCommand_DynamoRush
 	dw BattleCommand_BrightMoss
+	dw BattleCommand_Uproot

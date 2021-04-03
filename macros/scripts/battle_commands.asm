@@ -197,6 +197,7 @@ ENDM
 	command traphit                 ; be
 	command dynamorush              ; bf
 	command brightmoss              ; c0
+	command uproot                  ; c1
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -223,3 +223,5 @@ MoveEffectsPointers:
 	dw StatusTargetSelf
 	dw ConditionalBoost
 	dw NormalHit
+	dw StatusTargetSelf
+	dw Uproot

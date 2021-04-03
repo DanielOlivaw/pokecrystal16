@@ -2786,6 +2786,7 @@ NailDown:
 	usedmovetext
 	doturn
 	checkhit
+	effectchance
 	critical
 	damagestats
 	damagecalc
@@ -2847,5 +2848,28 @@ ShatterClaw:
 	docurestatus
 	buildopponentrage
 	defrostopponent
+	kingsrock
+	endmove
+
+Uproot:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	recoil
+	uproot
+	checkfaint
+	buildopponentrage
 	kingsrock
 	endmove

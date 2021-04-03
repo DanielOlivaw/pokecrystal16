@@ -351,6 +351,7 @@ HandleBetweenTurnEffects:
 .NoMoreFaintingConditions:
 	call EndRoostEffect
 	call HandleLeftovers
+	call HandleIngrain
 	call HandleMysteryberry
 	call HandleDefrost
 	call HandleSafeguard
@@ -871,6 +872,10 @@ TryEnemyFlee:
 
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .Stay
+
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_INGRAINED, a
 	jr nz, .Stay
 
 	ld a, [wEnemyWrapCount]
@@ -1451,7 +1456,11 @@ HandleLeftovers:
 	ld a, b
 	cp HELD_LEFTOVERS
 	ret nz
+	call RestoreSixteenthMaxHP
+	ld hl, BattleText_TargetRecoveredWithItem
+	jp StdBattleTextbox
 
+RestoreSixteenthMaxHP:
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
 	and a
@@ -1474,8 +1483,33 @@ HandleLeftovers:
 .restore
 	call GetSixteenthMaxHP
 	call SwitchTurnCore
-	call RestoreHP
-	ld hl, BattleText_TargetRecoveredWithItem
+	jp RestoreHP
+
+HandleIngrain:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+; Player first
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+	call .do_it
+	
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	call .do_it
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+.do_it
+	bit SUBSTATUS_INGRAINED, [hl]
+	ret z
+	call RestoreSixteenthMaxHP
+	ret z
+	ld hl, AbsorbedNutrientsText
 	jp StdBattleTextbox
 
 HandleMysteryberry:
@@ -3985,6 +4019,10 @@ TryToRunAwayFromBattle:
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
 
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jp nz, .cant_escape
+
 	ld a, [wPlayerWrapCount]
 	and a
 	jp nz, .cant_escape
@@ -4435,12 +4473,6 @@ SpikesDamage:
 	call WaitBGMap
 	jr .pop
 
-.pop
-	pop de
-	pop hl
-	pop bc
-	ret
-
 .StealthRock
 
 ; End if there aren't rocks down.
@@ -4472,28 +4504,37 @@ SpikesDamage:
 
 .StealthRockQuarterDamage ; double resistance to rock
 	call GetThirtySecondMaxHP
-
-.StealthRockSubtractHP
 	call SubtractHPFromTarget
-
 	call WaitBGMap
 	jr .pop
 
 .StealthRockQuadrupleDamage ; double weakness to rock
 	call GetHalfMaxHP
-	jr .StealthRockSubtractHP
+	call SubtractHPFromTarget
+	call WaitBGMap
+	jr .pop
 
 .StealthRockDoubleDamage ; single weakness to rock
 	call GetQuarterMaxHP
-	jr .StealthRockSubtractHP
+	call SubtractHPFromTarget
+	call WaitBGMap
+	jr .pop
 
 .StealthRockNeutralDamage ; neutral matchup to rock
 	call GetEighthMaxHP
-	jr .StealthRockSubtractHP
+	call SubtractHPFromTarget
+	call WaitBGMap
+	jr .pop
 
 .StealthRockHalfDamage ; single resistance to rock
 	call GetSixteenthMaxHP
-	jr .StealthRockSubtractHP
+	call SubtractHPFromTarget
+	call WaitBGMap
+.pop
+	pop de
+	pop hl
+	pop bc
+	ret
 
 .ToxicSpikes:
 
@@ -4535,13 +4576,13 @@ SpikesDamage:
 	farcall GetUserItem
 	ld a, d
 	cp HELD_PREVENT_POISON
-	jp z, .pop
+	jr z, .pop
 
 ; Toxic Spikes can't poison a Pokemon that already has a status condition
 	ld a, BATTLE_VARS_STATUS
 	call GetBattleVarAddr
 	and a
-	jp nz, .pop
+	jr nz, .pop
 
 ; Apply poison
 	set PSN, [hl]
@@ -4553,7 +4594,7 @@ SpikesDamage:
 	call SwitchTurnCore
 	call StdBattleTextbox
 	call SwitchTurnCore
-	jp .pop
+	jr .pop
 
 .AbsorbToxicSpikes:
 ; Poison/Flying Pokemon won't absorb toxic spikes
@@ -4569,7 +4610,7 @@ SpikesDamage:
 	res SCREENS_TOXIC_SPIKES, [hl]
 	ld hl, AbsorbedToxicSpikesText
 	call StdBattleTextbox
-	jp .pop
+	jr .pop
 
 .StickyWeb:
 
@@ -5621,6 +5662,9 @@ TryPlayerSwitch:
 	jr nz, .trapped
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .trapped
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_INGRAINED, a
 	jr z, .try_switch
 
 .trapped
@@ -8601,7 +8645,7 @@ BattleIntro:
 	ld hl, rLCDC
 	res rLCDC_WINDOW_TILEMAP, [hl] ; select 9800-9BFF
 	call InitBattleDisplay
-	call BattleStartMessage
+	farcall BattleStartMessage
 	ld hl, rLCDC
 	set rLCDC_WINDOW_TILEMAP, [hl] ; select 9C00-9FFF
 	xor a
@@ -9612,86 +9656,4 @@ CopyBackpic:
 	ld e, a
 	dec b
 	jr nz, .outer_loop
-	ret
-
-BattleStartMessage:
-	ld a, [wBattleMode]
-	dec a
-	jr z, .wild
-
-	ld de, SFX_SHINE
-	call PlaySFX
-	call WaitSFX
-
-	ld c, 20
-	call DelayFrames
-
-	farcall Battle_GetTrainerName
-
-	ld hl, WantsToBattleText
-	jr .PlaceBattleStartText
-
-.wild
-	call BattleCheckEnemyShininess
-	jr nc, .not_shiny
-
-	xor a
-	ld [wNumHits], a
-	ld a, 1
-	ldh [hBattleTurn], a
-	ld a, 1
-	ld [wBattleAnimParam], a
-	ld de, ANIM_SEND_OUT_MON
-	call Call_PlayBattleAnim
-
-.not_shiny
-	farcall CheckSleepingTreeMon
-	jr c, .skip_cry
-
-	; farcall CheckBattleScene
-	; jr c, .cry_no_anim
-
-	; hlcoord 12, 0
-	; ld d, $0
-	; ld e, ANIM_MON_NORMAL
-	; predef AnimateFrontpic
-	; jr .skip_cry ; cry is played during the animation
-
-; .cry_no_anim
-	ld a, $f
-	ld [wCryTracks], a
-	ld a, [wTempEnemyMonSpecies]
-	call PlayStereoCry
-
-.skip_cry
-	ld a, [wBattleType]
-	cp BATTLETYPE_FISH
-	jr nz, .NotFishing
-
-	farcall StubbedTrainerRankings_HookedEncounters
-
-	ld hl, HookedPokemonAttackedText
-	jr .PlaceBattleStartText
-
-.NotFishing:
-	ld hl, PokemonFellFromTreeText
-	cp BATTLETYPE_TREE
-	jr z, .PlaceBattleStartText
-	ld hl, WildCelebiAppearedText
-	cp BATTLETYPE_CELEBI
-	jr z, .PlaceBattleStartText
-	ld hl, WildPokemonAppearedText
-
-.PlaceBattleStartText:
-	push hl
-	farcall BattleStart_TrainerHuds
-	pop hl
-	call StdBattleTextbox
-
-	call IsMobileBattle2
-	ret nz
-
-	ld c, $2 ; start
-	farcall Mobile_PrintOpponentBattleMessage
-
 	ret

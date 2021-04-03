@@ -176,6 +176,11 @@ SECTION "Battle Core", ROMX
 INCLUDE "engine/battle/core.asm"
 
 
+SECTION "Battle Core 2", ROMX
+
+INCLUDE "engine/battle/core_2.asm"
+
+
 SECTION "Effect Command Pointers", ROMX
 
 INCLUDE "data/battle/effect_command_pointers.asm"

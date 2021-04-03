@@ -427,4 +427,8 @@ Moves1:
 	move EFFECT_BRIGHT_MOSS,         0, GRASS,    STATUS,   100, 20, 100 ; BRIGHT_MOSS
 	move EFFECT_SHIELD_BASH,        55, STEEL,    PHYSICAL, 100, 15,   0 ; SHIELD_BASH
 	move EFFECT_SACRED_SWORD,       90, FIGHTING, PHYSICAL, 100, 15,   0 ; SACRED_SWORD
+	move EFFECT_INGRAIN,             0, GRASS,    STATUS,   100, 20,   0 ; INGRAIN
+	move EFFECT_UPROOT,             90, GRASS,    PHYSICAL, 100, 15, 100 ; UPROOT
+	move EFFECT_ALWAYS_HIT,         60, GRASS,    SPECIAL,  100, 20,   0 ; MAGICAL_LEAF
+	move EFFECT_SACRED_SWORD,       70, NORMAL,   PHYSICAL, 100, 20,   0 ; CHIP_AWAY
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

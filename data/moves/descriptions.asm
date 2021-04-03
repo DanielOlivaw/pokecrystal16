@@ -415,6 +415,10 @@ MoveDescriptions1:
 	dw BrightMossDescription
 	dw ShieldBashDescription
 	dw SacredSwordDescription
+	dw IngrainDescription
+	dw UprootDescription
+	dw MagicalLeafDescription
+	dw ChipAwayDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2047,4 +2051,21 @@ ShieldBashDescription:
 SacredSwordDescription:
 	db   "Ignores the foe's"
 	next "stat changes.@"
+
+IngrainDescription:
+	db   "Roots restore HP"
+	next "but stop escape.@"
+
+UprootDescription:
+	db   "Tears up roots to"
+	next "tackle the foe.@"
+
+MagicalLeafDescription:
+	db   "Curious leaves"
+	next "that never miss.@"
+
+ChipAwayDescription:
+	db   "Ignores the foe's"
+	next "stat changes.@"
+
 		;"123456789123456789"

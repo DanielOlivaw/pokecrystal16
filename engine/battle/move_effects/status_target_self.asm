@@ -24,6 +24,8 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_ReflectType
 	cp EFFECT_BRIGHT_MOSS
 	jp z, BattleCommand_BrightMoss
+	cp EFFECT_INGRAIN
+	jp z, BattleCommand_Ingrain
 
 	cp EFFECT_SPIKES
 	jp z, BattleCommand_Spikes

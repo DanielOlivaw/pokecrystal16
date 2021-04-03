@@ -1,10 +1,9 @@
 BattleCommand_FocusEnergy:
-; focusenergy
-
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVarAddr
 	bit SUBSTATUS_FOCUS_ENERGY, [hl]
 	jr nz, .already_pumped
+
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
 	farcall AnimateCurrentMove
 	ld hl, GettingPumpedText

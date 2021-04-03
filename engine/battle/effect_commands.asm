@@ -5649,17 +5649,26 @@ BattleCommand_ForceSwitch:
 	ldh a, [hBattleTurn]
 	and a
 	jp nz, .force_player_switch
+
+; force enemy switch
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jp nz, .fail
+
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .missed
+
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer
+
 	ld a, [wCurPartyLevel]
 	ld b, a
 	ld a, [wBattleMonLevel]
 	cp b
 	jr nc, .wild_force_flee
+
 	add b
 	ld c, a
 	inc c
@@ -5737,6 +5746,10 @@ BattleCommand_ForceSwitch:
 	jp .fail
 
 .force_player_switch
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jp nz, .fail
+
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .player_miss
@@ -7170,6 +7183,10 @@ BattleCommand_TrapHit:
 
 BattleCommand_DynamoRush:
 	farcall DynamoRushEffect
+	ret
+
+BattleCommand_Uproot:
+	farcall UprootEffect
 	ret
 
 SafeCheckSafeguard:

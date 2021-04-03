@@ -94,3 +94,7 @@ INCLUDE "engine/battle/move_effects/dynamo_rush.asm"
 INCLUDE "engine/battle/move_effects/bright_moss.asm"
 
 INCLUDE "engine/battle/move_effects/shield_bash.asm"
+
+INCLUDE "engine/battle/move_effects/ingrain.asm"
+
+INCLUDE "engine/battle/move_effects/uproot.asm"

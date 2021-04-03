@@ -409,4 +409,8 @@ MoveNames::
 	db "BRIGHT MOSS@"
 	db "SHIELD BASH@"
 	db "SACRED SWORD@"
+	db "INGRAIN@"
+	db "UPROOT@"
+	db "MAGICAL LEAF@"
+	db "CHIP AWAY@"
 	  ;"123456123456@"

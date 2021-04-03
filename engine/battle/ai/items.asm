@@ -16,6 +16,10 @@ AI_SwitchOrTryItem:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, DontSwitch
 
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jr nz, DontSwitch
+
 	ld a, [wEnemyWrapCount]
 	and a
 	jr nz, DontSwitch
@@ -145,10 +149,10 @@ SwitchSometimes:
 	ld [wEnemySwitchMonIndex], a
 	jp AI_TrySwitch
 
-CheckSubstatusCantRun:
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_CANT_RUN, a
-	ret
+; CheckSubstatusCantRun:
+	; ld a, [wEnemySubStatus5]
+	; bit SUBSTATUS_CANT_RUN, a
+	; ret
 
 AI_TryItem:
 	; items are not allowed in the BattleTower
