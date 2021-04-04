@@ -709,29 +709,34 @@ UnknownText_0x1c0d0e::
 	text "<USER>@"
 	text_end
 
-UnknownText_0x1c0d12::
+MadeAWhirlwindText::
 	text_start
 	line "made a whirlwind!"
 	prompt
 
-UnknownText_0x1c0d26::
+TookInSunlightText::
 	text_start
 	line "took in sunlight!"
 	prompt
 
-UnknownText_0x1c0d3a::
+LoweredItsHeadText::
 	text_start
 	line "lowered its head!"
 	prompt
 
-UnknownText_0x1c0d5c::
+FlewUpHighText::
 	text_start
 	line "flew up high!"
 	prompt
 
-UnknownText_0x1c0d6c::
+DugAHoleText::
 	text_start
 	line "dug a hole!"
+	prompt
+
+SprangUpText::
+	text_start
+	line "sprang up!"
 	prompt
 
 _ActorNameText::

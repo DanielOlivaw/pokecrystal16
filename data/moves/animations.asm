@@ -445,6 +445,21 @@ BattleAnimations::
 	dw BattleAnim_Uproar
 	dw BattleAnim_ShadowSneak
 	dw BattleAnim_Infestation
+	dw BattleAnim_ToxicThread
+	dw BattleAnim_FellStinger
+	dw BattleAnim_EerieImpulse
+	dw BattleAnim_CottonGuard
+	dw BattleAnim_Bounce
+	dw BattleAnim_FakeTears
+	dw BattleAnim_RockTomb
+	dw BattleAnim_TearfulLook
+	dw BattleAnim_HeadSmash
+	dw BattleAnim_Acrobatics
+	dw BattleAnim_Snarl
+	dw BattleAnim_OdorSleuth
+	dw BattleAnim_Autotomize
+	dw BattleAnim_MirrorShot
+	dw BattleAnim_Feint
 	
 	dw BattleAnim_SweetScent2
 
@@ -828,6 +843,21 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Feint:
+BattleAnim_Bounce:
+BattleAnim_FakeTears:
+BattleAnim_RockTomb:
+BattleAnim_TearfulLook:
+BattleAnim_HeadSmash:
+BattleAnim_Acrobatics:
+BattleAnim_Snarl:
+BattleAnim_OdorSleuth:
+BattleAnim_Autotomize:
+BattleAnim_MirrorShot:
+BattleAnim_FellStinger:
+BattleAnim_EerieImpulse:
+BattleAnim_CottonGuard:
+BattleAnim_ToxicThread:
 BattleAnim_Coil:
 BattleAnim_Uproar:
 BattleAnim_ShadowSneak:

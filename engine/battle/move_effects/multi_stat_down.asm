@@ -3,11 +3,13 @@ MultiStatDownEffect:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_ATK_DEF_DOWN
-	jr z, TickleEffect
+	jr z, BattleCommand_AttackDefenseDown
+	cp EFFECT_ATK_SP_ATK_DOWN
+	jp z, BattleCommand_AttackSpecialAttackDown
 
 ; fallthrough
 
-VenomDrenchEffect:
+BattleCommand_VenomDrench:
 ; get the opponent's status condition
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
@@ -23,12 +25,12 @@ VenomDrenchEffect:
 
 .try_lower_stats
 ; if poisoned, lower attack, special attack, and speed
-	call .lower_attack
+	call LowerAttack
 	ld a, [wFailedMessage]
 	and a
 	jr nz, .cant_lower_one
-	call .lower_special_attack
-	call .lower_speed
+	call LowerSpecialAttack
+	call LowerSpeed
 .done
 	xor a
 	ld [wFailedMessage], a
@@ -36,15 +38,15 @@ VenomDrenchEffect:
 
 ; Only fails if all three stats are at minimum levels
 .cant_lower_one
-	call .lower_special_attack
+	call LowerSpecialAttack
 	ld a, [wFailedMessage]
 	and a
 	jr nz, .cant_lower_two
-	call .lower_speed
+	call LowerSpeed
 	jr .done
 
 .cant_lower_two
-	call .lower_speed
+	call LowerSpeed
 	ld a, [wFailedMessage]
 	and a
 	jr z, .done
@@ -53,31 +55,35 @@ VenomDrenchEffect:
 	ld [wAttackMissed], a
 	ret
 
-.lower_attack
+LowerAttack:
 	ld a, ATTACK
 	ld [wLoweredStat], a
 	farcall StatDownFar
 	ret
 
-.lower_special_attack
+LowerDefense:
+	ld a, DEFENSE
+	ld [wLoweredStat], a
+	farcall StatDownFar
+	ret
+
+LowerSpecialAttack:
 	ld a, SP_ATTACK
 	ld [wLoweredStat], a
 	farcall StatDownFar
 	ret
 
-.lower_speed
+LowerSpeed:
 	ld a, SPEED
 	ld [wLoweredStat], a
 	farcall StatDownFar
 	ret
 
-TickleEffect:
+BattleCommand_AttackDefenseDown:
 ; attackdefensedown
 
 ; Try to lower attack
-	ld a, ATTACK
-	ld [wLoweredStat], a
-	farcall StatDownFar
+	call LowerAttack
 
 ; If that fails, we can still try to lower defense
 	ld a, [wFailedMessage]
@@ -85,9 +91,7 @@ TickleEffect:
 	jr nz, .cant_lower_attack
 
 ; Try to lower defense
-	ld a, DEFENSE
-	ld [wLoweredStat], a
-	farcall StatDownFar
+	call LowerDefense
 
 .done
 	xor a
@@ -96,9 +100,40 @@ TickleEffect:
 
 .cant_lower_attack
 ; Try to lower defense
-	ld a, DEFENSE
-	ld [wLoweredStat], a
-	farcall StatDownFar
+	call LowerDefense
+
+; If lowering both stats fails, the move fails
+	ld a, [wFailedMessage]
+	and a
+	jr z, .done
+
+; Move failure
+	ld a, 1
+	ld [wAttackMissed], a
+	ret
+
+BattleCommand_AttackSpecialAttackDown:
+; attackdefensedown
+
+; Try to lower attack
+	call LowerAttack
+
+; If that fails, we can still try to lower special attack
+	ld a, [wFailedMessage]
+	and a
+	jr nz, .cant_lower_attack
+
+; Try to lower special attack
+	call LowerSpecialAttack
+
+.done
+	xor a
+	ld [wFailedMessage], a
+	ret
+
+.cant_lower_attack
+; Try to lower special attack
+	call LowerSpecialAttack
 
 ; If lowering both stats fails, the move fails
 	ld a, [wFailedMessage]
@@ -119,6 +154,8 @@ MultiStatDownMessage:
 	call GetBattleVar
 	cp EFFECT_ATK_DEF_DOWN
 	jr z, .atk_def_down
+	cp EFFECT_ATK_SP_ATK_DOWN
+	jr z, .atk_sp_atk_down
 
 ; Venom Drench
 	ld a, ATTACK
@@ -138,6 +175,16 @@ MultiStatDownMessage:
 	ld [wLoweredStat], a
 	farcall BattleCommand_StatDownMessage
 	ld a, DEFENSE
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+	ret
+
+; Tearful Look
+.atk_sp_atk_down
+	ld a, ATTACK
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+	ld a, SP_ATTACK
 	ld [wLoweredStat], a
 	farcall BattleCommand_StatDownMessage
 	ret

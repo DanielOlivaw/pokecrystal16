@@ -2897,3 +2897,43 @@ Uproar:
 	kingsrock
 	uproarstate
 	endmove
+
+PoisonSpeedDown:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	speeddown
+	lowersub
+	statdownanim
+	raisesub
+	statdownmessage
+	statdownfailtext
+	checksafeguard
+	poison
+	endmove
+
+Bounce:
+	checkcharge
+	checkobedience
+	doturn
+	charge
+	usedmovetext
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanimnosub
+	raisesub
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	paralyzetarget
+	endmove

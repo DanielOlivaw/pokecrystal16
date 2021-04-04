@@ -372,6 +372,7 @@ CantMove:
 
 .fly_dig_moves
 	dw FLY
+	dw BOUNCE
 	dw DIG
 	dw -1
 
@@ -1127,6 +1128,7 @@ BattleCommand_DoTurn:
 	db EFFECT_BIDE
 	db EFFECT_RAMPAGE
 	db EFFECT_UPROAR
+	db EFFECT_BOUNCE
 	db -1
 
 CheckMimicUsed:
@@ -1707,6 +1709,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_RESET_STATS_HIT
 	ret z
+	cp EFFECT_ATK_SP_ATK_DOWN
+	ret z
 
 	call .StatModifiers
 
@@ -1799,6 +1803,14 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
 	call GetBattleVar
 	bit SUBSTATUS_PROTECT, a
+	ret z
+
+; Feint and Tearful Look can hit even if the target is protected
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FEINT
+	ret z
+	cp EFFECT_ATK_SP_ATK_DOWN
 	ret z
 
 	ld c, 40
@@ -2100,6 +2112,8 @@ BattleCommand_LowerSub:
 	jr z, .charge_turn
 	cp EFFECT_FLY
 	jr z, .charge_turn
+	cp EFFECT_BOUNCE
+	jr z, .charge_turn
 
 .already_charged
 	call .Rampage
@@ -2196,6 +2210,7 @@ BattleCommand_MoveAnimNoSub:
 
 .fly_dig_moves
 	dw FLY
+	dw BOUNCE
 	dw DIG
 	dw -1
 
@@ -2321,6 +2336,7 @@ BattleCommand_FailureText:
 
 .fly_dig_moves
 	dw FLY
+	dw BOUNCE
 	dw DIG
 	dw -1
 
@@ -2606,10 +2622,12 @@ BattleCommand_CheckFaint:
 	ld hl, wBattleMonHP
 
 .got_hp
+; Check whether the opponent's HP has hit zero.
 	ld a, [hli]
 	or [hl]
 	ret nz
 
+; Check for Destiny Bond.
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVar
 	bit SUBSTATUS_DESTINY_BOND, a
@@ -2664,6 +2682,8 @@ BattleCommand_CheckFaint:
 .no_dbond
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_FELL_STINGER
+	jr z, .fell_stinger_attack_boost
 	cp EFFECT_MULTI_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_DOUBLE_HIT
@@ -2680,6 +2700,11 @@ BattleCommand_CheckFaint:
 
 .finish
 	jp EndMoveEffect
+
+.fell_stinger_attack_boost
+	call BattleCommand_AttackUp2
+	call BattleCommand_StatUpMessage
+	jr .finish
 
 BattleCommand_BuildOpponentRage:
 ; buildopponentrage
@@ -2861,6 +2886,7 @@ PlayerAttackDamage:
 
 .physicalcrit
 ; Foul Play uses the target's attack stat instead of the user's.
+; Sacred Sword ignores the target's defense changes.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
@@ -3171,6 +3197,7 @@ EnemyAttackDamage:
 
 .physicalcrit
 ; Foul Play uses the target's attack stat instead of the user's.
+; Sacred Sword ignores the target's defense changes.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
@@ -4218,9 +4245,22 @@ BattleCommand_Poison:
 	jp PrintFogProtection
 
 .apply_poison
+; Don't repeat the animation for Toxic Thread
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_POISON_SPEED_DOWN
+	jr z, .toxic_thread
+.animate_poison
 	call AnimateCurrentMove
+.dont_animate_poison
 	call PoisonOpponent
 	jp RefreshBattleHuds
+	
+.toxic_thread
+	ld a, [wFailedMessage]
+	and a
+	jr z, .dont_animate_poison
+	jr .animate_poison
 
 .check_toxic
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
@@ -5113,6 +5153,19 @@ CheckMist:
 	jr c, .dont_check_mist
 	cp EFFECT_EVASION_DOWN_HIT + 1
 	jr c, .check_mist
+; New move effects that try to lower stats
+	cp EFFECT_PLAY_NICE
+	jr z, .check_mist
+	cp EFFECT_VENOM_DRENCH
+	jr z, .check_mist
+	cp EFFECT_ATK_DEF_DOWN
+	jr z, .check_mist
+	cp EFFECT_ATK_DOWN_PRIORITY
+	jr z, .check_mist
+	cp EFFECT_NAIL_DOWN
+	jr z, .check_mist
+	cp EFFECT_POISON_SPEED_DOWN
+	jr z, .check_mist
 .dont_check_mist
 	xor a
 	ret
@@ -6264,9 +6317,19 @@ BattleCommand_Charge:
 	else
 		ld c, LOW(DIG)
 	endc
-	ld a, h
 	call CompareMove
 	ld a, 1 << SUBSTATUS_UNDERGROUND
+	jr z, .got_move_type
+; I'm not really sure what's going on here
+; or whether I've correctly extrapolated it to Bounce
+	if HIGH(DIG) != HIGH(BOUNCE)
+		ld bc, BOUNCE
+	else
+		ld c, LOW(BOUNCE)
+	endc
+	ld a, h
+	call CompareMove
+	ld a, 1 << SUBSTATUS_FLYING
 	jr z, .got_move_type
 	call BattleCommand_RaiseSub
 	xor a
@@ -6335,31 +6398,37 @@ BattleCommand_Charge:
 	dw SKY_ATTACK, CloakedInHarshLightText
 	dw FLY,        .Fly
 	dw DIG,        .Dig
+	dw BOUNCE,     .Bounce
 	dw -1
 
 .RazorWind:
 ; 'made a whirlwind!'
-	text_far UnknownText_0x1c0d12
+	text_far MadeAWhirlwindText
 	text_end
 
 .Solarbeam:
 ; 'took in sunlight!'
-	text_far UnknownText_0x1c0d26
+	text_far TookInSunlightText
 	text_end
 
 .SkullBash:
 ; 'lowered its head!'
-	text_far UnknownText_0x1c0d3a
+	text_far LoweredItsHeadText
 	text_end
 
 .Fly:
 ; 'flew up high!'
-	text_far UnknownText_0x1c0d5c
+	text_far FlewUpHighText
 	text_end
 
 .Dig:
 ; 'dug a hole!'
-	text_far UnknownText_0x1c0d6c
+	text_far DugAHoleText
+	text_end
+
+.Bounce:
+; 'dug a hole!'
+	text_far SprangUpText
 	text_end
 
 BattleCommand_TrapTarget:
@@ -7237,6 +7306,10 @@ BattleCommand_UproarState:
 	farcall UproarState
 	ret
 
+BattleCommand_ClearHazards:
+	farcall ClearHazardsEffect
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens
@@ -7272,8 +7345,6 @@ INCLUDE "engine/battle/move_effects/magnitude.asm"
 INCLUDE "engine/battle/move_effects/baton_pass.asm"
 
 INCLUDE "engine/battle/move_effects/pursuit.asm"
-
-INCLUDE "engine/battle/move_effects/rapid_spin.asm"
 
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
 

@@ -1,20 +1,12 @@
 BattleCommand_BrightMoss:
 	farcall AnimateCurrentMove
-	call .accuracy_up_player
+	call .accuracy_up
 	farcall BattleCommand_SwitchTurn
-	call .accuracy_up_enemy
+	call .accuracy_up
 	farcall BattleCommand_SwitchTurn
 	ret
 
-.accuracy_up_player
-	ld bc, wPlayerAccLevel
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_accuracy
-	ld bc, wEnemyAccLevel
-	jr .got_accuracy
-
-.accuracy_up_enemy
+.accuracy_up
 	ld bc, wPlayerAccLevel
 	ldh a, [hBattleTurn]
 	and a

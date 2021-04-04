@@ -423,6 +423,21 @@ MoveDescriptions1:
 	dw UproarDescription
 	dw ShadowSneakDescription
 	dw InfestationDescription
+	dw ToxicThreadDescription
+	dw FellStingerDescription
+	dw EerieImpulseDescription
+	dw CottonGuardDescription
+	dw BounceDescription
+	dw FakeTearsDescription
+	dw RockTombDescription
+	dw TearfulLookDescription
+	dw HeadSmashDescription
+	dw AcrobaticsDescription
+	dw SnarlDescription
+	dw OdorSleuthDescription
+	dw AutotomizeDescription
+	dw MirrorShotDescription
+	dw FeintDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1184,7 +1199,7 @@ MudSlapDescription:
 	next "accuracy.@"
 
 OctazookaDescription:
-	db   "An attack that may"
+	db   "Ink spray that may"
 	next "reduce accuracy.@"
 
 SpikesDescription:
@@ -1953,7 +1968,7 @@ BabyDollEyesDescription:
 	next "Always goes first.@"
 
 MuddyWaterDescription:
-	db   "An attack that may"
+	db   "A wave that may"
 	next "reduce accuracy.@"
 
 LavaPlumeDescription:
@@ -2087,5 +2102,65 @@ ShadowSneakDescription:
 InfestationDescription:
 	db   "Infests the foe"
 	next "for 2-5 turns.@"
+
+ToxicThreadDescription:
+	db   "Poisons the foe"
+	next "and lowers SPEED.@"
+
+FellStingerDescription:
+	db   "Boosts ATTACK if"
+	next "the target faints.@"
+
+EerieImpulseDescription:
+	db   "Sharply lowers the"
+	next "foe's SPCL.ATK.@"
+
+CottonGuardDescription:
+	db   "Sharply raises the"
+	next "user's DEFENSE.@"
+
+BounceDescription:
+	db   "1st turn: Bounce"
+	next "2nd turn: Attack@"
+
+FakeTearsDescription:
+	db   "Sharply lowers the"
+	next "foe's SPCL.DEF.@"
+
+RockTombDescription:
+	db   "Hurls boulders to"
+	next "lower SPEED.@"
+
+TearfulLookDescription:
+	db   "Lowers ATTACK and"
+	next "SPCL.ATK.@"
+
+HeadSmashDescription:
+	db   "A tackle that also"
+	next "hurts the user.@"
+
+AcrobaticsDescription:
+	db   "Stronger if not"
+	next "holding an item.@"
+
+SnarlDescription:
+	db   "A loud rant that"
+	next "lowers SPCL.ATK.@"
+
+OdorSleuthDescription:
+	db   "Negates accuracy"
+	next "reduction moves.@"
+
+AutotomizeDescription:
+	db   "Sharply increases"
+	next "the user's SPEED.@"
+
+MirrorShotDescription:
+	db   "A flash that may"
+	next "lower accuracy.@"
+
+FeintDescription:
+	db   "Hits a foe using"
+	next "PROTECT or DETECT.@"
 
 		;"123456789123456789"

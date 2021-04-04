@@ -227,3 +227,9 @@ MoveEffectsPointers:
 	dw Uproot
 	dw StatusTargetSelf
 	dw Uproar
+	dw PoisonSpeedDown
+	dw NormalHit
+	dw Bounce
+	dw MultiStatDown
+	dw ConditionalBoost
+	dw NormalHit

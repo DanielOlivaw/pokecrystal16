@@ -3,6 +3,8 @@ Find_ConditionalBoost:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
+	cp EFFECT_ACROBATICS
+	jp z, BattleCommand_Acrobatics
 	cp EFFECT_BRINE
 	jp z, BattleCommand_Brine
 	cp EFFECT_CURE_STATUS_HIT ; Wake-Up Slap and Smelling Salts

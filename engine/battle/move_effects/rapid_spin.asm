@@ -1,4 +1,4 @@
-BattleCommand_ClearHazards:
+ClearHazardsEffect:
 ; clearhazards
 
 	ld a, BATTLE_VARS_SUBSTATUS4

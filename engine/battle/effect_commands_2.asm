@@ -29,6 +29,8 @@ INCLUDE "engine/battle/move_effects/counter.asm"
 
 INCLUDE "engine/battle/move_effects/arena_trap.asm"
 
+INCLUDE "engine/battle/move_effects/rapid_spin.asm"
+
 INCLUDE "engine/battle/move_effects/rain_dance.asm"
 
 INCLUDE "engine/battle/move_effects/sunny_day.asm"
@@ -102,3 +104,5 @@ INCLUDE "engine/battle/move_effects/uproot.asm"
 INCLUDE "engine/battle/move_effects/coil.asm"
 
 INCLUDE "engine/battle/move_effects/uproar.asm"
+
+INCLUDE "engine/battle/move_effects/acrobatics.asm"

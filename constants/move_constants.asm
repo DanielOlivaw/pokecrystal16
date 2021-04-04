@@ -424,6 +424,21 @@
 	const UPROAR
 	const SHADOW_SNEAK
 	const INFESTATION
+	const TOXIC_THREAD
+	const FELL_STINGER
+	const EERIE_IMPULSE
+	const COTTON_GUARD
+	const BOUNCE
+	const FAKE_TEARS
+	const ROCK_TOMB
+	const TEARFUL_LOOK
+	const HEAD_SMASH
+	const ACROBATICS
+	const SNARL
+	const ODOR_SLEUTH
+	const AUTOTOMIZE
+	const MIRROR_SHOT
+	const FEINT
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
