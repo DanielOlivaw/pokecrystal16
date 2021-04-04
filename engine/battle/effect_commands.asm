@@ -352,6 +352,10 @@ CantMove:
 	and $ff ^ (1 << SUBSTATUS_BIDE | 1 << SUBSTATUS_RAMPAGE | 1 << SUBSTATUS_CHARGED)
 	ld [hl], a
 
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	res SUBSTATUS_UPROAR, [hl]
+
 	call ResetFuryCutterCount
 
 	ld a, BATTLE_VARS_MOVE_ANIM
@@ -1013,13 +1017,19 @@ BattleCommand_DoTurn:
 	and 1 << SUBSTATUS_IN_LOOP | 1 << SUBSTATUS_RAMPAGE | 1 << SUBSTATUS_BIDE
 	ret nz
 
+	; SubStatus4
+	inc de
+
+	ld a, [de]
+	bit SUBSTATUS_UPROAR, a
+	ret nz
+
 	call .consume_pp
 	ld a, b
 	and a
 	jp nz, EndMoveEffect
 
 	; SubStatus5
-	inc de
 	inc de
 
 	ld a, [de]
@@ -1116,6 +1126,7 @@ BattleCommand_DoTurn:
 	db EFFECT_ROLLOUT
 	db EFFECT_BIDE
 	db EFFECT_RAMPAGE
+	db EFFECT_UPROAR
 	db -1
 
 CheckMimicUsed:
@@ -2119,6 +2130,8 @@ BattleCommand_LowerSub:
 	cp EFFECT_ROLLOUT
 	jr z, .rollout_rampage
 	cp EFFECT_RAMPAGE
+	jr z, .rollout_rampage
+	cp EFFECT_UPROAR
 	jr z, .rollout_rampage
 
 	ld a, 1
@@ -3973,12 +3986,21 @@ UpdateMoveData:
 
 BattleCommand_SleepTarget:
 ; sleeptarget
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	bit SUBSTATUS_UPROAR, [hl]
+	jp nz, .storm_or_uproar
+
+	ld a, BATTLE_VARS_SUBSTATUS4_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_UPROAR, [hl]
+	jr nz, .storm_or_uproar
 
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
 	jr z, .fog
 	cp WEATHER_STORM
-	jr z, .storm
+	jr z, .storm_or_uproar
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_SLEEP
@@ -4049,7 +4071,7 @@ BattleCommand_SleepTarget:
 	call AnimateFailedMove
 	jp PrintFogProtection
 	
-.storm
+.storm_or_uproar
 	call AnimateFailedMove
 	ld hl, CantBePutToSleepText
 	jp StdBattleTextbox
@@ -5570,6 +5592,10 @@ BattleCommand_CheckRampage:
 	jr z, .player
 	ld de, wEnemyRolloutCount
 .player
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	bit SUBSTATUS_UPROAR, [hl]
+	jr nz, .handle_uproar
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	bit SUBSTATUS_RAMPAGE, [hl]
@@ -5596,6 +5622,15 @@ BattleCommand_CheckRampage:
 	ld [de], a
 .continue_rampage
 	ld b, rampage_command
+	jp SkipToBattleCommand
+
+.handle_uproar
+	ld a, [de]
+	dec a
+	ld [de], a
+	jr nz, .continue_uproar
+.continue_uproar
+	ld b, uproar_command
 	jp SkipToBattleCommand
 
 BattleCommand_Rampage:
@@ -6383,13 +6418,14 @@ BattleCommand_TrapTarget:
 	jp StdBattleTextbox
 
 .Traps:
-	dw BIND,      UsedBindText      ; 'used BIND on'
-	dw WRAP,      WrappedByText     ; 'was WRAPPED by'
-	dw FIRE_SPIN, FireSpinTrapText  ; 'was trapped!'
-	dw CLAMP,     ClampedByText     ; 'was CLAMPED by'
-	dw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
-	dw SAND_TOMB, SandTombTrapText  ; 'was trapped!'
-	dw NAIL_DOWN, NailDownTrapText  ; 'was NAILED DOWN by'
+	dw BIND,        UsedBindText      ; 'used BIND on'
+	dw WRAP,        WrappedByText     ; 'was WRAPPED by'
+	dw FIRE_SPIN,   FireSpinTrapText  ; 'was trapped!'
+	dw CLAMP,       ClampedByText     ; 'was CLAMPED by'
+	dw WHIRLPOOL,   WhirlpoolTrapText ; 'was trapped!'
+	dw SAND_TOMB,   SandTombTrapText  ; 'was trapped!'
+	dw NAIL_DOWN,   NailDownTrapText  ; 'was NAILED DOWN by'
+	dw INFESTATION, InfestationTrapText
 
 INCLUDE "engine/battle/move_effects/mist.asm"
 
@@ -6769,6 +6805,10 @@ BattleCommand_Heal:
 	call CompareMove
 	jr nz, .not_rest
 
+	ld a, BATTLE_VARS_SUBSTATUS4_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_UPROAR, [hl]
+	jp nz, .cant_sleep
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
 	jp z, .cant_sleep
@@ -7187,6 +7227,14 @@ BattleCommand_DynamoRush:
 
 BattleCommand_Uproot:
 	farcall UprootEffect
+	ret
+
+BattleCommand_Uproar:
+	farcall UproarEffect
+	ret
+
+BattleCommand_UproarState:
+	farcall UproarState
 	ret
 
 SafeCheckSafeguard:

@@ -1,5 +1,5 @@
-BattleCommand_QuiverDance:
-; Raises Special Attack, Special Defense, and Speed.
+BattleCommand_Coil:
+; Raises Attack, Defense, and Accuracy.
 
 ; Get user's stats
 	ld bc, wPlayerStatLevels
@@ -20,20 +20,21 @@ BattleCommand_QuiverDance:
 ; ACCURACY
 ; EVASION
 
-; Speed
-	inc bc
+; Attack
+	ld a, [bc]
+	cp MAX_STAT_LEVEL
+	jr c, .raise
+
+; Defense
 	inc bc
 	ld a, [bc]
 	cp MAX_STAT_LEVEL
 	jr c, .raise
 
-; Special Attack
+; Accuracy
 	inc bc
-	ld a, [bc]
-	cp MAX_STAT_LEVEL
-	jr c, .raise
-
-; Special Defense
+	inc bc
+	inc bc
 	inc bc
 	ld a, [bc]
 	cp MAX_STAT_LEVEL
@@ -46,17 +47,17 @@ BattleCommand_QuiverDance:
 	farcall AnimateCurrentMove
 
 ; Raise Special Attack
-	farcall BattleCommand_SpecialAttackUp
+	farcall BattleCommand_AttackUp
 	farcall BattleCommand_StatUpMessage
 	farcall ResetMiss
 
 ; Raise Special Defense
-	farcall BattleCommand_SpecialDefenseUp
+	farcall BattleCommand_DefenseUp
 	farcall BattleCommand_StatUpMessage
 	farcall ResetMiss
 
 ; Raise Speed
-	farcall BattleCommand_SpeedUp
+	farcall BattleCommand_AccuracyUp
 	farcall BattleCommand_StatUpMessage
 	ret
 

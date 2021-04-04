@@ -54,7 +54,7 @@ Moves1:
 	move EFFECT_BODY_SLAM,          85, NORMAL,   PHYSICAL, 100, 15,  30 ; BODY_SLAM
 	move EFFECT_TRAP_TARGET,        15, NORMAL,   PHYSICAL,  90, 20,   0 ; WRAP
 	move EFFECT_RECOIL_HIT,         90, NORMAL,   PHYSICAL,  85, 20,   0 ; TAKE_DOWN
-	move EFFECT_RAMPAGE,           120, NORMAL,   PHYSICAL, 100, 10,   0 ; THRASH
+	move EFFECT_RAMPAGE,           10, NORMAL,   PHYSICAL, 100, 10,   0 ; THRASH
 	move EFFECT_RECOIL_HIT,        120, NORMAL,   PHYSICAL, 100, 15,   0 ; DOUBLE_EDGE
 	move EFFECT_DEFENSE_DOWN,        0, NORMAL,   STATUS,   100, 30,   0 ; TAIL_WHIP
 	move EFFECT_POISON_HIT,         15, POISON,   PHYSICAL, 100, 35,  30 ; POISON_STING
@@ -431,4 +431,8 @@ Moves1:
 	move EFFECT_UPROOT,             90, GRASS,    PHYSICAL, 100, 15, 100 ; UPROOT
 	move EFFECT_ALWAYS_HIT,         60, GRASS,    SPECIAL,  100, 20,   0 ; MAGICAL_LEAF
 	move EFFECT_SACRED_SWORD,       70, NORMAL,   PHYSICAL, 100, 20,   0 ; CHIP_AWAY
+	move EFFECT_COIL,                0, POISON,   STATUS,   100, 20,   0 ; COIL
+	move EFFECT_UPROAR,             10, NORMAL,   SPECIAL,  100, 10,   0 ; UPROAR
+	move EFFECT_PRIORITY_HIT,       40, GHOST,    PHYSICAL, 100, 30,   0 ; SHADOW_SNEAK
+	move EFFECT_TRAP_TARGET,        20, BUG,      SPECIAL,  100, 20,   0 ; INFESTATION
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

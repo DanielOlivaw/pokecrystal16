@@ -13,4 +13,3 @@ BattleCommand_Ingrain:
 	farcall AnimateFailedMove
 	farcall PrintButItFailed
 	ret
-	

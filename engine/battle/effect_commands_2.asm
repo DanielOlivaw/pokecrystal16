@@ -98,3 +98,7 @@ INCLUDE "engine/battle/move_effects/shield_bash.asm"
 INCLUDE "engine/battle/move_effects/ingrain.asm"
 
 INCLUDE "engine/battle/move_effects/uproot.asm"
+
+INCLUDE "engine/battle/move_effects/coil.asm"
+
+INCLUDE "engine/battle/move_effects/uproar.asm"

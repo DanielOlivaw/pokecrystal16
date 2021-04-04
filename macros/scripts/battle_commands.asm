@@ -198,6 +198,8 @@ ENDM
 	command dynamorush              ; bf
 	command brightmoss              ; c0
 	command uproot                  ; c1
+	command uproar                  ; c2
+	command uproarstate             ; c3
 
 	enum_start $fe
 	command endturn                 ; fe

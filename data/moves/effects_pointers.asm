@@ -225,3 +225,5 @@ MoveEffectsPointers:
 	dw NormalHit
 	dw StatusTargetSelf
 	dw Uproot
+	dw StatusTargetSelf
+	dw Uproar

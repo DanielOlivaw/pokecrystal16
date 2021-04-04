@@ -197,3 +197,5 @@ BattleCommandPointers:
 	dw BattleCommand_DynamoRush
 	dw BattleCommand_BrightMoss
 	dw BattleCommand_Uproot
+	dw BattleCommand_Uproar
+	dw BattleCommand_UproarState

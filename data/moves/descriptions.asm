@@ -419,6 +419,10 @@ MoveDescriptions1:
 	dw UprootDescription
 	dw MagicalLeafDescription
 	dw ChipAwayDescription
+	dw CoilDescription
+	dw UproarDescription
+	dw ShadowSneakDescription
+	dw InfestationDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2067,5 +2071,21 @@ MagicalLeafDescription:
 ChipAwayDescription:
 	db   "Ignores the foe's"
 	next "stat changes.@"
+
+CoilDescription:
+	db   "Boosts accuracy &"
+	next "both PHYS. stats.@"
+
+UproarDescription:
+	db   "Lasts for 3 turns"
+	next "& prevents sleep.@"
+
+ShadowSneakDescription:
+	db   "Lets the user get"
+	next "in the first hit.@"
+
+InfestationDescription:
+	db   "Infests the foe"
+	next "for 2-5 turns.@"
 
 		;"123456789123456789"

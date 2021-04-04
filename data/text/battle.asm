@@ -556,6 +556,13 @@ NailDownTrapText:
 	cont "<USER>!"
 	prompt
 
+InfestationTrapText:
+	text "<TARGET>"
+	line "was afflicted with"
+	cont "an INFESTATION by"
+	cont "<USER>!"
+	prompt
+
 WrappedByText:
 	text "<TARGET>"
 	line "was WRAPPED by"
@@ -848,6 +855,18 @@ WontRiseAnymoreText:
 	line "@"
 	text_ram wStringBuffer2
 	text " won't"
+	cont "go any higher!"
+	prompt
+
+StatsWontRiseAnymoreText:
+	text "<USER>'s"
+	line "stats won't go any"
+	cont "higher!"
+	prompt
+
+AccuracyWontRiseAnymoreText:
+	text "<USER>'s"
+	line "ACCURACY won't"
 	cont "go any higher!"
 	prompt
 
@@ -1482,6 +1501,17 @@ PlateTypeText:
 	text " type!"
 	prompt
 
+MakingUproarText:
+	text "<USER>"
+	line "is making an"
+	cont "UPROAR!"
+	prompt
+
+CalmedDownText:
+	text "<USER>"
+	line "calmed down."
+	prompt
+
 UserCuredOfPoisonText:
 	text "<USER>'s"
 	line "cured of poison!"
@@ -1501,8 +1531,3 @@ UserBurnWasHealedText::
 	; text "<USER>"
 	; line "was defrosted!"
 	; prompt
-
-UserWokeUpText::
-	text "<USER>"
-	line "woke up!"
-	prompt

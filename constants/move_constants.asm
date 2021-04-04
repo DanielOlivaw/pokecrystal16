@@ -420,6 +420,10 @@
 	const UPROOT
 	const MAGICAL_LEAF
 	const CHIP_AWAY
+	const COIL
+	const UPROAR
+	const SHADOW_SNEAK
+	const INFESTATION
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

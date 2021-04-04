@@ -413,4 +413,8 @@ MoveNames::
 	db "UPROOT@"
 	db "MAGICAL LEAF@"
 	db "CHIP AWAY@"
+	db "COIL@"
+	db "UPROAR@"
+	db "SHADOW SNEAK@"
+	db "INFESTATION@"
 	  ;"123456123456@"

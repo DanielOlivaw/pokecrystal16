@@ -45,9 +45,8 @@ PsychoShiftEffect:
 	ld [hl], a
 	call UpdateUserInParty
 	call RefreshBattleHuds
-	ld hl, UserWokeUpText
+	ld hl, WokeUpText
 	jp StdBattleTextbox
-	ret
 
 ; .freeze
 	; push hl

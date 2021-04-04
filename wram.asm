@@ -476,7 +476,7 @@ wPlayerSubStatus5:: ; c66c
 ; 5 lock-on
 ; 4 encored
 ; 3 transformed
-; 2
+; 2 ingrained
 ; 1
 ; 0 toxic
 	db

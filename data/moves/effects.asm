@@ -2873,3 +2873,27 @@ Uproot:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Uproar:
+	checkrampage
+	checkobedience
+	doturn
+	uproar
+	usedmovetext
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	uproarstate
+	endmove

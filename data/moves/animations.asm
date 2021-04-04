@@ -441,6 +441,10 @@ BattleAnimations::
 	dw BattleAnim_Uproot
 	dw BattleAnim_MagicalLeaf
 	dw BattleAnim_ChipAway
+	dw BattleAnim_Coil
+	dw BattleAnim_Uproar
+	dw BattleAnim_ShadowSneak
+	dw BattleAnim_Infestation
 	
 	dw BattleAnim_SweetScent2
 
@@ -824,6 +828,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Coil:
+BattleAnim_Uproar:
+BattleAnim_ShadowSneak:
+BattleAnim_Infestation:
 BattleAnim_MagicalLeaf:
 BattleAnim_ChipAway:
 BattleAnim_Uproot:

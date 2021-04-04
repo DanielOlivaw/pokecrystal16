@@ -80,10 +80,8 @@ BattleCommand_ShellSmash:
 
 .cantraise
 
-; Can't raise either stat.
+; Can't raise any stat.
 
-	ld b, ABILITY + 1
-	call GetStatName
 	farcall AnimateFailedMove
-	ld hl, WontRiseAnymoreText
+	ld hl, StatsWontRiseAnymoreText
 	jp StdBattleTextbox
