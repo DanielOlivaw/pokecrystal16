@@ -1,11 +1,11 @@
-BattleCommand_Attract:
+AttractEffect:
 ; attract
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
 	call CheckOppositeGender
 	jr c, .failed
-	call CheckHiddenOpponent
+	farcall CheckHiddenOpponent
 	jr nz, .failed
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
 	call GetBattleVarAddr
@@ -13,14 +13,15 @@ BattleCommand_Attract:
 	jr nz, .failed
 
 	set SUBSTATUS_IN_LOVE, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 ; 'fell in love!'
 	ld hl, FellInLoveText
 	jp StdBattleTextbox
 
 .failed
-	jp FailMove
+	farcall FailMove
+	ret
 
 CheckOppositeGender:
 	ld a, MON_SPECIES

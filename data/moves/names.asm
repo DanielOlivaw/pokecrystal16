@@ -432,4 +432,8 @@ MoveNames::
 	db "AUTOTOMIZE@"
 	db "MIRROR SHOT@"
 	db "FEINT@"
+	db "DRILL RUN@"
+	db "SKY UPPERCUT@"
+	db "BULLET PUNCH@"
+	db "STRUGGLE BUG@"
 	  ;"123456123456@"

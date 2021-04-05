@@ -460,7 +460,11 @@ BattleAnimations::
 	dw BattleAnim_Autotomize
 	dw BattleAnim_MirrorShot
 	dw BattleAnim_Feint
-	
+	dw BattleAnim_DrillRun
+	dw BattleAnim_SkyUppercut
+	dw BattleAnim_BulletPunch
+	dw BattleAnim_StruggleBug
+
 	dw BattleAnim_SweetScent2
 
 BattleAnim_0:
@@ -843,6 +847,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DrillRun:
+BattleAnim_SkyUppercut:
+BattleAnim_BulletPunch:
+BattleAnim_StruggleBug:
 BattleAnim_Feint:
 BattleAnim_Bounce:
 BattleAnim_FakeTears:

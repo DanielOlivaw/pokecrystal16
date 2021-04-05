@@ -438,6 +438,10 @@ MoveDescriptions1:
 	dw AutotomizeDescription
 	dw MirrorShotDescription
 	dw FeintDescription
+	dw DrillRunDescription
+	dw SkyUppercutDescription
+	dw BulletPunchDescription
+	dw StruggleBugDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2163,4 +2167,32 @@ FeintDescription:
 	db   "Hits a foe using"
 	next "PROTECT or DETECT.@"
 
+DrillRunDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
+
+SkyUppercutDescription:
+	db   "Attacks with a"
+	next "skyward uppercut.@"
+
+BulletPunchDescription:
+	db   "A tough punch that"
+	next "strikes first.@"
+
+StruggleBugDescription:
+	db   "An attack that"
+	next "lowers SPCL.ATK.@"
+
 		;"123456789123456789"
+
+; GyroBallDescription:
+	; db   "Stronger if the"
+	; next "user is slower.@"
+
+; ElectroBallDescription:
+	; db   "Stronger if the"
+	; next "user is faster.@"
+
+; HeavySlamDescription:
+	; db   "Stronger if the"
+	; next "user is heavier.@"

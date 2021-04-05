@@ -7,6 +7,7 @@ BattleCommand_HappinessPower:
 	jr z, .ok
 	ld hl, wEnemyMonHappiness
 .ok
+	; d = hl * 10 / 25
 	xor a
 	ldh [hMultiplicand + 0], a
 	ldh [hMultiplicand + 1], a
@@ -20,6 +21,6 @@ BattleCommand_HappinessPower:
 	ld b, 4
 	call Divide
 	ldh a, [hQuotient + 3]
-	ld d, a
+	ld d, a ; Put result into d, loaded as the move power by BattleCommand_DamageCalc
 	pop bc
 	ret

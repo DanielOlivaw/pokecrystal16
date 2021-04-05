@@ -1,4 +1,4 @@
-BattleCommand_PerishSong:
+PerishSongEffect:
 ; perishsong
 
 	ld hl, wPlayerSubStatus1
@@ -29,10 +29,11 @@ BattleCommand_PerishSong:
 	ld [wEnemyPerishCount], a
 
 .done
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, StartPerishText
 	jp StdBattleTextbox
 
 .failed
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret

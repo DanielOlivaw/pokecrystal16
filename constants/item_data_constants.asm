@@ -12,9 +12,11 @@ ITEMATTR_STRUCT_LENGTH EQU const_value
 ; item types
 	const_def 1
 	const ITEM     ; 1
-	const KEY_ITEM ; 2
+	const MEDICINE ; 2
 	const BALL     ; 3
-	const TM_HM    ; 4
+	const BERRIES  ; 4
+	const TM_HM    ; 5
+	const KEY_ITEM ; 6
 
 ; item menu types
 ; UseItem.dw indexes (see engine/items/pack.asm)
@@ -34,14 +36,18 @@ CANT_TOSS   EQU 1 << CANT_TOSS_F
 
 ; pack pockets
 	const_def
-	const ITEM_POCKET     ; 0
-	const BALL_POCKET     ; 1
-	const KEY_ITEM_POCKET ; 2
-	const TM_HM_POCKET    ; 3
+	const ITEM_POCKET     ; 1
+	const MEDICINE_POCKET ; 2
+	const BALL_POCKET     ; 3
+	const BERRY_POCKET    ; 4
+	const TM_HM_POCKET    ; 5
+	const KEY_ITEM_POCKET ; 6
 NUM_POCKETS EQU const_value
 
-MAX_ITEMS     EQU 20
-MAX_BALLS     EQU 12
+MAX_ITEMS     EQU 25
+MAX_MEDICINE  EQU 25
+MAX_BALLS     EQU 15
+MAX_BERRIES   EQU 20
 MAX_KEY_ITEMS EQU 25
 MAX_PC_ITEMS  EQU 50
 

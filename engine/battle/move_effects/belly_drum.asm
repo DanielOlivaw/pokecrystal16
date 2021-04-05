@@ -1,4 +1,4 @@
-BattleCommand_BellyDrum:
+BellyDrumEffect:
 ; bellydrum
 
 	callfar GetHalfMaxHP
@@ -6,22 +6,22 @@ BattleCommand_BellyDrum:
 	jr nc, .failed
 
 	push bc
-	call BattleCommand_AttackUp2
+	farcall BattleCommand_AttackUp2
 	pop bc
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
 
 	push bc
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	pop bc
 	callfar SubtractHPFromUser
-	call UpdateUserInParty
+	farcall UpdateUserInParty
 	ld a, 5
 
 .max_attack_loop
 	push af
-	call BattleCommand_AttackUp2
+	farcall BattleCommand_AttackUp2
 	pop af
 	dec a
 	jr nz, .max_attack_loop
@@ -30,5 +30,6 @@ BattleCommand_BellyDrum:
 	jp StdBattleTextbox
 
 .failed
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret

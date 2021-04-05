@@ -439,6 +439,10 @@
 	const AUTOTOMIZE
 	const MIRROR_SHOT
 	const FEINT
+	const DRILL_RUN
+	const SKY_UPPERCUT
+	const BULLET_PUNCH
+	const STRUGGLE_BUG
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

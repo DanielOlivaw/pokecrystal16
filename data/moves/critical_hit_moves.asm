@@ -13,4 +13,5 @@ CriticalHitMoves:
 	dw LEAF_BLADE
 	dw STONE_EDGE
 	dw NIGHT_SLASH
+	dw DRILL_RUN
 	dw -1

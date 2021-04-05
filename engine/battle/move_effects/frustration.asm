@@ -1,6 +1,5 @@
 BattleCommand_FrustrationPower:
 ; frustrationpower
-
 	push bc
 	ld hl, wBattleMonHappiness
 	ldh a, [hBattleTurn]
@@ -8,6 +7,7 @@ BattleCommand_FrustrationPower:
 	jr z, .got_happiness
 	ld hl, wEnemyMonHappiness
 .got_happiness
+	; d = (255 - hl) * 10 / 25
 	ld a, $ff
 	sub [hl]
 	ldh [hMultiplicand + 2], a
@@ -22,6 +22,6 @@ BattleCommand_FrustrationPower:
 	ld b, 4
 	call Divide
 	ldh a, [hQuotient + 3]
-	ld d, a
+	ld d, a ; Put result into d, loaded as the move power by BattleCommand_DamageCalc
 	pop bc
 	ret

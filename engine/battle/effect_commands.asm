@@ -356,7 +356,7 @@ CantMove:
 	call GetBattleVarAddr
 	res SUBSTATUS_UPROAR, [hl]
 
-	call ResetFuryCutterCount
+	farcall ResetFuryCutterCount
 
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
@@ -1895,6 +1895,7 @@ BattleCommand_CheckHit:
 	dw THUNDER
 	dw TWISTER
 	dw HURRICANE
+	dw SKY_UPPERCUT
 	dw -1
 
 .DigMoves:
@@ -2936,7 +2937,17 @@ PlayerAttackDamage:
 	call CheckDamageStatsCritical
 	jr c, .lightball ; Use boosted stats
 
+; Psyshock is a special move, but targets the foe's defense stat.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
+	jr nz, .get_special_defense_unboosted
+	ld hl, wEnemyDefense
+	jr .psyshock_unboosted_done
+
+.get_special_defense_unboosted
 	ld hl, wEnemySpDef
+.psyshock_unboosted_done
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2981,7 +2992,7 @@ PlayerAttackDamage:
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
-	jr .check_physicalcrit
+	jp .check_physicalcrit
 
 TruncateHL_BC:
 .loop
@@ -3246,7 +3257,18 @@ EnemyAttackDamage:
 	ld hl, wEnemyMonSpclAtk
 	call CheckDamageStatsCritical
 	jr c, .lightball ; Use boosted stats
+
+; Psyshock is a special move, but targets the player's defense stat.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
+	jr nz, .get_special_defense_unboosted
+	ld hl, wPlayerDefense
+	jr .psyshock_unboosted_done
+
+.get_special_defense_unboosted
 	ld hl, wPlayerSpDef
+.psyshock_unboosted_done
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -3289,7 +3311,7 @@ EnemyAttackDamage:
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
-	jr .check_physicalcrit
+	jp .check_physicalcrit
 
 INCLUDE "engine/battle/move_effects/beat_up.asm"
 
@@ -3350,9 +3372,6 @@ BattleCommand_DamageCalc:
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-
-; Selfdestruct and Explosion DON'T halve defense.
-
 ; Variable-hit moves and Conversion can have a power of 0.
 	cp EFFECT_MULTI_HIT
 	jr z, .skip_zero_damage_check
@@ -3368,7 +3387,7 @@ BattleCommand_DamageCalc:
 .skip_zero_damage_check
 	xor a ; Not confusion damage
 	ld [wIsConfusionDamage], a
-	; fallthrough
+; fallthrough
 
 ConfusionDamageCalc:
 ; Minimum defense value is 1.
@@ -3722,6 +3741,8 @@ BattleCommand_ConstantDamage:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_WATER_SPOUT
+	jr z, .eruption_water_spout_power
+	cp EFFECT_ERUPTION
 	jr z, .eruption_water_spout_power
 	cp EFFECT_WRING_OUT
 	jr z, .wring_out_power
@@ -6427,7 +6448,7 @@ BattleCommand_Charge:
 	text_end
 
 .Bounce:
-; 'dug a hole!'
+; 'sprang up!'
 	text_far SprangUpText
 	text_end
 
@@ -7184,31 +7205,19 @@ BattleCommand_Defrost:
 	ld hl, WasDefrostedText
 	jp StdBattleTextbox
 
-INCLUDE "engine/battle/move_effects/curse.asm"
-
 INCLUDE "engine/battle/move_effects/protect.asm"
 
 INCLUDE "engine/battle/move_effects/endure.asm"
 
-INCLUDE "engine/battle/move_effects/foresight.asm"
-
-INCLUDE "engine/battle/move_effects/perish_song.asm"
-
 INCLUDE "engine/battle/move_effects/rollout.asm"
-
-; BattleCommand5d:
-; unused
-	; ret
-
-INCLUDE "engine/battle/move_effects/fury_cutter.asm"
-
-INCLUDE "engine/battle/move_effects/attract.asm"
 
 INCLUDE "engine/battle/move_effects/return.asm"
 
 INCLUDE "engine/battle/move_effects/present.asm"
 
 INCLUDE "engine/battle/move_effects/frustration.asm"
+
+INCLUDE "engine/battle/move_effects/low_kick.asm"
 
 BattleCommand_ConditionalBoost:
 	farcall Find_ConditionalBoost
@@ -7224,10 +7233,6 @@ BattleCommand_Selfdestruct:
 
 BattleCommand_Thief:
 	farcall ThiefEffect
-	ret
-
-BattleCommand_LowKick:
-	farcall LowKickEffect
 	ret
 
 BattleCommand_BugBite:
@@ -7310,6 +7315,34 @@ BattleCommand_ClearHazards:
 	farcall ClearHazardsEffect
 	ret
 
+BattleCommand_Curse:
+	farcall CurseEffect
+	ret
+
+BattleCommand_Foresight:
+	farcall ForesightEffect
+	ret
+
+BattleCommand_PerishSong:
+	farcall PerishSongEffect
+	ret
+
+BattleCommand_FuryCutter:
+	farcall FuryCutterEffect
+	ret
+
+BattleCommand_Attract:
+	farcall AttractEffect
+	ret
+
+BattleCommand_GetMagnitude:
+	farcall GetMagnitude
+	ret
+
+BattleCommand_BellyDrum:
+	farcall BellyDrumEffect
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens
@@ -7340,15 +7373,18 @@ BattleCommand_CheckSafeguard:
 	call StdBattleTextbox
 	jp EndMoveEffect
 
-INCLUDE "engine/battle/move_effects/magnitude.asm"
-
 INCLUDE "engine/battle/move_effects/baton_pass.asm"
 
 INCLUDE "engine/battle/move_effects/pursuit.asm"
 
-INCLUDE "engine/battle/move_effects/hidden_power.asm"
+BattleCommand_HiddenPower:
+; hiddenpower
 
-INCLUDE "engine/battle/move_effects/belly_drum.asm"
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	farcall HiddenPowerDamage
+	ret
 
 INCLUDE "engine/battle/move_effects/psych_up.asm"
 

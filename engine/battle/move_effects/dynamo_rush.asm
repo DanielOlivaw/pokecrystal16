@@ -1,5 +1,5 @@
 DynamoRushEffect:
-; Get user's current speed (with boosts)
+; Get user's current speed modifier level
 	ld hl, wPlayerSpdLevel
 	ldh a, [hBattleTurn]
 	and a

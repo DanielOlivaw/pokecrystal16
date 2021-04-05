@@ -1,6 +1,4 @@
-; SECTION "Low Kick Effect", ROMX
-
-LowKickEffect:
+BattleCommand_LowKick:
 	push bc
 	push de
 	ld a, [hBattleTurn]

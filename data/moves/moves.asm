@@ -450,4 +450,8 @@ Moves1:
 	move EFFECT_SPEED_UP_2,          0, STEEL,    STATUS,   100, 15,   0 ; AUTOTOMIZE
 	move EFFECT_ACCURACY_DOWN_HIT,  65, STEEL,    SPECIAL,   85, 10,  30 ; MIRROR_SHOT
 	move EFFECT_FEINT,              30, NORMAL,   PHYSICAL, 100, 10,   0 ; FEINT
+	move EFFECT_NORMAL_HIT,         80, GROUND,   PHYSICAL,  95, 10,   0 ; DRILL_RUN
+	move EFFECT_NORMAL_HIT,         85, FIGHTING, PHYSICAL,  90, 15,   0 ; SKY_UPPERCUT
+	move EFFECT_PRIORITY_HIT,       40, STEEL,    PHYSICAL, 100, 30,   0 ; BULLET_PUNCH
+	move EFFECT_SP_ATK_DOWN_HIT,    50, BUG,      SPECIAL,  100, 20, 100 ; STRUGGLE_BUG
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
