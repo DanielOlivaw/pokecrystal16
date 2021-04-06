@@ -199,3 +199,7 @@ BattleCommandPointers:
 	dw BattleCommand_Uproot
 	dw BattleCommand_Uproar
 	dw BattleCommand_UproarState
+	dw BattleCommand_Soak
+	dw BattleCommand_WeatherBall
+	dw BattleCommand_Captivate
+	dw BattleCommand_Acupressure

@@ -200,6 +200,10 @@ ENDM
 	command uproot                  ; c1
 	command uproar                  ; c2
 	command uproarstate             ; c3
+	command soak                    ; c4
+	command weatherball             ; c5
+	command captivate               ; c6
+	command acupressure             ; c7
 
 	enum_start $fe
 	command endturn                 ; fe

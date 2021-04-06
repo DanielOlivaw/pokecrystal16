@@ -42,6 +42,7 @@ INCLUDE "engine/events/bug_contest/caught_mon.asm"
 INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
+INCLUDE "engine/items/tmhm.asm"
 
 
 SECTION "bank4", ROMX
@@ -155,16 +156,15 @@ SECTION "Effect Commands 2", ROMX
 INCLUDE "engine/battle/effect_commands_2.asm"
 
 
-SECTION "Move Data", ROMX
+SECTION "Move Descriptions", ROMX
 
-INCLUDE "engine/battle/ai/redundant.asm"
-INCLUDE "engine/items/tmhm.asm"
 INCLUDE "engine/pokemon/print_move_description.asm"
 INCLUDE "data/moves/descriptions.asm"
 
 
 SECTION "Enemy Trainers", ROMX
 
+INCLUDE "engine/battle/ai/redundant.asm"
 INCLUDE "engine/battle/ai/items.asm"
 INCLUDE "engine/battle/ai/scoring.asm"
 INCLUDE "engine/battle/read_trainer_attributes.asm"

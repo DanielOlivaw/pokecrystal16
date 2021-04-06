@@ -7,8 +7,10 @@ Find_ConditionalBoost:
 	jp z, BattleCommand_Acrobatics
 	cp EFFECT_BRINE
 	jp z, BattleCommand_Brine
-	cp EFFECT_CURE_STATUS_HIT ; Wake-Up Slap and Smelling Salts
-	jp z, BattleCommand_CureStatusDoubleDamage
+	cp EFFECT_CURE_SLEEP_HIT ; Wake-Up Slap
+	jp z, BattleCommand_CureSleepHit
+	cp EFFECT_CURE_PARALYSIS_HIT ; SmellingSalt
+	jp z, BattleCommand_CureParalysisHit
 	cp EFFECT_CUT ; Cut deals double damage to Grass-types
 	jp z, BattleCommand_Cut
 	cp EFFECT_HEX

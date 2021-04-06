@@ -25,12 +25,12 @@ BattleCommand_VenomDrench:
 
 .try_lower_stats
 ; if poisoned, lower attack, special attack, and speed
-	call LowerAttack
+	farcall BattleCommand_AttackDown
 	ld a, [wFailedMessage]
 	and a
 	jr nz, .cant_lower_one
-	call LowerSpecialAttack
-	call LowerSpeed
+	farcall BattleCommand_SpecialAttackDown
+	farcall BattleCommand_SpeedDown
 .done
 	xor a
 	ld [wFailedMessage], a
@@ -38,15 +38,15 @@ BattleCommand_VenomDrench:
 
 ; Only fails if all three stats are at minimum levels
 .cant_lower_one
-	call LowerSpecialAttack
+	farcall BattleCommand_SpecialAttackDown
 	ld a, [wFailedMessage]
 	and a
 	jr nz, .cant_lower_two
-	call LowerSpeed
+	farcall BattleCommand_SpeedDown
 	jr .done
 
 .cant_lower_two
-	call LowerSpeed
+	farcall BattleCommand_SpeedDown
 	ld a, [wFailedMessage]
 	and a
 	jr z, .done
@@ -55,35 +55,11 @@ BattleCommand_VenomDrench:
 	ld [wAttackMissed], a
 	ret
 
-LowerAttack:
-	ld a, ATTACK
-	ld [wLoweredStat], a
-	farcall StatDownFar
-	ret
-
-LowerDefense:
-	ld a, DEFENSE
-	ld [wLoweredStat], a
-	farcall StatDownFar
-	ret
-
-LowerSpecialAttack:
-	ld a, SP_ATTACK
-	ld [wLoweredStat], a
-	farcall StatDownFar
-	ret
-
-LowerSpeed:
-	ld a, SPEED
-	ld [wLoweredStat], a
-	farcall StatDownFar
-	ret
-
 BattleCommand_AttackDefenseDown:
 ; attackdefensedown
 
 ; Try to lower attack
-	call LowerAttack
+	farcall BattleCommand_AttackDown
 
 ; If that fails, we can still try to lower defense
 	ld a, [wFailedMessage]
@@ -91,7 +67,7 @@ BattleCommand_AttackDefenseDown:
 	jr nz, .cant_lower_attack
 
 ; Try to lower defense
-	call LowerDefense
+	farcall BattleCommand_DefenseDown
 
 .done
 	xor a
@@ -100,7 +76,7 @@ BattleCommand_AttackDefenseDown:
 
 .cant_lower_attack
 ; Try to lower defense
-	call LowerDefense
+	farcall BattleCommand_DefenseDown
 
 ; If lowering both stats fails, the move fails
 	ld a, [wFailedMessage]
@@ -116,7 +92,7 @@ BattleCommand_AttackSpecialAttackDown:
 ; attackdefensedown
 
 ; Try to lower attack
-	call LowerAttack
+	farcall BattleCommand_AttackDown
 
 ; If that fails, we can still try to lower special attack
 	ld a, [wFailedMessage]
@@ -124,7 +100,7 @@ BattleCommand_AttackSpecialAttackDown:
 	jr nz, .cant_lower_attack
 
 ; Try to lower special attack
-	call LowerSpecialAttack
+	farcall BattleCommand_SpecialAttackDown
 
 .done
 	xor a
@@ -133,7 +109,7 @@ BattleCommand_AttackSpecialAttackDown:
 
 .cant_lower_attack
 ; Try to lower special attack
-	call LowerSpecialAttack
+	farcall BattleCommand_SpecialAttackDown
 
 ; If lowering both stats fails, the move fails
 	ld a, [wFailedMessage]

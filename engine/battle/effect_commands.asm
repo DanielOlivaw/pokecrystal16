@@ -7343,6 +7343,24 @@ BattleCommand_BellyDrum:
 	farcall BellyDrumEffect
 	ret
 
+; INCLUDE "engine/battle/move_effects/strength_sap.asm"
+
+BattleCommand_Soak:
+	farcall SoakEffect
+	ret
+
+BattleCommand_WeatherBall:
+	farcall WeatherBallEffect
+	ret
+
+BattleCommand_Captivate:
+	farcall CaptivateEffect
+	ret
+
+BattleCommand_Acupressure:
+	farcall AcupressureEffect
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens

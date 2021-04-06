@@ -233,3 +233,10 @@ MoveEffectsPointers:
 	dw MultiStatDown
 	dw ConditionalBoost
 	dw NormalHit
+	dw Incinerate
+	dw Soak
+	dw WeatherBall
+	dw CureStatusHit
+	dw Captivate
+	dw Acupressure
+	dw SpecialDefenseDown2Hit

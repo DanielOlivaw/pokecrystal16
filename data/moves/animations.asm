@@ -464,6 +464,23 @@ BattleAnimations::
 	dw BattleAnim_SkyUppercut
 	dw BattleAnim_BulletPunch
 	dw BattleAnim_StruggleBug
+	dw BattleAnim_Incinerate
+	dw BattleAnim_Astonish
+	dw BattleAnim_Soak
+	dw BattleAnim_WeatherBall
+	dw BattleAnim_Leafage
+	dw BattleAnim_EnergyBall
+	dw BattleAnim_Featherdance
+	dw BattleAnim_BlazeKick
+	dw BattleAnim_DrainingKiss
+	dw BattleAnim_OminousWind
+	dw BattleAnim_ForcePalm
+	dw BattleAnim_ArmThrust
+	dw BattleAnim_SmellingSalt
+	dw BattleAnim_Captivate
+	dw BattleAnim_Acupressure
+	dw BattleAnim_WildCharge
+	dw BattleAnim_AcidSpray
 
 	dw BattleAnim_SweetScent2
 
@@ -847,6 +864,23 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_SmellingSalt:
+BattleAnim_Captivate:
+BattleAnim_Acupressure:
+BattleAnim_WildCharge:
+BattleAnim_AcidSpray:
+BattleAnim_Incinerate:
+BattleAnim_Astonish:
+BattleAnim_Soak:
+BattleAnim_WeatherBall:
+BattleAnim_Leafage:
+BattleAnim_EnergyBall:
+BattleAnim_Featherdance:
+BattleAnim_BlazeKick:
+BattleAnim_DrainingKiss:
+BattleAnim_OminousWind:
+BattleAnim_ForcePalm:
+BattleAnim_ArmThrust:
 BattleAnim_DrillRun:
 BattleAnim_SkyUppercut:
 BattleAnim_BulletPunch:

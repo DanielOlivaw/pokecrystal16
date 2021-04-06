@@ -19,6 +19,13 @@ KnockOffEffect:
 	farcall ItemIsMail
 	ret c
 
+; Incinerate only removes berries
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_INCINERATE
+	call z, .incinerate_berries_enemy
+
 	ld a, [wEffectFailed]
 	and a
 	ret nz
@@ -54,6 +61,13 @@ KnockOffEffect:
 	farcall ItemIsMail
 	ret c
 
+; Incinerate only removes berries
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_INCINERATE
+	call z, .incinerate_berries_player
+
 	ld a, [wEffectFailed]
 	and a
 	ret nz
@@ -67,6 +81,11 @@ KnockOffEffect:
 	ld [de], a
 
 .stole
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_INCINERATE
+	jr z, .incinerate_text
+
 	call GetItemName
 	ld hl, KnockedOffText
 	jp StdBattleTextbox
@@ -86,3 +105,25 @@ KnockOffEffect:
 	ld e, l
 	ld hl, wEnemyMonItem
 	ret
+
+.incinerate_berries_player
+	call .playeritem
+	jr .incinerate_berries
+
+.incinerate_berries_enemy
+	call .enemyitem
+.incinerate_berries
+	ld a, [wNamedObjectIndexBuffer]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BERRIES
+	ret z
+	ld a, 1
+	ld [wEffectFailed], a
+	ret
+
+.incinerate_text
+	call GetItemName
+	ld hl, IncineratedText
+	jp StdBattleTextbox

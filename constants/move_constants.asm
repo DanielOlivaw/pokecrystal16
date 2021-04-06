@@ -443,6 +443,23 @@
 	const SKY_UPPERCUT
 	const BULLET_PUNCH
 	const STRUGGLE_BUG
+	const INCINERATE
+	const ASTONISH
+	const SOAK
+	const WEATHER_BALL
+	const LEAFAGE
+	const ENERGY_BALL
+	const FEATHERDANCE
+	const BLAZE_KICK
+	const DRAINING_KISS
+	const OMINOUS_WIND
+	const FORCE_PALM
+	const ARM_THRUST
+	const SMELLINGSALT
+	const CAPTIVATE
+	const ACUPRESSURE
+	const WILD_CHARGE
+	const ACID_SPRAY
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

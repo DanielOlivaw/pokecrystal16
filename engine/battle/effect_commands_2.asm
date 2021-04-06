@@ -118,3 +118,11 @@ INCLUDE "engine/battle/move_effects/coil.asm"
 INCLUDE "engine/battle/move_effects/uproar.asm"
 
 INCLUDE "engine/battle/move_effects/acrobatics.asm"
+
+INCLUDE "engine/battle/move_effects/soak.asm"
+
+INCLUDE "engine/battle/move_effects/weather_ball.asm"
+
+INCLUDE "engine/battle/move_effects/captivate.asm"
+
+INCLUDE "engine/battle/move_effects/acupressure.asm"

@@ -442,6 +442,23 @@ MoveDescriptions1:
 	dw SkyUppercutDescription
 	dw BulletPunchDescription
 	dw StruggleBugDescription
+	dw IncinerateDescription
+	dw AstonishDescription
+	dw SoakDescription
+	dw WeatherBallDescription
+	dw LeafageDescription
+	dw EnergyBallDescription
+	dw FeatherdanceDescription
+	dw BlazeKickDescription
+	dw DrainingKissDescription
+	dw OminousWindDescription
+	dw ForcePalmDescription
+	dw ArmThrustDescription
+	dw SmellingSaltDescription
+	dw CaptivateDescription
+	dw AcupressureDescription
+	dw WildChargeDescription
+	dw AcidSprayDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2183,6 +2200,74 @@ StruggleBugDescription:
 	db   "An attack that"
 	next "lowers SPCL.ATK.@"
 
+IncinerateDescription:
+	db   "Burns up the foe's"
+	next "held BERRY.@"
+
+AstonishDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+SoakDescription:
+	db   "Changes the foe's"
+	next "type to WATER.@"
+
+WeatherBallDescription:
+	db   "Changes type with"
+	next "the weather.@"
+
+LeafageDescription:
+	db   "Pelts the target"
+	next "with leaves.@"
+
+EnergyBallDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+
+FeatherdanceDescription:
+	db   "Sharply lowers the"
+	next "foe's ATTACK.@"
+
+BlazeKickDescription:
+	db   "May cause a burn."
+	next "High crit ratio.@"
+
+DrainingKissDescription:
+	db   "Steals 1/2 of the"
+	next "damage inflicted.@"
+
+OminousWindDescription:
+	db   "An attack that may"
+	next "raise all stats.@"
+
+ForcePalmDescription:
+	db   "An attack that may"
+	next "cause paralysis.@"
+
+ArmThrustDescription:
+	db   "Repeatedly strikes"
+	next "2-5 times.@"
+
+SmellingSaltDescription:
+	db   "Damage rises when"
+	next "curing paralysis.@"
+
+CaptivateDescription:
+	db   "Drops the opposite"
+	next "gender's SPCL.ATK.@"
+
+AcupressureDescription:
+	db   "Sharply boosts a"
+	next "random stat.@"
+
+WildChargeDescription:
+	db   "A tackle that also"
+	next "hurts the user.@"
+
+AcidSprayDescription:
+	db   "Harshly reduces"
+	next "foe's SPCL.DEF.@"
+
 		;"123456789123456789"
 
 ; GyroBallDescription:
@@ -2196,3 +2281,7 @@ StruggleBugDescription:
 ; HeavySlamDescription:
 	; db   "Stronger if the"
 	; next "user is heavier.@"
+
+; StrengthSapDescription:
+	; db   "Restores HP using"
+	; next "the foe's ATTACK.@"

@@ -454,6 +454,11 @@ TargetWokeUpText:
 	line "woke up!"
 	prompt
 
+TargetRidOfParalysisText:
+	text "<TARGET>'s"
+	line "rid of paralysis!"
+	prompt
+
 FrozenSolidText:
 	text "<USER>"
 	line "is frozen solid!"
@@ -1201,6 +1206,15 @@ KnockedOffText:
 	text "!"
 	prompt
 
+IncineratedText:
+	text "<USER>"
+	line "INCINERATED"
+	para "<TARGET>'s"
+	line "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 StoleBerryText:
 	text "<USER>"
 	line "ate its foe's"
@@ -1531,3 +1545,9 @@ UserBurnWasHealedText::
 	; text "<USER>"
 	; line "was defrosted!"
 	; prompt
+
+TransformedIntoWaterTypeText::
+	text "<TARGET>"
+	line "transformed into"
+	cont "the WATER type!"
+	prompt

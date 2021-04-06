@@ -1946,6 +1946,7 @@ HiddenPower:
 	doturn
 	critical
 	hiddenpower
+	damagestats
 	damagecalc
 	stab
 	damagevariation
@@ -2552,7 +2553,7 @@ MultiStatDown:
 	raisesub
 	multistatdownmessage
 	endmove
-	
+
 CureStatusHit:
 	checkobedience
 	usedmovetext
@@ -2936,4 +2937,118 @@ Bounce:
 	buildopponentrage
 	kingsrock
 	paralyzetarget
+	endmove
+
+Incinerate:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	knockoff
+	checkfaint
+	buildopponentrage
+	defrostopponent
+	kingsrock
+	endmove
+
+; StrengthSap:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; checkhit
+	; attackdown
+	; lowersub
+	; statdownanim
+	; raisesub
+	; statdownmessage
+	; statdownfailtext
+	; strengthsap
+	; endmove
+
+Soak:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	soak
+	endmove
+
+WeatherBall:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	weatherball
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+Captivate:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	captivate
+	lowersub
+	statdownanim
+	raisesub
+	statdownmessage
+	statdownfailtext
+	endmove
+
+Acupressure:
+	checkobedience
+	usedmovetext
+	doturn
+	acupressure
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+SpecialDefenseDown2Hit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	specialdefensedown2
+	statdownmessage
+	kingsrock
 	endmove
