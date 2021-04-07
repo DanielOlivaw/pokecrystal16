@@ -3921,7 +3921,7 @@ NewEnemyMonStatus:
 	ld [wLastEnemyCounterMove], a
 	ld [wLastEnemyMove], a
 	ld hl, wEnemySubStatus1
-rept 4
+rept 5 ; changed for addition of SubStatus6
 	ld [hli], a
 endr
 	ld [hl], a
@@ -3936,6 +3936,7 @@ endr
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
+	res SUBSTATUS_INGRAINED, [hl]
 	ret
 
 ResetEnemyStatLevels:
@@ -4022,8 +4023,6 @@ TryToRunAwayFromBattle:
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
-
-	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .cant_escape
 
@@ -4404,7 +4403,7 @@ NewBattleMonStatus:
 	ld [wLastEnemyCounterMove], a
 	ld [wLastPlayerMove], a
 	ld hl, wPlayerSubStatus1
-rept 4
+rept 5 ; Changed for addition of SubStatus6
 	ld [hli], a
 endr
 	ld [hl], a
@@ -4424,6 +4423,7 @@ endr
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
+	res SUBSTATUS_INGRAINED, [hl]
 	ret
 
 BreakAttraction:

@@ -54,11 +54,13 @@ BattleVarPairs:
 	dw .Substatus3
 	dw .Substatus4
 	dw .Substatus5
+	dw .Substatus6 ; New
 	dw .Substatus1Opp
 	dw .Substatus2Opp
 	dw .Substatus3Opp
 	dw .Substatus4Opp
 	dw .Substatus5Opp
+	dw .Substatus6Opp ; New
 	dw .Status
 	dw .StatusOpp
 	dw .MoveAnim
@@ -82,6 +84,8 @@ BattleVarPairs:
 .Substatus4Opp:  db ENEMY_SUBSTATUS_4,     PLAYER_SUBSTATUS_4
 .Substatus5:     db PLAYER_SUBSTATUS_5,    ENEMY_SUBSTATUS_5
 .Substatus5Opp:  db ENEMY_SUBSTATUS_5,     PLAYER_SUBSTATUS_5
+.Substatus6:     db PLAYER_SUBSTATUS_6,    ENEMY_SUBSTATUS_6  ; New
+.Substatus6Opp:  db ENEMY_SUBSTATUS_6,     PLAYER_SUBSTATUS_6 ; New
 .Status:         db PLAYER_STATUS,         ENEMY_STATUS
 .StatusOpp:      db ENEMY_STATUS,          PLAYER_STATUS
 .MoveAnim:       db PLAYER_MOVE_ANIMATION, ENEMY_MOVE_ANIMATION
@@ -101,6 +105,7 @@ BattleVarLocations:
 	dw wPlayerSubStatus3,          wEnemySubStatus3
 	dw wPlayerSubStatus4,          wEnemySubStatus4
 	dw wPlayerSubStatus5,          wEnemySubStatus5
+	dw wPlayerSubStatus6,          wEnemySubStatus6 ; New
 	dw wBattleMonStatus,           wEnemyMonStatus
 	dw wPlayerMoveStructAnimation, wEnemyMoveStructAnimation
 	dw wPlayerMoveStructEffect,    wEnemyMoveStructEffect

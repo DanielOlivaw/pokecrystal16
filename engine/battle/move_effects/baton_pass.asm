@@ -148,6 +148,7 @@ ResetBatonPassStatus:
 	res SUBSTATUS_IN_LOVE, [hl]
 	ld hl, wPlayerSubStatus5
 
+	; Transformation and Encore aren't passed.
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr
 	res SUBSTATUS_TRANSFORMED, [hl]
@@ -158,6 +159,7 @@ ResetBatonPassStatus:
 	call GetBattleVarAddr
 	ld [hl], 0
 
+	; Wrap isn't passed.
 	xor a
 	ld [wPlayerWrapCount], a
 	ld [wEnemyWrapCount], a

@@ -464,7 +464,7 @@ wPlayerSubStatus4:: ; c66b
 ; 6 rage
 ; 5 recharge
 ; 4 substitute
-; 3
+; 3 uproar
 ; 2 focus energy
 ; 1 mist
 ; 0 x accuracy
@@ -480,6 +480,17 @@ wPlayerSubStatus5:: ; c66c
 ; 1
 ; 0 toxic
 	db
+wPlayerSubStatus6::
+; bit
+; 7 
+; 6 
+; 5 
+; 4 
+; 3 
+; 2 
+; 1
+; 0 
+	db
 
 wEnemySubStatus1:: ; c66d
 ; see wPlayerSubStatus1
@@ -494,6 +505,9 @@ wEnemySubStatus4:: ; c670
 ; see wPlayerSubStatus4
 	db
 wEnemySubStatus5:: ; c671
+; see wPlayerSubStatus5
+	db
+wEnemySubStatus6::
 ; see wPlayerSubStatus5
 	db
 
