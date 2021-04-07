@@ -11,4 +11,5 @@ BattleCommand_FocusEnergy:
 
 .already_pumped
 	farcall AnimateFailedMove
-	jp PrintButItFailed
+	farcall PrintButItFailed
+	ret

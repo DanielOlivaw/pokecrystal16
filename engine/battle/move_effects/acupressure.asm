@@ -1,4 +1,4 @@
-AcupressureEffect:
+BattleCommand_Acupressure:
 .loop
 	call BattleRandom
 	maskbits NUM_LEVEL_STATS

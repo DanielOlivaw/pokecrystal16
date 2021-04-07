@@ -202,4 +202,4 @@ BattleCommandPointers:
 	dw BattleCommand_Soak
 	dw BattleCommand_WeatherBall
 	dw BattleCommand_Captivate
-	dw BattleCommand_Acupressure
+	dw BattleCommand_Yawn

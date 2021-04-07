@@ -459,6 +459,9 @@ MoveDescriptions1:
 	dw AcupressureDescription
 	dw WildChargeDescription
 	dw AcidSprayDescription
+	dw ChargeDescription
+	dw BelchDescription
+	dw YawnDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2267,6 +2270,18 @@ WildChargeDescription:
 AcidSprayDescription:
 	db   "Harshly reduces"
 	next "foe's SPCL.DEF.@"
+
+ChargeDescription:
+	db   "Boosts the next"
+	next "ELECTRIC move.@"
+
+BelchDescription:
+	db   "Only usable after"
+	next "eating a BERRY.@"
+
+YawnDescription:
+	db   "The target falls"
+	next "asleep next turn.@"
 
 		;"123456789123456789"
 

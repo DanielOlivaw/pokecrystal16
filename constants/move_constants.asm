@@ -460,6 +460,9 @@
 	const ACUPRESSURE
 	const WILD_CHARGE
 	const ACID_SPRAY
+	const CHARGE
+	const BELCH
+	const YAWN
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

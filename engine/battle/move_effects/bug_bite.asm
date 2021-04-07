@@ -85,6 +85,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_AttackUp
 	callfar BattleCommand_StatUpMessage
@@ -96,6 +97,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_DefenseUp
 	callfar BattleCommand_StatUpMessage
@@ -107,6 +109,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_SpeedUp
 	callfar BattleCommand_StatUpMessage
@@ -118,6 +121,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_SpecialAttackUp
 	callfar BattleCommand_StatUpMessage
@@ -129,6 +133,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_SpecialDefenseUp
 	callfar BattleCommand_StatUpMessage
@@ -140,6 +145,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_AccuracyUp
 	callfar BattleCommand_StatUpMessage
@@ -151,6 +157,7 @@ BugBiteEffect:
 	call StdBattleTextbox
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	farcall BattleCommand_SwitchTurn
 	farcall BattleCommand_EvasionUp
 	callfar BattleCommand_StatUpMessage
@@ -208,7 +215,8 @@ StealHeldHPHealingItem:
 	ld b, 0 ; bc contains HP to restore
 	ld a, [hl]
 	farcall ItemRecoveryAnim
-	farcall RestoreHP
+	callfar RestoreHP
+	farcall SetOpponentAteBerry
 	xor a
 	farcall BattleCommand_SwitchTurn
 	ld hl, StoleBerryRecoveryText
@@ -266,6 +274,7 @@ StealHeldStatusHealingItem:
 	rst FarCall
 	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	; call UseOpponentItem
 	ld a, $1
 	and a
@@ -289,6 +298,7 @@ StealConfusionHealingItem:
 	
 	callfar BattleCommand_SwitchTurn
 	callfar ItemRecoveryAnim
+	farcall SetOpponentAteBerry
 	callfar BattleCommand_SwitchTurn
 	
 	ld hl, StoleBerryRecoveryText

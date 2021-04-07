@@ -154,6 +154,13 @@ ResetBatonPassStatus:
 	res SUBSTATUS_TRANSFORMED, [hl]
 	res SUBSTATUS_ENCORED, [hl]
 
+	; Charge, Yawn, and Belch berry check aren't passed.
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVarAddr
+	res SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	res SUBSTATUS_ATE_BERRY, [hl]
+	res SUBSTATUS_DROWSY, [hl]
+
 	; New mon hasn't used a move yet.
 	ld a, BATTLE_VARS_LAST_MOVE
 	call GetBattleVarAddr

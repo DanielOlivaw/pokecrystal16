@@ -49,6 +49,22 @@ GetPlayerBackpicCoords:
 	lb bc, 6, 6
 	ret
 
+DoChargeBoost:
+; Charge doubles the power damage of the next Electric move used by the user
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVarAddr
+	bit SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	ret z
+
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp ELECTRIC
+	ret nz
+
+	farcall DoubleDamage
+	ret
+
 DoWeatherModifiers:
 	ld de, WeatherTypeModifiers
 	ld a, [wBattleWeather]

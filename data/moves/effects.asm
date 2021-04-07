@@ -3022,7 +3022,7 @@ Acupressure:
 	checkobedience
 	usedmovetext
 	doturn
-	acupressure
+	statustargetself
 	lowersub
 	statupanim
 	raisesub
@@ -3051,4 +3051,13 @@ SpecialDefenseDown2Hit:
 	specialdefensedown2
 	statdownmessage
 	kingsrock
+	endmove
+
+Yawn:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	checksafeguard
+	yawn
 	endmove

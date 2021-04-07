@@ -350,6 +350,8 @@ HandleBetweenTurnEffects:
 
 .NoMoreFaintingConditions:
 	call EndRoostEffect
+	call EndChargeEffect
+	call HandleYawn
 	call HandleLeftovers
 	call HandleIngrain
 	call HandleMysteryberry
@@ -1438,6 +1440,54 @@ EndRoostEffect:
 	ld [de], a
 	ret
 
+EndChargeEffect:
+; At the end of the 2nd turn, Charge can no longer boost the user's next Electric move.
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerChargeCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyChargeCount
+.do_it
+	ld a, [bc]
+	and a
+	jr nz, .lower_charge_count
+	bit SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	ret z
+	res SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	ret
+
+.lower_charge_count
+	xor a
+	ld [bc], a
+	ret
+
+HandleYawn:
+; At the end of the 2nd turn, drowsy Pokemon fall asleep.
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerYawnCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyYawnCount
+.do_it
+	ld a, [bc]
+	and a
+	jr nz, .lower_yawn_count
+	bit SUBSTATUS_DROWSY, [hl]
+	ret z
+	res SUBSTATUS_DROWSY, [hl]
+	call SwitchTurnCore
+	farcall YawnPutToSleep
+	ret
+
+.lower_yawn_count
+	xor a
+	ld [bc], a
+	ret
+
 HandleLeftovers:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1658,12 +1708,31 @@ HandleMysteryberry:
 	ld [hl], a
 
 .skip_consumption
+	call SwitchTurnCore
+	call SetOpponentAteBerry
+	call SwitchTurnCore
 	call GetItemName
 	call SwitchTurnCore
 	call ItemRecoveryAnim
 	call SwitchTurnCore
 	ld hl, BattleText_UserRecoveredPPUsing
 	jp StdBattleTextbox
+
+SetOpponentAteBerry:
+; For the move Belch
+	push hl
+	ld hl, wEnemySubStatus6
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .set_ate_berry
+	ld hl, wPlayerSubStatus6
+.set_ate_berry
+	bit SUBSTATUS_ATE_BERRY, [hl]
+	jr nz, .done
+	set SUBSTATUS_ATE_BERRY, [hl]
+.done
+	pop hl
+	ret
 
 HandleFutureSight:
 	ldh a, [hSerialConnectionStatus]
@@ -3933,10 +4002,11 @@ endr
 	ld [wEnemyMinimized], a
 	ld [wPlayerWrapCount], a
 	ld [wEnemyWrapCount], a
+	ld [wEnemyChargeCount], a
+	ld [wEnemyYawnCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
-	res SUBSTATUS_INGRAINED, [hl]
 	ret
 
 ResetEnemyStatLevels:
@@ -4023,6 +4093,8 @@ TryToRunAwayFromBattle:
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
+
+	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .cant_escape
 
@@ -4420,10 +4492,11 @@ endr
 	ld [wPlayerMinimized], a
 	ld [wEnemyWrapCount], a
 	ld [wPlayerWrapCount], a
+	ld [wPlayerChargeCount], a
+	ld [wPlayerYawnCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
-	res SUBSTATUS_INGRAINED, [hl]
 	ret
 
 BreakAttraction:
@@ -4809,6 +4882,7 @@ HandleHPHealingItem:
 
 .less
 	call ItemRecoveryAnim
+	call SetOpponentAteBerry
 	; store max HP in wBuffer1/2
 	ld a, [hli]
 	ld [wBuffer2], a
@@ -4925,6 +4999,7 @@ UseHeldStatusHealingItem:
 
 .got_pointer
 	call SwitchTurnCore
+	call SetOpponentAteBerry
 	ld a, BANK(CalcPlayerStats) ; aka BANK(CalcEnemyStats)
 	rst FarCall
 	call SwitchTurnCore
@@ -4954,6 +5029,7 @@ UseConfusionHealingItem:
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_CONFUSED, [hl]
+	call SetOpponentAteBerry
 	call GetItemName
 	call ItemRecoveryAnim
 	ld hl, BattleText_ItemHealedConfusion
@@ -9607,60 +9683,4 @@ GetTrainerBackpic:
 	ld de, vTiles2 tile $31
 	ld c, 7 * 7
 	predef DecompressGet2bpp
-	ret
-
-CopyBackpic:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
-	ld hl, vTiles0
-	ld de, vTiles2 tile $31
-	ldh a, [hROMBank]
-	ld b, a
-	ld c, $31
-	call Get2bpp
-	pop af
-	ldh [rSVBK], a
-	call .LoadTrainerBackpicAsOAM
-	ld a, $31
-	ldh [hGraphicStartTile], a
-	hlcoord 2, 6
-	lb bc, 6, 6
-	predef PlaceGraphic
-	ret
-
-.LoadTrainerBackpicAsOAM:
-	ld hl, wVirtualOAMSprite00
-	xor a
-	ldh [hMapObjectIndexBuffer], a
-	ld b, 6
-	ld e, (SCREEN_WIDTH + 1) * TILE_WIDTH
-.outer_loop
-	ld c, 3
-	ld d, 8 * TILE_WIDTH
-.inner_loop
-	ld [hl], d ; y
-	inc hl
-	ld [hl], e ; x
-	inc hl
-	ldh a, [hMapObjectIndexBuffer]
-	ld [hli], a ; tile id
-	inc a
-	ldh [hMapObjectIndexBuffer], a
-	ld a, PAL_BATTLE_OB_PLAYER
-	ld [hli], a ; attributes
-	ld a, d
-	add 1 * TILE_WIDTH
-	ld d, a
-	dec c
-	jr nz, .inner_loop
-	ldh a, [hMapObjectIndexBuffer]
-	add $3
-	ldh [hMapObjectIndexBuffer], a
-	ld a, e
-	add 1 * TILE_WIDTH
-	ld e, a
-	dec b
-	jr nz, .outer_loop
 	ret

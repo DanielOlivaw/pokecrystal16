@@ -126,3 +126,7 @@ INCLUDE "engine/battle/move_effects/weather_ball.asm"
 INCLUDE "engine/battle/move_effects/captivate.asm"
 
 INCLUDE "engine/battle/move_effects/acupressure.asm"
+
+INCLUDE "engine/battle/move_effects/charge.asm"
+
+INCLUDE "engine/battle/move_effects/yawn.asm"

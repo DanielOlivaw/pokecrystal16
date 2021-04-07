@@ -481,6 +481,9 @@ BattleAnimations::
 	dw BattleAnim_Acupressure
 	dw BattleAnim_WildCharge
 	dw BattleAnim_AcidSpray
+	dw BattleAnim_Charge
+	dw BattleAnim_Belch
+	dw BattleAnim_Yawn
 
 	dw BattleAnim_SweetScent2
 
@@ -864,6 +867,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Yawn:
+BattleAnim_Charge:
+BattleAnim_Belch:
 BattleAnim_SmellingSalt:
 BattleAnim_Captivate:
 BattleAnim_Acupressure:

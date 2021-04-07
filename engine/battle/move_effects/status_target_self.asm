@@ -28,6 +28,10 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_Ingrain
 	cp EFFECT_COIL
 	jp z, BattleCommand_Coil
+	cp EFFECT_ACUPRESSURE
+	jp z, BattleCommand_Acupressure
+	cp EFFECT_CHARGE
+	jp z, BattleCommand_ElectricCharge
 
 	cp EFFECT_SPIKES
 	jp z, BattleCommand_Spikes

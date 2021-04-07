@@ -240,3 +240,6 @@ MoveEffectsPointers:
 	dw Captivate
 	dw Acupressure
 	dw SpecialDefenseDown2Hit
+	dw StatusTargetSelf
+	dw NormalHit
+	dw Yawn

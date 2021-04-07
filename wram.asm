@@ -519,6 +519,8 @@ wPlayerEncoreCount:: db ; c676
 wPlayerPerishCount:: db ; c677
 wPlayerFuryCutterCount:: db ; c678
 wPlayerProtectCount:: db ; c679
+wPlayerChargeCount:: db
+wPlayerYawnCount:: db
 
 wEnemyRolloutCount:: db ; c67a
 wEnemyConfuseCount:: db ; c67b
@@ -528,6 +530,8 @@ wEnemyEncoreCount:: db ; c67e
 wEnemyPerishCount:: db ; c67f
 wEnemyFuryCutterCount:: db ; c680
 wEnemyProtectCount:: db ; c681
+wEnemyChargeCount:: db
+wEnemyYawnCount:: db
 
 wPlayerDamageTaken:: dw ; c682
 wEnemyDamageTaken:: dw ; c684

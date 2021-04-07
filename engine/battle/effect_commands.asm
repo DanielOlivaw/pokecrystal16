@@ -1337,6 +1337,10 @@ BattleCommand_Stab:
 	ld [wCurType], a
 
 	push hl
+	farcall DoChargeBoost
+	pop hl
+
+	push hl
 	push de
 	push bc
 	farcall DoWeatherModifiers
@@ -1655,6 +1659,9 @@ BattleCommand_CheckHit:
 
 	call .BurnUp
 
+	call .Belch
+	jp z, .Miss
+
 	call .DreamEater
 	jp z, .Miss
 
@@ -1710,6 +1717,8 @@ BattleCommand_CheckHit:
 	cp EFFECT_RESET_STATS_HIT
 	ret z
 	cp EFFECT_ATK_SP_ATK_DOWN
+	ret z
+	cp EFFECT_YAWN
 	ret z
 
 	call .StatModifiers
@@ -1796,6 +1805,18 @@ BattleCommand_CheckHit:
 	ld a, [de]
 	cp FIRE
 	jr nz, .Missed
+	ret
+
+.Belch:
+; Return z if the user is trying to use Belch without having eaten a berry.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_BELCH
+	ret nz
+
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVar
+	bit SUBSTATUS_ATE_BERRY, a
 	ret
 
 .Protect:
@@ -2447,8 +2468,10 @@ GetFailureResultText:
 	jr z, .got_text
 	cp EFFECT_BURN_UP
 	ld hl, ButItFailedText
-	ld de, ItFailedText
+	ld de, ButItFailedText
 	jr z, .check_burn_up
+	cp EFFECT_BELCH
+	jr z, .check_belch
 .miss_text
 	ld hl, AttackMissedText
 	ld de, AttackMissed2Text
@@ -2521,6 +2544,18 @@ GetFailureResultText:
 	pop hl
 	pop de
 	jr .miss_text
+
+.check_belch
+; Belch prints miss text if the user has eaten a berry but failure text otherwise
+	push hl
+	push de
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVar
+	bit SUBSTATUS_ATE_BERRY, a
+	pop hl
+	pop de
+	jr nz, .miss_text
+	jr .got_text
 
 FailText_CheckOpponentProtect:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
@@ -7357,8 +7392,8 @@ BattleCommand_Captivate:
 	farcall CaptivateEffect
 	ret
 
-BattleCommand_Acupressure:
-	farcall AcupressureEffect
+BattleCommand_Yawn:
+	farcall YawnEffect
 	ret
 
 SafeCheckSafeguard:

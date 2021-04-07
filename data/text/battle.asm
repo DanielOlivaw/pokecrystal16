@@ -875,6 +875,12 @@ AccuracyWontRiseAnymoreText:
 	cont "go any higher!"
 	prompt
 
+SpDefWontRiseAnymoreText:
+	text "<USER>'s"
+	line "SPCL.DEF won't"
+	cont "go any higher!"
+	prompt
+
 WontDropAnymoreText:
 	text "<TARGET>'s"
 	line "@"
@@ -944,6 +950,13 @@ GettingPumpedText:
 	text_pause
 	text "<USER>'s"
 	line "getting pumped!"
+	prompt
+
+ChargingPowerText:
+	text_pause
+	text "<USER>"
+	line "began charging"
+	cont "power!"
 	prompt
 
 RecoilText:
@@ -1317,6 +1330,11 @@ BracedItselfText:
 FellInLoveText:
 	text "<TARGET>"
 	line "fell in love!"
+	prompt
+
+GrewDrowsyText:
+	text "<TARGET>"
+	line "grew drowsy!"
 	prompt
 
 CoveredByVeilText:

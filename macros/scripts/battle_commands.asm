@@ -203,7 +203,7 @@ ENDM
 	command soak                    ; c4
 	command weatherball             ; c5
 	command captivate               ; c6
-	command acupressure             ; c7
+	command yawn                    ; c7
 
 	enum_start $fe
 	command endturn                 ; fe

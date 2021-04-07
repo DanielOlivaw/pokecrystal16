@@ -453,4 +453,7 @@ MoveNames::
 	db "ACUPRESSURE@"
 	db "WILD CHARGE@"
 	db "ACID SPRAY@"
+	db "CHARGE@"
+	db "BELCH@"
+	db "YAWN@"
 	  ;"123456123456@"
