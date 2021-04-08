@@ -739,6 +739,17 @@ SprangUpText::
 	line "sprang up!"
 	prompt
 
+HidUnderwaterText::
+	text_start
+	line "hid underwater!"
+	prompt
+
+VanishedInstantlyText::
+	text_start
+	line "vanished!"
+	; line "vanished instantly!"
+	prompt
+
 _ActorNameText::
 	text "<USER>@"
 	text_end

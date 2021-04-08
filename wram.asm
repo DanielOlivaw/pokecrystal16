@@ -449,11 +449,11 @@ wPlayerSubStatus2:: ; c669
 	db
 wPlayerSubStatus3:: ; c66a
 ; bit
-; 7 confused
+; 7 diving
 ; 6 flying
 ; 5 underground
 ; 4 charged
-; 3 flinched
+; 3 vanished (phantom force & shadow force)
 ; 2 in loop
 ; 1 rampage
 ; 0 bide
@@ -482,13 +482,13 @@ wPlayerSubStatus5:: ; c66c
 	db
 wPlayerSubStatus6::
 ; bit
-; 7 
-; 6 
-; 5 
-; 4 
-; 3 
+; 7 confused
+; 6 charged (electric boost)
+; 5 ate berry (belch)
+; 4 drowsy (yawn)
+; 3 flinched
 ; 2 
-; 1
+; 1 
 ; 0 
 	db
 

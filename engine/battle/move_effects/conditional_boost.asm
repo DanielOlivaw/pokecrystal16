@@ -41,6 +41,10 @@ Find_ConditionalBoost:
 	jr z, BattleCommand_DoubleFlyingDamage
 	cp EFFECT_TWISTER
 	jr z, BattleCommand_DoubleFlyingDamage
+	cp EFFECT_SURF
+	jr z, BattleCommand_DoubleDivingDamage
+	cp EFFECT_WHIRLPOOL
+	jr z, BattleCommand_DoubleDivingDamage
 	ret
 
 BattleCommand_ShatterClaw:
@@ -64,6 +68,14 @@ BattleCommand_DoubleUndergroundDamage:
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	bit SUBSTATUS_UNDERGROUND, a
+	ret z
+	jr DoubleDamage
+
+BattleCommand_DoubleDivingDamage:
+; doubledivingdamage
+	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	call GetBattleVar
+	bit SUBSTATUS_DIVING, a
 	ret z
 	jr DoubleDamage
 

@@ -257,7 +257,7 @@ StealHeldStatusHealingItem:
 	ld a, b
 	cp ALL_STATUS
 	jr nz, .skip_confuse
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_CONFUSED, [hl]
 
@@ -286,13 +286,13 @@ StealHeldStatusHealingItem:
 	ret
 
 StealConfusionHealingItem:
-	ld a, BATTLE_VARS_SUBSTATUS3
+	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVarAddr
 	bit SUBSTATUS_CONFUSED, a
 	ret z
 
 .heal_status
-	ld a, BATTLE_VARS_SUBSTATUS3
+	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVarAddr
 	res SUBSTATUS_CONFUSED, [hl]
 	

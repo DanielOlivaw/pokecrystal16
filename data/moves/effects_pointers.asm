@@ -243,3 +243,8 @@ MoveEffectsPointers:
 	dw StatusTargetSelf
 	dw NormalHit
 	dw Yawn
+	dw Fly
+	dw Fly
+	dw Fly
+	dw ConditionalBoost
+	dw Whirlpool

@@ -65,7 +65,7 @@ AI_Redundant:
 	ret
 
 .Confuse:
-	ld a, [wPlayerSubStatus3]
+	ld a, [wPlayerSubStatus6]
 	bit SUBSTATUS_CONFUSED, a
 	ret nz
 	ld a, [wPlayerScreens]
@@ -200,7 +200,7 @@ AI_Redundant:
 	jr .NotRedundant
 
 .Swagger:
-	ld a, [wPlayerSubStatus3]
+	ld a, [wPlayerSubStatus6]
 	bit SUBSTATUS_CONFUSED, a
 	ret
 

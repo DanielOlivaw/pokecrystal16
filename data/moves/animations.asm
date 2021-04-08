@@ -484,6 +484,9 @@ BattleAnimations::
 	dw BattleAnim_Charge
 	dw BattleAnim_Belch
 	dw BattleAnim_Yawn
+	dw BattleAnim_Dive
+	dw BattleAnim_ShadowForce
+	dw BattleAnim_PhantomForce
 
 	dw BattleAnim_SweetScent2
 
@@ -867,6 +870,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Dive:
+BattleAnim_ShadowForce:
+BattleAnim_PhantomForce:
 BattleAnim_Yawn:
 BattleAnim_Charge:
 BattleAnim_Belch:

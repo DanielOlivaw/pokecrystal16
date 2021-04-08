@@ -463,6 +463,9 @@
 	const CHARGE
 	const BELCH
 	const YAWN
+	const DIVE
+	const SHADOW_FORCE
+	const PHANTOM_FORCE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

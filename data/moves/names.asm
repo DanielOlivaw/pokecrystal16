@@ -456,4 +456,7 @@ MoveNames::
 	db "CHARGE@"
 	db "BELCH@"
 	db "YAWN@"
+	db "DIVE@"
+	db "SHADOW FORCE@"
+	db "PHANTOMFORCE@"
 	  ;"123456123456@"

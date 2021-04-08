@@ -1439,7 +1439,7 @@ UseStatusHealer:
 IsItemUsedOnConfusedMon:
 	call IsItemUsedOnBattleMon
 	jr nc, .nope
-	ld a, [wPlayerSubStatus3]
+	ld a, [wPlayerSubStatus6]
 	bit SUBSTATUS_CONFUSED, a
 	jr z, .nope
 	ld a, c
@@ -1476,7 +1476,7 @@ HealStatus:
 	ld a, c
 	cp %11111111
 	jr nz, .not_full_heal
-	ld hl, wPlayerSubStatus3
+	ld hl, wPlayerSubStatus6
 	res SUBSTATUS_CONFUSED, [hl]
 .not_full_heal
 	push bc
@@ -1625,7 +1625,7 @@ FullRestoreEffect:
 	ret
 
 BitterBerryEffect:
-	ld hl, wPlayerSubStatus3
+	ld hl, wPlayerSubStatus6
 	bit SUBSTATUS_CONFUSED, [hl]
 	ld a, 1
 	jr z, .done

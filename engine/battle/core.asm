@@ -478,7 +478,7 @@ HandleBerserkGene:
 	call GetPartyLocation
 	xor a
 	ld [hl], a
-	ld a, BATTLE_VARS_SUBSTATUS3
+	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVarAddr
 	push af
 	set SUBSTATUS_CONFUSED, [hl]
@@ -680,9 +680,9 @@ CheckPlayerLockedIn:
 	and 1 << SUBSTATUS_RECHARGE
 	jp nz, .quit
 
-	ld hl, wEnemySubStatus3
+	ld hl, wEnemySubStatus6
 	res SUBSTATUS_FLINCHED, [hl]
-	ld hl, wPlayerSubStatus3
+	ld hl, wPlayerSubStatus6
 	res SUBSTATUS_FLINCHED, [hl]
 
 	ld a, [hl]
@@ -1199,7 +1199,7 @@ ResidualDamage:
 	ld de, ANIM_SAP
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
 	call z, Call_PlayBattleAnim_OnlyIfVisible
 	call SwitchTurnCore
 
@@ -1381,7 +1381,7 @@ HandleWrap:
 
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
 	jr nz, .skip_anim
 
 	call SwitchTurnCore
@@ -4986,7 +4986,7 @@ UseHeldStatusHealingItem:
 	ld a, b
 	cp ALL_STATUS
 	jr nz, .skip_confuse
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_CONFUSED, [hl]
 
@@ -5012,7 +5012,7 @@ UseHeldStatusHealingItem:
 INCLUDE "data/battle/held_heal_status.asm"
 
 UseConfusionHealingItem:
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
 	call GetBattleVar
 	bit SUBSTATUS_CONFUSED, a
 	ret z
@@ -5026,7 +5026,7 @@ UseConfusionHealingItem:
 .heal_status
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
-	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_CONFUSED, [hl]
 	call SetOpponentAteBerry
@@ -7569,7 +7569,7 @@ _BattleRandom::
 Call_PlayBattleAnim_OnlyIfVisible:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
 	ret nz
 
 Call_PlayBattleAnim:

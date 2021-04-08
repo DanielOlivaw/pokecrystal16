@@ -462,6 +462,9 @@ MoveDescriptions1:
 	dw ChargeDescription
 	dw BelchDescription
 	dw YawnDescription
+	dw DiveDescription
+	dw ShadowForceDescription
+	dw PhantomForceDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2282,6 +2285,18 @@ BelchDescription:
 YawnDescription:
 	db   "The target falls"
 	next "asleep next turn.@"
+
+DiveDescription:
+	db   "1st turn: Dive"
+	next "2nd turn: Attack@"
+
+ShadowForceDescription:
+	db   "1st turn: Vanish"
+	next "2nd turn: Attack@"
+
+PhantomForceDescription:
+	db   "1st turn: Vanish"
+	next "2nd turn: Attack@"
 
 		;"123456789123456789"
 
