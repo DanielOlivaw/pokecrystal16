@@ -783,6 +783,14 @@ ParsePlayerAction:
 	jr z, .continue_protect
 	cp EFFECT_ENDURE
 	jr z, .continue_protect
+	cp EFFECT_SPIKY_SHIELD
+	jr z, .continue_protect
+	cp EFFECT_KINGS_SHIELD
+	jr z, .continue_protect
+	cp EFFECT_BANEFUL_BUNKER
+	jr z, .continue_protect
+	cp EFFECT_OBSTRUCT
+	jr z, .continue_protect
 	xor a
 	ld [wPlayerProtectCount], a
 	jr .continue_protect
@@ -6511,6 +6519,14 @@ ParseEnemyAction:
 	ret z
 	cp EFFECT_ENDURE
 	ret z
+	cp EFFECT_SPIKY_SHIELD
+	ret z
+	cp EFFECT_KINGS_SHIELD
+	ret z
+	cp EFFECT_BANEFUL_BUNKER
+	ret z
+	cp EFFECT_OBSTRUCT
+	ret z
 	xor a
 	ld [wEnemyProtectCount], a
 	ret
@@ -9648,39 +9664,6 @@ InitBattleDisplay:
 	ret
 
 .InitBackPic:
-	call GetTrainerBackpic
+	farcall GetTrainerBackpic
 	call CopyBackpic
-	ret
-
-GetTrainerBackpic:
-; Load the player character's backpic (6x6) into VRAM starting from vTiles2 tile $31.
-
-; Special exception for Dude.
-	ld b, BANK(DudeBackpic)
-	ld hl, DudeBackpic
-	ld a, [wBattleType]
-	cp BATTLETYPE_TUTORIAL
-	jr z, .Decompress
-
-; What gender are we?
-	ld a, [wPlayerSpriteSetupFlags]
-	bit PLAYERSPRITESETUP_FEMALE_TO_MALE_F, a
-	jr nz, .Chris
-	ld a, [wPlayerGender]
-	bit PLAYERGENDER_FEMALE_F, a
-	jr z, .Chris
-
-; It's a girl.
-	farcall GetKrisBackpic
-	ret
-
-.Chris:
-; It's a boy.
-	ld b, BANK(ChrisBackpic)
-	ld hl, ChrisBackpic
-
-.Decompress:
-	ld de, vTiles2 tile $31
-	ld c, 7 * 7
-	predef DecompressGet2bpp
 	ret

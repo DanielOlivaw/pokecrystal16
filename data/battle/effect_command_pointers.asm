@@ -203,3 +203,4 @@ BattleCommandPointers:
 	dw BattleCommand_WeatherBall
 	dw BattleCommand_Captivate
 	dw BattleCommand_Yawn
+	dw BattleCommand_CraftyShield

@@ -465,6 +465,14 @@ MoveDescriptions1:
 	dw DiveDescription
 	dw ShadowForceDescription
 	dw PhantomForceDescription
+	dw NobleRoarDescription
+	dw BoomburstDescription
+	dw NeedleArmDescription
+	dw SpikyShieldDescription
+	dw KingsShieldDescription
+	dw BanefulBunkerDescription
+	dw ObstructDescription
+	dw CraftyShieldDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2297,6 +2305,38 @@ ShadowForceDescription:
 PhantomForceDescription:
 	db   "1st turn: Vanish"
 	next "2nd turn: Attack@"
+
+NobleRoarDescription:
+	db   "Reduces ATTACK"
+	next "and SPCL.ATK.@"
+
+BoomburstDescription:
+	db   "Attacks with an"
+	next "explosive sound.@"
+
+NeedleArmDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+SpikyShieldDescription:
+	db   "Protection that"
+	next "may hurt the foe.@"
+
+KingsShieldDescription:
+	db   "Protection that"
+	next "may lower ATTACK.@"
+
+BanefulBunkerDescription:
+	db   "Protection that"
+	next "may cause poison.@"
+
+ObstructDescription:
+	db   "Protection that"
+	next "may lower DEFENSE.@"
+
+CraftyShieldDescription:
+	db   "Foils a status"
+	next "move that turn.@"
 
 		;"123456789123456789"
 

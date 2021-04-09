@@ -466,6 +466,14 @@
 	const DIVE
 	const SHADOW_FORCE
 	const PHANTOM_FORCE
+	const NOBLE_ROAR
+	const BOOMBURST
+	const NEEDLE_ARM
+	const SPIKY_SHIELD
+	const KINGS_SHIELD
+	const BANEFUL_BUNKER
+	const OBSTRUCT
+	const CRAFTY_SHIELD
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

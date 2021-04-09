@@ -4,6 +4,8 @@ MultiStatDownEffect:
 	call GetBattleVar
 	cp EFFECT_ATK_DEF_DOWN
 	jr z, BattleCommand_AttackDefenseDown
+	cp EFFECT_TEARFUL_LOOK
+	jp z, BattleCommand_AttackSpecialAttackDown
 	cp EFFECT_ATK_SP_ATK_DOWN
 	jp z, BattleCommand_AttackSpecialAttackDown
 

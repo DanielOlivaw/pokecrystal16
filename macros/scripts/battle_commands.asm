@@ -204,6 +204,7 @@ ENDM
 	command weatherball             ; c5
 	command captivate               ; c6
 	command yawn                    ; c7
+	command craftyshield            ; c8
 
 	enum_start $fe
 	command endturn                 ; fe

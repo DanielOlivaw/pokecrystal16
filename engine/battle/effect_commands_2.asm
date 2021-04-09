@@ -2,6 +2,11 @@ INCLUDE "engine/battle/move_effects/conditional_boost.asm"
 
 INCLUDE "engine/battle/move_effects/status_target_self.asm"
 
+INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
+
+INCLUDE "engine/battle/move_effects/protect_variations.asm"
+
+
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
@@ -77,8 +82,6 @@ INCLUDE "engine/battle/move_effects/reflect_type.asm"
 
 INCLUDE "engine/battle/move_effects/brine.asm"
 
-INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
-
 INCLUDE "engine/battle/move_effects/payback.asm"
 
 INCLUDE "engine/battle/move_effects/smelling_salts_wake_up_slap.asm"
@@ -130,3 +133,5 @@ INCLUDE "engine/battle/move_effects/acupressure.asm"
 INCLUDE "engine/battle/move_effects/charge.asm"
 
 INCLUDE "engine/battle/move_effects/yawn.asm"
+
+INCLUDE "engine/battle/move_effects/crafty_shield.asm"

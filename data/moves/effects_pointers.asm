@@ -248,3 +248,9 @@ MoveEffectsPointers:
 	dw Fly
 	dw ConditionalBoost
 	dw Whirlpool
+	dw MultiStatDown
+	dw Protect
+	dw Protect
+	dw Protect
+	dw Protect
+	dw CraftyShield

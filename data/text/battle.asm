@@ -1281,6 +1281,14 @@ ProtectingItselfText:
 	line "PROTECTING itself!"
 	done
 
+HurtBySpikyShieldText:
+	text "<USER>"
+	line "is hurt by"
+
+	para "<TARGET>'s"
+	line "SPIKY SHIELD!"
+	prompt
+
 SpikesText:
 	text "SPIKES scattered"
 	line "all around"

@@ -1722,6 +1722,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_RESET_STATS_HIT
 	ret z
+	cp EFFECT_TEARFUL_LOOK
+	ret z
 	cp EFFECT_ATK_SP_ATK_DOWN
 	ret z
 	cp EFFECT_YAWN
@@ -1832,14 +1834,7 @@ BattleCommand_CheckHit:
 	bit SUBSTATUS_PROTECT, a
 	ret z
 
-; Feint and Tearful Look can hit even if the target is protected
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FEINT
-	ret z
-	cp EFFECT_ATK_SP_ATK_DOWN
-	ret z
-	cp EFFECT_SHADOW_FORCE
+	farcall CheckProtectionCategory
 	ret z
 
 	ld c, 40
@@ -1851,6 +1846,8 @@ BattleCommand_CheckHit:
 
 	ld c, 40
 	call DelayFrames
+
+	farcall GetProtectVariationEffect
 
 	ld a, 1
 	and a
@@ -7476,6 +7473,10 @@ BattleCommand_Captivate:
 
 BattleCommand_Yawn:
 	farcall YawnEffect
+	ret
+
+BattleCommand_CraftyShield:
+	farcall CraftyShieldEffect
 	ret
 
 SafeCheckSafeguard:

@@ -487,6 +487,14 @@ BattleAnimations::
 	dw BattleAnim_Dive
 	dw BattleAnim_ShadowForce
 	dw BattleAnim_PhantomForce
+	dw BattleAnim_NobleRoar
+	dw BattleAnim_Boomburst
+	dw BattleAnim_NeedleArm
+	dw BattleAnim_SpikyShield
+	dw BattleAnim_KingsShield
+	dw BattleAnim_BanefulBunker
+	dw BattleAnim_Obstruct
+	dw BattleAnim_CraftyShield
 
 	dw BattleAnim_SweetScent2
 
@@ -870,6 +878,14 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_CraftyShield:
+BattleAnim_SpikyShield:
+BattleAnim_KingsShield:
+BattleAnim_BanefulBunker:
+BattleAnim_Obstruct:
+BattleAnim_NobleRoar:
+BattleAnim_Boomburst:
+BattleAnim_NeedleArm:
 BattleAnim_Dive:
 BattleAnim_ShadowForce:
 BattleAnim_PhantomForce:

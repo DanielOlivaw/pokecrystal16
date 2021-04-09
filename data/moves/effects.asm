@@ -3084,3 +3084,10 @@ Whirlpool:
 	kingsrock
 	traptarget
 	endmove
+
+CraftyShield:
+	checkobedience
+	usedmovetext
+	doturn
+	craftyshield
+	endmove
