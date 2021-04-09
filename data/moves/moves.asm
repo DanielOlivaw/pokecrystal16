@@ -325,7 +325,6 @@ Moves1:
 	move EFFECT_CONFUSE_HIT,        75, BUG,      SPECIAL,  100, 15,  10 ; SIGNAL_BEAM
 	move EFFECT_FLINCH_HIT,         80, PSYCHIC,  PHYSICAL,  90, 15,  20 ; ZEN_HEADBUTT
 	move EFFECT_ALL_UP_HIT,         60, BUG,      SPECIAL,  100,  5,  10 ; SILVER_WIND
-	; move EFFECT_FAKE_OUT,           40, NORMAL,   PHYSICAL, 100, 10,   0 ; FAKE_OUT
 	move EFFECT_HONE_CLAWS,          0, DARK,     STATUS,   100, 15,   0 ; HONE_CLAWS
 	move EFFECT_SP_DEF_DOWN_2,       0, STEEL,    STATUS,    85, 40,   0 ; METAL_SOUND
 	move EFFECT_PRIORITY_HIT,       40, WATER,    PHYSICAL, 100, 20,   0 ; AQUA_JET
@@ -485,4 +484,6 @@ Moves1:
 	move EFFECT_BANEFUL_BUNKER,      0, POISON,   STATUS,   100, 10,   0 ; BANEFUL_BUNKER
 	move EFFECT_OBSTRUCT,            0, DARK,     STATUS,   100, 10,   0 ; OBSTRUCT
 	move EFFECT_CRAFTY_SHIELD,       0, FAIRY,    STATUS,   100, 10,   0 ; CRAFTY_SHIELD
+	move EFFECT_FAKE_OUT,           40, NORMAL,   PHYSICAL, 100, 10, 100 ; FAKE_OUT
+	move EFFECT_FIRST_IMPRESSION,   90, BUG,      PHYSICAL, 100, 10,   0 ; FIRST_IMPRESSION
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

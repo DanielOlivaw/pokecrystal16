@@ -473,6 +473,8 @@ MoveDescriptions1:
 	dw BanefulBunkerDescription
 	dw ObstructDescription
 	dw CraftyShieldDescription
+	dw FakeOutDescription
+	dw FirstImpressionDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1701,10 +1703,6 @@ SilverWindDescription:
 	db   "An attack that may"
 	next "raise all stats.@"
 
-; FakeOutDescription:
-	; db   "A first-turn,"
-	; next "first-strike move.@"
-
 HoneClawsDescription:
 	db   "Increases ATTACK"
 	next "and accuracy.@"
@@ -2337,6 +2335,11 @@ ObstructDescription:
 CraftyShieldDescription:
 	db   "Foils a status"
 	next "move that turn.@"
+
+FakeOutDescription:
+FirstImpressionDescription:
+	db   "A first-turn,"
+	next "first-strike move.@"
 
 		;"123456789123456789"
 

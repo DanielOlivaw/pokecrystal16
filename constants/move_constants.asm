@@ -314,7 +314,6 @@
 	const SIGNAL_BEAM
 	const ZEN_HEADBUTT
 	const SILVER_WIND
-	; const FAKE_OUT
 	const HONE_CLAWS
 	const METAL_SOUND
 	const AQUA_JET
@@ -474,6 +473,8 @@
 	const BANEFUL_BUNKER
 	const OBSTRUCT
 	const CRAFTY_SHIELD
+	const FAKE_OUT
+	const FIRST_IMPRESSION
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

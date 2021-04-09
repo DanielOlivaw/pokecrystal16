@@ -335,7 +335,6 @@ BattleAnimations::
 	dw BattleAnim_SignalBeam
 	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_SilverWind
-	; dw BattleAnim_FakeOut
 	dw BattleAnim_HoneClaws
 	dw BattleAnim_MetalSound
 	dw BattleAnim_AquaJet
@@ -495,6 +494,8 @@ BattleAnimations::
 	dw BattleAnim_BanefulBunker
 	dw BattleAnim_Obstruct
 	dw BattleAnim_CraftyShield
+	dw BattleAnim_FakeOut
+	dw BattleAnim_FirstImpression
 
 	dw BattleAnim_SweetScent2
 
@@ -878,6 +879,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_FakeOut:
+BattleAnim_FirstImpression:
 BattleAnim_CraftyShield:
 BattleAnim_SpikyShield:
 BattleAnim_KingsShield:
@@ -1034,7 +1037,6 @@ BattleAnim_MetalSound:
 BattleAnim_AquaJet:
 BattleAnim_CloseCombat:
 BattleAnim_Howl:
-; BattleAnim_FakeOut:
 BattleAnim_DazzleGleam:
 BattleAnim_EchoedVoice:
 BattleAnim_Covet:

@@ -1665,6 +1665,8 @@ BattleCommand_CheckHit:
 
 	call .BurnUp
 
+	call .FirstTurn
+
 	call .Belch
 	jp z, .Miss
 
@@ -1803,9 +1805,9 @@ BattleCommand_CheckHit:
 	ld de, wBattleMonType1
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .ok
+	jr z, .BurnUp_GotType
 	ld de, wEnemyMonType1
-.ok
+.BurnUp_GotType
 	ld a, [de]
 	cp FIRE
 	ret z
@@ -1825,6 +1827,28 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVar
 	bit SUBSTATUS_ATE_BERRY, a
+	ret
+
+.FirstTurn:
+; Burn Up misses if used by a non-fire-type
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FAKE_OUT
+	jr z, .FirstTurn_GotEffect
+	cp EFFECT_FIRST_IMPRESSION
+	ret nz
+
+.FirstTurn_GotEffect
+	ld hl, wPlayerTurnsTaken
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .FirstTurn_GotTurn
+	ld hl, wEnemyTurnsTaken
+.FirstTurn_GotTurn
+	ld b, 1
+	ld a, [hl]
+	cp b
+	jr nz, .Missed
 	ret
 
 .Protect:
@@ -2495,6 +2519,10 @@ GetFailureResultText:
 	jr z, .check_burn_up
 	cp EFFECT_BELCH
 	jr z, .check_belch
+	cp EFFECT_FAKE_OUT
+	jp z, .check_first_turn
+	cp EFFECT_FIRST_IMPRESSION
+	jp z, .check_first_turn
 .miss_text
 	ld hl, AttackMissedText
 	ld de, AttackMissed2Text
@@ -2543,7 +2571,7 @@ GetFailureResultText:
 	jp DoPlayerDamage
 
 .check_burn_up:
-; Burn Up prints miss text if used by a fire-type but failure text otherwise
+; Burn Up prints miss text if used by a fire-type but failure text otherwise.
 	push hl
 	push de
 	ld de, wBattleMonType1
@@ -2569,7 +2597,7 @@ GetFailureResultText:
 	jr .miss_text
 
 .check_belch
-; Belch prints miss text if the user has eaten a berry but failure text otherwise
+; Belch prints miss text if the user has eaten a berry but failure text otherwise.
 	push hl
 	push de
 	ld a, BATTLE_VARS_SUBSTATUS6
@@ -2579,6 +2607,25 @@ GetFailureResultText:
 	pop de
 	jr nz, .miss_text
 	jr .got_text
+
+.check_first_turn
+; Fake Out and First Impression print miss text if it's the user's
+; first turn out but failure text otherwise.
+	push hl
+	push de
+	ld hl, wPlayerTurnsTaken
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .FirstTurn_GotTurn
+	ld hl, wEnemyTurnsTaken
+.FirstTurn_GotTurn
+	ld b, 1
+	ld a, [hl]
+	cp b
+	pop hl
+	pop de
+	jp nz, .got_text
+	jp .miss_text
 
 FailText_CheckOpponentProtect:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP

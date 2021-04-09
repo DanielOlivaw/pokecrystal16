@@ -141,7 +141,7 @@ MoveEffectsPointers:
 	dw DefenseUpHit
 	dw AttackUpHit
 	dw AllUpHit
-	; dw FakeOut
+	dw FlinchHit
 	dw BellyDrum
 	dw PsychUp
 	dw Counter ;MirrorCoat
@@ -254,3 +254,4 @@ MoveEffectsPointers:
 	dw Protect
 	dw Protect
 	dw CraftyShield
+	dw NormalHit
