@@ -1181,6 +1181,16 @@ BattleCommand_Critical:
 	and a
 	ret z
 
+; A target affected by Lucky Chant is immune to critical hits.
+	ld a, [wEnemySubStatus6]
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .check_lucky_chant
+	ld a, [wPlayerSubStatus6]
+.check_lucky_chant
+	bit SUBSTATUS_LUCKY_CHANT, a
+	ret nz
+
 ; Moves with EFFECT_ALWAYS_CRIT will always result in a critical hit.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -2733,6 +2743,12 @@ BattleCommand_CheckFaint:
 	or [hl]
 	ret nz
 
+; Check for Grudge.
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
+	call GetBattleVar
+	bit SUBSTATUS_GRUDGE, a
+	jr nz, .grudge
+
 ; Check for Destiny Bond.
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVar
@@ -2783,6 +2799,12 @@ BattleCommand_CheckFaint:
 	call LoadAnim
 	call BattleCommand_SwitchTurn
 
+	jr .finish
+
+.grudge
+	call BattleCommand_SwitchTurn
+	farcall GrudgeReducePP
+	call BattleCommand_SwitchTurn
 	jr .finish
 
 .no_dbond

@@ -521,6 +521,7 @@ wPlayerFuryCutterCount:: db ; c678
 wPlayerProtectCount:: db ; c679
 wPlayerChargeCount:: db
 wPlayerYawnCount:: db
+wPlayerLuckyChantCount:: db
 
 wEnemyRolloutCount:: db ; c67a
 wEnemyConfuseCount:: db ; c67b
@@ -532,6 +533,7 @@ wEnemyFuryCutterCount:: db ; c680
 wEnemyProtectCount:: db ; c681
 wEnemyChargeCount:: db
 wEnemyYawnCount:: db
+wEnemyLuckyChantCount:: db
 
 wPlayerDamageTaken:: dw ; c682
 wEnemyDamageTaken:: dw ; c684

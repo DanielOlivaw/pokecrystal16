@@ -7,10 +7,8 @@ BattleCommand_Round:
 	ret z
 
 ; Check if the opponent already used Round
-	ld b, a
-	callfar GetMoveEffect
-	ld a, b
-	cp EFFECT_ROUND
+	ld bc, ROUND_M
+	call CompareMove
 	ret nz
 
 ; If so, deal double damage

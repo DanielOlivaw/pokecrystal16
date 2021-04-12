@@ -352,8 +352,9 @@ HandleBetweenTurnEffects:
 	call EndRoostEffect
 	call EndChargeEffect
 	call HandleYawn
+	farcall HandleLuckyChant
 	call HandleLeftovers
-	call HandleIngrain
+	farcall HandleIngrainAndAquaRing
 	call HandleMysteryberry
 	call HandleDefrost
 	call HandleSafeguard
@@ -1096,12 +1097,18 @@ EndOpponentProtectEndureDestinyBond:
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_DESTINY_BOND, [hl]
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
+	call GetBattleVarAddr
+	res SUBSTATUS_GRUDGE, [hl]
 	ret
 
 EndUserDestinyBond:
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr
 	res SUBSTATUS_DESTINY_BOND, [hl]
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVarAddr
+	res SUBSTATUS_GRUDGE, [hl]
 	ret
 
 HasUserFainted:
@@ -1546,33 +1553,6 @@ RestoreSixteenthMaxHP:
 	call GetSixteenthMaxHP
 	call SwitchTurnCore
 	jp RestoreHP
-
-HandleIngrain:
-	ldh a, [hSerialConnectionStatus]
-	cp USING_EXTERNAL_CLOCK
-	jr z, .DoEnemyFirst
-; Player first
-	call SetPlayerTurn
-	ld hl, wPlayerSubStatus5
-	call .do_it
-	
-	call SetEnemyTurn
-	ld hl, wEnemySubStatus5
-	jr .do_it
-
-.DoEnemyFirst:
-	call SetEnemyTurn
-	ld hl, wEnemySubStatus5
-	call .do_it
-	call SetPlayerTurn
-	ld hl, wPlayerSubStatus5
-.do_it
-	bit SUBSTATUS_INGRAINED, [hl]
-	ret z
-	call RestoreSixteenthMaxHP
-	ret z
-	ld hl, AbsorbedNutrientsText
-	jp StdBattleTextbox
 
 HandleMysteryberry:
 	ldh a, [hSerialConnectionStatus]

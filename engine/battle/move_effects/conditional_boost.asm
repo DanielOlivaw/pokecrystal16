@@ -1,30 +1,60 @@
 Find_ConditionalBoost:
-; All move effects that double damage
+; All moves and effects that double damage
+
+; Moves with EFFECT_CONDITIONAL_BOOST
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, ACROBATICS
+	call CompareMove2
+	jp z, BattleCommand_Acrobatics
+
+	ld bc, BRINE
+	call CompareMove2
+	jp z, BattleCommand_Brine
+
+	ld bc, CUT ; Cut deals double damage to Grass-types
+	call CompareMove2
+	jp z, BattleCommand_Cut
+
+	ld bc, GUST
+	call CompareMove2
+	jr z, BattleCommand_DoubleFlyingDamage
+
+	ld bc, HEX
+	call CompareMove2
+	jp z, BattleCommand_Hex
+
+	ld bc, PAYBACK
+	call CompareMove2
+	jp z, BattleCommand_Payback
+
+	ld bc, ROUND_M
+	call CompareMove2
+	jp z, BattleCommand_Round
+
+	ld bc, SHIELD_BASH
+	call CompareMove2
+	jp z, BattleCommand_ShieldBash
+
+	ld bc, SURF
+	call CompareMove2
+	jr z, BattleCommand_DoubleDivingDamage
+
+	ld bc, VENOSHOCK
+	call CompareMove2
+	jp z, BattleCommand_Venoshock
+
+
+; Other effects that use conditionalboost
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
-	cp EFFECT_ACROBATICS
-	jp z, BattleCommand_Acrobatics
-	cp EFFECT_BRINE
-	jp z, BattleCommand_Brine
 	cp EFFECT_CURE_SLEEP_HIT ; Wake-Up Slap
 	jp z, BattleCommand_CureSleepHit
 	cp EFFECT_CURE_PARALYSIS_HIT ; SmellingSalt
 	jp z, BattleCommand_CureParalysisHit
-	cp EFFECT_CUT ; Cut deals double damage to Grass-types
-	jp z, BattleCommand_Cut
-	cp EFFECT_HEX
-	jp z, BattleCommand_Hex
 	cp EFFECT_FREEZE_DRY
 	jp z, BattleCommand_FreezeDry
-	cp EFFECT_PAYBACK
-	jp z, BattleCommand_Payback
-	cp EFFECT_ROUND
-	jp z, BattleCommand_Round
-	cp EFFECT_SHIELD_BASH
-	jp z, BattleCommand_ShieldBash
-	cp EFFECT_VENOSHOCK
-	jp z, BattleCommand_Venoshock
 
 	cp EFFECT_SHATTER_CLAW
 	jr z, BattleCommand_ShatterClaw
@@ -37,12 +67,8 @@ Find_ConditionalBoost:
 	jr z, BattleCommand_DoubleUndergroundDamage
 	cp EFFECT_EARTHQUAKE
 	jr z, BattleCommand_DoubleUndergroundDamage
-	cp EFFECT_GUST
-	jr z, BattleCommand_DoubleFlyingDamage
 	cp EFFECT_TWISTER
 	jr z, BattleCommand_DoubleFlyingDamage
-	cp EFFECT_SURF
-	jr z, BattleCommand_DoubleDivingDamage
 	cp EFFECT_WHIRLPOOL
 	jr z, BattleCommand_DoubleDivingDamage
 	ret
@@ -114,4 +140,16 @@ DoubleDamage:
 	ld [hli], a
 	ld [hl], a
 .quit
+	ret
+
+CompareMove2:
+	; checks if the move ID in a matches the move in bc
+	push hl
+	call GetMoveIndexFromID
+	ld a, h
+	cp b
+	ld a, l
+	pop hl
+	ret nz
+	cp c
 	ret

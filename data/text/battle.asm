@@ -110,6 +110,13 @@ AbsorbedNutrientsText:
 	cont "with its roots!"
 	prompt
 
+VeilOfWaterRestoredText:
+	text "A veil of water"
+	line "restored"
+	para "<TARGET>'s"
+	line "HP!"
+	prompt
+
 BattleText_TargetRecoveredWithItem:
 	text "<TARGET>"
 	line "recovered with"
@@ -135,6 +142,11 @@ BattleText_TargetWasHitByFutureSight:
 BattleText_SafeguardFaded:
 	text "<USER>'s"
 	line "SAFEGUARD faded!"
+	prompt
+
+BattleText_LuckyChantEnded:
+	text "<USER>'s"
+	line "LUCKY CHANT ended!"
 	prompt
 
 BattleText_MonsLightScreenFell:
@@ -751,6 +763,16 @@ TookDownWithItText:
 	cont "<USER>!"
 	prompt
 
+		;"123456789123456789"
+
+ReducedPPToZeroText:
+	text "<TARGET>'s"
+	line "@"
+	text_ram wStringBuffer1
+	text " was"
+	cont "reduced to 0!"
+	prompt
+
 RageBuildingText:
 	text "<USER>'s"
 	line "RAGE is building!"
@@ -783,6 +805,12 @@ DestinyBondEffectText:
 	text "<USER>'s"
 	line "trying to take its"
 	cont "opponent with it!"
+	prompt
+
+GrudgeEffectText:
+	text "<USER>"
+	line "wants its opponent"
+	cont "to bear a grudge!"
 	prompt
 
 SpiteEffectText:
@@ -939,6 +967,23 @@ PlantedRootsText:
 	text "<USER>"
 	line "planted its roots!"
 	prompt
+
+VeilOfWaterText:
+	text_pause
+	text "<USER>"
+	line "surrounded itself"
+	para "with a veil of"
+	line "water!"
+	prompt
+
+ShieldedFromCriticalHitsText:
+	text_pause
+	text "<USER>"
+	line "is shielded from"
+	cont "critical hits!"
+	prompt
+
+		;"123456789123456789"
 
 ToreUpRootsText:
 	text_pause

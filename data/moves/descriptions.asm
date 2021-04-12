@@ -475,6 +475,12 @@ MoveDescriptions1:
 	dw CraftyShieldDescription
 	dw FakeOutDescription
 	dw FirstImpressionDescription
+	dw LuckyChantDescription
+	dw AquaRingDescription
+	dw GrudgeDescription
+	dw ShadowClawDescription
+	dw CrushClawDescription
+	dw PoisonTailDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -484,6 +490,18 @@ PoundDescription:
 	next "legs or tail.@"
 
 KarateChopDescription:
+RazorLeafDescription:
+CrabhammerDescription:
+SlashDescription:
+AeroblastDescription:
+CrossChopDescription:
+AirCutterDescription:
+PsychoCutDescription:
+LeafBladeDescription:
+StoneEdgeDescription:
+NightSlashDescription:
+DrillRunDescription:
+ShadowClawDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -774,10 +792,6 @@ LeechSeedDescription:
 GrowthDescription:
 	db   "Grows to boost"
 	next "ATTACK & SPCL.ATK.@"
-
-RazorLeafDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 SolarbeamDescription:
 	db   "1st turn: Prepare"
@@ -1083,10 +1097,6 @@ AcidArmorDescription:
 	db   "Sharply raises the"
 	next "user's DEFENSE.@"
 
-CrabhammerDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 ExplosionDescription:
 	db   "Very powerful but"
 	next "makes user faint.@"
@@ -1126,10 +1136,6 @@ TriAttackDescription:
 SuperFangDescription:
 	db   "Cuts the foe's HP"
 	next "by 1/2.@"
-
-SlashDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 SubstituteDescription:
 	db   "Makes a decoy with"
@@ -1182,10 +1188,6 @@ FlailDescription:
 Conversion2Description:
 	db   "The user's type is"
 	next "made resistant.@"
-
-AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 CottonSporeDescription:
 	db   "Sharply reduces"
@@ -1421,10 +1423,6 @@ MoonlightDescription:
 HiddenPowerDescription:
 	db   "Its type varies"
 	next "with the #MON.@"
-
-CrossChopDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 TwisterDescription:
 	db   "Whips up a tornado"
@@ -1675,10 +1673,6 @@ PoisonFangDescription:
 	db   "An attack that may"
 	next "badly poison.@"
 
-AirCutterDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 AromatherapyDescription:
 	db   "Eliminates all"
 	next "status problems.@"
@@ -1688,6 +1682,7 @@ XScissorDescription:
 	next "crossed claws.@"
 
 CrossPoisonDescription:
+PoisonTailDescription:
 	db   "May cause poison."
 	next "High crit ratio.@"
 
@@ -1726,10 +1721,6 @@ HowlDescription:
 BurnUpDescription:
 	db   "Burns out the user"
 	next "to inflict damage.@"
-
-PsychoCutDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 CalmMindDescription:
 	db   "Increases SPCL.ATK"
@@ -1800,10 +1791,6 @@ LeafStormDescription:
 	db   "Sharply reduces"
 	next "user's SPCL.ATK.@"
 
-LeafBladeDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 HexDescription:
 	db   "Stronger against"
 	next "foes with status.@"
@@ -1827,10 +1814,6 @@ BulldozeDescription:
 RockBlastDescription:
 	db   "Hurls 2-5 rocks in"
 	next "a row at the foe.@"
-
-StoneEdgeDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 SteamrollerDescription:
 	db   "An attack that may"
@@ -2012,10 +1995,6 @@ LiquidationDescription:
 	db   "An attack that may"
 	next "reduce DEFENSE.@"
 
-NightSlashDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 BlockDescription:
 	db   "Blocks escape with"
 	next "arms spread wide.@"
@@ -2196,10 +2175,6 @@ FeintDescription:
 	db   "Hits a foe using"
 	next "PROTECT or DETECT.@"
 
-DrillRunDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 SkyUppercutDescription:
 	db   "Attacks with a"
 	next "skyward uppercut.@"
@@ -2340,6 +2315,22 @@ FakeOutDescription:
 FirstImpressionDescription:
 	db   "A first-turn,"
 	next "first-strike move.@"
+
+LuckyChantDescription:
+	db   "Protects against"
+	next "critical hits.@"
+
+AquaRingDescription:
+	db   "Restores some HP"
+	next "every turn.@"
+
+GrudgeDescription:
+	db   "Depletes all PP of"
+	next "a finishing move.@"
+
+CrushClawDescription:
+	db   "An attack that may"
+	next "lower DEFENSE.@"
 
 		;"123456789123456789"
 

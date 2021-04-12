@@ -32,6 +32,12 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_Acupressure
 	cp EFFECT_CHARGE
 	jp z, BattleCommand_ElectricCharge
+	cp EFFECT_LUCKY_CHANT
+	jp z, BattleCommand_LuckyChant
+	cp EFFECT_AQUA_RING
+	jp z, BattleCommand_AquaRing
+	cp EFFECT_GRUDGE
+	jp z, BattleCommand_Grudge
 
 	cp EFFECT_SPIKES
 	jp z, BattleCommand_Spikes

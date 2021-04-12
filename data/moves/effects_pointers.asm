@@ -1,257 +1,251 @@
 MoveEffectsPointers:
 ; entries correspond to EFFECT_* constants
-	dw NormalHit
-	dw DoSleep
-	dw PoisonHit
-	dw LeechHit
-	dw BurnHit
-	dw FreezeHit
-	dw ParalyzeHit
-	dw Selfdestruct
-	dw DreamEater
-	dw MirrorMove
-	dw AttackUp
-	dw DefenseUp
-	dw SpeedUp
-	dw SpecialAttackUp
-	dw SpecialDefenseUp
-	dw AccuracyUp
-	dw EvasionUp
-	dw NormalHit
-	dw AttackDown
-	dw DefenseDown
-	dw SpeedDown
-	dw SpecialAttackDown
-	dw SpecialDefenseDown
-	dw AccuracyDown
-	dw EvasionDown
-	dw ResetStats
-	dw Bide
-	dw Rampage
-	dw ForceSwitch
-	dw MultiHit
-	dw Conversion
-	dw FlinchHit
-	dw Heal
-	dw Toxic
-	dw PayDay
-	dw Screen
-	dw TriAttack
-	dw ConditionalBoost
-	dw OHKOHit
-	dw RazorWind
-	dw SuperFang
-	dw StaticDamage
-	dw TrapTarget
-	dw BodySlam
-	dw MultiHit
-	dw NormalHit
-	dw Mist
-	dw StatusTargetSelf ;FocusEnergy
-	dw RecoilHit
-	dw DoConfuse
-	dw AttackUp2
-	dw DefenseUp2
-	dw SpeedUp2
-	dw SpecialAttackUp2
-	dw SpecialDefenseUp2
-	dw AccuracyUp2
-	dw EvasionUp2
-	dw Transform
-	dw AttackDown2
-	dw DefenseDown2
-	dw SpeedDown2
-	dw SpecialAttackDown2
-	dw SpecialDefenseDown2
-	dw AccuracyDown2
-	dw EvasionDown2
-	dw Screen
-	dw DoPoison
-	dw DoParalyze
-	dw AttackDownHit
-	dw DefenseDownHit
-	dw SpeedDownHit
-	dw SpecialAttackDownHit
-	dw SpecialDefenseDownHit
-	dw AccuracyDownHit
-	dw EvasionDownHit
-	dw SkyAttack
-	dw ConfuseHit
-	dw PoisonMultiHit
-	dw LowKick
-	dw Substitute
-	dw HyperBeam
-	dw Rage
-	dw Mimic
-	dw Metronome
-	dw LeechSeed
-	dw Splash
-	dw Disable
-	dw StaticDamage
-	dw Psywave
-	dw Counter
-	dw Encore
-	dw PainSplit
-	dw Snore
-	dw Conversion2
-	dw LockOn
-	dw Sketch
-	dw RecoilHit
-	dw SleepTalk
-	dw DestinyBond
-	dw HPBasedDamage
-	dw Spite
-	dw FalseSwipe
-	dw StatusTargetSelf ;HealBell
-	dw NormalHit
-	dw TripleKick
-	dw Thief
-	dw StatusTargetSelf ;MeanLook
-	dw Nightmare
-	dw FlameWheel
-	dw Curse
-	dw Growth
-	dw Protect
-	dw StatusTargetSelf ;Spikes
-	dw Foresight
-	dw PerishSong
-	dw StatusTargetSelf ;Sandstorm
-	dw Endure
-	dw Rollout
-	dw Swagger
-	dw FuryCutter
-	dw Attract
-	dw Return
-	dw Present
-	dw Frustration
-	dw StatusTargetSelf ;Safeguard
-	dw SacredFire
-	dw Magnitude
-	dw BatonPass
-	dw Pursuit
-	dw RapidSpin
-	dw FireSpin
-	dw BugBite
-	dw StatusTargetSelf ;SunlightHeal
-	dw NormalHit
-	dw StatusTargetSelf ;ShellSmash
-	dw HiddenPower
-	dw StatusTargetSelf ;RainDance
-	dw StatusTargetSelf ;SunnyDay
-	dw DefenseUpHit
-	dw AttackUpHit
-	dw AllUpHit
-	dw FlinchHit
-	dw BellyDrum
-	dw PsychUp
-	dw Counter ;MirrorCoat
-	dw SkullBash
-	dw Twister
-	dw Earthquake
-	dw FutureSight
-	dw ConditionalBoost
-	dw Stomp
-	dw Solarbeam
-	dw Thunder
-	dw Teleport
-	dw BeatUp
-	dw Fly
-	dw DefenseCurl
-	dw FireFang
-	dw IceFang
-	dw ThunderFang
-	dw FlareBlitz
-	dw StatusTargetSelf ;QuiverDance
-	dw ConditionalBoost
-	dw SuckerPunch
-	dw AttackDown
-	dw StatusTargetSelf ;Hail
-	dw Blizzard
-	dw Counter
-	dw Flatter
-	dw Superpower
-	dw CosmicPower
-	dw OHKOHit
-	dw Screen
-	dw ConditionalBoost
-	dw PoisonHit
-	dw StatusTargetSelf ;HealBell
-	dw HoneClaws
-	dw CloseCombat
-	dw BurnUp
-	dw CalmMind
-	dw KnockOff
-	dw BulkUp
-	dw HPBasedDamage
-	dw Eruption
-	dw HPBasedDamage
-	dw StatusTargetSelf ;Spikes
-	dw StatusTargetSelf ;Spikes
-	dw StatusTargetSelf ;Spikes
-	dw NormalHit
-	dw NormalHit
-	dw DracoMeteor
-	dw ConditionalBoost
-	dw StatusTargetSelf ;ReflectType
-	dw FlameCharge
-	dw ConditionalBoost
-	dw MultiStatDown
-	dw ConditionalBoost
-	dw CureStatusHit
-	dw Trick
-	dw HammerArm
-	dw ResetStatsHit
-	dw StatusTargetSelf ;MistyTerrain
-	dw Defog
-	dw MultiStatDown
-	dw DragonDance
-	dw FreezeDry
-	dw NormalHit
-	dw WorkUp
-	dw Hurricane
-	dw AttackDown
-	dw PsychoShift
-	dw Roost
-	dw BrickBreak
-	dw NormalHit
-	dw ForceSwitchHit
-	dw TrapHit
-	dw NailDown
-	dw DynamoRush
-	dw ShatterClaw
-	dw SpeedUpHit
-	dw StatusTargetSelf
-	dw ConditionalBoost
-	dw NormalHit
-	dw StatusTargetSelf
-	dw Uproot
-	dw StatusTargetSelf
-	dw Uproar
-	dw PoisonSpeedDown
-	dw NormalHit
-	dw Bounce
-	dw MultiStatDown
-	dw ConditionalBoost
-	dw NormalHit
-	dw Incinerate
-	dw Soak
-	dw WeatherBall
-	dw CureStatusHit
-	dw Captivate
-	dw Acupressure
-	dw SpecialDefenseDown2Hit
-	dw StatusTargetSelf
-	dw NormalHit
-	dw Yawn
-	dw Fly
-	dw Fly
-	dw Fly
-	dw ConditionalBoost
-	dw Whirlpool
-	dw MultiStatDown
-	dw Protect
-	dw Protect
-	dw Protect
-	dw Protect
-	dw CraftyShield
-	dw NormalHit
+	dw NormalHit              ; EFFECT_NORMAL_HIT
+	dw DoSleep                ; EFFECT_SLEEP
+	dw PoisonHit              ; EFFECT_POISON_HIT
+	dw LeechHit               ; EFFECT_LEECH_HIT
+	dw BurnHit                ; EFFECT_BURN_HIT
+	dw FreezeHit              ; EFFECT_FREEZE_HIT
+	dw ParalyzeHit            ; EFFECT_PARALYZE_HIT
+	dw Selfdestruct           ; EFFECT_SELFDESTRUCT
+	dw DreamEater             ; EFFECT_DREAM_EATER
+	dw MirrorMove             ; EFFECT_MIRROR_MOVE
+	dw AttackUp               ; EFFECT_ATTACK_UP
+	dw DefenseUp              ; EFFECT_DEFENSE_UP
+	dw SpeedUp                ; EFFECT_SPEED_UP
+	dw SpecialAttackUp        ; EFFECT_SP_ATK_UP
+	dw SpecialDefenseUp       ; EFFECT_SP_DEF_UP
+	dw AccuracyUp             ; EFFECT_ACCURACY_UP
+	dw EvasionUp              ; EFFECT_EVASION_UP
+	dw NormalHit              ; EFFECT_ALWAYS_HIT
+	dw AttackDown             ; EFFECT_ATTACK_DOWN
+	dw DefenseDown            ; EFFECT_DEFENSE_DOWN
+	dw SpeedDown              ; EFFECT_SPEED_DOWN
+	dw SpecialAttackDown      ; EFFECT_SP_ATK_DOWN
+	dw SpecialDefenseDown     ; EFFECT_SP_DEF_DOWN
+	dw AccuracyDown           ; EFFECT_ACCURACY_DOWN
+	dw EvasionDown            ; EFFECT_EVASION_DOWN
+	dw ResetStats             ; EFFECT_RESET_STATS
+	dw Bide                   ; EFFECT_BIDE
+	dw Rampage                ; EFFECT_RAMPAGE
+	dw ForceSwitch            ; EFFECT_FORCE_SWITCH
+	dw MultiHit               ; EFFECT_MULTI_HIT
+	dw Conversion             ; EFFECT_CONVERSION
+	dw FlinchHit              ; EFFECT_FLINCH_HIT
+	dw Heal                   ; EFFECT_HEAL
+	dw Toxic                  ; EFFECT_TOXIC
+	dw PayDay                 ; EFFECT_PAY_DAY
+	dw Screen                 ; EFFECT_LIGHT_SCREEN
+	dw TriAttack              ; EFFECT_TRI_ATTACK
+	dw ConditionalBoost       ; EFFECT_CUT
+	dw OHKOHit                ; EFFECT_OHKO
+	dw RazorWind              ; EFFECT_RAZOR_WIND
+	dw SuperFang              ; EFFECT_SUPER_FANG
+	dw StaticDamage           ; EFFECT_STATIC_DAMAGE
+	dw TrapTarget             ; EFFECT_TRAP_TARGET
+	dw BodySlam               ; EFFECT_BODY_SLAM
+	dw MultiHit               ; EFFECT_DOUBLE_HIT
+	dw NormalHit              ; EFFECT_JUMP_KICK
+	dw Mist                   ; EFFECT_MIST
+	dw StatusTargetSelf       ; EFFECT_FOCUS_ENERGY
+	dw RecoilHit              ; EFFECT_RECOIL_HIT
+	dw DoConfuse              ; EFFECT_CONFUSE
+	dw AttackUp2              ; EFFECT_ATTACK_UP_2
+	dw DefenseUp2             ; EFFECT_DEFENSE_UP_2
+	dw SpeedUp2               ; EFFECT_SPEED_UP_2
+	dw SpecialAttackUp2       ; EFFECT_SP_ATK_UP_2
+	dw SpecialDefenseUp2      ; EFFECT_SP_DEF_UP_2
+	dw AccuracyUp2            ; EFFECT_ACCURACY_UP_2
+	dw EvasionUp2             ; EFFECT_EVASION_UP_2
+	dw Transform              ; EFFECT_TRANSFORM
+	dw AttackDown2            ; EFFECT_ATTACK_DOWN_2
+	dw DefenseDown2           ; EFFECT_DEFENSE_DOWN_2
+	dw SpeedDown2             ; EFFECT_SPEED_DOWN_2
+	dw SpecialAttackDown2     ; EFFECT_SP_ATK_DOWN_2
+	dw SpecialDefenseDown2    ; EFFECT_SP_DEF_DOWN_2
+	dw AccuracyDown2          ; EFFECT_ACCURACY_DOWN_2
+	dw EvasionDown2           ; EFFECT_EVASION_DOWN_2
+	dw Screen                 ; EFFECT_REFLECT
+	dw DoPoison               ; EFFECT_POISON
+	dw DoParalyze             ; EFFECT_PARALYZE
+	dw AttackDownHit          ; EFFECT_ATTACK_DOWN_HIT
+	dw DefenseDownHit         ; EFFECT_DEFENSE_DOWN_HIT
+	dw SpeedDownHit           ; EFFECT_SPEED_DOWN_HIT
+	dw SpecialAttackDownHit   ; EFFECT_SP_ATK_DOWN_HIT
+	dw SpecialDefenseDownHit  ; EFFECT_SP_DEF_DOWN_HIT
+	dw AccuracyDownHit        ; EFFECT_ACCURACY_DOWN_HIT
+	dw EvasionDownHit         ; EFFECT_EVASION_DOWN_HIT
+	dw SkyAttack              ; EFFECT_SKY_ATTACK
+	dw ConfuseHit             ; EFFECT_CONFUSE_HIT
+	dw PoisonMultiHit         ; EFFECT_POISON_MULTI_HIT
+	dw LowKick                ; EFFECT_LOW_KICK
+	dw Substitute             ; EFFECT_SUBSTITUTE
+	dw HyperBeam              ; EFFECT_HYPER_BEAM
+	dw Rage                   ; EFFECT_RAGE
+	dw Mimic                  ; EFFECT_MIMIC
+	dw Metronome              ; EFFECT_METRONOME
+	dw LeechSeed              ; EFFECT_LEECH_SEED
+	dw Splash                 ; EFFECT_SPLASH
+	dw Disable                ; EFFECT_DISABLE
+	dw StaticDamage           ; EFFECT_LEVEL_DAMAGE
+	dw Psywave                ; EFFECT_PSYWAVE
+	dw Counter                ; EFFECT_COUNTER
+	dw Encore                 ; EFFECT_ENCORE
+	dw PainSplit              ; EFFECT_PAIN_SPLIT
+	dw Snore                  ; EFFECT_SNORE
+	dw Conversion2            ; EFFECT_CONVERSION2
+	dw LockOn                 ; EFFECT_LOCK_ON
+	dw Sketch                 ; EFFECT_SKETCH
+	dw RecoilHit              ; EFFECT_STRUGGLE
+	dw SleepTalk              ; EFFECT_SLEEP_TALK
+	dw DestinyBond            ; EFFECT_DESTINY_BOND
+	dw HPBasedDamage          ; EFFECT_REVERSAL
+	dw Spite                  ; EFFECT_SPITE
+	dw FalseSwipe             ; EFFECT_FALSE_SWIPE
+	dw StatusTargetSelf       ; EFFECT_HEAL_BELL
+	dw NormalHit              ; EFFECT_PRIORITY_HIT
+	dw TripleKick             ; EFFECT_TRIPLE_KICK
+	dw Thief                  ; EFFECT_THIEF
+	dw StatusTargetSelf       ; EFFECT_MEAN_LOOK
+	dw Nightmare              ; EFFECT_NIGHTMARE
+	dw FlameWheel             ; EFFECT_FLAME_WHEEL
+	dw Curse                  ; EFFECT_CURSE
+	dw Growth                 ; EFFECT_GROWTH
+	dw Protect                ; EFFECT_PROTECT
+	dw StatusTargetSelf       ; EFFECT_SPIKES
+	dw Foresight              ; EFFECT_FORESIGHT
+	dw PerishSong             ; EFFECT_PERISH_SONG
+	dw StatusTargetSelf       ; EFFECT_SANDSTORM
+	dw Endure                 ; EFFECT_ENDURE
+	dw Rollout                ; EFFECT_ROLLOUT
+	dw Swagger                ; EFFECT_SWAGGER
+	dw FuryCutter             ; EFFECT_FURY_CUTTER
+	dw Attract                ; EFFECT_ATTRACT
+	dw Return                 ; EFFECT_RETURN
+	dw Present                ; EFFECT_PRESENT
+	dw Frustration            ; EFFECT_FRUSTRATION
+	dw StatusTargetSelf       ; EFFECT_SAFEGUARD
+	dw SacredFire             ; EFFECT_SACRED_FIRE
+	dw Magnitude              ; EFFECT_MAGNITUDE
+	dw BatonPass              ; EFFECT_BATON_PASS
+	dw Pursuit                ; EFFECT_PURSUIT
+	dw RapidSpin              ; EFFECT_RAPID_SPIN
+	dw FireSpin               ; EFFECT_FIRE_SPIN
+	dw BugBite                ; EFFECT_BUG_BITE
+	dw StatusTargetSelf       ; EFFECT_SUNLIGHT_HEAL
+	dw NormalHit              ; EFFECT_EXTREMESPEED
+	dw StatusTargetSelf       ; EFFECT_SHELL_SMASH
+	dw HiddenPower            ; EFFECT_HIDDEN_POWER
+	dw StatusTargetSelf       ; EFFECT_RAIN_DANCE
+	dw StatusTargetSelf       ; EFFECT_SUNNY_DAY
+	dw DefenseUpHit           ; EFFECT_DEFENSE_UP_HIT
+	dw AttackUpHit            ; EFFECT_ATTACK_UP_HIT
+	dw AllUpHit               ; EFFECT_ALL_UP_HIT
+	dw FlinchHit              ; EFFECT_FAKE_OUT
+	dw BellyDrum              ; EFFECT_BELLY_DRUM
+	dw PsychUp                ; EFFECT_PSYCH_UP
+	dw Counter                ; EFFECT_MIRROR_COAT
+	dw SkullBash              ; EFFECT_SKULL_BASH
+	dw Twister                ; EFFECT_TWISTER
+	dw Earthquake             ; EFFECT_EARTHQUAKE
+	dw FutureSight            ; EFFECT_FUTURE_SIGHT
+	dw Stomp                  ; EFFECT_STOMP
+	dw Solarbeam              ; EFFECT_SOLARBEAM
+	dw Thunder                ; EFFECT_THUNDER
+	dw Teleport               ; EFFECT_TELEPORT
+	dw BeatUp                 ; EFFECT_BEAT_UP
+	dw Fly                    ; EFFECT_FLY
+	dw DefenseCurl            ; EFFECT_DEFENSE_CURL
+	dw FireFang               ; EFFECT_FIRE_FANG
+	dw IceFang                ; EFFECT_ICE_FANG
+	dw ThunderFang            ; EFFECT_THUNDER_FANG
+	dw FlareBlitz             ; EFFECT_FLARE_BLITZ
+	dw StatusTargetSelf       ; EFFECT_QUIVER_DANCE
+	dw SuckerPunch            ; EFFECT_SUCKER_PUNCH
+	dw AttackDown             ; EFFECT_PLAY_NICE
+	dw StatusTargetSelf       ; EFFECT_HAIL
+	dw Blizzard               ; EFFECT_BLIZZARD
+	dw Counter                ; EFFECT_METAL_BURST
+	dw Flatter                ; EFFECT_FLATTER
+	dw Superpower             ; EFFECT_SUPERPOWER
+	dw CosmicPower            ; EFFECT_COSMIC_POWER
+	dw OHKOHit                ; EFFECT_SHEER_COLD
+	dw Screen                 ; EFFECT_AURORA_VEIL
+	dw PoisonHit              ; EFFECT_TOXIC_HIT
+	dw StatusTargetSelf       ; EFFECT_AROMATHERAPY
+	dw HoneClaws              ; EFFECT_HONE_CLAWS
+	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
+	dw BurnUp                 ; EFFECT_BURN_UP
+	dw CalmMind               ; EFFECT_CALM_MIND
+	dw KnockOff               ; EFFECT_KNOCK_OFF
+	dw BulkUp                 ; EFFECT_BULK_UP
+	dw HPBasedDamage          ; EFFECT_WATER_SPOUT
+	dw Eruption               ; EFFECT_ERUPTION
+	dw HPBasedDamage          ; EFFECT_WRING_OUT
+	dw StatusTargetSelf       ; EFFECT_TOXIC_SPIKES
+	dw StatusTargetSelf       ; EFFECT_STEALTH_ROCK
+	dw StatusTargetSelf       ; EFFECT_STICKY_WEB
+	dw NormalHit              ; EFFECT_PSYSHOCK
+	dw NormalHit              ; EFFECT_FOUL_PLAY
+	dw DracoMeteor            ; EFFECT_DRACO_METEOR
+	dw StatusTargetSelf       ; EFFECT_REFLECT_TYPE
+	dw FlameCharge            ; EFFECT_FLAME_CHARGE
+	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
+	dw CureStatusHit          ; EFFECT_CURE_SLEEP_HIT
+	dw Trick                  ; EFFECT_TRICK
+	dw HammerArm              ; EFFECT_HAMMER_ARM
+	dw ResetStatsHit          ; EFFECT_RESET_STATS_HIT
+	dw StatusTargetSelf       ; EFFECT_MISTY_TERRAIN
+	dw Defog                  ; EFFECT_DEFOG
+	dw MultiStatDown          ; EFFECT_ATK_DEF_DOWN
+	dw DragonDance            ; EFFECT_DRAGON_DANCE
+	dw FreezeDry              ; EFFECT_FREEZE_DRY
+	dw NormalHit              ; EFFECT_ALWAYS_CRIT
+	dw WorkUp                 ; EFFECT_WORK_UP
+	dw Hurricane              ; EFFECT_HURRICANE
+	dw AttackDown             ; EFFECT_ATK_DOWN_PRIORITY
+	dw PsychoShift            ; EFFECT_PSYCHO_SHIFT
+	dw Roost                  ; EFFECT_ROOST
+	dw BrickBreak             ; EFFECT_BRICK_BREAK
+	dw NormalHit              ; EFFECT_VITAL_THROW
+	dw ForceSwitchHit         ; EFFECT_FORCE_SWITCH_HIT
+	dw TrapHit                ; EFFECT_TRAP_HIT
+	dw NailDown               ; EFFECT_NAIL_DOWN
+	dw DynamoRush             ; EFFECT_DYNAMO_RUSH
+	dw ShatterClaw            ; EFFECT_SHATTER_CLAW
+	dw SpeedUpHit             ; EFFECT_SPEED_UP_HIT
+	dw StatusTargetSelf       ; EFFECT_BRIGHT_MOSS
+	dw NormalHit              ; EFFECT_SACRED_SWORD
+	dw StatusTargetSelf       ; EFFECT_INGRAIN
+	dw Uproot                 ; EFFECT_UPROOT
+	dw StatusTargetSelf       ; EFFECT_COIL 
+	dw Uproar                 ; EFFECT_UPROAR
+	dw PoisonSpeedDown        ; EFFECT_POISON_SPEED_DOWN
+	dw NormalHit              ; EFFECT_FELL_STINGER
+	dw Bounce                 ; EFFECT_BOUNCE
+	dw MultiStatDown          ; EFFECT_TEARFUL_LOOK
+	dw NormalHit              ; EFFECT_FEINT
+	dw Incinerate             ; EFFECT_INCINERATE
+	dw Soak                   ; EFFECT_SOAK
+	dw WeatherBall            ; EFFECT_WEATHER_BALL
+	dw CureStatusHit          ; EFFECT_CURE_PARALYSIS_HIT
+	dw Captivate              ; EFFECT_CAPTIVATE
+	dw Acupressure            ; EFFECT_ACUPRESSURE
+	dw SpecialDefenseDown2Hit ; EFFECT_SP_DEF_DOWN_2_HIT
+	dw StatusTargetSelf       ; EFFECT_CHARGE
+	dw NormalHit              ; EFFECT_BELCH
+	dw Yawn                   ; EFFECT_YAWN
+	dw Fly                    ; EFFECT_DIG
+	dw Fly                    ; EFFECT_DIVE
+	dw Fly                    ; EFFECT_SHADOW_FORCE
+	dw Whirlpool              ; EFFECT_WHIRLPOOL
+	dw MultiStatDown          ; EFFECT_ATK_SP_ATK_DOWN
+	dw Protect                ; EFFECT_SPIKY_SHIELD
+	dw Protect                ; EFFECT_KINGS_SHIELD
+	dw Protect                ; EFFECT_BANEFUL_BUNKER
+	dw Protect                ; EFFECT_OBSTRUCT
+	dw CraftyShield           ; EFFECT_CRAFTY_SHIELD
+	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
+	dw StatusTargetSelf       ; EFFECT_LUCKY_CHANT
+	dw StatusTargetSelf       ; EFFECT_AQUA_RING
+	dw StatusTargetSelf       ; EFFECT_GRUDGE

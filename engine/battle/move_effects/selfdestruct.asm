@@ -21,6 +21,12 @@ SelfdestructEffect:
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVarAddr
 	res SUBSTATUS_DESTINY_BOND, [hl]
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
+	call GetBattleVarAddr
+	res SUBSTATUS_GRUDGE, [hl]
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
+	call GetBattleVarAddr
+	res SUBSTATUS_GRUDGE, [hl]
 	farcall _CheckBattleScene
 	ret nc
 	farcall DrawPlayerHUD

@@ -135,3 +135,9 @@ INCLUDE "engine/battle/move_effects/charge.asm"
 INCLUDE "engine/battle/move_effects/yawn.asm"
 
 INCLUDE "engine/battle/move_effects/crafty_shield.asm"
+
+INCLUDE "engine/battle/move_effects/lucky_chant.asm"
+
+INCLUDE "engine/battle/move_effects/aqua_ring.asm"
+
+INCLUDE "engine/battle/move_effects/grudge.asm"

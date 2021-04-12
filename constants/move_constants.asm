@@ -475,6 +475,12 @@
 	const CRAFTY_SHIELD
 	const FAKE_OUT
 	const FIRST_IMPRESSION
+	const LUCKY_CHANT
+	const AQUA_RING
+	const GRUDGE
+	const SHADOW_CLAW
+	const CRUSH_CLAW
+	const POISON_TAIL
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

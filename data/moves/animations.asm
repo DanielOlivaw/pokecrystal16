@@ -496,6 +496,12 @@ BattleAnimations::
 	dw BattleAnim_CraftyShield
 	dw BattleAnim_FakeOut
 	dw BattleAnim_FirstImpression
+	dw BattleAnim_LuckyChant
+	dw BattleAnim_AquaRing
+	dw BattleAnim_Grudge
+	dw BattleAnim_ShadowClaw
+	dw BattleAnim_CrushClaw
+	dw BattleAnim_PoisonTail
 
 	dw BattleAnim_SweetScent2
 
@@ -879,6 +885,12 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_LuckyChant:
+BattleAnim_AquaRing:
+BattleAnim_Grudge:
+BattleAnim_ShadowClaw:
+BattleAnim_CrushClaw:
+BattleAnim_PoisonTail:
 BattleAnim_FakeOut:
 BattleAnim_FirstImpression:
 BattleAnim_CraftyShield:

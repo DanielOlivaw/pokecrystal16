@@ -1,3 +1,63 @@
+HandleLuckyChant:
+; Lucky Chant ends after 5 turns
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerLuckyChantCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyLuckyChantCount
+.do_it
+	bit SUBSTATUS_LUCKY_CHANT, [hl]
+	ret z
+	ld a, [bc]
+	and a
+	jr nz, .lower_lucky_chant_count
+	res SUBSTATUS_LUCKY_CHANT, [hl]
+	ld hl, BattleText_LuckyChantEnded
+	jp StdBattleTextbox
+
+.lower_lucky_chant_count
+	dec a
+	ld [bc], a
+	ret
+
+HandleIngrainAndAquaRing:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+; Player first
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+	call .do_it
+	
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	call .do_it
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+.do_it
+	bit SUBSTATUS_INGRAINED, [hl]
+	call nz, .Ingrained
+	bit SUBSTATUS_AQUA_RING, [hl]
+	ret z
+; Aqua Ring
+	farcall RestoreSixteenthMaxHP
+	ret z
+	ld hl, VeilOfWaterRestoredText
+	jp StdBattleTextbox	
+
+.Ingrained
+	call RestoreSixteenthMaxHP
+	ret z
+	ld hl, AbsorbedNutrientsText
+	jp StdBattleTextbox
+
 GetTrainerBackpic:
 ; Load the player character's backpic (6x6) into VRAM starting from vTiles2 tile $31.
 

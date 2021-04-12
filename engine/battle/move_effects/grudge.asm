@@ -1,9 +1,13 @@
-SpiteEffect:
-; spite
+BattleCommand_Grudge:
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVarAddr
+	set SUBSTATUS_GRUDGE, [hl]
+	farcall AnimateCurrentMove
+	ld hl, GrudgeEffectText
+	jp StdBattleTextbox
 
-	ld a, [wAttackMissed]
-	and a
-	jp nz, .failed
+GrudgeReducePP:
+; Delete all PP of the move that made the user of Grudge faint.
 	ld bc, PARTYMON_STRUCT_LENGTH ; ????
 	ld hl, wEnemyMonMoves
 	ldh a, [hBattleTurn]
@@ -14,13 +18,13 @@ SpiteEffect:
 	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
 	call GetBattleVar
 	and a
-	jr z, .failed
+	ret z
 	ld b, a
 	push bc
 	ld bc, STRUGGLE
 	call CompareMove2
 	pop bc
-	jr z, .failed
+	ret z
 	ld c, -1
 .loop
 	inc c
@@ -36,14 +40,11 @@ SpiteEffect:
 	pop bc
 	ld a, [hl]
 	and PP_MASK
-	jr z, .failed
+	ret z
 	push bc
 	call GetMoveName
 	; lose 2-5 PP
-	call BattleRandom
-	and %11
-	inc a
-	inc a
+	ld a, 60
 	ld b, a
 	ld a, [hl]
 	and PP_MASK
@@ -77,14 +78,5 @@ SpiteEffect:
 .not_wildmon
 	ld [hl], e
 .transformed
-	push de
-	farcall AnimateCurrentMove
-	pop de
-	ld a, d
-	ld [wDeciramBuffer], a
-	ld hl, SpiteEffectText
+	ld hl, ReducedPPToZeroText
 	jp StdBattleTextbox
-
-.failed
-	farcall PrintDidntAffect2
-	ret

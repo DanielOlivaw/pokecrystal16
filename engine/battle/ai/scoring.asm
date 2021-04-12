@@ -382,13 +382,11 @@ AI_Smart:
 	dbw EFFECT_TWISTER,          AI_Smart_Twister
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake
 	dbw EFFECT_FUTURE_SIGHT,     AI_Smart_FutureSight
-	dbw EFFECT_GUST,             AI_Smart_Gust
 	dbw EFFECT_STOMP,            AI_Smart_Stomp
 	dbw EFFECT_BODY_SLAM,        AI_Smart_Stomp
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
-	dbw EFFECT_CUT,              AI_Smart_Cut
 	dbw EFFECT_GROWTH,           AI_Smart_Growth
 	dbw EFFECT_HAIL,             AI_Smart_Hail
 	dbw EFFECT_AURORA_VEIL,      AI_Smart_AuroraVeil
