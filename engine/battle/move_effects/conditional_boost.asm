@@ -8,59 +8,87 @@ Find_ConditionalBoost:
 	call CompareMove2
 	jp z, BattleCommand_Acrobatics
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, BRINE
 	call CompareMove2
 	jp z, BattleCommand_Brine
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, CUT ; Cut deals double damage to Grass-types
 	call CompareMove2
 	jp z, BattleCommand_Cut
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, HEX
 	call CompareMove2
 	jp z, BattleCommand_Hex
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, PAYBACK
 	call CompareMove2
 	jp z, BattleCommand_Payback
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, ROUND_M
 	call CompareMove2
 	jp z, BattleCommand_Round
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, SHATTER_CLAW
 	call CompareMove2
-	jr z, BattleCommand_ShatterClaw
+	jp z, BattleCommand_ShatterClaw
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, SHIELD_BASH
 	call CompareMove2
 	jp z, BattleCommand_ShieldBash
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, VENOSHOCK
 	call CompareMove2
 	jp z, BattleCommand_Venoshock
 
 ; Moves with EFFECT_COND_BOOST_FLINCH
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, DRAGON_RUSH
 	call CompareMove2
-	jr z, BattleCommand_DoubleMinimizeDamage
+	jp z, BattleCommand_DoubleMinimizeDamage
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, GUST
 	call CompareMove2
 	jr z, BattleCommand_DoubleFlyingDamage
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, STEAMROLLER
 	call CompareMove2
 	jr z, BattleCommand_DoubleMinimizeDamage
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, STOMP
 	call CompareMove2
 	jr z, BattleCommand_DoubleMinimizeDamage
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, SURF
 	call CompareMove2
 	jr z, BattleCommand_DoubleDivingDamage
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, TWISTER
 	call CompareMove2
 	jr z, BattleCommand_DoubleFlyingDamage

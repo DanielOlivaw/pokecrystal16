@@ -1425,6 +1425,24 @@ HPBasedDamage:
 	kingsrock
 	endmove
 
+Eruption:
+	checkobedience
+	usedmovetext
+	doturn
+	constantdamage
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	defrostopponent
+	kingsrock
+	endmove
+
 Counter:
 	checkobedience
 	usedmovetext
@@ -1902,6 +1920,29 @@ RapidSpin:
 	kingsrock
 	endmove
 
+FireSpin:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	defrostopponent
+	kingsrock
+	traptarget
+	endmove
+
 HiddenPower:
 	checkobedience
 	usedmovetext
@@ -1973,6 +2014,28 @@ SkullBash:
 	endturn
 	defenseup
 	statupmessage
+	endmove
+
+Twister:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost ;doubleflyingdamage
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	flinchtarget
 	endmove
 
 Earthquake:
@@ -2813,6 +2876,7 @@ WeatherBall:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 

@@ -25,7 +25,7 @@ KnockOffEffect:
 	call GetBattleVar
 	ld bc, INCINERATE
 	call CompareMove2
-	jr z, .incinerate_berries_enemy
+	call z, .incinerate_berries_enemy
 
 	ld a, [wEffectFailed]
 	and a
@@ -68,7 +68,7 @@ KnockOffEffect:
 	call GetBattleVar
 	ld bc, INCINERATE
 	call CompareMove2
-	jr z, .incinerate_berries_player
+	call z, .incinerate_berries_player
 
 	ld a, [wEffectFailed]
 	and a

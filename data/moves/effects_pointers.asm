@@ -37,7 +37,7 @@ MoveEffectsPointers:
 	dw PayDay                 ; EFFECT_PAY_DAY
 	dw Screen                 ; EFFECT_LIGHT_SCREEN
 	dw TriAttack              ; EFFECT_TRI_ATTACK
-	dw ConditionalBoost       ; EFFECT_CUT
+	dw ConditionalBoost       ; EFFECT_CONDITIONAL_BOOST
 	dw OHKOHit                ; EFFECT_OHKO
 	dw RazorWind              ; EFFECT_RAZOR_WIND
 	dw SuperFang              ; EFFECT_SUPER_FANG
