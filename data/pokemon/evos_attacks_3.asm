@@ -133,10 +133,7 @@ SceptileEvosAttacks:
 TorchicEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, COMBUSKEN
 	db 0 ; no more evolutions
-	dbw 1, AQUA_RING
-	dbw 1, RAIN_DANCE
-	dbw 1, SPIKES
-	dbw 1, STICKY_WEB
+	dbw 1, TACKLE
 	db 0 ; no more level-up moves
 
 CombuskenEvosAttacks:

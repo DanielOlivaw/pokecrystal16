@@ -338,7 +338,7 @@ HoothootEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, NOCTOWL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, MEAN_LOOK
+	dbw 1, GROWL
 	dbw 6, FORESIGHT
 	dbw 11, PECK
 	dbw 16, HYPNOSIS
