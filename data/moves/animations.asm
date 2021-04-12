@@ -885,6 +885,18 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_WillOWisp:
+BattleAnim_ShadowPunch:
+BattleAnim_Synchronoise:
+BattleAnim_FrostBreath:
+BattleAnim_IceBall:
+BattleAnim_HeartStamp:
+BattleAnim_ChargeBeam:
+BattleAnim_MistBall:
+BattleAnim_LusterPurge:
+BattleAnim_OriginPulse:
+BattleAnim_PrecipiceBlades:
+BattleAnim_DragonAscent:
 BattleAnim_LuckyChant:
 BattleAnim_AquaRing:
 BattleAnim_Grudge:
