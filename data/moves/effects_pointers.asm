@@ -130,7 +130,6 @@ MoveEffectsPointers:
 	dw BatonPass              ; EFFECT_BATON_PASS
 	dw Pursuit                ; EFFECT_PURSUIT
 	dw RapidSpin              ; EFFECT_RAPID_SPIN
-	dw FireSpin               ; EFFECT_FIRE_SPIN
 	dw BugBite                ; EFFECT_BUG_BITE
 	dw StatusTargetSelf       ; EFFECT_SUNLIGHT_HEAL
 	dw NormalHit              ; EFFECT_EXTREMESPEED
@@ -146,19 +145,16 @@ MoveEffectsPointers:
 	dw PsychUp                ; EFFECT_PSYCH_UP
 	dw Counter                ; EFFECT_MIRROR_COAT
 	dw SkullBash              ; EFFECT_SKULL_BASH
-	dw Twister                ; EFFECT_TWISTER
+	dw ConditionalBoostFlinch ; EFFECT_COND_BOOST_FLINCH
 	dw Earthquake             ; EFFECT_EARTHQUAKE
 	dw FutureSight            ; EFFECT_FUTURE_SIGHT
-	dw Stomp                  ; EFFECT_STOMP
 	dw Solarbeam              ; EFFECT_SOLARBEAM
 	dw Thunder                ; EFFECT_THUNDER
 	dw Teleport               ; EFFECT_TELEPORT
 	dw BeatUp                 ; EFFECT_BEAT_UP
 	dw Fly                    ; EFFECT_FLY
 	dw DefenseCurl            ; EFFECT_DEFENSE_CURL
-	dw FireFang               ; EFFECT_FIRE_FANG
-	dw IceFang                ; EFFECT_ICE_FANG
-	dw ThunderFang            ; EFFECT_THUNDER_FANG
+	dw ElementalFang          ; EFFECT_ELEMENTAL_FANG
 	dw FlareBlitz             ; EFFECT_FLARE_BLITZ
 	dw StatusTargetSelf       ; EFFECT_QUIVER_DANCE
 	dw SuckerPunch            ; EFFECT_SUCKER_PUNCH
@@ -177,10 +173,9 @@ MoveEffectsPointers:
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
 	dw BurnUp                 ; EFFECT_BURN_UP
 	dw CalmMind               ; EFFECT_CALM_MIND
-	dw KnockOff               ; EFFECT_KNOCK_OFF
+	dw RemoveItemHit          ; EFFECT_REMOVE_ITEM_HIT
 	dw BulkUp                 ; EFFECT_BULK_UP
 	dw HPBasedDamage          ; EFFECT_WATER_SPOUT
-	dw Eruption               ; EFFECT_ERUPTION
 	dw HPBasedDamage          ; EFFECT_WRING_OUT
 	dw StatusTargetSelf       ; EFFECT_TOXIC_SPIKES
 	dw StatusTargetSelf       ; EFFECT_STEALTH_ROCK
@@ -189,7 +184,6 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_FOUL_PLAY
 	dw DracoMeteor            ; EFFECT_DRACO_METEOR
 	dw StatusTargetSelf       ; EFFECT_REFLECT_TYPE
-	dw FlameCharge            ; EFFECT_FLAME_CHARGE
 	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
 	dw CureStatusHit          ; EFFECT_CURE_SLEEP_HIT
 	dw Trick                  ; EFFECT_TRICK
@@ -212,7 +206,6 @@ MoveEffectsPointers:
 	dw TrapHit                ; EFFECT_TRAP_HIT
 	dw NailDown               ; EFFECT_NAIL_DOWN
 	dw DynamoRush             ; EFFECT_DYNAMO_RUSH
-	dw ShatterClaw            ; EFFECT_SHATTER_CLAW
 	dw SpeedUpHit             ; EFFECT_SPEED_UP_HIT
 	dw StatusTargetSelf       ; EFFECT_BRIGHT_MOSS
 	dw NormalHit              ; EFFECT_SACRED_SWORD
@@ -225,7 +218,6 @@ MoveEffectsPointers:
 	dw Bounce                 ; EFFECT_BOUNCE
 	dw MultiStatDown          ; EFFECT_TEARFUL_LOOK
 	dw NormalHit              ; EFFECT_FEINT
-	dw Incinerate             ; EFFECT_INCINERATE
 	dw Soak                   ; EFFECT_SOAK
 	dw WeatherBall            ; EFFECT_WEATHER_BALL
 	dw CureStatusHit          ; EFFECT_CURE_PARALYSIS_HIT

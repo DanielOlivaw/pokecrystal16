@@ -837,6 +837,7 @@ SpeedUpHit:
 	statupmessage
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -1360,6 +1361,7 @@ TrapTarget:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	traptarget
 	endmove
@@ -1406,23 +1408,6 @@ StaticDamage:
 
 Reversal:
 HPBasedDamage:
-	checkobedience
-	usedmovetext
-	doturn
-	constantdamage
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
-
-Eruption:
 	checkobedience
 	usedmovetext
 	doturn
@@ -1917,29 +1902,6 @@ RapidSpin:
 	kingsrock
 	endmove
 
-FireSpin:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	clearmissdamage
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	defrostopponent
-	kingsrock
-	traptarget
-	endmove
-
 HiddenPower:
 	checkobedience
 	usedmovetext
@@ -2013,28 +1975,6 @@ SkullBash:
 	statupmessage
 	endmove
 
-Twister:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	conditionalboost ;doubleflyingdamage
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	flinchtarget
-	endmove
-
 Earthquake:
 	checkobedience
 	usedmovetext
@@ -2078,7 +2018,7 @@ FutureSight:
 	buildopponentrage
 	endmove
 
-Stomp:
+ConditionalBoostFlinch:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2087,7 +2027,7 @@ Stomp:
 	damagecalc
 	stab
 	damagevariation
-	conditionalboost ;doubleminimizedamage
+	conditionalboost
 	checkhit
 	effectchance
 	moveanim
@@ -2195,7 +2135,7 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
-FireFang:
+ElementalFang:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2213,47 +2153,7 @@ FireFang:
 	checkfaint
 	buildopponentrage
 	defrostopponent
-	firefang
-	endmove
-
-IceFang:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	icefang
-	endmove
-
-ThunderFang:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	thunderfang
+	elementalfang
 	endmove
 
 FlareBlitz:
@@ -2319,6 +2219,7 @@ ConditionalBoost:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2447,7 +2348,7 @@ CalmMind:
 	calmmind
 	endmove
 
-KnockOff:
+RemoveItemHit:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2466,6 +2367,7 @@ KnockOff:
 	knockoff
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2494,30 +2396,6 @@ DracoMeteor:
 	overheat
 	checkfaint
 	buildopponentrage
-	kingsrock
-	endmove
-
-FlameCharge:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	speedup
-	statupmessage
-	checkfaint
-	buildopponentrage
-	defrostopponent
 	kingsrock
 	endmove
 
@@ -2808,29 +2686,6 @@ DynamoRush:
 	dynamorush
 	endmove
 
-ShatterClaw:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	conditionalboost
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	docurestatus
-	buildopponentrage
-	defrostopponent
-	kingsrock
-	endmove
-
 Uproot:
 	checkobedience
 	usedmovetext
@@ -2916,29 +2771,6 @@ Bounce:
 	buildopponentrage
 	kingsrock
 	paralyzetarget
-	endmove
-
-Incinerate:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	knockoff
-	checkfaint
-	buildopponentrage
-	defrostopponent
-	kingsrock
 	endmove
 
 ; StrengthSap:

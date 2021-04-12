@@ -3869,8 +3869,6 @@ BattleCommand_ConstantDamage:
 	call GetBattleVar
 	cp EFFECT_WATER_SPOUT
 	jr z, .eruption_water_spout_power
-	cp EFFECT_ERUPTION
-	jr z, .eruption_water_spout_power
 	cp EFFECT_WRING_OUT
 	jr z, .wring_out_power
 
@@ -4687,6 +4685,21 @@ BattleCommand_DefrostOpponent:
 ; defrostopponent
 ; Thaw the opponent if frozen
 
+; The opponent is thawed if it is hit by Shatter Claw
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SHATTER_CLAW
+	call CompareMove
+	jr z, .go
+
+; The opponent is thawed if it is hit by a damaging fire-type move.
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp FIRE
+	ret nz
+
+.go
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	; fallthrough
@@ -5618,6 +5631,19 @@ BattleCommand_TriStatusChance:
 	dw BattleCommand_ParalyzeTarget ; paralyze
 	dw BattleCommand_FreezeTarget ; freeze
 	dw BattleCommand_BurnTarget ; burn
+
+BattleCommand_ElementalFang:
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+
+	ld bc, ICE_FANG
+	call CompareMove
+	jr z, BattleCommand_IceFang
+
+	ld bc, THUNDER_FANG
+	call CompareMove
+	jr z, BattleCommand_ThunderFang
+;fallthrough
 
 BattleCommand_FireFang:
 	; equal, independent chance to burn or flinch

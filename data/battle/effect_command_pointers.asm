@@ -164,9 +164,7 @@ BattleCommandPointers:
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
 	dw BattleCommand_Growth
-	dw BattleCommand_FireFang
-	dw BattleCommand_IceFang
-	dw BattleCommand_ThunderFang
+	dw BattleCommand_ElementalFang
 	dw BattleCommand_BugBite
 	dw BattleCommand_ConditionalBoost
 	dw BattleCommand_SuckerPunch

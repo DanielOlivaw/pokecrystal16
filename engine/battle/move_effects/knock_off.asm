@@ -21,10 +21,11 @@ KnockOffEffect:
 
 ; Incinerate only removes berries
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_INCINERATE
-	call z, .incinerate_berries_enemy
+	ld bc, INCINERATE
+	call CompareMove2
+	jr z, .incinerate_berries_enemy
 
 	ld a, [wEffectFailed]
 	and a
@@ -63,10 +64,11 @@ KnockOffEffect:
 
 ; Incinerate only removes berries
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_INCINERATE
-	call z, .incinerate_berries_player
+	ld bc, INCINERATE
+	call CompareMove2
+	jr z, .incinerate_berries_player
 
 	ld a, [wEffectFailed]
 	and a
@@ -81,9 +83,10 @@ KnockOffEffect:
 	ld [de], a
 
 .stole
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_INCINERATE
+	ld bc, INCINERATE
+	call CompareMove2
 	jr z, .incinerate_text
 
 	call GetItemName

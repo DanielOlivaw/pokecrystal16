@@ -16,10 +16,6 @@ Find_ConditionalBoost:
 	call CompareMove2
 	jp z, BattleCommand_Cut
 
-	ld bc, GUST
-	call CompareMove2
-	jr z, BattleCommand_DoubleFlyingDamage
-
 	ld bc, HEX
 	call CompareMove2
 	jp z, BattleCommand_Hex
@@ -32,17 +28,42 @@ Find_ConditionalBoost:
 	call CompareMove2
 	jp z, BattleCommand_Round
 
+	ld bc, SHATTER_CLAW
+	call CompareMove2
+	jr z, BattleCommand_ShatterClaw
+
 	ld bc, SHIELD_BASH
 	call CompareMove2
 	jp z, BattleCommand_ShieldBash
+
+	ld bc, VENOSHOCK
+	call CompareMove2
+	jp z, BattleCommand_Venoshock
+
+; Moves with EFFECT_COND_BOOST_FLINCH
+	ld bc, DRAGON_RUSH
+	call CompareMove2
+	jr z, BattleCommand_DoubleMinimizeDamage
+
+	ld bc, GUST
+	call CompareMove2
+	jr z, BattleCommand_DoubleFlyingDamage
+
+	ld bc, STEAMROLLER
+	call CompareMove2
+	jr z, BattleCommand_DoubleMinimizeDamage
+
+	ld bc, STOMP
+	call CompareMove2
+	jr z, BattleCommand_DoubleMinimizeDamage
 
 	ld bc, SURF
 	call CompareMove2
 	jr z, BattleCommand_DoubleDivingDamage
 
-	ld bc, VENOSHOCK
+	ld bc, TWISTER
 	call CompareMove2
-	jp z, BattleCommand_Venoshock
+	jr z, BattleCommand_DoubleFlyingDamage
 
 
 ; Other effects that use conditionalboost
@@ -56,19 +77,12 @@ Find_ConditionalBoost:
 	cp EFFECT_FREEZE_DRY
 	jp z, BattleCommand_FreezeDry
 
-	cp EFFECT_SHATTER_CLAW
-	jr z, BattleCommand_ShatterClaw
-
 	cp EFFECT_BODY_SLAM
-	jr z, BattleCommand_DoubleMinimizeDamage
-	cp EFFECT_STOMP
 	jr z, BattleCommand_DoubleMinimizeDamage
 	cp EFFECT_MAGNITUDE
 	jr z, BattleCommand_DoubleUndergroundDamage
 	cp EFFECT_EARTHQUAKE
 	jr z, BattleCommand_DoubleUndergroundDamage
-	cp EFFECT_TWISTER
-	jr z, BattleCommand_DoubleFlyingDamage
 	cp EFFECT_WHIRLPOOL
 	jr z, BattleCommand_DoubleDivingDamage
 	ret
