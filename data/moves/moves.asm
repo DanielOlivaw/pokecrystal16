@@ -493,4 +493,6 @@ Moves1:
 	move EFFECT_DEFENSE_DOWN_HIT,   75, NORMAL,   PHYSICAL,  95, 10,  50 ; CRUSH_CLAW
 	move EFFECT_POISON_HIT,         50, POISON,   PHYSICAL, 100, 25,  10 ; POISON_TAIL
 	move EFFECT_BURN,                0, FIRE,     STATUS,    85, 15,   0 ; WILL_O_WISP
+	move EFFECT_ALWAYS_HIT,         60, GHOST,    PHYSICAL, 100, 20,   0 ; SHADOW_PUNCH
+	move EFFECT_NORMAL_HIT,        120, PSYCHIC,  SPECIAL,  100, 10,   0 ; SYNCHRONOISE
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
