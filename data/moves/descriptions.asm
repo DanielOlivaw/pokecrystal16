@@ -546,6 +546,9 @@ GuillotineDescription:
 	next "pincer attack.@"
 
 RazorWindDescription:
+SolarbeamDescription:
+SkullBashDescription:
+SkyAttackDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
@@ -586,6 +589,20 @@ VineWhipDescription:
 	next "slender vines.@"
 
 StompDescription:
+HeadbuttDescription:
+BiteDescription:
+BoneClubDescription:
+RockSlideDescription:
+HyperFangDescription:
+AirSlashDescription:
+IronHeadDescription:
+IcicleCrashDescription:
+ZenHeadbuttDescription:
+SteamrollerDescription:
+DarkPulseDescription:
+AstonishDescription:
+NeedleArmDescription:
+HeartStampDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
@@ -609,10 +626,6 @@ SandAttackDescription:
 	db   "Reduces accuracy"
 	next "by throwing sand.@"
 
-HeadbuttDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 HornAttackDescription:
 	db   "An attack using a"
 	next "horn to jab.@"
@@ -630,6 +643,12 @@ TackleDescription:
 	next "attack.@"
 
 BodySlamDescription:
+ThundershockDescription:
+ThunderboltDescription:
+LickDescription:
+SparkDescription:
+DischargeDescription:
+ForcePalmDescription:
 	db   "An attack that may"
 	next "cause paralysis.@"
 
@@ -638,16 +657,15 @@ WrapDescription:
 	next "for 2-5 turns.@"
 
 TakeDownDescription:
+DoubleEdgeDescription:
+HeadSmashDescription:
+WildChargeDescription:
 	db   "A tackle that also"
 	next "hurts the user.@"
 
 ThrashDescription:
 	db   "Works 2-3 turns"
 	next "and confuses user.@"
-
-DoubleEdgeDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
 
 TailWhipDescription:
 	db   "Lowers the foe's"
@@ -668,10 +686,6 @@ PinMissileDescription:
 LeerDescription:
 	db   "Reduces the foe's"
 	next "DEFENSE.@"
-
-BiteDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 GrowlDescription:
 	db   "Reduces the foe's"
@@ -793,10 +807,6 @@ GrowthDescription:
 	db   "Grows to boost"
 	next "ATTACK & SPCL.ATK.@"
 
-SolarbeamDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
-
 PoisonpowderDescription:
 	db   "A move that may"
 	next "poison the foe.@"
@@ -824,14 +834,6 @@ DragonRageDescription:
 FireSpinDescription:
 	db   "Traps foe in fire"
 	next "for 2-5 turns.@"
-
-ThundershockDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
-
-ThunderboltDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
 
 ThunderWaveDescription:
 	db   "A move that may"
@@ -977,10 +979,6 @@ EggBombDescription:
 	db   "Eggs are hurled at"
 	next "the foe.@"
 
-LickDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
-
 SmogDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
@@ -988,10 +986,6 @@ SmogDescription:
 SludgeDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
-
-BoneClubDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 FireBlastDescription:
 	db   "An attack that"
@@ -1008,10 +1002,6 @@ ClampDescription:
 SwiftDescription:
 	db   "Star-shaped rays"
 	next "that never miss.@"
-
-SkullBashDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
 
 SpikeCannonDescription:
 	db   "Fires spikes to"
@@ -1061,10 +1051,6 @@ LovelyKissDescription:
 	db   "May cause the foe"
 	next "to fall asleep.@"
 
-SkyAttackDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
-
 TransformDescription:
 	db   "The user assumes"
 	next "the foe's guise.@"
@@ -1112,14 +1098,6 @@ BonemerangDescription:
 RestDescription:
 	db   "Sleep for 2 turns"
 	next "to fully recover.@"
-
-RockSlideDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
-HyperFangDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 SharpenDescription:
 	db   "A move that raises"
@@ -1297,6 +1275,7 @@ CharmDescription:
 	db   "Sharply lowers the"
 	next "foe's ATTACK.@"
 
+IceBallDescription:
 RolloutDescription:
 	db   "Attacks 5 turns"
 	next "with rising power.@"
@@ -1312,10 +1291,6 @@ SwaggerDescription:
 MilkDrinkDescription:
 	db   "Restores HP by 1/2"
 	next "the user's max HP.@"
-
-SparkDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
 
 FuryCutterDescription:
 	db   "Successive hits"
@@ -1505,10 +1480,6 @@ FlareBlitzDescription:
 	db   "Hurts the user and"
 	next "may cause a burn.@"
 
-AirSlashDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 DragonClawDescription:
 	db   "Slashes the foe"
 	next "with sharp claws.@"
@@ -1573,14 +1544,6 @@ NastyPlotDescription:
 	db   "Sharply increases"
 	next "user's SPCL.ATK.@"
 
-DischargeDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
-
-IronHeadDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 HailDescription:
 	db   "Hail inflicts"
 	next "damage every turn.@"
@@ -1588,10 +1551,6 @@ HailDescription:
 IcicleSpearDescription:
 	db   "Launches icicles"
 	next "to hit 2-5 times.@"
-
-IcicleCrashDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 MetalBurstDescription:
 	db   "Retaliates with"
@@ -1689,10 +1648,6 @@ PoisonTailDescription:
 SignalBeamDescription:
 	db   "An attack that may"
 	next "confuse the foe.@"
-
-ZenHeadbuttDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 SilverWindDescription:
 	db   "An attack that may"
@@ -1815,10 +1770,6 @@ RockBlastDescription:
 	db   "Hurls 2-5 rocks in"
 	next "a row at the foe.@"
 
-SteamrollerDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 FlameChargeDescription:
 	db   "A fiery tackle"
 	next "that raises SPEED.@"
@@ -1862,10 +1813,6 @@ RazorShellDescription:
 PaybackDescription:
 	db   "Stronger if the"
 	next "user moves last.@"
-
-DarkPulseDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 SandTombDescription:
 	db   "Traps the foe for"
@@ -1967,6 +1914,7 @@ GigaImpactDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
+FrostBreathDescription:
 StormThrowDescription:
 	db   "Always results in"
 	next "a critical hit.@"
@@ -2147,10 +2095,6 @@ TearfulLookDescription:
 	db   "Lowers ATTACK and"
 	next "SPCL.ATK.@"
 
-HeadSmashDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
-
 AcrobaticsDescription:
 	db   "Stronger if not"
 	next "holding an item.@"
@@ -2191,10 +2135,6 @@ IncinerateDescription:
 	db   "Burns up the foe's"
 	next "held BERRY.@"
 
-AstonishDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 SoakDescription:
 	db   "Changes the foe's"
 	next "type to WATER.@"
@@ -2227,10 +2167,6 @@ OminousWindDescription:
 	db   "An attack that may"
 	next "raise all stats.@"
 
-ForcePalmDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
-
 ArmThrustDescription:
 	db   "Repeatedly strikes"
 	next "2-5 times.@"
@@ -2246,10 +2182,6 @@ CaptivateDescription:
 AcupressureDescription:
 	db   "Sharply boosts a"
 	next "random stat.@"
-
-WildChargeDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
 
 AcidSprayDescription:
 	db   "Harshly reduces"
@@ -2286,10 +2218,6 @@ NobleRoarDescription:
 BoomburstDescription:
 	db   "Attacks with an"
 	next "explosive sound.@"
-
-NeedleArmDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
 
 SpikyShieldDescription:
 	db   "Protection that"
@@ -2331,6 +2259,42 @@ GrudgeDescription:
 CrushClawDescription:
 	db   "An attack that may"
 	next "lower DEFENSE.@"
+
+WillOWispDescription:
+	db   "Inflicts a burn"
+	next "with intense fire.@"
+
+ShadowPunchDescription:
+	db   "A shadowy strike"
+	next "that never misses.@"
+
+SynchronoiseDescription:
+	db   "Only hits a foe of"
+	next "the same type.@"
+
+ChargeBeamDescription:
+	db   "An attack that may"
+	next "raise SPCL.ATK.@"
+
+MistBallDescription:
+	db   "An attack that may"
+	next "lower SPCL.ATK.@"
+
+LusterPurgeDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+
+OriginPulseDescription:
+	db   "Attacks with blue"
+	next "beams of light.@"
+
+PrecipiceBladesDescription:
+	db   "Manifests fearsome"
+	next "blades of stone.@"
+
+DragonAscentDescription:
+	db   "Sacrifices DEFENSE"
+	next "and SPCL.DEF.@"
 
 		;"123456789123456789"
 
