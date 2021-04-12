@@ -481,6 +481,7 @@ MoveDescriptions1:
 	dw ShadowClawDescription
 	dw CrushClawDescription
 	dw PoisonTailDescription
+	dw WillOWispDescription
 
 InvalidMoveDescription:
 	db "?@"

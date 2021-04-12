@@ -202,6 +202,7 @@ ENDM
 	command captivate               ; c3
 	command yawn                    ; c4
 	command craftyshield            ; c5
+	command burn                    ; c6
 
 	enum_start $fe
 	command endturn                 ; fe

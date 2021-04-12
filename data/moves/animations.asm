@@ -502,6 +502,7 @@ BattleAnimations::
 	dw BattleAnim_ShadowClaw
 	dw BattleAnim_CrushClaw
 	dw BattleAnim_PoisonTail
+	dw BattleAnim_WillOWisp
 
 	dw BattleAnim_SweetScent2
 

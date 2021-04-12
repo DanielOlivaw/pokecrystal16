@@ -474,4 +474,5 @@ MoveNames::
 	db "SHADOW CLAW@"
 	db "CRUSH CLAW@"
 	db "POISON TAIL@"
+	db "WILL-O-WISP@"
 	  ;"123456123456@"

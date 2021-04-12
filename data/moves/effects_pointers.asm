@@ -218,3 +218,4 @@ MoveEffectsPointers:
 	dw Protect                ; EFFECT_OBSTRUCT
 	dw CraftyShield           ; EFFECT_CRAFTY_SHIELD
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
+	dw DoBurn                 ; EFFECT_BURN

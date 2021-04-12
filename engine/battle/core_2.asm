@@ -53,7 +53,7 @@ HandleIngrainAndAquaRing:
 	jp StdBattleTextbox	
 
 .Ingrained
-	call RestoreSixteenthMaxHP
+	farcall RestoreSixteenthMaxHP
 	ret z
 	ld hl, AbsorbedNutrientsText
 	jp StdBattleTextbox
@@ -175,7 +175,13 @@ BattleStartMessage:
 	ld a, 1
 	ld [wBattleAnimParam], a
 	ld de, ANIM_SEND_OUT_MON
-	call Call_PlayBattleAnim
+; Call_PlayBattleAnim
+	ld a, e
+	ld [wFXAnimID], a
+	ld a, d
+	ld [wFXAnimID + 1], a
+	call WaitBGMap
+	predef_jump PlayBattleAnim
 
 .not_shiny
 	farcall CheckSleepingTreeMon

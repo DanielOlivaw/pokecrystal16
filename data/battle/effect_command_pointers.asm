@@ -201,3 +201,4 @@ BattleCommandPointers:
 	dw BattleCommand_Captivate
 	dw BattleCommand_Yawn
 	dw BattleCommand_CraftyShield
+	dw BattleCommand_Burn
