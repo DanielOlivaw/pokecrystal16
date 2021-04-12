@@ -484,6 +484,10 @@
 	const WILL_O_WISP
 	const SHADOW_PUNCH
 	const SYNCHRONOISE
+	const FROST_BREATH
+	const ICE_BALL
+	const HEART_STAMP
+	const CHARGE_BEAM
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

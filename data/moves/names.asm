@@ -477,4 +477,8 @@ MoveNames::
 	db "WILL-O-WISP@"
 	db "SHADOW PUNCH@"
 	db "SYNCHRONOISE@"
+	db "FROST BREATH@"
+	db "ICE BALL@"
+	db "HEART STAMP@"
+	db "CHARGE BEAM@"
 	  ;"123456123456@"

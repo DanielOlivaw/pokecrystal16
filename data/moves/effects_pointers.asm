@@ -219,3 +219,4 @@ MoveEffectsPointers:
 	dw CraftyShield           ; EFFECT_CRAFTY_SHIELD
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
 	dw DoBurn                 ; EFFECT_BURN
+	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT

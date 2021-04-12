@@ -505,6 +505,10 @@ BattleAnimations::
 	dw BattleAnim_WillOWisp
 	dw BattleAnim_ShadowPunch
 	dw BattleAnim_Synchronoise
+	dw BattleAnim_FrostBreath
+	dw BattleAnim_IceBall
+	dw BattleAnim_HeartStamp
+	dw BattleAnim_ChargeBeam
 
 	dw BattleAnim_SweetScent2
 

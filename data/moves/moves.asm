@@ -495,4 +495,8 @@ Moves1:
 	move EFFECT_BURN,                0, FIRE,     STATUS,    85, 15,   0 ; WILL_O_WISP
 	move EFFECT_ALWAYS_HIT,         60, GHOST,    PHYSICAL, 100, 20,   0 ; SHADOW_PUNCH
 	move EFFECT_NORMAL_HIT,        120, PSYCHIC,  SPECIAL,  100, 10,   0 ; SYNCHRONOISE
+	move EFFECT_ALWAYS_CRIT,        60, ICE,      SPECIAL,   90, 10,   0 ; FROST_BREATH
+	move EFFECT_ROLLOUT,            30, ICE,      PHYSICAL,  90, 20,   0 ; ICE_BALL
+	move EFFECT_FLINCH_HIT,         60, PSYCHIC,  PHYSICAL, 100, 25,  30 ; HEART_STAMP
+	move EFFECT_SP_ATK_UP_HIT,      50, ELECTRIC, SPECIAL,   90, 10,  70 ; CHARGE_BEAM
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -484,6 +484,10 @@ MoveDescriptions1:
 	dw WillOWispDescription
 	dw ShadowPunchDescription
 	dw SynchronoiseDescription
+	dw FrostBreathDescription
+	dw IceBallDescription
+	dw HeartStampDescription
+	dw ChargeBeamDescription
 
 InvalidMoveDescription:
 	db "?@"
