@@ -22,7 +22,7 @@ HandleLuckyChant:
 	ld [bc], a
 	ret
 
-HandleIngrainAndAquaRing:
+HandleIngrain:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .DoEnemyFirst
@@ -43,19 +43,37 @@ HandleIngrainAndAquaRing:
 	ld hl, wPlayerSubStatus5
 .do_it
 	bit SUBSTATUS_INGRAINED, [hl]
-	call nz, .Ingrained
-	bit SUBSTATUS_AQUA_RING, [hl]
 	ret z
-; Aqua Ring
-	farcall RestoreSixteenthMaxHP
-	ret z
-	ld hl, VeilOfWaterRestoredText
-	jp StdBattleTextbox	
-
-.Ingrained
 	farcall RestoreSixteenthMaxHP
 	ret z
 	ld hl, AbsorbedNutrientsText
+	jp StdBattleTextbox
+
+HandleAquaRing:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+; Player first
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+	call .do_it
+	
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	call .do_it
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+.do_it
+	bit SUBSTATUS_AQUA_RING, [hl]
+	ret z
+	farcall RestoreSixteenthMaxHP
+	ret z
+	ld hl, VeilOfWaterRestoredText
 	jp StdBattleTextbox
 
 GetTrainerBackpic:

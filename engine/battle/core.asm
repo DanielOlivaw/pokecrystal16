@@ -354,7 +354,8 @@ HandleBetweenTurnEffects:
 	call HandleYawn
 	farcall HandleLuckyChant
 	call HandleLeftovers
-	farcall HandleIngrainAndAquaRing
+	farcall HandleAquaRing
+	farcall HandleIngrain
 	call HandleMysteryberry
 	call HandleDefrost
 	call HandleSafeguard
