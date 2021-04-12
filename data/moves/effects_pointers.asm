@@ -47,7 +47,7 @@ MoveEffectsPointers:
 	dw MultiHit               ; EFFECT_DOUBLE_HIT
 	dw NormalHit              ; EFFECT_JUMP_KICK
 	dw Mist                   ; EFFECT_MIST
-	dw StatusTargetSelf       ; EFFECT_FOCUS_ENERGY
+	dw StatusTargetSelf       ; EFFECT_STATUS_SELF
 	dw RecoilHit              ; EFFECT_RECOIL_HIT
 	dw DoConfuse              ; EFFECT_CONFUSE
 	dw AttackUp2              ; EFFECT_ATTACK_UP_2
@@ -102,20 +102,16 @@ MoveEffectsPointers:
 	dw HPBasedDamage          ; EFFECT_REVERSAL
 	dw Spite                  ; EFFECT_SPITE
 	dw FalseSwipe             ; EFFECT_FALSE_SWIPE
-	dw StatusTargetSelf       ; EFFECT_HEAL_BELL
 	dw NormalHit              ; EFFECT_PRIORITY_HIT
 	dw TripleKick             ; EFFECT_TRIPLE_KICK
 	dw Thief                  ; EFFECT_THIEF
-	dw StatusTargetSelf       ; EFFECT_MEAN_LOOK
 	dw Nightmare              ; EFFECT_NIGHTMARE
 	dw FlameWheel             ; EFFECT_FLAME_WHEEL
 	dw Curse                  ; EFFECT_CURSE
 	dw Growth                 ; EFFECT_GROWTH
 	dw Protect                ; EFFECT_PROTECT
-	dw StatusTargetSelf       ; EFFECT_SPIKES
 	dw Foresight              ; EFFECT_FORESIGHT
 	dw PerishSong             ; EFFECT_PERISH_SONG
-	dw StatusTargetSelf       ; EFFECT_SANDSTORM
 	dw Endure                 ; EFFECT_ENDURE
 	dw Rollout                ; EFFECT_ROLLOUT
 	dw Swagger                ; EFFECT_SWAGGER
@@ -124,7 +120,6 @@ MoveEffectsPointers:
 	dw Return                 ; EFFECT_RETURN
 	dw Present                ; EFFECT_PRESENT
 	dw Frustration            ; EFFECT_FRUSTRATION
-	dw StatusTargetSelf       ; EFFECT_SAFEGUARD
 	dw SacredFire             ; EFFECT_SACRED_FIRE
 	dw Magnitude              ; EFFECT_MAGNITUDE
 	dw BatonPass              ; EFFECT_BATON_PASS
@@ -133,10 +128,7 @@ MoveEffectsPointers:
 	dw BugBite                ; EFFECT_BUG_BITE
 	dw StatusTargetSelf       ; EFFECT_SUNLIGHT_HEAL
 	dw NormalHit              ; EFFECT_EXTREMESPEED
-	dw StatusTargetSelf       ; EFFECT_SHELL_SMASH
 	dw HiddenPower            ; EFFECT_HIDDEN_POWER
-	dw StatusTargetSelf       ; EFFECT_RAIN_DANCE
-	dw StatusTargetSelf       ; EFFECT_SUNNY_DAY
 	dw DefenseUpHit           ; EFFECT_DEFENSE_UP_HIT
 	dw AttackUpHit            ; EFFECT_ATTACK_UP_HIT
 	dw AllUpHit               ; EFFECT_ALL_UP_HIT
@@ -156,10 +148,8 @@ MoveEffectsPointers:
 	dw DefenseCurl            ; EFFECT_DEFENSE_CURL
 	dw ElementalFang          ; EFFECT_ELEMENTAL_FANG
 	dw FlareBlitz             ; EFFECT_FLARE_BLITZ
-	dw StatusTargetSelf       ; EFFECT_QUIVER_DANCE
 	dw SuckerPunch            ; EFFECT_SUCKER_PUNCH
 	dw AttackDown             ; EFFECT_PLAY_NICE
-	dw StatusTargetSelf       ; EFFECT_HAIL
 	dw Blizzard               ; EFFECT_BLIZZARD
 	dw Counter                ; EFFECT_METAL_BURST
 	dw Flatter                ; EFFECT_FLATTER
@@ -168,7 +158,6 @@ MoveEffectsPointers:
 	dw OHKOHit                ; EFFECT_SHEER_COLD
 	dw Screen                 ; EFFECT_AURORA_VEIL
 	dw PoisonHit              ; EFFECT_TOXIC_HIT
-	dw StatusTargetSelf       ; EFFECT_AROMATHERAPY
 	dw HoneClaws              ; EFFECT_HONE_CLAWS
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
 	dw BurnUp                 ; EFFECT_BURN_UP
@@ -177,19 +166,14 @@ MoveEffectsPointers:
 	dw BulkUp                 ; EFFECT_BULK_UP
 	dw HPBasedDamage          ; EFFECT_WATER_SPOUT
 	dw HPBasedDamage          ; EFFECT_WRING_OUT
-	dw StatusTargetSelf       ; EFFECT_TOXIC_SPIKES
-	dw StatusTargetSelf       ; EFFECT_STEALTH_ROCK
-	dw StatusTargetSelf       ; EFFECT_STICKY_WEB
 	dw NormalHit              ; EFFECT_PSYSHOCK
 	dw NormalHit              ; EFFECT_FOUL_PLAY
 	dw DracoMeteor            ; EFFECT_DRACO_METEOR
-	dw StatusTargetSelf       ; EFFECT_REFLECT_TYPE
 	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
 	dw CureStatusHit          ; EFFECT_CURE_SLEEP_HIT
 	dw Trick                  ; EFFECT_TRICK
 	dw HammerArm              ; EFFECT_HAMMER_ARM
 	dw ResetStatsHit          ; EFFECT_RESET_STATS_HIT
-	dw StatusTargetSelf       ; EFFECT_MISTY_TERRAIN
 	dw Defog                  ; EFFECT_DEFOG
 	dw MultiStatDown          ; EFFECT_ATK_DEF_DOWN
 	dw DragonDance            ; EFFECT_DRAGON_DANCE
@@ -207,11 +191,8 @@ MoveEffectsPointers:
 	dw NailDown               ; EFFECT_NAIL_DOWN
 	dw DynamoRush             ; EFFECT_DYNAMO_RUSH
 	dw SpeedUpHit             ; EFFECT_SPEED_UP_HIT
-	dw StatusTargetSelf       ; EFFECT_BRIGHT_MOSS
 	dw NormalHit              ; EFFECT_SACRED_SWORD
-	dw StatusTargetSelf       ; EFFECT_INGRAIN
 	dw Uproot                 ; EFFECT_UPROOT
-	dw StatusTargetSelf       ; EFFECT_COIL 
 	dw Uproar                 ; EFFECT_UPROAR
 	dw PoisonSpeedDown        ; EFFECT_POISON_SPEED_DOWN
 	dw NormalHit              ; EFFECT_FELL_STINGER
@@ -224,7 +205,6 @@ MoveEffectsPointers:
 	dw Captivate              ; EFFECT_CAPTIVATE
 	dw Acupressure            ; EFFECT_ACUPRESSURE
 	dw SpecialDefenseDown2Hit ; EFFECT_SP_DEF_DOWN_2_HIT
-	dw StatusTargetSelf       ; EFFECT_CHARGE
 	dw NormalHit              ; EFFECT_BELCH
 	dw Yawn                   ; EFFECT_YAWN
 	dw Fly                    ; EFFECT_DIG
@@ -238,6 +218,3 @@ MoveEffectsPointers:
 	dw Protect                ; EFFECT_OBSTRUCT
 	dw CraftyShield           ; EFFECT_CRAFTY_SHIELD
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
-	dw StatusTargetSelf       ; EFFECT_LUCKY_CHANT
-	dw StatusTargetSelf       ; EFFECT_AQUA_RING
-	dw StatusTargetSelf       ; EFFECT_GRUDGE

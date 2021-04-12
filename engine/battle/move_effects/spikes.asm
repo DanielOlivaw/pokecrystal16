@@ -10,13 +10,22 @@ BattleCommand_Spikes:
 	ld de, wBattleMonType
 .asm_3768e
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_TOXIC_SPIKES
+	ld bc, TOXIC_SPIKES
+	call CompareMove2
 	jr z, .toxic_spikes
-	cp EFFECT_STEALTH_ROCK
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, STEALTH_ROCK
+	call CompareMove2
 	jr z, .stealth_rock
-	cp EFFECT_STICKY_WEB
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, STICKY_WEB
+	call CompareMove2
 	jr z, .sticky_web
 
 ; Fails if spikes are already down!

@@ -18,7 +18,6 @@ AI_Redundant:
 	dbw EFFECT_HEAL,          .Heal
 	dbw EFFECT_LIGHT_SCREEN,  .LightScreen
 	dbw EFFECT_MIST,          .Mist
-	dbw EFFECT_FOCUS_ENERGY,  .FocusEnergy
 	dbw EFFECT_CONFUSE,       .Confuse
 	dbw EFFECT_TRANSFORM,     .Transform
 	dbw EFFECT_REFLECT,       .Reflect
@@ -28,25 +27,15 @@ AI_Redundant:
 	dbw EFFECT_ENCORE,        .Encore
 	dbw EFFECT_SNORE,         .Snore
 	dbw EFFECT_SLEEP_TALK,    .SleepTalk
-	dbw EFFECT_MEAN_LOOK,     .MeanLook
 	dbw EFFECT_NIGHTMARE,     .Nightmare
-	dbw EFFECT_SPIKES,        .Spikes
 	dbw EFFECT_FORESIGHT,     .Foresight
 	dbw EFFECT_PERISH_SONG,   .PerishSong
-	dbw EFFECT_SANDSTORM,     .Sandstorm
 	dbw EFFECT_ATTRACT,       .Attract
-	dbw EFFECT_SAFEGUARD,     .Safeguard
-	dbw EFFECT_RAIN_DANCE,    .RainDance
-	dbw EFFECT_SUNNY_DAY,     .SunnyDay
 	dbw EFFECT_TELEPORT,      .Teleport
 	dbw EFFECT_SUNLIGHT_HEAL, .Heal
 	dbw EFFECT_SWAGGER,       .Swagger
 	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
-	dbw EFFECT_HAIL,          .Hail
 	dbw EFFECT_AURORA_VEIL,   .AuroraVeil
-	dbw EFFECT_TOXIC_SPIKES,  .ToxicSpikes
-	dbw EFFECT_STEALTH_ROCK,  .StealthRock
-	dbw EFFECT_STICKY_WEB,    .StickyWeb
 	db -1
 
 .LightScreen:

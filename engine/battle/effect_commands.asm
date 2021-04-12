@@ -1730,8 +1730,6 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_PLAY_NICE
 	ret z
-	cp EFFECT_REFLECT_TYPE
-	ret z
 	cp EFFECT_RESET_STATS_HIT
 	ret z
 	cp EFFECT_TEARFUL_LOOK

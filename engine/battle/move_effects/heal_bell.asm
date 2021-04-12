@@ -26,9 +26,10 @@ BattleCommand_HealBell:
 	farcall AnimateCurrentMove
 
 ; Aromatherapy and Heal Bell do the same thing, but display different text
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_AROMATHERAPY
+	ld bc, AROMATHERAPY
+	call CompareMove2
 	jr z, .aromatherapy
 
 ; Heal Bell

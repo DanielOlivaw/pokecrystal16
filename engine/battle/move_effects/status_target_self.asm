@@ -1,62 +1,160 @@
 Find_StatusTargetSelf:
 ; Many move effects that target the user or the battlefield,
 ; resulting in the same structure in effects.asm
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-
-	cp EFFECT_FOCUS_ENERGY
+	ld bc, FOCUS_ENERGY
+	call CompareMove2
 	jp z, BattleCommand_FocusEnergy
-	cp EFFECT_HEAL_BELL
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, HEAL_BELL
+	call CompareMove2
 	jp z, BattleCommand_HealBell
-	cp EFFECT_AROMATHERAPY
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, AROMATHERAPY
+	call CompareMove2
 	jp z, BattleCommand_HealBell
-	cp EFFECT_MEAN_LOOK
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, MEAN_LOOK
+	call CompareMove2
 	jp z, BattleCommand_ArenaTrap
-	cp EFFECT_SAFEGUARD
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SAFEGUARD
+	call CompareMove2
 	jp z, BattleCommand_Safeguard
-	cp EFFECT_SUNLIGHT_HEAL
-	jp z, BattleCommand_HealSun
-	cp EFFECT_SHELL_SMASH
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SHELL_SMASH
+	call CompareMove2
 	jp z, BattleCommand_ShellSmash
-	cp EFFECT_QUIVER_DANCE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, QUIVER_DANCE
+	call CompareMove2
 	jp z, BattleCommand_QuiverDance
-	cp EFFECT_REFLECT_TYPE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, REFLECT_TYPE
+	call CompareMove2
 	jp z, BattleCommand_ReflectType
-	cp EFFECT_BRIGHT_MOSS
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, BRIGHT_MOSS
+	call CompareMove2
 	jp z, BattleCommand_BrightMoss
-	cp EFFECT_INGRAIN
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, INGRAIN
+	call CompareMove2
 	jp z, BattleCommand_Ingrain
-	cp EFFECT_COIL
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, COIL
+	call CompareMove2
 	jp z, BattleCommand_Coil
-	cp EFFECT_ACUPRESSURE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, ACUPRESSURE
+	call CompareMove2
 	jp z, BattleCommand_Acupressure
-	cp EFFECT_CHARGE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, CHARGE
+	call CompareMove2
 	jp z, BattleCommand_ElectricCharge
-	cp EFFECT_LUCKY_CHANT
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, LUCKY_CHANT
+	call CompareMove2
 	jp z, BattleCommand_LuckyChant
-	cp EFFECT_AQUA_RING
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, AQUA_RING
+	call CompareMove2
 	jp z, BattleCommand_AquaRing
-	cp EFFECT_GRUDGE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, GRUDGE
+	call CompareMove2
 	jp z, BattleCommand_Grudge
 
-	cp EFFECT_SPIKES
-	jp z, BattleCommand_Spikes
-	cp EFFECT_TOXIC_SPIKES
-	jp z, BattleCommand_Spikes
-	cp EFFECT_STEALTH_ROCK
-	jp z, BattleCommand_Spikes
-	cp EFFECT_STICKY_WEB
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SUNLIGHT_HEAL
+	jp z, BattleCommand_HealSun
+
+; Entry hazards
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SPIKES
+	call CompareMove2
 	jp z, BattleCommand_Spikes
 
-	cp EFFECT_SUNNY_DAY
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, TOXIC_SPIKES
+	call CompareMove2
+	jp z, BattleCommand_Spikes
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, STEALTH_ROCK
+	call CompareMove2
+	jp z, BattleCommand_Spikes
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, STICKY_WEB
+	call CompareMove2
+	jp z, BattleCommand_Spikes
+
+; Weather
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SUNNY_DAY
+	call CompareMove2
 	jp z, BattleCommand_StartSun
-	cp EFFECT_RAIN_DANCE
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, RAIN_DANCE
+	call CompareMove2
 	jp z, BattleCommand_StartRain
-	cp EFFECT_SANDSTORM
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SANDSTORM
+	call CompareMove2
 	jp z, BattleCommand_StartSandstorm
-	cp EFFECT_HAIL
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, HAIL
+	call CompareMove2
 	jp z, BattleCommand_StartHail
-	cp EFFECT_MISTY_TERRAIN
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, MISTY_TERRAIN
+	call CompareMove2
 	jp z, BattleCommand_MistyTerrain
 	ret
-
