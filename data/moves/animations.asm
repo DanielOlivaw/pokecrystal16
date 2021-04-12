@@ -509,6 +509,13 @@ BattleAnimations::
 	dw BattleAnim_IceBall
 	dw BattleAnim_HeartStamp
 	dw BattleAnim_ChargeBeam
+	dw BattleAnim_MistBall
+	dw BattleAnim_LusterPurge
+	dw BattleAnim_OriginPulse
+	dw BattleAnim_PrecipiceBlades
+	dw BattleAnim_DragonAscent
+	dw BattleAnim_DoomDesire
+	dw BattleAnim_PsychoBoost
 
 	dw BattleAnim_SweetScent2
 
@@ -904,6 +911,8 @@ BattleAnim_LusterPurge:
 BattleAnim_OriginPulse:
 BattleAnim_PrecipiceBlades:
 BattleAnim_DragonAscent:
+BattleAnim_DoomDesire:
+BattleAnim_PsychoBoost:
 BattleAnim_LuckyChant:
 BattleAnim_AquaRing:
 BattleAnim_Grudge:

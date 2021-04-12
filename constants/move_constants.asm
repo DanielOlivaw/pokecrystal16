@@ -488,6 +488,13 @@
 	const ICE_BALL
 	const HEART_STAMP
 	const CHARGE_BEAM
+	const MIST_BALL
+	const LUSTER_PURGE
+	const ORIGIN_PULSE
+	const PRECIPICE_BLADES
+	const DRAGON_ASCENT
+	const DOOM_DESIRE
+	const PSYCHO_BOOST
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

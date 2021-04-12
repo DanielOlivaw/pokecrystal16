@@ -488,6 +488,13 @@ MoveDescriptions1:
 	dw IceBallDescription
 	dw HeartStampDescription
 	dw ChargeBeamDescription
+	dw MistBallDescription
+	dw LusterPurgeDescription
+	dw OriginPulseDescription
+	dw PrecipiceBladesDescription
+	dw DragonAscentDescription
+	dw DoomDesireDescription
+	dw PsychoBoostDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2302,6 +2309,14 @@ PrecipiceBladesDescription:
 DragonAscentDescription:
 	db   "Sacrifices DEFENSE"
 	next "and SPCL.DEF.@"
+
+DoomDesireDescription:
+	db   "An attack that"
+	next "hits on 3rd turn.@"
+
+PsychoBoostDescription:
+	db   "Sharply reduces"
+	next "user's SPCL.ATK.@"
 
 		;"123456789123456789"
 

@@ -135,9 +135,13 @@ BattleText_UserRecoveredPPUsing:
 
 BattleText_TargetWasHitByFutureSight:
 	text "<TARGET>"
-	line "was hit by FUTURE"
-	cont "SIGHT!"
+	line "took the attack!"
 	prompt
+
+	; text "<TARGET>"
+	; line "was hit by FUTURE"
+	; cont "SIGHT!"
+	; prompt
 
 BattleText_SafeguardFaded:
 	text "<USER>'s"
@@ -1236,7 +1240,6 @@ TrickText:
 	text "<USER>"
 	line "switched items"
 	cont "with its target!"
-		;"123456789123456789"
 	prompt
 
 TrickUserObtainedText:
@@ -1548,6 +1551,14 @@ ForesawAttackText:
 	text "<USER>"
 	line "foresaw an attack!"
 	prompt
+
+ChoseDestinyText:
+	text "<USER>"
+	line "chose DOOM DESIRE"
+	cont "as its destiny!"
+	prompt
+
+		;"123456789123456789"
 
 BeatUpAttackText:
 	text_ram wStringBuffer1

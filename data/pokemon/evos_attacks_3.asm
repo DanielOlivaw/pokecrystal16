@@ -133,10 +133,10 @@ SceptileEvosAttacks:
 TorchicEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, COMBUSKEN
 	db 0 ; no more evolutions
-	dbw 1, SHADOW_PUNCH
-	dbw 1, FROST_BREATH
-	dbw 1, ICE_BALL
-	dbw 1, CHARGE_BEAM
+	dbw 1, FUTURE_SIGHT
+	dbw 1, DRAGON_ASCENT
+	dbw 1, DOOM_DESIRE
+	dbw 1, PSYCHO_BOOST
 	db 0 ; no more level-up moves
 
 CombuskenEvosAttacks:

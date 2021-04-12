@@ -53,7 +53,15 @@ BattleCommand_FutureSight:
 	ld [hl], a
 	call BattleCommand_LowerSub
 	call BattleCommand_MoveDelay
+; Doom Desire has the same effect but different text
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, DOOM_DESIRE
+	call CompareMove
+	jr z, .DoomDesireDestiny
+
 	ld hl, ForesawAttackText
+.GotText
 	call StdBattleTextbox
 	call BattleCommand_RaiseSub
 	ld de, wPlayerFutureSightDamage
@@ -79,3 +87,7 @@ BattleCommand_FutureSight:
 	call AnimateFailedMove
 	call PrintButItFailed
 	jp EndMoveEffect
+
+.DoomDesireDestiny
+	ld hl, ChoseDestinyText
+	jr .GotText
