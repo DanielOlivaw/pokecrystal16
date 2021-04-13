@@ -291,7 +291,7 @@
 	const FLATTER
 	const EARTH_POWER
 	const SUPERPOWER
-	const CHARM_VOICE
+	const DISARMING_VOICE
 	const LIFE_DEW
 	const METEOR_MASH
 	const COSMIC_POWER
@@ -300,7 +300,7 @@
 	const EXTRASENSORY
 	const SHEER_COLD
 	const AURORA_VEIL
-	const DAZZLE_GLEAM
+	const DAZZLING_GLEAM
 	const ECHOED_VOICE
 	const COVET
 	const ROUND_M
