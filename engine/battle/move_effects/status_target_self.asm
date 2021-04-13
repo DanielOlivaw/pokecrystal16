@@ -97,10 +97,75 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_Grudge
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, MIST
+	call CompareMove2
+	jp z, BattleCommand_Mist
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, LIGHT_SCREEN
+	call CompareMove2
+	jp z, BattleCommand_LightScreen
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, REFLECT
+	call CompareMove2
+	jp z, BattleCommand_Reflect
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, AURORA_VEIL
+	call CompareMove2
+	jp z, BattleCommand_AuroraVeil
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SUBSTITUTE
+	call CompareMove2
+	jp z, BattleCommand_Substitute
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, DESTINY_BOND
+	call CompareMove2
+	jp z, BattleCommand_DestinyBond
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, CURSE
+	call CompareMove2
+	jp z, BattleCommand_Curse
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, PERISH_SONG
+	call CompareMove2
+	jp z, BattleCommand_PerishSong
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, BELLY_DRUM
+	call CompareMove2
+	jp z, BattleCommand_BellyDrum
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, PSYCH_UP
+	call CompareMove2
+	jp z, BattleCommand_PsychUp
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_SUNLIGHT_HEAL
 	jp z, BattleCommand_HealSun
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_CONVERSION
+	jp z, BattleCommand_Conversion
 
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE

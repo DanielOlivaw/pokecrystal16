@@ -36,19 +36,13 @@ INCLUDE "engine/battle/move_effects/arena_trap.asm"
 
 INCLUDE "engine/battle/move_effects/rapid_spin.asm"
 
-INCLUDE "engine/battle/move_effects/curse.asm"
-
 INCLUDE "engine/battle/move_effects/foresight.asm"
-
-INCLUDE "engine/battle/move_effects/perish_song.asm"
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 
 INCLUDE "engine/battle/move_effects/attract.asm"
 
 INCLUDE "engine/battle/move_effects/magnitude.asm"
-
-INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
 INCLUDE "engine/battle/move_effects/rain_dance.asm"
 
@@ -57,6 +51,22 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/heal_sun.asm"
+
+INCLUDE "engine/battle/move_effects/mist.asm"
+
+INCLUDE "engine/battle/move_effects/screens.asm"
+
+INCLUDE "engine/battle/move_effects/substitute.asm"
+
+INCLUDE "engine/battle/move_effects/destiny_bond.asm"
+
+INCLUDE "engine/battle/move_effects/curse.asm"
+
+INCLUDE "engine/battle/move_effects/perish_song.asm"
+
+INCLUDE "engine/battle/move_effects/belly_drum.asm"
+
+INCLUDE "engine/battle/move_effects/psych_up.asm"
 
 INCLUDE "engine/battle/move_effects/cut.asm"
 
@@ -141,3 +151,5 @@ INCLUDE "engine/battle/move_effects/lucky_chant.asm"
 INCLUDE "engine/battle/move_effects/aqua_ring.asm"
 
 INCLUDE "engine/battle/move_effects/grudge.asm"
+
+INCLUDE "engine/battle/move_effects/conversion.asm"

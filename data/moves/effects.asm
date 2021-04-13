@@ -885,13 +885,6 @@ PayDay:
 	kingsrock
 	endmove
 
-Conversion:
-	checkobedience
-	usedmovetext
-	doturn
-	conversion
-	endmove
-
 ResetStats:
 	checkobedience
 	usedmovetext
@@ -1078,13 +1071,6 @@ RecoilHit:
 	kingsrock
 	endmove
 
-Mist:
-	checkobedience
-	usedmovetext
-	doturn
-	mist
-	endmove
-
 StatusTargetSelf:
 	checkobedience
 	usedmovetext
@@ -1135,13 +1121,6 @@ Transform:
 	usedmovetext
 	doturn
 	transform
-	endmove
-
-Screen:
-	checkobedience
-	usedmovetext
-	doturn
-	screen
 	endmove
 
 TriAttack:
@@ -1218,13 +1197,6 @@ SkyAttack:
 	buildopponentrage
 	flinchtarget
 	kingsrock
-	endmove
-
-Substitute:
-	checkobedience
-	usedmovetext
-	doturn
-	substitute
 	endmove
 
 HyperBeam:
@@ -1523,13 +1495,6 @@ SleepTalk:
 	sleeptalk
 	endmove
 
-DestinyBond:
-	checkobedience
-	usedmovetext
-	doturn
-	destinybond
-	endmove
-
 Spite:
 	checkobedience
 	usedmovetext
@@ -1640,13 +1605,6 @@ FlameWheel:
 	burntarget
 	endmove
 
-Curse:
-	checkobedience
-	usedmovetext
-	doturn
-	curse
-	endmove
-
 Growth:
 	checkobedience
 	usedmovetext
@@ -1667,13 +1625,6 @@ Foresight:
 	doturn
 	checkhit
 	foresight
-	endmove
-
-PerishSong:
-	checkobedience
-	usedmovetext
-	doturn
-	perishsong
 	endmove
 
 Endure:
@@ -1931,20 +1882,6 @@ HiddenPower:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-BellyDrum:
-	checkobedience
-	usedmovetext
-	doturn
-	bellydrum
-	endmove
-
-PsychUp:
-	checkobedience
-	usedmovetext
-	doturn
-	psychup
 	endmove
 
 ; MirrorCoat:

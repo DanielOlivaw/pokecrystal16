@@ -1,4 +1,4 @@
-BellyDrumEffect:
+BattleCommand_BellyDrum:
 ; bellydrum
 
 	callfar GetHalfMaxHP

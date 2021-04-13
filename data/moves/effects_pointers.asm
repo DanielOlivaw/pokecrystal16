@@ -30,12 +30,10 @@ MoveEffectsPointers:
 	dw Rampage                ; EFFECT_RAMPAGE
 	dw ForceSwitch            ; EFFECT_FORCE_SWITCH
 	dw MultiHit               ; EFFECT_MULTI_HIT
-	dw Conversion             ; EFFECT_CONVERSION
 	dw FlinchHit              ; EFFECT_FLINCH_HIT
 	dw Heal                   ; EFFECT_HEAL
 	dw Toxic                  ; EFFECT_TOXIC
 	dw PayDay                 ; EFFECT_PAY_DAY
-	dw Screen                 ; EFFECT_LIGHT_SCREEN
 	dw TriAttack              ; EFFECT_TRI_ATTACK
 	dw ConditionalBoost       ; EFFECT_CONDITIONAL_BOOST
 	dw OHKOHit                ; EFFECT_OHKO
@@ -46,7 +44,6 @@ MoveEffectsPointers:
 	dw BodySlam               ; EFFECT_BODY_SLAM
 	dw MultiHit               ; EFFECT_DOUBLE_HIT
 	dw NormalHit              ; EFFECT_JUMP_KICK
-	dw Mist                   ; EFFECT_MIST
 	dw StatusTargetSelf       ; EFFECT_STATUS_SELF
 	dw RecoilHit              ; EFFECT_RECOIL_HIT
 	dw DoConfuse              ; EFFECT_CONFUSE
@@ -65,7 +62,6 @@ MoveEffectsPointers:
 	dw SpecialDefenseDown2    ; EFFECT_SP_DEF_DOWN_2
 	dw AccuracyDown2          ; EFFECT_ACCURACY_DOWN_2
 	dw EvasionDown2           ; EFFECT_EVASION_DOWN_2
-	dw Screen                 ; EFFECT_REFLECT
 	dw DoPoison               ; EFFECT_POISON
 	dw DoParalyze             ; EFFECT_PARALYZE
 	dw AttackDownHit          ; EFFECT_ATTACK_DOWN_HIT
@@ -79,7 +75,6 @@ MoveEffectsPointers:
 	dw ConfuseHit             ; EFFECT_CONFUSE_HIT
 	dw PoisonMultiHit         ; EFFECT_POISON_MULTI_HIT
 	dw LowKick                ; EFFECT_LOW_KICK
-	dw Substitute             ; EFFECT_SUBSTITUTE
 	dw HyperBeam              ; EFFECT_HYPER_BEAM
 	dw Rage                   ; EFFECT_RAGE
 	dw Mimic                  ; EFFECT_MIMIC
@@ -98,7 +93,6 @@ MoveEffectsPointers:
 	dw Sketch                 ; EFFECT_SKETCH
 	dw RecoilHit              ; EFFECT_STRUGGLE
 	dw SleepTalk              ; EFFECT_SLEEP_TALK
-	dw DestinyBond            ; EFFECT_DESTINY_BOND
 	dw HPBasedDamage          ; EFFECT_REVERSAL
 	dw Spite                  ; EFFECT_SPITE
 	dw FalseSwipe             ; EFFECT_FALSE_SWIPE
@@ -107,11 +101,9 @@ MoveEffectsPointers:
 	dw Thief                  ; EFFECT_THIEF
 	dw Nightmare              ; EFFECT_NIGHTMARE
 	dw FlameWheel             ; EFFECT_FLAME_WHEEL
-	dw Curse                  ; EFFECT_CURSE
 	dw Growth                 ; EFFECT_GROWTH
 	dw Protect                ; EFFECT_PROTECT
 	dw Foresight              ; EFFECT_FORESIGHT
-	dw PerishSong             ; EFFECT_PERISH_SONG
 	dw Endure                 ; EFFECT_ENDURE
 	dw Rollout                ; EFFECT_ROLLOUT
 	dw Swagger                ; EFFECT_SWAGGER
@@ -133,8 +125,6 @@ MoveEffectsPointers:
 	dw AttackUpHit            ; EFFECT_ATTACK_UP_HIT
 	dw AllUpHit               ; EFFECT_ALL_UP_HIT
 	dw FlinchHit              ; EFFECT_FAKE_OUT
-	dw BellyDrum              ; EFFECT_BELLY_DRUM
-	dw PsychUp                ; EFFECT_PSYCH_UP
 	dw Counter                ; EFFECT_MIRROR_COAT
 	dw SkullBash              ; EFFECT_SKULL_BASH
 	dw ConditionalBoostFlinch ; EFFECT_COND_BOOST_FLINCH
@@ -156,7 +146,6 @@ MoveEffectsPointers:
 	dw Superpower             ; EFFECT_SUPERPOWER
 	dw CosmicPower            ; EFFECT_COSMIC_POWER
 	dw OHKOHit                ; EFFECT_SHEER_COLD
-	dw Screen                 ; EFFECT_AURORA_VEIL
 	dw PoisonHit              ; EFFECT_TOXIC_HIT
 	dw HoneClaws              ; EFFECT_HONE_CLAWS
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
@@ -220,3 +209,4 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
 	dw DoBurn                 ; EFFECT_BURN
 	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT
+	dw StatusTargetSelf       ; EFFECT_CONVERSION

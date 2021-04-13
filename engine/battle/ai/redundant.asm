@@ -16,12 +16,8 @@ AI_Redundant:
 .Moves:
 	dbw EFFECT_DREAM_EATER,   .DreamEater
 	dbw EFFECT_HEAL,          .Heal
-	dbw EFFECT_LIGHT_SCREEN,  .LightScreen
-	dbw EFFECT_MIST,          .Mist
 	dbw EFFECT_CONFUSE,       .Confuse
 	dbw EFFECT_TRANSFORM,     .Transform
-	dbw EFFECT_REFLECT,       .Reflect
-	dbw EFFECT_SUBSTITUTE,    .Substitute
 	dbw EFFECT_LEECH_SEED,    .LeechSeed
 	dbw EFFECT_DISABLE,       .Disable
 	dbw EFFECT_ENCORE,        .Encore
@@ -29,13 +25,11 @@ AI_Redundant:
 	dbw EFFECT_SLEEP_TALK,    .SleepTalk
 	dbw EFFECT_NIGHTMARE,     .Nightmare
 	dbw EFFECT_FORESIGHT,     .Foresight
-	dbw EFFECT_PERISH_SONG,   .PerishSong
 	dbw EFFECT_ATTRACT,       .Attract
 	dbw EFFECT_TELEPORT,      .Teleport
 	dbw EFFECT_SUNLIGHT_HEAL, .Heal
 	dbw EFFECT_SWAGGER,       .Swagger
 	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
-	dbw EFFECT_AURORA_VEIL,   .AuroraVeil
 	db -1
 
 .LightScreen:

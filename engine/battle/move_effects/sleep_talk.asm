@@ -139,5 +139,11 @@ BattleCommand_SleepTalk:
 	ret z
 	cp EFFECT_FLY
 	ret z
+	cp EFFECT_DIG
+	ret z
+	cp EFFECT_DIVE
+	ret z
+	cp EFFECT_SHADOW_FORCE
+	ret z
 	cp EFFECT_BIDE
 	ret

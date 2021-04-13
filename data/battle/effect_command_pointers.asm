@@ -34,7 +34,6 @@ BattleCommandPointers:
 	dw BattleCommand_StatUp
 	dw BattleCommand_StatDown
 	dw BattleCommand_PayDay
-	dw BattleCommand_Conversion
 	dw BattleCommand_ResetStats
 	dw BattleCommand_StoreEnergy
 	dw BattleCommand_UnleashEnergy
@@ -43,16 +42,13 @@ BattleCommandPointers:
 	dw BattleCommand_FlinchTarget
 	dw BattleCommand_OHKO
 	dw BattleCommand_Recoil
-	dw BattleCommand_Mist
 	dw BattleCommand_StatusTargetSelf
 	dw BattleCommand_Confuse
 	dw BattleCommand_ConfuseTarget
 	dw BattleCommand_Heal
 	dw BattleCommand_Transform
-	dw BattleCommand_Screen
 	dw BattleCommand_Poison
 	dw BattleCommand_Paralyze
-	dw BattleCommand_Substitute
 	dw BattleCommand_RechargeNextTurn
 	dw BattleCommand_Mimic
 	dw BattleCommand_Metronome
@@ -75,7 +71,6 @@ BattleCommandPointers:
 	dw BattleCommand_Sketch
 	dw BattleCommand_DefrostOpponent
 	dw BattleCommand_SleepTalk
-	dw BattleCommand_DestinyBond
 	dw BattleCommand_Spite
 	dw BattleCommand_FalseSwipe
 	dw BattleCommand_HeldFlinch
@@ -84,10 +79,8 @@ BattleCommandPointers:
 	dw BattleCommand_Thief
 	dw BattleCommand_Nightmare
 	dw BattleCommand_Defrost
-	dw BattleCommand_Curse
 	dw BattleCommand_Protect
 	dw BattleCommand_Foresight
-	dw BattleCommand_PerishSong
 	dw BattleCommand_Endure
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
@@ -140,8 +133,6 @@ BattleCommandPointers:
 	dw BattleCommand_StatDownAnim
 	dw BattleCommand_StatUpAnim
 	dw BattleCommand_SwitchTurn
-	dw BattleCommand_BellyDrum
-	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
 	dw BattleCommand_CheckFutureSight
 	dw BattleCommand_FutureSight

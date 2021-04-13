@@ -1,4 +1,4 @@
-CurseEffect:
+BattleCommand_Curse:
 ; curse
 
 	ld de, wBattleMonType1

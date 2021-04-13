@@ -62,8 +62,9 @@ BattleCommand_Conversion:
 	jr .loop2
 
 .fail
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret
 
 .done
 .loop3
@@ -92,6 +93,6 @@ BattleCommand_Conversion:
 	ld [de], a
 	ld [wNamedObjectIndexBuffer], a
 	farcall GetTypeName
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, TransformedTypeText
 	jp StdBattleTextbox

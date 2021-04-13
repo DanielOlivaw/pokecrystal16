@@ -1,26 +1,205 @@
-HandleLuckyChant:
-; Lucky Chant ends after 5 turns
+Core2_NewTurnEndEffects:
+	call EndRoostEffect
+	call EndChargeEffect
+	call HandleYawn
+	call HandleLuckyChant
+	call HandleAquaRing
+	call HandleIngrain
+	call HandleDefrost
+; fallthrough
+
+HandleLeftovers:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+	call SetPlayerTurn
+	call .do_it
+	call SetEnemyTurn
+	jp .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	call .do_it
+	call SetPlayerTurn
+.do_it
+
+	callfar GetUserItem
+	ld a, [hl]
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	ld a, b
+	cp HELD_LEFTOVERS
+	ret nz
+	farcall RestoreSixteenthMaxHP
+	ld hl, BattleText_TargetRecoveredWithItem
+	jp StdBattleTextbox
+
+HandleDefrost:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first
+	call .do_player_turn
+	jr .do_enemy_turn
+
+.enemy_first
+	call .do_enemy_turn
+.do_player_turn
+	ld a, [wBattleMonStatus]
+	bit FRZ, a
+	ret z
+
+	ld a, [wPlayerJustGotFrozen]
+	and a
+	ret nz
+
+	call BattleRandom
+	cp 20 percent
+	ret nc
+	xor a
+	ld [wBattleMonStatus], a
+	ld a, [wCurBattleMon]
+	ld hl, wPartyMon1Status
+	call GetPartyLocation
+	ld [hl], 0
+	farcall UpdateBattleHuds
+	call SetEnemyTurn
+	ld hl, DefrostedOpponentText
+	jp StdBattleTextbox
+
+.do_enemy_turn
+	ld a, [wEnemyMonStatus]
+	bit FRZ, a
+	ret z
+	ld a, [wEnemyJustGotFrozen]
+	and a
+	ret nz
+	call BattleRandom
+	cp 10 percent
+	ret nc
+	xor a
+	ld [wEnemyMonStatus], a
+
+	ld a, [wBattleMode]
+	dec a
+	jr z, .wild
+	ld a, [wCurOTMon]
+	ld hl, wOTPartyMon1Status
+	call GetPartyLocation
+	ld [hl], 0
+.wild
+
+	farcall UpdateBattleHuds
+	call SetPlayerTurn
+	ld hl, DefrostedOpponentText
+	jp StdBattleTextbox
+
+EndRoostEffect:
+; At the end of the turn, Pokemon turned typeless by Roost get their Flying type back.
+
+; Check player types
+	ld de, wBattleMonType1
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ld de, wBattleMonType1
+	inc de
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ret
+
+; Check Enemy Types
+	ld de, wEnemyMonType1
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ld de, wEnemyMonType1
+	inc de
+	ld a, [de]
+	cp TYPE_ROOST_TYPELESS
+	call z, .restore_flying_type
+	ret
+
+.restore_flying_type
+	ld a, FLYING
+	ld [de], a
+	ret
+
+EndChargeEffect:
+; At the end of the 2nd turn, Charge can no longer boost the user's next Electric move.
 	call SetPlayerTurn
 	ld hl, wPlayerSubStatus6
-	ld bc, wPlayerLuckyChantCount
+	ld bc, wPlayerChargeCount
 	call .do_it
 	call SetEnemyTurn
 	ld hl, wEnemySubStatus6
-	ld bc, wEnemyLuckyChantCount
+	ld bc, wEnemyChargeCount
 .do_it
-	bit SUBSTATUS_LUCKY_CHANT, [hl]
-	ret z
 	ld a, [bc]
 	and a
-	jr nz, .lower_lucky_chant_count
-	res SUBSTATUS_LUCKY_CHANT, [hl]
-	ld hl, BattleText_LuckyChantEnded
-	jp StdBattleTextbox
+	jr nz, .lower_charge_count
+	bit SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	ret z
+	res SUBSTATUS_ELECTRIC_CHARGED, [hl]
+	ret
 
-.lower_lucky_chant_count
-	dec a
+.lower_charge_count
+	xor a
 	ld [bc], a
 	ret
+
+HandleYawn:
+; At the end of the 2nd turn, drowsy Pokemon fall asleep.
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerYawnCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyYawnCount
+.do_it
+	ld a, [bc]
+	and a
+	jr nz, .lower_yawn_count
+	bit SUBSTATUS_DROWSY, [hl]
+	ret z
+	res SUBSTATUS_DROWSY, [hl]
+	farcall SwitchTurnCore
+	farcall YawnPutToSleep
+	farcall SwitchTurnCore
+	ret
+
+.lower_yawn_count
+	xor a
+	ld [bc], a
+	ret
+
+HandleAquaRing:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+; Player first
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+	call .do_it
+
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus5
+	call .do_it
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus5
+.do_it
+	bit SUBSTATUS_AQUA_RING, [hl]
+	ret z
+	farcall RestoreSixteenthMaxHP
+	ret z
+	ld hl, VeilOfWaterRestoredText
+	jp StdBattleTextbox
 
 HandleIngrain:
 	ldh a, [hSerialConnectionStatus]
@@ -49,196 +228,26 @@ HandleIngrain:
 	ld hl, AbsorbedNutrientsText
 	jp StdBattleTextbox
 
-HandleAquaRing:
-	ldh a, [hSerialConnectionStatus]
-	cp USING_EXTERNAL_CLOCK
-	jr z, .DoEnemyFirst
-; Player first
+HandleLuckyChant:
+; Lucky Chant ends after 5 turns
 	call SetPlayerTurn
-	ld hl, wPlayerSubStatus5
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerLuckyChantCount
 	call .do_it
-	
 	call SetEnemyTurn
-	ld hl, wEnemySubStatus5
-	jr .do_it
-
-.DoEnemyFirst:
-	call SetEnemyTurn
-	ld hl, wEnemySubStatus5
-	call .do_it
-	call SetPlayerTurn
-	ld hl, wPlayerSubStatus5
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyLuckyChantCount
 .do_it
-	bit SUBSTATUS_AQUA_RING, [hl]
+	bit SUBSTATUS_LUCKY_CHANT, [hl]
 	ret z
-	farcall RestoreSixteenthMaxHP
-	ret z
-	ld hl, VeilOfWaterRestoredText
+	ld a, [bc]
+	and a
+	jr nz, .lower_lucky_chant_count
+	res SUBSTATUS_LUCKY_CHANT, [hl]
+	ld hl, BattleText_LuckyChantEnded
 	jp StdBattleTextbox
 
-GetTrainerBackpic:
-; Load the player character's backpic (6x6) into VRAM starting from vTiles2 tile $31.
-
-; Special exception for Dude.
-	ld b, BANK(DudeBackpic)
-	ld hl, DudeBackpic
-	ld a, [wBattleType]
-	cp BATTLETYPE_TUTORIAL
-	jr z, .Decompress
-
-; What gender are we?
-	ld a, [wPlayerSpriteSetupFlags]
-	bit PLAYERSPRITESETUP_FEMALE_TO_MALE_F, a
-	jr nz, .Chris
-	ld a, [wPlayerGender]
-	bit PLAYERGENDER_FEMALE_F, a
-	jr z, .Chris
-
-; It's a girl.
-	farcall GetKrisBackpic
-	ret
-
-.Chris:
-; It's a boy.
-	ld b, BANK(ChrisBackpic)
-	ld hl, ChrisBackpic
-
-.Decompress:
-	ld de, vTiles2 tile $31
-	ld c, 7 * 7
-	predef DecompressGet2bpp
-	ret
-
-CopyBackpic:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
-	ld hl, vTiles0
-	ld de, vTiles2 tile $31
-	ldh a, [hROMBank]
-	ld b, a
-	ld c, $31
-	call Get2bpp
-	pop af
-	ldh [rSVBK], a
-	call .LoadTrainerBackpicAsOAM
-	ld a, $31
-	ldh [hGraphicStartTile], a
-	hlcoord 2, 6
-	lb bc, 6, 6
-	predef PlaceGraphic
-	ret
-
-.LoadTrainerBackpicAsOAM:
-	ld hl, wVirtualOAMSprite00
-	xor a
-	ldh [hMapObjectIndexBuffer], a
-	ld b, 6
-	ld e, (SCREEN_WIDTH + 1) * TILE_WIDTH
-.outer_loop
-	ld c, 3
-	ld d, 8 * TILE_WIDTH
-.inner_loop
-	ld [hl], d ; y
-	inc hl
-	ld [hl], e ; x
-	inc hl
-	ldh a, [hMapObjectIndexBuffer]
-	ld [hli], a ; tile id
-	inc a
-	ldh [hMapObjectIndexBuffer], a
-	ld a, PAL_BATTLE_OB_PLAYER
-	ld [hli], a ; attributes
-	ld a, d
-	add 1 * TILE_WIDTH
-	ld d, a
-	dec c
-	jr nz, .inner_loop
-	ldh a, [hMapObjectIndexBuffer]
-	add $3
-	ldh [hMapObjectIndexBuffer], a
-	ld a, e
-	add 1 * TILE_WIDTH
-	ld e, a
-	dec b
-	jr nz, .outer_loop
-	ret
-
-BattleStartMessage:
-	ld a, [wBattleMode]
+.lower_lucky_chant_count
 	dec a
-	jr z, .wild
-
-	ld de, SFX_SHINE
-	call PlaySFX
-	call WaitSFX
-
-	ld c, 20
-	call DelayFrames
-
-	farcall Battle_GetTrainerName
-
-	ld hl, WantsToBattleText
-	jr .PlaceBattleStartText
-
-.wild
-	farcall BattleCheckEnemyShininess
-	jr nc, .not_shiny
-
-	xor a
-	ld [wNumHits], a
-	ld a, 1
-	ldh [hBattleTurn], a
-	ld a, 1
-	ld [wBattleAnimParam], a
-	ld de, ANIM_SEND_OUT_MON
-; Call_PlayBattleAnim
-	ld a, e
-	ld [wFXAnimID], a
-	ld a, d
-	ld [wFXAnimID + 1], a
-	call WaitBGMap
-	predef_jump PlayBattleAnim
-
-.not_shiny
-	farcall CheckSleepingTreeMon
-	jr c, .skip_cry
-
-	ld a, $f
-	ld [wCryTracks], a
-	ld a, [wTempEnemyMonSpecies]
-	call PlayStereoCry
-
-.skip_cry
-	ld a, [wBattleType]
-	cp BATTLETYPE_FISH
-	jr nz, .NotFishing
-
-	farcall StubbedTrainerRankings_HookedEncounters
-
-	ld hl, HookedPokemonAttackedText
-	jr .PlaceBattleStartText
-
-.NotFishing:
-	ld hl, PokemonFellFromTreeText
-	cp BATTLETYPE_TREE
-	jr z, .PlaceBattleStartText
-	ld hl, WildCelebiAppearedText
-	cp BATTLETYPE_CELEBI
-	jr z, .PlaceBattleStartText
-	ld hl, WildPokemonAppearedText
-
-.PlaceBattleStartText:
-	push hl
-	farcall BattleStart_TrainerHuds
-	pop hl
-	call StdBattleTextbox
-
-	farcall IsMobileBattle2
-	ret nz
-
-	ld c, $2 ; start
-	farcall Mobile_PrintOpponentBattleMessage
-
+	ld [bc], a
 	ret

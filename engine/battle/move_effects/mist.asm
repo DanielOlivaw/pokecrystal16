@@ -6,10 +6,11 @@ BattleCommand_Mist:
 	bit SUBSTATUS_MIST, [hl]
 	jr nz, .already_mist
 	set SUBSTATUS_MIST, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, MistText
 	jp StdBattleTextbox
 
 .already_mist
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret

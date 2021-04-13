@@ -322,17 +322,14 @@ AI_Smart:
 	dbw EFFECT_FORCE_SWITCH,     AI_Smart_ForceSwitch
 	dbw EFFECT_HEAL,             AI_Smart_Heal
 	dbw EFFECT_TOXIC,            AI_Smart_Toxic
-	dbw EFFECT_LIGHT_SCREEN,     AI_Smart_LightScreen
 	dbw EFFECT_OHKO,             AI_Smart_Ohko
 	dbw EFFECT_RAZOR_WIND,       AI_Smart_RazorWind
 	dbw EFFECT_SUPER_FANG,       AI_Smart_SuperFang
 	dbw EFFECT_TRAP_TARGET,      AI_Smart_TrapTarget
 	dbw EFFECT_CONFUSE,          AI_Smart_Confuse
 	dbw EFFECT_SP_DEF_UP_2,      AI_Smart_SpDefenseUp2
-	dbw EFFECT_REFLECT,          AI_Smart_Reflect
 	dbw EFFECT_PARALYZE,         AI_Smart_Paralyze
 	dbw EFFECT_SPEED_DOWN_HIT,   AI_Smart_SpeedDownHit
-	dbw EFFECT_SUBSTITUTE,       AI_Smart_Substitute
 	dbw EFFECT_HYPER_BEAM,       AI_Smart_HyperBeam
 	dbw EFFECT_RAGE,             AI_Smart_Rage
 	dbw EFFECT_MIMIC,            AI_Smart_Mimic
@@ -345,7 +342,6 @@ AI_Smart:
 	dbw EFFECT_CONVERSION2,      AI_Smart_Conversion2
 	dbw EFFECT_LOCK_ON,          AI_Smart_LockOn
 	dbw EFFECT_SLEEP_TALK,       AI_Smart_SleepTalk
-	dbw EFFECT_DESTINY_BOND,     AI_Smart_DestinyBond
 	dbw EFFECT_REVERSAL,         AI_Smart_Reversal
 	dbw EFFECT_SPITE,            AI_Smart_Spite
 	dbw EFFECT_PRIORITY_HIT,     AI_Smart_PriorityHit
@@ -353,10 +349,8 @@ AI_Smart:
 	dbw EFFECT_THIEF,            AI_Smart_Thief
 	dbw EFFECT_NIGHTMARE,        AI_Smart_Nightmare
 	dbw EFFECT_FLAME_WHEEL,      AI_Smart_FlameWheel
-	dbw EFFECT_CURSE,            AI_Smart_Curse
 	dbw EFFECT_PROTECT,          AI_Smart_Protect
 	dbw EFFECT_FORESIGHT,        AI_Smart_Foresight
-	dbw EFFECT_PERISH_SONG,      AI_Smart_PerishSong
 	dbw EFFECT_ENDURE,           AI_Smart_Endure
 	dbw EFFECT_ROLLOUT,          AI_Smart_Rollout
 	dbw EFFECT_SWAGGER,          AI_Smart_Swagger
@@ -368,8 +362,6 @@ AI_Smart:
 	dbw EFFECT_RAPID_SPIN,       AI_Smart_RapidSpin
 	dbw EFFECT_SUNLIGHT_HEAL,    AI_Smart_Heal
 	dbw EFFECT_HIDDEN_POWER,     AI_Smart_HiddenPower
-	dbw EFFECT_BELLY_DRUM,       AI_Smart_BellyDrum
-	dbw EFFECT_PSYCH_UP,         AI_Smart_PsychUp
 	dbw EFFECT_MIRROR_COAT,      AI_Smart_MirrorCoat
 	dbw EFFECT_SKULL_BASH,       AI_Smart_SkullBash
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake
@@ -379,7 +371,6 @@ AI_Smart:
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
 	dbw EFFECT_GROWTH,           AI_Smart_Growth
-	dbw EFFECT_AURORA_VEIL,      AI_Smart_AuroraVeil
 	db -1 ; end
 
 AI_Smart_Sleep:
