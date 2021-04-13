@@ -30,6 +30,7 @@ MoveEffectsPointers:
 	dw Rampage                ; EFFECT_RAMPAGE
 	dw ForceSwitch            ; EFFECT_FORCE_SWITCH
 	dw MultiHit               ; EFFECT_MULTI_HIT
+	dw StatusTargetSelf       ; EFFECT_CONVERSION
 	dw FlinchHit              ; EFFECT_FLINCH_HIT
 	dw Heal                   ; EFFECT_HEAL
 	dw Toxic                  ; EFFECT_TOXIC
@@ -209,4 +210,3 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
 	dw DoBurn                 ; EFFECT_BURN
 	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT
-	dw StatusTargetSelf       ; EFFECT_CONVERSION

@@ -1677,6 +1677,9 @@ BattleCommand_CheckHit:
 
 	call .FirstTurn
 
+	call .Synchronoise
+	jp nz, .Miss
+
 	call .Belch
 	jp z, .Miss
 
@@ -1825,6 +1828,17 @@ BattleCommand_CheckHit:
 	jr nz, .Missed
 	ret
 
+.Synchronoise
+; Return nz if the user is using Synchronoise
+; but doesn't share a type with the target.
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SYNCHRONOISE
+	call CompareMove
+	jp z, CheckAnySharedType
+	xor a
+	ret
+
 .Belch:
 ; Return z if the user is trying to use Belch without having eaten a berry.
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -1856,7 +1870,7 @@ BattleCommand_CheckHit:
 	ld b, 1
 	ld a, [hl]
 	cp b
-	jr nz, .Missed
+	jp nz, .Miss
 	ret
 
 .Protect:
@@ -2121,6 +2135,32 @@ BattleCommand_CheckHit:
 	ret
 
 INCLUDE "data/battle/accuracy_multipliers.asm"
+
+CheckAnySharedType:
+; Return z if the user and the target share at least one type.
+	ld hl, wBattleMonType1
+	ld de, wEnemyMonType1
+
+	ld a, [hl]
+	ld b, a
+	ld a, [de]
+	cp b
+	ret z
+	inc de
+	ld a, [de]
+	cp b
+	ret z
+	
+	inc hl
+	ld a, [hl]
+	ld b, a
+	ld a, [de]
+	cp b
+	ret z
+	dec de
+	ld a, [de]
+	cp b
+	ret
 
 BattleCommand_EffectChance:
 ; effectchance
