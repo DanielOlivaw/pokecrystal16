@@ -66,6 +66,7 @@ ROMX $0f
 ROMX $10
 	"bank10"
 	"Evolutions and Attacks Pointers"
+	"Evolution Move Pointers"
 ROMX $11
 	"bank11"
 ROMX $12

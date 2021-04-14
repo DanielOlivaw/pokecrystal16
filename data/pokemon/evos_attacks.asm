@@ -47,3 +47,5 @@ INCLUDE "data/pokemon/evos_attacks_5.asm"
 INCLUDE "data/pokemon/evos_attacks_6.asm"
 INCLUDE "data/pokemon/evos_attacks_7.asm"
 INCLUDE "data/pokemon/evos_attacks_8.asm"
+
+INCLUDE "data/pokemon/evolution_moves.asm"

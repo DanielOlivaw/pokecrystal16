@@ -1,0 +1,103 @@
+SECTION "Evolution Moves 4", ROMX
+
+EvolutionMovePointers4::
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+	dw NoEvolutionMoves4
+
+TorterraEvolutionMoves:
+	dw LIGHT_SCREEN
+	db 0 ; no more evolution moves
+
+NoEvolutionMoves4:
+	db 0 ; no more evolution moves

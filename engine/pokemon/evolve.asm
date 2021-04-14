@@ -479,6 +479,7 @@ EvolveAfterBattle_MasterLoop:
 	ld [wTempSpecies], a
 	xor a
 	ld [wMonType], a
+	call LearnEvolutionMoves
 	call LearnLevelMoves
 	ld a, [wTempSpecies]
 	call SetSeenAndCaughtMon
@@ -616,6 +617,68 @@ Text_WhatEvolving:
 	; What? @ is evolving!
 	text_far UnknownText_0x1c4be3
 	text_end
+
+LearnEvolutionMoves:
+; Moves that Pokemon will try to learn upon evolution, regardless of level.
+; Based on a tutorial by Rangi, adapted to 16-bit Pokecrystal
+	ld a, [wTempSpecies]
+	ld [wCurPartySpecies], a
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, EvolutionMovePointers
+	ld a, BANK(EvolutionMovePointers)
+	call LoadDoubleIndirectPointer
+	ldh [hTemp], a
+	ld a, b
+	call GetFarByte
+
+.find_move
+	call GetNextEvoAttackByte
+	and a
+	jr z, .done
+
+	ld e, a
+	call GetNextEvoAttackByte
+	ld d, a
+
+	push hl
+	ld h, d
+	ld l, e
+	call GetMoveIDFromIndex
+	ld d, a
+	ld hl, wPartyMon1Moves
+	ld a, [wCurPartyMon]
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+
+	ld b, NUM_MOVES
+.check_move
+	call GetNextEvoAttackByte
+	cp d
+	jr z, .has_move
+	dec b
+	jr nz, .check_move
+	jr .learn
+.has_move
+
+	pop hl
+	jr .find_move
+
+.learn
+	ld a, d
+	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndexBuffer], a
+	call GetMoveName
+	call CopyName1
+	predef LearnMove
+	pop hl
+	jr .find_move
+
+.done
+	ld a, [wCurPartySpecies]
+	ld [wTempSpecies], a
+	ret
 
 LearnLevelMoves:
 	ld a, [wTempSpecies]

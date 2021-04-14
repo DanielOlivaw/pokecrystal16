@@ -321,19 +321,19 @@ ButterfreeEvosAttacks:
 	dbw 1, STRING_SHOT
 	dbw 1, BUG_BITE
 	dbw 9, GUST
-	dbw 11, CONFUSION
-	dbw 13, POISONPOWDER
-	dbw 13, STUN_SPORE
-	dbw 13, SLEEP_POWDER
-	dbw 16, PSYBEAM
-	dbw 20, SUPERSONIC
-	dbw 23, SILVER_WIND
-	dbw 27, WHIRLWIND
-	dbw 30, AIR_SLASH
-	dbw 34, SAFEGUARD
-	dbw 37, BUG_BUZZ
-	dbw 41, CAPTIVATE
-	dbw 44, QUIVER_DANCE
+	dbw 12, CONFUSION
+	dbw 14, POISONPOWDER
+	dbw 14, STUN_SPORE
+	dbw 14, SLEEP_POWDER
+	dbw 17, PSYBEAM
+	dbw 21, SUPERSONIC
+	dbw 24, SILVER_WIND
+	dbw 28, WHIRLWIND
+	dbw 31, AIR_SLASH
+	dbw 35, SAFEGUARD
+	dbw 38, BUG_BUZZ
+	dbw 42, CAPTIVATE
+	dbw 45, QUIVER_DANCE
 	db 0 ; no more level-up moves
 
 WeedleEvosAttacks:
@@ -359,17 +359,17 @@ BeedrillEvosAttacks:
 	dbw 1, STRING_SHOT
 	dbw 1, BUG_BITE
 	dbw 9, TWINEEDLE
-	dbw 11, FURY_ATTACK
-	dbw 13, RAGE
-	dbw 16, PURSUIT
-	dbw 20, FOCUS_ENERGY
-	dbw 23, VENOSHOCK
-	dbw 27, TOXIC_SPIKES
-	dbw 30, PIN_MISSILE
-	dbw 34, AGILITY
-	dbw 37, POISON_JAB
-	; dbw 41, ENDEAVOR
-	dbw 44, FELL_STINGER
+	dbw 12, FURY_ATTACK
+	dbw 14, RAGE
+	dbw 17, PURSUIT
+	dbw 21, FOCUS_ENERGY
+	dbw 24, VENOSHOCK
+	dbw 28, TOXIC_SPIKES
+	dbw 31, PIN_MISSILE
+	dbw 35, AGILITY
+	dbw 38, POISON_JAB
+	; dbw 42, ENDEAVOR
+	dbw 45, FELL_STINGER
 	db 0 ; no more level-up moves
 
 RattataAEvosAttacks:
@@ -432,9 +432,9 @@ PikachuEvosAttacks:
 
 RaichuAEvosAttacks:
 	db 0 ; no more evolutions
+	; dbw 1, SPEED_SWAP
 	dbw 1, TAIL_WHIP
 	dbw 1, THUNDERSHOCK
-	; dbw 1, SPEED_SWAP
 	dbw 1, PSYCHIC
 	dbw 3, GROWL
 	dbw 6, QUICK_ATTACK
@@ -623,9 +623,9 @@ NidokingEvosAttacks:
 ClefairyEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, CLEFABLE
 	db 0 ; no more evolutions
-	dbw 1, DISARMING_VOICE
-	dbw 1, POUND
 	dbw 1, GROWL
+	dbw 1, POUND
+	dbw 1, DISARMING_VOICE
 	dbw 1, ENCORE
 	dbw 4, SING
 	dbw 8, DOUBLESLAP
@@ -644,9 +644,9 @@ ClefairyEvosAttacks:
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, DISARMING_VOICE
-	dbw 1, POUND
 	dbw 1, GROWL
+	dbw 1, POUND
+	dbw 1, DISARMING_VOICE
 	dbw 1, ENCORE
 	dbw 4, SING
 	dbw 8, DOUBLESLAP
@@ -850,6 +850,7 @@ GloomEvosAttacks:
 
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, AROMATHERAPY
 	dbw 1, ABSORB
 	dbw 1, GROWTH
 	dbw 4, ACID
@@ -863,9 +864,9 @@ VileplumeEvosAttacks:
 	dbw 26, GIGA_DRAIN
 	dbw 32, TOXIC
 	dbw 38, MOONBLAST
-	dbw 44, AROMATHERAPY
-	dbw 50, MOONLIGHT
-	dbw 56, PETAL_DANCE
+	dbw 44, MOONLIGHT
+	dbw 50, PETAL_DANCE
+	dbw 56, SOLARBEAM
 	db 0 ; no more level-up moves
 
 ParasEvosAttacks:
@@ -1144,7 +1145,7 @@ MachopEvosAttacks:
 	dbw 21, SCARY_FACE
 	dbw 24, VITAL_THROW
 	dbw 27, WAKE_UP_SLAP
-	dbw 30, STRENGTH
+	dbw 30, STRENGTH ; HM? Should this be removed?
 	dbw 33, DUAL_CHOP
 	dbw 36, SUBMISSION
 	dbw 39, BULK_UP
@@ -1168,7 +1169,7 @@ MachokeEvosAttacks:
 	dbw 21, SCARY_FACE
 	dbw 24, VITAL_THROW
 	dbw 27, WAKE_UP_SLAP
-	dbw 31, STRENGTH
+	dbw 31, STRENGTH ; HM? Should this be removed?
 	dbw 35, DUAL_CHOP
 	dbw 39, SUBMISSION
 	dbw 43, BULK_UP
@@ -1190,7 +1191,7 @@ MachampEvosAttacks:
 	dbw 21, SCARY_FACE
 	dbw 24, VITAL_THROW
 	dbw 27, WAKE_UP_SLAP
-	dbw 31, STRENGTH
+	dbw 31, STRENGTH ; HM? Should this be removed?
 	dbw 35, DUAL_CHOP
 	dbw 39, SUBMISSION
 	dbw 43, BULK_UP
@@ -1734,59 +1735,90 @@ OnixEvosAttacks:
 DrowzeeEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 26, TR_ANYTIME, HYPNO
 	db 0 ; no more evolutions
-	dbw 1, POUND
 	dbw 1, HYPNOSIS
-	dbw 10, DISABLE
-	dbw 18, CONFUSION
-	dbw 25, HEADBUTT
-	dbw 31, POISON_GAS
-	dbw 36, MEDITATE
-	dbw 40, PSYCHIC_M
-	dbw 43, PSYCH_UP
+	dbw 1, POUND
+	dbw 3, DISABLE
+	dbw 6, CONFUSION
+	dbw 9, HEADBUTT
+	dbw 12, POISON_GAS
+	dbw 15, MEDITATE
+	dbw 18, PSYBEAM
+	dbw 21, WAKE_UP_SLAP
+	dbw 24, PSYCH_UP
+	dbw 27, SYNCHRONOISE
+	dbw 30, ZEN_HEADBUTT
+	dbw 33, SWAGGER
+	dbw 36, PSYCHIC_M
+	dbw 39, NASTY_PLOT
+	dbw 42, PSYSHOCK
 	dbw 45, FUTURE_SIGHT
+	dbw 48, DREAM_EATER
 	db 0 ; no more level-up moves
 
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, POUND
+	dbw 1, SWITCHEROO
 	dbw 1, HYPNOSIS
-	dbw 1, DISABLE
-	dbw 1, CONFUSION
-	dbw 10, DISABLE
-	dbw 18, CONFUSION
-	dbw 25, HEADBUTT
-	dbw 33, POISON_GAS
-	dbw 40, MEDITATE
-	dbw 49, PSYCHIC_M
-	dbw 55, PSYCH_UP
-	dbw 60, FUTURE_SIGHT
+	dbw 1, POUND
+	dbw 3, DISABLE
+	dbw 6, CONFUSION
+	dbw 9, HEADBUTT
+	dbw 12, POISON_GAS
+	dbw 15, MEDITATE
+	dbw 18, PSYBEAM
+	dbw 21, WAKE_UP_SLAP
+	dbw 24, PSYCH_UP
+	dbw 25, NIGHTMARE
+	dbw 28, SYNCHRONOISE
+	dbw 32, ZEN_HEADBUTT
+	dbw 36, SWAGGER
+	dbw 40, PSYCHIC_M
+	dbw 44, NASTY_PLOT
+	dbw 48, PSYSHOCK
+	dbw 52, FUTURE_SIGHT
+	dbw 56, DREAM_EATER
 	db 0 ; no more level-up moves
 
 KrabbyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, KINGLER
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
-	dbw 5, LEER
-	dbw 12, VICEGRIP
-	dbw 16, HARDEN
-	dbw 23, STOMP
-	dbw 27, GUILLOTINE
-	dbw 34, PROTECT
-	dbw 41, CRABHAMMER
+	dbw 1, LEER
+	dbw 3, HARDEN
+	dbw 6, VICEGRIP
+	dbw 9, METAL_CLAW
+	dbw 12, MUD_SHOT
+	dbw 15, PROTECT
+	dbw 18, BUBBLEBEAM
+	dbw 21, STOMP
+	dbw 24, BRINE
+	dbw 27, FLAIL
+	dbw 30, RAZOR_SHELL
+	dbw 33, SLAM
+	dbw 36, SWORDS_DANCE
+	dbw 39, CRABHAMMER
+	dbw 42, GUILLOTINE
 	db 0 ; no more level-up moves
 
 KinglerEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, LEER
-	dbw 1, VICEGRIP
-	dbw 5, LEER
-	dbw 12, VICEGRIP
-	dbw 16, HARDEN
-	dbw 23, STOMP
-	dbw 27, GUILLOTINE
-	dbw 38, PROTECT
-	dbw 49, CRABHAMMER
+	dbw 3, HARDEN
+	dbw 6, VICEGRIP
+	dbw 9, METAL_CLAW
+	dbw 12, MUD_SHOT
+	dbw 15, PROTECT
+	dbw 18, BUBBLEBEAM
+	dbw 21, STOMP
+	dbw 24, BRINE
+	dbw 27, FLAIL
+	dbw 27, HAMMER_ARM
+	dbw 33, RAZOR_SHELL
+	dbw 39, SLAM
+	dbw 45, SWORDS_DANCE
+	dbw 51, CRABHAMMER
+	dbw 57, GUILLOTINE
 	db 0 ; no more level-up moves
 
 ExeggcuteEvosAttacks:
