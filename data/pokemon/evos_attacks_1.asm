@@ -724,7 +724,7 @@ JigglypuffEvosAttacks:
 	dbw 1, SING
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
-	dbw 1, COPYCAT
+	; dbw 1, COPYCAT
 	dbw 3, ECHOED_VOICE
 	dbw 6, PLAY_NICE
 	dbw 8, DOUBLESLAP
@@ -732,7 +732,7 @@ JigglypuffEvosAttacks:
 	dbw 14, DISABLE
 	dbw 16, COVET
 	dbw 19, ROLLOUT
-	dbw 22, ROUND
+	dbw 22, ROUND_M
 	dbw 24, STOCKPILE
 	dbw 27, WAKE_UP_SLAP
 	dbw 30, REST
@@ -750,7 +750,7 @@ WigglytuffEvosAttacks:
 	dbw 1, SING
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
-	dbw 1, COPYCAT
+	; dbw 1, COPYCAT
 	dbw 3, ECHOED_VOICE
 	dbw 6, PLAY_NICE
 	dbw 8, DOUBLESLAP
@@ -758,7 +758,7 @@ WigglytuffEvosAttacks:
 	dbw 14, DISABLE
 	dbw 16, COVET
 	dbw 19, ROLLOUT
-	dbw 22, ROUND
+	dbw 22, ROUND_M
 	dbw 24, STOCKPILE
 	dbw 27, WAKE_UP_SLAP
 	dbw 30, REST
@@ -1358,7 +1358,7 @@ GolemEvosAttacks:
 	dbw 42, EXPLOSION
 	dbw 48, DOUBLE_EDGE
 	dbw 54, STONE_EDGE
-	dbw 60, HEAVY_SLAM
+	; dbw 60, HEAVY_SLAM
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -1452,7 +1452,7 @@ MagnemiteEvosAttacks:
 	dbw 1, TACKLE
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
-	dbw 10, MAGNET_BOMB
+	; dbw 10, MAGNET_BOMB
 	; dbw 13, ELECTRO_BALL
 	; dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
@@ -1475,7 +1475,7 @@ MagnetonEvosAttacks:
 	dbw 1, TACKLE
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
-	dbw 10, MAGNET_BOMB
+	; dbw 10, MAGNET_BOMB
 	; dbw 13, ELECTRO_BALL
 	; dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
@@ -1645,45 +1645,65 @@ CloysterEvosAttacks:
 GastlyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 25, TR_ANYTIME, HAUNTER
 	db 0 ; no more evolutions
-	dbw 1, HYPNOSIS
 	dbw 1, LICK
-	dbw 8, SPITE
-	dbw 13, MEAN_LOOK
-	dbw 16, CURSE
-	dbw 21, NIGHT_SHADE
-	dbw 28, CONFUSE_RAY
-	dbw 33, DREAM_EATER
-	dbw 36, DESTINY_BOND
+	dbw 1, CONFUSE_RAY
+	dbw 1, HYPNOSIS
+	dbw 4, SPITE
+	dbw 8, MEAN_LOOK
+	dbw 12, PAYBACK
+	dbw 16, NIGHT_SHADE
+	dbw 20, CURSE
+	dbw 24, HEX
+	dbw 28, SUCKER_PUNCH
+	dbw 32, DARK_PULSE
+	dbw 36, SHADOW_BALL
+	dbw 40, DESTINY_BOND
+	dbw 44, DREAM_EATER
+	dbw 48, NIGHTMARE
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
 	dbbw EVOLVE_ITEM, HEART_STONE, GENGAR
 	dbbw EVOLVE_TRADE, -1, GENGAR
 	db 0 ; no more evolutions
-	dbw 1, HYPNOSIS
 	dbw 1, LICK
-	dbw 1, SPITE
-	dbw 8, SPITE
-	dbw 13, MEAN_LOOK
-	dbw 16, CURSE
-	dbw 21, NIGHT_SHADE
-	dbw 31, CONFUSE_RAY
-	dbw 39, DREAM_EATER
+	dbw 1, CONFUSE_RAY
+	dbw 1, HYPNOSIS
+	dbw 4, SPITE
+	dbw 8, MEAN_LOOK
+	dbw 12, PAYBACK
+	dbw 16, NIGHT_SHADE
+	dbw 20, CURSE
+	dbw 24, HEX
+	dbw 24, SHADOW_PUNCH
+	dbw 30, SUCKER_PUNCH
+	dbw 36, DARK_PULSE
+	dbw 42, SHADOW_BALL
 	dbw 48, DESTINY_BOND
+	dbw 54, DREAM_EATER
+	dbw 60, NIGHTMARE
 	db 0 ; no more level-up moves
 
 GengarEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, HYPNOSIS
+	dbw 1, PERISH_SONG
+	dbw 1, REFLECT_TYPE
 	dbw 1, LICK
-	dbw 1, SPITE
-	dbw 8, SPITE
-	dbw 13, MEAN_LOOK
-	dbw 16, CURSE
-	dbw 21, NIGHT_SHADE
-	dbw 31, CONFUSE_RAY
-	dbw 39, DREAM_EATER
+	dbw 1, CONFUSE_RAY
+	dbw 1, HYPNOSIS
+	dbw 4, SPITE
+	dbw 8, MEAN_LOOK
+	dbw 12, PAYBACK
+	dbw 16, NIGHT_SHADE
+	dbw 20, CURSE
+	dbw 24, HEX
+	dbw 24, SHADOW_PUNCH
+	dbw 30, SUCKER_PUNCH
+	dbw 36, DARK_PULSE
+	dbw 42, SHADOW_BALL
 	dbw 48, DESTINY_BOND
+	dbw 54, DREAM_EATER
+	dbw 60, NIGHTMARE
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
@@ -1691,13 +1711,24 @@ OnixEvosAttacks:
 	dbbw EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 1, SCREECH
-	dbw 10, BIND
-	dbw 14, ROCK_THROW
-	dbw 23, HARDEN
-	dbw 27, RAGE
-	dbw 36, SANDSTORM
-	dbw 40, SLAM
+	dbw 1, HARDEN
+	dbw 1, BIND
+	dbw 1, ROCK_THROW
+	dbw 4, ROCK_POLISH
+	dbw 8, RAGE
+	dbw 12, DRAGONBREATH
+	dbw 15, ROCK_TOMB
+	dbw 19, CURSE
+	dbw 23, ROCK_SLIDE
+	dbw 26, SCREECH
+	dbw 30, SAND_TOMB
+	dbw 34, STEALTH_ROCK
+	dbw 37, SLAM
+	dbw 41, SANDSTORM
+	dbw 45, DIG
+	dbw 48, IRON_TAIL
+	dbw 52, STONE_EDGE
+	dbw 56, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:
