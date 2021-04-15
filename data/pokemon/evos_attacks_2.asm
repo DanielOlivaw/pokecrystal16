@@ -104,7 +104,7 @@ EvosAttacksPointers2::
 	dw CelebiEvosAttacks
 
 TangelEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, TANGELA
+	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, TANGELA
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	db 0 ; no more level-up moves

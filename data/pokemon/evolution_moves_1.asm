@@ -92,7 +92,7 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; KOFFING
 	dw WeezingGEvolutionMoves    ; WEEZING_G
 	dw NoEvolutionMoves1         ; CHANSEY
-	dw NoEvolutionMoves1         ; TANGELA
+	dw TangelaEvolutionMoves     ; TANGELA
 	dw NoEvolutionMoves1         ; KANGASKHAN
 	dw NoEvolutionMoves1         ; HORSEA
 	dw NoEvolutionMoves1         ; SEADRA
@@ -104,7 +104,7 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; PINSIR
 	dw NoEvolutionMoves1         ; TAUROS
 	dw NoEvolutionMoves1         ; MAGIKARP
-	dw NoEvolutionMoves1         ; GYARADOS
+	dw GyaradosEvolutionMoves    ; GYARADOS
 	dw NoEvolutionMoves1         ; LAPRAS
 	dw NoEvolutionMoves1         ; DITTO
 	dw NoEvolutionMoves1         ; EEVEE
@@ -256,6 +256,14 @@ ExeggutorAEvolutionMoves:
 WeezingGEvolutionMoves:
 	dw DOUBLE_HIT
 	dw STRANGE_STEAM
+	db 0 ; no more evolution moves
+
+TangelaEvolutionMoves:
+	dw INGRAIN
+	db 0 ; no more evolution moves
+
+GyaradosEvolutionMoves:
+	dw BITE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves1:
