@@ -498,6 +498,17 @@
 	const TRICK_ROOM
 	const RETALIATE
 	const FACADE
+	const FINAL_GAMBIT
+	const HEAL_ORDER
+	const DEFEND_ORDER
+	const ATTACK_ORDER
+	const MYSTICAL_FIRE
+	const CONFIDE
+	const CHATTER
+	const POWER_UP_PUNCH
+	const MAGNET_BOMB
+	const ROAR_OF_TIME
+	const SPACIAL_REND
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

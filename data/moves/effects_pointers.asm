@@ -211,3 +211,5 @@ MoveEffectsPointers:
 	dw DoBurn                 ; EFFECT_BURN
 	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT
 	dw StatusTargetSelf       ; EFFECT_TRICK_ROOM
+	dw FinalGambit            ; EFFECT_FINAL_GAMBIT
+	dw SpecialAttackDown      ; EFFECT_CONFIDE

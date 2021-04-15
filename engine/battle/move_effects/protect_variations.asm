@@ -29,6 +29,8 @@ CheckProtectionCategory:
 	ret z
 	cp EFFECT_PLAY_NICE
 	ret z
+	cp EFFECT_CONFIDE
+	ret z
 .protected
 ; Otherwise, the target is safe.
 	ld a, 1
@@ -52,6 +54,8 @@ CheckProtectionCategory:
 	cp EFFECT_TEARFUL_LOOK
 	jr z, .protected
 	cp EFFECT_PLAY_NICE
+	jr z, .protected
+	cp EFFECT_CONFIDE
 	jr z, .protected
 ; Crafty Shield only protects against status moves.
 	ld a, BATTLE_VARS_MOVE_TYPE

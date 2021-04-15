@@ -1733,6 +1733,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_PLAY_NICE
 	ret z
+	cp EFFECT_CONFIDE
+	ret z
 	cp EFFECT_RESET_STATS_HIT
 	ret z
 	cp EFFECT_TEARFUL_LOOK
@@ -3784,6 +3786,8 @@ BattleCommand_ConstantDamage:
 
 	cp EFFECT_SUPER_FANG
 	jr z, .super_fang
+	cp EFFECT_FINAL_GAMBIT
+	jr z, .final_gambit
 
 	cp EFFECT_REVERSAL
 	jr z, .reversal
@@ -3818,14 +3822,35 @@ BattleCommand_ConstantDamage:
 	ld hl, wEnemyMonHP
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .got_hp
+	jr z, .got_opponent_hp
 	ld hl, wBattleMonHP
-.got_hp
+.got_opponent_hp
 	ld a, [hli]
 	srl a
 	ld b, a
 	ld a, [hl]
 	rr a
+	push af
+	ld a, b
+	pop bc
+	and a
+	jr nz, .got_power
+	or b
+	ld a, 0
+	jr nz, .got_power
+	ld b, 1
+	jr .got_power
+
+.final_gambit
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_user_hp
+	ld hl, wEnemyMonHP
+.got_user_hp
+	ld a, [hli]
+	ld b, a
+	ld a, [hl]
 	push af
 	ld a, b
 	pop bc
@@ -5351,7 +5376,11 @@ CheckMist:
 	cp EFFECT_EVASION_DOWN_HIT + 1
 	jr c, .check_mist
 ; New move effects that try to lower stats
+	cp EFFECT_TEARFUL_LOOK
+	jr z, .check_mist
 	cp EFFECT_PLAY_NICE
+	jr z, .check_mist
+	cp EFFECT_CONFIDE
 	jr z, .check_mist
 	cp EFFECT_VENOM_DRENCH
 	jr z, .check_mist

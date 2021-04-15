@@ -2850,3 +2850,19 @@ CraftyShield:
 	doturn
 	craftyshield
 	endmove
+
+FinalGambit:
+	checkobedience
+	usedmovetext
+	doturn
+	constantdamage
+	checkhit
+	resettypematchup
+	selfdestruct
+	moveanimnosub
+	failuretext
+	applydamage
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

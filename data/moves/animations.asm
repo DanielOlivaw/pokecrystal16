@@ -519,6 +519,17 @@ BattleAnimations::
 	dw BattleAnim_TrickRoom
 	dw BattleAnim_Retaliate
 	dw BattleAnim_Facade
+	dw BattleAnim_FinalGambit
+	dw BattleAnim_HealOrder
+	dw BattleAnim_DefendOrder
+	dw BattleAnim_AttackOrder
+	dw BattleAnim_MysticalFire
+	dw BattleAnim_Confide
+	dw BattleAnim_Chatter
+	dw BattleAnim_PowerUpPunch
+	dw BattleAnim_MagnetBomb
+	dw BattleAnim_RoarOfTime
+	dw BattleAnim_SpacialRend
 
 	dw BattleAnim_SweetScent2
 
@@ -902,6 +913,17 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_FinalGambit:
+BattleAnim_HealOrder:
+BattleAnim_DefendOrder:
+BattleAnim_AttackOrder:
+BattleAnim_MysticalFire:
+BattleAnim_Confide:
+BattleAnim_Chatter:
+BattleAnim_PowerUpPunch:
+BattleAnim_MagnetBomb:
+BattleAnim_RoarOfTime:
+BattleAnim_SpacialRend:
 BattleAnim_Retaliate:
 BattleAnim_Facade:
 BattleAnim_TrickRoom:

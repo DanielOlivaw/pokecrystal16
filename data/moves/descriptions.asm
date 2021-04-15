@@ -498,6 +498,17 @@ MoveDescriptions1:
 	dw TrickRoomDescription
 	dw RetaliateDescription
 	dw FacadeDescription
+	dw FinalGambitDescription
+	dw HealOrderDescription
+	dw DefendOrderDescription
+	dw AttackOrderDescription
+	dw MysticalFireDescription
+	dw ConfideDescription
+	dw ChatterDescription
+	dw PowerUpPunchDescription
+	dw MagnetBombDescription
+	dw RoarOfTimeDescription
+	dw SpacialRendDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -519,6 +530,8 @@ StoneEdgeDescription:
 NightSlashDescription:
 DrillRunDescription:
 ShadowClawDescription:
+SpacialRendDescription:
+AttackOrderDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -717,6 +730,7 @@ SingDescription:
 	next "to fall asleep.@"
 
 SupersonicDescription:
+ChatterDescription:
 	db   "Sound waves that"
 	next "cause confusion.@"
 
@@ -777,6 +791,7 @@ AuroraBeamDescription:
 	next "lower ATTACK.@"
 
 HyperBeamDescription:
+RoarOfTimeDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
@@ -929,6 +944,7 @@ DoubleTeamDescription:
 	next "ness.@"
 
 RecoverDescription:
+HealOrderDescription:
 	db   "Restores HP by 1/2"
 	next "the user's max HP.@"
 
@@ -1598,6 +1614,7 @@ MeteorMashDescription:
 	next "up user's ATTACK.@"
 
 CosmicPowerDescription:
+DefendOrderDescription:
 	db   "Heightens DEFENSE"
 	next "and SPCL.DEF.@"
 
@@ -1675,6 +1692,7 @@ HoneClawsDescription:
 	next "and accuracy.@"
 
 MetalSoundDescription:
+FakeTearsDescription:
 	db   "Sharply lowers the"
 	next "foe's SPCL.DEF.@"
 
@@ -2100,10 +2118,6 @@ BounceDescription:
 	db   "1st turn: Bounce"
 	next "2nd turn: Attack@"
 
-FakeTearsDescription:
-	db   "Sharply lowers the"
-	next "foe's SPCL.DEF.@"
-
 RockTombDescription:
 	db   "Hurls boulders to"
 	next "lower SPEED.@"
@@ -2332,6 +2346,26 @@ RetaliateDescription:
 FacadeDescription:
 	db   "Stronger when the"
 	next "user is suffering.@"
+
+FinalGambitDescription:
+	db   "Expends all HP to"
+	next "deal equal damage.@"
+
+MysticalFireDescription:
+	db   "Special fire that"
+	next "lowers SPCL.ATK.@"
+
+ConfideDescription:
+	db   "Reduces the foe's"
+	next "SPCL.ATK.@"
+
+PowerUpPunchDescription:
+	db   "A punch that"
+	next "raises ATTACK.@"
+
+MagnetBombDescription:
+	db   "Throws steel bombs"
+	next "that never miss.@"
 
 		;"123456789123456789"
 

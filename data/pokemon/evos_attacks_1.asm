@@ -1019,7 +1019,7 @@ MankeyEvosAttacks:
 	dbw 33, CLOSE_COMBAT
 	dbw 37, SCREECH
 	dbw 41, OUTRAGE
-	; dbw 45, FINAL_GAMBIT
+	dbw 45, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 PrimeapeEvosAttacks:
@@ -1040,7 +1040,7 @@ PrimeapeEvosAttacks:
 	dbw 37, CLOSE_COMBAT
 	dbw 43, SCREECH
 	dbw 49, OUTRAGE
-	; dbw 55, FINAL_GAMBIT
+	dbw 55, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 GrowlitheEvosAttacks:
@@ -1054,14 +1054,15 @@ GrowlitheEvosAttacks:
 	dbw 16, FLAME_WHEEL
 	dbw 20, AGILITY
 	dbw 24, FIRE_FANG
-	dbw 28, ROAR
+	dbw 28, RETALIATE
 	dbw 32, CRUNCH
 	dbw 36, TAKE_DOWN
 	dbw 40, FLAMETHROWER
-	dbw 44, OUTRAGE
-	dbw 48, PLAY_ROUGH
-	dbw 52, REVERSAL
-	dbw 56, FLARE_BLITZ
+	dbw 44, ROAR
+	dbw 48, OUTRAGE
+	dbw 52, PLAY_ROUGH
+	dbw 56, REVERSAL
+	dbw 60, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
 ArcanineEvosAttacks:
@@ -1076,15 +1077,16 @@ ArcanineEvosAttacks:
 	dbw 16, FLAME_WHEEL
 	dbw 20, AGILITY
 	dbw 24, FIRE_FANG
-	dbw 28, ROAR
+	dbw 28, RETALIATE
 	dbw 32, CRUNCH
 	dbw 36, TAKE_DOWN
 	dbw 40, FLAMETHROWER
-	dbw 44, OUTRAGE
-	dbw 48, PLAY_ROUGH
-	dbw 52, REVERSAL
-	dbw 56, FLARE_BLITZ
-	dbw 60, BURN_UP
+	dbw 44, ROAR
+	dbw 48, OUTRAGE
+	dbw 52, PLAY_ROUGH
+	dbw 56, REVERSAL
+	dbw 60, FLARE_BLITZ
+	dbw 64, BURN_UP
 	db 0 ; no more level-up moves
 
 AbraEvosAttacks:
@@ -1453,7 +1455,7 @@ MagnemiteEvosAttacks:
 	dbw 1, TACKLE
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
-	; dbw 10, MAGNET_BOMB
+	dbw 10, MAGNET_BOMB
 	; dbw 13, ELECTRO_BALL
 	; dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
@@ -1476,7 +1478,7 @@ MagnetonEvosAttacks:
 	dbw 1, TACKLE
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
-	; dbw 10, MAGNET_BOMB
+	dbw 10, MAGNET_BOMB
 	; dbw 13, ELECTRO_BALL
 	; dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
@@ -1878,7 +1880,7 @@ CuboneEvosAttacks:
 	dbw 12, FALSE_SWIPE
 	dbw 16, HEADBUTT
 	dbw 20, RAGE
-	; dbw 24, RETALIATE
+	dbw 24, RETALIATE
 	dbw 28, BONE_RUSH
 	dbw 32, FOCUS_ENERGY
 	; dbw 36, ENDEAVOR
@@ -1896,7 +1898,7 @@ MarowakEvosAttacks:
 	dbw 12, FALSE_SWIPE
 	dbw 16, HEADBUTT
 	dbw 20, RAGE
-	; dbw 24, RETALIATE
+	dbw 24, RETALIATE
 	dbw 30, BONE_RUSH
 	dbw 36, FOCUS_ENERGY
 	; dbw 42, ENDEAVOR

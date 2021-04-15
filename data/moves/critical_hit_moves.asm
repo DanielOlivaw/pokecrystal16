@@ -16,4 +16,6 @@ CriticalHitMoves:
 	dw DRILL_RUN
 	dw BLAZE_KICK
 	dw SHADOW_CLAW
+	dw ATTACK_ORDER
+	dw SPACIAL_REND
 	dw -1
