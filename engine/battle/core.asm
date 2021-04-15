@@ -3845,7 +3845,6 @@ endr
 	ld [wEnemyWrapCount], a
 	ld [wEnemyChargeCount], a
 	ld [wEnemyYawnCount], a
-	ld [wEnemyLuckyChantCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4336,7 +4335,6 @@ endr
 	ld [wPlayerWrapCount], a
 	ld [wPlayerChargeCount], a
 	ld [wPlayerYawnCount], a
-	ld [wPlayerLuckyChantCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -8841,6 +8839,8 @@ CleanUpBattleRAM:
 	ld [wTrickRoom], a
 	ld [wPlayerJustFainted], a
 	ld [wEnemyJustFainted], a
+	ld [wPlayerLuckyChantCount], a
+	ld [wEnemyLuckyChantCount], a
 	ld hl, wPlayerSubStatus1
 	ld b, wEnemyFuryCutterCount - wPlayerSubStatus1
 .loop

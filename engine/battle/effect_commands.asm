@@ -1182,13 +1182,14 @@ BattleCommand_Critical:
 	ret z
 
 ; A target affected by Lucky Chant is immune to critical hits.
-	ld a, [wEnemySubStatus6]
+	ld hl, wEnemyLuckyChantCount
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .check_lucky_chant
-	ld a, [wPlayerSubStatus6]
+	ld hl, wPlayerLuckyChantCount
 .check_lucky_chant
-	bit SUBSTATUS_LUCKY_CHANT, a
+	ld a, [hl]
+	and a
 	ret nz
 
 ; Moves with EFFECT_ALWAYS_CRIT will always result in a critical hit.

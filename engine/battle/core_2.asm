@@ -233,26 +233,18 @@ HandleIngrain:
 HandleLuckyChant:
 ; Lucky Chant ends after 5 turns
 	call SetPlayerTurn
-	ld hl, wPlayerSubStatus6
-	ld bc, wPlayerLuckyChantCount
+	ld hl, wPlayerLuckyChantCount
 	call .do_it
 	call SetEnemyTurn
-	ld hl, wEnemySubStatus6
-	ld bc, wEnemyLuckyChantCount
+	ld hl, wEnemyLuckyChantCount
 .do_it
-	bit SUBSTATUS_LUCKY_CHANT, [hl]
-	ret z
-	ld a, [bc]
+	ld a, [hl]
 	and a
-	jr nz, .lower_lucky_chant_count
-	res SUBSTATUS_LUCKY_CHANT, [hl]
+	ret z
+	dec [hl]
+	ret nz
 	ld hl, BattleText_LuckyChantEnded
 	jp StdBattleTextbox
-
-.lower_lucky_chant_count
-	dec a
-	ld [bc], a
-	ret
 
 HandleTrickRoom:
 ; Trick Room ends after 5 turns.

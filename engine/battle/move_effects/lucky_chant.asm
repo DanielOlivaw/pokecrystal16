@@ -1,27 +1,26 @@
 BattleCommand_LuckyChant:
+	ld hl, wPlayerLuckyChantCount
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_chant_count
+	ld hl, wEnemyLuckyChantCount
+.got_chant_count
+
 ; Don't set Lucky Chant if it's already up for the user
-	ld a, BATTLE_VARS_SUBSTATUS6
-	call GetBattleVarAddr
-	bit SUBSTATUS_LUCKY_CHANT, [hl]
+	ld a, [hl]
+	and a
 	jr nz, .already_chanted
 
 ; Set Lucky Chant
-	set SUBSTATUS_LUCKY_CHANT, [hl]
+	push hl
 	farcall AnimateCurrentMove
 	ld hl, ShieldedFromCriticalHitsText
 	call StdBattleTextbox
+	pop hl
 
 ; Set 5 turn countdown for Lucky Chant
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .player
-	ld a, 4
-	ld [wEnemyLuckyChantCount], a
-	ret
-
-.player
-	ld a, 4
-	ld [wPlayerLuckyChantCount], a
+	ld a, 5
+	ld [hl], a
 	ret
 
 .already_chanted

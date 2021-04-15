@@ -530,14 +530,14 @@ NidorinaEvosAttacks:
 	dbw 8, TAIL_WHIP
 	dbw 12, DOUBLE_KICK
 	dbw 17, FURY_SWIPES
-	dbw 23, TOXIC_SPIKES
-	dbw 28, BITE
-	dbw 34, TOXIC
-	dbw 39, FLATTER
-	dbw 45, CRUNCH
-	dbw 50, CAPTIVATE
-	dbw 56, POISON_FANG
-	dbw 61, EARTH_POWER
+	dbw 22, TOXIC_SPIKES
+	dbw 27, BITE
+	dbw 32, TOXIC
+	dbw 37, FLATTER
+	dbw 42, CRUNCH
+	dbw 47, CAPTIVATE
+	dbw 52, POISON_FANG
+	dbw 57, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidoqueenEvosAttacks:
@@ -551,14 +551,15 @@ NidoqueenEvosAttacks:
 	dbw 12, DOUBLE_KICK
 	dbw 15, SUPERPOWER
 	dbw 17, FURY_SWIPES
-	dbw 23, TOXIC_SPIKES
+	dbw 22, TOXIC_SPIKES
+	dbw 25, CHIP_AWAY
 	dbw 28, BITE
-	dbw 34, TOXIC
-	dbw 39, FLATTER
-	dbw 45, CRUNCH
-	dbw 50, CAPTIVATE
-	dbw 56, POISON_FANG
-	dbw 61, EARTH_POWER
+	dbw 33, TOXIC
+	dbw 38, FLATTER
+	dbw 43, CRUNCH
+	dbw 48, CAPTIVATE
+	dbw 53, POISON_FANG
+	dbw 58, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidoranMEvosAttacks:
@@ -589,14 +590,14 @@ NidorinoEvosAttacks:
 	dbw 8, FOCUS_ENERGY
 	dbw 12, DOUBLE_KICK
 	dbw 17, FURY_ATTACK
-	dbw 23, TOXIC_SPIKES
-	dbw 28, HORN_ATTACK
-	dbw 34, TOXIC
-	dbw 39, FLATTER
-	dbw 45, POISON_JAB
-	dbw 50, CAPTIVATE
-	dbw 56, HORN_DRILL
-	dbw 61, EARTH_POWER
+	dbw 22, TOXIC_SPIKES
+	dbw 27, HORN_ATTACK
+	dbw 32, TOXIC
+	dbw 37, FLATTER
+	dbw 42, POISON_JAB
+	dbw 47, CAPTIVATE
+	dbw 52, HORN_DRILL
+	dbw 57, EARTH_POWER
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
@@ -610,14 +611,15 @@ NidokingEvosAttacks:
 	dbw 12, DOUBLE_KICK
 	dbw 15, MEGAHORN
 	dbw 17, FURY_ATTACK
-	dbw 23, TOXIC_SPIKES
+	dbw 22, TOXIC_SPIKES
+	dbw 25, CHIP_AWAY
 	dbw 28, HORN_ATTACK
-	dbw 34, TOXIC
-	dbw 39, FLATTER
-	dbw 45, POISON_JAB
-	dbw 50, CAPTIVATE
-	dbw 56, HORN_DRILL
-	dbw 61, EARTH_POWER
+	dbw 33, TOXIC
+	dbw 38, FLATTER
+	dbw 43, POISON_JAB
+	dbw 48, CAPTIVATE
+	dbw 53, HORN_DRILL
+	dbw 58, EARTH_POWER
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
