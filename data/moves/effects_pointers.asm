@@ -210,3 +210,4 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
 	dw DoBurn                 ; EFFECT_BURN
 	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT
+	dw StatusTargetSelf       ; EFFECT_TRICK_ROOM

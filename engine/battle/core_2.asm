@@ -2,10 +2,11 @@ Core2_NewTurnEndEffects:
 	call EndRoostEffect
 	call EndChargeEffect
 	call HandleYawn
-	call HandleLuckyChant
 	call HandleAquaRing
 	call HandleIngrain
 	call HandleDefrost
+	call HandleLuckyChant
+	call HandleTrickRoom
 ; fallthrough
 
 HandleLeftovers:
@@ -251,3 +252,15 @@ HandleLuckyChant:
 	dec a
 	ld [bc], a
 	ret
+
+HandleTrickRoom:
+; Trick Room ends after 5 turns.
+; From Rangi's Polished Crystal
+	ld hl, wTrickRoom
+	ld a, [hl]
+	and a
+	ret z
+	dec [hl]
+	ret nz
+	ld hl, TrickRoomEndedText
+	jp StdBattleTextbox

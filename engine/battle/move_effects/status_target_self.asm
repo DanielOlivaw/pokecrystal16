@@ -167,6 +167,11 @@ Find_StatusTargetSelf:
 	cp EFFECT_CONVERSION
 	jp z, BattleCommand_Conversion
 
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TRICK_ROOM
+	jp z, BattleCommand_TrickRoom
+
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar

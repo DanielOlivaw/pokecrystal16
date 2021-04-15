@@ -495,6 +495,7 @@ MoveDescriptions1:
 	dw DragonAscentDescription
 	dw DoomDesireDescription
 	dw PsychoBoostDescription
+	dw TrickRoomDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2317,6 +2318,10 @@ DoomDesireDescription:
 PsychoBoostDescription:
 	db   "Sharply reduces"
 	next "user's SPCL.ATK.@"
+
+TrickRoomDescription:
+	db   "Reverses the move"
+	next "order for 5 turns.@"
 
 		;"123456789123456789"
 

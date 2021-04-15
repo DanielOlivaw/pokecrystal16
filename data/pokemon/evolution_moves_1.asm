@@ -86,11 +86,11 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; KRABBY
 	dw KinglerEvolutionMoves     ; KINGLER
 	dw NoEvolutionMoves1         ; EXEGGCUTE
-	dw NoEvolutionMoves1         ; EXEGGUTOR_A
+	dw ExeggutorAEvolutionMoves  ; EXEGGUTOR_A
 	dw NoEvolutionMoves1         ; CUBONE
 	dw NoEvolutionMoves1         ; MAROWAK
 	dw NoEvolutionMoves1         ; KOFFING
-	dw NoEvolutionMoves1         ; WEEZING_G
+	dw WeezingGEvolutionMoves    ; WEEZING_G
 	dw NoEvolutionMoves1         ; CHANSEY
 	dw NoEvolutionMoves1         ; TANGELA
 	dw NoEvolutionMoves1         ; KANGASKHAN
@@ -247,6 +247,15 @@ HypnoEvolutionMoves:
 
 KinglerEvolutionMoves:
 	dw HAMMER_ARM
+	db 0 ; no more evolution moves
+
+ExeggutorAEvolutionMoves:
+	dw DRAGONHAMMER
+	db 0 ; no more evolution moves
+
+WeezingGEvolutionMoves:
+	dw DOUBLE_HIT
+	dw STRANGE_STEAM
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves1:

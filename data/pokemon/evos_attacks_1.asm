@@ -1825,57 +1825,84 @@ ExeggcuteEvosAttacks:
 	dbbw EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR_A
 	db 0 ; no more evolutions
 	dbw 1, BARRAGE
+	dbw 1, ABSORB
 	dbw 1, HYPNOSIS
-	dbw 7, REFLECT
-	dbw 13, LEECH_SEED
-	dbw 19, CONFUSION
-	dbw 25, STUN_SPORE
-	dbw 31, POISONPOWDER
-	dbw 37, SLEEP_POWDER
-	dbw 43, SOLARBEAM
+	dbw 4, REFLECT
+	dbw 8, LEECH_SEED
+	dbw 12, MEGA_DRAIN
+	dbw 16, CONFUSION
+	dbw 18, STUN_SPORE
+	dbw 20, POISONPOWDER
+	dbw 22, SLEEP_POWDER
+	dbw 24, BULLET_SEED
+	dbw 28, GIGA_DRAIN
+	dbw 32, EXTRASENSORY
+	dbw 36, UPROAR
+	dbw 40, SYNTHESIS
+	dbw 44, SOLARBEAM
 	db 0 ; no more level-up moves
 
 ExeggutorAEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SEED_BOMB
 	dbw 1, BARRAGE
+	dbw 1, ABSORB
 	dbw 1, HYPNOSIS
-	dbw 1, CONFUSION
-	dbw 19, STOMP
-	dbw 31, EGG_BOMB
+	dbw 1, DRAGONHAMMER
+	dbw 4, REFLECT
+	dbw 8, LEECH_SEED
+	dbw 12, MEGA_DRAIN
+	dbw 16, CONFUSION
+	dbw 18, STUN_SPORE
+	dbw 20, POISONPOWDER
+	dbw 22, SLEEP_POWDER
+	dbw 24, BULLET_SEED
+	dbw 28, EGG_BOMB
+	dbw 32, GIGA_DRAIN
+	dbw 36, EXTRASENSORY
+	dbw 40, PSYSHOCK
+	dbw 44, UPROAR
+	dbw 48, WOOD_HAMMER
+	dbw 52, SYNTHESIS
+	dbw 56, SOLARBEAM
+	dbw 60, LEAF_STORM
 	db 0 ; no more level-up moves
 
 CuboneEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, MAROWAK
 	db 0 ; no more evolutions
+	dbw 1, MUD_SLAP
 	dbw 1, GROWL
-	dbw 5, TAIL_WHIP
-	dbw 9, BONE_CLUB
-	dbw 13, HEADBUTT
-	dbw 17, LEER
-	dbw 21, FOCUS_ENERGY
-	dbw 25, BONEMERANG
-	dbw 29, RAGE
-	dbw 33, FALSE_SWIPE
-	dbw 37, THRASH
-	dbw 41, BONE_RUSH
+	dbw 4, TAIL_WHIP
+	dbw 8, BONE_CLUB
+	dbw 12, FALSE_SWIPE
+	dbw 16, HEADBUTT
+	dbw 20, RAGE
+	; dbw 24, RETALIATE
+	dbw 28, BONE_RUSH
+	dbw 32, FOCUS_ENERGY
+	; dbw 36, ENDEAVOR
+	dbw 40, BONEMERANG
+	dbw 44, THRASH
+	dbw 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MarowakEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, MUD_SLAP
 	dbw 1, GROWL
-	dbw 1, TAIL_WHIP
-	dbw 1, BONE_CLUB
-	dbw 1, HEADBUTT
-	dbw 5, TAIL_WHIP
-	dbw 9, BONE_CLUB
-	dbw 13, HEADBUTT
-	dbw 17, LEER
-	dbw 21, FOCUS_ENERGY
-	dbw 25, BONEMERANG
-	dbw 32, RAGE
-	dbw 39, FALSE_SWIPE
-	dbw 46, THRASH
-	dbw 53, BONE_RUSH
+	dbw 4, TAIL_WHIP
+	dbw 8, BONE_CLUB
+	dbw 12, FALSE_SWIPE
+	dbw 16, HEADBUTT
+	dbw 20, RAGE
+	; dbw 24, RETALIATE
+	dbw 30, BONE_RUSH
+	dbw 36, FOCUS_ENERGY
+	; dbw 42, ENDEAVOR
+	dbw 48, BONEMERANG
+	dbw 54, THRASH
+	dbw 60, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 KoffingEvosAttacks:
@@ -1883,44 +1910,65 @@ KoffingEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_GAS
 	dbw 1, TACKLE
-	dbw 9, SMOG
-	dbw 17, SELFDESTRUCT
-	dbw 21, SLUDGE
-	dbw 25, SMOKESCREEN
-	dbw 33, HAZE
-	dbw 41, EXPLOSION
-	dbw 45, DESTINY_BOND
+	dbw 4, SMOG
+	dbw 8, SMOKESCREEN
+	dbw 12, CLEAR_SMOG
+	dbw 16, SLUDGE
+	dbw 20, SELFDESTRUCT
+	dbw 24, HAZE
+	; dbw 28, GYRO_BALL
+	dbw 32, SLUDGE_BOMB
+	dbw 36, TOXIC
+	dbw 40, BELCH
+	dbw 44, EXPLOSION
+	; dbw 48, MEMENTO
+	dbw 52, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 WeezingGEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DEFOG
+	dbw 1, HEAT_WAVE
+	dbw 1, AROMATHERAPY
 	dbw 1, POISON_GAS
 	dbw 1, TACKLE
-	dbw 1, SMOG
-	dbw 1, SELFDESTRUCT
-	dbw 9, SMOG
-	dbw 17, SELFDESTRUCT
-	dbw 21, SLUDGE
-	dbw 25, SMOKESCREEN
-	dbw 33, HAZE
-	dbw 44, EXPLOSION
-	dbw 51, DESTINY_BOND
+	dbw 1, FAIRY_WIND
+	dbw 4, SMOG
+	dbw 8, SMOKESCREEN
+	dbw 12, CLEAR_SMOG
+	dbw 16, SLUDGE
+	dbw 20, SELFDESTRUCT
+	dbw 24, HAZE
+	; dbw 28, GYRO_BALL
+	dbw 32, SLUDGE_BOMB
+	dbw 34, DOUBLE_HIT
+	dbw 34, STRANGE_STEAM
+	dbw 37, TOXIC
+	dbw 42, BELCH
+	dbw 47, EXPLOSION
+	; dbw 52, MEMENTO
+	dbw 57, DESTINY_BOND
+	dbw 62, MISTY_TERRAIN
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
+	dbw 1, DEFENSE_CURL
+	dbw 1, GROWL
 	dbw 1, POUND
-	dbw 5, GROWL
-	dbw 9, TAIL_WHIP
-	dbw 13, SOFTBOILED
-	dbw 17, DOUBLESLAP
-	dbw 23, MINIMIZE
-	dbw 29, SING
-	dbw 35, EGG_BOMB
-	dbw 41, DEFENSE_CURL
-	dbw 49, LIGHT_SCREEN
-	dbw 57, DOUBLE_EDGE
+	dbw 5, TAIL_WHIP
+	dbw 9, DOUBLESLAP
+	; dbw 13, REFRESH
+	dbw 17, ECHOED_VOICE
+	dbw 21, SING
+	dbw 25, TAKE_DOWN
+	dbw 29, MINIMIZE
+	dbw 33, LIGHT_SCREEN
+	dbw 37, EGG_BOMB
+	dbw 41, SOFTBOILED
+	; dbw 45, HEALING_WISH
+	dbw 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:

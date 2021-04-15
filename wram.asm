@@ -720,6 +720,7 @@ wPlayerRageCounter:: db ; c72b
 wEnemyRageCounter:: db ; c72c
 
 wBeatUpHitAtLeastOnce:: db ; c72d
+wTrickRoom:: db
 
 wPlayerTrappingMove:: db ; c72e
 wEnemyTrappingMove:: db ; c72f

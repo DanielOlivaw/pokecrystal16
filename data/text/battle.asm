@@ -153,6 +153,20 @@ BattleText_LuckyChantEnded:
 	line "LUCKY CHANT ended!"
 	prompt
 
+TrickRoomText:
+	text "<USER>"
+	line "twisted the"
+	cont "dimensions!"
+	prompt
+
+TrickRoomEndedText:
+	text "The twisted"
+	line "dimensions"
+
+	para "returned to"
+	line "normal!"
+	prompt
+
 BattleText_MonsLightScreenFell:
 	text_ram wStringBuffer1
 	text " #MON's"

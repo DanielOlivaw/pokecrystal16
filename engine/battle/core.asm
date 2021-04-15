@@ -589,16 +589,16 @@ DetermineMoveOrder:
 	jr z, .both_have_quick_claw
 	call BattleRandom
 	cp e
-	jr nc, .speed_check
+	jr nc, .trick_room_check
 	jp .player_first
 
 .player_no_quick_claw
 	ld a, b
 	cp HELD_QUICK_CLAW
-	jr nz, .speed_check
+	jr nz, .trick_room_check
 	call BattleRandom
 	cp c
-	jr nc, .speed_check
+	jr nc, .trick_room_check
 	jp .enemy_first
 
 .both_have_quick_claw
@@ -611,7 +611,7 @@ DetermineMoveOrder:
 	call BattleRandom
 	cp e
 	jp c, .player_first
-	jr .speed_check
+	jr .trick_room_check
 
 .player_2b
 	call BattleRandom
@@ -620,7 +620,21 @@ DetermineMoveOrder:
 	call BattleRandom
 	cp c
 	jp c, .enemy_first
-	jr .speed_check
+	jr .trick_room_check
+
+.trick_room_check
+	ld a, [wTrickRoom]
+	and a
+	jr z, .speed_check
+; In Trick Room, the slower Pokemon attacks first.
+; Move priority, Quick Claw, etc. override Trick Room.
+	ld de, wBattleMonSpeed
+	ld hl, wEnemyMonSpeed
+	ld c, 2
+	call CompareBytes
+	jr z, .speed_tie
+	jp nc, .enemy_first
+	jp .player_first
 
 .speed_check
 	ld de, wBattleMonSpeed
@@ -3821,6 +3835,7 @@ endr
 	ld [wEnemyWrapCount], a
 	ld [wEnemyChargeCount], a
 	ld [wEnemyYawnCount], a
+	ld [wEnemyLuckyChantCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4311,6 +4326,7 @@ endr
 	ld [wPlayerWrapCount], a
 	ld [wPlayerChargeCount], a
 	ld [wPlayerYawnCount], a
+	ld [wPlayerLuckyChantCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -8812,6 +8828,7 @@ CleanUpBattleRAM:
 	ld [wKeyItemsPocketScrollPosition], a
 	ld [wItemsPocketScrollPosition], a
 	ld [wBallsPocketScrollPosition], a
+	ld [wTrickRoom], a
 	ld hl, wPlayerSubStatus1
 	ld b, wEnemyFuryCutterCount - wPlayerSubStatus1
 .loop

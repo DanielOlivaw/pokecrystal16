@@ -68,6 +68,8 @@ INCLUDE "engine/battle/move_effects/belly_drum.asm"
 
 INCLUDE "engine/battle/move_effects/psych_up.asm"
 
+INCLUDE "engine/battle/move_effects/conversion.asm"
+
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/shell_smash.asm"
@@ -152,4 +154,4 @@ INCLUDE "engine/battle/move_effects/aqua_ring.asm"
 
 INCLUDE "engine/battle/move_effects/grudge.asm"
 
-INCLUDE "engine/battle/move_effects/conversion.asm"
+INCLUDE "engine/battle/move_effects/trick_room.asm"
