@@ -159,3 +159,5 @@ INCLUDE "engine/battle/move_effects/trick_room.asm"
 INCLUDE "engine/battle/move_effects/retaliate.asm"
 
 INCLUDE "engine/battle/move_effects/facade.asm"
+
+INCLUDE "engine/battle/move_effects/magnet_rise.asm"

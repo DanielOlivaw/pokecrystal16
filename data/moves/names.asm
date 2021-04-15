@@ -502,4 +502,5 @@ MoveNames::
 	db "MAGNET BOMB@"
 	db "ROAR OF TIME@"
 	db "SPACIAL REND@"
+	db "MAGNET RISE@"
 	  ;"123456123456@"

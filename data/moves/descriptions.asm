@@ -509,6 +509,7 @@ MoveDescriptions1:
 	dw MagnetBombDescription
 	dw RoarOfTimeDescription
 	dw SpacialRendDescription
+	dw MagnetRiseDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2366,6 +2367,10 @@ PowerUpPunchDescription:
 MagnetBombDescription:
 	db   "Throws steel bombs"
 	next "that never miss.@"
+
+MagnetRiseDescription:
+	db   "The user levitates"
+	next "for 5 turns.@"
 
 		;"123456789123456789"
 

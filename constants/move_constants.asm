@@ -509,6 +509,7 @@
 	const MAGNET_BOMB
 	const ROAR_OF_TIME
 	const SPACIAL_REND
+	const MAGNET_RISE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

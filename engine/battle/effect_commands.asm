@@ -1690,6 +1690,9 @@ BattleCommand_CheckHit:
 	call .Protect
 	jp nz, .Miss
 
+	call .MagnetRise
+	jp nz, .Miss
+
 	call .DrainSub
 	jp z, .Miss
 
@@ -1831,6 +1834,28 @@ BattleCommand_CheckHit:
 	jr nz, .Missed
 	ret
 
+.FirstTurn:
+; Fake Out and First Impression only work on the first turn the user is in battle.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FAKE_OUT
+	jr z, .FirstTurn_GotEffect
+	cp EFFECT_FIRST_IMPRESSION
+	ret nz
+
+.FirstTurn_GotEffect
+	ld hl, wPlayerTurnsTaken
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .FirstTurn_GotTurn
+	ld hl, wEnemyTurnsTaken
+.FirstTurn_GotTurn
+	ld b, 1
+	ld a, [hl]
+	cp b
+	jp nz, .Miss
+	ret
+
 .Synchronoise
 ; Return nz if the user is using Synchronoise
 ; but doesn't share a type with the target.
@@ -1852,28 +1877,6 @@ BattleCommand_CheckHit:
 	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVar
 	bit SUBSTATUS_ATE_BERRY, a
-	ret
-
-.FirstTurn:
-; Burn Up misses if used by a non-fire-type
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FAKE_OUT
-	jr z, .FirstTurn_GotEffect
-	cp EFFECT_FIRST_IMPRESSION
-	ret nz
-
-.FirstTurn_GotEffect
-	ld hl, wPlayerTurnsTaken
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .FirstTurn_GotTurn
-	ld hl, wEnemyTurnsTaken
-.FirstTurn_GotTurn
-	ld b, 1
-	ld a, [hl]
-	cp b
-	jp nz, .Miss
 	ret
 
 .Protect:
@@ -1898,6 +1901,33 @@ BattleCommand_CheckHit:
 
 	farcall GetProtectVariationEffect
 
+	ld a, 1
+	and a
+	ret
+
+.MagnetRise:
+; The opponent is immune to Ground-type attacks after using Magnet Rise.
+	ld a, BATTLE_VARS_SUBSTATUS6_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_MAGNET_RISE, [hl]
+	ret z
+
+; Doesn't make status moves miss.
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	cp STATUS
+	ret z
+
+; Only affects Ground-type moves.
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp GROUND
+	jr z, .Levitating
+	xor a
+	ret
+
+.Levitating
 	ld a, 1
 	and a
 	ret

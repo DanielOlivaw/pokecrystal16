@@ -530,6 +530,7 @@ BattleAnimations::
 	dw BattleAnim_MagnetBomb
 	dw BattleAnim_RoarOfTime
 	dw BattleAnim_SpacialRend
+	dw BattleAnim_MagnetRise
 
 	dw BattleAnim_SweetScent2
 
@@ -913,6 +914,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_MagnetRise:
 BattleAnim_FinalGambit:
 BattleAnim_HealOrder:
 BattleAnim_DefendOrder:

@@ -6,6 +6,7 @@ Core2_NewTurnEndEffects:
 	call HandleIngrain
 	call HandleDefrost
 	call HandleLuckyChant
+	call HandleMagnetRise
 	call HandleTrickRoom
 	call HandleRetaliate
 ; fallthrough
@@ -245,6 +246,30 @@ HandleLuckyChant:
 	ret nz
 	ld hl, BattleText_LuckyChantEnded
 	jp StdBattleTextbox
+
+HandleMagnetRise:
+; Magnet Rise ends after 5 turns
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerMagnetRiseCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyMagnetRiseCount
+.do_it
+	bit SUBSTATUS_MAGNET_RISE, [hl]
+	ret z
+	ld a, [bc]
+	and a
+	jr nz, .lower_magnet_rise_count
+	res SUBSTATUS_MAGNET_RISE, [hl]
+	ld hl, ReturnedToTheGroundText
+	jp StdBattleTextbox
+
+.lower_magnet_rise_count
+	dec a
+	ld [bc], a
+	ret
 
 HandleTrickRoom:
 ; Trick Room ends after 5 turns.

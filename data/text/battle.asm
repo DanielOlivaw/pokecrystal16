@@ -148,25 +148,6 @@ BattleText_SafeguardFaded:
 	line "SAFEGUARD faded!"
 	prompt
 
-BattleText_LuckyChantEnded:
-	text "<USER>'s"
-	line "LUCKY CHANT ended!"
-	prompt
-
-TrickRoomText:
-	text "<USER>"
-	line "twisted the"
-	cont "dimensions!"
-	prompt
-
-TrickRoomEndedText:
-	text "The twisted"
-	line "dimensions"
-
-	para "returned to"
-	line "normal!"
-	prompt
-
 BattleText_MonsLightScreenFell:
 	text_ram wStringBuffer1
 	text " #MON's"
@@ -382,7 +363,7 @@ BattleText_UserHurtBySpikes:
 BattleText_UserHurtByStealthRock:
 		;"123456789123456789"
 	text "Stones dug into"
-	cont "<USER>!"
+	line "<USER>!"
 	prompt
 
 RecoveredUsingText:
@@ -999,6 +980,39 @@ ShieldedFromCriticalHitsText:
 	text "<USER>"
 	line "is shielded from"
 	cont "critical hits!"
+	prompt
+
+BattleText_LuckyChantEnded:
+	text "<USER>'s"
+	line "LUCKY CHANT ended!"
+	prompt
+
+LevitatedWithElectromagnetismText:
+	text_pause
+	text "<USER>"
+	line "levitated with"
+	cont "electromagnetism!"
+	prompt
+
+ReturnedToTheGroundText:
+	text_pause
+	text "<USER>"
+	line "returned to the"
+	cont "ground!"
+	prompt
+
+TrickRoomText:
+	text "<USER>"
+	line "twisted the"
+	cont "dimensions!"
+	prompt
+
+TrickRoomEndedText:
+	text "The twisted"
+	line "dimensions"
+
+	para "returned to"
+	line "normal!"
 	prompt
 
 		;"123456789123456789"

@@ -146,8 +146,7 @@ ResetBatonPassStatus:
 	res SUBSTATUS_IN_LOVE, [hl]
 	ld hl, wEnemySubStatus1
 	res SUBSTATUS_IN_LOVE, [hl]
-	ld hl, wPlayerSubStatus5
-
+	
 	; Transformation and Encore aren't passed.
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr

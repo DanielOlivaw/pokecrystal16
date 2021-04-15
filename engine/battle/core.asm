@@ -3845,6 +3845,7 @@ endr
 	ld [wEnemyWrapCount], a
 	ld [wEnemyChargeCount], a
 	ld [wEnemyYawnCount], a
+	ld [wEnemyMagnetRiseCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4335,6 +4336,7 @@ endr
 	ld [wPlayerWrapCount], a
 	ld [wPlayerChargeCount], a
 	ld [wPlayerYawnCount], a
+	ld [wPlayerMagnetRiseCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4348,6 +4350,18 @@ BreakAttraction:
 	ret
 
 SpikesDamage:
+; Spikes, Stealth Rock, Toxic Spikes, and Sticky Web
+
+; Magnet Rise makes the Pokemon immune to entry hazards
+	ld hl, wPlayerSubStatus6
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .check_magnet_rise
+	ld hl, wEnemySubStatus6
+.check_magnet_rise
+	bit SUBSTATUS_MAGNET_RISE, [hl]
+	ret nz
+
 	ld hl, wPlayerScreens
 	ld de, wBattleMonType
 	ld bc, UpdatePlayerHUD
@@ -8839,8 +8853,6 @@ CleanUpBattleRAM:
 	ld [wTrickRoom], a
 	ld [wPlayerJustFainted], a
 	ld [wEnemyJustFainted], a
-	ld [wPlayerLuckyChantCount], a
-	ld [wEnemyLuckyChantCount], a
 	ld hl, wPlayerSubStatus1
 	ld b, wEnemyFuryCutterCount - wPlayerSubStatus1
 .loop

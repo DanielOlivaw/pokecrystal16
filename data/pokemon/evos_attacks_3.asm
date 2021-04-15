@@ -133,7 +133,9 @@ SceptileEvosAttacks:
 TorchicEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, COMBUSKEN
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SPLASH
+	dbw 1, MAGNET_RISE
+	dbw 1, BATON_PASS
 	db 0 ; no more level-up moves
 
 CombuskenEvosAttacks:

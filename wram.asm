@@ -517,11 +517,12 @@ wPlayerToxicCount:: db ; c674
 wPlayerDisableCount:: db ; c675
 wPlayerEncoreCount:: db ; c676
 wPlayerPerishCount:: db ; c677
-wPlayerFuryCutterCount:: db ; c678
-wPlayerProtectCount:: db ; c679
 wPlayerChargeCount:: db
 wPlayerYawnCount:: db
 wPlayerLuckyChantCount:: db
+wPlayerMagnetRiseCount:: db
+wPlayerFuryCutterCount:: db ; c678
+wPlayerProtectCount:: db ; c679
 
 wEnemyRolloutCount:: db ; c67a
 wEnemyConfuseCount:: db ; c67b
@@ -529,11 +530,12 @@ wEnemyToxicCount:: db ; c67c
 wEnemyDisableCount:: db ; c67d
 wEnemyEncoreCount:: db ; c67e
 wEnemyPerishCount:: db ; c67f
-wEnemyFuryCutterCount:: db ; c680
-wEnemyProtectCount:: db ; c681
 wEnemyChargeCount:: db
 wEnemyYawnCount:: db
 wEnemyLuckyChantCount:: db
+wEnemyMagnetRiseCount:: db
+wEnemyFuryCutterCount:: db ; c680
+wEnemyProtectCount:: db ; c681
 
 wPlayerDamageTaken:: dw ; c682
 wEnemyDamageTaken:: dw ; c684
