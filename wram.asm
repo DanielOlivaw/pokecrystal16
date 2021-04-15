@@ -740,6 +740,8 @@ wSomeoneIsRampaging:: db ; c73b
 
 wPlayerJustGotFrozen:: db ; c73c
 wEnemyJustGotFrozen:: db ; c73d
+wPlayerJustFainted:: db ; For Retaliate
+wEnemyJustFainted:: db
 wBattleEnd::
 
 NEXTU ; c608

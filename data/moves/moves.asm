@@ -507,4 +507,6 @@ Moves1:
 	move EFFECT_FUTURE_SIGHT,      140, STEEL,    SPECIAL,  100,  5,   0 ; DOOM_DESIRE
 	move EFFECT_DRACO_METEOR,      140, PSYCHIC,  SPECIAL,   90,  5,   0 ; PSYCHO_BOOST
 	move EFFECT_TRICK_ROOM,          0, PSYCHIC,  STATUS,   100,  5,   0 ; TRICK_ROOM
+	move EFFECT_CONDITIONAL_BOOST,  70, NORMAL,   PHYSICAL, 100,  5,   0 ; RETALIATE
+	move EFFECT_CONDITIONAL_BOOST,  70, NORMAL,   PHYSICAL, 100, 20,   0 ; FACADE
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

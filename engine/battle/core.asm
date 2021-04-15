@@ -2214,6 +2214,11 @@ UpdateHPBar:
 	ret
 
 HandleEnemyMonFaint:
+	; For Retaliate
+	; Value should be 1 on the turn after the fainting occurs, then 0 afterward.
+	ld a, 2
+	ld [wEnemyJustFainted], a
+
 	call FaintEnemyPokemon
 	ld hl, wBattleMonHP
 	ld a, [hli]
@@ -2875,6 +2880,11 @@ UpdateFaintedPlayerMon:
 	ld [hl], a
 	ld [wBattleMonStatus], a
 	call UpdateBattleMonInParty
+	; For Retaliate
+	; Value should be 1 on the turn after the fainting occurs, then 0 afterward.
+	ld a, 2
+	ld [wPlayerJustFainted], a
+	; Happiness drop from fainting
 	ld c, HAPPINESS_FAINTED
 	; If TheirLevel > (YourLevel + 30), use a different parameter
 	ld a, [wBattleMonLevel]
@@ -8545,9 +8555,9 @@ StartBattle:
 	scf
 	ret
 
-Unreferenced_DoBattle:
-	call DoBattle
-	ret
+; Unreferenced_DoBattle:
+	; call DoBattle
+	; ret
 
 BattleIntro:
 	farcall StubbedTrainerRankings_Battles ; mobile
@@ -8829,6 +8839,8 @@ CleanUpBattleRAM:
 	ld [wItemsPocketScrollPosition], a
 	ld [wBallsPocketScrollPosition], a
 	ld [wTrickRoom], a
+	ld [wPlayerJustFainted], a
+	ld [wEnemyJustFainted], a
 	ld hl, wPlayerSubStatus1
 	ld b, wEnemyFuryCutterCount - wPlayerSubStatus1
 .loop

@@ -489,4 +489,6 @@ MoveNames::
 	db "DOOM DESIRE@"
 	db "PSYCHO BOOST@"
 	db "TRICK ROOM@"
+	db "RETALIATE@"
+	db "FACADE@"
 	  ;"123456123456@"

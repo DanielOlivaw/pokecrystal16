@@ -496,6 +496,8 @@ MoveDescriptions1:
 	dw DoomDesireDescription
 	dw PsychoBoostDescription
 	dw TrickRoomDescription
+	dw RetaliateDescription
+	dw FacadeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2322,6 +2324,14 @@ PsychoBoostDescription:
 TrickRoomDescription:
 	db   "Reverses the move"
 	next "order for 5 turns.@"
+
+RetaliateDescription:
+	db   "Stronger after"
+	next "an ally faints.@"
+
+FacadeDescription:
+	db   "Stronger when the"
+	next "user is suffering.@"
 
 		;"123456789123456789"
 

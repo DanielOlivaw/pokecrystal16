@@ -517,6 +517,8 @@ BattleAnimations::
 	dw BattleAnim_DoomDesire
 	dw BattleAnim_PsychoBoost
 	dw BattleAnim_TrickRoom
+	dw BattleAnim_Retaliate
+	dw BattleAnim_Facade
 
 	dw BattleAnim_SweetScent2
 
@@ -900,6 +902,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Retaliate:
+BattleAnim_Facade:
 BattleAnim_TrickRoom:
 BattleAnim_WillOWisp:
 BattleAnim_ShadowPunch:

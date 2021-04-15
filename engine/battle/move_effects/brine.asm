@@ -27,13 +27,10 @@ BattleCommand_Brine:
 	cp [hl]
 	ld a, c
 	pop bc
-	jr c, .doubledamage
+	jp c, DoubleDamage
 
 	inc hl
 	cp [hl]
 	dec hl
-	jr c, .doubledamage
+	jp c, DoubleDamage
 	ret
-
-.doubledamage
-	jp DoubleDamage

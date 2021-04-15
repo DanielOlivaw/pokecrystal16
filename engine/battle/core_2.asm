@@ -7,6 +7,7 @@ Core2_NewTurnEndEffects:
 	call HandleDefrost
 	call HandleLuckyChant
 	call HandleTrickRoom
+	call HandleRetaliate
 ; fallthrough
 
 HandleLeftovers:
@@ -264,3 +265,17 @@ HandleTrickRoom:
 	ret nz
 	ld hl, TrickRoomEndedText
 	jp StdBattleTextbox
+
+HandleRetaliate:
+	ld hl, wPlayerJustFainted
+	ld a, [hl]
+	and a
+	jr z, .enemy
+	dec [hl]
+.enemy
+	ld hl, wEnemyJustFainted
+	ld a, [hl]
+	and a
+	ret z
+	dec [hl]
+	ret

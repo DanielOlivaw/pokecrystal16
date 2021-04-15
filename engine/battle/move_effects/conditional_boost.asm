@@ -22,6 +22,12 @@ Find_ConditionalBoost:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
+	ld bc, FACADE
+	call CompareMove2
+	jp z, BattleCommand_Facade
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, HEX
 	call CompareMove2
 	jp z, BattleCommand_Hex
@@ -31,6 +37,12 @@ Find_ConditionalBoost:
 	ld bc, PAYBACK
 	call CompareMove2
 	jp z, BattleCommand_Payback
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, RETALIATE
+	call CompareMove2
+	jp z, BattleCommand_Retaliate
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
