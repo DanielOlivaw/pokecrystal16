@@ -1464,7 +1464,7 @@ MagnemiteEvosAttacks:
 	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
-	; dbw 31, MAGNET_RISE
+	dbw 31, MAGNET_RISE
 	dbw 34, FLASH_CANNON
 	dbw 37, DISCHARGE
 	dbw 40, METAL_SOUND
@@ -1488,7 +1488,7 @@ MagnetonEvosAttacks:
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 29, TRI_ATTACK
-	; dbw 31, MAGNET_RISE
+	dbw 31, MAGNET_RISE
 	dbw 36, FLASH_CANNON
 	dbw 41, DISCHARGE
 	dbw 46, METAL_SOUND

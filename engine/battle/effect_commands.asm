@@ -1912,10 +1912,13 @@ BattleCommand_CheckHit:
 	bit SUBSTATUS_MAGNET_RISE, [hl]
 	ret z
 
-; Doesn't make status moves miss.
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVarAddr
-	cp STATUS
+; Only affects moves that deal damage
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld de, wStringBuffer1
+	call GetMoveData
+	ld a, [wStringBuffer1 + MOVE_POWER]
+	and a
 	ret z
 
 ; Only affects Ground-type moves.

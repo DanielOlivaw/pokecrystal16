@@ -250,7 +250,6 @@ DidntChooseStarterScript:
 ElmDirectionsScript:
 	turnobject PLAYER, UP
 	opentext
-	givepoke FROSMOTH, 5, BERRY
 	writetext ElmDirectionsText1
 	waitbutton
 	closetext
