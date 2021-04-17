@@ -1574,7 +1574,7 @@ GrimerEvosAttacks:
 	dbw 40, GUNK_SHOT
 	dbw 44, ACID_ARMOR
 	dbw 48, BELCH
-	; dbw 52, MEMENTO
+	dbw 52, MEMENTO
 	db 0 ; no more level-up moves
 
 MukEvosAttacks:
@@ -1594,7 +1594,7 @@ MukEvosAttacks:
 	dbw 42, GUNK_SHOT
 	dbw 48, ACID_ARMOR
 	dbw 54, BELCH
-	; dbw 60, MEMENTO
+	dbw 60, MEMENTO
 	db 0 ; no more level-up moves
 
 ShellderEvosAttacks:
@@ -1921,7 +1921,7 @@ KoffingEvosAttacks:
 	dbw 36, TOXIC
 	dbw 40, BELCH
 	dbw 44, EXPLOSION
-	; dbw 48, MEMENTO
+	dbw 48, MEMENTO
 	dbw 52, DESTINY_BOND
 	db 0 ; no more level-up moves
 
@@ -1946,7 +1946,7 @@ WeezingGEvosAttacks:
 	dbw 37, TOXIC
 	dbw 42, BELCH
 	dbw 47, EXPLOSION
-	; dbw 52, MEMENTO
+	dbw 52, MEMENTO
 	dbw 57, DESTINY_BOND
 	dbw 62, MISTY_TERRAIN
 	db 0 ; no more level-up moves
@@ -2550,7 +2550,7 @@ MoltresGEvosAttacks:
 	dbw 54, NASTY_PLOT
 	dbw 60, HURRICANE
 	dbw 66, ENDURE
-	; dbw 72, MEMENTO
+	dbw 72, MEMENTO
 	dbw 78, SKY_ATTACK
 	db 0 ; no more level-up moves
 

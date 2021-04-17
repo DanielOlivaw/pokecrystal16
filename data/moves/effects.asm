@@ -2866,3 +2866,16 @@ FinalGambit:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Memento:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	multistatdown
+	lowersub
+	statdownanim
+	raisesub
+	multistatdownmessage
+	selfdestruct
+	endmove

@@ -504,4 +504,6 @@ MoveNames::
 	db "SPACIAL REND@"
 	db "MAGNET RISE@"
 	db "ME FIRST@"
+	db "BODY PRESS@"
+	db "MEMENTO@"
 	  ;"123456123456@"

@@ -8,6 +8,8 @@ MultiStatDownEffect:
 	jp z, BattleCommand_AttackSpecialAttackDown
 	cp EFFECT_ATK_SP_ATK_DOWN
 	jp z, BattleCommand_AttackSpecialAttackDown
+	cp EFFECT_MEMENTO
+	jp z, BattleCommand_AttackSpecialAttackDown2
 
 ; fallthrough
 
@@ -123,6 +125,39 @@ BattleCommand_AttackSpecialAttackDown:
 	ld [wAttackMissed], a
 	ret
 
+BattleCommand_AttackSpecialAttackDown2:
+; attackdefensedown
+
+; Try to lower attack
+	farcall BattleCommand_AttackDown2
+
+; If that fails, we can still try to lower special attack
+	ld a, [wFailedMessage]
+	and a
+	jr nz, .cant_lower_attack
+
+; Try to lower special attack
+	farcall BattleCommand_SpecialAttackDown2
+
+.done
+	xor a
+	ld [wFailedMessage], a
+	ret
+
+.cant_lower_attack
+; Try to lower special attack
+	farcall BattleCommand_SpecialAttackDown2
+
+; If lowering both stats fails, the move fails
+	ld a, [wFailedMessage]
+	and a
+	jr z, .done
+
+; Move failure
+	ld a, 1
+	ld [wAttackMissed], a
+	ret
+
 MultiStatDownMessage:
 	ld a, [wFailedMessage]
 	and a
@@ -132,8 +167,12 @@ MultiStatDownMessage:
 	call GetBattleVar
 	cp EFFECT_ATK_DEF_DOWN
 	jr z, .atk_def_down
+	cp EFFECT_TEARFUL_LOOK
+	jr z, .atk_sp_atk_down
 	cp EFFECT_ATK_SP_ATK_DOWN
 	jr z, .atk_sp_atk_down
+	cp EFFECT_MEMENTO
+	jr z, .atk_sp_atk_down_2
 
 ; Venom Drench
 	ld a, ATTACK
@@ -163,6 +202,16 @@ MultiStatDownMessage:
 	ld [wLoweredStat], a
 	farcall BattleCommand_StatDownMessage
 	ld a, SP_ATTACK
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+	ret
+
+; Memento
+.atk_sp_atk_down_2
+	ld a, $10 | ATTACK
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+	ld a, $10 | SP_ATTACK
 	ld [wLoweredStat], a
 	farcall BattleCommand_StatDownMessage
 	ret

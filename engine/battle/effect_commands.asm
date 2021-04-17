@@ -3096,13 +3096,16 @@ PlayerAttackDamage:
 
 .physicalcrit
 ; Foul Play uses the target's attack stat instead of the user's.
+; Body Press uses the user's defense stat instead of its attack.
 ; Sacred Sword ignores the target's defense changes.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
-	jr z, .foul_play
+	jp z, .foul_play
+	cp EFFECT_BODY_PRESS
+	jp z, .body_press
 	cp EFFECT_SACRED_SWORD
-	jr z, .sacred_sword
+	jp z, .sacred_sword
 
 .check_physicalcrit
 	ld hl, wBattleMonAttack
@@ -3193,6 +3196,19 @@ PlayerAttackDamage:
 	ld b, a
 	ld c, [hl]
 	ld hl, wEnemyAttack
+	jr .thickclub
+
+.body_press
+; Use player's defense instead of attack for Body Press
+	ld hl, wBattleMonDefense
+	call CheckDamageStatsCritical
+	jr c, .thickclub ; Use boosted stats
+
+	ld hl, wEnemyDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wPlayerDefense
 	jr .thickclub
 
 .sacred_sword
@@ -3417,13 +3433,16 @@ EnemyAttackDamage:
 
 .physicalcrit
 ; Foul Play uses the target's attack stat instead of the user's.
+; Body Press uses the user's defense stat instead of its attack.
 ; Sacred Sword ignores the target's defense changes.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FOUL_PLAY
-	jr z, .foul_play
+	jp z, .foul_play
+	cp EFFECT_BODY_PRESS
+	jp z, .body_press
 	cp EFFECT_SACRED_SWORD
-	jr z, .sacred_sword
+	jp z, .sacred_sword
 
 .check_physicalcrit
 	ld hl, wEnemyMonAttack
@@ -3512,6 +3531,19 @@ EnemyAttackDamage:
 	ld b, a
 	ld c, [hl]
 	ld hl, wPlayerAttack
+	jr .thickclub
+
+.body_press
+; Use enemy's defense instead of attack for Body Press
+	ld hl, wEnemyMonDefense
+	call CheckDamageStatsCritical
+	jr c, .thickclub ; Use boosted stats
+
+	ld hl, wPlayerDefense
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wEnemyDefense
 	jr .thickclub
 
 .sacred_sword

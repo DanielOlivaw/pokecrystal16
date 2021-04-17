@@ -56,11 +56,11 @@ Find_ConditionalBoost:
 	call CompareMove2
 	jp z, BattleCommand_ShatterClaw
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SHIELD_BASH
-	call CompareMove2
-	jp z, BattleCommand_ShieldBash
+	; ld a, BATTLE_VARS_MOVE
+	; call GetBattleVar
+	; ld bc, SHIELD_BASH
+	; call CompareMove2
+	; jp z, BattleCommand_ShieldBash
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar

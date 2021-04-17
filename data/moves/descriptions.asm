@@ -511,6 +511,8 @@ MoveDescriptions1:
 	dw SpacialRendDescription
 	dw MagnetRiseDescription
 	dw MeFirstDescription
+	dw BodyPressDescription
+	dw MementoDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2060,10 +2062,6 @@ BrightMossDescription:
 	db   "Raises ACCURACY"
 	next "for both sides.@"
 
-ShieldBashDescription:
-	db   "Raising DEFENSE"
-	next "boosts damage.@"
-
 SacredSwordDescription:
 	db   "Ignores the foe's"
 	next "stat changes.@"
@@ -2376,6 +2374,15 @@ MagnetRiseDescription:
 MeFirstDescription:
 	db   "Uses the target's"
 	next "attack first.@"
+
+ShieldBashDescription:
+BodyPressDescription:
+	db   "Deals damage based"
+	next "on user's DEFENSE.@"
+
+MementoDescription:
+	db   "The user faints to"
+	next "lower foe's stats.@"
 
 		;"123456789123456789"
 

@@ -213,3 +213,5 @@ MoveEffectsPointers:
 	dw StatusTargetSelf       ; EFFECT_TRICK_ROOM
 	dw FinalGambit            ; EFFECT_FINAL_GAMBIT
 	dw SpecialAttackDown      ; EFFECT_CONFIDE
+	dw NormalHit              ; EFFECT_BODY_PRESS
+	dw Memento                ; EFFECT_MEMENTO
