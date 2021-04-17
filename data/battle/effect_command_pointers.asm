@@ -193,3 +193,4 @@ BattleCommandPointers:
 	dw BattleCommand_Yawn
 	dw BattleCommand_CraftyShield
 	dw BattleCommand_Burn
+	dw BattleCommand_HeavySlam

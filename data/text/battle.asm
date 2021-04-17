@@ -1666,3 +1666,13 @@ TransformedIntoWaterTypeText::
 	line "transformed into"
 	cont "the WATER type!"
 	prompt
+
+TargetIsLighterText_Test::
+	text "<TARGET>"
+	line "is lighter!"
+	prompt
+
+TargetIsHeavierText_Test::
+	text "<TARGET>"
+	line "is heavier!"
+	prompt

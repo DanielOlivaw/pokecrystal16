@@ -7631,6 +7631,10 @@ BattleCommand_CraftyShield:
 	farcall CraftyShieldEffect
 	ret
 
+BattleCommand_HeavySlam:
+	farcall HeavySlamPower
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens
@@ -7671,7 +7675,7 @@ BattleCommand_HiddenPower:
 	ld a, [wAttackMissed]
 	and a
 	ret nz
-	farcall HiddenPowerDamage
+	farcall HiddenPowerType
 	ret
 
 BattleCommand_SkipSunCharge:

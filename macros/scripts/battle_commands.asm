@@ -194,6 +194,7 @@ ENDM
 	command yawn                    ; bb
 	command craftyshield            ; bc
 	command burn                    ; bd
+	command heavyslam               ; be
 
 	enum_start $fe
 	command endturn                 ; fe

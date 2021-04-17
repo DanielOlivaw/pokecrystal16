@@ -641,7 +641,7 @@ ClefairyEvosAttacks:
 	dbw 40, METEOR_MASH
 	dbw 44, MOONLIGHT
 	dbw 48, MOONBLAST
-	; dbw 52, HEALING_WISH
+	dbw 52, HEALING_WISH
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
@@ -662,7 +662,7 @@ ClefableEvosAttacks:
 	dbw 40, METEOR_MASH
 	dbw 44, MOONLIGHT
 	dbw 48, MOONBLAST
-	; dbw 52, HEALING_WISH
+	dbw 52, HEALING_WISH
 	db 0 ; no more level-up moves
 
 VulpixAEvosAttacks:
@@ -1967,7 +1967,7 @@ ChanseyEvosAttacks:
 	dbw 33, LIGHT_SCREEN
 	dbw 37, EGG_BOMB
 	dbw 41, SOFTBOILED
-	; dbw 45, HEALING_WISH
+	dbw 45, HEALING_WISH
 	dbw 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 

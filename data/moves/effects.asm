@@ -2888,3 +2888,24 @@ HealingWish:
 	selfdestruct
 	endmove
 
+HeavySlam:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	heavyslam
+	damagecalc
+	stab
+	damagevariation
+	; conditionalboost
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

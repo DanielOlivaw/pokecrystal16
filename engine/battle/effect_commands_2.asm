@@ -163,3 +163,5 @@ INCLUDE "engine/battle/move_effects/facade.asm"
 INCLUDE "engine/battle/move_effects/magnet_rise.asm"
 
 INCLUDE "engine/battle/move_effects/healing_wish.asm"
+
+INCLUDE "engine/battle/move_effects/heavy_slam.asm"

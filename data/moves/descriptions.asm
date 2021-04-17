@@ -517,6 +517,7 @@ MoveDescriptions1:
 	dw LunarDanceDescription
 	dw DarkVoidDescription
 	dw SeedFlareDescription
+	dw HeavySlamDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2392,6 +2393,10 @@ SeedFlareDescription:
 	db   "May harshly reduce"
 	next "foe's SPCL.DEF.@"
 
+HeavySlamDescription:
+	db   "Stronger if the"
+	next "user is heavier.@"
+
 		;"123456789123456789"
 
 ; GyroBallDescription:
@@ -2401,10 +2406,6 @@ SeedFlareDescription:
 ; ElectroBallDescription:
 	; db   "Stronger if the"
 	; next "user is faster.@"
-
-; HeavySlamDescription:
-	; db   "Stronger if the"
-	; next "user is heavier.@"
 
 ; StrengthSapDescription:
 	; db   "Restores HP using"

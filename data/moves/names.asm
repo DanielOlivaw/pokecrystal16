@@ -510,4 +510,5 @@ MoveNames::
 	db "LUNAR DANCE@"
 	db "DARK VOID@"
 	db "SEED FLARE@"
+	db "HEAVY SLAM@"
 	  ;"123456123456@"
