@@ -9,7 +9,9 @@ Core2_NewTurnEndEffects:
 	call HandleMagnetRise
 	call HandleTrickRoom
 	call HandleRetaliate
-; fallthrough
+	call HandleLeftovers
+	call HandleSafeguard
+	jp HandleScreens
 
 HandleLeftovers:
 	ldh a, [hSerialConnectionStatus]
@@ -296,3 +298,118 @@ HandleRetaliate:
 	ret z
 	dec [hl]
 	ret
+
+HandleSafeguard:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .player1
+	call .CheckPlayer
+	jr .CheckEnemy
+
+.player1
+	call .CheckEnemy
+.CheckPlayer:
+	ld a, [wPlayerScreens]
+	bit SCREENS_SAFEGUARD, a
+	ret z
+	ld hl, wPlayerSafeguardCount
+	dec [hl]
+	ret nz
+	res SCREENS_SAFEGUARD, a
+	ld [wPlayerScreens], a
+	xor a
+	jr .print
+
+.CheckEnemy:
+	ld a, [wEnemyScreens]
+	bit SCREENS_SAFEGUARD, a
+	ret z
+	ld hl, wEnemySafeguardCount
+	dec [hl]
+	ret nz
+	res SCREENS_SAFEGUARD, a
+	ld [wEnemyScreens], a
+	ld a, $1
+
+.print
+	ldh [hBattleTurn], a
+	ld hl, BattleText_SafeguardFaded
+	jp StdBattleTextbox
+
+HandleScreens:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .Both
+	call .CheckPlayer
+	jr .CheckEnemy
+
+.Both:
+	call .CheckEnemy
+
+.CheckPlayer:
+	call SetPlayerTurn
+	ld de, .Your
+	call .Copy
+	ld hl, wPlayerScreens
+	ld de, wPlayerLightScreenCount
+	jr .TickScreens
+
+.CheckEnemy:
+	call SetEnemyTurn
+	ld de, .Enemy
+	call .Copy
+	ld hl, wEnemyScreens
+	ld de, wEnemyLightScreenCount
+
+.TickScreens:
+	bit SCREENS_LIGHT_SCREEN, [hl]
+	call nz, .LightScreenTick
+	bit SCREENS_REFLECT, [hl]
+	call nz, .ReflectTick
+	bit SCREENS_AURORA_VEIL, [hl]
+	call nz, .AuroraVeilTick
+	ret
+
+.Copy:
+	ld hl, wStringBuffer1
+	jp CopyName2
+
+.Your:
+	db "Your@"
+.Enemy:
+	db "Enemy@"
+
+.LightScreenTick:
+	ld a, [de]
+	dec a
+	ld [de], a
+	ret nz
+	res SCREENS_LIGHT_SCREEN, [hl]
+	push hl
+	push de
+	ld hl, BattleText_MonsLightScreenFell
+	call StdBattleTextbox
+	pop de
+	pop hl
+	ret
+
+.ReflectTick:
+	inc de
+	ld a, [de]
+	dec a
+	ld [de], a
+	ret nz
+	res SCREENS_REFLECT, [hl]
+	ld hl, BattleText_MonsReflectFaded
+	jp StdBattleTextbox
+
+.AuroraVeilTick:
+	inc de
+	inc de
+	ld a, [de]
+	dec a
+	ld [de], a
+	ret nz
+	res SCREENS_AURORA_VEIL, [hl]
+	ld hl, BattleText_MonsAuroraVeilFaded
+	jp StdBattleTextbox

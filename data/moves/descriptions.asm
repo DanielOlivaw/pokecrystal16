@@ -510,6 +510,7 @@ MoveDescriptions1:
 	dw RoarOfTimeDescription
 	dw SpacialRendDescription
 	dw MagnetRiseDescription
+	dw MeFirstDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2371,6 +2372,10 @@ MagnetBombDescription:
 MagnetRiseDescription:
 	db   "The user levitates"
 	next "for 5 turns.@"
+
+MeFirstDescription:
+	db   "Uses the target's"
+	next "attack first.@"
 
 		;"123456789123456789"
 

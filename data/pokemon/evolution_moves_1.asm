@@ -107,15 +107,15 @@ EvolutionMovePointers1:
 	dw GyaradosEvolutionMoves    ; GYARADOS
 	dw NoEvolutionMoves1         ; LAPRAS
 	dw NoEvolutionMoves1         ; DITTO
-	dw NoEvolutionMoves1         ; EEVEE
-	dw NoEvolutionMoves1         ; FLAREON
-	dw NoEvolutionMoves1         ; JOLTEON
-	dw NoEvolutionMoves1         ; VAPOREON
+	dw NoEvolutionMoves1         ; EEVEE   
+	dw VaporeonEvolutionMoves    ; VAPOREON
+	dw JolteonEvolutionMoves     ; JOLTEON 
+	dw FlareonEvolutionMoves     ; FLAREON 
 	dw NoEvolutionMoves1         ; PORYGON
 	dw NoEvolutionMoves1         ; OMANYTE
-	dw NoEvolutionMoves1         ; OMASTAR
+	dw OmastarEvolutionMoves     ; OMASTAR
 	dw NoEvolutionMoves1         ; KABUTO
-	dw NoEvolutionMoves1         ; KABUTOPS
+	dw KabutopsEvolutionMoves    ; KABUTOPS
 	dw NoEvolutionMoves1         ; AERODACTYL
 	dw NoEvolutionMoves1         ; SNORLAX
 	dw NoEvolutionMoves1         ; ARTICUNO_G
@@ -123,7 +123,7 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; MOLTRES_G
 	dw NoEvolutionMoves1         ; DRATINI
 	dw NoEvolutionMoves1         ; DRAGONAIR
-	dw NoEvolutionMoves1         ; DRAGONITE
+	dw DragoniteEvolutionMoves   ; DRAGONITE
 	dw NoEvolutionMoves1         ; MEWTWO
 	dw NoEvolutionMoves1         ; MEW
 
@@ -264,6 +264,31 @@ TangelaEvolutionMoves:
 
 GyaradosEvolutionMoves:
 	dw BITE
+	db 0 ; no more evolution moves
+
+VaporeonEvolutionMoves:
+	dw WATER_GUN
+	db 0 ; no more evolution moves
+
+JolteonEvolutionMoves:
+	dw THUNDERSHOCK
+	db 0 ; no more evolution moves
+
+FlareonEvolutionMoves:
+	dw EMBER
+	db 0 ; no more evolution moves
+
+OmastarEvolutionMoves:
+	dw SPIKE_CANNON
+	db 0 ; no more evolution moves
+
+KabutopsEvolutionMoves:
+	dw SLASH
+	db 0 ; no more evolution moves
+
+DragoniteEvolutionMoves:
+	dw WING_ATTACK
+	dw HURRICANE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves1:

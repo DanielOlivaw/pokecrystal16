@@ -521,4 +521,5 @@ Moves1:
 	move EFFECT_HYPER_BEAM,        150, DRAGON,   SPECIAL,   90,  5,   0 ; ROAR_OF_TIME
 	move EFFECT_NORMAL_HIT,        100, DRAGON,   SPECIAL,   95,  5,   0 ; SPACIAL_REND
 	move EFFECT_STATUS_SELF,         0, ELECTRIC, STATUS,   100, 10,   0 ; MAGNET_RISE
+	move EFFECT_MIRROR_MOVE,         0, NORMAL,   STATUS,   100, 20,   0 ; ME_FIRST
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

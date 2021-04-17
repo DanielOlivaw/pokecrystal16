@@ -1354,7 +1354,15 @@ BattleCommand_Stab:
 	ld [wCurType], a
 
 	push hl
+	push de
 	farcall DoChargeBoost
+	pop de
+	pop hl
+
+	push hl
+	push de
+	farcall DoMeFirstBoost
+	pop de
 	pop hl
 
 	push hl
@@ -7367,6 +7375,8 @@ CheckSubstituteOpp:
 	ret
 
 INCLUDE "engine/battle/move_effects/mirror_move.asm"
+
+INCLUDE "engine/battle/move_effects/me_first.asm"
 
 INCLUDE "engine/battle/move_effects/metronome.asm"
 

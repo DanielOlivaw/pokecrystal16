@@ -65,6 +65,19 @@ DoChargeBoost:
 	farcall DoubleDamage
 	ret
 
+DoMeFirstBoost:
+; When Me First steals a move, it boosts its power by 50%.
+	ld a, BATTLE_VARS_SUBSTATUS7
+	call GetBattleVarAddr
+	bit SUBSTATUS_ME_FIRST, [hl]
+	ret z
+
+	ld de, .MeFirstBoost
+	jr ApplyBoostModifier
+
+.MeFirstBoost
+	db 0, MORE_EFFECTIVE
+
 DoWeatherModifiers:
 	ld de, WeatherTypeModifiers
 	ld a, [wBattleWeather]
@@ -83,7 +96,7 @@ DoWeatherModifiers:
 
 	ld a, [de]
 	cp c
-	jr z, .ApplyModifier
+	jr z, ApplyBoostModifier
 
 .NextWeatherType:
 	inc de
@@ -101,21 +114,21 @@ DoWeatherModifiers:
 	ld a, [de]
 	inc de
 	cp -1
-	jr z, .done
+	ret z
 
 	cp b
 	jr nz, .NextWeatherMove
 
 	ld a, [de]
 	cp c
-	jr z, .ApplyModifier
+	jr z, ApplyBoostModifier
 
 .NextWeatherMove:
 	inc de
 	inc de
 	jr .CheckWeatherMove
 
-.ApplyModifier:
+ApplyBoostModifier:
 	xor a
 	ldh [hMultiplicand + 0], a
 	ld hl, wCurDamage

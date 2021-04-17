@@ -477,7 +477,7 @@ wPlayerSubStatus5:: ; c66c
 ; 4 encored
 ; 3 transformed
 ; 2 ingrained
-; 1
+; 1 aqua ring
 ; 0 toxic
 	db
 wPlayerSubStatus6::
@@ -485,8 +485,19 @@ wPlayerSubStatus6::
 ; 7 confused
 ; 6 charged (electric boost)
 ; 5 ate berry (belch)
-; 4 drowsy (yawn)
+; 4 
 ; 3 flinched
+; 2 magnet rise
+; 1 grudge
+; 0 drowsy (yawn)
+	db
+wPlayerSubStatus7::
+; bit
+; 7 me first
+; 6 move stolen
+; 5 
+; 4 
+; 3 
 ; 2 
 ; 1 
 ; 0 
@@ -508,7 +519,10 @@ wEnemySubStatus5:: ; c671
 ; see wPlayerSubStatus5
 	db
 wEnemySubStatus6::
-; see wPlayerSubStatus5
+; see wPlayerSubStatus6
+	db
+wEnemySubStatus7::
+; see wPlayerSubStatus7
 	db
 
 wPlayerRolloutCount:: db ; c672

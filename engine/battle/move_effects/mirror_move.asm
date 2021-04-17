@@ -1,6 +1,11 @@
 BattleCommand_MirrorMove:
-; mirrormove
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, ME_FIRST
+	call CompareMove
+	jp z, BattleCommand_MeFirst
 
+; mirrormove
 	call ClearLastMove
 
 	ld a, BATTLE_VARS_MOVE
@@ -12,7 +17,7 @@ BattleCommand_MirrorMove:
 	jr z, .failed
 
 	call CheckUserMove
-	jr nz, .use
+	jr nz, UseOpponentMove
 
 .failed
 	call AnimateFailedMove
@@ -21,7 +26,7 @@ BattleCommand_MirrorMove:
 	call StdBattleTextbox
 	jp EndMoveEffect
 
-.use
+UseOpponentMove:
 	ld a, b
 	ld [hl], a
 	ld [wNamedObjectIndexBuffer], a
