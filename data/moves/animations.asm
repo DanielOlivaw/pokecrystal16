@@ -534,6 +534,10 @@ BattleAnimations::
 	dw BattleAnim_MeFirst
 	dw BattleAnim_BodyPress
 	dw BattleAnim_Memento
+	dw BattleAnim_HealingWish
+	dw BattleAnim_LunarDance
+	dw BattleAnim_DarkVoid
+	dw BattleAnim_SeedFlare
 
 	dw BattleAnim_SweetScent2
 
@@ -917,6 +921,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DarkVoid:
+BattleAnim_SeedFlare:
+BattleAnim_HealingWish:
+BattleAnim_LunarDance:
 BattleAnim_Memento:
 BattleAnim_BodyPress:
 BattleAnim_MeFirst:

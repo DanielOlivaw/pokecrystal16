@@ -413,3 +413,36 @@ HandleScreens:
 	res SCREENS_AURORA_VEIL, [hl]
 	ld hl, BattleText_MonsAuroraVeilFaded
 	jp StdBattleTextbox
+
+HandleHealingWish:
+	call SetPlayerTurn
+	ld hl, wPlayerHealingWishCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemyHealingWishCount
+.do_it
+; End if the HealingWishCount is already 0.
+	ld a, [hl]
+	and a
+	ret z
+; If not, clear it and proceed.
+	xor a
+	ld [hl], a
+; Heal HP
+	farcall RestoreMaxHP
+; Cure status
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	xor a
+	ld [hl], a
+	call RefreshBattleHuds
+
+	ld hl, CalcPlayerStats
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .done
+	ld hl, CalcEnemyStats
+.done
+; Print message
+	ld hl, WishCameTrueText
+	jp StdBattleTextbox

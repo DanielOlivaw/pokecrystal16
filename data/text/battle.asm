@@ -706,6 +706,11 @@ RegainedHealthText:
 	line "regained health!"
 	prompt
 
+WishCameTrueText:
+	text "The wish came"
+	line "true!"
+	prompt
+
 AttackMissedText:
 	text "<USER>'s"
 	line "attack missed!"

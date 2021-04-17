@@ -167,16 +167,12 @@ Find_StatusTargetSelf:
 	call GetBattleVar
 	cp EFFECT_SUNLIGHT_HEAL
 	jp z, BattleCommand_HealSun
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
 	cp EFFECT_CONVERSION
 	jp z, BattleCommand_Conversion
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
 	cp EFFECT_TRICK_ROOM
 	jp z, BattleCommand_TrickRoom
+	cp EFFECT_HEALING_WISH
+	jp z, BattleCommand_HealingWish
 
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE

@@ -307,6 +307,8 @@ Stubbed_Function3c1bf:
 	ret
 
 HandleBetweenTurnEffects:
+	farcall HandleHealingWish
+
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .CheckEnemyFirst
@@ -1457,6 +1459,31 @@ RestoreSixteenthMaxHP:
 
 .restore
 	call GetSixteenthMaxHP
+	call SwitchTurnCore
+	jp RestoreHP
+
+RestoreMaxHP:
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld hl, wEnemyMonHP
+
+.got_hp
+; Don't restore if we're already at max HP
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	cp b
+	jr nz, .restore
+	ld a, [hl]
+	cp c
+	ret z
+
+.restore
+	call GetMaxHP
 	call SwitchTurnCore
 	jp RestoreHP
 

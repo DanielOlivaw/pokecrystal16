@@ -215,3 +215,4 @@ MoveEffectsPointers:
 	dw SpecialAttackDown      ; EFFECT_CONFIDE
 	dw NormalHit              ; EFFECT_BODY_PRESS
 	dw Memento                ; EFFECT_MEMENTO
+	dw HealingWish            ; EFFECT_HEALING_WISH

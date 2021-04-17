@@ -524,4 +524,9 @@ Moves1:
 	move EFFECT_MIRROR_MOVE,         0, NORMAL,   STATUS,   100, 20,   0 ; ME_FIRST
 	move EFFECT_BODY_PRESS,         80, FIGHTING, PHYSICAL, 100, 10,   0 ; BODY_PRESS
 	move EFFECT_MEMENTO,             0, DARK,     STATUS,   100, 10,   0 ; MEMENTO
+	move EFFECT_HEALING_WISH,        0, PSYCHIC,  STATUS,   100, 10,   0 ; HEALING_WISH
+	move EFFECT_HEALING_WISH,        0, PSYCHIC,  STATUS,   100, 10,   0 ; LUNAR_DANCE
+	move EFFECT_SLEEP,               0, DARK,     STATUS,    80, 10,   0 ; DARK_VOID
+	move EFFECT_SP_DEF_DOWN_2_HIT, 120, GRASS,    SPECIAL,   85,  5,  40 ; SEED_FLARE
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
+

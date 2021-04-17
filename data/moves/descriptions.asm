@@ -513,6 +513,10 @@ MoveDescriptions1:
 	dw MeFirstDescription
 	dw BodyPressDescription
 	dw MementoDescription
+	dw HealingWishDescription
+	dw LunarDanceDescription
+	dw DarkVoidDescription
+	dw SeedFlareDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -730,6 +734,9 @@ RoarDescription:
 	next "to end battle.@"
 
 SingDescription:
+SleepPowderDescription:
+LovelyKissDescription:
+DarkVoidDescription:
 	db   "May cause the foe"
 	next "to fall asleep.@"
 
@@ -850,10 +857,6 @@ PoisonpowderDescription:
 StunSporeDescription:
 	db   "A move that may"
 	next "paralyze the foe.@"
-
-SleepPowderDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
 
 PetalDanceDescription:
 	db   "Works 2-3 turns"
@@ -1083,10 +1086,6 @@ BarrageDescription:
 LeechLifeDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
-
-LovelyKissDescription:
-	db   "May cause the foe"
-	next "to fall asleep.@"
 
 TransformDescription:
 	db   "The user assumes"
@@ -2383,6 +2382,15 @@ BodyPressDescription:
 MementoDescription:
 	db   "The user faints to"
 	next "lower foe's stats.@"
+
+HealingWishDescription:
+LunarDanceDescription:
+	db   "The user faints to"
+	next "heal its ally.@"
+
+SeedFlareDescription:
+	db   "May harshly reduce"
+	next "foe's SPCL.DEF.@"
 
 		;"123456789123456789"
 

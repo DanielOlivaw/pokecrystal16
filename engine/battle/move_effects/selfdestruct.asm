@@ -2,7 +2,9 @@ SelfdestructEffect:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_MEMENTO
-	jr z, .Memento
+	jr z, .Memento_HealingWish
+	cp EFFECT_HEALING_WISH
+	jr z, .Memento_HealingWish
 
 	farcall StubbedTrainerRankings_Selfdestruct
 	ld a, BATTLEANIM_PLAYER_DAMAGE
@@ -36,8 +38,8 @@ SelfdestructEffect:
 	call WaitBGMap
 	jp RefreshBattleHuds
 
-.Memento
-; If Memento fails, the user doesn't faint.
+.Memento_HealingWish
+; If Memento or Healing Wish fails, the user doesn't faint.
 	ld a, [wAttackMissed]
 	and a
 	ret nz
@@ -57,7 +59,7 @@ SelfdestructEffect:
 	ld a, $1
 	ld [wKickCounter], a
 	farcall BattleCommand_LowerSub
-; Memento has already played its animation by this point.
+; Memento and Healing Wish have already played their animations by this point.
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVarAddr
 	res SUBSTATUS_LEECH_SEED, [hl]

@@ -2879,3 +2879,12 @@ Memento:
 	multistatdownmessage
 	selfdestruct
 	endmove
+
+HealingWish:
+	checkobedience
+	usedmovetext
+	doturn
+	statustargetself
+	selfdestruct
+	endmove
+

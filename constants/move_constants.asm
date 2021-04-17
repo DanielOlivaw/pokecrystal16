@@ -513,6 +513,10 @@
 	const ME_FIRST
 	const BODY_PRESS
 	const MEMENTO
+	const HEALING_WISH
+	const LUNAR_DANCE
+	const DARK_VOID
+	const SEED_FLARE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

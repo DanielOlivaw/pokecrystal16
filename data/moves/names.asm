@@ -506,4 +506,8 @@ MoveNames::
 	db "ME FIRST@"
 	db "BODY PRESS@"
 	db "MEMENTO@"
+	db "HEALING WISH@"
+	db "LUNAR DANCE@"
+	db "DARK VOID@"
+	db "SEED FLARE@"
 	  ;"123456123456@"
