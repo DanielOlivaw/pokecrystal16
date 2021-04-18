@@ -512,4 +512,6 @@ MoveNames::
 	db "SEED FLARE@"
 	db "HEAVY SLAM@"
 	db "HEAT CRASH@"
+	db "ELECTRO BALL@"
+	db "GYRO BALL@"
 	  ;"123456123456@"

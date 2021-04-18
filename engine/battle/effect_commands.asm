@@ -7635,23 +7635,23 @@ BattleCommand_HeavySlam:
 	farcall HeavySlamPower
 	ret
 
-HeavySlam_HalfWeight:
+LoadMovePower40:
 	ld d, 40
 	ret
 
-HeavySlam_ThirdWeight:
+LoadMovePower60:
 	ld d, 60
 	ret
 
-HeavySlam_QuarterWeight:
+LoadMovePower80:
 	ld d, 80
 	ret
 
-HeavySlam_FifthWeight:
+LoadMovePower100:
 	ld d, 100
 	ret
 
-HeavySlam_LessThanFifthWeight:
+LoadMovePower120:
 	ld d, 120
 	ret
 

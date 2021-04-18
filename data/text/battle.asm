@@ -1667,37 +1667,29 @@ TransformedIntoWaterTypeText::
 	cont "the WATER type!"
 	prompt
 
-TargetIsLighterText_Test::
-	text "<TARGET>"
-	line "is lighter!"
+Power40Text_Test::
+	text "ELECTRO BALL has"
+	line "40 power!"
 	prompt
 
-TargetHalfUserText_Test::
-	text "<TARGET>"
-	line "weighs more than"
-	cont "half of"
-	cont "<USER>!"
+Power60Text_Test::
+	text "ELECTRO BALL has"
+	line "60 power!"
 	prompt
 
-TargetThirdUserText_Test::
-	text "<TARGET>"
-	line "weighs more than"
-	cont "one third of"
-	cont "<USER>!"
+Power80Text_Test::
+	text "ELECTRO BALL has"
+	line "80 power!"
 	prompt
 
-TargetQuarterUserText_Test::
-	text "<TARGET>"
-	line "weighs more than"
-	cont "one quarter of"
-	cont "<USER>!"
+Power120Text_Test::
+	text "ELECTRO BALL has"
+	line "120 power!"
 	prompt
 
-TargetFifthUserText_Test::
-	text "<TARGET>"
-	line "weighs more than"
-	cont "one fifth of"
-	cont "<USER>!"
+Power150Text_Test::
+	text "ELECTRO BALL has"
+	line "150 power!"
 	prompt
 
 		;"123456789123456789"

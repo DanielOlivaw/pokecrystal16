@@ -540,6 +540,8 @@ BattleAnimations::
 	dw BattleAnim_SeedFlare
 	dw BattleAnim_HeavySlam
 	dw BattleAnim_HeatCrash
+	dw BattleAnim_ElectroBall
+	dw BattleAnim_GyroBall
 
 	dw BattleAnim_SweetScent2
 
@@ -923,6 +925,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_GyroBall:
+BattleAnim_ElectroBall:
 BattleAnim_HeatCrash:
 BattleAnim_HeavySlam:
 BattleAnim_DarkVoid:

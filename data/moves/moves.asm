@@ -530,5 +530,6 @@ Moves1:
 	move EFFECT_SP_DEF_DOWN_2_HIT, 120, GRASS,    SPECIAL,   85,  5,  40 ; SEED_FLARE
 	move EFFECT_HEAVY_SLAM,          1, STEEL,    PHYSICAL, 100, 10,   0 ; HEAVY_SLAM
 	move EFFECT_HEAVY_SLAM,          1, FIRE,     PHYSICAL, 100, 10,   0 ; HEAT_CRASH
+	move EFFECT_CONDITIONAL_BOOST,  50, ELECTRIC, SPECIAL,  100, 10,   0 ; ELECTRO_BALL
+	move EFFECT_CONDITIONAL_BOOST,  50, STEEL,    PHYSICAL, 100,  5,   0 ; GYRO_BALL
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
-

@@ -519,6 +519,8 @@ MoveDescriptions1:
 	dw SeedFlareDescription
 	dw HeavySlamDescription
 	dw HeatCrashDescription
+	dw ElectroBallDescription
+	dw GyroBallDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1851,6 +1853,7 @@ RazorShellDescription:
 	next "lower DEFENSE.@"
 
 PaybackDescription:
+GyroBallDescription:
 	db   "Stronger if the"
 	next "user moves last.@"
 
@@ -2399,15 +2402,11 @@ HeatCrashDescription:
 	db   "Stronger if the"
 	next "user is heavier.@"
 
+ElectroBallDescription:
+	db   "Stronger if the"
+	next "user moves first.@"
+
 		;"123456789123456789"
-
-; GyroBallDescription:
-	; db   "Stronger if the"
-	; next "user is slower.@"
-
-; ElectroBallDescription:
-	; db   "Stronger if the"
-	; next "user is faster.@"
 
 ; StrengthSapDescription:
 	; db   "Restores HP using"

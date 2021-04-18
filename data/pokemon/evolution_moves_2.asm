@@ -16,13 +16,13 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; WARWOLF
 	dw NoEvolutionMoves2        ; CHIKORITA
 	dw NoEvolutionMoves2        ; BAYLEEF
-	dw NoEvolutionMoves2        ; MEGANIUM
+	dw MeganiumEvolutionMoves   ; MEGANIUM
 	dw NoEvolutionMoves2        ; CYNDAQUIL
 	dw NoEvolutionMoves2        ; QUILAVA
-	dw NoEvolutionMoves2        ; TYPHLOSION
+	dw TyphlosionEvolutionMoves ; TYPHLOSION
 	dw NoEvolutionMoves2        ; TOTODILE
 	dw NoEvolutionMoves2        ; CROCONAW
-	dw NoEvolutionMoves2        ; FERALIGATR
+	dw FeraligatrEvolutionMoves ; FERALIGATR
 	dw NoEvolutionMoves2        ; SENTRET
 	dw NoEvolutionMoves2        ; FURRET
 	dw NoEvolutionMoves2        ; HOOTHOOT
@@ -102,6 +102,19 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; LUGIA
 	dw NoEvolutionMoves2        ; HO_OH
 	dw NoEvolutionMoves2        ; CELEBI
+
+
+MeganiumEvolutionMoves:
+	dw PETAL_DANCE
+	db 0 ; no more evolution moves 
+
+TyphlosionEvolutionMoves:
+	dw INFERNO
+	db 0 ; no more evolution moves
+
+FeraligatrEvolutionMoves:
+	dw LIQUIDATION
+	db 0 ; no more evolution moves
 
 AnchorrageEvolutionMoves:
 	dw ANCHOR_SHOT

@@ -416,7 +416,7 @@ PikachuEvosAttacks:
 	dbw 6, QUICK_ATTACK
 	dbw 9, PLAY_NICE
 	dbw 12, THUNDER_WAVE
-	; dbw 15, ELECTRO_BALL
+	dbw 15, ELECTRO_BALL
 	dbw 18, FEINT
 	dbw 21, DOUBLE_TEAM
 	dbw 24, SPARK
@@ -440,7 +440,7 @@ RaichuAEvosAttacks:
 	dbw 6, QUICK_ATTACK
 	dbw 9, PLAY_NICE
 	dbw 12, THUNDER_WAVE
-	; dbw 15, ELECTRO_BALL
+	dbw 15, ELECTRO_BALL
 	dbw 18, FEINT
 	dbw 21, DOUBLE_TEAM
 	dbw 24, SPARK
@@ -471,7 +471,7 @@ SandshrewAEvosAttacks:
 	dbw 27, IRON_DEFENSE
 	dbw 30, SLASH
 	dbw 33, IRON_HEAD
-	; dbw 36, GYRO_BALL
+	dbw 36, GYRO_BALL
 	dbw 39, SWORDS_DANCE
 	dbw 42, HAIL
 	dbw 45, BLIZZARD
@@ -496,7 +496,7 @@ SandslashAEvosAttacks:
 	dbw 27, IRON_DEFENSE
 	dbw 30, SLASH
 	dbw 33, IRON_HEAD
-	; dbw 36, GYRO_BALL
+	dbw 36, GYRO_BALL
 	dbw 39, SWORDS_DANCE
 	dbw 42, HAIL
 	dbw 45, BLIZZARD
@@ -739,7 +739,7 @@ JigglypuffEvosAttacks:
 	dbw 30, REST
 	dbw 32, BODY_SLAM
 	dbw 35, MIMIC
-	; dbw 38, GYRO_BALL
+	dbw 38, GYRO_BALL
 	dbw 40, HYPER_VOICE
 	dbw 43, PLAY_ROUGH
 	dbw 46, DOUBLE_EDGE
@@ -764,7 +764,7 @@ WigglytuffEvosAttacks:
 	dbw 30, REST
 	dbw 32, BODY_SLAM
 	dbw 35, MIMIC
-	; dbw 38, GYRO_BALL
+	dbw 38, GYRO_BALL
 	dbw 40, HYPER_VOICE
 	dbw 43, PLAY_ROUGH
 	dbw 46, DOUBLE_EDGE
@@ -1363,7 +1363,7 @@ GolemEvosAttacks:
 	dbw 42, EXPLOSION
 	dbw 48, DOUBLE_EDGE
 	dbw 54, STONE_EDGE
-	; dbw 60, HEAVY_SLAM
+	dbw 60, HEAVY_SLAM
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -1458,8 +1458,8 @@ MagnemiteEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	; dbw 13, ELECTRO_BALL
-	; dbw 16, GYRO_BALL
+	dbw 13, ELECTRO_BALL
+	dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
 	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
@@ -1481,8 +1481,8 @@ MagnetonEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	; dbw 13, ELECTRO_BALL
-	; dbw 16, GYRO_BALL
+	dbw 13, ELECTRO_BALL
+	dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
 	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
@@ -1920,7 +1920,7 @@ KoffingEvosAttacks:
 	dbw 16, SLUDGE
 	dbw 20, SELFDESTRUCT
 	dbw 24, HAZE
-	; dbw 28, GYRO_BALL
+	dbw 28, GYRO_BALL
 	dbw 32, SLUDGE_BOMB
 	dbw 36, TOXIC
 	dbw 40, BELCH
@@ -1943,7 +1943,7 @@ WeezingGEvosAttacks:
 	dbw 16, SLUDGE
 	dbw 20, SELFDESTRUCT
 	dbw 24, HAZE
-	; dbw 28, GYRO_BALL
+	dbw 28, GYRO_BALL
 	dbw 32, SLUDGE_BOMB
 	dbw 34, DOUBLE_HIT
 	dbw 34, STRANGE_STEAM
@@ -1978,6 +1978,7 @@ ChanseyEvosAttacks:
 TangelaEvosAttacks:
 	dbww EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH
 	db 0 ; no more evolutions
+	dbw 1, NIGHT_SHADE
 	dbw 1, CONSTRICT
 	dbw 1, ABSORB
 	dbw 1, BIND
@@ -2070,7 +2071,7 @@ StaryuEvosAttacks:
 	dbw 18, SWIFT
 	dbw 22, PSYBEAM
 	dbw 25, BUBBLEBEAM
-	; dbw 29, GYRO_BALL
+	dbw 29, GYRO_BALL
 	dbw 32, BRINE
 	dbw 36, REFLECT_TYPE
 	dbw 39, LIGHT_SCREEN
@@ -2092,7 +2093,7 @@ StarmieEvosAttacks:
 	dbw 18, SWIFT
 	dbw 22, PSYBEAM
 	dbw 25, BUBBLEBEAM
-	; dbw 29, GYRO_BALL
+	dbw 29, GYRO_BALL
 	dbw 32, BRINE
 	dbw 36, REFLECT_TYPE
 	dbw 39, LIGHT_SCREEN
@@ -2167,7 +2168,7 @@ ElectabuzzEvosAttacks:
 	dbw 5, SWIFT
 	dbw 10, THUNDER_WAVE
 	dbw 15, SHOCK_WAVE
-	; dbw 20, ELECTRO_BALL
+	dbw 20, ELECTRO_BALL
 	dbw 25, SCREECH
 	dbw 30, THUNDERPUNCH
 	dbw 35, DISCHARGE
@@ -2492,7 +2493,7 @@ SnorlaxEvosAttacks:
 	dbw 25, SLEEP_TALK
 	dbw 29, CRUNCH
 	dbw 32, BODY_SLAM
-	; dbw 36, HEAVY_SLAM
+	dbw 36, HEAVY_SLAM
 	dbw 39, AMNESIA
 	dbw 43, HIGH_HORSEPOWER
 	dbw 46, HAMMER_ARM

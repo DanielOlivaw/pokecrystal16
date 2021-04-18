@@ -1,3 +1,4 @@
+; BattleCommand_HeavySlam:
 HeavySlamPower:
 ; t = target's weight, u = user's weight
 ; relative weight  power
@@ -7,8 +8,6 @@ HeavySlamPower:
 ; u/4 > t > u/5    100
 ; u/5 > t          120
 
-	push bc
-	push de
 	ld a, [hBattleTurn]
 	and a
 	jr z, .player_turn
@@ -82,31 +81,31 @@ HeavySlamPower:
 ; If target weighs less than 1/5 of the user's weight, set power to 120.
 	pop de
 	pop bc
-	farcall HeavySlam_LessThanFifthWeight
+	farcall LoadMovePower120
 	ret
 
 .more_than_half
 	pop de
 	pop bc
-	farcall HeavySlam_HalfWeight
+	farcall LoadMovePower40
 	ret
 
 .more_than_third
 	pop de
 	pop bc
-	farcall HeavySlam_ThirdWeight
+	farcall LoadMovePower60
 	ret
 
 .more_than_quarter
 	pop de
 	pop bc
-	farcall HeavySlam_QuarterWeight
+	farcall LoadMovePower80
 	ret
 
 .more_than_fifth
 	pop de
 	pop bc
-	farcall HeavySlam_FifthWeight
+	farcall LoadMovePower100
 	ret
 
 .compare_weights

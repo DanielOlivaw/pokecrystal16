@@ -519,6 +519,8 @@
 	const SEED_FLARE
 	const HEAVY_SLAM
 	const HEAT_CRASH
+	const ELECTRO_BALL
+	const GYRO_BALL
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
