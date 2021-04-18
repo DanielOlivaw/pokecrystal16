@@ -946,6 +946,10 @@ VenomothEvosAttacks:
 MeowthGEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, PERRSERKER
 	db 0 ; no more evolutions
+	dbw 1, THIEF
+	dbw 1, FEINT
+	dbw 1, NASTY_PLOT
+	dbw 1, PLAY_ROUGH
 	dbw 1, FAKE_OUT
 	dbw 1, GROWL
 	dbw 5, SCRATCH
@@ -1978,8 +1982,8 @@ TangelaEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, BIND
 	dbw 4, STUN_SPORE
-	dbw 8, GROWTH
-	dbw 12, MEGA_DRAIN
+	dbw 7, GROWTH
+	dbw 10, MEGA_DRAIN
 	dbw 16, VINE_WHIP
 	dbw 17, INGRAIN
 	dbw 20, POISONPOWDER

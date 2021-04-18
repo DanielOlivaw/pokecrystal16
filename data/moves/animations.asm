@@ -539,6 +539,7 @@ BattleAnimations::
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_SeedFlare
 	dw BattleAnim_HeavySlam
+	dw BattleAnim_HeatCrash
 
 	dw BattleAnim_SweetScent2
 
@@ -922,6 +923,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_HeatCrash:
 BattleAnim_HeavySlam:
 BattleAnim_DarkVoid:
 BattleAnim_SeedFlare:

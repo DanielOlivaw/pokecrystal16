@@ -518,6 +518,7 @@ MoveDescriptions1:
 	dw DarkVoidDescription
 	dw SeedFlareDescription
 	dw HeavySlamDescription
+	dw HeatCrashDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2394,6 +2395,7 @@ SeedFlareDescription:
 	next "foe's SPCL.DEF.@"
 
 HeavySlamDescription:
+HeatCrashDescription:
 	db   "Stronger if the"
 	next "user is heavier.@"
 

@@ -529,5 +529,6 @@ Moves1:
 	move EFFECT_SLEEP,               0, DARK,     STATUS,    80, 10,   0 ; DARK_VOID
 	move EFFECT_SP_DEF_DOWN_2_HIT, 120, GRASS,    SPECIAL,   85,  5,  40 ; SEED_FLARE
 	move EFFECT_HEAVY_SLAM,          1, STEEL,    PHYSICAL, 100, 10,   0 ; HEAVY_SLAM
+	move EFFECT_HEAVY_SLAM,          1, FIRE,     PHYSICAL, 100, 10,   0 ; HEAT_CRASH
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name
 

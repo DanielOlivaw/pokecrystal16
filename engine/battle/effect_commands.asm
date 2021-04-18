@@ -7635,6 +7635,26 @@ BattleCommand_HeavySlam:
 	farcall HeavySlamPower
 	ret
 
+HeavySlam_HalfWeight:
+	ld d, 40
+	ret
+
+HeavySlam_ThirdWeight:
+	ld d, 60
+	ret
+
+HeavySlam_QuarterWeight:
+	ld d, 80
+	ret
+
+HeavySlam_FifthWeight:
+	ld d, 100
+	ret
+
+HeavySlam_LessThanFifthWeight:
+	ld d, 120
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens

@@ -106,24 +106,80 @@ EvosAttacksPointers2::
 TangelEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, TANGELA
 	db 0 ; no more evolutions
-	dbw 1, POUND
+	dbw 1, CONSTRICT
+	dbw 1, ABSORB
+	dbw 1, BIND
+	dbw 4, STUN_SPORE
+	dbw 7, GROWTH
+	dbw 10, MEGA_DRAIN
+	dbw 13, NIGHT_SHADE
+	dbw 16, VINE_WHIP
+	dbw 19, POISONPOWDER
+	dbw 22, KNOCK_OFF
+	dbw 25, SLEEP_POWDER
+	dbw 28, GIGA_DRAIN
+	dbw 31, SLAM
+	dbw 34, TICKLE
+	dbw 37, WRING_OUT
+	dbw 40, POWER_WHIP
 	db 0 ; no more level-up moves
 
 MolancoraEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 38, TR_ANYTIME, ANCHORRAGE
 	db 0 ; no more evolutions
-	dbw 1, POUND
+	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 4, WATER_GUN
+	dbw 8, RAGE
+	dbw 12, DOUBLE_TEAM
+	dbw 16, SLAM
+	dbw 20, METAL_SOUND
+	dbw 24, IRON_HEAD
+	dbw 28, SCARY_FACE
+	dbw 32, THRASH
+	dbw 36, AQUA_TAIL
+	dbw 40, IRON_DEFENSE
+	dbw 44, IRON_TAIL
+	dbw 48, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AnchorrageEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, POUND
+	dbw 1, WRING_OUT
+	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 4, WATER_GUN
+	dbw 8, RAGE
+	dbw 12, DOUBLE_TEAM
+	dbw 16, SLAM
+	dbw 20, METAL_SOUND
+	dbw 24, IRON_HEAD
+	dbw 28, SCARY_FACE
+	dbw 32, THRASH
+	dbw 36, AQUA_TAIL
+	dbw 37, ANCHOR_SHOT
+	dbw 41, CRUNCH
+	dbw 46, IRON_DEFENSE
+	dbw 51, IRON_TAIL
+	dbw 56, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 MeowsyEvosAttacks:
 	dbww EVOLVE_MOVE, METAL_CLAW, MEOWTH_G
 	db 0 ; no more evolutions
-	dbw 1, POUND
+	dbw 1, FAKE_OUT
+	dbw 1, GROWL
+	dbw 5, SCRATCH
+	dbw 9, PAY_DAY
+	dbw 12, THIEF
+	dbw 14, METAL_CLAW
+	dbw 17, FEINT ;HONE_CLAWS
+	dbw 22, SWAGGER
+	dbw 27, FURY_SWIPES
+	dbw 32, SCREECH
+	dbw 37, SLASH
+	dbw 42, NASTY_PLOT ;METAL_SOUND
+	dbw 47, PLAY_ROUGH ;THRASH
 	db 0 ; no more level-up moves
 
 RinrinEvosAttacks:

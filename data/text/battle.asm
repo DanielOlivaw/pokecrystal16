@@ -1672,7 +1672,32 @@ TargetIsLighterText_Test::
 	line "is lighter!"
 	prompt
 
-TargetIsHeavierText_Test::
+TargetHalfUserText_Test::
 	text "<TARGET>"
-	line "is heavier!"
+	line "weighs more than"
+	cont "half of"
+	cont "<USER>!"
 	prompt
+
+TargetThirdUserText_Test::
+	text "<TARGET>"
+	line "weighs more than"
+	cont "one third of"
+	cont "<USER>!"
+	prompt
+
+TargetQuarterUserText_Test::
+	text "<TARGET>"
+	line "weighs more than"
+	cont "one quarter of"
+	cont "<USER>!"
+	prompt
+
+TargetFifthUserText_Test::
+	text "<TARGET>"
+	line "weighs more than"
+	cont "one fifth of"
+	cont "<USER>!"
+	prompt
+
+		;"123456789123456789"

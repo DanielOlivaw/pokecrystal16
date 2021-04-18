@@ -2898,7 +2898,7 @@ HeavySlam:
 	damagecalc
 	stab
 	damagevariation
-	; conditionalboost
+	conditionalboost
 	checkhit
 	moveanim
 	failuretext

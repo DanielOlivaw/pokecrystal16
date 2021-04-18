@@ -511,4 +511,5 @@ MoveNames::
 	db "DARK VOID@"
 	db "SEED FLARE@"
 	db "HEAVY SLAM@"
+	db "HEAT CRASH@"
 	  ;"123456123456@"

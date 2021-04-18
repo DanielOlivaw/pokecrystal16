@@ -119,6 +119,8 @@ Find_ConditionalBoost:
 
 	cp EFFECT_BODY_SLAM
 	jr z, BattleCommand_DoubleMinimizeDamage
+	cp EFFECT_HEAVY_SLAM
+	jr z, BattleCommand_DoubleMinimizeDamage
 	cp EFFECT_MAGNITUDE
 	jr z, BattleCommand_DoubleUndergroundDamage
 	cp EFFECT_EARTHQUAKE
