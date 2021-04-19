@@ -2909,3 +2909,16 @@ HeavySlam:
 	buildopponentrage
 	kingsrock
 	endmove
+
+StrengthSap:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	lowersub
+	statdownanim
+	strengthsap
+	raisesub
+	statdownmessage
+	statdownfailtext
+	endmove

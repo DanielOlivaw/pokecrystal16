@@ -521,6 +521,9 @@ MoveDescriptions1:
 	dw HeatCrashDescription
 	dw ElectroBallDescription
 	dw GyroBallDescription
+	dw RefreshDescription
+	dw EndeavorDescription
+	dw StrengthSapDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2410,8 +2413,12 @@ RefreshDescription:
 	db   "Cures paralysis,"
 	next "poison, or a burn.@"
 
-		;"123456789123456789"
+EndeavorDescription:
+	db   "Cuts the foe's HP"
+	next "to match the user.@"
 
-; StrengthSapDescription:
-	; db   "Restores HP using"
-	; next "the foe's ATTACK.@"
+StrengthSapDescription:
+	db   "Restores HP using"
+	next "the foe's ATTACK.@"
+
+		;"123456789123456789"

@@ -522,6 +522,8 @@
 	const ELECTRO_BALL
 	const GYRO_BALL
 	const REFRESH
+	const ENDEAVOR
+	const STRENGTH_SAP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

@@ -543,6 +543,8 @@ BattleAnimations::
 	dw BattleAnim_ElectroBall
 	dw BattleAnim_GyroBall
 	dw BattleAnim_Refresh
+	dw BattleAnim_Endeavor
+	dw BattleAnim_StrengthSap
 
 	dw BattleAnim_SweetScent2
 
@@ -926,6 +928,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_StrengthSap:
+BattleAnim_Endeavor:
 BattleAnim_Refresh:
 BattleAnim_GyroBall:
 BattleAnim_ElectroBall:

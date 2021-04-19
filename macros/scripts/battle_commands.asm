@@ -195,6 +195,7 @@ ENDM
 	command craftyshield            ; bc
 	command burn                    ; bd
 	command heavyslam               ; be
+	command strengthsap             ; bf
 
 	enum_start $fe
 	command endturn                 ; fe

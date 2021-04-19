@@ -533,4 +533,6 @@ Moves1:
 	move EFFECT_CONDITIONAL_BOOST,  50, ELECTRIC, SPECIAL,  100, 10,   0 ; ELECTRO_BALL
 	move EFFECT_CONDITIONAL_BOOST,  50, STEEL,    PHYSICAL, 100,  5,   0 ; GYRO_BALL
 	move EFFECT_STATUS_SELF,         0, NORMAL,   STATUS,   100, 20,   0 ; REFRESH
+	move EFFECT_ENDEAVOR,            1, NORMAL,   PHYSICAL, 100,  5,   0 ; ENDEAVOR
+	move EFFECT_STRENGTH_SAP,        0, GRASS,    STATUS,   100, 10,   0 ; STRENGTH_SAP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

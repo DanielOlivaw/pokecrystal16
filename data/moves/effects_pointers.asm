@@ -217,3 +217,5 @@ MoveEffectsPointers:
 	dw Memento                ; EFFECT_MEMENTO
 	dw HealingWish            ; EFFECT_HEALING_WISH
 	dw HeavySlam              ; EFFECT_HEAVY_SLAM
+	dw StaticDamage           ; EFFECT_ENDEAVOR
+	dw StrengthSap            ; EFFECT_STRENGTH_SAP

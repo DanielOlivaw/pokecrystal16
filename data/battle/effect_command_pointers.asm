@@ -194,3 +194,4 @@ BattleCommandPointers:
 	dw BattleCommand_CraftyShield
 	dw BattleCommand_Burn
 	dw BattleCommand_HeavySlam
+	dw BattleCommand_StrengthSap

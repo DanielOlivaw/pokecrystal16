@@ -515,4 +515,6 @@ MoveNames::
 	db "ELECTRO BALL@"
 	db "GYRO BALL@"
 	db "REFRESH@"
+	db "ENDEAVOR@"
+	db "STRENGTH SAP@"
 	  ;"123456123456@"

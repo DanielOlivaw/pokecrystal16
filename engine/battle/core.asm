@@ -2033,24 +2033,43 @@ GetMaxHP:
 	ld c, a
 	ret
 
-Unreferenced_GetHalfHP:
-	ld hl, wBattleMonHP
+StrengthSapAttackHeal:
+; Load opponent's attack as amount to heal.
+; output: bc, wBuffer1-2
+
+	ld hl, wEnemyMonAttack
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .ok
-	ld hl, wEnemyMonHP
+	ld hl, wBattleMonAttack
 .ok
 	ld a, [hli]
-	ld b, a
-	ld a, [hli]
-	ld c, a
-	srl b
-	rr c
-	ld a, [hli]
 	ld [wBuffer2], a
+	ld b, a
+
 	ld a, [hl]
 	ld [wBuffer1], a
+	ld c, a
 	ret
+
+; Unreferenced_GetHalfHP:
+	; ld hl, wBattleMonHP
+	; ldh a, [hBattleTurn]
+	; and a
+	; jr z, .ok
+	; ld hl, wEnemyMonHP
+; .ok
+	; ld a, [hli]
+	; ld b, a
+	; ld a, [hli]
+	; ld c, a
+	; srl b
+	; rr c
+	; ld a, [hli]
+	; ld [wBuffer2], a
+	; ld a, [hl]
+	; ld [wBuffer1], a
+	; ret
 
 CheckUserHasEnoughHP:
 	ld hl, wBattleMonHP + 1

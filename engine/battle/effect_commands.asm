@@ -3851,7 +3851,7 @@ BattleCommand_ConstantDamage:
 	cp EFFECT_LEVEL_DAMAGE
 	ld b, [hl]
 	ld a, 0
-	jr z, .got_power
+	jp z, .got_power
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -3860,16 +3860,18 @@ BattleCommand_ConstantDamage:
 
 	cp EFFECT_SUPER_FANG
 	jr z, .super_fang
+	; cp EFFECT_ENDEAVOR
+	; jr z, .endeavor
 	cp EFFECT_FINAL_GAMBIT
 	jr z, .final_gambit
 
 	cp EFFECT_REVERSAL
-	jr z, .reversal
+	jp z, .reversal
 	cp EFFECT_WATER_SPOUT
-	jr z, .reversal
+	jp z, .reversal
 
 	cp EFFECT_WRING_OUT
-	jr z, .wring_out
+	jp z, .wring_out
 
 	ld a, BATTLE_VARS_MOVE_POWER
 	call GetBattleVar
@@ -3904,16 +3906,44 @@ BattleCommand_ConstantDamage:
 	ld b, a
 	ld a, [hl]
 	rr a
-	push af
-	ld a, b
-	pop bc
-	and a
-	jr nz, .got_power
-	or b
-	ld a, 0
-	jr nz, .got_power
-	ld b, 1
-	jr .got_power
+	jr .get_power
+
+; .endeavor
+	; ld hl, wEnemyMonHP
+	; ld bc, wBattleMonHP
+	; ldh a, [hBattleTurn]
+	; and a
+	; jr z, .got_both_hp
+	; ld hl, wBattleMonHP
+	; ld bc, wEnemyMonHP
+; .got_both_hp
+	;; subtract bc from hl
+	; push bc
+	; ld a, b
+	; cpl
+	; ld b, a
+	; ld a, c
+	; cpl
+	; ld c, a
+	; inc bc
+	; add hl, bc
+	; pop bc
+
+	; ld a, [hli]
+	; ld b, a
+	; ld a, [hl]
+	; push af
+	; ld a, b
+	; pop bc
+	; and a
+	; jr nz, .got_power
+	; or b
+	; ld a, 0
+	; jr nz, .got_power
+	; ld a, 1
+	; ld [wFailedMessage], a
+	; ld [wAttackMissed], a
+	; ret
 
 .final_gambit
 	ld hl, wBattleMonHP
@@ -3925,6 +3955,7 @@ BattleCommand_ConstantDamage:
 	ld a, [hli]
 	ld b, a
 	ld a, [hl]
+.get_power
 	push af
 	ld a, b
 	pop bc
@@ -7285,21 +7316,8 @@ BattleCommand_Heal:
 	jr z, .restore_full_hp
 	ld hl, GetHalfMaxHP
 	call CallBattleCore
-	jr .finish
-
-.restore_full_hp
-	ld hl, GetMaxHP
-	call CallBattleCore
-.finish
 	call AnimateCurrentMove
-	call BattleCommand_SwitchTurn
-	ld hl, RestoreHP
-	call CallBattleCore
-	call BattleCommand_SwitchTurn
-	call UpdateUserInParty
-	call RefreshBattleHuds
-	ld hl, RegainedHealthText
-	jp StdBattleTextbox
+	jr FinishRestoreHP
 
 .hp_full
 	ld a, 1
@@ -7314,6 +7332,44 @@ BattleCommand_Heal:
 	call AnimateFailedMove
 	ld hl, CantSleepText
 	jp StdBattleTextbox
+
+.restore_full_hp
+	ld hl, GetMaxHP
+	call CallBattleCore
+	call AnimateCurrentMove
+FinishRestoreHP:
+	call BattleCommand_SwitchTurn
+	ld hl, RestoreHP
+	call CallBattleCore
+	call BattleCommand_SwitchTurn
+	call UpdateUserInParty
+	call RefreshBattleHuds
+	ld hl, RegainedHealthText
+	jp StdBattleTextbox
+
+BattleCommand_StrengthSap:
+; Heal user by an amount equal to opponent's attack, then lower opponent's attack.
+	ld de, wBattleMonHP
+	ld hl, wBattleMonMaxHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld de, wEnemyMonHP
+	ld hl, wEnemyMonMaxHP
+.got_hp
+	ld c, 2
+	call CompareBytes
+	jr z, .hp_full
+
+	ld hl, StrengthSapAttackHeal
+	call CallBattleCore
+	call FinishRestoreHP
+	jp BattleCommand_AttackDown
+
+.hp_full
+	ld hl, HPIsFullText
+	call StdBattleTextbox
+	jp BattleCommand_AttackDown
 
 INCLUDE "engine/battle/move_effects/transform.asm"
 
