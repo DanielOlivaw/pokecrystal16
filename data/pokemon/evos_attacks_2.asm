@@ -694,7 +694,7 @@ TogepiEvosAttacks:
 	dbw 40, SAFEGUARD
 	dbw 45, DOUBLE_EDGE
 	dbw 50, BATON_PASS
-	dbw 55, WISH
+	; dbw 55, WISH
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
@@ -714,7 +714,7 @@ TogeticEvosAttacks:
 	dbw 40, SAFEGUARD
 	dbw 45, DOUBLE_EDGE
 	dbw 50, BATON_PASS
-	dbw 55, WISH
+	; dbw 55, WISH
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:

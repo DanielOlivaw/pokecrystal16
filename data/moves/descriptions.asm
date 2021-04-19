@@ -2406,6 +2406,10 @@ ElectroBallDescription:
 	db   "Stronger if the"
 	next "user moves first.@"
 
+RefreshDescription:
+	db   "Cures paralysis,"
+	next "poison, or a burn.@"
+
 		;"123456789123456789"
 
 ; StrengthSapDescription:

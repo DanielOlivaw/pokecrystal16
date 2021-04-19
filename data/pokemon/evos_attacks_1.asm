@@ -1981,7 +1981,7 @@ ChanseyEvosAttacks:
 	dbw 1, POUND
 	dbw 5, TAIL_WHIP
 	dbw 9, DOUBLESLAP
-	; dbw 13, REFRESH
+	dbw 13, REFRESH
 	dbw 17, ECHOED_VOICE
 	dbw 21, SING
 	dbw 25, TAKE_DOWN
@@ -2310,7 +2310,7 @@ EeveeEvosAttacks:
 	dbw 15, BABY_DOLL_EYES
 	dbw 20, SWIFT
 	dbw 25, BITE
-	; dbw 30, REFRESH
+	dbw 30, REFRESH
 	dbw 35, BATON_PASS
 	dbw 40, TAKE_DOWN
 	dbw 45, CHARM

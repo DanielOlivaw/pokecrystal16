@@ -532,4 +532,5 @@ Moves1:
 	move EFFECT_HEAVY_SLAM,          1, FIRE,     PHYSICAL, 100, 10,   0 ; HEAT_CRASH
 	move EFFECT_CONDITIONAL_BOOST,  50, ELECTRIC, SPECIAL,  100, 10,   0 ; ELECTRO_BALL
 	move EFFECT_CONDITIONAL_BOOST,  50, STEEL,    PHYSICAL, 100,  5,   0 ; GYRO_BALL
+	move EFFECT_STATUS_SELF,         0, NORMAL,   STATUS,   100, 20,   0 ; REFRESH
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

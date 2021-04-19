@@ -514,4 +514,5 @@ MoveNames::
 	db "HEAT CRASH@"
 	db "ELECTRO BALL@"
 	db "GYRO BALL@"
+	db "REFRESH@"
 	  ;"123456123456@"

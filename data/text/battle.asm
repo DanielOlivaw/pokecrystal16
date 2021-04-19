@@ -837,6 +837,12 @@ SoothingAromaText:
 	line "wafted through!"
 	prompt
 
+StatusReturnedToNormalText:
+	text "<USER>'s"
+	line "status returned to"
+	cont "normal!"
+	prompt
+
 FellAsleepText:
 	text "<TARGET>"
 	line "fell asleep!"

@@ -163,6 +163,12 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_MagnetRise
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, REFRESH
+	call CompareMove2
+	jp z, BattleCommand_Refresh
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_SUNLIGHT_HEAL
