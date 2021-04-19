@@ -410,48 +410,54 @@ RaticateAEvosAttacks:
 PikachuEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, RAICHU_A
 	db 0 ; no more evolutions
-	dbw 1, TAIL_WHIP
+	dbw 1, PLAY_NICE
+	dbw 1, SWEET_KISS
+	dbw 1, NUZZLE
+	dbw 1, NASTY_PLOT
+	dbw 1, CHARM
 	dbw 1, THUNDERSHOCK
-	dbw 3, GROWL
-	dbw 6, QUICK_ATTACK
-	dbw 9, PLAY_NICE
+	dbw 1, TAIL_WHIP
+	dbw 4, GROWL
+	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
-	dbw 15, ELECTRO_BALL
-	dbw 18, FEINT
-	dbw 21, DOUBLE_TEAM
-	dbw 24, SPARK
-	dbw 27, NUZZLE
-	dbw 30, DISCHARGE
-	dbw 33, SLAM
-	dbw 36, THUNDERBOLT
-	dbw 39, AGILITY
-	dbw 42, WILD_CHARGE
-	dbw 45, LIGHT_SCREEN
-	dbw 48, THUNDER
+	dbw 16, DOUBLE_TEAM
+	dbw 20, ELECTRO_BALL
+	dbw 24, FEINT
+	dbw 28, SPARK
+	dbw 32, DISCHARGE
+	dbw 36, SLAM
+	dbw 40, THUNDERBOLT
+	dbw 44, AGILITY
+	dbw 48, WILD_CHARGE
+	dbw 52, LIGHT_SCREEN
+	dbw 56, THUNDER
 	db 0 ; no more level-up moves
 
 RaichuAEvosAttacks:
 	db 0 ; no more evolutions
 	; dbw 1, SPEED_SWAP
-	dbw 1, TAIL_WHIP
+	dbw 1, PLAY_NICE
+	dbw 1, SWEET_KISS
+	dbw 1, NUZZLE
+	dbw 1, NASTY_PLOT
+	dbw 1, CHARM
 	dbw 1, THUNDERSHOCK
+	dbw 1, TAIL_WHIP
 	dbw 1, PSYCHIC
-	dbw 3, GROWL
-	dbw 6, QUICK_ATTACK
-	dbw 9, PLAY_NICE
+	dbw 4, GROWL
+	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
-	dbw 15, ELECTRO_BALL
-	dbw 18, FEINT
-	dbw 21, DOUBLE_TEAM
-	dbw 24, SPARK
-	dbw 27, NUZZLE
-	dbw 30, DISCHARGE
-	dbw 33, SLAM
-	dbw 36, THUNDERBOLT
-	dbw 39, AGILITY
-	dbw 42, WILD_CHARGE
-	dbw 45, LIGHT_SCREEN
-	dbw 48, THUNDER
+	dbw 16, DOUBLE_TEAM
+	dbw 20, ELECTRO_BALL
+	dbw 24, FEINT
+	dbw 28, SPARK
+	dbw 32, DISCHARGE
+	dbw 36, SLAM
+	dbw 40, THUNDERBOLT
+	dbw 44, AGILITY
+	dbw 48, WILD_CHARGE
+	dbw 52, LIGHT_SCREEN
+	dbw 56, THUNDER
 	db 0 ; no more level-up moves
 
 SandshrewAEvosAttacks:
@@ -625,11 +631,15 @@ NidokingEvosAttacks:
 ClefairyEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, CLEFABLE
 	db 0 ; no more evolutions
-	dbw 1, GROWL
-	dbw 1, POUND
+	dbw 1, SPLASH
+	dbw 1, SING
+	dbw 1, SWEET_KISS
 	dbw 1, DISARMING_VOICE
 	dbw 1, ENCORE
-	dbw 4, SING
+	dbw 1, CHARM
+	dbw 1, MAGICAL_LEAF
+	dbw 1, POUND
+	dbw 4, GROWL
 	dbw 8, DOUBLESLAP
 	dbw 12, DEFENSE_CURL
 	dbw 16, MINIMIZE
@@ -637,20 +647,24 @@ ClefairyEvosAttacks:
 	dbw 24, METRONOME
 	dbw 28, LUCKY_CHANT
 	dbw 32, BODY_SLAM
-	dbw 36, COSMIC_POWER
+	dbw 36, MOONLIGHT
 	dbw 40, METEOR_MASH
-	dbw 44, MOONLIGHT
+	dbw 44, COSMIC_POWER
 	dbw 48, MOONBLAST
 	dbw 52, HEALING_WISH
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, GROWL
-	dbw 1, POUND
+	dbw 1, SPLASH
+	dbw 1, SING
+	dbw 1, SWEET_KISS
 	dbw 1, DISARMING_VOICE
 	dbw 1, ENCORE
-	dbw 4, SING
+	dbw 1, CHARM
+	dbw 1, MAGICAL_LEAF
+	dbw 1, POUND
+	dbw 4, GROWL
 	dbw 8, DOUBLESLAP
 	dbw 12, DEFENSE_CURL
 	dbw 16, MINIMIZE
@@ -658,9 +672,9 @@ ClefableEvosAttacks:
 	dbw 24, METRONOME
 	dbw 28, LUCKY_CHANT
 	dbw 32, BODY_SLAM
-	dbw 36, COSMIC_POWER
+	dbw 36, MOONLIGHT
 	dbw 40, METEOR_MASH
-	dbw 44, MOONLIGHT
+	dbw 44, COSMIC_POWER
 	dbw 48, MOONBLAST
 	dbw 52, HEALING_WISH
 	db 0 ; no more level-up moves
@@ -723,51 +737,55 @@ NinetalesAEvosAttacks:
 JigglypuffEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, WIGGLYTUFF
 	db 0 ; no more evolutions
+	dbw 1, SWEET_KISS
+	dbw 1, DISARMING_VOICE
+	dbw 1, DISABLE
+	dbw 1, CHARM
 	dbw 1, SING
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
-	dbw 3, ECHOED_VOICE
-	dbw 6, PLAY_NICE
-	dbw 8, DOUBLESLAP
-	dbw 11, DISARMING_VOICE
-	dbw 14, DISABLE
-	dbw 16, COVET
-	dbw 19, ROLLOUT
-	dbw 22, ROUND_M
-	dbw 24, STOCKPILE
-	dbw 27, WAKE_UP_SLAP
-	dbw 30, REST
-	dbw 32, BODY_SLAM
-	dbw 35, MIMIC
-	dbw 38, GYRO_BALL
-	dbw 40, HYPER_VOICE
-	dbw 43, PLAY_ROUGH
-	dbw 46, DOUBLE_EDGE
+	dbw 4, ECHOED_VOICE
+	dbw 7, PLAY_NICE
+	dbw 11, DOUBLESLAP
+	dbw 14, COVET
+	dbw 18, ROLLOUT
+	dbw 21, ROUND_M
+	dbw 25, STOCKPILE
+	dbw 28, WAKE_UP_SLAP
+	dbw 32, REST
+	dbw 35, BODY_SLAM
+	dbw 39, MIMIC
+	dbw 42, GYRO_BALL
+	dbw 46, HYPER_VOICE
+	dbw 49, PLAY_ROUGH
+	dbw 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
 	; dbw 1, GRAV_APPLE
+	dbw 1, SWEET_KISS
+	dbw 1, DISARMING_VOICE
+	dbw 1, DISABLE
+	dbw 1, CHARM
 	dbw 1, SING
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
-	dbw 3, ECHOED_VOICE
-	dbw 6, PLAY_NICE
-	dbw 8, DOUBLESLAP
-	dbw 11, DISARMING_VOICE
-	dbw 14, DISABLE
-	dbw 16, COVET
-	dbw 19, ROLLOUT
-	dbw 22, ROUND_M
-	dbw 24, STOCKPILE
-	dbw 27, WAKE_UP_SLAP
-	dbw 30, REST
-	dbw 32, BODY_SLAM
-	dbw 35, MIMIC
-	dbw 38, GYRO_BALL
-	dbw 40, HYPER_VOICE
-	dbw 43, PLAY_ROUGH
-	dbw 46, DOUBLE_EDGE
+	dbw 4, ECHOED_VOICE
+	dbw 7, PLAY_NICE
+	dbw 11, DOUBLESLAP
+	dbw 14, COVET
+	dbw 18, ROLLOUT
+	dbw 21, ROUND_M
+	dbw 25, STOCKPILE
+	dbw 28, WAKE_UP_SLAP
+	dbw 32, REST
+	dbw 35, BODY_SLAM
+	dbw 39, MIMIC
+	dbw 42, GYRO_BALL
+	dbw 46, HYPER_VOICE
+	dbw 49, PLAY_ROUGH
+	dbw 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ZubatEvosAttacks:

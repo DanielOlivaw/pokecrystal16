@@ -24,21 +24,21 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; CROCONAW
 	dw FeraligatrEvolutionMoves ; FERALIGATR
 	dw NoEvolutionMoves2        ; SENTRET
-	dw NoEvolutionMoves2        ; FURRET
+	dw FurretEvolutionMoves     ; FURRET
 	dw NoEvolutionMoves2        ; HOOTHOOT
 	dw NoEvolutionMoves2        ; NOCTOWL
 	dw NoEvolutionMoves2        ; LEDYBA
 	dw NoEvolutionMoves2        ; LEDIAN
 	dw NoEvolutionMoves2        ; SPINARAK
-	dw NoEvolutionMoves2        ; ARIADOS
-	dw NoEvolutionMoves2        ; CROBAT
+	dw AriadosEvolutionMoves    ; ARIADOS
+	dw CrobatEvolutionMoves     ; CROBAT
 	dw NoEvolutionMoves2        ; CHINCHOU
-	dw NoEvolutionMoves2        ; LANTURN
+	dw LanturnEvolutionMoves    ; LANTURN
 	dw NoEvolutionMoves2        ; PICHU
 	dw NoEvolutionMoves2        ; CLEFFA
 	dw NoEvolutionMoves2        ; IGGLYBUFF
 	dw NoEvolutionMoves2        ; TOGEPI
-	dw NoEvolutionMoves2        ; TOGETIC
+	dw TogeticEvolutionMoves    ; TOGETIC
 	dw NoEvolutionMoves2        ; NATU
 	dw NoEvolutionMoves2        ; XATU
 	dw NoEvolutionMoves2        ; MAREEP
@@ -103,6 +103,9 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; HO_OH
 	dw NoEvolutionMoves2        ; CELEBI
 
+AnchorrageEvolutionMoves:
+	dw ANCHOR_SHOT
+	db 0 ; no more evolution moves
 
 MeganiumEvolutionMoves:
 	dw PETAL_DANCE
@@ -116,8 +119,26 @@ FeraligatrEvolutionMoves:
 	dw LIQUIDATION
 	db 0 ; no more evolution moves
 
-AnchorrageEvolutionMoves:
-	dw ANCHOR_SHOT
+FurretEvolutionMoves:
+	dw AGILITY
+	dw COIL
+	db 0 ; no more evolution moves
+
+AriadosEvolutionMoves:
+	dw SWORDS_DANCE
+	dw BUG_BITE
+	db 0 ; no more evolution moves
+
+CrobatEvolutionMoves:
+	dw CROSS_POISON
+	db 0 ; no more evolution moves
+
+LanturnEvolutionMoves:
+	dw STOCKPILE
+	db 0 ; no more evolution moves
+
+TogeticEvolutionMoves:
+	dw FAIRY_WIND
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

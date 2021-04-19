@@ -1667,29 +1667,9 @@ TransformedIntoWaterTypeText::
 	cont "the WATER type!"
 	prompt
 
-Power40Text_Test::
-	text "ELECTRO BALL has"
-	line "40 power!"
-	prompt
-
-Power60Text_Test::
-	text "ELECTRO BALL has"
-	line "60 power!"
-	prompt
-
-Power80Text_Test::
-	text "ELECTRO BALL has"
-	line "80 power!"
-	prompt
-
-Power120Text_Test::
-	text "ELECTRO BALL has"
-	line "120 power!"
-	prompt
-
-Power150Text_Test::
-	text "ELECTRO BALL has"
-	line "150 power!"
-	prompt
+; Power40Text_Test::
+	; text "ELECTRO BALL has"
+	; line "40 power!"
+	; prompt
 
 		;"123456789123456789"

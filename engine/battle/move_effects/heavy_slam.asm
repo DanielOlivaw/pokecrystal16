@@ -8,6 +8,8 @@ HeavySlamPower:
 ; u/4 > t > u/5    100
 ; u/5 > t          120
 
+	push bc
+	push de
 	ld a, [hBattleTurn]
 	and a
 	jr z, .player_turn
