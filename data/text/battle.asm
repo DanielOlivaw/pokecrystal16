@@ -591,6 +591,15 @@ ClampedByText:
 	cont "<USER>!"
 	prompt
 
+CaughtInJawsText:
+	text "<TARGET>"
+	line "was caught in"
+	cont "<USER>'s"
+	cont "jaws!"
+	prompt
+
+		;"123456789123456789"
+
 StoringEnergyText:
 	text "<USER>"
 	line "is storing energy!"

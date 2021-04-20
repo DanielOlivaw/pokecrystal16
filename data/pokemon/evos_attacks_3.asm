@@ -286,7 +286,15 @@ HariyamaEvosAttacks:
 AzurillEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MARILL
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SPLASH
+	dbw 1, WATER_GUN
+	dbw 3, TAIL_WHIP
+	dbw 6, BUBBLE
+	dbw 9, CHARM
+	dbw 12, BUBBLEBEAM
+	dbw 15, SLAM
+	dbw 18, BOUNCY_TAIL
+	dbw 21, BOUNCE
 	db 0 ; no more level-up moves
 
 NosepassEvosAttacks:

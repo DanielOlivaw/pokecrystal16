@@ -548,6 +548,13 @@ BattleAnimations::
 	dw BattleAnim_Swallow
 	dw BattleAnim_SpitUp
 	dw BattleAnim_Judgement
+	dw BattleAnim_MagnetGrip
+	dw BattleAnim_JawClamp
+	dw BattleAnim_FeyFury
+	dw BattleAnim_BouncyTail
+	dw BattleAnim_MistyAmbush
+	dw BattleAnim_GuileFang
+	dw BattleAnim_DataPulse
 
 	dw BattleAnim_SweetScent2
 
@@ -931,6 +938,13 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_MistyAmbush:
+BattleAnim_DataPulse:
+BattleAnim_GuileFang:
+BattleAnim_MagnetGrip:
+BattleAnim_JawClamp:
+BattleAnim_FeyFury:
+BattleAnim_BouncyTail:
 BattleAnim_Judgement:
 BattleAnim_Swallow:
 BattleAnim_SpitUp:

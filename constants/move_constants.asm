@@ -527,6 +527,13 @@
 	const SWALLOW
 	const SPIT_UP
 	const JUDGEMENT
+	const MAGNET_GRIP
+	const JAW_CLAMP
+	const FEY_FURY
+	const BOUNCY_TAIL
+	const MISTY_AMBUSH
+	const GUILE_FANG
+	const DATA_PULSE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

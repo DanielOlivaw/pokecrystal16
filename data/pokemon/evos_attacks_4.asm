@@ -338,7 +338,19 @@ BronzongEvosAttacks:
 BonslyEvosAttacks:
 	dbww EVOLVE_MOVE, MIMIC, SUDOWOODO
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FAKE_TEARS
+	dbw 1, FLAIL
+	dbw 4, ROCK_THROW
+	dbw 8, BLOCK
+	dbw 12, FAINT_ATTACK
+	dbw 16, MIMIC
+	dbw 20, ROCK_TOMB
+	dbw 24, TEARFUL_LOOK
+	dbw 28, SUCKER_PUNCH
+	dbw 32, ROCK_SLIDE
+	dbw 36, LOW_KICK
+	dbw 40, COUNTER
+	dbw 44, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MimeJrEvosAttacks:
@@ -490,7 +502,24 @@ TogekissEvosAttacks:
 
 YanmegaEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, NIGHT_SLASH
 	dbw 1, TACKLE
+	dbw 1, FORESIGHT
+	dbw 4, QUICK_ATTACK
+	dbw 8, DOUBLE_TEAM
+	dbw 12, SONICBOOM
+	dbw 16, DETECT
+	dbw 20, SUPERSONIC
+	dbw 24, PURSUIT
+	dbw 28, WING_ATTACK
+	dbw 31, BUG_BITE
+	dbw 32, ANCIENTPOWER
+	dbw 36, HYPNOSIS
+	dbw 40, SILVER_WIND
+	dbw 44, UPROAR
+	dbw 48, SCREECH
+	dbw 52, AIR_SLASH
+	dbw 56, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 LeafeonEvosAttacks:

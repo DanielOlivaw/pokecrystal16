@@ -118,29 +118,6 @@ FreezeHit:
 	freezetarget
 	endmove
 
-Blizzard:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	blizzardaccuracy
-	checkhit
-	effectchance
-	stab
-	damagevariation
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	freezetarget
-	endmove
-
 ParalyzeHit:
 	checkobedience
 	usedmovetext
@@ -653,6 +630,7 @@ SpecialAttackDownHit:
 	buildopponentrage
 	specialattackdown
 	statdownmessage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2908,6 +2886,7 @@ HeavySlam:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2943,4 +2922,26 @@ SpitUp:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+MistyAmbush:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	mistyambushaccuracy
+	checkhit
+	effectchance
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	flinchtarget
 	endmove

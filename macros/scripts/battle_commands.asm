@@ -160,7 +160,7 @@ ENDM
 	command bugbite                 ; 99
 	command conditionalboost        ; 9a
 	command suckerpunch             ; 9b
-	command blizzardaccuracy        ; 9c
+	command mistyambushaccuracy     ; 9c
 	command superpower              ; 9d
 	command cosmicpower             ; 9e
 	command honeclaws               ; 9f

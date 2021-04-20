@@ -43,11 +43,11 @@ EvolutionMovePointers2::
 	dw XatuEvolutionMoves       ; XATU
 	dw NoEvolutionMoves2        ; MAREEP
 	dw NoEvolutionMoves2        ; FLAAFFY
-	dw NoEvolutionMoves2        ; AMPHAROS
-	dw NoEvolutionMoves2        ; BELLOSSOM
+	dw AmpharosEvolutionMoves   ; AMPHAROS
+	dw BellossomEvolutionMoves  ; BELLOSSOM
 	dw NoEvolutionMoves2        ; MARILL
 	dw NoEvolutionMoves2        ; AZUMARILL
-	dw NoEvolutionMoves2        ; SUDOWOODO
+	dw SudowoodoEvolutionMoves  ; SUDOWOODO
 	dw NoEvolutionMoves2        ; HOPPIP
 	dw NoEvolutionMoves2        ; SKIPLOOM
 	dw NoEvolutionMoves2        ; JUMPLUFF
@@ -145,6 +145,18 @@ TogeticEvolutionMoves:
 
 XatuEvolutionMoves:
 	dw AIR_SLASH
+	db 0 ; no more evolution moves
+
+AmpharosEvolutionMoves:
+	dw THUNDERPUNCH
+	db 0 ; no more evolution moves
+
+BellossomEvolutionMoves:
+	dw PETAL_STORM
+	db 0 ; no more evolution moves
+
+SudowoodoEvolutionMoves:
+	dw SLAM
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

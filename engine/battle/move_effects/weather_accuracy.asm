@@ -1,3 +1,7 @@
+; Thunder, Hurricane, and Misty Ambush drop to 50% accuracy in harsh sunlight.
+; Their accuracy boosts in rain (and Blizzard's boost in hail)
+; are handled in BattleCommand_CheckHit.
+
 BattleCommand_ThunderAccuracy:
 ; thunderaccuracy
 
@@ -6,31 +10,20 @@ BattleCommand_ThunderAccuracy:
 	and TYPE_MASK
 	inc hl
 	ld a, [wBattleWeather]
-	cp WEATHER_RAIN
-	jr z, .rain
-	cp WEATHER_STORM
-	jr z, .rain
 	cp WEATHER_SUN
 	ret nz
 	ld [hl], 50 percent + 1
 	ret
 
-.rain
-	; Redundant with CheckHit guranteeing hit
-	ld [hl], 100 percent
-	ret
-
-BattleCommand_BlizzardAccuracy:
-; blizzardaccuracy
+BattleCommand_MistyAmbushAccuracy:
+; mistyambushaccuracy
 
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
 	and TYPE_MASK
 	inc hl
 	ld a, [wBattleWeather]
-	cp WEATHER_HAIL
+	cp WEATHER_SUN
 	ret nz
-
-	; Redundant with CheckHit guranteeing hit
-	ld [hl], 100 percent
+	ld [hl], 50 percent + 1
 	ret

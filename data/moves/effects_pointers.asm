@@ -141,7 +141,7 @@ MoveEffectsPointers:
 	dw FlareBlitz             ; EFFECT_FLARE_BLITZ
 	dw SuckerPunch            ; EFFECT_SUCKER_PUNCH
 	dw AttackDown             ; EFFECT_PLAY_NICE
-	dw Blizzard               ; EFFECT_BLIZZARD
+	dw FreezeHit              ; EFFECT_BLIZZARD
 	dw Counter                ; EFFECT_METAL_BURST
 	dw Flatter                ; EFFECT_FLATTER
 	dw Superpower             ; EFFECT_SUPERPOWER
@@ -220,3 +220,4 @@ MoveEffectsPointers:
 	dw StaticDamage           ; EFFECT_ENDEAVOR
 	dw StrengthSap            ; EFFECT_STRENGTH_SAP
 	dw SpitUp                 ; EFFECT_SPIT_UP
+	dw MistyAmbush            ; EFFECT_MISTY_AMBUSH

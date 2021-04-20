@@ -159,7 +159,7 @@ BattleCommandPointers:
 	dw BattleCommand_BugBite
 	dw BattleCommand_ConditionalBoost
 	dw BattleCommand_SuckerPunch
-	dw BattleCommand_BlizzardAccuracy
+	dw BattleCommand_MistyAmbushAccuracy
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
 	dw BattleCommand_HoneClaws

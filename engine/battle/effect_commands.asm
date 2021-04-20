@@ -1719,6 +1719,9 @@ BattleCommand_CheckHit:
 	call .BlizzardHail
 	ret z
 
+	call .MistyAmbush
+	ret z
+
 	call .ToxicPoison
 	ret z
 
@@ -2092,6 +2095,17 @@ BattleCommand_CheckHit:
 
 	ld a, [wBattleWeather]
 	cp WEATHER_HAIL
+	ret
+
+.MistyAmbush:
+; Return z if the current move always hits in fog, and it is foggy.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_MISTY_AMBUSH
+	ret nz
+
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
 	ret
 
 .XAccuracy:
@@ -6955,6 +6969,7 @@ BattleCommand_TrapTarget:
 	dw SAND_TOMB,   SandTombTrapText  ; 'was trapped!'
 	dw NAIL_DOWN,   NailDownTrapText  ; 'was NAILED DOWN by'
 	dw INFESTATION, InfestationTrapText
+	dw JAW_CLAMP,   CaughtInJawsText  ; 'was caught in <USER>'s jaws!'
 
 BattleCommand_Recoil:
 ; recoil
@@ -7102,6 +7117,8 @@ BattleCommand_FinishConfusingTarget:
 	cp EFFECT_SNORE
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
+	jr z, .got_effect
+	cp EFFECT_DYNAMO_RUSH
 	jr z, .got_effect
 	call AnimateCurrentMove
 
