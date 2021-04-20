@@ -169,6 +169,18 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_Refresh
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, STOCKPILE
+	call CompareMove2
+	jp z, BattleCommand_Stockpile
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SWALLOW
+	call CompareMove2
+	jp z, BattleCommand_Swallow
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_SUNLIGHT_HEAL

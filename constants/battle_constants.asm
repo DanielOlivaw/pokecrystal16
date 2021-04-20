@@ -1,6 +1,6 @@
 ; significant level values
 MAX_LEVEL EQU 100
-MIN_LEVEL EQU 1
+MIN_LEVEL EQU 2
 EGG_LEVEL EQU 1 ; Gonna try this one out
 
 ; maximum moves known per mon

@@ -40,7 +40,7 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; TOGEPI
 	dw TogeticEvolutionMoves    ; TOGETIC
 	dw NoEvolutionMoves2        ; NATU
-	dw NoEvolutionMoves2        ; XATU
+	dw XatuEvolutionMoves       ; XATU
 	dw NoEvolutionMoves2        ; MAREEP
 	dw NoEvolutionMoves2        ; FLAAFFY
 	dw NoEvolutionMoves2        ; AMPHAROS
@@ -135,10 +135,16 @@ CrobatEvolutionMoves:
 
 LanturnEvolutionMoves:
 	dw STOCKPILE
+	dw SWALLOW
+	dw SPIT_UP
 	db 0 ; no more evolution moves
 
 TogeticEvolutionMoves:
 	dw FAIRY_WIND
+	db 0 ; no more evolution moves
+
+XatuEvolutionMoves:
+	dw AIR_SLASH
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

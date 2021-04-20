@@ -524,6 +524,9 @@
 	const REFRESH
 	const ENDEAVOR
 	const STRENGTH_SAP
+	const SWALLOW
+	const SPIT_UP
+	const JUDGEMENT
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

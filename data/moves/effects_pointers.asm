@@ -121,7 +121,7 @@ MoveEffectsPointers:
 	dw BugBite                ; EFFECT_BUG_BITE
 	dw StatusTargetSelf       ; EFFECT_SUNLIGHT_HEAL
 	dw NormalHit              ; EFFECT_EXTREMESPEED
-	dw HiddenPower            ; EFFECT_HIDDEN_POWER
+	dw VariableType           ; EFFECT_VARIABLE_TYPE
 	dw DefenseUpHit           ; EFFECT_DEFENSE_UP_HIT
 	dw AttackUpHit            ; EFFECT_ATTACK_UP_HIT
 	dw AllUpHit               ; EFFECT_ALL_UP_HIT
@@ -219,3 +219,4 @@ MoveEffectsPointers:
 	dw HeavySlam              ; EFFECT_HEAVY_SLAM
 	dw StaticDamage           ; EFFECT_ENDEAVOR
 	dw StrengthSap            ; EFFECT_STRENGTH_SAP
+	dw SpitUp                 ; EFFECT_SPIT_UP

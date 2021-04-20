@@ -1686,6 +1686,9 @@ BattleCommand_CheckHit:
 
 	call .FirstTurn
 
+	call .SpitUp
+	jp z, .Miss
+
 	call .Synchronoise
 	jp nz, .Miss
 
@@ -1862,6 +1865,22 @@ BattleCommand_CheckHit:
 	ld a, [hl]
 	cp b
 	jp nz, .Miss
+	ret
+
+.SpitUp:
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SPIT_UP
+	ret nz
+; Spit Up fails if stockpile count is zero
+	call CheckStockpileCount
+	ret z
+; Reset stockpile count after using Spit Up.
+; If this had been done earlier, the move would always miss.
+	xor a
+	ld [hl], a
+	ld a, 1
+	and a
 	ret
 
 .Synchronoise
@@ -2176,6 +2195,38 @@ BattleCommand_CheckHit:
 .finish_accuracy
 	pop hl
 	ld [hl], a
+	ret
+
+CheckStockpileCount:
+	ld hl, wPlayerStockpileCount
+	ld a, [hBattleTurn]
+	and a
+	jr z, .got_count
+	ld hl, wEnemyStockpileCount
+.got_count
+	ld a, [hl]
+	and a
+	ret
+
+BattleCommand_SpitUp:
+; Get stockpile count and store in b.
+	push bc
+	push de
+	call CheckStockpileCount
+	jr z, .stockpile0
+	ld a, [hl]
+; Multiply stockpile count by 80 to get move power.
+	ld c, 80
+	call SimpleMultiply
+	ld b, a
+	pop de
+	ld d, a
+	pop bc
+	ret
+
+.stockpile0
+	pop de
+	pop bc
 	ret
 
 INCLUDE "data/battle/accuracy_multipliers.asm"
@@ -2611,6 +2662,8 @@ GetFailureResultText:
 	jr z, .check_burn_up
 	cp EFFECT_BELCH
 	jr z, .check_belch
+	cp EFFECT_SPIT_UP
+	jp z, .check_spit_up
 	cp EFFECT_FAKE_OUT
 	jp z, .check_first_turn
 	cp EFFECT_FIRST_IMPRESSION
@@ -2698,6 +2751,13 @@ GetFailureResultText:
 	pop hl
 	pop de
 	jr nz, .miss_text
+	jr .got_text
+
+.check_spit_up:
+	push hl
+	call CheckStockpileCount
+	pop hl
+	jp nz, .miss_text
 	jr .got_text
 
 .check_first_turn
@@ -7537,7 +7597,7 @@ BattleCommand_Defrost:
 .done
 	call RefreshBattleHuds
 	ld hl, WasDefrostedText
-	jp StdBattleTextbox
+	jp StdBattleTextbox	
 
 INCLUDE "engine/battle/move_effects/protect.asm"
 
@@ -7559,6 +7619,10 @@ BattleCommand_ConditionalBoost:
 
 BattleCommand_StatusTargetSelf:
 	farcall Find_StatusTargetSelf
+	ret
+
+BattleCommand_VariableType:
+	farcall Find_VariableType
 	ret
 
 BattleCommand_Selfdestruct:
@@ -7671,10 +7735,6 @@ BattleCommand_Soak:
 	farcall SoakEffect
 	ret
 
-BattleCommand_WeatherBall:
-	farcall WeatherBallEffect
-	ret
-
 BattleCommand_Captivate:
 	farcall CaptivateEffect
 	ret
@@ -7744,15 +7804,6 @@ BattleCommand_CheckSafeguard:
 INCLUDE "engine/battle/move_effects/baton_pass.asm"
 
 INCLUDE "engine/battle/move_effects/pursuit.asm"
-
-BattleCommand_HiddenPower:
-; hiddenpower
-
-	ld a, [wAttackMissed]
-	and a
-	ret nz
-	farcall HiddenPowerType
-	ret
 
 BattleCommand_SkipSunCharge:
 ; mimicsuncharge

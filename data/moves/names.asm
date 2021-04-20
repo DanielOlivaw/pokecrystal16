@@ -517,4 +517,7 @@ MoveNames::
 	db "REFRESH@"
 	db "ENDEAVOR@"
 	db "STRENGTH SAP@"
+	db "SWALLOW@"
+	db "SPIT UP@"
+	db "JUDGEMENT@"
 	  ;"123456123456@"

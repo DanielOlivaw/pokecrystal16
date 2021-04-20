@@ -97,7 +97,7 @@ ENDM
 	command batonpass               ; 5a
 	command pursuit                 ; 5b
 	command clearhazards            ; 5c
-	command hiddenpower             ; 5d
+	command variabletype            ; 5d
 	command attackup                ; 5e
 	command defenseup               ; 5f
 	command speedup                 ; 60
@@ -196,6 +196,7 @@ ENDM
 	command burn                    ; bd
 	command heavyslam               ; be
 	command strengthsap             ; bf
+	command spitup                  ; c0
 
 	enum_start $fe
 	command endturn                 ; fe

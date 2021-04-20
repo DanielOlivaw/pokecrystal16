@@ -1673,6 +1673,13 @@ TransformedIntoWaterTypeText::
 	cont "the WATER type!"
 	prompt
 
+StockpileText:
+	text "<USER>"
+	line "stockpiled @"
+	text_decimal wDeciramBuffer, 1, 1
+	text "!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"

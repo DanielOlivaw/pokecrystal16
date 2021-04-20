@@ -524,6 +524,9 @@ MoveDescriptions1:
 	dw RefreshDescription
 	dw EndeavorDescription
 	dw StrengthSapDescription
+	dw SwallowDescription
+	dw SpitUpDescription
+	dw JudgementDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1941,8 +1944,8 @@ PowerGemDescription:
 	next "of bright light.@"
 
 StockpileDescription:
-	db   "Heightens DEFENSE"
-	next "and SPCL.DEF.@"
+	db   "Charges up power"
+	next "for up to 3 turns.@"
 
 FreezeDryDescription:
 	db   "Deals extra damage"
@@ -2420,5 +2423,17 @@ EndeavorDescription:
 StrengthSapDescription:
 	db   "Restores HP using"
 	next "the foe's ATTACK.@"
+
+SwallowDescription:
+	db   "Absorbs stockpiled"
+	next "power to heal HP.@"
+
+SpitUpDescription:
+	db   "Expels stockpiled"
+	next "power to attack.@"
+
+JudgementDescription:
+	db   "Its type matches"
+	next "the held PLATE.@"
 
 		;"123456789123456789"

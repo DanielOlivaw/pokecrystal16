@@ -421,7 +421,7 @@ PikachuEvosAttacks:
 	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
 	dbw 16, DOUBLE_TEAM
-	dbw 20, ELECTRO_BALL
+	dbw 20, SHOCK_WAVE
 	dbw 24, FEINT
 	dbw 28, SPARK
 	dbw 32, DISCHARGE
@@ -448,7 +448,7 @@ RaichuAEvosAttacks:
 	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
 	dbw 16, DOUBLE_TEAM
-	dbw 20, ELECTRO_BALL
+	dbw 20, SHOCK_WAVE
 	dbw 24, FEINT
 	dbw 28, SPARK
 	dbw 32, DISCHARGE
@@ -751,6 +751,8 @@ JigglypuffEvosAttacks:
 	dbw 18, ROLLOUT
 	dbw 21, ROUND_M
 	dbw 25, STOCKPILE
+	dbw 25, SWALLOW
+	dbw 25, SPIT_UP
 	dbw 28, WAKE_UP_SLAP
 	dbw 32, REST
 	dbw 35, BODY_SLAM
@@ -778,6 +780,8 @@ WigglytuffEvosAttacks:
 	dbw 18, ROLLOUT
 	dbw 21, ROUND_M
 	dbw 25, STOCKPILE
+	dbw 25, SWALLOW
+	dbw 25, SPIT_UP
 	dbw 28, WAKE_UP_SLAP
 	dbw 32, REST
 	dbw 35, BODY_SLAM
@@ -1261,6 +1265,8 @@ WeepinbellEvosAttacks:
 VictreebelEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, STOCKPILE
+	dbw 1, SWALLOW
+	dbw 1, SPIT_UP
 	dbw 1, VINE_WHIP
 	dbw 1, GROWTH
 	dbw 4, WRAP
@@ -1476,10 +1482,10 @@ MagnemiteEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	dbw 13, ELECTRO_BALL
-	dbw 16, GYRO_BALL
+	dbw 13, GYRO_BALL
+	dbw 16, SPARK
 	dbw 19, SONICBOOM
-	dbw 22, SPARK
+	dbw 22, SHOCK_WAVE
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 31, MAGNET_RISE
@@ -1499,10 +1505,10 @@ MagnetonEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	dbw 13, ELECTRO_BALL
-	dbw 16, GYRO_BALL
+	dbw 13, GYRO_BALL
+	dbw 16, SPARK
 	dbw 19, SONICBOOM
-	dbw 22, SPARK
+	dbw 22, SHOCK_WAVE
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 29, TRI_ATTACK
@@ -2182,11 +2188,10 @@ ElectabuzzEvosAttacks:
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
 	dbw 1, THUNDERSHOCK
-	dbw 1, CHARGE
-	dbw 5, SWIFT
-	dbw 10, THUNDER_WAVE
-	dbw 15, SHOCK_WAVE
-	dbw 20, ELECTRO_BALL
+	dbw 5, CHARGE
+	dbw 10, SWIFT
+	dbw 15, THUNDER_WAVE
+	dbw 20, SHOCK_WAVE
 	dbw 25, SCREECH
 	dbw 30, THUNDERPUNCH
 	dbw 35, DISCHARGE
@@ -2498,6 +2503,9 @@ AerodactylEvosAttacks:
 
 SnorlaxEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, STOCKPILE
+	dbw 1, SWALLOW
+	dbw 1, SPIT_UP
 	dbw 1, TACKLE
 	dbw 1, DEFENSE_CURL
 	dbw 4, LICK

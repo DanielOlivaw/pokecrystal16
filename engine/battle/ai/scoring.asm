@@ -361,7 +361,6 @@ AI_Smart:
 	dbw EFFECT_PURSUIT,          AI_Smart_Pursuit
 	dbw EFFECT_RAPID_SPIN,       AI_Smart_RapidSpin
 	dbw EFFECT_SUNLIGHT_HEAL,    AI_Smart_Heal
-	dbw EFFECT_HIDDEN_POWER,     AI_Smart_HiddenPower
 	dbw EFFECT_MIRROR_COAT,      AI_Smart_MirrorCoat
 	dbw EFFECT_SKULL_BASH,       AI_Smart_SkullBash
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake

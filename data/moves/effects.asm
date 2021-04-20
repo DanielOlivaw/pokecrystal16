@@ -1863,12 +1863,12 @@ RapidSpin:
 	kingsrock
 	endmove
 
-HiddenPower:
+VariableType:
 	checkobedience
 	usedmovetext
 	doturn
 	critical
-	hiddenpower
+	variabletype
 	damagestats
 	damagecalc
 	stab
@@ -1881,6 +1881,29 @@ HiddenPower:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
+	kingsrock
+	endmove
+
+WeatherBall:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	weatherball
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2742,28 +2765,6 @@ Soak:
 	soak
 	endmove
 
-WeatherBall:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	weatherball
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	defrostopponent
-	kingsrock
-	endmove
-
 Captivate:
 	checkobedience
 	usedmovetext
@@ -2921,4 +2922,25 @@ StrengthSap:
 	raisesub
 	statdownmessage
 	statdownfailtext
+	endmove
+
+SpitUp:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	spitup
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove

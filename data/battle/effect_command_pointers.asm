@@ -96,7 +96,7 @@ BattleCommandPointers:
 	dw BattleCommand_BatonPass
 	dw BattleCommand_Pursuit
 	dw BattleCommand_ClearHazards
-	dw BattleCommand_HiddenPower
+	dw BattleCommand_VariableType
 	dw BattleCommand_AttackUp
 	dw BattleCommand_DefenseUp
 	dw BattleCommand_SpeedUp
@@ -195,3 +195,4 @@ BattleCommandPointers:
 	dw BattleCommand_Burn
 	dw BattleCommand_HeavySlam
 	dw BattleCommand_StrengthSap
+	dw BattleCommand_SpitUp

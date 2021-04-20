@@ -536,6 +536,7 @@ wPlayerYawnCount:: db
 wPlayerLuckyChantCount:: db
 wPlayerMagnetRiseCount:: db
 wPlayerHealingWishCount:: db
+wPlayerStockpileCount:: db
 wPlayerFuryCutterCount:: db ; c678
 wPlayerProtectCount:: db ; c679
 
@@ -550,6 +551,7 @@ wEnemyYawnCount:: db
 wEnemyLuckyChantCount:: db
 wEnemyMagnetRiseCount:: db
 wEnemyHealingWishCount:: db
+wEnemyStockpileCount:: db
 wEnemyFuryCutterCount:: db ; c680
 wEnemyProtectCount:: db ; c681
 

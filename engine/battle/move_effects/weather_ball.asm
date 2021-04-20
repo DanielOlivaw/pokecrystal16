@@ -1,4 +1,4 @@
-WeatherBallEffect:
+BattleCommand_WeatherBall:
 ; weatherball
 
 	ld a, [wBattleWeather]

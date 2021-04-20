@@ -545,6 +545,9 @@ BattleAnimations::
 	dw BattleAnim_Refresh
 	dw BattleAnim_Endeavor
 	dw BattleAnim_StrengthSap
+	dw BattleAnim_Swallow
+	dw BattleAnim_SpitUp
+	dw BattleAnim_Judgement
 
 	dw BattleAnim_SweetScent2
 
@@ -928,6 +931,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Judgement:
+BattleAnim_Swallow:
+BattleAnim_SpitUp:
 BattleAnim_StrengthSap:
 BattleAnim_Endeavor:
 BattleAnim_Refresh:

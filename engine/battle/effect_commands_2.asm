@@ -6,6 +6,8 @@ INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
 
 INCLUDE "engine/battle/move_effects/protect_variations.asm"
 
+INCLUDE "engine/battle/move_effects/variable_type.asm"
+
 
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
@@ -169,3 +171,5 @@ INCLUDE "engine/battle/move_effects/healing_wish.asm"
 INCLUDE "engine/battle/move_effects/heavy_slam.asm"
 
 INCLUDE "engine/battle/move_effects/refresh.asm"
+
+INCLUDE "engine/battle/move_effects/stockpile.asm"

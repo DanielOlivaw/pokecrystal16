@@ -66,7 +66,7 @@ INCLUDE "engine/events/std_collision.asm"
 INCLUDE "engine/events/bug_contest/judging.asm"
 INCLUDE "engine/events/pokerus/apply_pokerus_tick.asm"
 INCLUDE "engine/events/bug_contest/contest_2.asm"
-INCLUDE "engine/pokemon/correct_party_errors.asm"
+; INCLUDE "engine/pokemon/correct_party_errors.asm"
 ; INCLUDE "engine/math/get_square_root.asm"
 
 
@@ -495,7 +495,7 @@ INCLUDE "engine/link/time_capsule_2.asm"
 INCLUDE "engine/pokedex/unown_dex.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
-; INCLUDE "engine/battle/judgement.asm"
+INCLUDE "engine/battle/judgement.asm"
 INCLUDE "engine/battle/misc.asm"
 
 

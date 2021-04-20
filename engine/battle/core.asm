@@ -3781,6 +3781,7 @@ endr
 	ld [wEnemyChargeCount], a
 	ld [wEnemyYawnCount], a
 	ld [wEnemyMagnetRiseCount], a
+	ld [wEnemyStockpileCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4272,6 +4273,7 @@ endr
 	ld [wPlayerChargeCount], a
 	ld [wPlayerYawnCount], a
 	ld [wPlayerMagnetRiseCount], a
+	ld [wPlayerStockpileCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]

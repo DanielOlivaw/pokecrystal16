@@ -610,7 +610,7 @@ ChinchouEvosAttacks:
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
 	dbw 4, THUNDER_WAVE
-	dbw 8, ELECTRO_BALL
+	dbw 8, THUNDERSHOCK
 	dbw 12, BUBBLEBEAM
 	dbw 16, CONFUSE_RAY
 	dbw 20, SPARK
@@ -628,11 +628,13 @@ LanturnEvosAttacks:
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
 	dbw 4, THUNDER_WAVE
-	dbw 8, ELECTRO_BALL
+	dbw 8, THUNDERSHOCK
 	dbw 12, BUBBLEBEAM
 	dbw 16, CONFUSE_RAY
 	dbw 20, SPARK
 	dbw 24, CHARGE
+	dbw 26, SWALLOW
+	dbw 26, SPIT_UP
 	dbw 26, STOCKPILE
 	dbw 30, SIGNAL_BEAM
 	dbw 36, DISCHARGE
@@ -722,23 +724,37 @@ NatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
-	dbw 10, NIGHT_SHADE
-	dbw 20, TELEPORT
-	dbw 30, FUTURE_SIGHT
-	dbw 40, CONFUSE_RAY
-	dbw 50, PSYCHIC_M
+	dbw 4, NIGHT_SHADE
+	dbw 8, TELEPORT
+	dbw 12, LUCKY_CHANT
+	dbw 16, OMINOUS_WIND
+	dbw 20, CONFUSE_RAY
+	dbw 24, PSYCHO_SHIFT
+	; dbw 28, POWER_SWAP
+	; dbw 28, GUARD_SWAP
+	dbw 32, PSYCHIC_M
+	; dbw 36, WISH
+	dbw 40, FUTURE_SIGHT
+	dbw 44, ME_FIRST
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
-	dbw 1, NIGHT_SHADE
-	dbw 10, NIGHT_SHADE
-	dbw 20, TELEPORT
-	dbw 35, FUTURE_SIGHT
-	dbw 50, CONFUSE_RAY
-	dbw 65, PSYCHIC_M
+	dbw 4, NIGHT_SHADE
+	dbw 8, TELEPORT
+	dbw 12, LUCKY_CHANT
+	dbw 16, OMINOUS_WIND
+	dbw 20, CONFUSE_RAY
+	dbw 24, PSYCHO_SHIFT
+	dbw 24, AIR_SLASH
+	; dbw 30, POWER_SWAP
+	; dbw 30, GUARD_SWAP
+	dbw 36, PSYCHIC_M
+	; dbw 42, WISH
+	dbw 48, FUTURE_SIGHT
+	dbw 54, ME_FIRST
 	db 0 ; no more level-up moves
 
 MareepEvosAttacks:
