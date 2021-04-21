@@ -493,6 +493,19 @@ MantykeEvosAttacks:
 	dbww EVOLVE_PARTY, REMORAID, MANTINE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, BUBBLE
+	dbw 4, SUPERSONIC
+	dbw 9, WING_ATTACK
+	dbw 13, CONFUSE_RAY
+	dbw 18, WATER_PULSE
+	dbw 22, AGILITY
+	dbw 27, BUBBLEBEAM
+	dbw 31, HEADBUTT
+	dbw 36, AIR_SLASH
+	dbw 40, AQUA_RING
+	dbw 45, BOUNCE
+	dbw 49, TAKE_DOWN
+	dbw 54, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SnoverEvosAttacks:
@@ -508,7 +521,23 @@ AbomasnowEvosAttacks:
 
 WeavileEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SLASH
+	dbw 1, AGILITY
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 4, QUICK_ATTACK
+	dbw 9, METAL_CLAW
+	dbw 13, FAINT_ATTACK
+	dbw 18, ICY_WIND
+	dbw 22, FURY_SWIPES
+	dbw 27, HONE_CLAWS
+	dbw 31, BEAT_UP
+	dbw 36, ICE_SHARD
+	dbw 40, NASTY_PLOT
+	dbw 45, SCREECH
+	dbw 49, NIGHT_SLASH
+	dbw 54, SHATTER_CLAW
+	dbw 58, DARK_PULSE
 	db 0 ; no more level-up moves
 
 MagnezoneEvosAttacks:
@@ -588,7 +617,28 @@ GliscorEvosAttacks:
 
 MamoswineEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SCARY_FACE
+	dbw 1, PECK
+	dbw 1, HORN_ATTACK
 	dbw 1, TACKLE
+	dbw 1, ODOR_SLEUTH
+	dbw 4, MUD_SLAP
+	dbw 8, POWDER_SNOW
+	dbw 11, FLAIL
+	dbw 15, MUD_BOMB
+	dbw 18, ICE_SHARD
+	dbw 22, MIST
+	dbw 25, ENDURE
+	dbw 29, ICY_WIND
+	dbw 32, AMNESIA
+	dbw 32, FURY_ATTACK
+	dbw 32, ICE_FANG
+	dbw 32, DOUBLE_HIT
+	dbw 37, TAKE_DOWN
+	dbw 41, EARTHQUAKE
+	dbw 46, ANCIENTPOWER
+	dbw 50, BLIZZARD
+	dbw 55, THRASH
 	db 0 ; no more level-up moves
 
 PorygonZEvosAttacks:

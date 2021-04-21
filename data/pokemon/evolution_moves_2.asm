@@ -8,7 +8,7 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; MOIBELLE
 	dw ChimeowEvolutionMoves    ; CHIMEOW
 	dw NoEvolutionMoves2        ; TYKER
-	dw NoEvolutionMoves2        ; STRAIGAR
+	dw StraigarEvolutionMoves   ; STRAIGAR
 	dw NoEvolutionMoves2        ; SWANDAME
 	dw NoEvolutionMoves2        ; KURSTRAW
 	dw NoEvolutionMoves2        ; PHANDARIN
@@ -65,22 +65,22 @@ EvolutionMovePointers2::
 	dw ForretressEvolutionMoves ; FORRETRESS
 	dw NoEvolutionMoves2        ; DUNSPARCE
 	dw NoEvolutionMoves2        ; GLIGAR
-	dw NoEvolutionMoves2        ; STEELIX
+	dw SteelixEvolutionMoves    ; STEELIX
 	dw NoEvolutionMoves2        ; SNUBBULL
 	dw NoEvolutionMoves2        ; GRANBULL
-	dw NoEvolutionMoves2        ; SCIZOR
+	dw ScizorEvolutionMoves     ; SCIZOR
 	dw NoEvolutionMoves2        ; SHUCKLE
 	dw NoEvolutionMoves2        ; HERACROSS
 	dw NoEvolutionMoves2        ; SNEASEL
 	dw NoEvolutionMoves2        ; TEDDIURSA
 	dw NoEvolutionMoves2        ; URSARING
 	dw NoEvolutionMoves2        ; SLUGMA
-	dw NoEvolutionMoves2        ; MAGCARGO
+	dw MagcargoEvolutionMoves   ; MAGCARGO
 	dw NoEvolutionMoves2        ; SWINUB
-	dw NoEvolutionMoves2        ; PILOSWINE
+	dw PiloswineEvolutionMoves  ; PILOSWINE
 	dw NoEvolutionMoves2        ; CORSOLA_G
 	dw NoEvolutionMoves2        ; REMORAID
-	dw NoEvolutionMoves2        ; OCTILLERY
+	dw OctilleryEvolutionMoves  ; OCTILLERY
 	dw NoEvolutionMoves2        ; MANTINE
 	dw NoEvolutionMoves2        ; SKARMORY
 	dw NoEvolutionMoves2        ; HOUNDOUR
@@ -109,6 +109,10 @@ AnchorrageEvolutionMoves:
 
 ChimeowEvolutionMoves:
 	dw MOONLIGHT
+	db 0 ; no more evolution moves
+
+StraigarEvolutionMoves:
+	dw DYNAMO_RUSH
 	db 0 ; no more evolution moves
 
 MeganiumEvolutionMoves:
@@ -178,6 +182,28 @@ SlowkingEvolutionMoves:
 ForretressEvolutionMoves:
 	dw MIRROR_SHOT
 	dw AUTOTOMIZE
+	db 0 ; no more evolution moves
+
+SteelixEvolutionMoves:
+	dw CRUNCH
+	db 0 ; no more evolution moves
+
+ScizorEvolutionMoves:
+	dw BULLET_PUNCH
+	db 0 ; no more evolution moves
+
+MagcargoEvolutionMoves:
+	dw SHELL_SMASH
+	db 0 ; no more evolution moves
+
+PiloswineEvolutionMoves:
+	dw FURY_ATTACK
+	dw ICE_FANG
+	db 0 ; no more evolution moves
+
+OctilleryEvolutionMoves:
+	dw CONSTRICT
+	dw OCTAZOOKA
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

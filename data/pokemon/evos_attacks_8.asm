@@ -261,6 +261,21 @@ PerrserkerEvosAttacks:
 CursolaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, HARDEN
+	dbw 4, ASTONISH
+	dbw 8, DISABLE
+	dbw 12, SPITE
+	dbw 16, ANCIENTPOWER
+	dbw 20, LUCKY_CHANT
+	dbw 24, HEX
+	dbw 28, IRON_DEFENSE
+	dbw 32, CURSE
+	dbw 36, STRENGTH_SAP
+	dbw 37, PERISH_SONG
+	dbw 41, POWER_GEM
+	dbw 46, NIGHT_SHADE
+	dbw 51, GRUDGE
+	dbw 56, MIRROR_COAT
 	db 0 ; no more level-up moves
 
 MrRimeEvosAttacks:
