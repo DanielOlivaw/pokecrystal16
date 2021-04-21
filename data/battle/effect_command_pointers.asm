@@ -196,3 +196,4 @@ BattleCommandPointers:
 	dw BattleCommand_HeavySlam
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
+	dw BattleCommand_Awaken

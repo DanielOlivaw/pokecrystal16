@@ -1343,6 +1343,14 @@ StoleBerryRecoveryText:
 	text "!"
 	prompt
 
+CultivateText:
+	text "<USER>"
+	line "grew itself"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 CantEscapeNowText:
 	text "<TARGET>"
 	line "can't escape now!"

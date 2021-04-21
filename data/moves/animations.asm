@@ -555,6 +555,11 @@ BattleAnimations::
 	dw BattleAnim_MistyAmbush
 	dw BattleAnim_GuileFang
 	dw BattleAnim_DataPulse
+	dw BattleAnim_DrowsyWrath
+	dw BattleAnim_SereneBell
+	dw BattleAnim_FlareUp
+	dw BattleAnim_Weathervane
+	dw BattleAnim_Cultivate
 
 	dw BattleAnim_SweetScent2
 
@@ -938,6 +943,11 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DrowsyWrath:
+BattleAnim_SereneBell:
+BattleAnim_FlareUp:
+BattleAnim_Weathervane:
+BattleAnim_Cultivate:
 BattleAnim_MistyAmbush:
 BattleAnim_DataPulse:
 BattleAnim_GuileFang:

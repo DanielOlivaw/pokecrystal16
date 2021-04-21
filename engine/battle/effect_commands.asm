@@ -191,6 +191,7 @@ CheckPlayerTurn:
 .sleep_bypass_moves
 	dw SNORE
 	dw SLEEP_TALK
+	dw DROWSY_WRATH
 	dw -1
 
 .not_asleep
@@ -216,6 +217,7 @@ CheckPlayerTurn:
 	dw SACRED_FIRE
 	dw FLARE_BLITZ
 	dw BURN_UP
+	dw FLARE_UP
 	dw -1
 
 .not_frozen
@@ -442,6 +444,7 @@ CheckEnemyTurn:
 .sleep_bypass_moves
 	dw SNORE
 	dw SLEEP_TALK
+	dw DROWSY_WRATH
 	dw -1
 
 .not_asleep
@@ -464,6 +467,9 @@ CheckEnemyTurn:
 .thawing_moves
 	dw FLAME_WHEEL
 	dw SACRED_FIRE
+	dw FLARE_BLITZ
+	dw BURN_UP
+	dw FLARE_UP
 	dw -1
 
 .not_frozen
@@ -973,6 +979,7 @@ IgnoreSleepOnly:
 .sleep_moves
 	dw SNORE
 	dw SLEEP_TALK
+	dw DROWSY_WRATH
 	dw -1
 
 BattleCommand_UsedMoveText:
@@ -7148,6 +7155,8 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit:
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
+	cp EFFECT_DYNAMO_RUSH
+	ret z
 	jp PrintDidntAffect2
 
 BattleCommand_Paralyze:
@@ -7586,35 +7595,12 @@ ResetTurn:
 INCLUDE "engine/battle/move_effects/nightmare.asm"
 
 BattleCommand_Defrost:
-; defrost
+	farcall DefrostUser
+	ret
 
-; Thaw the user.
-
-	ld a, BATTLE_VARS_STATUS
-	call GetBattleVarAddr
-	bit FRZ, [hl]
-	ret z
-	res FRZ, [hl]
-
-; Don't update the enemy's party struct in a wild battle.
-
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .party
-
-	ld a, [wBattleMode]
-	dec a
-	jr z, .done
-
-.party
-	ld a, MON_STATUS
-	call UserPartyAttr
-	res FRZ, [hl]
-
-.done
-	call RefreshBattleHuds
-	ld hl, WasDefrostedText
-	jp StdBattleTextbox	
+BattleCommand_Awaken:
+	farcall AwakenUser
+	ret
 
 INCLUDE "engine/battle/move_effects/protect.asm"
 

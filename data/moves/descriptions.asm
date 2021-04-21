@@ -534,6 +534,11 @@ MoveDescriptions1:
 	dw MistyAmbushDescription
 	dw GuileFangDescription
 	dw DataPulseDescription
+	dw DrowsyWrathDescription
+	dw SereneBellDescription
+	dw FlareUpDescription
+	dw WeathervaneDescription
+	dw CultivateDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1013,6 +1018,7 @@ LightScreenDescription:
 	next "a wall of light.@"
 
 HazeDescription:
+SereneBellDescription:
 	db   "Eliminates all"
 	next "stat changes.@"
 
@@ -1528,6 +1534,7 @@ NuzzleDescription:
 	next "always paralyzes.@"
 
 NastyPlotDescription:
+FlareUpDescription:
 	db   "Sharply increases"
 	next "user's SPCL.ATK.@"
 
@@ -2314,5 +2321,17 @@ GuileFangDescription:
 DataPulseDescription:
 	db   "Confuses if user"
 	next "raised SPCL.ATK.@"
+
+DrowsyWrathDescription:
+	db   "Usable even if the"
+	next "user is sleeping.@"
+
+WeathervaneDescription:
+	db   "Change user's type"
+	next "to match weather.@"
+
+CultivateDescription:
+	db   "Grows a berry from"
+	next "the user's body.@"
 
 		;"123456789123456789"

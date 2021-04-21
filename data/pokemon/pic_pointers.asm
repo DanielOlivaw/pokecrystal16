@@ -268,20 +268,20 @@ PokemonPicPointers::
 	dba AnchorrageBackpic
 	dba MeowsyFrontpic
 	dba MeowsyBackpic
-	dba RinrinFrontpic
-	dba RinrinBackpic
+	dba MoibelleFrontpic
+	dba MoibelleBackpic
 	dba ChimeowFrontpic
 	dba ChimeowBackpic
-	dba CircubFrontpic
-	dba CircubBackpic
-	dba TigetricFrontpic
-	dba TigetricBackpic
+	dba TykerFrontpic
+	dba TykerBackpic
+	dba StraigarFrontpic
+	dba StraigarBackpic
 	dba SwandameFrontpic
 	dba SwandameBackpic
 	dba KurstrawFrontpic
 	dba KurstrawBackpic
-	dba PanpireFrontpic
-	dba PanpireBackpic
+	dba PhandarinFrontpic
+	dba PhandarinBackpic
 	dba WolfrostFrontpic
 	dba WolfrostBackpic
 	dba WarwolfFrontpic

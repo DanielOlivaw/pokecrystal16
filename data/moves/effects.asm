@@ -310,6 +310,8 @@ SpeedUp2:
 	statupfailtext
 	endmove
 
+; The "defrost" below should only work for Flare Up because Nasty Plot
+; isn't on the "thawing moves" list so it isn't usable while frozen.
 SpecialAttackUp2:
 	checkobedience
 	usedmovetext
@@ -320,6 +322,7 @@ SpecialAttackUp2:
 	raisesub
 	statupmessage
 	statupfailtext
+	defrost
 	endmove
 
 SpecialDefenseUp2:
@@ -1561,6 +1564,7 @@ Nightmare:
 	endmove
 
 FlameWheel:
+SacredFire:
 	checkobedience
 	usedmovetext
 	doturn
@@ -1742,29 +1746,6 @@ Frustration:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-SacredFire:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	defrost
-	checkfaint
-	buildopponentrage
-	kingsrock
-	burntarget
 	endmove
 
 Magnitude:
@@ -2944,4 +2925,25 @@ MistyAmbush:
 	checkfaint
 	buildopponentrage
 	flinchtarget
+	endmove
+
+DrowsyRage:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	awaken
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove

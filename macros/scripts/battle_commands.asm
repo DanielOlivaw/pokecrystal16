@@ -197,6 +197,7 @@ ENDM
 	command heavyslam               ; be
 	command strengthsap             ; bf
 	command spitup                  ; c0
+	command awaken                  ; c1
 
 	enum_start $fe
 	command endturn                 ; fe

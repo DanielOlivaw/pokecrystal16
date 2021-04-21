@@ -129,13 +129,13 @@ PokedexDataPointerTable:
 	dba MolancoraPokedexEntry
 	dba AnchorragePokedexEntry
 	dba MeowsyPokedexEntry
-	dba RinrinPokedexEntry
+	dba MoibellePokedexEntry
 	dba ChimeowPokedexEntry
-	dba CircubPokedexEntry
-	dba TigetricPokedexEntry
+	dba TykerPokedexEntry
+	dba StraigarPokedexEntry
 	dba SwandamePokedexEntry
 	dba KurstrawPokedexEntry
-	dba PanpirePokedexEntry
+	dba PhandarinPokedexEntry
 	dba WolfrostPokedexEntry
 	dba WarwolfPokedexEntry
 	dba ChikoritaPokedexEntry

@@ -288,12 +288,43 @@ LopunnyEvosAttacks:
 
 MismagiusEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, MYSTICAL_FIRE
+	dbw 1, MAGICAL_LEAF
+	dbw 1, GROWL
+	dbw 1, PSYWAVE
+	dbw 1, LUCKY_CHANT
+	dbw 4, SPITE
+	dbw 8, ASTONISH
+	dbw 12, CONFUSE_RAY
+	dbw 16, MEAN_LOOK
+	dbw 20, HEX
+	dbw 24, PSYBEAM
+	dbw 28, PAIN_SPLIT
+	dbw 32, PAYBACK
+	dbw 36, SHADOW_BALL
+	dbw 40, GRUDGE
+	dbw 44, POWER_GEM
+	dbw 48, PERISH_SONG
+	dbw 52, PHANTOM_FORCE
 	db 0 ; no more level-up moves
 
 HonchkrowEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, PECK
+	dbw 1, ASTONISH
+	dbw 1, NIGHT_SLASH
+	dbw 4, PURSUIT
+	dbw 9, HAZE
+	dbw 13, NIGHT_SHADE
+	dbw 18, WING_ATTACK
+	dbw 22, SWAGGER
+	dbw 27, FAINT_ATTACK
+	dbw 31, MEAN_LOOK
+	dbw 36, NASTY_PLOT
+	dbw 40, FOUL_PLAY
+	dbw 45, SUCKER_PUNCH
+	dbw 49, DRILL_PECK
+	dbw 54, DARK_PULSE
 	db 0 ; no more level-up moves
 
 GlameowEvosAttacks:
@@ -534,7 +565,25 @@ GlaceonEvosAttacks:
 
 GliscorEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POISON_JAB
+	dbw 1, THUNDER_FANG
+	dbw 1, ICE_FANG
+	dbw 1, FIRE_FANG
+	dbw 1, POISON_STING
+	dbw 1, SAND_ATTACK
+	dbw 1, NIGHT_SLASH
+	dbw 5, HARDEN
+	dbw 10, QUICK_ATTACK
+	dbw 14, FAINT_ATTACK
+	dbw 19, FURY_CUTTER
+	dbw 23, KNOCK_OFF
+	dbw 28, SLASH
+	dbw 32, SCREECH
+	dbw 37, ACROBATICS
+	dbw 41, X_SCISSOR
+	dbw 46, SKY_UPPERCUT
+	dbw 50, SWORDS_DANCE
+	dbw 55, GUILLOTINE
 	db 0 ; no more level-up moves
 
 MamoswineEvosAttacks:

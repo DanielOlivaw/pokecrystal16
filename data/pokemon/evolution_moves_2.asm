@@ -5,13 +5,13 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; MOLANCORA
 	dw AnchorrageEvolutionMoves ; ANCHORRAGE
 	dw NoEvolutionMoves2        ; MEOWSY
-	dw NoEvolutionMoves2        ; RINRIN
-	dw NoEvolutionMoves2        ; CHIMEOW
-	dw NoEvolutionMoves2        ; CIRCUB
-	dw NoEvolutionMoves2        ; TIGETRIC
+	dw NoEvolutionMoves2        ; MOIBELLE
+	dw ChimeowEvolutionMoves    ; CHIMEOW
+	dw NoEvolutionMoves2        ; TYKER
+	dw NoEvolutionMoves2        ; STRAIGAR
 	dw NoEvolutionMoves2        ; SWANDAME
 	dw NoEvolutionMoves2        ; KURSTRAW
-	dw NoEvolutionMoves2        ; PANPIRE
+	dw NoEvolutionMoves2        ; PHANDARIN
 	dw NoEvolutionMoves2        ; WOLFROST
 	dw NoEvolutionMoves2        ; WARWOLF
 	dw NoEvolutionMoves2        ; CHIKORITA
@@ -54,15 +54,15 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; YANMA
 	dw NoEvolutionMoves2        ; WOOPER
 	dw NoEvolutionMoves2        ; QUAGSIRE
-	dw NoEvolutionMoves2        ; ESPEON
-	dw NoEvolutionMoves2        ; UMBREON
+	dw EspeonEvolutionMoves     ; ESPEON
+	dw UmbreonEvolutionMoves    ; UMBREON
 	dw NoEvolutionMoves2        ; MURKROW
-	dw NoEvolutionMoves2        ; SLOWKING
+	dw SlowkingEvolutionMoves   ; SLOWKING
 	dw NoEvolutionMoves2        ; MISDREAVUS
 	dw NoEvolutionMoves2        ; UNOWN
 	dw NoEvolutionMoves2        ; GIRAFARIG
 	dw NoEvolutionMoves2        ; PINECO
-	dw NoEvolutionMoves2        ; FORRETRESS
+	dw ForretressEvolutionMoves ; FORRETRESS
 	dw NoEvolutionMoves2        ; DUNSPARCE
 	dw NoEvolutionMoves2        ; GLIGAR
 	dw NoEvolutionMoves2        ; STEELIX
@@ -105,6 +105,10 @@ EvolutionMovePointers2::
 
 AnchorrageEvolutionMoves:
 	dw ANCHOR_SHOT
+	db 0 ; no more evolution moves
+
+ChimeowEvolutionMoves:
+	dw MOONLIGHT
 	db 0 ; no more evolution moves
 
 MeganiumEvolutionMoves:
@@ -157,6 +161,23 @@ BellossomEvolutionMoves:
 
 SudowoodoEvolutionMoves:
 	dw SLAM
+	db 0 ; no more evolution moves
+
+EspeonEvolutionMoves:
+	dw CONFUSION
+	db 0 ; no more evolution moves
+
+UmbreonEvolutionMoves:
+	dw PURSUIT
+	db 0 ; no more evolution moves
+
+SlowkingEvolutionMoves:
+	dw HIDDEN_POWER
+	db 0 ; no more evolution moves
+
+ForretressEvolutionMoves:
+	dw MIRROR_SHOT
+	dw AUTOTOMIZE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

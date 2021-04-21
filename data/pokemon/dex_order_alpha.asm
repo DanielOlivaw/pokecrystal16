@@ -102,7 +102,6 @@ AlphabeticalPokedexOrder:
 	dw CHIMEOW
 	dw CHINCHOU
 	dw CHINGLING
-	dw CIRCUB
 	dw CLAMPERL
 	dw CLAYDOL
 	dw CLEFABLE
@@ -400,6 +399,7 @@ AlphabeticalPokedexOrder:
 	dw MIMIKYU
 	dw MISDREAVUS
 	dw MISMAGIUS
+	dw MOIBELLE
 	dw MOLANCORA
 	dw MOLTRES_G
 	dw MONFERNO
@@ -442,7 +442,6 @@ AlphabeticalPokedexOrder:
 	dw PALOSSAND
 	dw PANCHAM
 	dw PANGORO
-	dw PANPIRE
 	dw PARAS
 	dw PARASECT
 	dw PASSIMIAN
@@ -450,6 +449,7 @@ AlphabeticalPokedexOrder:
 	dw PELIPPER
 	dw PERRSERKER
 	dw PETILIL
+	dw PHANDARIN
 	dw PHANPY
 	dw PHANTUMP
 	dw PHEROMOSA
@@ -496,7 +496,6 @@ AlphabeticalPokedexOrder:
 	dw REUNICLUS
 	dw RIBOMBEE
 	dw RILLABOOM
-	dw RINRIN
 	dw RIOLU
 	dw ROCKRUFF
 	dw ROGGENROLA
@@ -580,6 +579,7 @@ AlphabeticalPokedexOrder:
 	dw STARYU
 	dw STEELIX
 	dw STOUTLAND
+	dw STRAIGAR
 	dw STUFFUL
 	dw STUNFISK
 	dw STUNKY
@@ -605,7 +605,6 @@ AlphabeticalPokedexOrder:
 	dw TENTACRUEL
 	dw THIEVUL
 	dw THWACKEY
-	dw TIGETRIC
 	dw TIMBURR
 	dw TIRTOUGA
 	dw TOGEDEMARU
@@ -628,6 +627,7 @@ AlphabeticalPokedexOrder:
 	dw TRUMBEAK
 	dw TURTONATOR
 	dw TURTWIG
+	dw TYKER
 	dw TYNAMO
 	dw TYPE__NULL
 	dw TYPHLOSION

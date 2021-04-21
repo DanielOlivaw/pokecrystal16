@@ -35,8 +35,8 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; DRIFBLIM
 	dw NoEvolutionMoves4        ; BUNEARY
 	dw NoEvolutionMoves4        ; LOPUNNY
-	dw NoEvolutionMoves4        ; MISMAGIUS
-	dw NoEvolutionMoves4        ; HONCHKROW
+	dw MismagiusEvolutionMoves  ; MISMAGIUS
+	dw HonchkrowEvolutionMoves  ; HONCHKROW
 	dw NoEvolutionMoves4        ; GLAMEOW
 	dw NoEvolutionMoves4        ; PURUGLY
 	dw NoEvolutionMoves4        ; CHINGLING
@@ -75,7 +75,7 @@ EvolutionMovePointers4::
 	dw YanmegaEvolutionMoves    ; YANMEGA
 	dw NoEvolutionMoves4        ; LEAFEON
 	dw NoEvolutionMoves4        ; GLACEON
-	dw NoEvolutionMoves4        ; GLISCOR
+	dw GliscorEvolutionMoves    ; GLISCOR
 	dw NoEvolutionMoves4        ; MAMOSWINE
 	dw NoEvolutionMoves4        ; PORYGON_Z
 	dw NoEvolutionMoves4        ; GALLADE
@@ -94,6 +94,15 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; DARKRAI
 	dw NoEvolutionMoves4        ; SHAYMIN
 	dw NoEvolutionMoves4        ; ARCEUS
+
+MismagiusEvolutionMoves:
+	dw LUCKY_CHANT
+	db 0 ; no more evolution moves
+
+HonchkrowEvolutionMoves:
+GliscorEvolutionMoves:
+	dw NIGHT_SLASH
+	db 0 ; no more evolution moves
 
 YanmegaEvolutionMoves:
 	dw BUG_BITE

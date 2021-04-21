@@ -173,3 +173,9 @@ INCLUDE "engine/battle/move_effects/heavy_slam.asm"
 INCLUDE "engine/battle/move_effects/refresh.asm"
 
 INCLUDE "engine/battle/move_effects/stockpile.asm"
+
+INCLUDE "engine/battle/move_effects/defrost_awaken.asm"
+
+INCLUDE "engine/battle/move_effects/weathervane.asm"
+
+INCLUDE "engine/battle/move_effects/cultivate.asm"

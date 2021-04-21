@@ -534,6 +534,11 @@
 	const MISTY_AMBUSH
 	const GUILE_FANG
 	const DATA_PULSE
+	const DROWSY_WRATH
+	const SERENE_BELL
+	const FLARE_UP
+	const WEATHERVANE
+	const CULTIVATE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

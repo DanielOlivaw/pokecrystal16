@@ -130,13 +130,13 @@ MonMenuIcons:
 	db ICON_ABRA          ; MOLANCORA
 	db ICON_ABRA          ; ANCHORRAGE
 	db ICON_ABRA          ; MEOWSY
-	db ICON_ABRA          ; RINRIN
+	db ICON_ABRA          ; MOIBELLE
 	db ICON_ABRA          ; CHIMEOW
-	db ICON_ABRA          ; CIRCUB
-	db ICON_ABRA          ; TIGETRIC
+	db ICON_ABRA          ; TYKER
+	db ICON_ABRA          ; STRAIGAR
 	db ICON_ABRA          ; SWANDAME
 	db ICON_ABRA          ; KURSTRAW
-	db ICON_ABRA          ; PANPIRE
+	db ICON_ABRA          ; PHANDARIN
 	db ICON_ABRA          ; WOLFROST
 	db ICON_ABRA          ; WARWOLF
 	db ICON_CHIKORITA     ; CHIKORITA

@@ -145,13 +145,13 @@ KANTO_POKEMON EQU const_value
 	const MOLANCORA
 	const ANCHORRAGE
 	const MEOWSY
-	const RINRIN
+	const MOIBELLE
 	const CHIMEOW
-	const CIRCUB
-	const TIGETRIC
+	const TYKER
+	const STRAIGAR
 	const SWANDAME
 	const KURSTRAW
-	const PANPIRE
+	const PHANDARIN
 	const WOLFROST
 	const WARWOLF
 JOHTO_BETA_POKEMON EQU const_value

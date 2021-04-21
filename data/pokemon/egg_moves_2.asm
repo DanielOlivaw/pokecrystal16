@@ -5,9 +5,9 @@ EggMovePointers2::
 	dw MolancoraEggMoves
 	dw NoEggMoves2
 	dw MeowsyEggMoves
-	dw RinrinEggMoves
+	dw MoibelleEggMoves
 	dw NoEggMoves2
-	dw CircubEggMoves
+	dw TykerEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw KurstrawEggMoves
@@ -121,16 +121,26 @@ MeowsyEggMoves:
 	dw AMNESIA
 	dw -1 ; end
 
-RinrinEggMoves:
+MoibelleEggMoves:
+	dw DRAINING_KISS
+	dw KNOCK_OFF
+	dw METAL_SOUND
+	dw PURSUIT
+	dw CHARM
 	dw -1 ; end
 
-CircubEggMoves:
+TykerEggMoves:
+	dw BABY_DOLL_EYES
+	dw SPARK
+	dw DEFENSE_CURL
+	dw ROLLOUT
 	dw -1 ; end
 
 KurstrawEggMoves:
 	dw -1 ; end
 
 WolfrostEggMoves:
+	dw ICE_BALL
 	dw -1 ; end
 
 ChikoritaEggMoves:
@@ -277,6 +287,7 @@ YanmaEggMoves:
 	dw -1 ; end
 
 WooperEggMoves:
+	dw BOUNCY_TAIL
 	dw BODY_SLAM
 	dw ANCIENTPOWER
 	dw SAFEGUARD
