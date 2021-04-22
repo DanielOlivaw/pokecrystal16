@@ -77,7 +77,7 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; GLACEON
 	dw GliscorEvolutionMoves    ; GLISCOR
 	dw MamoswineEvolutionMoves  ; MAMOSWINE
-	dw NoEvolutionMoves4        ; PORYGON_Z
+	dw PorygonZEvolutionMoves   ; PORYGON_Z
 	dw NoEvolutionMoves4        ; GALLADE
 	dw NoEvolutionMoves4        ; PROBOPASS
 	dw NoEvolutionMoves4        ; DUSKNOIR
@@ -110,6 +110,10 @@ YanmegaEvolutionMoves:
 
 MamoswineEvolutionMoves:
 	dw DOUBLE_HIT
+	db 0 ; no more evolution moves
+
+PorygonZEvolutionMoves:
+	dw NASTY_PLOT
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves4:

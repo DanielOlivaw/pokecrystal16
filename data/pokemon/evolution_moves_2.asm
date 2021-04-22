@@ -85,10 +85,10 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; SKARMORY
 	dw NoEvolutionMoves2        ; HOUNDOUR
 	dw NoEvolutionMoves2        ; HOUNDOOM
-	dw NoEvolutionMoves2        ; KINGDRA
+	dw KingdraEvolutionMoves    ; KINGDRA
 	dw NoEvolutionMoves2        ; PHANPY
-	dw NoEvolutionMoves2        ; DONPHAN
-	dw NoEvolutionMoves2        ; PORYGON2
+	dw DonphanEvolutionMoves    ; DONPHAN
+	dw Porygon2EvolutionMoves   ; PORYGON2
 	dw NoEvolutionMoves2        ; SMEARGLE
 	dw NoEvolutionMoves2        ; ELEKID
 	dw NoEvolutionMoves2        ; MILTANK
@@ -204,6 +204,20 @@ PiloswineEvolutionMoves:
 OctilleryEvolutionMoves:
 	dw CONSTRICT
 	dw OCTAZOOKA
+	db 0 ; no more evolution moves
+
+KingdraEvolutionMoves:
+	dw YAWN
+	dw WHIRLPOOL
+	db 0 ; no more evolution moves
+
+DonphanEvolutionMoves:
+	dw FURY_ATTACK
+	dw RAPID_SPIN
+	db 0 ; no more evolution moves
+
+Porygon2EvolutionMoves:
+	dw DEFENSE_CURL
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:

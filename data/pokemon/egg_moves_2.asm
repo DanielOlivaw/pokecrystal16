@@ -446,6 +446,8 @@ MiltankEggMoves:
 	dw PRESENT
 	dw REVERSAL
 	dw SEISMIC_TOSS
+	dw SERENE_BELL
+	dw EERIE_CHIME
 	dw -1 ; end
 
 LarvitarEggMoves:

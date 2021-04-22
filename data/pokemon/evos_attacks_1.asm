@@ -1985,18 +1985,18 @@ ChanseyEvosAttacks:
 	dbw 1, DEFENSE_CURL
 	dbw 1, GROWL
 	dbw 1, POUND
-	dbw 5, TAIL_WHIP
+	dbw 4, TAIL_WHIP
 	dbw 9, DOUBLESLAP
 	dbw 13, REFRESH
-	dbw 17, ECHOED_VOICE
-	dbw 21, SING
-	dbw 25, TAKE_DOWN
-	dbw 29, MINIMIZE
-	dbw 33, LIGHT_SCREEN
-	dbw 37, EGG_BOMB
-	dbw 41, SOFTBOILED
-	dbw 45, HEALING_WISH
-	dbw 49, DOUBLE_EDGE
+	dbw 18, ECHOED_VOICE
+	dbw 22, SING
+	dbw 27, TAKE_DOWN
+	dbw 31, MINIMIZE
+	dbw 36, LIGHT_SCREEN
+	dbw 40, EGG_BOMB
+	dbw 45, SOFTBOILED
+	dbw 49, HEALING_WISH
+	dbw 54, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
@@ -2047,19 +2047,19 @@ HorseaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
 	dbw 1, LEER
-	dbw 3, SMOKESCREEN
-	dbw 6, BUBBLE
-	dbw 10, TWISTER
-	dbw 13, FOCUS_ENERGY
-	dbw 16, DRAGONBREATH
-	dbw 20, BUBBLEBEAM
-	dbw 23, AGILITY
-	dbw 26, BRINE
-	; dbw 30, LASER_FOCUS
-	dbw 33, DRAGON_PULSE
-	dbw 36, HYDRO_PUMP
-	dbw 40, DRAGON_DANCE
-	dbw 43, RAIN_DANCE
+	dbw 4, SMOKESCREEN
+	dbw 8, BUBBLE
+	dbw 12, TWISTER
+	dbw 16, FOCUS_ENERGY
+	dbw 20, DRAGONBREATH
+	dbw 24, BUBBLEBEAM
+	dbw 28, AGILITY
+	dbw 32, BRINE
+	; dbw 36, LASER_FOCUS
+	dbw 40, DRAGON_PULSE
+	dbw 44, HYDRO_PUMP
+	dbw 48, DRAGON_DANCE
+	dbw 52, RAIN_DANCE
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
@@ -2068,19 +2068,19 @@ SeadraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
 	dbw 1, LEER
-	dbw 3, SMOKESCREEN
-	dbw 6, BUBBLE
-	dbw 10, TWISTER
-	dbw 13, FOCUS_ENERGY
-	dbw 16, DRAGONBREATH
-	dbw 20, BUBBLEBEAM
-	dbw 23, AGILITY
-	dbw 26, BRINE
-	; dbw 30, LASER_FOCUS
-	dbw 36, DRAGON_PULSE
-	dbw 42, HYDRO_PUMP
-	dbw 49, DRAGON_DANCE
-	dbw 55, RAIN_DANCE
+	dbw 4, SMOKESCREEN
+	dbw 8, BUBBLE
+	dbw 12, TWISTER
+	dbw 16, FOCUS_ENERGY
+	dbw 20, DRAGONBREATH
+	dbw 24, BUBBLEBEAM
+	dbw 28, AGILITY
+	dbw 32, BRINE
+	; dbw 37, LASER_FOCUS
+	dbw 42, DRAGON_PULSE
+	dbw 47, HYDRO_PUMP
+	dbw 52, DRAGON_DANCE
+	dbw 57, RAIN_DANCE
 	db 0 ; no more level-up moves
 
 StaryuEvosAttacks:
@@ -2187,19 +2187,19 @@ ElectabuzzEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
-	dbw 1, THUNDERSHOCK
-	dbw 5, CHARGE
-	dbw 10, SWIFT
-	dbw 15, THUNDER_WAVE
-	dbw 20, SHOCK_WAVE
-	dbw 25, SCREECH
-	dbw 30, THUNDERPUNCH
-	dbw 35, DISCHARGE
-	dbw 40, LOW_KICK
-	dbw 45, THUNDERBOLT
-	dbw 50, LIGHT_SCREEN
-	dbw 55, THUNDER
-	dbw 60, GIGA_IMPACT
+	dbw 4, THUNDERSHOCK
+	dbw 8, CHARGE
+	dbw 12, SWIFT
+	dbw 16, SHOCK_WAVE
+	dbw 20, THUNDER_WAVE
+	dbw 24, SCREECH
+	dbw 28, THUNDERPUNCH
+	dbw 33, DISCHARGE
+	dbw 38, LOW_KICK
+	dbw 43, THUNDERBOLT
+	dbw 48, LIGHT_SCREEN
+	dbw 53, THUNDER
+	dbw 58, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:
@@ -2388,12 +2388,13 @@ PorygonEvosAttacks:
 	dbw 15, PSYBEAM
 	dbw 20, CONVERSION2
 	dbw 25, SIGNAL_BEAM
-	dbw 30, AGILITY
-	dbw 35, DISCHARGE
-	dbw 40, RECOVER
+	dbw 30, DATA_PULSE
+	dbw 35, AGILITY
+	dbw 40, DISCHARGE
 	dbw 45, TRI_ATTACK
-	dbw 50, LOCK_ON
-	dbw 55, ZAP_CANNON
+	dbw 50, RECOVER
+	dbw 55, LOCK_ON
+	dbw 60, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 OmanyteEvosAttacks:

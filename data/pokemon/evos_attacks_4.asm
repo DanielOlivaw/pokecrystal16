@@ -552,7 +552,21 @@ TangrowthEvosAttacks:
 
 ElectivireEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, QUICK_ATTACK
+	dbw 1, LEER
+	dbw 4, THUNDERSHOCK
+	dbw 8, CHARGE
+	dbw 12, SWIFT
+	dbw 16, SHOCK_WAVE
+	dbw 20, THUNDER_WAVE
+	dbw 24, SCREECH
+	dbw 28, THUNDERPUNCH
+	dbw 33, DISCHARGE
+	dbw 38, LOW_KICK
+	dbw 43, THUNDERBOLT
+	dbw 48, LIGHT_SCREEN
+	dbw 53, THUNDER
+	dbw 58, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 TogekissEvosAttacks:
@@ -643,7 +657,25 @@ MamoswineEvosAttacks:
 
 PorygonZEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TRICK_ROOM
 	dbw 1, TACKLE
+	dbw 1, CONVERSION
+	dbw 1, SHARPEN
+	dbw 1, DEFENSE_CURL
+	dbw 1, NASTY_PLOT
+	dbw 5, MAGNET_RISE
+	dbw 10, THUNDERSHOCK
+	dbw 15, PSYBEAM
+	dbw 20, CONVERSION2
+	dbw 25, SIGNAL_BEAM
+	dbw 30, DATA_PULSE
+	dbw 35, AGILITY
+	dbw 40, DISCHARGE
+	dbw 45, TRI_ATTACK
+	dbw 50, RECOVER
+	dbw 55, LOCK_ON
+	dbw 60, ZAP_CANNON
+	dbw 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 GalladeEvosAttacks:
