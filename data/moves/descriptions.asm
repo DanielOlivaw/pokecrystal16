@@ -541,6 +541,9 @@ MoveDescriptions1:
 	dw CultivateDescription
 	dw TimeTravelDescription
 	dw SeamitarDescription
+	dw RockWreckerDescription
+	dw BrutalSwingDescription
+	dw ElectrowebDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -843,6 +846,7 @@ PlayRoughDescription:
 HyperBeamDescription:
 GigaImpactDescription:
 RoarOfTimeDescription:
+RockWreckerDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
@@ -2334,5 +2338,13 @@ WeathervaneDescription:
 CultivateDescription:
 	db   "Grows a berry from"
 	next "the user's body.@"
+
+BrutalSwingDescription:
+	db   "Swings the user's"
+	next "body violently.@"
+
+ElectrowebDescription:
+	db   "An electric net"
+	next "that lowers SPEED.@"
 
 		;"123456789123456789"

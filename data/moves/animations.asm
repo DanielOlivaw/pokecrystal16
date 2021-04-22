@@ -562,6 +562,9 @@ BattleAnimations::
 	dw BattleAnim_Cultivate
 	dw BattleAnim_TimeTravel
 	dw BattleAnim_Seamitar
+	dw BattleAnim_RockWrecker
+	dw BattleAnim_BrutalSwing
+	dw BattleAnim_Electroweb
 
 	dw BattleAnim_SweetScent2
 
@@ -945,6 +948,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_RockWrecker:
+BattleAnim_BrutalSwing:
+BattleAnim_Electroweb:
 BattleAnim_TimeTravel:
 BattleAnim_Seamitar:
 BattleAnim_DrowsyWrath:

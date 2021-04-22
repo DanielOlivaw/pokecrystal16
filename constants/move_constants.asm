@@ -541,6 +541,9 @@
 	const CULTIVATE
 	const TIME_TRAVEL
 	const SEAMITAR
+	const ROCK_WRECKER
+	const BRUTAL_SWING
+	const ELECTROWEB
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

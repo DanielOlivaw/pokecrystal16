@@ -534,4 +534,7 @@ MoveNames::
 	db "CULTIVATE@"
 	db "TIME TRAVEL@"
 	db "SEAMITAR@"
+	db "ROCK WRECKER@"
+	db "BRUTAL SWING@"
+	db "ELECTROWEB@"
 	  ;"123456123456@"
