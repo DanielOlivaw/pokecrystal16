@@ -18,4 +18,5 @@ CriticalHitMoves:
 	dw SHADOW_CLAW
 	dw ATTACK_ORDER
 	dw SPACIAL_REND
+	dw SEAMITAR
 	dw -1

@@ -694,6 +694,7 @@ CheckPlayerLockedIn:
 	ld hl, wPlayerSubStatus6
 	res SUBSTATUS_FLINCHED, [hl]
 
+	ld hl, wPlayerSubStatus3
 	ld a, [hl]
 	and 1 << SUBSTATUS_CHARGED | 1 << SUBSTATUS_RAMPAGE
 	jp nz, .quit

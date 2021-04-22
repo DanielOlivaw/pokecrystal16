@@ -560,6 +560,8 @@ BattleAnimations::
 	dw BattleAnim_FlareUp
 	dw BattleAnim_Weathervane
 	dw BattleAnim_Cultivate
+	dw BattleAnim_TimeTravel
+	dw BattleAnim_Seamitar
 
 	dw BattleAnim_SweetScent2
 
@@ -943,6 +945,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_TimeTravel:
+BattleAnim_Seamitar:
 BattleAnim_DrowsyWrath:
 BattleAnim_SereneBell:
 BattleAnim_FlareUp:

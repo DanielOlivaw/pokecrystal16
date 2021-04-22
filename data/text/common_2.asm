@@ -750,6 +750,13 @@ VanishedInstantlyText::
 	; line "vanished instantly!"
 	prompt
 
+TraveledIntoTheFutureText::
+	text_start
+	line "traveled into the"
+	cont "future!"
+	prompt
+		;"123456789123456789"
+
 _ActorNameText::
 	text "<USER>@"
 	text_end

@@ -348,15 +348,15 @@ CantMove:
 	call GetBattleVarAddr
 	res SUBSTATUS_ROLLOUT, [hl]
 
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	res SUBSTATUS_UPROAR, [hl]
+
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	ld a, [hl]
 	and $ff ^ (1 << SUBSTATUS_BIDE | 1 << SUBSTATUS_RAMPAGE | 1 << SUBSTATUS_CHARGED)
 	ld [hl], a
-
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVarAddr
-	res SUBSTATUS_UPROAR, [hl]
 
 	farcall ResetFuryCutterCount
 
@@ -381,6 +381,7 @@ CantMove:
 	dw DIVE
 	dw SHADOW_FORCE
 	dw PHANTOM_FORCE
+	dw TIME_TRAVEL
 	dw -1
 
 OpponentCantMove:
@@ -2440,6 +2441,7 @@ BattleCommand_MoveAnimNoSub:
 	dw DIVE
 	dw SHADOW_FORCE
 	dw PHANTOM_FORCE
+	dw TIME_TRAVEL
 	dw -1
 
 .alternate_anim
@@ -2571,6 +2573,7 @@ BattleCommand_FailureText:
 	dw DIVE
 	dw SHADOW_FORCE
 	dw PHANTOM_FORCE
+	dw TIME_TRAVEL
 	dw -1
 
 BattleCommand_ApplyDamage:
@@ -6869,6 +6872,7 @@ BattleCommand_Charge:
 	dw DIVE,          .Dive
 	dw SHADOW_FORCE,  .ShadowForce
 	dw PHANTOM_FORCE, .PhantomForce
+	dw TIME_TRAVEL,   .TimeTravel
 	dw -1
 
 .RazorWind:
@@ -6908,8 +6912,13 @@ BattleCommand_Charge:
 
 .PhantomForce:
 .ShadowForce:
-; 'sprang up!'
+; 'vanished instantly!'
 	text_far VanishedInstantlyText
+	text_end
+
+.TimeTravel:
+; 'vanished instantly!'
+	text_far TraveledIntoTheFutureText
 	text_end
 
 BattleCommand_TrapTarget:

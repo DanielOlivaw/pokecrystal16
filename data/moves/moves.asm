@@ -550,4 +550,6 @@ Moves1:
 	move EFFECT_SP_ATK_UP_2,         0, FIRE,     STATUS,   100, 15,   0 ; FLARE_UP
 	move EFFECT_STATUS_SELF,         0, NORMAL,   STATUS,   100, 20,   0 ; WEATHERVANE
 	move EFFECT_STATUS_SELF,         0, GRASS,    STATUS,   100, 10,   0 ; CULTIVATE
+	move EFFECT_SHADOW_FORCE,      120, PSYCHIC,  SPECIAL,  100,  5,   0 ; TIME_TRAVEL
+	move EFFECT_NORMAL_HIT,         90, WATER,    PHYSICAL, 100, 15,   0 ; SEAMITAR
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -532,4 +532,6 @@ MoveNames::
 	db "FLARE UP@"
 	db "WEATHERVANE@"
 	db "CULTIVATE@"
+	db "TIME TRAVEL@"
+	db "SEAMITAR@"
 	  ;"123456123456@"

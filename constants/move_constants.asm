@@ -539,6 +539,8 @@
 	const FLARE_UP
 	const WEATHERVANE
 	const CULTIVATE
+	const TIME_TRAVEL
+	const SEAMITAR
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

@@ -539,6 +539,8 @@ MoveDescriptions1:
 	dw FlareUpDescription
 	dw WeathervaneDescription
 	dw CultivateDescription
+	dw TimeTravelDescription
+	dw SeamitarDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -562,6 +564,7 @@ DrillRunDescription:
 ShadowClawDescription:
 SpacialRendDescription:
 AttackOrderDescription:
+SeamitarDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -2119,10 +2122,8 @@ DiveDescription:
 	next "2nd turn: Attack@"
 
 ShadowForceDescription:
-	db   "1st turn: Vanish"
-	next "2nd turn: Attack@"
-
 PhantomForceDescription:
+TimeTravelDescription:
 	db   "1st turn: Vanish"
 	next "2nd turn: Attack@"
 
