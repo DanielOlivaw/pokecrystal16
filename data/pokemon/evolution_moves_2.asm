@@ -97,7 +97,7 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; ENTEI
 	dw NoEvolutionMoves2        ; SUICUNE
 	dw NoEvolutionMoves2        ; LARVITAR
-	dw NoEvolutionMoves2        ; PUPITAR
+	dw PupitarEvolutionMoves    ; PUPITAR
 	dw NoEvolutionMoves2        ; TYRANITAR
 	dw NoEvolutionMoves2        ; LUGIA
 	dw NoEvolutionMoves2        ; HO_OH
@@ -218,6 +218,10 @@ DonphanEvolutionMoves:
 
 Porygon2EvolutionMoves:
 	dw DEFENSE_CURL
+	db 0 ; no more evolution moves
+
+PupitarEvolutionMoves:
+	dw IRON_DEFENSE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves2:
