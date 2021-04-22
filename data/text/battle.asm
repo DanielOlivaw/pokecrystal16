@@ -1345,7 +1345,7 @@ StoleBerryRecoveryText:
 
 CultivateText:
 	text "<USER>"
-	line "grew itself"
+	line "grew one"
 	cont "@"
 	text_ram wStringBuffer1
 	text "!"
@@ -1695,6 +1695,18 @@ StockpileText:
 	line "stockpiled @"
 	text_decimal wDeciramBuffer, 1, 1
 	text "!"
+	prompt
+
+SharedPowerText:
+	text "<USER>"
+	line "shared power with"
+	cont "<TARGET>!"
+	prompt
+
+SharedGuardText:
+	text "<USER>"
+	line "shared guard with"
+	cont "<TARGET>!"
 	prompt
 
 ; Power40Text_Test::

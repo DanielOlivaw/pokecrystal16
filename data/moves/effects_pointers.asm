@@ -222,3 +222,4 @@ MoveEffectsPointers:
 	dw SpitUp                 ; EFFECT_SPIT_UP
 	dw MistyAmbush            ; EFFECT_MISTY_AMBUSH
 	dw DrowsyRage             ; EFFECT_DROWSY_RAGE
+	dw SplitStats             ; EFFECT_SPLIT_STATS

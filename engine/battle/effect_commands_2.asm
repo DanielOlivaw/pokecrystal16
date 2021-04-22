@@ -179,3 +179,5 @@ INCLUDE "engine/battle/move_effects/defrost_awaken.asm"
 INCLUDE "engine/battle/move_effects/weathervane.asm"
 
 INCLUDE "engine/battle/move_effects/cultivate.asm"
+
+INCLUDE "engine/battle/move_effects/split_stats.asm"

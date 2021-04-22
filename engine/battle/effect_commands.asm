@@ -1769,6 +1769,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_YAWN
 	ret z
+	cp EFFECT_SPLIT_STATS
+	ret z
 
 	call .StatModifiers
 
@@ -7757,6 +7759,10 @@ BattleCommand_Yawn:
 
 BattleCommand_CraftyShield:
 	farcall CraftyShieldEffect
+	ret
+
+BattleCommand_SplitStats:
+	farcall SplitStatsEffect
 	ret
 
 BattleCommand_HeavySlam:

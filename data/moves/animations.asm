@@ -565,6 +565,8 @@ BattleAnimations::
 	dw BattleAnim_RockWrecker
 	dw BattleAnim_BrutalSwing
 	dw BattleAnim_Electroweb
+	dw BattleAnim_PowerSplit
+	dw BattleAnim_GuardSplit
 
 	dw BattleAnim_SweetScent2
 
@@ -948,6 +950,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_PowerSplit:
+BattleAnim_GuardSplit:
 BattleAnim_RockWrecker:
 BattleAnim_BrutalSwing:
 BattleAnim_Electroweb:

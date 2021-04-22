@@ -555,4 +555,6 @@ Moves1:
 	move EFFECT_HYPER_BEAM,        150, ROCK,     PHYSICAL,  90,  5,   0 ; ROCK_WRECKER
 	move EFFECT_NORMAL_HIT,         60, DARK,     PHYSICAL, 100, 20,   0 ; BRUTAL_SWING
 	move EFFECT_SPEED_DOWN_HIT,     55, ELECTRIC, SPECIAL,   95, 15, 100 ; ELECTROWEB
+	move EFFECT_SPLIT_STATS,         0, PSYCHIC,  STATUS,   100, 10,   0 ; POWER_SPLIT
+	move EFFECT_SPLIT_STATS,         0, PSYCHIC,  STATUS,   100, 10,   0 ; GUARD_SPLIT
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

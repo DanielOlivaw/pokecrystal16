@@ -2947,3 +2947,11 @@ DrowsyRage:
 	buildopponentrage
 	kingsrock
 	endmove
+
+SplitStats:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	splitstats
+	endmove

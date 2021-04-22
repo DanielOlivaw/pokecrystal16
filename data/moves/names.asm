@@ -537,4 +537,6 @@ MoveNames::
 	db "ROCK WRECKER@"
 	db "BRUTAL SWING@"
 	db "ELECTROWEB@"
+	db "POWER SPLIT@"
+	db "GUARD SPLIT@"
 	  ;"123456123456@"

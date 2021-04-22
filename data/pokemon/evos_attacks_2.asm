@@ -1418,8 +1418,8 @@ ShuckleEvosAttacks:
 	dbw 28, SAFEGUARD
 	dbw 32, BUG_BITE
 	dbw 36, REST
-	; dbw 40, POWER_SPLIT
-	; dbw 40, GUARD_SPLIT
+	dbw 40, POWER_SPLIT
+	dbw 40, GUARD_SPLIT
 	dbw 44, ROCK_SLIDE
 	dbw 48, STICKY_WEB
 	dbw 52, STONE_EDGE

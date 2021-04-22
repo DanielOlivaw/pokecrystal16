@@ -544,6 +544,8 @@ MoveDescriptions1:
 	dw RockWreckerDescription
 	dw BrutalSwingDescription
 	dw ElectrowebDescription
+	dw PowerSplitDescription
+	dw GuardSplitDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2346,5 +2348,13 @@ BrutalSwingDescription:
 ElectrowebDescription:
 	db   "An electric net"
 	next "that lowers SPEED.@"
+
+PowerSplitDescription:
+	db   "Averages offensive"
+	next "stats with target.@"
+
+GuardSplitDescription:
+	db   "Averages defensive"
+	next "stats with target.@"
 
 		;"123456789123456789"
