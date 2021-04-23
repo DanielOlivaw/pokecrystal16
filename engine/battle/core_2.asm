@@ -1,6 +1,8 @@
 Core2_NewTurnEndEffects:
 	call EndRoostEffect
 	call EndChargeEffect
+	call EndLaserFocusEffect
+	call EndPowderEffect
 	call HandleYawn
 	call HandleAquaRing
 	call HandleIngrain
@@ -10,6 +12,7 @@ Core2_NewTurnEndEffects:
 	call HandleTrickRoom
 	call HandleRetaliate
 	call HandleLeftovers
+	call HandleWishEffect
 	call HandleSafeguard
 	jp HandleScreens
 
@@ -151,6 +154,37 @@ EndChargeEffect:
 .lower_charge_count
 	xor a
 	ld [bc], a
+	ret
+
+EndLaserFocusEffect:
+; At the end of the 2nd turn, Laser Focus can no longer force a critical hit.
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus6
+	ld bc, wPlayerLaserFocusCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus6
+	ld bc, wEnemyLaserFocusCount
+.do_it
+	ld a, [bc]
+	and a
+	jr nz, .lower_laser_focus_count
+	bit SUBSTATUS_LASER_FOCUS, [hl]
+	ret z
+	res SUBSTATUS_LASER_FOCUS, [hl]
+	ret
+
+.lower_laser_focus_count
+	xor a
+	ld [bc], a
+	ret
+
+EndPowderEffect:
+; Powder's effect ends at the end of the turn in which it was used.
+	ld hl, wPlayerSubStatus7
+	res SUBSTATUS_POWDERED, [hl]
+	ld hl, wEnemySubStatus7
+	res SUBSTATUS_POWDERED, [hl]
 	ret
 
 HandleYawn:
@@ -298,6 +332,24 @@ HandleRetaliate:
 	ret z
 	dec [hl]
 	ret
+
+HandleWishEffect:
+; At the end of the 2nd turn, Wish restores 1/2
+; of the max HP of the user's current Pokemon.
+	call SetPlayerTurn
+	ld hl, wPlayerWishCount
+	call .do_it
+	call SetEnemyTurn
+	ld hl, wEnemyWishCount
+.do_it
+	ld a, [hl]
+	and a
+	ret z
+	dec [hl]
+	ret nz
+	farcall RestoreHalfMaxHP
+	ld hl, WishCameTrueText
+	jp StdBattleTextbox
 
 HandleSafeguard:
 	ldh a, [hSerialConnectionStatus]

@@ -485,7 +485,7 @@ wPlayerSubStatus6::
 ; 7 confused
 ; 6 charged (electric boost)
 ; 5 ate berry (belch)
-; 4 
+; 4 laser focus
 ; 3 flinched
 ; 2 magnet rise
 ; 1 grudge
@@ -494,7 +494,7 @@ wPlayerSubStatus6::
 wPlayerSubStatus7::
 ; bit
 ; 7 me first
-; 6 move stolen
+; 6 powdered
 ; 5 
 ; 4 
 ; 3 
@@ -537,6 +537,8 @@ wPlayerLuckyChantCount:: db
 wPlayerMagnetRiseCount:: db
 wPlayerHealingWishCount:: db
 wPlayerStockpileCount:: db
+wPlayerLaserFocusCount:: db
+wPlayerWishCount:: db
 wPlayerFuryCutterCount:: db ; c678
 wPlayerProtectCount:: db ; c679
 
@@ -552,6 +554,8 @@ wEnemyLuckyChantCount:: db
 wEnemyMagnetRiseCount:: db
 wEnemyHealingWishCount:: db
 wEnemyStockpileCount:: db
+wEnemyLaserFocusCount:: db
+wEnemyWishCount:: db
 wEnemyFuryCutterCount:: db ; c680
 wEnemyProtectCount:: db ; c681
 

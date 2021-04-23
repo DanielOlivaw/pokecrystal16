@@ -52,7 +52,7 @@ BattleCommandPointers:
 	dw BattleCommand_RechargeNextTurn
 	dw BattleCommand_Mimic
 	dw BattleCommand_Metronome
-	dw BattleCommand_LeechSeed
+	dw BattleCommand_StatusTargetOpponent
 	dw BattleCommand_Splash
 	dw BattleCommand_Disable
 	dw BattleCommand_ClearText
@@ -64,29 +64,23 @@ BattleCommandPointers:
 	dw BattleCommand_ConstantDamage
 	dw BattleCommand_Counter
 	dw BattleCommand_Encore
-	dw BattleCommand_PainSplit
 	dw BattleCommand_Snore
 	dw BattleCommand_Conversion2
-	dw BattleCommand_LockOn
 	dw BattleCommand_Sketch
 	dw BattleCommand_DefrostOpponent
 	dw BattleCommand_SleepTalk
-	dw BattleCommand_Spite
 	dw BattleCommand_FalseSwipe
 	dw BattleCommand_HeldFlinch
 	dw BattleCommand_TripleKick
 	dw BattleCommand_KickCounter
 	dw BattleCommand_Thief
-	dw BattleCommand_Nightmare
 	dw BattleCommand_Defrost
 	dw BattleCommand_Protect
-	dw BattleCommand_Foresight
 	dw BattleCommand_Endure
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
 	dw BattleCommand_LowKick
 	dw BattleCommand_FuryCutter
-	dw BattleCommand_Attract
 	dw BattleCommand_HappinessPower
 	dw BattleCommand_Present
 	dw BattleCommand_DamageCalc
@@ -172,7 +166,6 @@ BattleCommandPointers:
 	dw BattleCommand_MultiStatDown
 	dw BattleCommand_MultiStatDownMessage
 	dw BattleCommand_DoCureStatus
-	dw BattleCommand_Trick
 	dw BattleCommand_HammerArm
 	dw BattleCommand_ResetStatsTarget
 	dw BattleCommand_Defog
@@ -187,7 +180,6 @@ BattleCommandPointers:
 	dw BattleCommand_Uproot
 	dw BattleCommand_Uproar
 	dw BattleCommand_UproarState
-	dw BattleCommand_Soak
 	dw BattleCommand_WeatherBall
 	dw BattleCommand_Captivate
 	dw BattleCommand_Yawn
@@ -197,4 +189,3 @@ BattleCommandPointers:
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
 	dw BattleCommand_Awaken
-	dw BattleCommand_SplitStats

@@ -159,6 +159,7 @@ ResetBatonPassStatus:
 	res SUBSTATUS_ELECTRIC_CHARGED, [hl]
 	res SUBSTATUS_ATE_BERRY, [hl]
 	res SUBSTATUS_DROWSY, [hl]
+	res SUBSTATUS_LASER_FOCUS, [hl]
 
 	; New mon hasn't used a move yet.
 	ld a, BATTLE_VARS_LAST_MOVE

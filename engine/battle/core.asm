@@ -1463,6 +1463,31 @@ RestoreSixteenthMaxHP:
 	call SwitchTurnCore
 	jp RestoreHP
 
+RestoreHalfMaxHP:
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld hl, wEnemyMonHP
+
+.got_hp
+; Don't restore if we're already at max HP
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	cp b
+	jr nz, .restore
+	ld a, [hl]
+	cp c
+	ret z
+
+.restore
+	call GetHalfMaxHP
+	call SwitchTurnCore
+	jp RestoreHP
+
 RestoreMaxHP:
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
@@ -3783,6 +3808,7 @@ endr
 	ld [wEnemyYawnCount], a
 	ld [wEnemyMagnetRiseCount], a
 	ld [wEnemyStockpileCount], a
+	ld [wEnemyLaserFocusCount], a
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
@@ -4275,6 +4301,7 @@ endr
 	ld [wPlayerYawnCount], a
 	ld [wPlayerMagnetRiseCount], a
 	ld [wPlayerStockpileCount], a
+	ld [wPlayerLaserFocusCount], a
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]

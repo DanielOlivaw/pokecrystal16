@@ -1,6 +1,9 @@
 BattleCommand_ReflectType:
 ; change user's type to match target's
 
+	farcall CheckHiddenOpponent
+	jr nz, .failed
+
 	ld hl, wBattleMonType1
 	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
@@ -27,3 +30,8 @@ BattleCommand_ReflectType:
 	farcall AnimateCurrentMove
 	ld hl, ReflectTypeText
 	jp StdBattleTextbox
+
+.failed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret

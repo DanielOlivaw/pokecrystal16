@@ -1,6 +1,18 @@
 Find_StatusTargetSelf:
 ; Many move effects that target the user or the battlefield,
 ; resulting in the same structure in effects.asm
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SUNLIGHT_HEAL
+	jp z, BattleCommand_HealSun
+	cp EFFECT_CONVERSION
+	jp z, BattleCommand_Conversion
+	cp EFFECT_TRICK_ROOM
+	jp z, BattleCommand_TrickRoom
+	cp EFFECT_HEALING_WISH
+	jp z, BattleCommand_HealingWish
+
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
 	ld bc, FOCUS_ENERGY
@@ -105,12 +117,6 @@ Find_StatusTargetSelf:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	ld bc, REFLECT_TYPE
-	call CompareMove2
-	jp z, BattleCommand_ReflectType
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
 	ld bc, BRIGHT_MOSS
 	call CompareMove2
 	jp z, BattleCommand_BrightMoss
@@ -193,16 +199,17 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_Cultivate
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
+	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	cp EFFECT_SUNLIGHT_HEAL
-	jp z, BattleCommand_HealSun
-	cp EFFECT_CONVERSION
-	jp z, BattleCommand_Conversion
-	cp EFFECT_TRICK_ROOM
-	jp z, BattleCommand_TrickRoom
-	cp EFFECT_HEALING_WISH
-	jp z, BattleCommand_HealingWish
+	ld bc, LASER_FOCUS
+	call CompareMove2
+	jp z, BattleCommand_LaserFocus
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, WISH
+	call CompareMove2
+	jp z, BattleCommand_Wish
 
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE

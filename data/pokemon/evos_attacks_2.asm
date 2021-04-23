@@ -762,7 +762,7 @@ TogepiEvosAttacks:
 	dbw 40, SAFEGUARD
 	dbw 45, DOUBLE_EDGE
 	dbw 50, BATON_PASS
-	; dbw 55, WISH
+	dbw 55, WISH
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
@@ -782,7 +782,7 @@ TogeticEvosAttacks:
 	dbw 40, SAFEGUARD
 	dbw 45, DOUBLE_EDGE
 	dbw 50, BATON_PASS
-	; dbw 55, WISH
+	dbw 55, WISH
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
@@ -799,7 +799,7 @@ NatuEvosAttacks:
 	; dbw 28, POWER_SWAP
 	; dbw 28, GUARD_SWAP
 	dbw 32, PSYCHIC_M
-	; dbw 36, WISH
+	dbw 36, WISH
 	dbw 40, FUTURE_SIGHT
 	dbw 44, ME_FIRST
 	db 0 ; no more level-up moves
@@ -818,7 +818,7 @@ XatuEvosAttacks:
 	; dbw 30, POWER_SWAP
 	; dbw 30, GUARD_SWAP
 	dbw 36, PSYCHIC_M
-	; dbw 42, WISH
+	dbw 42, WISH
 	dbw 48, FUTURE_SIGHT
 	dbw 54, ME_FIRST
 	db 0 ; no more level-up moves
@@ -1958,7 +1958,7 @@ SuicuneEvosAttacks:
 	dbw 36, DEFOG
 	dbw 42, CRUNCH
 	dbw 48, EXTRASENSORY
-	dbw 54, SCALD
+	; dbw 54, SCALD
 	dbw 60, MIRROR_COAT
 	dbw 66, RAIN_DANCE
 	dbw 72, HYDRO_PUMP

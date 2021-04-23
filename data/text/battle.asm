@@ -1056,6 +1056,13 @@ ChargingPowerText:
 	cont "power!"
 	prompt
 
+ConcentratedIntenselyText:
+	text_pause
+	text "<USER>"
+	line "concentrated"
+	cont "intensely!"
+	prompt
+
 RecoilText:
 	text "<USER>'s"
 	line "hit with recoil!"
@@ -1360,6 +1367,18 @@ StartedNightmareText:
 	text "<TARGET>"
 	line "started to have a"
 	cont "NIGHTMARE!"
+	prompt
+
+CoveredInPowderText:
+	text "<TARGET>"
+	line "is covered in"
+	cont "POWDER!"
+	prompt
+
+PowderExplodedText:
+	text "The POWDER on"
+	line "<USER>"
+	cont "exploded!"
 	prompt
 
 WasDefrostedText:

@@ -1,5 +1,12 @@
-TrickEffect:
+BattleCommand_Trick:
 ; Get both held items
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+
+	farcall CheckHiddenOpponent
+	jr nz, .failed
+
 	ld hl, wBattleMonItem
 	ld de, wEnemyMonItem
 

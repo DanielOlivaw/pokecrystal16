@@ -1,4 +1,4 @@
-SoakEffect:
+BattleCommand_Soak:
 ; Turn the target into a pure Water-type
 
 ; Fail if the move missed
@@ -8,6 +8,9 @@ SoakEffect:
 
 ; Fail if the target is flying or digging (may be redundant)
 	farcall CheckHiddenOpponent
+	jr nz, .failed
+
+	farcall CheckSubstituteOpp
 	jr nz, .failed
 
 ; Get the target's type

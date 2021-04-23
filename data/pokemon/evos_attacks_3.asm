@@ -407,18 +407,62 @@ LinooneGEvosAttacks:
 LotadEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 14, TR_ANYTIME, LOMBRE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ASTONISH
+	dbw 1, GROWL
+	dbw 4, ABSORB
+	dbw 8, BUBBLE
+	dbw 12, MIST
+	dbw 16, MEGA_DRAIN
+	dbw 20, FLAIL
+	dbw 24, BUBBLEBEAM
+	dbw 28, RAIN_DANCE
+	dbw 32, GIGA_DRAIN
+	dbw 36, ZEN_HEADBUTT
+	dbw 40, ENERGY_BALL
 	db 0 ; no more level-up moves
 
 LombreEvosAttacks:
 	dbbw EVOLVE_ITEM, WATER_STONE, LUDICOLO
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, GIGA_DRAIN
+	dbw 1, RAIN_DANCE
+	dbw 1, FLAIL
+	dbw 1, ASTONISH
+	dbw 1, GROWL
+	dbw 4, ABSORB
+	dbw 8, BUBBLE
+	dbw 12, MIST
+	dbw 13, FURY_SWIPES
+	dbw 17, MEGA_DRAIN
+	dbw 22, FAKE_OUT
+	dbw 27, BUBBLEBEAM
+	dbw 32, UPROAR
+	dbw 37, KNOCK_OFF
+	dbw 42, ZEN_HEADBUTT
+	dbw 47, ENERGY_BALL
+	dbw 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 LudicoloEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, GIGA_DRAIN
+	dbw 1, RAIN_DANCE
+	dbw 1, FLAIL
+	dbw 1, ASTONISH
+	dbw 1, GROWL
+	dbw 4, ABSORB
+	dbw 8, BUBBLE
+	dbw 12, MIST
+	dbw 13, FURY_SWIPES
+	dbw 13, TEETER_DANCE
+	dbw 17, MEGA_DRAIN
+	dbw 22, FAKE_OUT
+	dbw 27, BUBBLEBEAM
+	dbw 32, UPROAR
+	dbw 37, KNOCK_OFF
+	dbw 42, ZEN_HEADBUTT
+	dbw 47, ENERGY_BALL
+	dbw 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SeedotEvosAttacks:

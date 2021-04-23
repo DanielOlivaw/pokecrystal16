@@ -546,6 +546,16 @@
 	const ELECTROWEB
 	const POWER_SPLIT
 	const GUARD_SPLIT
+	const LASER_FOCUS
+	const DRAIN_PUNCH
+	const FIRE_LASH
+	const FIERY_DANCE
+	const WATER_SHURIKEN
+	const POWDER
+	const WISH
+	const GRASS_KNOT
+	const HORN_LEECH
+	const CIRCLE_THROW
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

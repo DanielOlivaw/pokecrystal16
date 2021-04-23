@@ -1,7 +1,7 @@
 BattleCommand_LockOn:
 ; lockon
 
-	call CheckSubstituteOpp
+	farcall CheckSubstituteOpp
 	jr nz, .fail
 
 	ld a, [wAttackMissed]
@@ -11,11 +11,12 @@ BattleCommand_LockOn:
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVarAddr
 	set SUBSTATUS_LOCK_ON, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 
 	ld hl, TookAimText
 	jp StdBattleTextbox
 
 .fail
-	call AnimateFailedMove
-	jp PrintDidntAffect
+	farcall AnimateFailedMove
+	farcall PrintDidntAffect
+	ret

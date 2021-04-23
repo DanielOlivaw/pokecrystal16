@@ -15,8 +15,8 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; ZIGZAGOON_G
 	dw LinooneGEvolutionMoves   ; LINOONE_G
 	dw NoEvolutionMoves3        ; LOTAD
-	dw NoEvolutionMoves3        ; LOMBRE
-	dw NoEvolutionMoves3        ; LUDICOLO
+	dw LombreEvolutionMoves     ; LOMBRE
+	dw LudicoloEvolutionMoves   ; LUDICOLO
 	dw NoEvolutionMoves3        ; SEEDOT
 	dw NoEvolutionMoves3        ; NUZLEAF
 	dw NoEvolutionMoves3        ; SHIFTRY
@@ -143,6 +143,14 @@ MightyenaEvolutionMoves:
 
 LinooneGEvolutionMoves:
 	dw NIGHT_SLASH
+	db 0 ; no more evolution moves
+
+LombreEvolutionMoves:
+	dw FURY_SWIPES
+	db 0 ; no more evolution moves
+
+LudicoloEvolutionMoves:
+	dw TEETER_DANCE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

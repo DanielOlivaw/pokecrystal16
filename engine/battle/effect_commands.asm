@@ -1200,12 +1200,20 @@ BattleCommand_Critical:
 	and a
 	ret nz
 
+; Laser Focus makes the user's next attack always crit
+; unless the target is protected by Lucky Chant.
+	ld a, BATTLE_VARS_SUBSTATUS6
+	call GetBattleVar
+	bit SUBSTATUS_LASER_FOCUS, a
+	jr nz, .always_crit
+
 ; Moves with EFFECT_ALWAYS_CRIT will always result in a critical hit.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
 	cp EFFECT_ALWAYS_CRIT
 	jr nz, .get_critical_chance
+.always_crit
 	ld a, 1
 	ld [wCriticalHit], a
 	ret
@@ -1690,6 +1698,8 @@ BattleCommand_DamageVariation:
 BattleCommand_CheckHit:
 ; checkhit
 
+	call .Powder
+
 	call .BurnUp
 
 	call .FirstTurn
@@ -1749,12 +1759,6 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_FORCE_SWITCH
 	ret z
-	cp EFFECT_FORESIGHT
-	ret z
-	cp EFFECT_LOCK_ON
-	ret z
-	cp EFFECT_PAIN_SPLIT
-	ret z
 	cp EFFECT_STRUGGLE
 	ret z
 	cp EFFECT_PLAY_NICE
@@ -1768,6 +1772,12 @@ BattleCommand_CheckHit:
 	cp EFFECT_ATK_SP_ATK_DOWN
 	ret z
 	cp EFFECT_YAWN
+	ret z
+	cp EFFECT_FORESIGHT
+	ret z
+	cp EFFECT_LOCK_ON
+	ret z
+	cp EFFECT_PAIN_SPLIT
 	ret z
 	cp EFFECT_SPLIT_STATS
 	ret z
@@ -1835,6 +1845,30 @@ BattleCommand_CheckHit:
 	call GetBattleVar
 	and SLP
 	ret
+
+.Powder:
+; If the user is covered in Powder and tries to use a Fire-type move,
+; the move fails and the user takes damage equal to 1/4 their max HP.
+	ld a, BATTLE_VARS_SUBSTATUS7
+	call GetBattleVar
+	bit SUBSTATUS_POWDERED, a
+	ret z
+
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp FIRE
+	ret nz
+	
+	; ld de, ANIM_PSN
+	; call PlayUserBattleAnim
+	ld hl, PowderExplodedText
+	call StdBattleTextbox
+	ld hl, GetQuarterMaxHP
+	call CallBattleCore
+	ld hl, SubtractHPFromUser
+	call CallBattleCore
+	jr .Missed
 
 .BurnUp:
 ; Burn Up misses if used by a non-fire-type
@@ -4186,14 +4220,6 @@ INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
 BattleCommand_FalseSwipe:
 	farcall FalseSwipeEffect
-	ret
-
-BattleCommand_Spite:
-	farcall SpiteEffect
-	ret
-
-BattleCommand_PainSplit:
-	farcall PainSplitEffect
 	ret
 
 FarPlayBattleAnimation:
@@ -7297,10 +7323,6 @@ INCLUDE "engine/battle/move_effects/disable.asm"
 
 INCLUDE "engine/battle/move_effects/pay_day.asm"
 
-BattleCommand_LeechSeed:
-	farcall LeechSeedEffect
-	ret
-
 BattleCommand_ResetStats:
 ; resetstats
 
@@ -7603,8 +7625,6 @@ ResetTurn:
 	call DoMove
 	jp EndMoveEffect
 
-INCLUDE "engine/battle/move_effects/nightmare.asm"
-
 BattleCommand_Defrost:
 	farcall DefrostUser
 	ret
@@ -7633,6 +7653,10 @@ BattleCommand_ConditionalBoost:
 
 BattleCommand_StatusTargetSelf:
 	farcall Find_StatusTargetSelf
+	ret
+
+BattleCommand_StatusTargetOpponent:
+	farcall Find_StatusTargetOpponent
 	ret
 
 BattleCommand_VariableType:
@@ -7679,10 +7703,6 @@ BattleCommand_DoCureStatus:
 	farcall DoCureStatusHit
 	ret
 
-BattleCommand_Trick:
-	farcall TrickEffect
-	ret
-
 BattleCommand_ResetStatsTarget:
 	farcall ResetStatsTargetEffect
 	ret
@@ -7727,26 +7747,12 @@ BattleCommand_ClearHazards:
 	farcall ClearHazardsEffect
 	ret
 
-BattleCommand_Foresight:
-	farcall ForesightEffect
-	ret
-
 BattleCommand_FuryCutter:
 	farcall FuryCutterEffect
 	ret
 
-BattleCommand_Attract:
-	farcall AttractEffect
-	ret
-
 BattleCommand_GetMagnitude:
 	farcall GetMagnitude
-	ret
-
-; INCLUDE "engine/battle/move_effects/strength_sap.asm"
-
-BattleCommand_Soak:
-	farcall SoakEffect
 	ret
 
 BattleCommand_Captivate:
@@ -7759,10 +7765,6 @@ BattleCommand_Yawn:
 
 BattleCommand_CraftyShield:
 	farcall CraftyShieldEffect
-	ret
-
-BattleCommand_SplitStats:
-	farcall SplitStatsEffect
 	ret
 
 BattleCommand_HeavySlam:

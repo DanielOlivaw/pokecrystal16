@@ -1,4 +1,4 @@
-ForesightEffect:
+BattleCommand_Foresight:
 ; foresight
 
 	ld a, [wAttackMissed]

@@ -333,29 +333,22 @@ AI_Smart:
 	dbw EFFECT_HYPER_BEAM,       AI_Smart_HyperBeam
 	dbw EFFECT_RAGE,             AI_Smart_Rage
 	dbw EFFECT_MIMIC,            AI_Smart_Mimic
-	dbw EFFECT_LEECH_SEED,       AI_Smart_LeechSeed
 	dbw EFFECT_DISABLE,          AI_Smart_Disable
 	dbw EFFECT_COUNTER,          AI_Smart_Counter
 	dbw EFFECT_ENCORE,           AI_Smart_Encore
-	dbw EFFECT_PAIN_SPLIT,       AI_Smart_PainSplit
 	dbw EFFECT_SNORE,            AI_Smart_Snore
 	dbw EFFECT_CONVERSION2,      AI_Smart_Conversion2
-	dbw EFFECT_LOCK_ON,          AI_Smart_LockOn
 	dbw EFFECT_SLEEP_TALK,       AI_Smart_SleepTalk
 	dbw EFFECT_REVERSAL,         AI_Smart_Reversal
-	dbw EFFECT_SPITE,            AI_Smart_Spite
 	dbw EFFECT_PRIORITY_HIT,     AI_Smart_PriorityHit
 	dbw EFFECT_EXTREMESPEED,     AI_Smart_PriorityHit
 	dbw EFFECT_THIEF,            AI_Smart_Thief
-	dbw EFFECT_NIGHTMARE,        AI_Smart_Nightmare
 	dbw EFFECT_FLAME_WHEEL,      AI_Smart_FlameWheel
 	dbw EFFECT_PROTECT,          AI_Smart_Protect
-	dbw EFFECT_FORESIGHT,        AI_Smart_Foresight
 	dbw EFFECT_ENDURE,           AI_Smart_Endure
 	dbw EFFECT_ROLLOUT,          AI_Smart_Rollout
 	dbw EFFECT_SWAGGER,          AI_Smart_Swagger
 	dbw EFFECT_FURY_CUTTER,      AI_Smart_FuryCutter
-	dbw EFFECT_ATTRACT,          AI_Smart_Attract
 	dbw EFFECT_MAGNITUDE,        AI_Smart_Magnitude
 	dbw EFFECT_BATON_PASS,       AI_Smart_BatonPass
 	dbw EFFECT_PURSUIT,          AI_Smart_Pursuit
@@ -380,9 +373,10 @@ AI_Smart_Sleep:
 	call AIHasMoveEffect
 	jr c, .asm_387f0
 
-	ld b, EFFECT_NIGHTMARE
-	call AIHasMoveEffect
-	ret nc
+	; ld b, EFFECT_NIGHTMARE
+	; call AIHasMoveEffect
+	; ret nc
+	ret
 
 .asm_387f0
 	call AI_50_50

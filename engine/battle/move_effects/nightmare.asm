@@ -3,12 +3,12 @@ BattleCommand_Nightmare:
 
 ; Can't hit an absent opponent.
 
-	call CheckHiddenOpponent
+	farcall CheckHiddenOpponent
 	jr nz, .failed
 
 ; Can't hit a substitute.
 
-	call CheckSubstituteOpp
+	farcall CheckSubstituteOpp
 	jr nz, .failed
 
 ; Only works on a sleeping opponent.
@@ -28,10 +28,11 @@ BattleCommand_Nightmare:
 ; Otherwise give the opponent a nightmare.
 
 	set SUBSTATUS_NIGHTMARE, [hl]
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, StartedNightmareText
 	jp StdBattleTextbox
 
 .failed
-	call AnimateFailedMove
-	jp PrintButItFailed
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	ret

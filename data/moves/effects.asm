@@ -587,6 +587,7 @@ DefenseDownHit:
 	; effectchance ; bug: duplicate effectchance shouldn't be here
 	defensedown
 	statdownmessage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -772,6 +773,7 @@ SpecialAttackUpHit:
 	statupmessage
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -1238,14 +1240,6 @@ Metronome:
 	metronome
 	endmove
 
-LeechSeed:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	leechseed
-	endmove
-
 Splash:
 	checkobedience
 	usedmovetext
@@ -1409,14 +1403,6 @@ Encore:
 	encore
 	endmove
 
-PainSplit:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	painsplit
-	endmove
-
 Snore:
 	checkobedience
 	usedmovetext
@@ -1447,14 +1433,6 @@ Conversion2:
 	conversion2
 	endmove
 
-LockOn:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	lockon
-	endmove
-
 Sketch:
 	checkobedience
 	usedmovetext
@@ -1474,14 +1452,6 @@ SleepTalk:
 	usedmovetext
 	doturn
 	sleeptalk
-	endmove
-
-Spite:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	spite
 	endmove
 
 FalseSwipe:
@@ -1555,14 +1525,6 @@ Thief:
 	kingsrock
 	endmove
 
-Nightmare:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	nightmare
-	endmove
-
 FlameWheel:
 SacredFire:
 	checkobedience
@@ -1599,14 +1561,6 @@ Protect:
 	usedmovetext
 	doturn
 	protect
-	endmove
-
-Foresight:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	foresight
 	endmove
 
 Endure:
@@ -1675,14 +1629,6 @@ FuryCutter:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-Attract:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	attract
 	endmove
 
 Return:
@@ -2362,14 +2308,6 @@ CureStatusHit:
 	kingsrock
 	endmove
 
-Trick:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	trick
-	endmove
-
 HammerArm:
 	checkobedience
 	usedmovetext
@@ -2702,28 +2640,6 @@ Bounce:
 	paralyzetarget
 	endmove
 
-; StrengthSap:
-	; checkobedience
-	; usedmovetext
-	; doturn
-	; checkhit
-	; attackdown
-	; lowersub
-	; statdownanim
-	; raisesub
-	; statdownmessage
-	; statdownfailtext
-	; strengthsap
-	; endmove
-
-Soak:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	soak
-	endmove
-
 Captivate:
 	checkobedience
 	usedmovetext
@@ -2948,10 +2864,10 @@ DrowsyRage:
 	kingsrock
 	endmove
 
-SplitStats:
+StatusTargetOpponent:
 	checkobedience
 	usedmovetext
 	doturn
 	checkhit
-	splitstats
+	statustargetopponent
 	endmove

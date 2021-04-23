@@ -18,14 +18,10 @@ AI_Redundant:
 	dbw EFFECT_HEAL,          .Heal
 	dbw EFFECT_CONFUSE,       .Confuse
 	dbw EFFECT_TRANSFORM,     .Transform
-	dbw EFFECT_LEECH_SEED,    .LeechSeed
 	dbw EFFECT_DISABLE,       .Disable
 	dbw EFFECT_ENCORE,        .Encore
 	dbw EFFECT_SNORE,         .Snore
 	dbw EFFECT_SLEEP_TALK,    .SleepTalk
-	dbw EFFECT_NIGHTMARE,     .Nightmare
-	dbw EFFECT_FORESIGHT,     .Foresight
-	dbw EFFECT_ATTRACT,       .Attract
 	dbw EFFECT_TELEPORT,      .Teleport
 	dbw EFFECT_SUNLIGHT_HEAL, .Heal
 	dbw EFFECT_SWAGGER,       .Swagger

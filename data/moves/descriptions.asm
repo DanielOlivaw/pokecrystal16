@@ -546,6 +546,16 @@ MoveDescriptions1:
 	dw ElectrowebDescription
 	dw PowerSplitDescription
 	dw GuardSplitDescription
+	dw LaserFocusDescription
+	dw DrainPunchDescription
+	dw FireLashDescription
+	dw FieryDanceDescription
+	dw WaterShurikenDescription
+	dw PowderDescription
+	dw WishDescription
+	dw GrassKnotDescription
+	dw HornLeechDescription
+	dw CircleThrowDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -865,6 +875,7 @@ SubmissionDescription:
 	next "so hurts the user.@"
 
 LowKickDescription:
+GrassKnotDescription:
 	db   "Deals more damage"
 	next "to heavier foes.@"
 
@@ -886,6 +897,8 @@ MegaDrainDescription:
 GigaDrainDescription:
 LeechLifeDescription:
 DrainingKissDescription:
+DrainPunchDescription:
+HornLeechDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
@@ -1922,6 +1935,7 @@ BrickBreakDescription:
 	next "like REFLECT.@"
 
 ThunderousKickDescription:
+FireLashDescription:
 	db   "An attack that"
 	next "lowers DEFENSE.@"
 
@@ -1930,6 +1944,7 @@ FieryWrathDescription:
 	next "cause flinching.@"
 
 DragonTailDescription:
+CircleThrowDescription:
 BouncyTailDescription:
 	db   "Knocks away foes"
 	next "to end battle.@"
@@ -2195,6 +2210,7 @@ SynchronoiseDescription:
 	next "the same type.@"
 
 ChargeBeamDescription:
+FieryDanceDescription:
 	db   "An attack that may"
 	next "raise SPCL.ATK.@"
 
@@ -2356,5 +2372,21 @@ PowerSplitDescription:
 GuardSplitDescription:
 	db   "Averages defensive"
 	next "stats with target.@"
+
+LaserFocusDescription:
+	db   "Guarantees a"
+	next "critical hit next.@"
+
+WaterShurikenDescription:
+	db   "2-5 throwing stars"
+	next "that strike first.@"
+
+PowderDescription:
+	db   "Explodes if target"
+	next "uses a FIRE move.@"
+
+WishDescription:
+	db   "Restores user's HP"
+	next "on the next turn.@"
 
 		;"123456789123456789"

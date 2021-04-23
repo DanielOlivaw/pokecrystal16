@@ -2,6 +2,8 @@ INCLUDE "engine/battle/move_effects/conditional_boost.asm"
 
 INCLUDE "engine/battle/move_effects/status_target_self.asm"
 
+INCLUDE "engine/battle/move_effects/status_target_opponent.asm"
+
 INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
 
 INCLUDE "engine/battle/move_effects/protect_variations.asm"
@@ -72,6 +74,8 @@ INCLUDE "engine/battle/move_effects/psych_up.asm"
 
 INCLUDE "engine/battle/move_effects/conversion.asm"
 
+INCLUDE "engine/battle/move_effects/nightmare.asm"
+
 INCLUDE "engine/battle/move_effects/cut.asm"
 
 INCLUDE "engine/battle/move_effects/shell_smash.asm"
@@ -126,8 +130,6 @@ INCLUDE "engine/battle/move_effects/dynamo_rush.asm"
 
 INCLUDE "engine/battle/move_effects/bright_moss.asm"
 
-INCLUDE "engine/battle/move_effects/shield_bash.asm"
-
 INCLUDE "engine/battle/move_effects/ingrain.asm"
 
 INCLUDE "engine/battle/move_effects/uproot.asm"
@@ -181,3 +183,9 @@ INCLUDE "engine/battle/move_effects/weathervane.asm"
 INCLUDE "engine/battle/move_effects/cultivate.asm"
 
 INCLUDE "engine/battle/move_effects/split_stats.asm"
+
+INCLUDE "engine/battle/move_effects/laser_focus.asm"
+
+INCLUDE "engine/battle/move_effects/powder.asm"
+
+INCLUDE "engine/battle/move_effects/wish.asm"

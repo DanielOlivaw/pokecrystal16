@@ -1,23 +1,12 @@
-SplitStatsEffect:
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, POWER_SPLIT
-	call CompareMove2
-	jr z, BattleCommand_PowerSplit
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUARD_SPLIT
-	call CompareMove2
-	jr z, BattleCommand_GuardSplit
-	ret
-
 BattleCommand_PowerSplit:
 ; Average the player's attack with the enemy's attack and
 ; the player's special attack with the enemy's special attack.
 	ld a, [wAttackMissed]
 	and a
 	jp nz, .ButItFailed
+
+	farcall CheckHiddenOpponent
+	jr nz, .ButItFailed
 
 	farcall AnimateCurrentMove
 	ld hl, SharedPowerText
@@ -89,6 +78,9 @@ BattleCommand_GuardSplit:
 	ld a, [wAttackMissed]
 	and a
 	jp nz, .ButItFailed
+
+	farcall CheckHiddenOpponent
+	jr nz, .ButItFailed
 
 	farcall AnimateCurrentMove
 	ld hl, SharedGuardText

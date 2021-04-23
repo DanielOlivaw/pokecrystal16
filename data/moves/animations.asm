@@ -567,6 +567,16 @@ BattleAnimations::
 	dw BattleAnim_Electroweb
 	dw BattleAnim_PowerSplit
 	dw BattleAnim_GuardSplit
+	dw BattleAnim_LaserFocus
+	dw BattleAnim_DrainPunch
+	dw BattleAnim_FireLash
+	dw BattleAnim_FieryDance
+	dw BattleAnim_WaterShuriken
+	dw BattleAnim_Powder
+	dw BattleAnim_Wish
+	dw BattleAnim_GrassKnot
+	dw BattleAnim_HornLeech
+	dw BattleAnim_CircleThrow
 
 	dw BattleAnim_SweetScent2
 
@@ -950,6 +960,16 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_LaserFocus:
+BattleAnim_DrainPunch:
+BattleAnim_FireLash:
+BattleAnim_FieryDance:
+BattleAnim_WaterShuriken:
+BattleAnim_Powder:
+BattleAnim_Wish:
+BattleAnim_GrassKnot:
+BattleAnim_HornLeech:
+BattleAnim_CircleThrow:
 BattleAnim_PowerSplit:
 BattleAnim_GuardSplit:
 BattleAnim_RockWrecker:

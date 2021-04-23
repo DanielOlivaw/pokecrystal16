@@ -1,4 +1,4 @@
-AttractEffect:
+BattleCommand_Attract:
 ; attract
 	ld a, [wAttackMissed]
 	and a

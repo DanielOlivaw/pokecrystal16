@@ -80,36 +80,33 @@ MoveEffectsPointers:
 	dw Rage                   ; EFFECT_RAGE
 	dw Mimic                  ; EFFECT_MIMIC
 	dw Metronome              ; EFFECT_METRONOME
-	dw LeechSeed              ; EFFECT_LEECH_SEED
+	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP
 	dw Splash                 ; EFFECT_SPLASH
 	dw Disable                ; EFFECT_DISABLE
 	dw StaticDamage           ; EFFECT_LEVEL_DAMAGE
 	dw Psywave                ; EFFECT_PSYWAVE
 	dw Counter                ; EFFECT_COUNTER
 	dw Encore                 ; EFFECT_ENCORE
-	dw PainSplit              ; EFFECT_PAIN_SPLIT
+	dw StatusTargetOpponent   ; EFFECT_PAIN_SPLIT
 	dw Snore                  ; EFFECT_SNORE
 	dw Conversion2            ; EFFECT_CONVERSION2
-	dw LockOn                 ; EFFECT_LOCK_ON
+	dw StatusTargetOpponent   ; EFFECT_LOCK_ON
 	dw Sketch                 ; EFFECT_SKETCH
 	dw RecoilHit              ; EFFECT_STRUGGLE
 	dw SleepTalk              ; EFFECT_SLEEP_TALK
 	dw HPBasedDamage          ; EFFECT_REVERSAL
-	dw Spite                  ; EFFECT_SPITE
 	dw FalseSwipe             ; EFFECT_FALSE_SWIPE
 	dw NormalHit              ; EFFECT_PRIORITY_HIT
 	dw TripleKick             ; EFFECT_TRIPLE_KICK
 	dw Thief                  ; EFFECT_THIEF
-	dw Nightmare              ; EFFECT_NIGHTMARE
 	dw FlameWheel             ; EFFECT_FLAME_WHEEL
 	dw Growth                 ; EFFECT_GROWTH
 	dw Protect                ; EFFECT_PROTECT
-	dw Foresight              ; EFFECT_FORESIGHT
+	dw StatusTargetOpponent   ; EFFECT_FORESIGHT
 	dw Endure                 ; EFFECT_ENDURE
 	dw Rollout                ; EFFECT_ROLLOUT
 	dw Swagger                ; EFFECT_SWAGGER
 	dw FuryCutter             ; EFFECT_FURY_CUTTER
-	dw Attract                ; EFFECT_ATTRACT
 	dw Return                 ; EFFECT_RETURN
 	dw Present                ; EFFECT_PRESENT
 	dw Frustration            ; EFFECT_FRUSTRATION
@@ -161,7 +158,6 @@ MoveEffectsPointers:
 	dw DracoMeteor            ; EFFECT_DRACO_METEOR
 	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
 	dw CureStatusHit          ; EFFECT_CURE_SLEEP_HIT
-	dw Trick                  ; EFFECT_TRICK
 	dw HammerArm              ; EFFECT_HAMMER_ARM
 	dw ResetStatsHit          ; EFFECT_RESET_STATS_HIT
 	dw Defog                  ; EFFECT_DEFOG
@@ -189,7 +185,6 @@ MoveEffectsPointers:
 	dw Bounce                 ; EFFECT_BOUNCE
 	dw MultiStatDown          ; EFFECT_TEARFUL_LOOK
 	dw NormalHit              ; EFFECT_FEINT
-	dw Soak                   ; EFFECT_SOAK
 	dw WeatherBall            ; EFFECT_WEATHER_BALL
 	dw CureStatusHit          ; EFFECT_CURE_PARALYSIS_HIT
 	dw Captivate              ; EFFECT_CAPTIVATE
@@ -222,4 +217,6 @@ MoveEffectsPointers:
 	dw SpitUp                 ; EFFECT_SPIT_UP
 	dw MistyAmbush            ; EFFECT_MISTY_AMBUSH
 	dw DrowsyRage             ; EFFECT_DROWSY_RAGE
-	dw SplitStats             ; EFFECT_SPLIT_STATS
+	dw StatusTargetOpponent   ; EFFECT_SPLIT_STATS
+	dw MultiHit               ; EFFECT_PRIORITY_MULTI_HIT
+	dw StatusTargetOpponent   ; EFFECT_POWDER
