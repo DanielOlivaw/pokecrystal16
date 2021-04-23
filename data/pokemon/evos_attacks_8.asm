@@ -250,7 +250,26 @@ HattereneEvosAttacks:
 
 ObstagoonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, CROSS_CHOP
+	dbw 1, SUBMISSION
+	dbw 1, SWITCHEROO
+	dbw 1, HONE_CLAWS
+	dbw 1, PIN_MISSILE
 	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 1, SAND_ATTACK
+	dbw 4, LICK
+	dbw 8, SNARL
+	dbw 12, HEADBUTT
+	dbw 16, BABY_DOLL_EYES
+	dbw 19, NIGHT_SLASH
+	dbw 22, FURY_SWIPES
+	dbw 28, REST
+	dbw 34, TAKE_DOWN
+	dbw 34, OBSTRUCT
+	dbw 42, SCARY_FACE
+	dbw 50, COUNTER
+	dbw 58, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 PerrserkerEvosAttacks:

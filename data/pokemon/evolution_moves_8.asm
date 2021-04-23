@@ -35,7 +35,7 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; HATENNA
 	dw NoEvolutionMoves8         ; HATTREM
 	dw NoEvolutionMoves8         ; HATTERENE
-	dw NoEvolutionMoves8         ; OBSTAGOON
+	dw ObstagoonEvolutionMoves   ; OBSTAGOON
 	dw NoEvolutionMoves8         ; PERRSERKER
 	dw CursolaEvolutionMoves     ; CURSOLA
 	dw NoEvolutionMoves8         ; MR__RIME
@@ -57,6 +57,10 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; DRAGAPULT
 	dw NoEvolutionMoves8         ; REGIELEKI
 	dw NoEvolutionMoves8         ; REGIDRAGO
+
+ObstagoonEvolutionMoves:
+	dw OBSTRUCT
+	db 0 ; no more evolution moves
 
 CursolaEvolutionMoves:
 	dw PERISH_SONG
