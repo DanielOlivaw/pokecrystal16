@@ -22,6 +22,7 @@ AI_Redundant:
 	dbw EFFECT_ENCORE,        .Encore
 	dbw EFFECT_SNORE,         .Snore
 	dbw EFFECT_SLEEP_TALK,    .SleepTalk
+	dbw EFFECT_FORESIGHT,     .Foresight
 	dbw EFFECT_TELEPORT,      .Teleport
 	dbw EFFECT_SUNLIGHT_HEAL, .Heal
 	dbw EFFECT_SWAGGER,       .Swagger

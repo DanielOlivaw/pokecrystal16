@@ -1,6 +1,10 @@
 BattleCommand_ReflectType:
 ; change user's type to match target's
 
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+
 	farcall CheckHiddenOpponent
 	jr nz, .failed
 

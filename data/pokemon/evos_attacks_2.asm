@@ -752,17 +752,17 @@ TogepiEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GROWL
 	dbw 1, POUND
-	dbw 5, SWEET_KISS
-	dbw 10, LIFE_DEW
-	dbw 15, CHARM
-	dbw 20, ANCIENTPOWER
-	dbw 25, METRONOME
-	dbw 30, YAWN
-	dbw 35, ENCORE
-	dbw 40, SAFEGUARD
-	dbw 45, DOUBLE_EDGE
-	dbw 50, BATON_PASS
-	dbw 55, WISH
+	dbw 4, SWEET_KISS
+	dbw 8, LIFE_DEW
+	dbw 12, CHARM
+	dbw 16, ANCIENTPOWER
+	dbw 20, METRONOME
+	dbw 24, YAWN
+	dbw 28, ENCORE
+	dbw 32, SAFEGUARD
+	dbw 36, DOUBLE_EDGE
+	dbw 40, BATON_PASS
+	dbw 44, WISH
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
@@ -771,18 +771,19 @@ TogeticEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, POUND
 	dbw 1, FAIRY_WIND
-	dbw 5, SWEET_KISS
-	dbw 10, LIFE_DEW
-	dbw 15, CHARM
+	dbw 4, SWEET_KISS
+	dbw 8, LIFE_DEW
+	dbw 12, CHARM
+	dbw 16, MAGICAL_LEAF
 	dbw 20, ANCIENTPOWER
-	dbw 20, MAGICAL_LEAF
-	dbw 25, METRONOME
-	dbw 30, YAWN
-	dbw 35, ENCORE
+	dbw 24, METRONOME
+	dbw 28, WIND_RIDE
+	dbw 32, YAWN
+	dbw 36, ENCORE
 	dbw 40, SAFEGUARD
-	dbw 45, DOUBLE_EDGE
-	dbw 50, BATON_PASS
-	dbw 55, WISH
+	dbw 44, DOUBLE_EDGE
+	dbw 48, BATON_PASS
+	dbw 52, WISH
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:

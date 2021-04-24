@@ -18,17 +18,17 @@ EvolutionMovePointers3::
 	dw LombreEvolutionMoves     ; LOMBRE
 	dw LudicoloEvolutionMoves   ; LUDICOLO
 	dw NoEvolutionMoves3        ; SEEDOT
-	dw NoEvolutionMoves3        ; NUZLEAF
-	dw NoEvolutionMoves3        ; SHIFTRY
+	dw NuzleafEvolutionMoves    ; NUZLEAF
+	dw ShiftryEvolutionMoves    ; SHIFTRY
 	dw NoEvolutionMoves3        ; WINGULL
-	dw NoEvolutionMoves3        ; PELIPPER
+	dw PelipperEvolutionMoves   ; PELIPPER
 	dw NoEvolutionMoves3        ; RALTS
 	dw NoEvolutionMoves3        ; KIRLIA
-	dw NoEvolutionMoves3        ; GARDEVOIR
+	dw GardevoirEvolutionMoves  ; GARDEVOIR
 	dw NoEvolutionMoves3        ; SURSKIT
-	dw NoEvolutionMoves3        ; MASQUERAIN
+	dw MasquerainEvolutionMoves ; MASQUERAIN
 	dw NoEvolutionMoves3        ; SHROOMISH
-	dw NoEvolutionMoves3        ; BRELOOM
+	dw BreloomEvolutionMoves    ; BRELOOM
 	dw NoEvolutionMoves3        ; MAKUHITA
 	dw NoEvolutionMoves3        ; HARIYAMA
 	dw NoEvolutionMoves3        ; AZURILL
@@ -151,6 +151,32 @@ LombreEvolutionMoves:
 
 LudicoloEvolutionMoves:
 	dw TEETER_DANCE
+	db 0 ; no more evolution moves
+
+NuzleafEvolutionMoves:
+	dw RAZOR_LEAF
+	db 0 ; no more evolution moves
+
+ShiftryEvolutionMoves:
+	dw WHIRLWIND
+	dw LEAF_TORNADO
+	db 0 ; no more evolution moves
+
+PelipperEvolutionMoves:
+	dw PROTECT
+	db 0 ; no more evolution moves
+
+GardevoirEvolutionMoves:
+	dw DAZZLING_GLEAM
+	db 0 ; no more evolution moves
+
+MasquerainEvolutionMoves:
+	dw SCARY_FACE
+	dw AIR_CUTTER
+	db 0 ; no more evolution moves
+
+BreloomEvolutionMoves:
+	dw MACH_PUNCH
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

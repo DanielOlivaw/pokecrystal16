@@ -680,7 +680,35 @@ PorygonZEvosAttacks:
 
 GalladeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, LEAF_BLADE
+	dbw 1, NIGHT_SLASH
+	dbw 1, FUTURE_SIGHT
+	dbw 1, DREAM_EATER
+	dbw 1, CALM_MIND
+	dbw 1, LIFE_DEW
+	dbw 1, PSYCHIC
+	dbw 1, CHARM
+	dbw 1, DAZZLING_GLEAM
+	dbw 1, HYPNOSIS
+	dbw 1, PSYBEAM
+	dbw 1, GROWL
+	dbw 1, DISARMING_VOICE
+	dbw 3, DOUBLE_TEAM
+	dbw 6, CONFUSION
+	dbw 9, LUCKY_CHANT
+	dbw 12, DRAINING_KISS
+	dbw 15, TELEPORT
+	dbw 18, MAGICAL_LEAF
+	dbw 22, FURY_CUTTER
+	dbw 26, AERIAL_ACE
+	dbw 29, SLASH
+	dbw 31, FEINT
+	dbw 36, PSYCHO_CUT
+	dbw 41, FALSE_SWIPE
+	dbw 46, SWORDS_DANCE
+	dbw 51, SACRED_SWORD
+	dbw 56, PROTECT
+	dbw 61, CLOSE_COMBAT
 	db 0 ; no more level-up moves
 
 ProbopassEvosAttacks:
