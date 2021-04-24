@@ -1622,6 +1622,14 @@ CopiedStatsText:
 	line "<TARGET>!"
 	prompt
 
+StatChangesReversedText:
+	text "<TARGET>'s"
+	line "stat changes were"
+	cont "all reversed!"
+	prompt
+
+		;"123456789123456789"
+
 ForesawAttackText:
 	text "<USER>"
 	line "foresaw an attack!"

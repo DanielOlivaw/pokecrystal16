@@ -549,4 +549,5 @@ MoveNames::
 	db "GRASS KNOT@"
 	db "HORN LEECH@"
 	db "CIRCLE THROW@"
+	db "TOPSY-TURVY@"
 	  ;"123456123456@"

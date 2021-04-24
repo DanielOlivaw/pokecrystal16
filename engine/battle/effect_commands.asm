@@ -1781,6 +1781,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_SPLIT_STATS
 	ret z
+	cp EFFECT_TOPSY_TURVY
+	ret z
 
 	call .StatModifiers
 
@@ -7326,6 +7328,7 @@ INCLUDE "engine/battle/move_effects/pay_day.asm"
 BattleCommand_ResetStats:
 ; resetstats
 
+	; ld a, BASE_STAT_LEVEL ; neutral
 	ld a, 7 ; neutral
 	ld hl, wPlayerStatLevels
 	call .Fill

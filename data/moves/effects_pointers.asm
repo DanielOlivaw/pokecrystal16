@@ -220,3 +220,4 @@ MoveEffectsPointers:
 	dw StatusTargetOpponent   ; EFFECT_SPLIT_STATS
 	dw MultiHit               ; EFFECT_PRIORITY_MULTI_HIT
 	dw StatusTargetOpponent   ; EFFECT_POWDER
+	dw StatusTargetOpponent   ; EFFECT_TOPSY_TURVY

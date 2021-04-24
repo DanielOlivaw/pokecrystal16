@@ -556,6 +556,7 @@ MoveDescriptions1:
 	dw GrassKnotDescription
 	dw HornLeechDescription
 	dw CircleThrowDescription
+	dw TopsyTurvyDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2388,5 +2389,9 @@ PowderDescription:
 WishDescription:
 	db   "Restores user's HP"
 	next "on the next turn.@"
+
+TopsyTurvyDescription:
+	db   "Reverses the foe's"
+	next "stat changes.@"
 
 		;"123456789123456789"

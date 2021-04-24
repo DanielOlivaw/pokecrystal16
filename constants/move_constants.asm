@@ -556,6 +556,7 @@
 	const GRASS_KNOT
 	const HORN_LEECH
 	const CIRCLE_THROW
+	const TOPSY_TURVY
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

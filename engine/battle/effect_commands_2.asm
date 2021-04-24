@@ -189,3 +189,5 @@ INCLUDE "engine/battle/move_effects/laser_focus.asm"
 INCLUDE "engine/battle/move_effects/powder.asm"
 
 INCLUDE "engine/battle/move_effects/wish.asm"
+
+INCLUDE "engine/battle/move_effects/topsy_turvy.asm"

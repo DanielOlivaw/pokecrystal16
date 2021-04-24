@@ -567,4 +567,5 @@ Moves1:
 	move EFFECT_LOW_KICK,            1, GRASS,    SPECIAL,  100, 20,   0 ; GRASS_KNOT
 	move EFFECT_LEECH_HIT,          75, GRASS,    PHYSICAL, 100, 10,   0 ; HORN_LEECH
 	move EFFECT_FORCE_SWITCH_HIT,   60, FIGHTING, PHYSICAL,  90, 10,   0 ; CIRCLE_THROW
+	move EFFECT_TOPSY_TURVY,         0, DARK,     STATUS,   100, 20,   0 ; TOPSY_TURVY
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

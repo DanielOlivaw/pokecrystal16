@@ -373,7 +373,7 @@ CyndaquilEvosAttacks:
 	dbw 24, ROLLOUT
 	dbw 27, FLAME_CHARGE
 	dbw 30, LAVA_PLUME
-	; dbw 33, FLARE_UP
+	dbw 33, FLARE_UP
 	dbw 36, FLAMETHROWER
 	dbw 39, DOUBLE_EDGE
 	dbw 42, BURN_UP
@@ -393,7 +393,7 @@ QuilavaEvosAttacks:
 	dbw 27, ROLLOUT
 	dbw 31, FLAME_CHARGE
 	dbw 35, LAVA_PLUME
-	; dbw 39, FLARE_UP
+	dbw 39, FLARE_UP
 	dbw 43, FLAMETHROWER
 	dbw 47, DOUBLE_EDGE
 	dbw 51, BURN_UP
@@ -414,7 +414,7 @@ TyphlosionEvosAttacks:
 	dbw 31, FLAME_CHARGE
 	dbw 35, LAVA_PLUME
 	dbw 35, INFERNO
-	; dbw 41, FLARE_UP
+	dbw 41, FLARE_UP
 	dbw 46, FLAMETHROWER
 	dbw 51, DOUBLE_EDGE
 	dbw 56, BURN_UP
@@ -1401,7 +1401,7 @@ ScizorEvosAttacks:
 	dbw 39, IRON_HEAD
 	dbw 42, NIGHT_SLASH
 	dbw 46, X_SCISSOR
-	; dbw 49, LASER_FOCUS
+	dbw 49, LASER_FOCUS
 	dbw 53, SWORDS_DANCE
 	dbw 56, FEINT
 	db 0 ; no more level-up moves
@@ -1751,7 +1751,7 @@ KingdraEvosAttacks:
 	dbw 31, YAWN
 	dbw 31, WHIRLPOOL
 	dbw 32, BRINE
-	; dbw 37, LASER_FOCUS
+	dbw 37, LASER_FOCUS
 	dbw 42, DRAGON_PULSE
 	dbw 47, HYDRO_PUMP
 	dbw 52, DRAGON_DANCE

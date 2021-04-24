@@ -12,7 +12,7 @@ DynamoRushEffect:
 	call CompareMove2
 	jr z, BattleCommand_DataPulse
 
-; Dynamo Fang
+; Dynamo Rush
 
 ; Get user's current speed modifier level
 	ld hl, wPlayerSpdLevel

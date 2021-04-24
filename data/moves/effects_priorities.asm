@@ -15,6 +15,8 @@ MoveEffectPriorities:
 	db EFFECT_ATK_DOWN_PRIORITY,  6
 	db EFFECT_PRIORITY_MULTI_HIT, 6
 	db EFFECT_POWDER,             6
+
+	db EFFECT_DYNAMO_RUSH,             6
 ; BASE_PRIORITY EQU 5
 	db EFFECT_VITAL_THROW,        4
 	db EFFECT_COUNTER,            2

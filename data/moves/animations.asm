@@ -577,6 +577,7 @@ BattleAnimations::
 	dw BattleAnim_GrassKnot
 	dw BattleAnim_HornLeech
 	dw BattleAnim_CircleThrow
+	dw BattleAnim_TopsyTurvy
 
 	dw BattleAnim_SweetScent2
 
@@ -960,6 +961,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_TopsyTurvy:
 BattleAnim_LaserFocus:
 BattleAnim_DrainPunch:
 BattleAnim_FireLash:
