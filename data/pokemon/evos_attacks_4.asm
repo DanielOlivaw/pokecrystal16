@@ -713,7 +713,27 @@ GalladeEvosAttacks:
 
 ProbopassEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, MAGNET_RISE
+	dbw 1, ROCK_THROW
+	dbw 1, HARDEN
 	dbw 1, TACKLE
+	dbw 1, IRON_DEFENSE
+	dbw 1, TRI_ATTACK
+	dbw 5, BLOCK
+	dbw 8, MAGNET_BOMB
+	dbw 12, THUNDER_WAVE
+	dbw 15, SPARK
+	dbw 19, REST
+	dbw 22, ROCK_SLIDE
+	dbw 26, POWER_GEM
+	dbw 29, ROCK_BLAST
+	dbw 33, DISCHARGE
+	dbw 36, SANDSTORM
+	dbw 40, MAGNET_GRIP
+	dbw 43, EARTH_POWER
+	dbw 47, STONE_EDGE
+	dbw 50, LOCK_ON
+	dbw 54, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 DusknoirEvosAttacks:

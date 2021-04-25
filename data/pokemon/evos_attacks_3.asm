@@ -784,27 +784,111 @@ NosepassEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, PROBOPASS
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, HARDEN
+	dbw 5, BLOCK
+	dbw 8, ROCK_THROW
+	dbw 12, THUNDER_WAVE
+	dbw 15, SPARK
+	dbw 19, REST
+	dbw 22, ROCK_SLIDE
+	dbw 26, POWER_GEM
+	dbw 29, ROCK_BLAST
+	dbw 33, DISCHARGE
+	dbw 36, SANDSTORM
+	dbw 40, MAGNET_GRIP
+	dbw 43, EARTH_POWER
+	dbw 47, STONE_EDGE
+	dbw 50, LOCK_ON
+	dbw 54, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 SkittyEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, DELCATTY
 	db 0 ; no more evolutions
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
 	dbw 1, TACKLE
+	dbw 4, FORESIGHT
+	dbw 8, SING
+	dbw 12, DISARMING_VOICE
+	dbw 16, ATTRACT
+	dbw 20, DOUBLESLAP
+	dbw 24, FAKE_OUT
+	dbw 28, FAINT_ATTACK
+	dbw 32, CHARM
+	dbw 36, WAKE_UP_SLAP
+	dbw 40, COVET
+	dbw 44, HEAL_BELL
+	dbw 48, DOUBLE_EDGE
+	dbw 52, CAPTIVATE
+	dbw 56, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 DelcattyEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
 	dbw 1, TACKLE
+	dbw 4, FORESIGHT
+	dbw 8, SING
+	dbw 12, DISARMING_VOICE
+	dbw 16, ATTRACT
+	dbw 20, DOUBLESLAP
+	dbw 24, FAKE_OUT
+	dbw 28, FAINT_ATTACK
+	dbw 32, CHARM
+	dbw 36, WAKE_UP_SLAP
+	dbw 40, COVET
+	dbw 44, HEAL_BELL
+	dbw 48, DOUBLE_EDGE
+	dbw 52, CAPTIVATE
+	dbw 56, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 SableyeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 1, SCRATCH
+	dbw 3, FORESIGHT
+	dbw 6, ASTONISH
+	dbw 9, CONFUSE_RAY
+	dbw 12, SHADOW_SNEAK
+	dbw 15, FAINT_ATTACK
+	dbw 18, FAKE_OUT
+	dbw 21, DISABLE
+	dbw 24, NIGHT_SHADE
+	dbw 27, FURY_SWIPES
+	dbw 30, DETECT
+	dbw 33, KNOCK_OFF
+	dbw 36, SHADOW_CLAW
+	dbw 39, MEAN_LOOK
+	dbw 42, POWER_GEM
+	dbw 45, ZEN_HEADBUTT
+	dbw 48, SHADOW_BALL
+	dbw 51, FOUL_PLAY
 	db 0 ; no more level-up moves
 
 MawileEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ASTONISH
+	dbw 1, GROWL
+	dbw 3, FAIRY_WIND
+	dbw 7, BATON_PASS
+	dbw 10, BITE
+	dbw 14, JAW_CLAMP
+	dbw 17, STOCKPILE
+	dbw 17, SWALLOW
+	dbw 17, SPIT_UP
+	dbw 21, VICEGRIP
+	dbw 24, FAINT_ATTACK
+	dbw 28, SUCKER_PUNCH
+	dbw 31, IRON_DEFENSE
+	dbw 35, GUILE_FANG
+	dbw 38, CRUNCH
+	dbw 42, SWEET_SCENT
+	dbw 45, IRON_HEAD
+	dbw 49, FAKE_TEARS
+	dbw 52, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 AronEvosAttacks:
