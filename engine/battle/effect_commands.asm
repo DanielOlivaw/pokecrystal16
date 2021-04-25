@@ -1049,7 +1049,24 @@ BattleCommand_DoTurn:
 	ld a, [de]
 	bit SUBSTATUS_TRANSFORMED, a
 	ret nz
+	
+	; SubStatus7
+	inc de
+	inc de
 
+	ld a, [de]
+	bit SUBSTATUS_ELECTRIFIED, a
+	jr z, .skip_electrify
+
+	ld a, ELECTRIC
+	push af
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	pop af
+	or SPECIAL
+	ld [hl], a
+
+.skip_electrify
 	ldh a, [hBattleTurn]
 	and a
 
@@ -1779,9 +1796,7 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_PAIN_SPLIT
 	ret z
-	cp EFFECT_SPLIT_STATS
-	ret z
-	cp EFFECT_TOPSY_TURVY
+	cp EFFECT_STATUS_OPP_ACC
 	ret z
 
 	call .StatModifiers

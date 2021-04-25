@@ -12,8 +12,6 @@ Find_StatusTargetOpponent:
 	jp z, BattleCommand_PainSplit
 	cp EFFECT_POWDER
 	jp z, BattleCommand_Powder
-	cp EFFECT_TOPSY_TURVY
-	jp z, BattleCommand_TopsyTurvy
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
@@ -74,4 +72,16 @@ Find_StatusTargetOpponent:
 	ld bc, GUARD_SPLIT
 	call CompareMove2
 	jp z, BattleCommand_GuardSplit
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, TOPSY_TURVY
+	call CompareMove2
+	jp z, BattleCommand_TopsyTurvy
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, ELECTRIFY
+	call CompareMove2
+	jp z, BattleCommand_Electrify
 	ret

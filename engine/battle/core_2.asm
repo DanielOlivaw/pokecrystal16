@@ -2,7 +2,7 @@ Core2_NewTurnEndEffects:
 	call EndRoostEffect
 	call EndChargeEffect
 	call EndLaserFocusEffect
-	call EndPowderEffect
+	call EndPowderAndElectrifyEffect
 	call HandleYawn
 	call HandleAquaRing
 	call HandleIngrain
@@ -179,12 +179,14 @@ EndLaserFocusEffect:
 	ld [bc], a
 	ret
 
-EndPowderEffect:
+EndPowderAndElectrifyEffect:
 ; Powder's effect ends at the end of the turn in which it was used.
 	ld hl, wPlayerSubStatus7
 	res SUBSTATUS_POWDERED, [hl]
+	res SUBSTATUS_ELECTRIFIED, [hl]
 	ld hl, wEnemySubStatus7
 	res SUBSTATUS_POWDERED, [hl]
+	res SUBSTATUS_ELECTRIFIED, [hl]
 	ret
 
 HandleYawn:

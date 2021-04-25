@@ -550,4 +550,8 @@ MoveNames::
 	db "HORN LEECH@"
 	db "CIRCLE THROW@"
 	db "TOPSY-TURVY@"
+	db "PARACHARGE@"
+	db "ELECTRIFY@"
+	db "FAIRY LOCK@"
+	db "BRANCH POKE@"
 	  ;"123456123456@"

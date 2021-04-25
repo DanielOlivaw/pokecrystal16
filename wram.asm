@@ -495,7 +495,7 @@ wPlayerSubStatus7::
 ; bit
 ; 7 me first
 ; 6 powdered
-; 5 
+; 5 electrified
 ; 4 
 ; 3 
 ; 2 

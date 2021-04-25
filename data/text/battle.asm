@@ -1381,6 +1381,12 @@ PowderExplodedText:
 	cont "exploded!"
 	prompt
 
+MovesHaveBeenElectrifiedText:
+	text "<TARGET>'s"
+	line "moves have been"
+	cont "electrified!"
+	prompt
+
 WasDefrostedText:
 	text "<USER>"
 	line "was defrosted!"

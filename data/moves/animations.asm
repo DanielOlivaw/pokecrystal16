@@ -578,6 +578,10 @@ BattleAnimations::
 	dw BattleAnim_HornLeech
 	dw BattleAnim_CircleThrow
 	dw BattleAnim_TopsyTurvy
+	dw BattleAnim_ParabolicCharge
+	dw BattleAnim_Electrify
+	dw BattleAnim_FairyLock
+	dw BattleAnim_BranchPoke
 
 	dw BattleAnim_SweetScent2
 
@@ -961,6 +965,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_ParabolicCharge:
+BattleAnim_Electrify:
+BattleAnim_FairyLock:
+BattleAnim_BranchPoke:
 BattleAnim_TopsyTurvy:
 BattleAnim_LaserFocus:
 BattleAnim_DrainPunch:

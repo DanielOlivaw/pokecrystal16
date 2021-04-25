@@ -39,6 +39,24 @@ Find_StatusTargetSelf:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
+	ld bc, SPIDER_WEB
+	call CompareMove2
+	jp z, BattleCommand_ArenaTrap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, BLOCK
+	call CompareMove2
+	jp z, BattleCommand_ArenaTrap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, FAIRY_LOCK
+	call CompareMove2
+	jp z, BattleCommand_ArenaTrap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, SAFEGUARD
 	call CompareMove2
 	jp z, BattleCommand_Safeguard

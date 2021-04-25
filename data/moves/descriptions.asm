@@ -557,6 +557,10 @@ MoveDescriptions1:
 	dw HornLeechDescription
 	dw CircleThrowDescription
 	dw TopsyTurvyDescription
+	dw ParabolicChargeDescription
+	dw ElectrifyDescription
+	dw FairyLockDescription
+	dw BranchPokeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -900,6 +904,7 @@ LeechLifeDescription:
 DrainingKissDescription:
 DrainPunchDescription:
 HornLeechDescription:
+ParabolicChargeDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
@@ -1208,6 +1213,8 @@ ThiefDescription:
 	next "steal a held item.@"
 
 SpiderWebDescription:
+MeanLookDescription:
+FairyLockDescription:
 	db   "Prevents fleeing"
 	next "or switching.@"
 
@@ -1347,10 +1354,6 @@ FuryCutterDescription:
 SteelWingDescription:
 	db   "Stiff wings strike"
 	next "the foe.@"
-
-MeanLookDescription:
-	db   "Prevents fleeing"
-	next "or switching.@"
 
 AttractDescription:
 	db   "Makes the opposite"
@@ -2393,5 +2396,13 @@ WishDescription:
 TopsyTurvyDescription:
 	db   "Reverses the foe's"
 	next "stat changes.@"
+
+ElectrifyDescription:
+	db   "Makes the foe's"
+	next "move be ELECTRIC.@"
+
+BranchPokeDescription:
+	db   "Pokes the foe with"
+	next "a pointed branch.@"
 
 		;"123456789123456789"

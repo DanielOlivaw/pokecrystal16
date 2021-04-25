@@ -557,6 +557,10 @@
 	const HORN_LEECH
 	const CIRCLE_THROW
 	const TOPSY_TURVY
+	const PARABOLIC_CHARGE
+	const ELECTRIFY
+	const FAIRY_LOCK
+	const BRANCH_POKE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

@@ -217,7 +217,6 @@ MoveEffectsPointers:
 	dw SpitUp                 ; EFFECT_SPIT_UP
 	dw MistyAmbush            ; EFFECT_MISTY_AMBUSH
 	dw DrowsyRage             ; EFFECT_DROWSY_RAGE
-	dw StatusTargetOpponent   ; EFFECT_SPLIT_STATS
 	dw MultiHit               ; EFFECT_PRIORITY_MULTI_HIT
 	dw StatusTargetOpponent   ; EFFECT_POWDER
-	dw StatusTargetOpponent   ; EFFECT_TOPSY_TURVY
+	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
