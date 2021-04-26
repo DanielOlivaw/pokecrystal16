@@ -1742,6 +1742,12 @@ SharedGuardText:
 	cont "<TARGET>!"
 	prompt
 
+SwappedAttackAndDefenseText:
+	text "<USER>"
+	line "swapped its ATTACK"
+	cont "and DEFENSE!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"

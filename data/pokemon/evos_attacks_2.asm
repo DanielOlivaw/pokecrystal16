@@ -1423,7 +1423,7 @@ ShuckleEvosAttacks:
 	dbw 40, GUARD_SPLIT
 	dbw 44, ROCK_SLIDE
 	dbw 48, STICKY_WEB
-	; dbw 52, POWER_TRICK
+	dbw 52, POWER_TRICK
 	dbw 56, STONE_EDGE
 	dbw 60, SHELL_SMASH
 	dbw 64, SHIELD_BASH

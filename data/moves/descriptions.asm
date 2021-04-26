@@ -569,6 +569,7 @@ MoveDescriptions1:
 	dw DiamondStormDescription
 	dw SteamEruptionDescription
 	dw GrassWhistleDescription
+	dw PowerTrickDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2429,5 +2430,9 @@ LandsWrathDescription:
 DiamondStormDescription:
 	db   "May sharply raise"
 	next "user's DEFENSE.@"
+
+PowerTrickDescription:
+	db   "Switches user's"
+	next "ATTACK & DEFENSE.@"
 
 		;"123456789123456789"

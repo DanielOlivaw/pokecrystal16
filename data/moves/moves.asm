@@ -580,4 +580,5 @@ Moves1:
 	move EFFECT_DEFENSE_UP_2_HIT,  100, ROCK,     PHYSICAL,  95,  5,  50 ; DIAMOND_STORM
 	move EFFECT_FLAME_WHEEL,       110, WATER,    SPECIAL,   95,  5,  30 ; STEAM_ERUPTION
 	move EFFECT_SLEEP,               0, GRASS,    STATUS,    55, 15,   0 ; GRASSWHISTLE
+	move EFFECT_STATUS_SELF,         0, PSYCHIC,  STATUS,   100, 10,   0 ; POWER_TRICK
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

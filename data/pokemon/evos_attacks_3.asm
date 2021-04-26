@@ -975,7 +975,7 @@ MedititeEvosAttacks:
 	dbw 27, HI_JUMP_KICK
 	dbw 30, PSYCH_UP
 	dbw 33, ACUPRESSURE
-	; dbw 36, POWER_TRICK
+	dbw 36, POWER_TRICK
 	dbw 39, REVERSAL
 	dbw 42, RECOVER
 	dbw 45, COUNTER
@@ -999,7 +999,7 @@ MedichamEvosAttacks:
 	dbw 27, HI_JUMP_KICK
 	dbw 30, PSYCH_UP
 	dbw 33, ACUPRESSURE
-	; dbw 36, POWER_TRICK
+	dbw 36, POWER_TRICK
 	dbw 36, ZEN_HEADBUTT
 	dbw 42, REVERSAL
 	dbw 48, RECOVER

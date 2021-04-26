@@ -590,6 +590,7 @@ BattleAnimations::
 	dw BattleAnim_DiamondStorm
 	dw BattleAnim_SteamEruption
 	dw BattleAnim_GrassWhistle
+	dw BattleAnim_PowerTrick
 
 	dw BattleAnim_SweetScent2
 
@@ -973,6 +974,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_PowerTrick:
 BattleAnim_Geomancy:
 BattleAnim_OblivionWing:
 BattleAnim_FocusBlast:

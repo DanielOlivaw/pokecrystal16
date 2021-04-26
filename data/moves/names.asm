@@ -562,4 +562,5 @@ MoveNames::
 	db "DIAMONDSTORM@"
 	db "STEAM BURST@"
 	db "GRASSWHISTLE@"
+	db "POWER TRICK@"
 	  ;"123456123456@"

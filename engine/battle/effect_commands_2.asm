@@ -195,3 +195,5 @@ INCLUDE "engine/battle/move_effects/topsy_turvy.asm"
 INCLUDE "engine/battle/move_effects/electrify.asm"
 
 INCLUDE "engine/battle/move_effects/geomancy.asm"
+
+INCLUDE "engine/battle/move_effects/power_trick.asm"
