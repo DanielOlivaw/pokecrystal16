@@ -561,6 +561,14 @@ MoveDescriptions1:
 	dw ElectrifyDescription
 	dw FairyLockDescription
 	dw BranchPokeDescription
+	dw GeomancyDescription
+	dw OblivionWingDescription
+	dw FocusBlastDescription
+	dw LandsWrathDescription
+	dw ThousandWavesDescription
+	dw DiamondStormDescription
+	dw SteamEruptionDescription
+	dw GrassWhistleDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -809,6 +817,7 @@ BugBuzzDescription:
 EarthPowerDescription:
 EnergyBallDescription:
 LusterPurgeDescription:
+FocusBlastDescription:
 	db   "An attack that may"
 	next "lower SPCL.DEF.@"
 
@@ -905,6 +914,7 @@ DrainingKissDescription:
 DrainPunchDescription:
 HornLeechDescription:
 ParabolicChargeDescription:
+OblivionWingDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
@@ -970,6 +980,7 @@ HurricaneDescription:
 	next "cause confusion.@"
 
 HypnosisDescription:
+GrassWhistleDescription:
 	db   "May put the foe to"
 	next "sleep.@"
 
@@ -1227,6 +1238,7 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
+SteamEruptionDescription:
 	db   "An attack that may"
 	next "cause a burn.@"
 
@@ -1963,6 +1975,7 @@ AuraSphereDescription:
 
 AnchorShotDescription:
 MagnetGripDescription:
+ThousandWavesDescription:
 	db   "An attack that"
 	next "prevents escape.@"
 
@@ -2404,5 +2417,17 @@ ElectrifyDescription:
 BranchPokeDescription:
 	db   "Pokes the foe with"
 	next "a pointed branch.@"
+
+GeomancyDescription:
+	db   "Raises stats after"
+	next "charging one turn.@"
+
+LandsWrathDescription:
+	db   "Attacks with the"
+	next "power of the land.@"
+
+DiamondStormDescription:
+	db   "May sharply raise"
+	next "user's DEFENSE.@"
 
 		;"123456789123456789"

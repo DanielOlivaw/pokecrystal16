@@ -218,6 +218,8 @@ CheckPlayerTurn:
 	dw FLARE_BLITZ
 	dw BURN_UP
 	dw FLARE_UP
+	dw STEAM_ERUPTION
+	; dw SCALD
 	dw -1
 
 .not_frozen
@@ -471,6 +473,8 @@ CheckEnemyTurn:
 	dw FLARE_BLITZ
 	dw BURN_UP
 	dw FLARE_UP
+	dw STEAM_ERUPTION
+	; dw SCALD
 	dw -1
 
 .not_frozen
@@ -2392,6 +2396,8 @@ BattleCommand_LowerSub:
 	cp EFFECT_BOUNCE
 	jr z, .charge_turn
 	cp EFFECT_SHADOW_FORCE
+	jr z, .charge_turn
+	cp EFFECT_GEOMANCY
 	jr z, .charge_turn
 
 .already_charged
@@ -5505,7 +5511,7 @@ BattleCommand_StatDown:
 	ld [wLoweredStat], a
 
 StatDownFar:
-	call CheckMist
+	farcall CheckMist
 	jp nz, .Mist
 
 	ld hl, wEnemyStatLevels
@@ -5592,48 +5598,6 @@ StatDownFar:
 	ld [wFailedMessage], a
 	ld a, 1
 	ld [wAttackMissed], a
-	ret
-
-CheckMist:
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_ATTACK_DOWN
-	jr c, .dont_check_mist
-	cp EFFECT_EVASION_DOWN + 1
-	jr c, .check_mist
-	cp EFFECT_ATTACK_DOWN_2
-	jr c, .dont_check_mist
-	cp EFFECT_EVASION_DOWN_2 + 1
-	jr c, .check_mist
-	cp EFFECT_ATTACK_DOWN_HIT
-	jr c, .dont_check_mist
-	cp EFFECT_EVASION_DOWN_HIT + 1
-	jr c, .check_mist
-; New move effects that try to lower stats
-	cp EFFECT_TEARFUL_LOOK
-	jr z, .check_mist
-	cp EFFECT_PLAY_NICE
-	jr z, .check_mist
-	cp EFFECT_CONFIDE
-	jr z, .check_mist
-	cp EFFECT_VENOM_DRENCH
-	jr z, .check_mist
-	cp EFFECT_ATK_DEF_DOWN
-	jr z, .check_mist
-	cp EFFECT_ATK_DOWN_PRIORITY
-	jr z, .check_mist
-	cp EFFECT_NAIL_DOWN
-	jr z, .check_mist
-	cp EFFECT_POISON_SPEED_DOWN
-	jr z, .check_mist
-.dont_check_mist
-	xor a
-	ret
-
-.check_mist
-	ld a, BATTLE_VARS_SUBSTATUS4_OPP
-	call GetBattleVar
-	bit SUBSTATUS_MIST, a
 	ret
 
 BattleCommand_StatUpMessage:
@@ -6606,18 +6570,6 @@ BattleCommand_EndLoop:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-; BattleCommand_FakeOut:
-	; ld a, [wAttackMissed]
-	; and a
-	; ret nz
-
-	; ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
-	; call GetBattleVar
-	; and a
-	; ret nz
-
-	; ret
-
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp
 	ret nz
@@ -6918,6 +6870,7 @@ BattleCommand_Charge:
 	dw SHADOW_FORCE,  .ShadowForce
 	dw PHANTOM_FORCE, .PhantomForce
 	dw TIME_TRAVEL,   .TimeTravel
+	dw GEOMANCY,      .Geomancy
 	dw -1
 
 .RazorWind:
@@ -6951,7 +6904,7 @@ BattleCommand_Charge:
 	text_end
 
 .Dive:
-; 'sprang up!'
+; 'hid underwater!'
 	text_far HidUnderwaterText
 	text_end
 
@@ -6962,8 +6915,13 @@ BattleCommand_Charge:
 	text_end
 
 .TimeTravel:
-; 'vanished instantly!'
+; 'traveled into the future!'
 	text_far TraveledIntoTheFutureText
+	text_end
+
+.Geomancy:
+; 'is absorbing power!'
+	text_far AbsorbingPowerText
 	text_end
 
 BattleCommand_TrapTarget:

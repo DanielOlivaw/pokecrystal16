@@ -2871,3 +2871,35 @@ StatusTargetOpponent:
 	checkhit
 	statustargetopponent
 	endmove
+
+Geomancy:
+	checkcharge
+	checkobedience
+	doturn
+	charge
+	usedmovetext
+	statustargetself
+	endmove
+
+DefenseUp2Hit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	defenseup2
+	statupmessage
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

@@ -582,6 +582,14 @@ BattleAnimations::
 	dw BattleAnim_Electrify
 	dw BattleAnim_FairyLock
 	dw BattleAnim_BranchPoke
+	dw BattleAnim_Geomancy
+	dw BattleAnim_OblivionWing
+	dw BattleAnim_FocusBlast
+	dw BattleAnim_LandsWrath
+	dw BattleAnim_ThousandWaves
+	dw BattleAnim_DiamondStorm
+	dw BattleAnim_SteamEruption
+	dw BattleAnim_GrassWhistle
 
 	dw BattleAnim_SweetScent2
 
@@ -965,6 +973,14 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Geomancy:
+BattleAnim_OblivionWing:
+BattleAnim_FocusBlast:
+BattleAnim_LandsWrath:
+BattleAnim_ThousandWaves:
+BattleAnim_DiamondStorm:
+BattleAnim_SteamEruption:
+BattleAnim_GrassWhistle:
 BattleAnim_ParabolicCharge:
 BattleAnim_Electrify:
 BattleAnim_FairyLock:

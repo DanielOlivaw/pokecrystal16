@@ -229,6 +229,12 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_Wish
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, GEOMANCY
+	call CompareMove2
+	jp z, BattleCommand_Geomancy
+
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar

@@ -220,3 +220,5 @@ MoveEffectsPointers:
 	dw MultiHit               ; EFFECT_PRIORITY_MULTI_HIT
 	dw StatusTargetOpponent   ; EFFECT_POWDER
 	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
+	dw Geomancy               ; EFFECT_GEOMANCY
+	dw DefenseUp2Hit          ; EFFECT_DEFENSE_UP_2_HIT

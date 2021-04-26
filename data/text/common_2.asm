@@ -755,6 +755,12 @@ TraveledIntoTheFutureText::
 	line "traveled into the"
 	cont "future!"
 	prompt
+
+AbsorbingPowerText::
+	text_start
+	line "is absorbing"
+	cont "power!"
+	prompt
 		;"123456789123456789"
 
 _ActorNameText::

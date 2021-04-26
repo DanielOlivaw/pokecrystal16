@@ -220,3 +220,5 @@
 	const EFFECT_PRIORITY_MULTI_HIT
 	const EFFECT_POWDER
 	const EFFECT_STATUS_OPP_ACC ; same as EFFECT_STATUS_OPP, but bypasses accuracy checks
+	const EFFECT_GEOMANCY
+	const EFFECT_DEFENSE_UP_2_HIT
