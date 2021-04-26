@@ -1423,9 +1423,10 @@ ShuckleEvosAttacks:
 	dbw 40, GUARD_SPLIT
 	dbw 44, ROCK_SLIDE
 	dbw 48, STICKY_WEB
-	dbw 52, STONE_EDGE
-	dbw 56, SHELL_SMASH
-	dbw 60, SHIELD_BASH
+	; dbw 52, POWER_TRICK
+	dbw 56, STONE_EDGE
+	dbw 60, SHELL_SMASH
+	dbw 64, SHIELD_BASH
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:

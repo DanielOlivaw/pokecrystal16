@@ -41,21 +41,21 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; LAIRON
 	dw NoEvolutionMoves3        ; AGGRON
 	dw NoEvolutionMoves3        ; MEDITITE
-	dw NoEvolutionMoves3        ; MEDICHAM
+	dw MedichamEvolutionMoves   ; MEDICHAM
 	dw NoEvolutionMoves3        ; ELECTRIKE
 	dw NoEvolutionMoves3        ; MANECTRIC
-	dw NoEvolutionMoves3        ; ROSELIA
+	dw RoseliaEvolutionMoves    ; ROSELIA
 	dw NoEvolutionMoves3        ; GULPIN
-	dw NoEvolutionMoves3        ; SWALOT
+	dw SwalotEvolutionMoves     ; SWALOT
 	dw NoEvolutionMoves3        ; CARVANHA
-	dw NoEvolutionMoves3        ; SHARPEDO
+	dw SharpedoEvolutionMoves   ; SHARPEDO
 	dw NoEvolutionMoves3        ; WAILMER
 	dw NoEvolutionMoves3        ; WAILORD
 	dw NoEvolutionMoves3        ; NUMEL
-	dw NoEvolutionMoves3        ; CAMERUPT
+	dw CameruptEvolutionMoves   ; CAMERUPT
 	dw NoEvolutionMoves3        ; TORKOAL
 	dw NoEvolutionMoves3        ; SPOINK
-	dw NoEvolutionMoves3        ; GRUMPIG
+	dw GrumpigEvolutionMoves    ; GRUMPIG
 	dw NoEvolutionMoves3        ; TRAPINCH
 	dw NoEvolutionMoves3        ; VIBRAVA
 	dw NoEvolutionMoves3        ; FLYGON
@@ -150,6 +150,7 @@ LombreEvolutionMoves:
 	db 0 ; no more evolution moves
 
 LudicoloEvolutionMoves:
+GrumpigEvolutionMoves:
 	dw TEETER_DANCE
 	db 0 ; no more evolution moves
 
@@ -177,6 +178,26 @@ MasquerainEvolutionMoves:
 
 BreloomEvolutionMoves:
 	dw MACH_PUNCH
+	db 0 ; no more evolution moves
+
+MedichamEvolutionMoves:
+	dw ZEN_HEADBUTT
+	db 0 ; no more evolution moves
+
+RoseliaEvolutionMoves:
+	dw POISON_STING
+	db 0 ; no more evolution moves
+
+SwalotEvolutionMoves:
+	dw BODY_SLAM
+	db 0 ; no more evolution moves
+
+SharpedoEvolutionMoves:
+	dw SLASH
+	db 0 ; no more evolution moves
+
+CameruptEvolutionMoves:
+	dw ROCK_SLIDE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

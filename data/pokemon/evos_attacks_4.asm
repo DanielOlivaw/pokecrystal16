@@ -196,12 +196,33 @@ LuxrayEvosAttacks:
 BudewEvosAttacks:
 	dbbw  EVOLVE_HAPPINESS, TR_MORNDAY, ROSELIA
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
+	dbw 4, GROWTH
+	dbw 8, STUN_SPORE
+	dbw 12, MEGA_DRAIN
 	db 0 ; no more level-up moves
 
 RoseradeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
+	dbw 1, GROWTH
+	dbw 1, STUN_SPORE
+	dbw 1, MEGA_DRAIN
+	dbw 1, POISON_STING
+	dbw 4, LEECH_SEED
+	dbw 8, GRASSWHISTLE
+	dbw 12, MAGICAL_LEAF
+	dbw 16, TOXIC_SPIKES
+	dbw 20, SWEET_SCENT
+	dbw 24, GIGA_DRAIN
+	dbw 28, SYNTHESIS
+	dbw 32, TOXIC
+	dbw 36, PETAL_STORM
+	dbw 40, AROMATHERAPY
+	dbw 44, INGRAIN
+	dbw 48, PETAL_DANCE
+	dbw 52, WEATHER_BALL
+	dbw 56, VENOM_DRENCH
 	db 0 ; no more level-up moves
 
 CranidosEvosAttacks:
