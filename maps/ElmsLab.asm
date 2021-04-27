@@ -155,17 +155,35 @@ LabTryToLeaveScript:
 	applymovement PLAYER, ElmsLab_CantLeaveMovement
 	end
 
-CyndaquilPokeBallScript:
+FireStarterPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic TORCHIC
-	cry TORCHIC
+	checkevent EVENT_CHARMANDER_IS_FIRE_STARTER
+	iftrue .Charmander
+	checkevent EVENT_CYNDAQUIL_IS_FIRE_STARTER
+	iftrue .Cyndaquil
+	checkevent EVENT_TORCHIC_IS_FIRE_STARTER
+	iftrue .Torchic
+	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
+	iftrue .Chimchar
+	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
+	iftrue .Fennekin
+	random 5
+	ifequal 1, .Cyndaquil
+	ifequal 2, .Torchic
+	ifequal 3, .Chimchar
+	ifequal 4, .Fennekin
+.Charmander
+	setevent EVENT_CHARMANDER_IS_FIRE_STARTER
+	pokepic CHARMANDER
+	cry CHARMANDER
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeCyndaquilText
+	getmonname STRING_BUFFER_3, CHARMANDER
+	writetext TakeFireStarterText
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
@@ -173,29 +191,142 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CHARMANDER, 5, BERRY
+.Finish
+	closetext
+	readvar VAR_FACING
+	ifequal RIGHT, ElmDirectionsScript
+	applymovement PLAYER, AfterFireStarterMovement
+	sjump ElmDirectionsScript
+
+.Cyndaquil
+	setevent EVENT_CYNDAQUIL_IS_FIRE_STARTER
+	pokepic CYNDAQUIL
+	cry CYNDAQUIL
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CYNDAQUIL, 5, BERRY
+	sjump .Finish
+
+.Torchic
+	setevent EVENT_TORCHIC_IS_FIRE_STARTER
+	pokepic TORCHIC
+	cry TORCHIC
+	waitbutton
+	closepokepic
+	opentext
 	getmonname STRING_BUFFER_3, TORCHIC
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
 	givepoke TORCHIC, 5, BERRY
-	closetext
-	readvar VAR_FACING
-	ifequal RIGHT, ElmDirectionsScript
-	applymovement PLAYER, AfterCyndaquilMovement
-	sjump ElmDirectionsScript
+	sjump .Finish
 
-TotodilePokeBallScript:
+.Chimchar
+	setevent EVENT_CHIMCHAR_IS_FIRE_STARTER
+	pokepic CHIMCHAR
+	cry CHIMCHAR
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, CHIMCHAR
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CHIMCHAR, 5, BERRY
+	sjump .Finish
+
+.Fennekin
+	setevent EVENT_FENNEKIN_IS_FIRE_STARTER
+	pokepic FENNEKIN
+	cry FENNEKIN
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, FENNEKIN
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke FENNEKIN, 5, BERRY
+	sjump .Finish
+
+WaterStarterPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic MUDKIP
-	cry MUDKIP
+	checkevent EVENT_SQUIRTLE_IS_WATER_STARTER
+	iftrue .Squirtle
+	checkevent EVENT_TOTODILE_IS_WATER_STARTER
+	iftrue .Totodile
+	checkevent EVENT_MUDKIP_IS_WATER_STARTER
+	iftrue .Mudkip
+	checkevent EVENT_PIPLUP_IS_WATER_STARTER
+	iftrue .Piplup
+	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
+	iftrue .Oshawott
+	checkevent EVENT_FROAKIE_IS_WATER_STARTER
+	iftrue .Froakie
+	random 6
+	ifequal 1, .Totodile
+	ifequal 2, .Mudkip
+	ifequal 3, .Piplup
+	ifequal 4, .Oshawott
+	ifequal 5, .Froakie
+.Squirtle
+	setevent EVENT_SQUIRTLE_IS_WATER_STARTER
+	pokepic SQUIRTLE
+	cry SQUIRTLE
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeTotodileText
+	getmonname STRING_BUFFER_3, SQUIRTLE
+	writetext TakeWaterStarterText
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
@@ -203,27 +334,163 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke SQUIRTLE, 5, BERRY
+.Finish
+	closetext
+	applymovement PLAYER, AfterWaterStarterMovement
+	sjump ElmDirectionsScript
+
+.Totodile
+	setevent EVENT_TOTODILE_IS_WATER_STARTER
+	pokepic TOTODILE
+	cry TOTODILE
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, TOTODILE
+	writetext TakeWaterStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke TOTODILE, 5, BERRY
+	sjump .Finish
+
+.Mudkip
+	setevent EVENT_MUDKIP_IS_WATER_STARTER
+	pokepic MUDKIP
+	cry MUDKIP
+	waitbutton
+	closepokepic
+	opentext
 	getmonname STRING_BUFFER_3, MUDKIP
+	writetext TakeWaterStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
 	givepoke MUDKIP, 5, BERRY
-	closetext
-	applymovement PLAYER, AfterTotodileMovement
-	sjump ElmDirectionsScript
+	sjump .Finish
 
-ChikoritaPokeBallScript:
+.Piplup
+	setevent EVENT_PIPLUP_IS_WATER_STARTER
+	pokepic PIPLUP
+	cry PIPLUP
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, PIPLUP
+	writetext TakeWaterStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke PIPLUP, 5, BERRY
+	sjump .Finish
+
+.Oshawott
+	setevent EVENT_OSHAWOTT_IS_WATER_STARTER
+	pokepic OSHAWOTT
+	cry OSHAWOTT
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, OSHAWOTT
+	writetext TakeWaterStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke OSHAWOTT, 5, BERRY
+	sjump .Finish
+
+.Froakie
+	setevent EVENT_FROAKIE_IS_WATER_STARTER
+	pokepic FROAKIE
+	cry FROAKIE
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, FROAKIE
+	writetext TakeWaterStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke FROAKIE, 5, BERRY
+	sjump .Finish
+
+GrassStarterPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic TREECKO
-	cry TREECKO
+	checkevent EVENT_BULBASAUR_IS_GRASS_STARTER
+	iftrue .Bulbasaur
+	checkevent EVENT_CHIKORITA_IS_GRASS_STARTER
+	iftrue .Chikorita
+	checkevent EVENT_TREECKO_IS_GRASS_STARTER
+	iftrue .Treecko
+	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
+	iftrue .Turtwig
+	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
+	iftrue .Chespin
+	checkevent EVENT_ROWLET_IS_GRASS_STARTER
+	iftrue .Rowlet
+	random 6
+	ifequal 1, .Chikorita
+	ifequal 2, .Treecko
+	ifequal 3, .Turtwig
+	ifequal 4, .Chespin
+	ifequal 5, .Rowlet
+.Bulbasaur
+	setevent EVENT_BULBASAUR_IS_GRASS_STARTER
+	pokepic BULBASAUR
+	cry BULBASAUR
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeChikoritaText
+	getmonname STRING_BUFFER_3, BULBASAUR
+	writetext TakeGrassStarterText
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
@@ -231,15 +498,130 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke BULBASAUR, 5, BERRY
+.Finish
+	closetext
+	applymovement PLAYER, AfterGrassStarterMovement
+	sjump ElmDirectionsScript
+
+.Chikorita
+	setevent EVENT_CHIKORITA_IS_GRASS_STARTER
+	pokepic CHIKORITA
+	cry CHIKORITA
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, CHIKORITA
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CHIKORITA, 5, BERRY
+	sjump .Finish
+
+.Treecko
+	setevent EVENT_TREECKO_IS_GRASS_STARTER
+	pokepic TREECKO
+	cry TREECKO
+	waitbutton
+	closepokepic
+	opentext
 	getmonname STRING_BUFFER_3, TREECKO
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
 	givepoke TREECKO, 5, BERRY
-	closetext
-	applymovement PLAYER, AfterChikoritaMovement
-	sjump ElmDirectionsScript
+	sjump .Finish
+
+.Turtwig
+	setevent EVENT_TURTWIG_IS_GRASS_STARTER
+	pokepic TURTWIG
+	cry TURTWIG
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, TURTWIG
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke TURTWIG, 5, BERRY
+	sjump .Finish
+
+.Chespin
+	setevent EVENT_CHESPIN_IS_GRASS_STARTER
+	pokepic CHESPIN
+	cry CHESPIN
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, CHESPIN
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CHESPIN, 5, BERRY
+	sjump .Finish
+
+.Rowlet
+	setevent EVENT_ROWLET_IS_GRASS_STARTER
+	pokepic ROWLET
+	cry ROWLET
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, ROWLET
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke ROWLET, 5, BERRY
+	sjump .Finish
 
 DidntChooseStarterScript:
 	writetext DidntChooseStarterText
@@ -702,20 +1084,20 @@ ElmsLab_ElmToDefaultPositionMovement2:
 	turn_head DOWN
 	step_end
 
-AfterCyndaquilMovement:
+AfterFireStarterMovement:
 	step LEFT
 	step UP
 	turn_head UP
 	step_end
 
-AfterTotodileMovement:
+AfterWaterStarterMovement:
 	step LEFT
 	step LEFT
 	step UP
 	turn_head UP
 	step_end
 
-AfterChikoritaMovement:
+AfterGrassStarterMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -856,21 +1238,27 @@ LabWhereGoingText:
 	line "are you going?"
 	done
 
-TakeCyndaquilText:
+TakeFireStarterText:
 	text "ELM: You'll take"
-	line "CYNDAQUIL, the"
+	line "@"
+	text_ram wStringBuffer3
+	text ", the"
 	cont "fire #MON?"
 	done
 
-TakeTotodileText:
+TakeWaterStarterText:
 	text "ELM: Do you want"
-	line "TOTODILE, the"
+	line "@"
+	text_ram wStringBuffer3
+	text ", the"
 	cont "water #MON?"
 	done
 
-TakeChikoritaText:
+TakeGrassStarterText:
 	text "ELM: So, you like"
-	line "CHIKORITA, the"
+	line "@"
+	text_ram wStringBuffer3
+	text ", the"
 	cont "grass #MON?"
 	done
 
@@ -1406,7 +1794,7 @@ ElmsLab_MapEvents:
 	db 6 ; object events
 	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
-	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FireStarterPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
+	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WaterStarterPokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GrassStarterPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
