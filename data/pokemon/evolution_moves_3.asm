@@ -57,22 +57,22 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; SPOINK
 	dw GrumpigEvolutionMoves    ; GRUMPIG
 	dw NoEvolutionMoves3        ; TRAPINCH
-	dw NoEvolutionMoves3        ; VIBRAVA
-	dw NoEvolutionMoves3        ; FLYGON
+	dw VibravaEvolutionMoves    ; VIBRAVA
+	dw FlygonEvolutionMoves     ; FLYGON
 	dw NoEvolutionMoves3        ; CACNEA
-	dw NoEvolutionMoves3        ; CACTURNE
+	dw CacturneEvolutionMoves   ; CACTURNE
 	dw NoEvolutionMoves3        ; SWABLU
-	dw NoEvolutionMoves3        ; ALTARIA
+	dw AltariaEvolutionMoves    ; ALTARIA
 	dw NoEvolutionMoves3        ; ZANGOOSE
 	dw NoEvolutionMoves3        ; SEVIPER
 	dw NoEvolutionMoves3        ; LUNATONE
 	dw NoEvolutionMoves3        ; SOLROCK
 	dw NoEvolutionMoves3        ; BARBOACH
-	dw NoEvolutionMoves3        ; WHISCASH
+	dw WhiscashEvolutionMoves   ; WHISCASH
 	dw NoEvolutionMoves3        ; CORPHISH
-	dw NoEvolutionMoves3        ; CRAWDAUNT
+	dw CrawdauntEvolutionMoves  ; CRAWDAUNT
 	dw NoEvolutionMoves3        ; BALTOY
-	dw NoEvolutionMoves3        ; CLAYDOL
+	dw ClaydolEvolutionMoves    ; CLAYDOL
 	dw NoEvolutionMoves3        ; LILEEP
 	dw NoEvolutionMoves3        ; CRADILY
 	dw NoEvolutionMoves3        ; ANORITH
@@ -198,6 +198,34 @@ SharpedoEvolutionMoves:
 
 CameruptEvolutionMoves:
 	dw ROCK_SLIDE
+	db 0 ; no more evolution moves
+
+VibravaEvolutionMoves:
+	dw DRAGONBREATH
+	db 0 ; no more evolution moves
+
+FlygonEvolutionMoves:
+	dw DRAGON_CLAW
+	db 0 ; no more evolution moves
+
+CacturneEvolutionMoves:
+	dw SPIKY_SHIELD
+	db 0 ; no more evolution moves
+
+AltariaEvolutionMoves:
+	dw DRAGON_PULSE
+	db 0 ; no more evolution moves
+
+WhiscashEvolutionMoves:
+	dw THRASH
+	db 0 ; no more evolution moves
+
+CrawdauntEvolutionMoves:
+	dw SWIFT
+	db 0 ; no more evolution moves
+
+ClaydolEvolutionMoves:
+	dw HYPER_BEAM
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

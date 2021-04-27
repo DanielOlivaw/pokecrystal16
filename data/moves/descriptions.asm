@@ -574,6 +574,7 @@ MoveDescriptions1:
 	dw ExcavateDescription
 	dw VacuumCutDescription
 	dw WideSlashDescription
+	dw SpiritShackleDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1984,6 +1985,7 @@ AuraSphereDescription:
 AnchorShotDescription:
 MagnetGripDescription:
 ThousandWavesDescription:
+SpiritShackleDescription:
 	db   "An attack that"
 	next "prevents escape.@"
 

@@ -567,4 +567,5 @@ MoveNames::
 	db "EXCAVATE@"
 	db "VACUUM-CUT@"
 	db "WIDE SLASH@"
+	db "SPIRIT ARROW@"
 	  ;"123456123456@"
