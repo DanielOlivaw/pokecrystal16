@@ -581,4 +581,8 @@ Moves1:
 	move EFFECT_FLAME_WHEEL,       110, WATER,    SPECIAL,   95,  5,  30 ; STEAM_ERUPTION
 	move EFFECT_SLEEP,               0, GRASS,    STATUS,    55, 15,   0 ; GRASSWHISTLE
 	move EFFECT_STATUS_SELF,         0, PSYCHIC,  STATUS,   100, 10,   0 ; POWER_TRICK
+	move EFFECT_RAMPAGE,           120, CURSE_TYPE, PHYSICAL, 100, 10,   0 ; SPIN_SLASH
+	move EFFECT_EXCAVATE,            0, CURSE_TYPE, STATUS,   100, 20,   0 ; EXCAVATE
+	move EFFECT_STATIC_DAMAGE,      50, CURSE_TYPE, SPECIAL,  100, 10,   0 ; VACUUM_CUT
+	move EFFECT_NORMAL_HIT,         70, CURSE_TYPE, PHYSICAL, 100, 15,   0 ; WIDE_SLASH
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -563,4 +563,8 @@ MoveNames::
 	db "STEAM BURST@"
 	db "GRASSWHISTLE@"
 	db "POWER TRICK@"
+	db "SPIN SLASH@"
+	db "EXCAVATE@"
+	db "VACUUM-CUT@"
+	db "WIDE SLASH@"
 	  ;"123456123456@"

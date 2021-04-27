@@ -570,6 +570,10 @@ MoveDescriptions1:
 	dw SteamEruptionDescription
 	dw GrassWhistleDescription
 	dw PowerTrickDescription
+	dw SpinSlashDescription
+	dw ExcavateDescription
+	dw VacuumCutDescription
+	dw WideSlashDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -594,6 +598,7 @@ ShadowClawDescription:
 SpacialRendDescription:
 AttackOrderDescription:
 SeamitarDescription:
+WideSlashDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -758,6 +763,7 @@ WildChargeDescription:
 ThrashDescription:
 OutrageDescription:
 PetalDanceDescription:
+SpinSlashDescription:
 	db   "Works 2-3 turns"
 	next "and confuses user.@"
 
@@ -1013,6 +1019,7 @@ MimicDescription:
 	next "by the foe.@"
 
 ScreechDescription:
+ExcavateDescription:
 	db   "Sharply reduces"
 	next "the foe's DEFENSE.@"
 
@@ -2434,5 +2441,9 @@ DiamondStormDescription:
 PowerTrickDescription:
 	db   "Switches user's"
 	next "ATTACK & DEFENSE.@"
+
+VacuumCutDescription:
+	db   "Always inflicts"
+	next "50HP damage.@"
 
 		;"123456789123456789"

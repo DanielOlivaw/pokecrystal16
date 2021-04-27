@@ -591,6 +591,10 @@ BattleAnimations::
 	dw BattleAnim_SteamEruption
 	dw BattleAnim_GrassWhistle
 	dw BattleAnim_PowerTrick
+	dw BattleAnim_SpinSlash
+	dw BattleAnim_Excavate
+	dw BattleAnim_VacuumCut
+	dw BattleAnim_WideSlash
 
 	dw BattleAnim_SweetScent2
 
@@ -974,6 +978,10 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_SpinSlash:
+BattleAnim_Excavate:
+BattleAnim_VacuumCut:
+BattleAnim_WideSlash:
 BattleAnim_PowerTrick:
 BattleAnim_Geomancy:
 BattleAnim_OblivionWing:

@@ -197,3 +197,5 @@ INCLUDE "engine/battle/move_effects/electrify.asm"
 INCLUDE "engine/battle/move_effects/geomancy.asm"
 
 INCLUDE "engine/battle/move_effects/power_trick.asm"
+
+INCLUDE "engine/battle/move_effects/excavate.asm"

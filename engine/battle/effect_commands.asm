@@ -2113,6 +2113,7 @@ BattleCommand_CheckHit:
 	dw EARTHQUAKE
 	dw FISSURE
 	dw MAGNITUDE
+	dw EXCAVATE
 	dw -1
 
 .DiveMoves:
@@ -7741,6 +7742,10 @@ BattleCommand_Yawn:
 
 BattleCommand_CraftyShield:
 	farcall CraftyShieldEffect
+	ret
+
+BattleCommand_Excavate:
+	farcall ExcavateEffect
 	ret
 
 BattleCommand_HeavySlam:

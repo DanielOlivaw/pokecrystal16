@@ -222,3 +222,4 @@ MoveEffectsPointers:
 	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
 	dw Geomancy               ; EFFECT_GEOMANCY
 	dw DefenseUp2Hit          ; EFFECT_DEFENSE_UP_2_HIT
+	dw Excavate               ; EFFECT_EXCAVATE

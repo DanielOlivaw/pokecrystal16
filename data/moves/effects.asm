@@ -2903,3 +2903,16 @@ DefenseUp2Hit:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Excavate:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	excavate
+	lowersub
+	statdownanim
+	raisesub
+	statdownmessage
+	statdownfailtext
+	endmove
