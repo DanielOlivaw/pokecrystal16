@@ -81,7 +81,7 @@ EvolutionMovePointers4::
 	dw GalladeEvolutionMoves    ; GALLADE
 	dw ProbopassEvolutionMoves  ; PROBOPASS
 	dw NoEvolutionMoves4        ; DUSKNOIR
-	dw NoEvolutionMoves4        ; FROSLASS
+	dw FroslassEvolutionMoves   ; FROSLASS
 	dw NoEvolutionMoves4        ; ROTOM
 	dw NoEvolutionMoves4        ; UXIE
 	dw NoEvolutionMoves4        ; MESPRIT
@@ -122,6 +122,10 @@ GalladeEvolutionMoves:
 
 ProbopassEvolutionMoves:
 	dw TRI_ATTACK
+	db 0 ; no more evolution moves
+
+FroslassEvolutionMoves:
+	dw OMINOUS_WIND
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves4:

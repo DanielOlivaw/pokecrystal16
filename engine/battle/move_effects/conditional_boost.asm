@@ -124,6 +124,8 @@ Find_ConditionalBoost:
 	jp z, BattleCommand_CureParalysisHit
 	cp EFFECT_FREEZE_DRY
 	jp z, BattleCommand_FreezeDry
+	cp EFFECT_REVENGE
+	jp z, BattleCommand_Revenge
 
 	cp EFFECT_BODY_SLAM
 	jr z, BattleCommand_DoubleMinimizeDamage

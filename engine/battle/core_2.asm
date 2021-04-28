@@ -180,7 +180,12 @@ EndLaserFocusEffect:
 	ret
 
 EndPowderAndElectrifyEffect:
-; Powder's effect ends at the end of the turn in which it was used.
+; Reset tracker for whether each Pokemon took damage this turn.
+	xor a
+	ld [wPlayerTookDamage], a
+	ld [wEnemyTookDamage], a
+
+; Powder and Electrify's effects end at the end of the turn in which it was used.
 	ld hl, wPlayerSubStatus7
 	res SUBSTATUS_POWDERED, [hl]
 	res SUBSTATUS_ELECTRIFIED, [hl]
@@ -499,4 +504,38 @@ HandleHealingWish:
 .done
 ; Print message
 	ld hl, WishCameTrueText
+	jp StdBattleTextbox
+
+ReadyingMoveMessage:
+; Display both sides' readying messages for Focus Punch, Beak Blast, or Shell Trap
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first
+	call SetPlayerTurn
+	call .do_it
+	call SetEnemyTurn
+	jr .do_it
+
+.enemy_first
+	call SetEnemyTurn
+	call .do_it
+	call SetPlayerTurn
+.do_it
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_BEAK_BLAST
+	jr z, .beak_blast
+	cp EFFECT_SHELL_TRAP
+	jr z, .shell_trap
+	cp EFFECT_FOCUS_PUNCH
+	ret nz
+	ld hl, TighteningFocusText
+	jp StdBattleTextbox
+
+.beak_blast
+	ld hl, StartedHeatingUpBeakText
+	jp StdBattleTextbox
+
+.shell_trap
+	ld hl, SetAShellTrapText
 	jp StdBattleTextbox

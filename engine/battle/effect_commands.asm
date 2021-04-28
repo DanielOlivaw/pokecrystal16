@@ -1724,6 +1724,8 @@ BattleCommand_CheckHit:
 	call .BurnUp
 
 	call .FirstTurn
+	
+	call .FocusPunchShellTrap
 
 	call .SpitUp
 	jp z, .Miss
@@ -1935,6 +1937,34 @@ BattleCommand_CheckHit:
 	jp nz, .Miss
 	ret
 
+.FocusPunchShellTrap
+	ld bc, wPlayerTookDamage
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .FocusPunchShellTrap_GotDamageCheck
+	ld bc, wEnemyTookDamage
+
+.FocusPunchShellTrap_GotDamageCheck
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FOCUS_PUNCH
+	jr z, .FocusPunch
+	cp EFFECT_SHELL_TRAP
+	ret nz
+
+; Shell Trap fails if the user wasn't hit by a physical move.
+	ld a, [bc]
+	and a
+	jp z, .Miss
+	ret
+
+.FocusPunch
+; Focus Punch fails if the user took damage.
+	ld a, [bc]
+	and a
+	jp nz, .Miss
+	ret
+
 .SpitUp:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -2113,7 +2143,7 @@ BattleCommand_CheckHit:
 	dw EARTHQUAKE
 	dw FISSURE
 	dw MAGNITUDE
-	dw EXCAVATE
+	; dw EXCAVATE
 	dw -1
 
 .DiveMoves:
@@ -3063,8 +3093,6 @@ BattleCommand_CheckFaint:
 BattleCommand_BuildOpponentRage:
 ; buildopponentrage
 
-	jp .start
-
 .start
 	ld a, [wAttackMissed]
 	and a
@@ -3072,6 +3100,12 @@ BattleCommand_BuildOpponentRage:
 
 	ld a, BATTLE_VARS_SUBSTATUS4_OPP
 	call GetBattleVar
+; Rage's effect doesn't activate behind a substitute
+	bit SUBSTATUS_SUBSTITUTE, a
+	ret nz
+	push af
+	farcall HandleReadyingMoves
+	pop af
 	bit SUBSTATUS_RAGE, a
 	ret z
 
@@ -4743,6 +4777,36 @@ CheckIfTargetIsPoisonOrSteelType:
 	cp STEEL
 	ret
 
+CheckIfTargetIsFireType:
+	ld de, wEnemyMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, wBattleMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp FIRE
+	ret z
+	ld a, [de]
+	cp FIRE
+	ret
+
+CheckIfTargetIsIceType:
+	ld de, wEnemyMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, wBattleMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp ICE
+	ret z
+	ld a, [de]
+	cp ICE
+	ret
+
 PoisonOpponent:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
@@ -4871,7 +4935,7 @@ BattleCommand_BurnTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
-	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+	call CheckIfTargetIsFireType ; Don't burn a Fire-type
 	ret z
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
@@ -4919,7 +4983,7 @@ BattleCommand_Burn:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .didnt_affect
-	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
+	call CheckIfTargetIsFireType ; Don't burn a Fire-type
 	jr z, .didnt_affect
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
@@ -5050,7 +5114,7 @@ BattleCommand_FreezeTarget:
 	ret z
 	cp WEATHER_FOG
 	ret z
-	call CheckMoveTypeMatchesTarget ; Don't freeze an Ice-type
+	call CheckIfTargetIsIceType ; Don't freeze an Ice-type
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -6647,9 +6711,9 @@ BattleCommand_OHKO:
 	call GetBattleVar
 	cp EFFECT_SHEER_COLD
 	jr nz, .get_level
-	call CheckMoveTypeMatchesTarget
+	call CheckIfTargetIsIceType
 	jr z, .no_effect
-	
+
 .get_level
 	ld hl, wEnemyMonLevel
 	ld de, wBattleMonLevel
@@ -7238,41 +7302,41 @@ BattleCommand_Paralyze:
 	call AnimateFailedMove
 	jp PrintFogProtection
 
-CheckMoveTypeMatchesTarget:
-; Compare move type to opponent type.
-; Return z if matching the opponent type,
-; unless the move is Normal (Tri Attack).
+; CheckMoveTypeMatchesTarget:
+;; Compare move type to opponent type.
+;; Return z if matching the opponent type,
+;; unless the move is Normal (Tri Attack).
 
-	push hl
+	; push hl
 
-	ld hl, wEnemyMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wBattleMonType1
-.ok
+	; ld hl, wEnemyMonType1
+	; ldh a, [hBattleTurn]
+	; and a
+	; jr z, .ok
+	; ld hl, wBattleMonType1
+; .ok
 
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
-	and TYPE_MASK
-	cp NORMAL
-	jr z, .normal
+	; ld a, BATTLE_VARS_MOVE_TYPE
+	; call GetBattleVar
+	; and TYPE_MASK
+	; cp NORMAL
+	; jr z, .normal
 
-	cp [hl]
-	jr z, .return
+	; cp [hl]
+	; jr z, .return
 
-	inc hl
-	cp [hl]
+	; inc hl
+	; cp [hl]
 
-.return
-	pop hl
-	ret
+; .return
+	; pop hl
+	; ret
 
-.normal
-	ld a, 1
-	and a
-	pop hl
-	ret
+; .normal
+	; ld a, 1
+	; and a
+	; pop hl
+	; ret
 
 BattleCommand_RechargeNextTurn:
 ; rechargenextturn
@@ -7742,10 +7806,6 @@ BattleCommand_Yawn:
 
 BattleCommand_CraftyShield:
 	farcall CraftyShieldEffect
-	ret
-
-BattleCommand_Excavate:
-	farcall ExcavateEffect
 	ret
 
 BattleCommand_HeavySlam:

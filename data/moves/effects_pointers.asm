@@ -222,4 +222,7 @@ MoveEffectsPointers:
 	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
 	dw Geomancy               ; EFFECT_GEOMANCY
 	dw DefenseUp2Hit          ; EFFECT_DEFENSE_UP_2_HIT
-	dw Excavate               ; EFFECT_EXCAVATE
+	dw NormalHit              ; EFFECT_FOCUS_PUNCH
+	dw NormalHit              ; EFFECT_BEAK_BLAST
+	dw NormalHit              ; EFFECT_SHELL_TRAP
+	dw ConditionalBoost       ; EFFECT_REVENGE

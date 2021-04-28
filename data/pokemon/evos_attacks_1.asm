@@ -1167,17 +1167,18 @@ MachopEvosAttacks:
 	dbw 9, FORESIGHT
 	dbw 12, LOW_SWEEP
 	dbw 15, SEISMIC_TOSS
-	dbw 18, KNOCK_OFF
-	dbw 21, SCARY_FACE
-	dbw 24, VITAL_THROW
-	dbw 27, WAKE_UP_SLAP
-	dbw 30, STRENGTH ; HM? Should this be removed?
-	dbw 33, DUAL_CHOP
-	dbw 36, SUBMISSION
-	dbw 39, BULK_UP
-	dbw 42, DYNAMICPUNCH
-	dbw 45, CROSS_CHOP
-	dbw 48, DOUBLE_EDGE
+	dbw 18, REVENGE
+	dbw 21, KNOCK_OFF
+	dbw 24, SCARY_FACE
+	dbw 27, VITAL_THROW
+	dbw 30, WAKE_UP_SLAP
+	dbw 33, STRENGTH ; HM? Should this be removed?
+	dbw 36, DUAL_CHOP
+	dbw 39, SUBMISSION
+	dbw 42, BULK_UP
+	dbw 45, DYNAMICPUNCH
+	dbw 48, CROSS_CHOP
+	dbw 51, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
@@ -1191,17 +1192,18 @@ MachokeEvosAttacks:
 	dbw 9, FORESIGHT
 	dbw 12, LOW_SWEEP
 	dbw 15, SEISMIC_TOSS
-	dbw 18, KNOCK_OFF
-	dbw 21, SCARY_FACE
-	dbw 24, VITAL_THROW
-	dbw 27, WAKE_UP_SLAP
-	dbw 31, STRENGTH ; HM? Should this be removed?
-	dbw 35, DUAL_CHOP
-	dbw 39, SUBMISSION
-	dbw 43, BULK_UP
-	dbw 47, DYNAMICPUNCH
-	dbw 51, CROSS_CHOP
-	dbw 55, DOUBLE_EDGE
+	dbw 18, REVENGE
+	dbw 21, KNOCK_OFF
+	dbw 24, SCARY_FACE
+	dbw 27, VITAL_THROW
+	dbw 31, WAKE_UP_SLAP
+	dbw 35, STRENGTH ; HM? Should this be removed?
+	dbw 39, DUAL_CHOP
+	dbw 43, SUBMISSION
+	dbw 47, BULK_UP
+	dbw 51, DYNAMICPUNCH
+	dbw 55, CROSS_CHOP
+	dbw 59, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachampEvosAttacks:
@@ -1213,17 +1215,18 @@ MachampEvosAttacks:
 	dbw 9, FORESIGHT
 	dbw 12, LOW_SWEEP
 	dbw 15, SEISMIC_TOSS
-	dbw 18, KNOCK_OFF
-	dbw 21, SCARY_FACE
-	dbw 24, VITAL_THROW
-	dbw 27, WAKE_UP_SLAP
-	dbw 31, STRENGTH ; HM? Should this be removed?
-	dbw 35, DUAL_CHOP
-	dbw 39, SUBMISSION
-	dbw 43, BULK_UP
-	dbw 47, DYNAMICPUNCH
-	dbw 51, CROSS_CHOP
-	dbw 55, DOUBLE_EDGE
+	dbw 18, REVENGE
+	dbw 21, KNOCK_OFF
+	dbw 24, SCARY_FACE
+	dbw 27, VITAL_THROW
+	dbw 31, WAKE_UP_SLAP
+	dbw 35, STRENGTH ; HM? Should this be removed?
+	dbw 39, DUAL_CHOP
+	dbw 43, SUBMISSION
+	dbw 47, BULK_UP
+	dbw 51, DYNAMICPUNCH
+	dbw 55, CROSS_CHOP
+	dbw 59, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 BellsproutEvosAttacks:
@@ -2208,18 +2211,19 @@ PinsirEvosAttacks:
 	dbw 1, HARDEN
 	dbw 4, FOCUS_ENERGY
 	dbw 8, BIND
-	dbw 12, SEISMIC_TOSS
-	dbw 16, BUG_BITE
-	dbw 20, STORM_THROW
-	dbw 24, DOUBLE_HIT
-	dbw 28, VITAL_THROW
+	dbw 11, SEISMIC_TOSS
+	dbw 15, BUG_BITE
+	dbw 18, STORM_THROW
+	dbw 22, DOUBLE_HIT
+	dbw 25, REVENGE
+	dbw 29, VITAL_THROW
 	dbw 32, BRICK_BREAK
 	dbw 36, X_SCISSOR
-	dbw 40, SWORDS_DANCE
-	dbw 44, SUBMISSION
-	dbw 48, THRASH
-	dbw 52, GUILLOTINE
-	dbw 56, SUPERPOWER
+	dbw 39, SWORDS_DANCE
+	dbw 43, SUBMISSION
+	dbw 46, THRASH
+	dbw 50, GUILLOTINE
+	dbw 53, SUPERPOWER
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:
@@ -2246,7 +2250,7 @@ MagikarpEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SPLASH
 	dbw 15, TACKLE
-	dbw 30, FLAIL
+	dbw 25, FLAIL
 	db 0 ; no more level-up moves
 
 GyaradosEvosAttacks:

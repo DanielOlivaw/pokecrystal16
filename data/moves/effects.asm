@@ -19,6 +19,7 @@ NormalHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -2904,15 +2905,15 @@ DefenseUp2Hit:
 	kingsrock
 	endmove
 
-Excavate:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	excavate
-	lowersub
-	statdownanim
-	raisesub
-	statdownmessage
-	statdownfailtext
-	endmove
+; Excavate:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; checkhit
+	; excavate
+	; lowersub
+	; statdownanim
+	; raisesub
+	; statdownmessage
+	; statdownfailtext
+	; endmove

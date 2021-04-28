@@ -570,11 +570,12 @@
 	const STEAM_ERUPTION
 	const GRASSWHISTLE
 	const POWER_TRICK
-	const SPIN_SLASH
-	const EXCAVATE
-	const VACUUM_CUT
-	const WIDE_SLASH
 	const SPIRIT_SHACKLE
+	const FOCUS_PUNCH
+	const BEAK_BLAST
+	const SHELL_TRAP
+	const REVENGE
+	const AVALANCHE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

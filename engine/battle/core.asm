@@ -261,6 +261,9 @@ BattleTurn:
 	call EnemyTriesToFlee
 	jr c, .quit
 
+; Readying message for Focus Punch/Beak Blast/Shell Trap
+	farcall ReadyingMoveMessage
+
 	call DetermineMoveOrder
 	jr c, .false
 	call Battle_EnemyFirst
@@ -4524,7 +4527,7 @@ SpikesDamage:
 	dec de
 	cp FLYING
 	ret z
-	
+
 	push bc
 	push hl
 	push de
@@ -8818,6 +8821,8 @@ CleanUpBattleRAM:
 	ld [wTrickRoom], a
 	ld [wPlayerJustFainted], a
 	ld [wEnemyJustFainted], a
+	ld [wPlayerTookDamage], a
+	ld [wEnemyTookDamage], a
 	ld hl, wPlayerSubStatus1
 	ld b, wEnemyFuryCutterCount - wPlayerSubStatus1
 .loop

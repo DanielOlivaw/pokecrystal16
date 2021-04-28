@@ -19,5 +19,4 @@ CriticalHitMoves:
 	dw ATTACK_ORDER
 	dw SPACIAL_REND
 	dw SEAMITAR
-	dw WIDE_SLASH
 	dw -1

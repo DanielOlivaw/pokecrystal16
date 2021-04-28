@@ -170,11 +170,11 @@ FireStarterPokeBallScript:
 	iftrue .Chimchar
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .Fennekin
-	random 5
-	ifequal 1, .Cyndaquil
-	ifequal 2, .Torchic
-	ifequal 3, .Chimchar
-	ifequal 4, .Fennekin
+	; random 5
+	; ifequal 1, .Cyndaquil
+	; ifequal 2, .Torchic
+	; ifequal 3, .Chimchar
+	; ifequal 4, .Fennekin
 .Charmander
 	setevent EVENT_CHARMANDER_IS_FIRE_STARTER
 	pokepic CHARMANDER

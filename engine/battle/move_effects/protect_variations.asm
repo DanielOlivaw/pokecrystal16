@@ -220,7 +220,7 @@ CheckUserMoveContact:
 	dw ROCK_SMASH
 	dw FAKE_OUT
 	dw FACADE
-	; dw FOCUS_PUNCH
+	dw FOCUS_PUNCH
 	dw SMELLINGSALT
 	dw SUPERPOWER
 	; dw REVENGE
@@ -265,7 +265,7 @@ CheckUserMoveContact:
 	dw AQUA_TAIL
 	dw X_SCISSOR
 	dw DRAGON_RUSH
-	; dw DRAIN_PUNCH
+	dw DRAIN_PUNCH
 	dw BRAVE_BIRD
 	dw GIGA_IMPACT
 	dw BULLET_PUNCH
@@ -295,7 +295,7 @@ CheckUserMoveContact:
 	dw FOUL_PLAY
 	dw CHIP_AWAY
 	; dw SKY_DROP
-	; dw CIRCLE_THROW
+	dw CIRCLE_THROW
 	dw ACROBATICS
 	dw RETALIATE
 	dw DRAGON_TAIL
@@ -303,7 +303,7 @@ CheckUserMoveContact:
 	dw DRILL_RUN
 	dw DUAL_CHOP
 	dw HEART_STAMP
-	; dw HORN_LEECH
+	dw HORN_LEECH
 	dw SACRED_SWORD
 	dw RAZOR_SHELL
 	dw HEAT_CRASH
@@ -331,7 +331,7 @@ CheckUserMoveContact:
 	; dw THROAT_CHOP
 	dw ANCHOR_SHOT
 	; dw LUNGE
-	; dw FIRE_LASH
+	dw FIRE_LASH
 	; dw POWER_TRIP
 	dw SMART_STRIKE
 	; dw TROP_KICK
@@ -351,7 +351,7 @@ CheckUserMoveContact:
 	dw BODY_PRESS
 	; dw SNAP_TRAP
 	; dw BREAKING_SWIPE
-	; dw BRANCH_POKE
+	dw BRANCH_POKE
 	; dw STEEL_ROLLER
 	; dw GRASSY_GLIDE
 	; dw SKITTER_SMACK

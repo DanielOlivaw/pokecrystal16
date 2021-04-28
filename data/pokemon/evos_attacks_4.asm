@@ -362,7 +362,12 @@ PuruglyEvosAttacks:
 ChinglingEvosAttacks:
 	dbbw  EVOLVE_HAPPINESS, TR_NITE, CHIMECHO
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, WRAP
+	dbw 1, GROWL
+	dbw 5, ASTONISH
+	dbw 10, CONFUSION
+	dbw 15, YAWN
+	dbw 20, UPROAR
 	db 0 ; no more level-up moves
 
 StunkyEvosAttacks:
@@ -759,12 +764,55 @@ ProbopassEvosAttacks:
 
 DusknoirEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FIRE_PUNCH
+	dbw 1, ICE_PUNCH
+	dbw 1, THUNDERPUNCH
+	dbw 1, BIND
+	dbw 1, ASTONISH
+	dbw 1, LEER
+	dbw 4, DISABLE
+	dbw 8, SHADOW_SNEAK
+	dbw 12, PURSUIT
+	dbw 16, FORESIGHT
+	dbw 20, NIGHT_SHADE
+	dbw 24, CONFUSE_RAY
+	dbw 28, WILL_O_WISP
+	dbw 32, HEX
+	dbw 36, MEAN_LOOK
+	dbw 36, SHADOW_PUNCH
+	dbw 41, PAYBACK
+	dbw 46, CURSE
+	dbw 51, SHADOW_BALL
+	dbw 56, FUTURE_SIGHT
+	dbw 61, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 FroslassEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, HEX
+	dbw 1, WAKE_UP_SLAP
+	dbw 1, CAPTIVATE
+	dbw 1, CRUNCH
+	dbw 1, HEADBUTT
+	dbw 1, ICE_FANG
+	dbw 1, BITE
+	dbw 1, PROTECT
+	dbw 1, POWDER_SNOW
+	dbw 1, ASTONISH
+	dbw 1, OMINOUS_WIND
+	dbw 4, LEER
+	dbw 8, DOUBLE_TEAM
+	dbw 12, ICE_SHARD
+	dbw 16, DRAINING_KISS
+	dbw 20, ICY_WIND
+	dbw 24, CONFUSE_RAY
+	dbw 28, WILL_O_WISP
+	dbw 32, FROST_BREATH
+	dbw 36, HAIL
+	dbw 40, AURORA_VEIL
+	dbw 46, SHADOW_BALL
+	dbw 52, BLIZZARD
+	dbw 58, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 RotomEvosAttacks:

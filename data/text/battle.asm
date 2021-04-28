@@ -1748,6 +1748,23 @@ SwappedAttackAndDefenseText:
 	cont "and DEFENSE!"
 	prompt
 
+TighteningFocusText:
+	text "<USER>"
+	line "is tightening its"
+	cont "focus!"
+	prompt
+
+StartedHeatingUpBeakText:
+	text "<USER>"
+	line "started heating up"
+	cont "its beak!"
+	prompt
+
+SetAShellTrapText:
+	text "<USER>"
+	line "set a SHELL TRAP!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"

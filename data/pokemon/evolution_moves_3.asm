@@ -78,19 +78,19 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; ANORITH
 	dw NoEvolutionMoves3        ; ARMALDO
 	dw NoEvolutionMoves3        ; FEEBAS
-	dw NoEvolutionMoves3        ; MILOTIC
+	dw MiloticEvolutionMoves    ; MILOTIC
 	dw NoEvolutionMoves3        ; SHUPPET
-	dw NoEvolutionMoves3        ; BANETTE
+	dw BanetteEvolutionMoves    ; BANETTE
 	dw NoEvolutionMoves3        ; DUSKULL
-	dw NoEvolutionMoves3        ; DUSCLOPS
+	dw DusclopsEvolutionMoves   ; DUSCLOPS
 	dw NoEvolutionMoves3        ; TROPIUS
 	dw NoEvolutionMoves3        ; CHIMECHO
 	dw NoEvolutionMoves3        ; ABSOL
 	dw NoEvolutionMoves3        ; SNORUNT
-	dw NoEvolutionMoves3        ; GLALIE
+	dw GlalieEvolutionMoves     ; GLALIE
 	dw NoEvolutionMoves3        ; SPHEAL
-	dw NoEvolutionMoves3        ; SEALEO
-	dw NoEvolutionMoves3        ; WALREIN
+	dw SealeoEvolutionMoves     ; SEALEO
+	dw WalreinEvolutionMoves    ; WALREIN
 	dw NoEvolutionMoves3        ; CLAMPERL
 	dw NoEvolutionMoves3        ; HUNTAIL
 	dw NoEvolutionMoves3        ; GOREBYSS
@@ -226,6 +226,30 @@ CrawdauntEvolutionMoves:
 
 ClaydolEvolutionMoves:
 	dw HYPER_BEAM
+	db 0 ; no more evolution moves
+
+MiloticEvolutionMoves:
+	dw WATER_PULSE
+	db 0 ; no more evolution moves
+
+BanetteEvolutionMoves:
+	dw SHADOW_CLAW
+	db 0 ; no more evolution moves
+
+DusclopsEvolutionMoves:
+	dw SHADOW_PUNCH
+	db 0 ; no more evolution moves
+
+GlalieEvolutionMoves:
+	dw FREEZE_DRY
+	db 0 ; no more evolution moves
+
+SealeoEvolutionMoves:
+	dw SWAGGER
+	db 0 ; no more evolution moves
+
+WalreinEvolutionMoves:
+	dw ICE_FANG
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

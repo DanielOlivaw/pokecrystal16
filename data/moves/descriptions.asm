@@ -570,11 +570,12 @@ MoveDescriptions1:
 	dw SteamEruptionDescription
 	dw GrassWhistleDescription
 	dw PowerTrickDescription
-	dw SpinSlashDescription
-	dw ExcavateDescription
-	dw VacuumCutDescription
-	dw WideSlashDescription
 	dw SpiritShackleDescription
+	dw FocusPunchDescription
+	dw BeakBlastDescription
+	dw ShellTrapDescription
+	dw RevengeDescription
+	dw AvalancheDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2447,5 +2448,22 @@ PowerTrickDescription:
 VacuumCutDescription:
 	db   "Always inflicts"
 	next "50HP damage.@"
+
+FocusPunchDescription:
+	db   "Fails if the user"
+	next "is hit before use.@"
+
+BeakBlastDescription:
+	db   "Burns a foe that"
+	next "makes contact.@"
+
+ShellTrapDescription:
+	db   "Goes off if hit by"
+	next "a physical move.@"
+
+RevengeDescription:
+AvalancheDescription:
+	db   "Stronger if the"
+	next "user takes damage.@"
 
 		;"123456789123456789"

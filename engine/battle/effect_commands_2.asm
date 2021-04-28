@@ -10,6 +10,8 @@ INCLUDE "engine/battle/move_effects/protect_variations.asm"
 
 INCLUDE "engine/battle/move_effects/variable_type.asm"
 
+INCLUDE "engine/battle/move_effects/readying_moves.asm"
+
 
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
@@ -198,4 +200,4 @@ INCLUDE "engine/battle/move_effects/geomancy.asm"
 
 INCLUDE "engine/battle/move_effects/power_trick.asm"
 
-INCLUDE "engine/battle/move_effects/excavate.asm"
+INCLUDE "engine/battle/move_effects/revenge.asm"

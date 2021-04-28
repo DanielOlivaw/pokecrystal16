@@ -189,4 +189,3 @@ BattleCommandPointers:
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
 	dw BattleCommand_Awaken
-	dw BattleCommand_Excavate

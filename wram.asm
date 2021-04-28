@@ -559,6 +559,9 @@ wEnemyWishCount:: db
 wEnemyFuryCutterCount:: db ; c680
 wEnemyProtectCount:: db ; c681
 
+wPlayerTookDamage:: db
+wEnemyTookDamage:: db
+
 wPlayerDamageTaken:: dw ; c682
 wEnemyDamageTaken:: dw ; c684
 

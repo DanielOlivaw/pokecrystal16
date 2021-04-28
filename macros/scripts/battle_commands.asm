@@ -190,7 +190,6 @@ ENDM
 	command strengthsap             ; b7
 	command spitup                  ; b8
 	command awaken                  ; b9
-	command excavate                ; ba
 
 	enum_start $fe
 	command endturn                 ; fe
