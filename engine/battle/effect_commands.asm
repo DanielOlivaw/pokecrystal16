@@ -5201,6 +5201,12 @@ BattleCommand_Overheat:
 	ret nz
 	ld b, $10 | SP_ATTACK
 	jr BattleCommand_SelfStatDownHit
+BattleCommand_ClangingScales:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	ld b, DEFENSE
+	jr BattleCommand_SelfStatDownHit
 BattleCommand_Superpower:
 	ld a, [wAttackMissed]
 	and a
@@ -5248,6 +5254,9 @@ BattleCommand_DragonDance:
 	jr DoubleUp
 BattleCommand_CosmicPower:
 	lb bc, DEFENSE, SP_DEFENSE
+	jr DoubleUp
+BattleCommand_ShiftGear:
+	lb bc, ($10 | SPEED), ATTACK
 	jr DoubleUp
 BattleCommand_Growth:
 	lb bc, ATTACK, SP_ATTACK
@@ -6926,6 +6935,7 @@ BattleCommand_Charge:
 .move_messages
 	dw RAZOR_WIND,    .RazorWind
 	dw SOLARBEAM,     .Solarbeam
+	dw SOLAR_BLADE,   .Solarbeam
 	dw SKULL_BASH,    .SkullBash
 	dw SKY_ATTACK,    CloakedInHarshLightText
 	dw FLY,           .Fly
@@ -7688,6 +7698,10 @@ INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
 
+BattleCommand_FarCommand:
+	farcall Find_Command
+	ret
+
 BattleCommand_ConditionalBoost:
 	farcall Find_ConditionalBoost
 	ret
@@ -7702,34 +7716,6 @@ BattleCommand_StatusTargetOpponent:
 
 BattleCommand_VariableType:
 	farcall Find_VariableType
-	ret
-
-BattleCommand_Selfdestruct:
-	farcall SelfdestructEffect
-	ret
-
-BattleCommand_Thief:
-	farcall ThiefEffect
-	ret
-
-BattleCommand_BugBite:
-	farcall BugBiteEffect
-	ret
-
-BattleCommand_SuckerPunch:
-	farcall SuckerPunchEffect
-	ret
-
-BattleCommand_Counter:
-	farcall CounterEffect
-	ret
-
-BattleCommand_BurnUp:
-	farcall BurnUpEffect
-	ret
-
-BattleCommand_KnockOff:
-	farcall KnockOffEffect
 	ret
 
 BattleCommand_MultiStatDown:

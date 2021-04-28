@@ -597,6 +597,19 @@ BattleAnimations::
 	dw BattleAnim_ShellTrap
 	dw BattleAnim_Revenge
 	dw BattleAnim_Avalanche
+	dw BattleAnim_IceHammer
+	dw BattleAnim_PollenPuff
+	dw BattleAnim_Accelerock
+	dw BattleAnim_Lunge
+	dw BattleAnim_SolarBlade
+	dw BattleAnim_ShoreUp
+	dw BattleAnim_MultiAttack
+	dw BattleAnim_ZingZap
+	dw BattleAnim_ClangingScales
+	dw BattleAnim_ClangorousSoul
+	dw BattleAnim_VacuumWave
+	dw BattleAnim_ShiftGear
+	dw BattleAnim_FleurCannon
 
 	dw BattleAnim_SweetScent2
 
@@ -980,6 +993,19 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_ClangingScales:
+BattleAnim_ClangorousSoul:
+BattleAnim_VacuumWave:
+BattleAnim_ShiftGear:
+BattleAnim_FleurCannon:
+BattleAnim_IceHammer:
+BattleAnim_PollenPuff:
+BattleAnim_Accelerock:
+BattleAnim_Lunge:
+BattleAnim_SolarBlade:
+BattleAnim_ShoreUp:
+BattleAnim_MultiAttack:
+BattleAnim_ZingZap:
 BattleAnim_Avalanche:
 BattleAnim_Revenge:
 BattleAnim_FocusPunch:

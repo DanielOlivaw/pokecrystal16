@@ -389,10 +389,38 @@ DragapultEvosAttacks:
 
 RegielekiEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CHARGE_BEAM
+	dbw 1, ELECTROWEB
+	dbw 6, RAPID_SPIN
+	dbw 12, ANCIENTPOWER
+	dbw 18, SHOCK_WAVE
+	dbw 24, THUNDERBOLT
+	dbw 30, THUNDER_WAVE
+	dbw 36, MAGNET_RISE
+	dbw 42, EXTREMESPEED
+	; dbw 48, THUNDER_CAGE
+	dbw 54, THRASH
+	dbw 60, LOCK_ON
+	dbw 66, ZAP_CANNON
+	dbw 72, HYPER_BEAM
+	dbw 78, EXPLOSION
 	db 0 ; no more level-up moves
 
 RegidragoEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, VICEGRIP
+	dbw 1, TWISTER
+	dbw 6, BITE
+	dbw 12, ANCIENTPOWER
+	dbw 18, DRAGONBREATH
+	dbw 24, CRUNCH
+	dbw 30, FOCUS_ENERGY
+	dbw 36, DRAGON_DANCE
+	dbw 42, HAMMER_ARM
+	dbw 48, DRAGON_CLAW
+	dbw 54, THRASH
+	dbw 60, LASER_FOCUS
+	dbw 66, DRAGON_ENERGY
+	dbw 72, HYPER_BEAM
+	dbw 78, EXPLOSION
 	db 0 ; no more level-up moves

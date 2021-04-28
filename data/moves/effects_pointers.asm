@@ -226,3 +226,6 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_BEAK_BLAST
 	dw NormalHit              ; EFFECT_SHELL_TRAP
 	dw ConditionalBoost       ; EFFECT_REVENGE
+	dw StatusTargetSelf       ; EFFECT_SHORE_UP
+	dw ClangingScales         ; EFFECT_CLANGING_SCALES
+	dw ShiftGear              ; EFFECT_SHIFT_GEAR

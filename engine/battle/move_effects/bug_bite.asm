@@ -1,4 +1,4 @@
-BugBiteEffect:
+BattleCommand_BugBite:
 ; Consume the opponent's berry and steal its effect
 
 ; Get the effect of the opponent's item

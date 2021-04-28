@@ -328,7 +328,7 @@
 	const BULK_UP
 	const ERUPTION
 	const WATER_SPOUT
-	const DRAGONENERGY
+	const DRAGON_ENERGY
 	const WRING_OUT
 	const CRUSH_GRIP
 	const TOXIC_SPIKES
@@ -576,6 +576,19 @@
 	const SHELL_TRAP
 	const REVENGE
 	const AVALANCHE
+	const ICE_HAMMER
+	const POLLEN_PUFF
+	const ACCELEROCK
+	const LUNGE
+	const SOLAR_BLADE
+	const SHORE_UP
+	const MULTI_ATTACK
+	const ZING_ZAP
+	const CLANGING_SCALES
+	const CLANGOROUS_SOUL
+	const VACUUM_WAVE
+	const SHIFT_GEAR
+	const FLEUR_CANNON
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

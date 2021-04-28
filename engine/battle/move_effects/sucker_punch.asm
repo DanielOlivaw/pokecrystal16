@@ -1,4 +1,4 @@
-SuckerPunchEffect:
+BattleCommand_SuckerPunch:
 	push bc
 	ld a, [wEnemyGoesFirst] ; 0 if player went first
 	ld b, a

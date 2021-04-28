@@ -97,11 +97,11 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; RELICANTH
 	dw NoEvolutionMoves3        ; LUVDISC
 	dw NoEvolutionMoves3        ; BAGON
-	dw NoEvolutionMoves3        ; SHELGON
-	dw NoEvolutionMoves3        ; SALAMENCE
+	dw ShelgonEvolutionMoves    ; SHELGON
+	dw SalamenceEvolutionMoves  ; SALAMENCE
 	dw NoEvolutionMoves3        ; BELDUM
-	dw NoEvolutionMoves3        ; METANG
-	dw NoEvolutionMoves3        ; METAGROSS
+	dw MetangEvolutionMoves     ; METANG
+	dw MetagrossEvolutionMoves  ; METAGROSS
 	dw NoEvolutionMoves3        ; REGIROCK
 	dw NoEvolutionMoves3        ; REGICE
 	dw NoEvolutionMoves3        ; REGISTEEL
@@ -134,6 +134,7 @@ MarshtompEvolutionMoves:
 	db 0 ; no more evolution moves
 
 SwampertEvolutionMoves:
+MetagrossEvolutionMoves:
 	dw HAMMER_ARM
 	db 0 ; no more evolution moves
 
@@ -250,6 +251,19 @@ SealeoEvolutionMoves:
 
 WalreinEvolutionMoves:
 	dw ICE_FANG
+	db 0 ; no more evolution moves
+
+ShelgonEvolutionMoves:
+	dw PROTECT
+	db 0 ; no more evolution moves
+
+SalamenceEvolutionMoves:
+	dw FLY
+	db 0 ; no more evolution moves
+
+MetangEvolutionMoves:
+	dw CONFUSION
+	dw METAL_CLAW
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves3:

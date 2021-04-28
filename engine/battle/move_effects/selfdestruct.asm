@@ -1,4 +1,4 @@
-SelfdestructEffect:
+BattleCommand_Selfdestruct:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_MEMENTO

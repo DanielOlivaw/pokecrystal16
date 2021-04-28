@@ -13,6 +13,12 @@ Find_VariableType:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
+	ld bc, MULTI_ATTACK
+	call CompareMove2
+	jr z, BattleCommand_Judgement
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, HIDDEN_POWER
 	call CompareMove2
 	ret nz

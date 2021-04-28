@@ -576,6 +576,19 @@ MoveDescriptions1:
 	dw ShellTrapDescription
 	dw RevengeDescription
 	dw AvalancheDescription
+	dw IceHammerDescription
+	dw PollenPuffDescription
+	dw AccelerockDescription
+	dw LungeDescription
+	dw SolarBladeDescription
+	dw ShoreUpDescription
+	dw MultiAttackDescription
+	dw ZingZapDescription
+	dw ClangingScalesDescription
+	dw ClangorousSoulDescription
+	dw VacuumWaveDescription
+	dw ShiftGearDescription
+	dw FleurCannonDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -648,6 +661,7 @@ RazorWindDescription:
 SolarbeamDescription:
 SkullBashDescription:
 SkyAttackDescription:
+SolarBladeDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
@@ -702,6 +716,7 @@ DarkPulseDescription:
 AstonishDescription:
 NeedleArmDescription:
 HeartStampDescription:
+ZingZapDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
@@ -1460,6 +1475,7 @@ VitalThrowDescription:
 MorningSunDescription:
 SynthesisDescription:
 MoonlightDescription:
+ShoreUpDescription:
 		;"123456789123456789"
 	db   "Restores HP based"
 	next "on the weather.@"
@@ -1771,6 +1787,8 @@ LeafTornadoDescription:
 	next "reduce accuracy.@"
 
 LeafStormDescription:
+PsychoBoostDescription:
+FleurCannonDescription:
 	db   "Sharply reduces"
 	next "user's SPCL.ATK.@"
 
@@ -1844,6 +1862,7 @@ MudShotDescription:
 	next "lowers SPEED.@"
 
 HammerArmDescription:
+IceHammerDescription:
 	db   "Lowers the user's"
 	next "SPEED.@"
 
@@ -2262,10 +2281,6 @@ DoomDesireDescription:
 	db   "An attack that"
 	next "hits on 3rd turn.@"
 
-PsychoBoostDescription:
-	db   "Sharply reduces"
-	next "user's SPCL.ATK.@"
-
 TrickRoomDescription:
 	db   "Reverses the move"
 	next "order for 5 turns.@"
@@ -2354,6 +2369,7 @@ SpitUpDescription:
 	next "power to attack.@"
 
 JudgementDescription:
+MultiAttackDescription:
 	db   "Its type matches"
 	next "the held PLATE.@"
 
@@ -2465,5 +2481,33 @@ RevengeDescription:
 AvalancheDescription:
 	db   "Stronger if the"
 	next "user takes damage.@"
+
+PollenPuffDescription:
+	db   "A pollen puff that"
+	next "explodes.@"
+
+AccelerockDescription:
+	db   "A high-speed smash"
+	next "that hits first.@"
+
+LungeDescription:
+	db   "An attack that"
+	next "lowers ATTACK.@"
+
+ClangingScalesDescription:
+	db   "Lowers the user's"
+	next "DEFENSE.@"
+
+ClangorousSoulDescription:
+	db   "Sacrifices HP to"
+	next "raise all stats.@"
+
+VacuumWaveDescription:
+	db   "A wave of vacuum"
+	next "that hits first.@"
+
+ShiftGearDescription:
+	db   "Increases ATTACK"
+	next "and SPEED.@"
 
 		;"123456789123456789"

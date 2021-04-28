@@ -1,4 +1,4 @@
-KnockOffEffect:
+BattleCommand_KnockOff:
 ; knockoff
 
 	ldh a, [hBattleTurn]

@@ -12,6 +12,8 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_TrickRoom
 	cp EFFECT_HEALING_WISH
 	jp z, BattleCommand_HealingWish
+	cp EFFECT_SHORE_UP
+	jp z, BattleCommand_ShoreUp
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
@@ -240,6 +242,12 @@ Find_StatusTargetSelf:
 	ld bc, POWER_TRICK
 	call CompareMove2
 	jp z, BattleCommand_PowerTrick
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, CLANGOROUS_SOUL
+	call CompareMove2
+	jp z, BattleCommand_ClangorousSoul
 
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE

@@ -1,4 +1,4 @@
-ThiefEffect:
+BattleCommand_Thief:
 ; thief
 
 	ldh a, [hBattleTurn]

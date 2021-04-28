@@ -1,4 +1,4 @@
-BurnUpEffect:
+BattleCommand_BurnUp:
 ; remove fire typing after using Burn Up
 	
 ; End if the move has already failed (which happens if the user is not fire-type).

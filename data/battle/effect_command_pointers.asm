@@ -29,7 +29,7 @@ BattleCommandPointers:
 	dw BattleCommand_BurnTarget
 	dw BattleCommand_FreezeTarget
 	dw BattleCommand_ParalyzeTarget
-	dw BattleCommand_Selfdestruct
+	dw BattleCommand_FarCommand
 	dw BattleCommand_MirrorMove
 	dw BattleCommand_StatUp
 	dw BattleCommand_StatDown
@@ -62,7 +62,6 @@ BattleCommandPointers:
 	dw BattleCommand_Rampage
 	dw BattleCommand_CheckRampage
 	dw BattleCommand_ConstantDamage
-	dw BattleCommand_Counter
 	dw BattleCommand_Encore
 	dw BattleCommand_Snore
 	dw BattleCommand_Conversion2
@@ -73,7 +72,6 @@ BattleCommandPointers:
 	dw BattleCommand_HeldFlinch
 	dw BattleCommand_TripleKick
 	dw BattleCommand_KickCounter
-	dw BattleCommand_Thief
 	dw BattleCommand_Defrost
 	dw BattleCommand_Protect
 	dw BattleCommand_Endure
@@ -150,17 +148,13 @@ BattleCommandPointers:
 	dw BattleCommand_Curl
 	dw BattleCommand_Growth
 	dw BattleCommand_ElementalFang
-	dw BattleCommand_BugBite
 	dw BattleCommand_ConditionalBoost
-	dw BattleCommand_SuckerPunch
 	dw BattleCommand_MistyAmbushAccuracy
 	dw BattleCommand_Superpower
 	dw BattleCommand_CosmicPower
 	dw BattleCommand_HoneClaws
 	dw BattleCommand_CloseCombat
-	dw BattleCommand_BurnUp
 	dw BattleCommand_CalmMind
-	dw BattleCommand_KnockOff
 	dw BattleCommand_BulkUp
 	dw BattleCommand_Overheat
 	dw BattleCommand_MultiStatDown
@@ -189,3 +183,5 @@ BattleCommandPointers:
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
 	dw BattleCommand_Awaken
+	dw BattleCommand_ClangingScales
+	dw BattleCommand_ShiftGear

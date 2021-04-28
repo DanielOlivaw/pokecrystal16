@@ -151,7 +151,7 @@ Selfdestruct:
 	stab
 	damagevariation
 	checkhit
-	selfdestruct
+	farcommand
 	moveanimnosub
 	failuretext
 	applydamage
@@ -1387,7 +1387,7 @@ Counter:
 	checkobedience
 	usedmovetext
 	doturn
-	counter
+	farcommand
 	moveanim
 	failuretext
 	applydamage
@@ -1520,7 +1520,7 @@ Thief:
 	applydamage
 	criticaltext
 	supereffectivetext
-	thief
+	farcommand
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2071,7 +2071,7 @@ BugBite:
 	applydamage
 	criticaltext
 	supereffectivetext
-	bugbite ; before checkfaint to steal HP berries before they take effect
+	farcommand ; before checkfaint to steal HP berries before they take effect
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -2108,7 +2108,7 @@ SuckerPunch:
 	damagecalc
 	stab
 	damagevariation
-	suckerpunch
+	farcommand
 	checkhit
 	moveanim
 	failuretext
@@ -2210,7 +2210,7 @@ BurnUp:
 	criticaltext
 	supereffectivetext
 	defrost
-	burnup
+	farcommand
 	checkfaint
 	buildopponentrage
 	defrostopponent
@@ -2240,7 +2240,7 @@ RemoveItemHit:
 	applydamage
 	criticaltext
 	supereffectivetext
-	knockoff
+	farcommand
 	checkfaint
 	buildopponentrage
 	defrostopponent
@@ -2735,7 +2735,7 @@ FinalGambit:
 	constantdamage
 	checkhit
 	resettypematchup
-	selfdestruct
+	farcommand
 	moveanimnosub
 	failuretext
 	applydamage
@@ -2754,7 +2754,7 @@ Memento:
 	statdownanim
 	raisesub
 	multistatdownmessage
-	selfdestruct
+	farcommand
 	endmove
 
 HealingWish:
@@ -2762,7 +2762,7 @@ HealingWish:
 	usedmovetext
 	doturn
 	statustargetself
-	selfdestruct
+	farcommand
 	endmove
 
 HeavySlam:
@@ -2903,6 +2903,34 @@ DefenseUp2Hit:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+ClangingScales:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	clangingscales
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+ShiftGear:
+	checkobedience
+	usedmovetext
+	doturn
+	shiftgear
 	endmove
 
 ; Excavate:

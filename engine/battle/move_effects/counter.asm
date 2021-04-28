@@ -1,4 +1,4 @@
-CounterEffect:
+BattleCommand_Counter:
 ; counter, mirror coat, and metal burst
 
 	ld a, 1

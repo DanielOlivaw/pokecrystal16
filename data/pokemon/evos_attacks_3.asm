@@ -2131,83 +2131,293 @@ LuvdiscEvosAttacks:
 BagonEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, SHELGON
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, RAGE
+	dbw 1, LEER
+	dbw 4, EMBER
+	dbw 9, BITE
+	dbw 13, DRAGONBREATH
+	dbw 18, HEADBUTT
+	dbw 22, SCARY_FACE
+	dbw 27, CRUNCH
+	dbw 31, DRAGON_CLAW
+	dbw 36, ZEN_HEADBUTT
+	dbw 40, FOCUS_ENERGY
+	dbw 45, FLAMETHROWER
+	dbw 49, OUTRAGE
+	dbw 54, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ShelgonEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 50, TR_ANYTIME, SALAMENCE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, RAGE
+	dbw 1, LEER
+	dbw 4, EMBER
+	dbw 9, BITE
+	dbw 13, DRAGONBREATH
+	dbw 18, HEADBUTT
+	dbw 22, SCARY_FACE
+	dbw 27, CRUNCH
+	dbw 29, PROTECT
+	dbw 33, DRAGON_CLAW
+	dbw 40, ZEN_HEADBUTT
+	dbw 46, FOCUS_ENERGY
+	dbw 53, FLAMETHROWER
+	dbw 59, OUTRAGE
+	dbw 66, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SalamenceEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, DRAGON_TAIL
+	dbw 1, RAGE
+	dbw 1, LEER
+	dbw 4, EMBER
+	dbw 9, BITE
+	dbw 13, DRAGONBREATH
+	dbw 18, HEADBUTT
+	dbw 22, SCARY_FACE
+	dbw 27, CRUNCH
+	dbw 29, PROTECT
+	dbw 33, DRAGON_CLAW
+	dbw 40, ZEN_HEADBUTT
+	dbw 46, FOCUS_ENERGY
+	dbw 49, FLY
+	dbw 55, FLAMETHROWER
+	dbw 63, OUTRAGE
+	dbw 72, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 BeldumEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, METANG
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, TAKE_DOWN
 	db 0 ; no more level-up moves
 
 MetangEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 45, TR_ANYTIME, METAGROSS
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FLASH_CANNON
+	dbw 1, MAGNET_RISE
+	dbw 1, TAKE_DOWN
+	dbw 19, CONFUSION
+	dbw 19, METAL_CLAW
+	dbw 25, PURSUIT
+	dbw 30, BULLET_PUNCH
+	dbw 35, ZEN_HEADBUTT
+	dbw 40, SCARY_FACE
+	dbw 44, PSYCHIC
+	dbw 50, METEOR_MASH
+	dbw 55, IRON_DEFENSE
+	dbw 60, AGILITY
+	dbw 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 MetagrossEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FLASH_CANNON
+	dbw 1, MAGNET_RISE
+	dbw 1, TAKE_DOWN
+	dbw 19, CONFUSION
+	dbw 19, METAL_CLAW
+	dbw 25, PURSUIT
+	dbw 30, BULLET_PUNCH
+	dbw 35, ZEN_HEADBUTT
+	dbw 40, SCARY_FACE
+	dbw 44, PSYCHIC
+	dbw 44, HAMMER_ARM
+	dbw 52, METEOR_MASH
+	dbw 59, IRON_DEFENSE
+	dbw 66, AGILITY
+	dbw 73, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 RegirockEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CHARGE_BEAM
+	dbw 1, ROCK_THROW
+	dbw 6, BULLDOZE
+	dbw 12, ANCIENTPOWER
+	dbw 18, STOMP
+	dbw 24, ROCK_SLIDE
+	dbw 30, CURSE
+	dbw 36, IRON_DEFENSE
+	dbw 42, HAMMER_ARM
+	dbw 48, STONE_EDGE
+	dbw 54, SUPERPOWER
+	dbw 60, LOCK_ON
+	dbw 66, ZAP_CANNON
+	dbw 72, HYPER_BEAM
+	dbw 78, EXPLOSION
 	db 0 ; no more level-up moves
 
 RegiceEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CHARGE_BEAM
+	dbw 1, ICY_WIND
+	dbw 6, BULLDOZE
+	dbw 12, ANCIENTPOWER
+	dbw 18, STOMP
+	dbw 24, ICE_BEAM
+	dbw 30, CURSE
+	dbw 36, AMNESIA
+	dbw 42, HAMMER_ARM
+	dbw 48, BLIZZARD
+	dbw 54, SUPERPOWER
+	dbw 60, LOCK_ON
+	dbw 66, ZAP_CANNON
+	dbw 72, HYPER_BEAM
+	dbw 78, EXPLOSION
 	db 0 ; no more level-up moves
 
 RegisteelEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CHARGE_BEAM
+	dbw 1, METAL_CLAW
+	dbw 6, BULLDOZE
+	dbw 12, ANCIENTPOWER
+	dbw 18, STOMP
+	dbw 24, IRON_HEAD
+	dbw 24, FLASH_CANNON
+	dbw 30, CURSE
+	dbw 36, IRON_DEFENSE
+	dbw 36, AMNESIA
+	dbw 42, HAMMER_ARM
+	dbw 48, HEAVY_SLAM
+	dbw 54, SUPERPOWER
+	dbw 60, LOCK_ON
+	dbw 66, ZAP_CANNON
+	dbw 72, HYPER_BEAM
+	dbw 78, EXPLOSION
 	db 0 ; no more level-up moves
 
 LatiasEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, PSYWAVE
+	dbw 1, CHARM
+	dbw 5, SAFEGUARD
+	dbw 10, REFRESH
+	dbw 15, CONFUSION
+	dbw 20, RECOVER
+	dbw 25, DRAGONBREATH
+	dbw 30, WISH
+	dbw 35, MIST_BALL
+	dbw 40, ZEN_HEADBUTT
+	dbw 45, DRAGON_PULSE
+	dbw 50, REFLECT_TYPE
+	dbw 55, PSYCHIC
+	dbw 60, GUARD_SPLIT
+	dbw 65, HEALING_WISH
+	dbw 70, PSYCHO_SHIFT
 	db 0 ; no more level-up moves
 
 LatiosEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, PSYWAVE
+	dbw 1, DRAGON_DANCE
+	dbw 5, SAFEGUARD
+	dbw 10, REFRESH
+	dbw 15, CONFUSION
+	dbw 20, RECOVER
+	dbw 25, DRAGONBREATH
+	dbw 30, PROTECT
+	dbw 35, LUSTER_PURGE
+	dbw 40, ZEN_HEADBUTT
+	dbw 45, DRAGON_PULSE
+	dbw 50, DEFOG
+	dbw 55, PSYCHIC
+	dbw 60, POWER_SPLIT
+	dbw 65, MEMENTO
+	dbw 70, PSYCHO_SHIFT
 	db 0 ; no more level-up moves
 
 KyogreEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, WATER_PULSE
+	dbw 7, ANCIENTPOWER
+	dbw 14, BODY_SLAM
+	dbw 21, SCARY_FACE
+	dbw 28, AQUA_TAIL
+	dbw 35, CALM_MIND
+	dbw 42, MUDDY_WATER
+	dbw 49, ICE_BEAM
+	dbw 56, SHEER_COLD
+	dbw 63, AQUA_RING
+	dbw 70, ORIGIN_PULSE
+	dbw 77, HYDRO_PUMP
+	dbw 84, DOUBLE_EDGE
+	dbw 91, WATER_SPOUT
 	db 0 ; no more level-up moves
 
 GroudonEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, MUD_SHOT
+	dbw 7, ANCIENTPOWER
+	dbw 14, LAVA_PLUME
+	dbw 21, SCARY_FACE
+	dbw 28, EARTH_POWER
+	dbw 35, BULK_UP
+	dbw 42, EARTHQUAKE
+	dbw 49, HAMMER_ARM
+	dbw 56, FISSURE
+	dbw 63, REST
+	dbw 70, PRECIPICE_BLADES
+	dbw 77, FIRE_BLAST
+	dbw 84, SOLARBEAM
+	dbw 91, ERUPTION
 	db 0 ; no more level-up moves
 
 RayquazaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, TWISTER
+	dbw 7, ANCIENTPOWER
+	dbw 14, AIR_SLASH
+	dbw 21, SCARY_FACE
+	dbw 28, CRUNCH
+	dbw 35, DRAGON_DANCE
+	dbw 42, EXTREMESPEED
+	dbw 49, DRAGON_PULSE
+	dbw 56, FLY
+	dbw 63, REST
+	dbw 70, DRAGON_ASCENT
+	dbw 77, HYPER_VOICE
+	dbw 84, OUTRAGE
+	dbw 91, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 JirachiEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 1, WISH
+	dbw 9, SWIFT
+	dbw 16, REFRESH
+	dbw 24, LIFE_DEW
+	dbw 31, ZEN_HEADBUTT
+	dbw 39, LUCKY_CHANT
+	dbw 46, PSYCHIC
+	dbw 54, METEOR_MASH
+	dbw 61, HEALING_WISH
+	dbw 69, REST
+	dbw 76, FUTURE_SIGHT
+	dbw 84, DOUBLE_EDGE
+	dbw 91, COSMIC_POWER
+	dbw 99, DOOM_DESIRE
 	db 0 ; no more level-up moves
 
 DeoxysEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 1, WRAP
+	dbw 8, NIGHT_SHADE
+	dbw 16, TELEPORT
+	dbw 24, PURSUIT
+	dbw 32, KNOCK_OFF
+	dbw 40, PSYCHIC
+	dbw 48, PSYCHO_SHIFT
+	dbw 56, ZEN_HEADBUTT
+	dbw 64, COSMIC_POWER
+	dbw 72, PSYCHO_BOOST
+	dbw 80, RECOVER
+	; dbw 88, METEOR_BEAM
+	dbw 96, HYPER_BEAM
 	db 0 ; no more level-up moves

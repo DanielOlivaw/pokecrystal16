@@ -1,3 +1,5 @@
+INCLUDE "engine/battle/move_effects/far_command_index.asm"
+
 INCLUDE "engine/battle/move_effects/conditional_boost.asm"
 
 INCLUDE "engine/battle/move_effects/status_target_self.asm"
@@ -56,7 +58,7 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 
 INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
-INCLUDE "engine/battle/move_effects/heal_sun.asm"
+INCLUDE "engine/battle/move_effects/heal_weather.asm"
 
 INCLUDE "engine/battle/move_effects/mist.asm"
 
@@ -201,3 +203,5 @@ INCLUDE "engine/battle/move_effects/geomancy.asm"
 INCLUDE "engine/battle/move_effects/power_trick.asm"
 
 INCLUDE "engine/battle/move_effects/revenge.asm"
+
+INCLUDE "engine/battle/move_effects/clangorous_soul.asm"
