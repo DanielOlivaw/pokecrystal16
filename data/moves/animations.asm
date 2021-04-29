@@ -614,6 +614,8 @@ BattleAnimations::
 	dw BattleAnim_DrumBeating
 	dw BattleAnim_TailSlap
 	dw BattleAnim_SpeedSwap
+	dw BattleAnim_PowerSwap
+	dw BattleAnim_GuardSwap
 
 	dw BattleAnim_SweetScent2
 
@@ -997,6 +999,8 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_PowerSwap:
+BattleAnim_GuardSwap:
 BattleAnim_DrumBeating:
 BattleAnim_TailSlap:
 BattleAnim_SpeedSwap:

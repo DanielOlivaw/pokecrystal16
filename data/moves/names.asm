@@ -586,4 +586,6 @@ MoveNames::
 	db "DRUM BEATING@"
 	db "TAIL SLAP@"
 	db "SPEED SWAP@"
+	db "POWER SWAP@"
+	db "GUARD SWAP@"
 	  ;"123456123456@"

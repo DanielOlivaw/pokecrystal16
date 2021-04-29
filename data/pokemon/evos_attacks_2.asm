@@ -797,8 +797,8 @@ NatuEvosAttacks:
 	dbw 16, OMINOUS_WIND
 	dbw 20, CONFUSE_RAY
 	dbw 24, PSYCHO_SHIFT
-	; dbw 28, POWER_SWAP
-	; dbw 28, GUARD_SWAP
+	dbw 28, POWER_SWAP
+	dbw 28, GUARD_SWAP
 	dbw 32, PSYCHIC_M
 	dbw 36, WISH
 	dbw 40, FUTURE_SIGHT
@@ -816,8 +816,8 @@ XatuEvosAttacks:
 	dbw 20, CONFUSE_RAY
 	dbw 24, PSYCHO_SHIFT
 	dbw 24, AIR_SLASH
-	; dbw 30, POWER_SWAP
-	; dbw 30, GUARD_SWAP
+	dbw 30, POWER_SWAP
+	dbw 30, GUARD_SWAP
 	dbw 36, PSYCHIC_M
 	dbw 42, WISH
 	dbw 48, FUTURE_SIGHT
@@ -1114,7 +1114,7 @@ EspeonEvosAttacks:
 	dbw 20, SWIFT
 	dbw 25, PSYBEAM
 	dbw 30, MORNING_SUN
-	; dbw 35, POWER_SWAP
+	dbw 35, POWER_SWAP
 	dbw 40, PSYCHIC_M
 	dbw 45, PSYCH_UP
 	dbw 50, FUTURE_SIGHT
@@ -1132,7 +1132,7 @@ UmbreonEvosAttacks:
 	dbw 20, CONFUSE_RAY
 	dbw 25, FAINT_ATTACK
 	dbw 30, MOONLIGHT
-	; dbw 35, GUARD_SWAP
+	dbw 35, GUARD_SWAP
 	dbw 40, DARK_PULSE
 	dbw 45, SCREECH
 	dbw 50, MEAN_LOOK
@@ -1203,8 +1203,8 @@ UnownEvosAttacks:
 
 GirafarigEvosAttacks:
 	db 0 ; no more evolutions
-	; dbw 1, POWER_SWAP
-	; dbw 1, GUARD_SWAP
+	dbw 1, POWER_SWAP
+	dbw 1, GUARD_SWAP
 	dbw 1, ASTONISH
 	dbw 1, TACKLE
 	dbw 1, GROWL

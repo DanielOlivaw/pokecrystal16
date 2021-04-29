@@ -593,6 +593,8 @@ MoveDescriptions1:
 	dw DrumBeatingDescription
 	dw TailSlapDescription
 	dw SpeedSwapDescription
+	dw PowerSwapDescription
+	dw GuardSwapDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2529,5 +2531,13 @@ TailSlapDescription:
 SpeedSwapDescription:
 	db   "Swaps SPEED stats"
 	next "with the foe.@"
+
+PowerSwapDescription:
+	db   "Swaps changes to"
+	next "offenses with foe.@"
+
+GuardSwapDescription:
+	db   "Swaps changes to"
+	next "defenses with foe.@"
 
 		;"123456789123456789"

@@ -90,4 +90,16 @@ Find_StatusTargetOpponent:
 	ld bc, SPEED_SWAP
 	call CompareMove2
 	jp z, BattleCommand_SpeedSwap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, POWER_SWAP
+	call CompareMove2
+	jp z, BattleCommand_PowerSwap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, GUARD_SWAP
+	call CompareMove2
+	jp z, BattleCommand_GuardSwap
 	ret

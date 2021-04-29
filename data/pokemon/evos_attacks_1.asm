@@ -190,7 +190,6 @@ CharmanderEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 1, SPEED_SWAP
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -2670,8 +2669,8 @@ MewtwoEvosAttacks:
 	dbw 36, AURA_SPHERE
 	dbw 42, BARRIER
 	dbw 48, PSYCHIC_M
-	; dbw 54, POWER_SWAP
-	; dbw 54, GUARD_SWAP
+	dbw 54, POWER_SWAP
+	dbw 54, GUARD_SWAP
 	dbw 60, MIST
 	dbw 66, PSYSTRIKE
 	dbw 72, RECOVER

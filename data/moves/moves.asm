@@ -604,4 +604,6 @@ Moves1:
 	move EFFECT_SPEED_DOWN_HIT,     80, GRASS,    PHYSICAL, 100, 10, 100 ; DRUM_BEATING
 	move EFFECT_MULTI_HIT,          25, NORMAL,   PHYSICAL,  85, 10,   0 ; TAIL_SLAP
 	move EFFECT_STATUS_OPP_ACC,      0, PSYCHIC,  STATUS,   100, 10,   0 ; SPEED_SWAP
+	move EFFECT_STATUS_OPP_ACC,      0, PSYCHIC,  STATUS,   100, 10,   0 ; POWER_SWAP
+	move EFFECT_STATUS_OPP_ACC,      0, PSYCHIC,  STATUS,   100, 10,   0 ; GUARD_SWAP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

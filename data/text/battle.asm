@@ -1771,6 +1771,24 @@ SwappedSpeedText:
 	cont "<TARGET>!"
 	prompt
 
+SwitchedPowerChangesText:
+	text "<USER>"
+	line "switched all"
+	para "changes to its"
+	line "ATTACK and"
+	para "SPCL.ATK with"
+	line "<TARGET>!"
+	prompt
+
+SwitchedGuardChangesText:
+	text "<USER>"
+	line "switched all"
+	para "changes to its"
+	line "DEFENSE and"
+	para "SPCL.DEF with"
+	line "<TARGET>!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"
