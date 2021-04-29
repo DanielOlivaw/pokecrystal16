@@ -1844,14 +1844,9 @@ BattleCommand_CheckHit:
 	ret
 
 .Miss:
-; Keep the damage value intact if we're using (Hi) Jump Kick.
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_JUMP_KICK
-	jr z, .Missed
+; We don't need to keep the damage value intact if we're using (Hi) Jump Kick,
+; since it now deals damage based on the user's max HP.
 	call ResetDamage
-
-.Missed:
 	ld a, 1
 	ld [wAttackMissed], a
 	ret
@@ -1891,7 +1886,7 @@ BattleCommand_CheckHit:
 	call CallBattleCore
 	ld hl, SubtractHPFromUser
 	call CallBattleCore
-	jr .Missed
+	jr .Miss
 
 .BurnUp:
 ; Burn Up misses if used by a non-fire-type
@@ -1912,7 +1907,7 @@ BattleCommand_CheckHit:
 	inc de
 	ld a, [de]
 	cp FIRE
-	jr nz, .Missed
+	jr nz, .Miss
 	ret
 
 .FirstTurn:
@@ -2799,35 +2794,18 @@ GetFailureResultText:
 	cp EFFECT_JUMP_KICK
 	ret nz
 
-	ld a, [wTypeModifier]
-	and $7f
-	ret z
-
-	ld hl, wCurDamage
-	ld a, [hli]
-	ld b, [hl]
-; rept 3
-	srl a
-	rr b
-; endr
-	ld [hl], b
-	dec hl
-	ld [hli], a
-	or b
-	jr nz, .do_at_least_1_damage
-	inc a
-	ld [hl], a
-.do_at_least_1_damage
+; Jump Kick and Hi Jump Kick damage the user by 1/2 their max HP when they miss.
+; Type immunity can trigger this effect.
 	ld hl, CrashedText
 	call StdBattleTextbox
 	ld a, $1
 	ld [wKickCounter], a
 	call LoadMoveAnim
-	ld c, TRUE
-	ldh a, [hBattleTurn]
-	and a
-	jp nz, DoEnemyDamage
-	jp DoPlayerDamage
+	ld hl, GetHalfMaxHP
+	call CallBattleCore
+	ld hl, SubtractHPFromUser
+	call CallBattleCore
+	ret
 
 .check_burn_up:
 ; Burn Up prints miss text if used by a fire-type but failure text otherwise.
