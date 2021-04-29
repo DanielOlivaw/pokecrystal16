@@ -1,4 +1,4 @@
-UprootEffect:
+BattleCommand_Uproot:
 ; If the user is Ingrained, end the effect and sharply raise Speed.
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr

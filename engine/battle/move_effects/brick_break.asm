@@ -1,4 +1,4 @@
-BrickBreakEffect:
+BattleCommand_BrickBreak:
 ; Get screens and remaining turns
 	ld hl, wEnemyScreens
 	ld bc, wEnemyLightScreenCount

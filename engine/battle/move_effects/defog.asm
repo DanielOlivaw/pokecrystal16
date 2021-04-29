@@ -1,4 +1,4 @@
-DefogEffect:
+BattleCommand_Defog:
 ; Removes:
 ; Foggy weather
 ; Entry hazards (both sides)

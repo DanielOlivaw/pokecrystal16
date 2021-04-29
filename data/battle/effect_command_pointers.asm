@@ -33,7 +33,6 @@ BattleCommandPointers:
 	dw BattleCommand_MirrorMove
 	dw BattleCommand_StatUp
 	dw BattleCommand_StatDown
-	dw BattleCommand_PayDay
 	dw BattleCommand_ResetStats
 	dw BattleCommand_StoreEnergy
 	dw BattleCommand_UnleashEnergy
@@ -54,7 +53,6 @@ BattleCommandPointers:
 	dw BattleCommand_Metronome
 	dw BattleCommand_StatusTargetOpponent
 	dw BattleCommand_Splash
-	dw BattleCommand_Disable
 	dw BattleCommand_ClearText
 	dw BattleCommand_Charge
 	dw BattleCommand_CheckCharge
@@ -162,16 +160,9 @@ BattleCommandPointers:
 	dw BattleCommand_DoCureStatus
 	dw BattleCommand_HammerArm
 	dw BattleCommand_ResetStatsTarget
-	dw BattleCommand_Defog
 	dw BattleCommand_DragonDance
 	dw BattleCommand_WorkUp
-	dw BattleCommand_PsychoShift
-	dw BattleCommand_Roost
-	dw BattleCommand_BrickBreak
-	dw BattleCommand_TrapHit
-	dw BattleCommand_DynamoRush
 	dw BattleCommand_BrightMoss
-	dw BattleCommand_Uproot
 	dw BattleCommand_Uproar
 	dw BattleCommand_UproarState
 	dw BattleCommand_WeatherBall

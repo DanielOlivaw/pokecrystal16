@@ -582,4 +582,5 @@ MoveNames::
 	db "VACUUM WAVE@"
 	db "SHIFT GEAR@"
 	db "FLEUR CANNON@"
+	db "MIND BLOWN@"
 	  ;"123456123456@"

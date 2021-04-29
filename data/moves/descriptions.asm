@@ -589,6 +589,7 @@ MoveDescriptions1:
 	dw VacuumWaveDescription
 	dw ShiftGearDescription
 	dw FleurCannonDescription
+	dw MindBlownDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2509,5 +2510,9 @@ VacuumWaveDescription:
 ShiftGearDescription:
 	db   "Increases ATTACK"
 	next "and SPEED.@"
+
+MindBlownDescription:
+	db   "Makes the user's"
+	next "own head expode.@"
 
 		;"123456789123456789"

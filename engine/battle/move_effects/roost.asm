@@ -1,4 +1,4 @@
-RoostEffect:
+BattleCommand_Roost:
 ; After healing with Roost, the user loses any Flying typing it had
 ; until the end of the current turn.
 ; EndRoostEffect in core.asm restores their original typing.

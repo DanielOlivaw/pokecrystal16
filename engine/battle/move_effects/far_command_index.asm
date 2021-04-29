@@ -1,12 +1,31 @@
 Find_Command:
-	; ld a, BATTLE_VARS_MOVE
-	; call GetBattleVar
-	; ld bc, ACROBATICS
-	; call CompareMove2
-	; jp z, BattleCommand_Acrobatics
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, DYNAMO_RUSH
+	call CompareMove2
+	jp z, BattleCommand_DynamoRush
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, GUILE_FANG
+	call CompareMove2
+	jp z, BattleCommand_GuileFang
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, DATA_PULSE
+	call CompareMove2
+	jp z, BattleCommand_DataPulse
+
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+
+	cp EFFECT_DISABLE
+	jp z, BattleCommand_Disable
+
+	cp EFFECT_PAY_DAY
+	jp z, BattleCommand_PayDay
 
 	cp EFFECT_SELFDESTRUCT
 	jp z, BattleCommand_Selfdestruct
@@ -38,4 +57,22 @@ Find_Command:
 
 	cp EFFECT_REMOVE_ITEM_HIT
 	jp z, BattleCommand_KnockOff
+
+	cp EFFECT_DEFOG
+	jp z, BattleCommand_Defog
+
+	cp EFFECT_PSYCHO_SHIFT
+	jp z, BattleCommand_PsychoShift
+
+	cp EFFECT_ROOST
+	jp z, BattleCommand_Roost
+
+	cp EFFECT_BRICK_BREAK
+	jp z, BattleCommand_BrickBreak
+
+	cp EFFECT_TRAP_HIT
+	jp z, BattleCommand_TrapHit
+
+	cp EFFECT_UPROOT
+	jp z, BattleCommand_Uproot
 	ret

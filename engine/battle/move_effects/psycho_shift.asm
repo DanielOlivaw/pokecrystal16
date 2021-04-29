@@ -1,6 +1,6 @@
-PsychoShiftEffect:
+BattleCommand_PsychoShift:
 ; psychoshift
-	
+
 	call .get_status
 
 ; Check sleep (just in case this is called by Sleep Talk, I guess)
@@ -40,13 +40,7 @@ PsychoShiftEffect:
 
 .sleep
 	farcall BattleCommand_SleepTarget
-	call .get_status
-	xor a
-	ld [hl], a
-	call UpdateUserInParty
-	call RefreshBattleHuds
-	ld hl, WokeUpText
-	jp StdBattleTextbox
+	jp AwakenUser
 
 ; .freeze
 	; push hl

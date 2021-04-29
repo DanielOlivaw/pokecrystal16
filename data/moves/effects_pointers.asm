@@ -46,7 +46,7 @@ MoveEffectsPointers:
 	dw MultiHit               ; EFFECT_DOUBLE_HIT
 	dw NormalHit              ; EFFECT_JUMP_KICK
 	dw StatusTargetSelf       ; EFFECT_STATUS_SELF
-	dw RecoilHit              ; EFFECT_RECOIL_HIT
+	dw RecoilHit              ; EFFECT_RECOIL_HIT_QUARTER
 	dw DoConfuse              ; EFFECT_CONFUSE
 	dw AttackUp2              ; EFFECT_ATTACK_UP_2
 	dw DefenseUp2             ; EFFECT_DEFENSE_UP_2
@@ -229,3 +229,6 @@ MoveEffectsPointers:
 	dw StatusTargetSelf       ; EFFECT_SHORE_UP
 	dw ClangingScales         ; EFFECT_CLANGING_SCALES
 	dw ShiftGear              ; EFFECT_SHIFT_GEAR
+	dw RecoilHit              ; EFFECT_RECOIL_HIT_HALF
+	dw RecoilHit              ; EFFECT_RECOIL_HIT_THIRD
+	dw RecoilHit              ; EFFECT_MIND_BLOWN

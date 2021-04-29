@@ -1,19 +1,4 @@
-DynamoRushEffect:
-; Shared with Guile Fang and Data Pulse
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUILE_FANG
-	call CompareMove2
-	jr z, BattleCommand_GuileFang
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, DATA_PULSE
-	call CompareMove2
-	jr z, BattleCommand_DataPulse
-
-; Dynamo Rush
-
+BattleCommand_DynamoRush:
 ; Get user's current speed modifier level
 	ld hl, wPlayerSpdLevel
 	ldh a, [hBattleTurn]

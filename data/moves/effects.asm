@@ -863,7 +863,7 @@ PayDay:
 	applydamage
 	criticaltext
 	supereffectivetext
-	payday
+	farcommand
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1253,7 +1253,7 @@ Disable:
 	usedmovetext
 	doturn
 	checkhit
-	disable
+	farcommand
 	endmove
 
 RazorWind:
@@ -2361,7 +2361,7 @@ Defog:
 	lowersub
 	statdownanim
 	raisesub
-	defog
+	farcommand
 	statdownmessage
 	statdownfailtext
 	endmove
@@ -2432,7 +2432,7 @@ PsychoShift:
 	doturn
 	checkhit
 	checksafeguard
-	psychoshift
+	farcommand
 	endmove
 
 Roost:
@@ -2440,7 +2440,7 @@ Roost:
 	usedmovetext
 	doturn
 	heal
-	roost
+	farcommand
 	endmove
 
 BrickBreak:
@@ -2456,7 +2456,7 @@ BrickBreak:
 	checkhit
 	moveanim
 	failuretext
-	brickbreak
+	farcommand
 	applydamage
 	criticaltext
 	supereffectivetext
@@ -2504,7 +2504,7 @@ TrapHit:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	traphit
+	farcommand
 	endmove
 
 NailDown:
@@ -2551,7 +2551,7 @@ DynamoRush:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	dynamorush
+	farcommand
 	endmove
 
 Uproot:
@@ -2571,7 +2571,7 @@ Uproot:
 	criticaltext
 	supereffectivetext
 	recoil
-	uproot
+	farcommand
 	checkfaint
 	buildopponentrage
 	kingsrock

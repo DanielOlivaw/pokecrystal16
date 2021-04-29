@@ -1,4 +1,4 @@
-TrapHitEffect:
+BattleCommand_TrapHit:
 ; anchor shot and spirit shackle
 
 ; Doesn't activate if the attack missed.

@@ -2804,8 +2804,7 @@ GetFailureResultText:
 	ld hl, GetHalfMaxHP
 	call CallBattleCore
 	ld hl, SubtractHPFromUser
-	call CallBattleCore
-	ret
+	jp CallBattleCore
 
 .check_burn_up:
 ; Burn Up prints miss text if used by a fire-type but failure text otherwise.
@@ -4247,8 +4246,6 @@ INCLUDE "engine/battle/move_effects/encore.asm"
 INCLUDE "engine/battle/move_effects/snore.asm"
 
 INCLUDE "engine/battle/move_effects/conversion2.asm"
-
-INCLUDE "engine/battle/move_effects/lock_on.asm"
 
 INCLUDE "engine/battle/move_effects/sketch.asm"
 
@@ -7052,6 +7049,17 @@ BattleCommand_Recoil:
 	jr z, .got_hp
 	ld hl, wEnemyMonMaxHP
 .got_hp
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_RECOIL_HIT_HALF
+	jr z, .get_half_damage
+	cp EFFECT_RECOIL_HIT_THIRD
+	jp z, .get_third_damage
+	cp EFFECT_STRUGGLE
+	jp z, .struggle
+	cp EFFECT_MIND_BLOWN
+	jp z, .mind_blown
+
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 	ld d, a
@@ -7104,6 +7112,74 @@ BattleCommand_Recoil:
 	ld [wWhichHPBar], a
 	predef AnimateHPBar
 	call RefreshBattleHuds
+	ld hl, RecoilText
+	jp StdBattleTextbox
+
+.get_half_damage
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld d, a
+; get 1/2 damage or 1 HP, whichever is higher
+	ld a, [wCurDamage]
+	ld b, a
+	ld a, [wCurDamage + 1]
+	ld c, a
+	srl b
+	rr c
+	ld a, b
+	or c
+	jr nz, .min_damage
+	inc c
+	jr .min_damage
+
+.get_third_damage
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld d, a
+; get 1/3 damage or 1 HP, whichever is higher
+	ld a, [wCurDamage]
+	ld b, a
+	ld a, [wCurDamage + 1]
+	ld c, a
+	xor a
+	inc b
+.third_hp_loop
+	dec b
+	inc a
+	dec bc
+	dec bc
+	dec bc
+	inc b
+	jr nz, .third_hp_loop
+	dec a
+	ld c, a
+	jr nz, .min_damage
+	inc c
+	jr .min_damage
+
+.struggle
+; Struggle's recoil is 1/4 of the user's max HP.
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld d, a
+
+	ld hl, GetQuarterMaxHP
+	call CallBattleCore
+	ld hl, SubtractHPFromUser
+	call CallBattleCore
+	ld hl, RecoilText
+	jp StdBattleTextbox
+
+.mind_blown
+; Mind Blown's recoil is 1/2 of the user's max HP.
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld d, a
+
+	ld hl, GetHalfMaxHP
+	call CallBattleCore
+	ld hl, SubtractHPFromUser
+	call CallBattleCore
 	ld hl, RecoilText
 	jp StdBattleTextbox
 
@@ -7346,10 +7422,6 @@ INCLUDE "engine/battle/move_effects/rage.asm"
 INCLUDE "engine/battle/move_effects/mimic.asm"
 
 INCLUDE "engine/battle/move_effects/splash.asm"
-
-INCLUDE "engine/battle/move_effects/disable.asm"
-
-INCLUDE "engine/battle/move_effects/pay_day.asm"
 
 BattleCommand_ResetStats:
 ; resetstats
@@ -7710,34 +7782,6 @@ BattleCommand_DoCureStatus:
 
 BattleCommand_ResetStatsTarget:
 	farcall ResetStatsTargetEffect
-	ret
-
-BattleCommand_Defog:
-	farcall DefogEffect
-	ret
-
-BattleCommand_PsychoShift:
-	farcall PsychoShiftEffect
-	ret
-
-BattleCommand_Roost:
-	farcall RoostEffect
-	ret
-
-BattleCommand_BrickBreak:
-	farcall BrickBreakEffect
-	ret
-
-BattleCommand_TrapHit:
-	farcall TrapHitEffect
-	ret
-
-BattleCommand_DynamoRush:
-	farcall DynamoRushEffect
-	ret
-
-BattleCommand_Uproot:
-	farcall UprootEffect
 	ret
 
 BattleCommand_Uproar:
