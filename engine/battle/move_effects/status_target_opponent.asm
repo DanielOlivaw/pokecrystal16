@@ -84,4 +84,10 @@ Find_StatusTargetOpponent:
 	ld bc, ELECTRIFY
 	call CompareMove2
 	jp z, BattleCommand_Electrify
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, SPEED_SWAP
+	call CompareMove2
+	jp z, BattleCommand_SpeedSwap
 	ret

@@ -1381,7 +1381,7 @@ GranbullEvosAttacks:
 
 ScizorEvosAttacks:
 	db 0 ; no more evolutions
-	; dbw 1, VACUUM_WAVE
+	dbw 1, VACUUM_WAVE
 	dbw 1, AIR_SLASH
 	dbw 1, AGILITY
 	dbw 1, WING_ATTACK

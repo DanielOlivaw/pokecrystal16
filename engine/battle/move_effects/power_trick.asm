@@ -14,7 +14,7 @@ BattleCommand_PowerTrick:
 	ld a, [wPlayerAttack + 1]
 	ld l, a
 
-; Load player's defense stat into hl
+; Load player's defense stat into bc
 	ld a, [wPlayerDefense]
 	ld b, a
 	ld a, [wPlayerDefense + 1]
@@ -26,7 +26,7 @@ BattleCommand_PowerTrick:
 	ld a, l
 	ld [wPlayerDefense + 1], a
 
-; Load hl (player's defense stat) into player's new attack stat
+; Load bc (player's defense stat) into player's new attack stat
 	ld a, b
 	ld [wPlayerAttack], a
 	ld a, c
@@ -42,7 +42,7 @@ BattleCommand_PowerTrick:
 	ld a, [wEnemyAttack + 1]
 	ld l, a
 
-; Load enemy's defense stat into hl
+; Load enemy's defense stat into bc
 	ld a, [wEnemyDefense]
 	ld b, a
 	ld a, [wEnemyDefense + 1]
@@ -54,7 +54,7 @@ BattleCommand_PowerTrick:
 	ld a, l
 	ld [wEnemyDefense + 1], a
 
-; Load hl (enemy's defense stat) into enemy's new attack stat
+; Load bc (enemy's defense stat) into enemy's new attack stat
 	ld a, b
 	ld [wEnemyAttack], a
 	ld a, c

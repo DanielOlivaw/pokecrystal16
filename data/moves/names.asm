@@ -583,4 +583,7 @@ MoveNames::
 	db "SHIFT GEAR@"
 	db "FLEUR CANNON@"
 	db "MIND BLOWN@"
+	db "DRUM BEATING@"
+	db "TAIL SLAP@"
+	db "SPEED SWAP@"
 	  ;"123456123456@"

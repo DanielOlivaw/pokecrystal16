@@ -1765,6 +1765,12 @@ SetAShellTrapText:
 	line "set a SHELL TRAP!"
 	prompt
 
+SwappedSpeedText:
+	text "<USER>"
+	line "swapped SPEED with"
+	cont "<TARGET>!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"

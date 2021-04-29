@@ -590,6 +590,9 @@ MoveDescriptions1:
 	dw ShiftGearDescription
 	dw FleurCannonDescription
 	dw MindBlownDescription
+	dw DrumBeatingDescription
+	dw TailSlapDescription
+	dw SpeedSwapDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2514,5 +2517,17 @@ ShiftGearDescription:
 MindBlownDescription:
 	db   "Makes the user's"
 	next "own head expode.@"
+
+DrumBeatingDescription:
+	db   "Controls roots"
+	next "that lower SPEED.@"
+
+TailSlapDescription:
+	db   "Strikes with a"
+	next "tail 2-5 times.@"
+
+SpeedSwapDescription:
+	db   "Swaps SPEED stats"
+	next "with the foe.@"
 
 		;"123456789123456789"

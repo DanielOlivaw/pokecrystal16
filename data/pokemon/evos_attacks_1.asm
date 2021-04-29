@@ -190,6 +190,7 @@ CharmanderEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
+	dbw 1, SPEED_SWAP
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -435,7 +436,7 @@ PikachuEvosAttacks:
 
 RaichuAEvosAttacks:
 	db 0 ; no more evolutions
-	; dbw 1, SPEED_SWAP
+	dbw 1, SPEED_SWAP
 	dbw 1, PLAY_NICE
 	dbw 1, SWEET_KISS
 	dbw 1, NUZZLE
@@ -2163,7 +2164,7 @@ ScytherEvosAttacks:
 	dbbbw EVOLVE_HOLDING, METAL_COAT, TR_ANYTIME, SCIZOR
 	dbbw EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
-	; dbw 1, VACUUM_WAVE
+	dbw 1, VACUUM_WAVE
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
 	dbw 4, FURY_CUTTER

@@ -99,81 +99,281 @@ TurtwigEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, GROTLE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, WITHDRAW
+	dbw 6, ABSORB
+	dbw 9, GROWTH
+	dbw 12, RAZOR_LEAF
+	dbw 15, BITE
+	dbw 18, MEGA_DRAIN
+	dbw 21, LEECH_SEED
+	dbw 24, LEAF_TORNADO
+	dbw 27, CURSE
+	dbw 30, SYNTHESIS
+	dbw 33, GIGA_DRAIN
+	dbw 36, CRUNCH
+	dbw 39, LEAF_STORM
 	db 0 ; no more level-up moves
 
 GrotleEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 32, TR_ANYTIME, TORTERRA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, WITHDRAW
+	dbw 6, ABSORB
+	dbw 9, GROWTH
+	dbw 12, RAZOR_LEAF
+	dbw 15, BITE
+	dbw 17, BULLDOZE
+	dbw 20, MEGA_DRAIN
+	dbw 24, LEECH_SEED
+	dbw 28, LEAF_TORNADO
+	dbw 32, CURSE
+	dbw 36, SYNTHESIS
+	dbw 40, GIGA_DRAIN
+	dbw 44, CRUNCH
+	dbw 48, LEAF_STORM
 	db 0 ; no more level-up moves
 
 TorterraEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, WOOD_HAMMER
+	dbw 1, CULTIVATE
 	dbw 1, TACKLE
+	dbw 1, WITHDRAW
+	dbw 6, ABSORB
+	dbw 9, GROWTH
+	dbw 12, RAZOR_LEAF
+	dbw 15, BITE
+	dbw 17, BULLDOZE
+	dbw 20, MEGA_DRAIN
+	dbw 24, LEECH_SEED
+	dbw 28, LEAF_TORNADO
+	dbw 31, EARTHQUAKE
+	dbw 33, CURSE
+	dbw 38, SYNTHESIS
+	dbw 43, GIGA_DRAIN
+	dbw 48, CRUNCH
+	dbw 53, LEAF_STORM
 	db 0 ; no more level-up moves
 
 ChimcharEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 14, TR_ANYTIME, MONFERNO
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 6, EMBER
+	dbw 9, FOCUS_ENERGY
+	dbw 12, FURY_SWIPES
+	dbw 15, FEINT
+	dbw 18, FLAME_WHEEL
+	dbw 21, FIRE_SPIN
+	dbw 24, FACADE
+	dbw 27, NASTY_PLOT
+	dbw 30, SLACK_OFF
+	dbw 33, FIRE_PUNCH
+	dbw 36, ACROBATICS
+	dbw 39, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 MonfernoEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, INFERNAPE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FLAMETHROWER
+	dbw 1, NASTY_PLOT
+	dbw 1, FACADE
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 6, EMBER
+	dbw 9, FOCUS_ENERGY
+	dbw 12, FURY_SWIPES
+	dbw 13, MACH_PUNCH
+	dbw 16, FEINT
+	dbw 20, FLAME_WHEEL
+	dbw 24, FIRE_SPIN
+	dbw 28, PAYBACK
+	dbw 32, SUCKER_PUNCH
+	dbw 37, SLACK_OFF
+	dbw 40, FIRE_PUNCH
+	dbw 44, ACROBATICS
+	dbw 48, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
 InfernapeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FLAMETHROWER
+	dbw 1, SLACK_OFF
+	dbw 1, NASTY_PLOT
+	dbw 1, FACADE
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 6, EMBER
+	dbw 9, FOCUS_ENERGY
+	dbw 12, FURY_SWIPES
+	dbw 13, MACH_PUNCH
+	dbw 16, FEINT
+	dbw 20, FLAME_WHEEL
+	dbw 24, FIRE_SPIN
+	dbw 28, PAYBACK
+	dbw 32, SUCKER_PUNCH
+	dbw 35, CLOSE_COMBAT
+	dbw 38, CALM_MIND
+	dbw 43, FIRE_PUNCH
+	dbw 48, ACROBATICS
+	dbw 53, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
 PiplupEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, PRINPLUP
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POUND
 	dbw 1, GROWL
-	dbw 5, BUBBLE
+	dbw 6, BUBBLE
+	dbw 9, BIDE
+	dbw 12, PECK
+	dbw 15, FURY_ATTACK
+	dbw 18, BUBBLEBEAM
+	dbw 21, WHIRLPOOL
+	dbw 24, ICY_WIND
+	dbw 27, SWAGGER
+	dbw 30, MIST
+	dbw 33, BRINE
+	dbw 36, DRILL_PECK
+	dbw 39, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 PrinplupEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, EMPOLEON
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ICY_WIND
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 6, BUBBLE
+	dbw 9, BIDE
+	dbw 12, PECK
+	dbw 15, FURY_ATTACK
+	dbw 15, METAL_CLAW
+	dbw 20, BUBBLEBEAM
+	dbw 24, WHIRLPOOL
+	dbw 28, STEEL_WING
+	dbw 32, SWAGGER
+	dbw 37, MIST
+	dbw 40, BRINE
+	dbw 44, DRILL_PECK
+	dbw 48, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 EmpoleonEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, IRON_HEAD
+	dbw 1, SWORDS_DANCE
+	dbw 1, ICY_WIND
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 6, BUBBLE
+	dbw 9, BIDE
+	dbw 12, PECK
+	dbw 15, FURY_ATTACK
+	dbw 15, METAL_CLAW
+	dbw 20, BUBBLEBEAM
+	dbw 24, WHIRLPOOL
+	dbw 28, STEEL_WING
+	dbw 32, SWAGGER
+	dbw 35, AQUA_JET
+	dbw 38, MIST
+	dbw 43, BRINE
+	dbw 48, DRILL_PECK
+	dbw 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 StarlyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 14, TR_ANYTIME, STARAVIA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, QUICK_ATTACK
+	dbw 8, WING_ATTACK
+	dbw 12, DOUBLE_TEAM
+	dbw 16, WHIRLWIND
+	dbw 20, AERIAL_ACE
+	dbw 24, TAKE_DOWN
+	dbw 28, ENDEAVOR
+	dbw 32, AGILITY
+	dbw 36, BRAVE_BIRD
+	dbw 40, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 StaraviaEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, STARAPTOR
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, QUICK_ATTACK
+	dbw 8, WING_ATTACK
+	dbw 12, DOUBLE_TEAM
+	dbw 17, WHIRLWIND
+	dbw 22, AERIAL_ACE
+	dbw 27, TAKE_DOWN
+	dbw 32, ENDEAVOR
+	dbw 37, AGILITY
+	dbw 42, BRAVE_BIRD
+	dbw 47, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 StaraptorEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, QUICK_ATTACK
+	dbw 8, WING_ATTACK
+	dbw 12, DOUBLE_TEAM
+	dbw 17, WHIRLWIND
+	dbw 22, AERIAL_ACE
+	dbw 27, TAKE_DOWN
+	dbw 32, ENDEAVOR
+	dbw 33, CLOSE_COMBAT
+	dbw 39, AGILITY
+	dbw 46, BRAVE_BIRD
+	dbw 53, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 BidoofEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, BIBAREL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, DEFENSE_CURL
+	dbw 7, ROLLOUT
+	dbw 10, HEADBUTT
+	dbw 13, YAWN
+	dbw 16, HYPER_FANG
+	dbw 19, AMNESIA
+	dbw 22, CRUNCH
+	dbw 25, TAKE_DOWN
+	dbw 28, CURSE
+	dbw 31, SUPER_FANG
+	dbw 34, SWORDS_DANCE
+	dbw 37, SUPERPOWER
 	db 0 ; no more level-up moves
 
 BibarelEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, AQUA_JET
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, DEFENSE_CURL
+	dbw 7, ROLLOUT
+	dbw 10, HEADBUTT
+	dbw 13, YAWN
+	dbw 14, WATER_GUN
+	dbw 18, HYPER_FANG
+	dbw 23, AMNESIA
+	dbw 28, CRUNCH
+	dbw 33, TAKE_DOWN
+	dbw 38, CURSE
+	dbw 43, SUPER_FANG
+	dbw 48, SWORDS_DANCE
+	dbw 53, SUPERPOWER
+	dbw 58, AQUA_TAIL
 	db 0 ; no more level-up moves
 
 ShinxEvosAttacks:

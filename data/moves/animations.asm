@@ -611,6 +611,9 @@ BattleAnimations::
 	dw BattleAnim_ShiftGear
 	dw BattleAnim_FleurCannon
 	dw BattleAnim_MindBlown
+	dw BattleAnim_DrumBeating
+	dw BattleAnim_TailSlap
+	dw BattleAnim_SpeedSwap
 
 	dw BattleAnim_SweetScent2
 
@@ -994,6 +997,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_DrumBeating:
+BattleAnim_TailSlap:
+BattleAnim_SpeedSwap:
 BattleAnim_MindBlown:
 BattleAnim_ClangingScales:
 BattleAnim_ClangorousSoul:

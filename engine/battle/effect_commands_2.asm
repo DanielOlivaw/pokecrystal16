@@ -211,3 +211,5 @@ INCLUDE "engine/battle/move_effects/power_trick.asm"
 INCLUDE "engine/battle/move_effects/revenge.asm"
 
 INCLUDE "engine/battle/move_effects/clangorous_soul.asm"
+
+INCLUDE "engine/battle/move_effects/speed_swap.asm"

@@ -601,4 +601,7 @@ Moves1:
 	move EFFECT_SHIFT_GEAR,          0, STEEL,    STATUS,   100, 10,   0 ; SHIFT_GEAR
 	move EFFECT_DRACO_METEOR,      130, FAIRY,    SPECIAL,   90,  5,   0 ; FLEUR_CANNON
 	move EFFECT_MIND_BLOWN,        150, FIRE,     SPECIAL,  100,  5,   0 ; MIND_BLOWN
+	move EFFECT_SPEED_DOWN_HIT,     80, GRASS,    PHYSICAL, 100, 10, 100 ; DRUM_BEATING
+	move EFFECT_MULTI_HIT,          25, NORMAL,   PHYSICAL,  85, 10,   0 ; TAIL_SLAP
+	move EFFECT_STATUS_OPP_ACC,      0, PSYCHIC,  STATUS,   100, 10,   0 ; SPEED_SWAP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

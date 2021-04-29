@@ -2,19 +2,19 @@ SECTION "Evolution Moves 4", ROMX
 
 EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; TURTWIG
-	dw NoEvolutionMoves4        ; GROTLE
-	dw NoEvolutionMoves4        ; TORTERRA
+	dw GrotleEvolutionMoves     ; GROTLE
+	dw TorterraEvolutionMoves   ; TORTERRA
 	dw NoEvolutionMoves4        ; CHIMCHAR
-	dw NoEvolutionMoves4        ; MONFERNO
-	dw NoEvolutionMoves4        ; INFERNAPE
+	dw MonfernoEvolutionMoves   ; MONFERNO
+	dw InfernapeEvolutionMoves  ; INFERNAPE
 	dw NoEvolutionMoves4        ; PIPLUP
-	dw NoEvolutionMoves4        ; PRINPLUP
-	dw NoEvolutionMoves4        ; EMPOLEON
+	dw PrinplupEvolutionMoves   ; PRINPLUP
+	dw EmpoleonEvolutionMoves   ; EMPOLEON
 	dw NoEvolutionMoves4        ; STARLY
 	dw NoEvolutionMoves4        ; STARAVIA
-	dw NoEvolutionMoves4        ; STARAPTOR
+	dw StaraptorEvolutionMoves  ; STARAPTOR
 	dw NoEvolutionMoves4        ; BIDOOF
-	dw NoEvolutionMoves4        ; BIBAREL
+	dw BibarelEvolutionMoves    ; BIBAREL
 	dw NoEvolutionMoves4        ; SHINX
 	dw NoEvolutionMoves4        ; LUXIO
 	dw NoEvolutionMoves4        ; LUXRAY
@@ -94,6 +94,35 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; DARKRAI
 	dw NoEvolutionMoves4        ; SHAYMIN
 	dw NoEvolutionMoves4        ; ARCEUS
+
+GrotleEvolutionMoves:
+	dw BULLDOZE
+	db 0 ; no more evolution moves
+
+TorterraEvolutionMoves:
+	dw EARTHQUAKE
+	db 0 ; no more evolution moves
+
+MonfernoEvolutionMoves:
+	dw MACH_PUNCH
+	db 0 ; no more evolution moves
+
+InfernapeEvolutionMoves:
+StaraptorEvolutionMoves:
+	dw CLOSE_COMBAT
+	db 0 ; no more evolution moves
+
+PrinplupEvolutionMoves:
+	dw METAL_CLAW
+	db 0 ; no more evolution moves
+
+EmpoleonEvolutionMoves:
+	dw AQUA_JET
+	db 0 ; no more evolution moves
+
+BibarelEvolutionMoves:
+	dw WATER_GUN
+	db 0 ; no more evolution moves
 
 MismagiusEvolutionMoves:
 	dw LUCKY_CHANT
