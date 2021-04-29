@@ -102,4 +102,10 @@ Find_StatusTargetOpponent:
 	ld bc, GUARD_SWAP
 	call CompareMove2
 	jp z, BattleCommand_GuardSwap
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, HEART_SWAP
+	call CompareMove2
+	jp z, BattleCommand_HeartSwap
 	ret

@@ -595,6 +595,8 @@ MoveDescriptions1:
 	dw SpeedSwapDescription
 	dw PowerSwapDescription
 	dw GuardSwapDescription
+	dw HeartSwapDescription
+	dw JawLockDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2539,5 +2541,13 @@ PowerSwapDescription:
 GuardSwapDescription:
 	db   "Swaps changes to"
 	next "defenses with foe.@"
+
+HeartSwapDescription:
+	db   "Swaps stat changes"
+	next "with the foe.@"
+
+JawLockDescription:
+	db   "Stops escape for"
+	next "the foe and user.@"
 
 		;"123456789123456789"

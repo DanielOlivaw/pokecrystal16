@@ -652,7 +652,6 @@ SECTION "Miscellaneous Text", ROMX
 INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
-INCLUDE "engine/overworld/landmarks.asm"
 
 
 SECTION "bank74", ROMX
@@ -670,6 +669,7 @@ INCLUDE "engine/printer/print_party.asm"
 
 SECTION "bank77_2", ROMX
 
+INCLUDE "engine/overworld/landmarks.asm"
 INCLUDE "engine/rtc/print_hours_mins.asm"
 INCLUDE "engine/events/diploma.asm"
 INCLUDE "engine/pokedex/pokedex_3.asm"

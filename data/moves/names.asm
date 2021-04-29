@@ -588,4 +588,6 @@ MoveNames::
 	db "SPEED SWAP@"
 	db "POWER SWAP@"
 	db "GUARD SWAP@"
+	db "HEART SWAP@"
+	db "JAW LOCK@"
 	  ;"123456123456@"

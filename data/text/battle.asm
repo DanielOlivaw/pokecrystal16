@@ -1789,6 +1789,13 @@ SwitchedGuardChangesText:
 	line "<TARGET>!"
 	prompt
 
+SwitchedStatChangesText:
+	text "<USER>"
+	line "switched stat"
+	para "changes with"
+	line "<TARGET>!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"
