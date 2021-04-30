@@ -7750,6 +7750,8 @@ INCLUDE "engine/battle/move_effects/low_kick.asm"
 
 INCLUDE "engine/battle/move_effects/punishment.asm"
 
+INCLUDE "engine/battle/move_effects/stored_power.asm"
+
 BattleCommand_FarCommand:
 	farcall Find_Command
 	ret

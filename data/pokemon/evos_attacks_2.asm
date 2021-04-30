@@ -486,9 +486,9 @@ FeraligatrEvosAttacks:
 SentretEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, FURRET
 	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, FORESIGHT
-	dbw 4, DEFENSE_CURL
+	; dbw 1, SCRATCH
+	; dbw 1, FORESIGHT
+	dbw 1, DEFENSE_CURL
 	dbw 8, QUICK_ATTACK
 	dbw 12, FURY_SWIPES
 	dbw 16, SLAM
@@ -791,36 +791,38 @@ NatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
-	dbw 4, NIGHT_SHADE
+	dbw 4, STORED_POWER
 	dbw 8, TELEPORT
-	dbw 12, LUCKY_CHANT
-	dbw 16, OMINOUS_WIND
-	dbw 20, CONFUSE_RAY
-	dbw 24, PSYCHO_SHIFT
-	dbw 28, POWER_SWAP
-	dbw 28, GUARD_SWAP
-	dbw 32, PSYCHIC_M
-	dbw 36, WISH
-	dbw 40, FUTURE_SIGHT
-	dbw 44, ME_FIRST
+	dbw 12, NIGHT_SHADE
+	dbw 16, LUCKY_CHANT
+	dbw 20, OMINOUS_WIND
+	dbw 24, CONFUSE_RAY
+	dbw 28, PSYCHO_SHIFT
+	dbw 32, POWER_SWAP
+	dbw 32, GUARD_SWAP
+	dbw 36, PSYCHIC_M
+	dbw 40, WISH
+	dbw 44, FUTURE_SIGHT
+	dbw 48, ME_FIRST
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
-	dbw 4, NIGHT_SHADE
+	dbw 4, STORED_POWER
 	dbw 8, TELEPORT
-	dbw 12, LUCKY_CHANT
-	dbw 16, OMINOUS_WIND
-	dbw 20, CONFUSE_RAY
-	dbw 24, PSYCHO_SHIFT
+	dbw 12, NIGHT_SHADE
+	dbw 16, LUCKY_CHANT
+	dbw 20, OMINOUS_WIND
+	dbw 24, CONFUSE_RAY
 	dbw 24, AIR_SLASH
-	dbw 30, POWER_SWAP
-	dbw 30, GUARD_SWAP
-	dbw 36, PSYCHIC_M
-	dbw 42, WISH
-	dbw 48, FUTURE_SIGHT
+	dbw 29, PSYCHO_SHIFT
+	dbw 34, POWER_SWAP
+	dbw 34, GUARD_SWAP
+	dbw 39, PSYCHIC_M
+	dbw 44, WISH
+	dbw 49, FUTURE_SIGHT
 	dbw 54, ME_FIRST
 	db 0 ; no more level-up moves
 
@@ -1457,17 +1459,18 @@ SneaselEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 4, QUICK_ATTACK
-	dbw 9, METAL_CLAW
-	dbw 13, FAINT_ATTACK
-	dbw 18, ICY_WIND
-	dbw 22, FURY_SWIPES
-	dbw 27, HONE_CLAWS
-	dbw 31, BEAT_UP
-	dbw 36, ICE_SHARD
-	dbw 40, AGILITY
-	dbw 45, SCREECH
-	dbw 49, SLASH
-	dbw 54, SHATTER_CLAW
+	dbw 8, METAL_CLAW
+	dbw 12, FAINT_ATTACK
+	dbw 16, ICY_WIND
+	dbw 20, FURY_SWIPES
+	dbw 24, HONE_CLAWS
+	dbw 28, BEAT_UP
+	dbw 32, ICE_SHARD
+	dbw 36, AGILITY
+	dbw 40, SCREECH
+	dbw 44, SLASH
+	dbw 48, PUNISHMENT
+	dbw 52, SHATTER_CLAW
 	db 0 ; no more level-up moves
 
 TeddiursaEvosAttacks:
@@ -1659,6 +1662,7 @@ MantineEvosAttacks:
 	dbw 1, PSYBEAM
 	dbw 1, BULLET_SEED
 	dbw 1, SIGNAL_BEAM
+	dbw 1, WIND_RIDE
 	dbw 1, ROOST
 	dbw 1, TACKLE
 	dbw 1, BUBBLE
@@ -2045,17 +2049,18 @@ LugiaEvosAttacks:
 	dbw 1, WHIRLWIND
 	dbw 1, WEATHER_BALL
 	dbw 1, ANCIENTPOWER
-	dbw 9, MIST
-	dbw 18, SAFEGUARD
-	dbw 27, CALM_MIND
-	dbw 36, EXTRASENSORY
-	dbw 45, RECOVER
-	dbw 54, AEROBLAST
-	dbw 63, RAIN_DANCE
+	dbw 8, MIST
+	dbw 16, SAFEGUARD
+	dbw 24, CALM_MIND
+	dbw 32, EXTRASENSORY
+	dbw 40, RECOVER
+	dbw 48, AEROBLAST
+	dbw 56, PUNISHMENT
+	dbw 64, RAIN_DANCE
 	dbw 72, HYDRO_PUMP
-	dbw 81, FUTURE_SIGHT
-	dbw 90, SKY_ATTACK
-	dbw 99, HURRICANE
+	dbw 80, FUTURE_SIGHT
+	dbw 88, SKY_ATTACK
+	dbw 96, HURRICANE
 	db 0 ; no more level-up moves
 
 HoOhEvosAttacks:
@@ -2065,17 +2070,18 @@ HoOhEvosAttacks:
 	dbw 1, WHIRLWIND
 	dbw 1, WEATHER_BALL
 	dbw 1, ANCIENTPOWER
-	dbw 9, REFRESH
-	dbw 18, SAFEGUARD
-	dbw 27, CALM_MIND
-	dbw 36, EXTRASENSORY
-	dbw 45, RECOVER
-	dbw 54, SACRED_FIRE
-	dbw 63, SUNNY_DAY
+	dbw 8, REFRESH
+	dbw 16, SAFEGUARD
+	dbw 24, CALM_MIND
+	dbw 32, EXTRASENSORY
+	dbw 40, RECOVER
+	dbw 48, SACRED_FIRE
+	dbw 56, PUNISHMENT
+	dbw 64, SUNNY_DAY
 	dbw 72, FIRE_BLAST
-	dbw 81, FUTURE_SIGHT
-	dbw 90, SKY_ATTACK
-	dbw 99, BURN_UP
+	dbw 80, FUTURE_SIGHT
+	dbw 88, SKY_ATTACK
+	dbw 96, BURN_UP
 	db 0 ; no more level-up moves
 
 CelebiEvosAttacks:

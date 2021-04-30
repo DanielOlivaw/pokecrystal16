@@ -609,4 +609,6 @@ Moves1:
 	move EFFECT_STATUS_OPP_ACC,      0, PSYCHIC,  STATUS,   100, 10,   0 ; HEART_SWAP
 	move EFFECT_TRAP_HIT,           80, DARK,     PHYSICAL, 100, 10,   0 ; JAW_LOCK
 	move EFFECT_PUNISHMENT,          1, DARK,     PHYSICAL, 100,  5,   0 ; PUNISHMENT
+	move EFFECT_STORED_POWER,        1, PSYCHIC,  SPECIAL,  100, 10,   0 ; STORED_POWER
+	move EFFECT_STORED_POWER,        1, DARK,     PHYSICAL, 100, 10,   0 ; POWER_TRIP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

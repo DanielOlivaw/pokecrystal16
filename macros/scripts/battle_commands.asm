@@ -178,6 +178,7 @@ ENDM
 	command clangingscales          ; ab
 	command shiftgear               ; ac
 	command punishment              ; ad
+	command storedpower             ; ae
 
 	enum_start $fe
 	command endturn                 ; fe

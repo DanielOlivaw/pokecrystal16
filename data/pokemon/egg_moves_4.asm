@@ -195,6 +195,16 @@ MantykeEggMoves:
 	dw -1 ; end
 
 SnoverEggMoves:
+	dw UPROOT
+	dw DOUBLE_EDGE
+	dw GROWTH
+	dw LEECH_SEED
+	dw SKULL_BASH
+	dw STOMP
+	dw AVALANCHE
+	dw BULLET_SEED
+	dw MAGICAL_LEAF
+	dw SEED_BOMB
 	dw -1 ; end
 
 RotomEggMoves:

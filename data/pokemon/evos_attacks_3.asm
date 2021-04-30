@@ -589,9 +589,9 @@ RaltsEvosAttacks:
 	dbw 24, HYPNOSIS
 	dbw 27, CHARM
 	dbw 30, PSYCHIC
-	dbw 33, LIFE_DEW
-	dbw 36, CALM_MIND
-	dbw 39, DREAM_EATER
+	dbw 33, CALM_MIND
+	dbw 36, DREAM_EATER
+	dbw 39, STORED_POWER
 	dbw 42, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
@@ -611,9 +611,9 @@ KirliaEvosAttacks:
 	dbw 26, HYPNOSIS
 	dbw 30, CHARM
 	dbw 34, PSYCHIC
-	dbw 38, LIFE_DEW
-	dbw 42, CALM_MIND
-	dbw 46, DREAM_EATER
+	dbw 38, CALM_MIND
+	dbw 42, DREAM_EATER
+	dbw 46, STORED_POWER
 	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
@@ -635,9 +635,9 @@ GardevoirEvosAttacks:
 	dbw 29, DAZZLING_GLEAM
 	dbw 31, WISH
 	dbw 36, PSYCHIC
-	dbw 41, LIFE_DEW
-	dbw 46, CALM_MIND
-	dbw 51, DREAM_EATER
+	dbw 41, CALM_MIND
+	dbw 46, DREAM_EATER
+	dbw 51, STORED_POWER
 	dbw 56, FUTURE_SIGHT
 	dbw 61, MOONBLAST
 	db 0 ; no more level-up moves
@@ -854,18 +854,19 @@ SableyeEvosAttacks:
 	dbw 9, CONFUSE_RAY
 	dbw 12, SHADOW_SNEAK
 	dbw 15, FAINT_ATTACK
-	dbw 18, FAKE_OUT
-	dbw 21, DISABLE
-	dbw 24, NIGHT_SHADE
-	dbw 27, FURY_SWIPES
-	dbw 30, DETECT
-	dbw 33, KNOCK_OFF
-	dbw 36, SHADOW_CLAW
-	dbw 39, MEAN_LOOK
-	dbw 42, POWER_GEM
-	dbw 45, ZEN_HEADBUTT
-	dbw 48, SHADOW_BALL
-	dbw 51, FOUL_PLAY
+	dbw 18, DISABLE
+	dbw 21, NIGHT_SHADE
+	dbw 24, FURY_SWIPES
+	dbw 27, FAKE_OUT
+	dbw 30, PUNISHMENT
+	dbw 33, DETECT
+	dbw 36, KNOCK_OFF
+	dbw 39, SHADOW_CLAW
+	dbw 42, MEAN_LOOK
+	dbw 45, POWER_GEM
+	dbw 48, ZEN_HEADBUTT
+	dbw 51, SHADOW_BALL
+	dbw 54, FOUL_PLAY
 	db 0 ; no more level-up moves
 
 MawileEvosAttacks:
@@ -2296,19 +2297,20 @@ LatiasEvosAttacks:
 	dbw 1, PSYWAVE
 	dbw 1, CHARM
 	dbw 5, SAFEGUARD
-	dbw 10, REFRESH
-	dbw 15, CONFUSION
-	dbw 20, RECOVER
+	dbw 10, STORED_POWER
+	dbw 15, REFRESH
+	dbw 20, CONFUSION
 	dbw 25, DRAGONBREATH
-	dbw 30, WISH
+	dbw 30, RECOVER
 	dbw 35, MIST_BALL
-	dbw 40, ZEN_HEADBUTT
-	dbw 45, DRAGON_PULSE
-	dbw 50, REFLECT_TYPE
-	dbw 55, PSYCHIC
-	dbw 60, GUARD_SPLIT
-	dbw 65, HEALING_WISH
-	dbw 70, PSYCHO_SHIFT
+	dbw 40, WISH
+	dbw 45, ZEN_HEADBUTT
+	dbw 50, DRAGON_PULSE
+	dbw 55, REFLECT_TYPE
+	dbw 60, PSYCHIC
+	dbw 65, GUARD_SPLIT
+	dbw 70, HEALING_WISH
+	dbw 75, PSYCHO_SHIFT
 	db 0 ; no more level-up moves
 
 LatiosEvosAttacks:
@@ -2316,19 +2318,20 @@ LatiosEvosAttacks:
 	dbw 1, PSYWAVE
 	dbw 1, DRAGON_DANCE
 	dbw 5, SAFEGUARD
-	dbw 10, REFRESH
-	dbw 15, CONFUSION
-	dbw 20, RECOVER
+	dbw 10, STORED_POWER
+	dbw 15, REFRESH
+	dbw 20, CONFUSION
 	dbw 25, DRAGONBREATH
-	dbw 30, PROTECT
+	dbw 30, RECOVER
 	dbw 35, LUSTER_PURGE
-	dbw 40, ZEN_HEADBUTT
-	dbw 45, DRAGON_PULSE
-	dbw 50, DEFOG
-	dbw 55, PSYCHIC
-	dbw 60, POWER_SPLIT
-	dbw 65, MEMENTO
-	dbw 70, PSYCHO_SHIFT
+	dbw 40, PROTECT
+	dbw 45, ZEN_HEADBUTT
+	dbw 50, DRAGON_PULSE
+	dbw 55, DEFOG
+	dbw 60, PSYCHIC
+	dbw 65, POWER_SPLIT
+	dbw 70, MEMENTO
+	dbw 75, PSYCHO_SHIFT
 	db 0 ; no more level-up moves
 
 KyogreEvosAttacks:

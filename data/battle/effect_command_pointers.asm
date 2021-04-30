@@ -177,3 +177,4 @@ BattleCommandPointers:
 	dw BattleCommand_ClangingScales
 	dw BattleCommand_ShiftGear
 	dw BattleCommand_Punishment
+	dw BattleCommand_StoredPower

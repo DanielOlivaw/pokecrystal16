@@ -233,3 +233,4 @@ MoveEffectsPointers:
 	dw RecoilHit              ; EFFECT_RECOIL_HIT_THIRD
 	dw RecoilHit              ; EFFECT_MIND_BLOWN
 	dw Punishment             ; EFFECT_PUNISHMENT
+	dw StoredPower            ; EFFECT_STORED_POWER

@@ -598,6 +598,8 @@ MoveDescriptions1:
 	dw HeartSwapDescription
 	dw JawLockDescription
 	dw PunishmentDescription
+	dw StoredPowerDescription
+	dw PowerTripDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2553,6 +2555,11 @@ JawLockDescription:
 
 PunishmentDescription:
 	db   "Power is based on"
-	next "foe's stat boosts.@"
+	next "the foe's boosts.@"
+
+StoredPowerDescription:
+PowerTripDescription:
+	db   "Power is based on"
+	next "the user's boosts.@"
 
 		;"123456789123456789"

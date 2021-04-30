@@ -2955,6 +2955,28 @@ Punishment:
 	kingsrock
 	endmove
 
+StoredPower:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	storedpower
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

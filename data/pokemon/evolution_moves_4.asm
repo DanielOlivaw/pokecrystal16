@@ -66,7 +66,7 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; LUMINEON
 	dw NoEvolutionMoves4        ; MANTYKE
 	dw NoEvolutionMoves4        ; SNOVER
-	dw NoEvolutionMoves4        ; ABOMASNOW
+	dw AbomasnowEvolutionMoves  ; ABOMASNOW
 	dw NoEvolutionMoves4        ; WEAVILE
 	dw NoEvolutionMoves4        ; MAGNEZONE
 	dw NoEvolutionMoves4        ; TANGROWTH
@@ -173,6 +173,10 @@ GabiteEvolutionMoves:
 
 LucarioEvolutionMoves:
 	dw AURA_SPHERE
+	db 0 ; no more evolution moves
+
+AbomasnowEvolutionMoves:
+	dw ICE_PUNCH
 	db 0 ; no more evolution moves
 
 YanmegaEvolutionMoves:

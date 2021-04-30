@@ -189,7 +189,9 @@ CharmanderEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, CHARMELEON
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, GROWL
+	dbw 1, HOWL
+	dbw 1, SHIFT_GEAR
+	dbw 1, STORED_POWER
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -642,16 +644,17 @@ ClefairyEvosAttacks:
 	dbw 4, GROWL
 	dbw 8, DOUBLESLAP
 	dbw 12, DEFENSE_CURL
-	dbw 16, MINIMIZE
-	dbw 20, WAKE_UP_SLAP
-	dbw 24, METRONOME
-	dbw 28, LUCKY_CHANT
-	dbw 32, BODY_SLAM
-	dbw 36, MOONLIGHT
-	dbw 40, METEOR_MASH
-	dbw 44, COSMIC_POWER
-	dbw 48, MOONBLAST
-	dbw 52, HEALING_WISH
+	dbw 16, STORED_POWER
+	dbw 20, MINIMIZE
+	dbw 24, WAKE_UP_SLAP
+	dbw 28, METRONOME
+	dbw 32, LUCKY_CHANT
+	dbw 36, BODY_SLAM
+	dbw 40, MOONLIGHT
+	dbw 44, METEOR_MASH
+	dbw 48, COSMIC_POWER
+	dbw 52, MOONBLAST
+	dbw 56, HEALING_WISH
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
@@ -667,16 +670,17 @@ ClefableEvosAttacks:
 	dbw 4, GROWL
 	dbw 8, DOUBLESLAP
 	dbw 12, DEFENSE_CURL
-	dbw 16, MINIMIZE
-	dbw 20, WAKE_UP_SLAP
-	dbw 24, METRONOME
-	dbw 28, LUCKY_CHANT
-	dbw 32, BODY_SLAM
-	dbw 36, MOONLIGHT
-	dbw 40, METEOR_MASH
-	dbw 44, COSMIC_POWER
-	dbw 48, MOONBLAST
-	dbw 52, HEALING_WISH
+	dbw 16, STORED_POWER
+	dbw 20, MINIMIZE
+	dbw 24, WAKE_UP_SLAP
+	dbw 28, METRONOME
+	dbw 32, LUCKY_CHANT
+	dbw 36, BODY_SLAM
+	dbw 40, MOONLIGHT
+	dbw 44, METEOR_MASH
+	dbw 48, COSMIC_POWER
+	dbw 52, MOONBLAST
+	dbw 56, HEALING_WISH
 	db 0 ; no more level-up moves
 
 VulpixAEvosAttacks:
@@ -1039,11 +1043,12 @@ MankeyEvosAttacks:
 	dbw 17, SEISMIC_TOSS
 	dbw 21, SWAGGER
 	dbw 25, CROSS_CHOP
-	dbw 29, THRASH
-	dbw 33, CLOSE_COMBAT
-	dbw 37, SCREECH
-	dbw 41, OUTRAGE
-	dbw 45, FINAL_GAMBIT
+	dbw 29, PUNISHMENT
+	dbw 33, THRASH
+	dbw 37, CLOSE_COMBAT
+	dbw 41, SCREECH
+	dbw 45, OUTRAGE
+	dbw 49, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
 PrimeapeEvosAttacks:
@@ -1060,10 +1065,11 @@ PrimeapeEvosAttacks:
 	dbw 21, SWAGGER
 	dbw 25, CROSS_CHOP
 	dbw 27, RAGE
-	dbw 31, THRASH
-	dbw 37, CLOSE_COMBAT
-	dbw 43, SCREECH
-	dbw 49, OUTRAGE
+	dbw 30, PUNISHMENT
+	dbw 35, THRASH
+	dbw 40, CLOSE_COMBAT
+	dbw 45, SCREECH
+	dbw 50, OUTRAGE
 	dbw 55, FINAL_GAMBIT
 	db 0 ; no more level-up moves
 
@@ -2023,9 +2029,10 @@ TangelaEvosAttacks:
 	dbw 32, GIGA_DRAIN
 	dbw 36, ANCIENTPOWER
 	dbw 40, SLAM
-	dbw 44, TICKLE
-	dbw 48, WRING_OUT
-	dbw 52, POWER_WHIP
+	dbw 44, UPROOT
+	dbw 48, TICKLE
+	dbw 52, WRING_OUT
+	dbw 56, POWER_WHIP
 	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
