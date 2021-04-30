@@ -7488,6 +7488,9 @@ BattleCommand_Heal:
 	call CompareMove
 	jr nz, .not_rest
 
+	push hl
+	push de
+	push af
 	ld a, BATTLE_VARS_SUBSTATUS4_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_UPROAR, [hl]
@@ -7502,9 +7505,6 @@ BattleCommand_Heal:
 	cp HELD_PREVENT_SLEEP
 	jp z, .cant_sleep
 
-	push hl
-	push de
-	push af
 	call BattleCommand_MoveDelay
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr
@@ -7747,6 +7747,8 @@ INCLUDE "engine/battle/move_effects/present.asm"
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
+
+INCLUDE "engine/battle/move_effects/punishment.asm"
 
 BattleCommand_FarCommand:
 	farcall Find_Command

@@ -2933,6 +2933,28 @@ ShiftGear:
 	shiftgear
 	endmove
 
+Punishment:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	punishment
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

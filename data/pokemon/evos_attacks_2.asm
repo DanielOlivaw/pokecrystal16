@@ -1878,21 +1878,24 @@ MiltankEvosAttacks:
 
 BlisseyEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, DEFENSE_CURL
-	dbw 1, GROWL
+	dbw 1, CHARM
+	dbw 1, COVET
+	dbw 1, DISARMING_VOICE
+	dbw 1, SWEET_KISS
+	dbw 1, MINIMIZE
 	dbw 1, POUND
-	dbw 4, TAIL_WHIP
-	dbw 9, DOUBLESLAP
-	dbw 13, REFRESH
-	dbw 18, ECHOED_VOICE
-	dbw 22, SING
-	dbw 27, TAKE_DOWN
-	dbw 31, MINIMIZE
-	dbw 36, LIGHT_SCREEN
+	dbw 1, GROWL
+	dbw 5, TAIL_WHIP
+	dbw 10, DOUBLESLAP
+	dbw 15, REFRESH
+	dbw 20, ECHOED_VOICE
+	dbw 25, SING
+	dbw 30, TAKE_DOWN
+	dbw 35, LIGHT_SCREEN
 	dbw 40, EGG_BOMB
 	dbw 45, SOFTBOILED
-	dbw 49, HEALING_WISH
-	dbw 54, DOUBLE_EDGE
+	dbw 50, HEALING_WISH
+	dbw 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaikouEvosAttacks:

@@ -21,40 +21,40 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4        ; BUDEW
 	dw NoEvolutionMoves4        ; ROSERADE
 	dw NoEvolutionMoves4        ; CRANIDOS
-	dw NoEvolutionMoves4        ; RAMPARDOS
+	dw RampardosEvolutionMoves  ; RAMPARDOS
 	dw NoEvolutionMoves4        ; SHIELDON
-	dw NoEvolutionMoves4        ; BASTIODON
+	dw BastiodonEvolutionMoves  ; BASTIODON
 	dw NoEvolutionMoves4        ; COMBEE
-	dw NoEvolutionMoves4        ; VESPIQUEN
+	dw VespiquenEvolutionMoves  ; VESPIQUEN
 	dw NoEvolutionMoves4        ; PACHIRISU
 	dw NoEvolutionMoves4        ; BUIZEL
-	dw NoEvolutionMoves4        ; FLOATZEL
+	dw FloatzelEvolutionMoves   ; FLOATZEL
 	dw NoEvolutionMoves4        ; SHELLOS
-	dw NoEvolutionMoves4        ; GASTRODON
+	dw GastrodonEvolutionMoves  ; GASTRODON
 	dw NoEvolutionMoves4        ; DRIFLOON
-	dw NoEvolutionMoves4        ; DRIFBLIM
+	dw DrifblimEvolutionMoves   ; DRIFBLIM
 	dw NoEvolutionMoves4        ; BUNEARY
-	dw NoEvolutionMoves4        ; LOPUNNY
+	dw LopunnyEvolutionMoves    ; LOPUNNY
 	dw MismagiusEvolutionMoves  ; MISMAGIUS
 	dw HonchkrowEvolutionMoves  ; HONCHKROW
 	dw NoEvolutionMoves4        ; GLAMEOW
-	dw NoEvolutionMoves4        ; PURUGLY
+	dw PuruglyEvolutionMoves    ; PURUGLY
 	dw NoEvolutionMoves4        ; CHINGLING
 	dw NoEvolutionMoves4        ; STUNKY
-	dw NoEvolutionMoves4        ; SKUNTANK
+	dw SkuntankEvolutionMoves   ; SKUNTANK
 	dw NoEvolutionMoves4        ; BRONZOR
-	dw NoEvolutionMoves4        ; BRONZONG
+	dw BronzongEvolutionMoves   ; BRONZONG
 	dw NoEvolutionMoves4        ; BONSLY
 	dw NoEvolutionMoves4        ; MIME_JR
 	dw NoEvolutionMoves4        ; HAPPINY
 	dw NoEvolutionMoves4        ; CHATOT
 	dw NoEvolutionMoves4        ; SPIRITOMB
 	dw NoEvolutionMoves4        ; GIBLE
-	dw NoEvolutionMoves4        ; GABITE
-	dw NoEvolutionMoves4        ; GARCHOMP
+	dw GabiteEvolutionMoves     ; GABITE
+	dw GarchompEvolutionMoves   ; GARCHOMP
 	dw NoEvolutionMoves4        ; MUNCHLAX
 	dw NoEvolutionMoves4        ; RIOLU
-	dw NoEvolutionMoves4        ; LUCARIO
+	dw LucarioEvolutionMoves    ; LUCARIO
 	dw NoEvolutionMoves4        ; HIPPOPOTAS
 	dw NoEvolutionMoves4        ; HIPPOWDON
 	dw NoEvolutionMoves4        ; SKORUPI
@@ -124,6 +124,32 @@ BibarelEvolutionMoves:
 	dw WATER_GUN
 	db 0 ; no more evolution moves
 
+RampardosEvolutionMoves:
+	dw ENDEAVOR
+	db 0 ; no more evolution moves
+
+BastiodonEvolutionMoves:
+BronzongEvolutionMoves:
+	dw BLOCK
+	db 0 ; no more evolution moves
+
+FloatzelEvolutionMoves:
+GarchompEvolutionMoves:
+	dw CRUNCH
+	db 0 ; no more evolution moves
+
+GastrodonEvolutionMoves:
+	dw EARTH_POWER
+	db 0 ; no more evolution moves
+
+DrifblimEvolutionMoves:
+	dw PHANTOM_FORCE
+	db 0 ; no more evolution moves
+
+LopunnyEvolutionMoves:
+	dw RETURN
+	db 0 ; no more evolution moves
+
 MismagiusEvolutionMoves:
 	dw LUCKY_CHANT
 	db 0 ; no more evolution moves
@@ -131,6 +157,22 @@ MismagiusEvolutionMoves:
 HonchkrowEvolutionMoves:
 GliscorEvolutionMoves:
 	dw NIGHT_SLASH
+	db 0 ; no more evolution moves
+
+PuruglyEvolutionMoves:
+	dw SWAGGER
+	db 0 ; no more evolution moves
+
+SkuntankEvolutionMoves:
+	dw FLAMETHROWER
+	db 0 ; no more evolution moves
+
+GabiteEvolutionMoves:
+	dw DUAL_CHOP
+	db 0 ; no more evolution moves
+
+LucarioEvolutionMoves:
+	dw AURA_SPHERE
 	db 0 ; no more evolution moves
 
 YanmegaEvolutionMoves:
@@ -145,6 +187,7 @@ PorygonZEvolutionMoves:
 	dw NASTY_PLOT
 	db 0 ; no more evolution moves
 
+VespiquenEvolutionMoves:
 GalladeEvolutionMoves:
 	dw SLASH
 	db 0 ; no more evolution moves

@@ -597,6 +597,7 @@
 	const GUARD_SWAP
 	const HEART_SWAP
 	const JAW_LOCK
+	const PUNISHMENT
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

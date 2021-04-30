@@ -597,6 +597,7 @@ MoveDescriptions1:
 	dw GuardSwapDescription
 	dw HeartSwapDescription
 	dw JawLockDescription
+	dw PunishmentDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2549,5 +2550,9 @@ HeartSwapDescription:
 JawLockDescription:
 	db   "Stops escape for"
 	next "the foe and user.@"
+
+PunishmentDescription:
+	db   "Power is based on"
+	next "foe's stat boosts.@"
 
 		;"123456789123456789"

@@ -590,4 +590,5 @@ MoveNames::
 	db "GUARD SWAP@"
 	db "HEART SWAP@"
 	db "JAW LOCK@"
+	db "PUNISHMENT@"
 	  ;"123456123456@"

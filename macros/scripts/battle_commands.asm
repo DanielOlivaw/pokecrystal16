@@ -177,6 +177,7 @@ ENDM
 	command awaken                  ; aa
 	command clangingscales          ; ab
 	command shiftgear               ; ac
+	command punishment              ; ad
 
 	enum_start $fe
 	command endturn                 ; fe

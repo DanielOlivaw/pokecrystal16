@@ -299,7 +299,37 @@ CursolaEvosAttacks:
 
 MrRimeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FAKE_TEARS
+	dbw 1, SLACK_OFF
+	dbw 1, BLOCK
+	dbw 1, MISTY_TERRAIN
+	dbw 1, DAZZLING_GLEAM
+	dbw 1, LIGHT_SCREEN
+	dbw 1, REFLECT
+	dbw 1, SAFEGUARD
+	dbw 1, PROTECT
+	dbw 1, MIMIC
+	dbw 1, DOUBLESLAP
+	dbw 1, BARRIER
+	dbw 1, POUND
+	dbw 1, RAPID_SPIN
+	dbw 1, ICE_SHARD
+	dbw 3, CONFUSION
+	dbw 6, TICKLE
+	dbw 9, MEDITATE
+	dbw 12, DOUBLE_KICK
+	dbw 15, BATON_PASS
+	dbw 18, ENCORE
+	dbw 21, PSYBEAM
+	dbw 24, HYPNOSIS
+	dbw 27, SUBSTITUTE
+	dbw 30, ICY_WIND
+	dbw 33, SUCKER_PUNCH
+	dbw 36, MIRROR_COAT
+	dbw 39, FREEZE_DRY
+	dbw 42, TRICK
+	dbw 45, PSYCHIC
+	dbw 48, TEETER_DANCE
 	db 0 ; no more level-up moves
 
 RunerigusEvosAttacks:

@@ -618,6 +618,7 @@ BattleAnimations::
 	dw BattleAnim_GuardSwap
 	dw BattleAnim_HeartSwap
 	dw BattleAnim_JawLock
+	dw BattleAnim_Punishment
 
 	dw BattleAnim_SweetScent2
 
@@ -1001,6 +1002,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Punishment:
 BattleAnim_JawLock:
 BattleAnim_HeartSwap:
 BattleAnim_PowerSwap:

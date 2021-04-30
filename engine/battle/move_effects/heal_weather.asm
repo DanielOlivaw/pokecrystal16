@@ -22,25 +22,30 @@ GetThirdMaxHP::
 BattleCommand_HealSun:
 ; Weather-sensitive heal.
 
-	ld hl, wBattleMonMaxHP
+	xor a
+	ld [wAttackMissed], a
+
 	ld de, wBattleMonHP
+	ld hl, wBattleMonMaxHP
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .start
-	ld hl, wEnemyMonMaxHP
+	jr z, .got_hp
 	ld de, wEnemyMonHP
+	ld hl, wEnemyMonMaxHP
+.got_hp
+; Don't bother healing if HP is already full.
+	push hl
+	push de
+	ld c, 2
+	call CompareBytes
+	pop de
+	pop hl
+	jr z, .Full
 
-.start
 ; Index for .Multipliers
 ; Default restores half max HP.
 	ld c, 0
 	ld b, 0
-
-; Don't bother healing if HP is already full.
-	push bc
-	call CompareBytes
-	pop bc
-	jr z, .Full
 
 ; Get current weather
 	ld a, [wBattleWeather]
@@ -85,25 +90,30 @@ BattleCommand_HealSun:
 BattleCommand_ShoreUp:
 ; Weather-sensitive heal.
 
-	ld hl, wBattleMonMaxHP
+	xor a
+	ld [wAttackMissed], a
+
 	ld de, wBattleMonHP
+	ld hl, wBattleMonMaxHP
 	ldh a, [hBattleTurn]
 	and a
-	jr z, .start
-	ld hl, wEnemyMonMaxHP
+	jr z, .got_hp
 	ld de, wEnemyMonHP
+	ld hl, wEnemyMonMaxHP
+.got_hp
+; Don't bother healing if HP is already full.
+	push hl
+	push de
+	ld c, 2
+	call CompareBytes
+	pop de
+	pop hl
+	jr z, .Full
 
-.start
 ; Index for .Multipliers
 ; Default restores half max HP.
 	ld c, 0
 	ld b, 0
-
-; Don't bother healing if HP is already full.
-	push bc
-	call CompareBytes
-	pop bc
-	jr z, .Full
 
 ; Get current weather
 	ld a, [wBattleWeather]

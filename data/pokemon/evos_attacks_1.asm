@@ -1985,21 +1985,24 @@ WeezingGEvosAttacks:
 ChanseyEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
-	dbw 1, DEFENSE_CURL
-	dbw 1, GROWL
+	dbw 1, CHARM
+	dbw 1, COVET
+	dbw 1, DISARMING_VOICE
+	dbw 1, SWEET_KISS
+	dbw 1, MINIMIZE
 	dbw 1, POUND
-	dbw 4, TAIL_WHIP
-	dbw 9, DOUBLESLAP
-	dbw 13, REFRESH
-	dbw 18, ECHOED_VOICE
-	dbw 22, SING
-	dbw 27, TAKE_DOWN
-	dbw 31, MINIMIZE
-	dbw 36, LIGHT_SCREEN
+	dbw 1, GROWL
+	dbw 5, TAIL_WHIP
+	dbw 10, DOUBLESLAP
+	dbw 15, REFRESH
+	dbw 20, ECHOED_VOICE
+	dbw 25, SING
+	dbw 30, TAKE_DOWN
+	dbw 35, LIGHT_SCREEN
 	dbw 40, EGG_BOMB
 	dbw 45, SOFTBOILED
-	dbw 49, HEALING_WISH
-	dbw 54, DOUBLE_EDGE
+	dbw 50, HEALING_WISH
+	dbw 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
@@ -2134,29 +2137,34 @@ StarmieEvosAttacks:
 MrMimeGEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 42, TR_ANYTIME, MR__RIME
 	db 0 ; no more evolutions
-	dbw 1, ENCORE
-	dbw 1, PROTECT
-	dbw 1, MIMIC
+	dbw 1, MISTY_TERRAIN
+	dbw 1, DAZZLING_GLEAM
 	dbw 1, LIGHT_SCREEN
 	dbw 1, REFLECT
 	dbw 1, SAFEGUARD
+	dbw 1, PROTECT
+	dbw 1, MIMIC
+	dbw 1, DOUBLESLAP
 	dbw 1, BARRIER
-	dbw 1, MISTY_TERRAIN
 	dbw 1, POUND
 	dbw 1, RAPID_SPIN
-	dbw 1, BATON_PASS
 	dbw 1, ICE_SHARD
-	dbw 5, MEDITATE
-	dbw 10, CONFUSION
-	dbw 15, ICY_WIND
-	dbw 20, DOUBLE_KICK
-	dbw 25, PSYBEAM
-	dbw 30, HYPNOSIS
-	dbw 35, MIRROR_COAT
-	dbw 40, SUCKER_PUNCH
-	dbw 45, FREEZE_DRY
-	dbw 50, PSYCHIC
-	dbw 55, TEETER_DANCE
+	dbw 3, CONFUSION
+	dbw 6, TICKLE
+	dbw 9, MEDITATE
+	dbw 12, DOUBLE_KICK
+	dbw 15, BATON_PASS
+	dbw 18, ENCORE
+	dbw 21, PSYBEAM
+	dbw 24, HYPNOSIS
+	dbw 27, SUBSTITUTE
+	dbw 30, ICY_WIND
+	dbw 33, SUCKER_PUNCH
+	dbw 36, MIRROR_COAT
+	dbw 39, FREEZE_DRY
+	dbw 42, TRICK
+	dbw 45, PSYCHIC
+	dbw 48, TEETER_DANCE
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
@@ -2508,9 +2516,13 @@ AerodactylEvosAttacks:
 
 SnorlaxEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, ODOR_SLEUTH
+	dbw 1, COVET
 	dbw 1, STOCKPILE
 	dbw 1, SWALLOW
-	dbw 1, SPIT_UP
+	dbw 1, SCREECH
+	dbw 1, METRONOME
+	dbw 1, FLAIL
 	dbw 1, TACKLE
 	dbw 1, DEFENSE_CURL
 	dbw 4, LICK

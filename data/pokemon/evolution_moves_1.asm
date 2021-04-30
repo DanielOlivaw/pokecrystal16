@@ -98,7 +98,7 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; SEADRA
 	dw NoEvolutionMoves1         ; STARYU
 	dw NoEvolutionMoves1         ; STARMIE
-	dw NoEvolutionMoves1         ; MR__MIME_G
+	dw MrMimeGEvolutionMoves     ; MR__MIME_G
 	dw NoEvolutionMoves1         ; SCYTHER
 	dw NoEvolutionMoves1         ; ELECTABUZZ
 	dw NoEvolutionMoves1         ; PINSIR
@@ -260,6 +260,10 @@ WeezingGEvolutionMoves:
 
 TangelaEvolutionMoves:
 	dw INGRAIN
+	db 0 ; no more evolution moves
+
+MrMimeGEvolutionMoves:
+	dw ICE_SHARD
 	db 0 ; no more evolution moves
 
 GyaradosEvolutionMoves:
