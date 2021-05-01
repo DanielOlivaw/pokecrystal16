@@ -617,4 +617,5 @@ Moves1:
 	move EFFECT_STATUS_SELF,         0, FIGHTING, STATUS,   100, 15,   0 ; OCTOLOCK
 	move EFFECT_RESET_STATS_HIT,    90, STEEL,    SPECIAL,  100,  5,   0 ; CHRONO_SHIFT
 	move EFFECT_TRICK_ROOM_HIT,     90, WATER,    SPECIAL,  100,  5,   0 ; COSMIC_WARP
+	move EFFECT_STATUS_SELF,         0, NORMAL,   STATUS,   100, 10,   0 ; TEATIME
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -1358,6 +1358,14 @@ CultivateText:
 	text "!"
 	prompt
 
+AteBerryText:
+	text "<TARGET>"
+	line "ate its"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 CantEscapeNowText:
 	text "<TARGET>"
 	line "can't escape now!"

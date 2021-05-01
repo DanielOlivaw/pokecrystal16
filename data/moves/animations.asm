@@ -627,6 +627,7 @@ BattleAnimations::
 	dw BattleAnim_Octolock
 	dw BattleAnim_ChronoShift
 	dw BattleAnim_CosmicWarp
+	dw BattleAnim_Teatime
 
 	dw BattleAnim_SweetScent2
 
@@ -1010,6 +1011,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Teatime:
 BattleAnim_CosmicWarp:
 BattleAnim_ChronoShift:
 BattleAnim_Octolock:

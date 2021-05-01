@@ -606,6 +606,7 @@
 	const OCTOLOCK
 	const CHRONO_SHIFT
 	const COSMIC_WARP
+	const TEATIME
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

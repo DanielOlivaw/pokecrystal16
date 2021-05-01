@@ -310,4 +310,10 @@ Find_StatusTargetSelf:
 	ld bc, OCTOLOCK
 	call CompareMove2
 	jp z, BattleCommand_Octolock
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, TEATIME
+	call CompareMove2
+	jp z, BattleCommand_Teatime
 	ret

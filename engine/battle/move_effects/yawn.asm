@@ -75,7 +75,7 @@ YawnPutToSleep:
 	jr z, .fog
 	cp WEATHER_STORM
 	jr z, .cant_sleep
-	call GetOpponentItem_BugBite
+	callfar GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_SLEEP
 	jr nz, .not_protected_by_item

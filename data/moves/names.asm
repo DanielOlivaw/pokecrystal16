@@ -599,4 +599,5 @@ MoveNames::
 	db "OCTOLOCK@"
 	db "CHRONO SHIFT@"
 	db "COSMIC WARP@"
+	db "TEATIME@"
 	  ;"123456123456@"

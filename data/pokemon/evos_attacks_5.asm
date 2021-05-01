@@ -88,45 +88,151 @@ OshawottEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 17, TR_ANYTIME, DEWOTT
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 6, WATER_GUN
+	dbw 9, FOCUS_ENERGY
+	dbw 12, AQUA_JET
+	dbw 15, RAZOR_SHELL
+	dbw 18, FURY_CUTTER
+	dbw 21, WATER_PULSE
+	dbw 24, REVENGE
+	dbw 27, ENCORE
+	dbw 30, RETALIATE
+	dbw 33, AQUA_TAIL
+	dbw 36, SWORDS_DANCE
+	dbw 39, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 DewottEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, SAMUROTT
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 6, WATER_GUN
+	dbw 9, FOCUS_ENERGY
+	dbw 12, AQUA_JET
+	dbw 15, RAZOR_SHELL
+	dbw 19, FURY_CUTTER
+	dbw 23, WATER_PULSE
+	dbw 27, REVENGE
+	dbw 31, ENCORE
+	dbw 35, RETALIATE
+	dbw 39, AQUA_TAIL
+	dbw 43, SWORDS_DANCE
+	dbw 47, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SamurottEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, MEGAHORN
+	dbw 1, AQUA_TAIL
 	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 6, WATER_GUN
+	dbw 9, FOCUS_ENERGY
+	dbw 12, AQUA_JET
+	dbw 15, RAZOR_SHELL
+	dbw 19, FURY_CUTTER
+	dbw 23, WATER_PULSE
+	dbw 27, REVENGE
+	dbw 31, ENCORE
+	dbw 35, RETALIATE
+	dbw 35, SLASH
+	dbw 40, SEAMITAR
+	dbw 45, SWORDS_DANCE
+	dbw 50, SACRED_SWORD
+	dbw 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 LillipupEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, HERDIER
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 4, ODOR_SLEUTH
+	dbw 8, BITE
+	dbw 12, BABY_DOLL_EYES
+	dbw 17, TAKE_DOWN
+	dbw 20, WORK_UP
+	dbw 24, CRUNCH
+	dbw 28, PLAY_ROUGH
+	dbw 32, RETALIATE
+	dbw 36, ROAR
+	dbw 40, REVERSAL
+	dbw 44, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 HerdierEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 32, TR_ANYTIME, STOUTLAND
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 4, ODOR_SLEUTH
+	dbw 8, BITE
+	dbw 12, BABY_DOLL_EYES
+	dbw 18, TAKE_DOWN
+	dbw 22, WORK_UP
+	dbw 27, CRUNCH
+	dbw 33, PLAY_ROUGH
+	dbw 37, RETALIATE
+	dbw 42, ROAR
+	dbw 47, REVERSAL
+	dbw 52, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 StoutlandEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, ICE_FANG
+	dbw 1, FIRE_FANG
+	dbw 1, THUNDER_FANG
 	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 4, ODOR_SLEUTH
+	dbw 8, BITE
+	dbw 12, BABY_DOLL_EYES
+	dbw 18, TAKE_DOWN
+	dbw 22, WORK_UP
+	dbw 27, CRUNCH
+	dbw 34, PLAY_ROUGH
+	dbw 39, RETALIATE
+	dbw 45, ROAR
+	dbw 51, REVERSAL
+	dbw 57, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 PurrloinEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, LIEPARD
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 4, SAND_ATTACK
+	dbw 8, PURSUIT
+	dbw 12, FAKE_OUT
+	dbw 16, FURY_SWIPES
+	dbw 20, HONE_CLAWS
+	dbw 24, SLASH
+	dbw 28, CAPTIVATE
+	dbw 32, SUCKER_PUNCH
+	dbw 36, NASTY_PLOT
+	dbw 40, NIGHT_SLASH
+	dbw 44, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 LiepardEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 4, SAND_ATTACK
+	dbw 8, PURSUIT
+	dbw 12, FAKE_OUT
+	dbw 16, FURY_SWIPES
+	dbw 21, HONE_CLAWS
+	dbw 26, SLASH
+	dbw 31, CAPTIVATE
+	dbw 36, SUCKER_PUNCH
+	dbw 41, NASTY_PLOT
+	dbw 46, NIGHT_SLASH
+	dbw 51, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 MunnaEvosAttacks:

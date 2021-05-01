@@ -606,6 +606,7 @@ MoveDescriptions1:
 	dw OctolockDescription
 	dw ChronoShiftDescription
 	dw CosmicWarpDescription
+	dw TeatimeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2551,5 +2552,9 @@ ChronoShiftDescription:
 CosmicWarpDescription:
 	db   "Warps space to re-"
 	next "verse move order.@"
+
+TeatimeDescription:
+	db   "Each #MON eats"
+	next "its held BERRY.@"
 
 		;"123456789123456789"

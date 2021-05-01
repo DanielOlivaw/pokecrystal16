@@ -2,7 +2,7 @@ BattleCommand_BugBite:
 ; Consume the opponent's berry and steal its effect
 
 ; Get the effect of the opponent's item
-	call GetOpponentItem_BugBite
+	callfar GetOpponentItem
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
@@ -64,8 +64,8 @@ BattleCommand_BugBite:
 .stealfullhealberry
 	ld hl, StoleBerryText
 	call StdBattleTextbox
-	call StealConfusionHealingItem
 	call StealHeldStatusHealingItem
+	call StealConfusionHealingItem
 	jp .eatberry
 	
 .stealhpberry
@@ -180,34 +180,8 @@ BattleCommand_BugBite:
 	ret
 
 
-GetOpponentItem_BugBite:
-; Return the effect of the opponent's item in bc, and its id at hl.
-	ld hl, wEnemyMonItem
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .go
-	ld hl, wBattleMonItem
-.go
-	ld a, [hl]
-	and a
-	ret z
-
-	push hl
-	ld hl, ItemAttributes + ITEMATTR_EFFECT
-	dec a
-	ld c, a
-	ld b, 0
-	ld a, ITEMATTR_STRUCT_LENGTH
-	call AddNTimes
-	ld a, BANK(ItemAttributes)
-	call GetFarHalfword
-	ld b, l
-	ld c, h
-	pop hl
-	ret
-
 StealHeldHPHealingItem:
-	call GetOpponentItem_BugBite
+	callfar GetOpponentItem
 	farcall BattleCommand_SwitchTurn
 	ld a, b
 	cp HELD_BERRY
@@ -225,7 +199,7 @@ StealHeldHPHealingItem:
 	ret
 
 StealHeldStatusHealingItem:
-	call GetOpponentItem_BugBite
+	callfar GetOpponentItem
 	ld hl, HeldStatusHealingEffects
 	farcall BattleCommand_SwitchTurn
 .loop
@@ -272,7 +246,6 @@ StealHeldStatusHealingItem:
 	farcall BattleCommand_SwitchTurn
 	ld a, BANK(CalcPlayerStats) ; aka BANK(CalcEnemyStats)
 	rst FarCall
-	farcall BattleCommand_SwitchTurn
 	farcall ItemRecoveryAnim
 	farcall SetOpponentAteBerry
 	; call UseOpponentItem
@@ -290,6 +263,12 @@ StealConfusionHealingItem:
 	call GetBattleVarAddr
 	bit SUBSTATUS_CONFUSED, a
 	ret z
+	callfar GetOpponentItem
+	ld a, b
+	cp HELD_HEAL_CONFUSION
+	jr z, .heal_status
+	cp HELD_HEAL_STATUS
+	ret nz
 
 .heal_status
 	ld a, BATTLE_VARS_SUBSTATUS6
@@ -297,17 +276,12 @@ StealConfusionHealingItem:
 	res SUBSTATUS_CONFUSED, [hl]
 	
 	callfar BattleCommand_SwitchTurn
-	callfar ItemRecoveryAnim
 	farcall SetOpponentAteBerry
+	callfar ItemRecoveryAnim
 	callfar BattleCommand_SwitchTurn
 	
 	ld hl, StoleBerryRecoveryText
 	call StdBattleTextbox
-	
-	call GetOpponentItem_BugBite
-	ld a, b
-	cp HELD_HEAL_STATUS
-	ret z
 	
 	ldh a, [hBattleTurn]
 	and a

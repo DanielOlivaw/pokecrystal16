@@ -1,4 +1,4 @@
-NUM_CULTIVATE_BERRIES EQU 10
+NUM_CULTIVATE_BERRIES EQU 20
 
 BattleCommand_Cultivate:
 ; Generate a random berry for the user
@@ -55,16 +55,26 @@ BattleCommand_Cultivate:
 	ret
 
 .berries
-	db PSNCUREBERRY ; 0
-	db PRZCUREBERRY ; 1
-	db BURNT_BERRY  ; 2
-	db ICE_BERRY    ; 3
-	db BITTER_BERRY ; 4
-	db MINT_BERRY   ; 5
-	db MIRACLEBERRY ; 6
-	db BERRY        ; 7
-	db GOLD_BERRY   ; 8
-	db MYSTERYBERRY ; 9
+	db BERRY        ; 0
+	db BERRY        ; 1
+	db BERRY        ; 2
+	db BERRY        ; 3
+	db PSNCUREBERRY ; 4
+	db PSNCUREBERRY ; 5
+	db PRZCUREBERRY ; 6
+	db PRZCUREBERRY ; 7
+	db BURNT_BERRY  ; 8
+	db BURNT_BERRY  ; 9
+	db ICE_BERRY    ; 10
+	db ICE_BERRY    ; 11
+	db BITTER_BERRY ; 12
+	db BITTER_BERRY ; 13
+	db MINT_BERRY   ; 14
+	db MINT_BERRY   ; 15
+	db MIRACLEBERRY ; 16
+	db GOLD_BERRY   ; 17
+	db GOLD_BERRY   ; 18
+	db MYSTERYBERRY ; 19
 
 .random_berry
 ; Choose a random berry from the above list.
