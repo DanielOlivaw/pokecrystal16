@@ -1837,40 +1837,152 @@ AzelfEvosAttacks:
 
 DialgaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCARY_FACE
+	dbw 1, METAL_CLAW
+	dbw 7, DRAGONBREATH
+	dbw 14, ANCIENTPOWER
+	dbw 21, SLASH
+	dbw 28, METAL_BURST
+	dbw 35, DRAGON_CLAW
+	dbw 42, AURA_SPHERE
+	dbw 49, FLASH_CANNON
+	dbw 56, POWER_GEM
+	dbw 63, CHRONO_SHIFT
+	dbw 70, EARTH_POWER
+	dbw 77, ROAR_OF_TIME
+	dbw 84, IRON_TAIL
 	db 0 ; no more level-up moves
 
 PalkiaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCARY_FACE
+	dbw 1, WATER_PULSE
+	dbw 7, DRAGONBREATH
+	dbw 14, ANCIENTPOWER
+	dbw 21, SLASH
+	dbw 28, AQUA_RING
+	dbw 35, DRAGON_CLAW
+	dbw 42, AURA_SPHERE
+	dbw 49, AQUA_TAIL
+	dbw 56, POWER_GEM
+	dbw 63, COSMIC_WARP
+	dbw 70, EARTH_POWER
+	dbw 77, SPACIAL_REND
+	dbw 84, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 RegigigasEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, FIRE_PUNCH
+	dbw 1, ICE_PUNCH
+	dbw 1, THUNDERPUNCH
+	dbw 1, DIZZY_PUNCH
+	dbw 1, POUND
+	dbw 1, FORESIGHT
+	dbw 1, CONFUSE_RAY
+	dbw 6, PAYBACK
+	dbw 12, REVENGE
+	dbw 18, STOMP
+	dbw 24, PROTECT
+	dbw 30, KNOCK_OFF
+	dbw 36, MEGA_PUNCH
+	dbw 42, BODY_PRESS
+	dbw 48, PROTECT
+	dbw 54, ZEN_HEADBUTT
+	dbw 60, HEAVY_SLAM
+	dbw 66, HAMMER_ARM
+	dbw 72, GIGA_IMPACT
+	dbw 84, CRUSH_GRIP
 	db 0 ; no more level-up moves
 
 GiratinaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCARY_FACE
+	dbw 1, SHADOW_SNEAK
+	dbw 7, DRAGONBREATH
+	dbw 14, ANCIENTPOWER
+	dbw 21, SLASH
+	dbw 28, PAIN_SPLIT
+	dbw 35, DRAGON_CLAW
+	dbw 42, AURA_SPHERE
+	dbw 49, OMINOUS_WIND
+	dbw 56, SHADOW_CLAW
+	dbw 63, HEX
+	dbw 70, EARTH_POWER
+	dbw 77, SHADOW_FORCE
+	dbw 84, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 CresseliaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 1, DOUBLE_TEAM
+	dbw 6, MIST
+	dbw 12, AURORA_BEAM
+	dbw 18, PSYBEAM
+	dbw 24, PSYCHO_SHIFT
+	dbw 30, SLASH
+	dbw 36, PSYCHO_CUT
+	dbw 42, MOONLIGHT
+	dbw 48, SAFEGUARD
+	dbw 54, PSYCHIC
+	dbw 60, MOONBLAST
+	dbw 66, FUTURE_SIGHT
+	dbw 72, LUNAR_DANCE
 	db 0 ; no more level-up moves
 
 DarkraiEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, NIGHT_SHADE
+	dbw 1, DISABLE
+	dbw 7, OMINOUS_WIND
+	dbw 14, QUICK_ATTACK
+	dbw 21, PURSUIT
+	dbw 28, HYPNOSIS
+	dbw 35, FAINT_ATTACK
+	dbw 42, NIGHTMARE
+	dbw 49, DOUBLE_TEAM
+	dbw 56, HAZE
+	dbw 63, PHANTOM_FORCE
+	dbw 70, DARK_VOID
+	dbw 77, NASTY_PLOT
+	dbw 84, DARK_PULSE
+	dbw 91, DREAM_EATER
 	db 0 ; no more level-up moves
 
 ShayminEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, QUICK_ATTACK
+	dbw 1, DEFENSE_CURL
+	dbw 6, GROWTH
+	dbw 12, MAGICAL_LEAF
+	dbw 18, LEECH_SEED
+	dbw 24, LUCKY_CHANT
+	dbw 30, SYNTHESIS
+	dbw 36, SWEET_SCENT
+	dbw 42, AIR_SLASH
+	dbw 48, AROMATHERAPY
+	dbw 54, ENERGY_BALL
+	dbw 60, GRASSWHISTLE
+	dbw 66, CULTIVATE
+	dbw 72, SWEET_KISS
+	dbw 78, HEALING_WISH
+	dbw 84, LEAF_STORM
+	dbw 90, SEED_FLARE
 	db 0 ; no more level-up moves
 
 ArceusEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SEISMIC_TOSS
+	dbw 1, COSMIC_POWER
+	dbw 10, PUNISHMENT
+	dbw 20, EARTH_POWER
+	dbw 30, HYPER_VOICE
+	dbw 40, REFRESH
+	dbw 50, EXTREMESPEED
+	dbw 60, FUTURE_SIGHT
+	dbw 70, RECOVER
+	dbw 80, HYPER_BEAM
+	dbw 90, PERISH_SONG
+	dbw 100, JUDGEMENT
 	db 0 ; no more level-up moves
