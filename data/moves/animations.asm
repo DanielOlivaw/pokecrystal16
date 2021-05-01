@@ -621,6 +621,9 @@ BattleAnimations::
 	dw BattleAnim_Punishment
 	dw BattleAnim_StoredPower
 	dw BattleAnim_PowerTrip
+	dw BattleAnim_TarShot
+	dw BattleAnim_GravApple
+	dw BattleAnim_AppleAcid
 
 	dw BattleAnim_SweetScent2
 
@@ -1004,6 +1007,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_TarShot:
+BattleAnim_GravApple:
+BattleAnim_AppleAcid:
 BattleAnim_PowerTrip:
 BattleAnim_StoredPower:
 BattleAnim_Punishment:

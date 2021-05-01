@@ -496,7 +496,7 @@ wPlayerSubStatus7::
 ; 7 me first
 ; 6 powdered
 ; 5 electrified
-; 4 
+; 4 tar shot
 ; 3 
 ; 2 
 ; 1 

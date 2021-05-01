@@ -486,9 +486,9 @@ FeraligatrEvosAttacks:
 SentretEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, FURRET
 	db 0 ; no more evolutions
-	; dbw 1, SCRATCH
-	; dbw 1, FORESIGHT
-	dbw 1, DEFENSE_CURL
+	dbw 1, SCRATCH
+	dbw 1, FORESIGHT
+	dbw 4, DEFENSE_CURL
 	dbw 8, QUICK_ATTACK
 	dbw 12, FURY_SWIPES
 	dbw 16, SLAM

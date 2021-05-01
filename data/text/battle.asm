@@ -1796,6 +1796,11 @@ SwitchedStatChangesText:
 	line "<TARGET>!"
 	prompt
 
+CoveredInTarText:
+	text "<TARGET>"
+	line "is covered in tar!"
+	prompt
+
 ; Power40Text_Test::
 	; text "ELECTRO BALL has"
 	; line "40 power!"

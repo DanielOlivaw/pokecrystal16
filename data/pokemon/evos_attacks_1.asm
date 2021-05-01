@@ -189,9 +189,7 @@ CharmanderEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, CHARMELEON
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
-	dbw 1, HOWL
-	dbw 1, SHIFT_GEAR
-	dbw 1, STORED_POWER
+	dbw 1, GROWL
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -769,7 +767,7 @@ JigglypuffEvosAttacks:
 
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
-	; dbw 1, GRAV_APPLE
+	dbw 1, GRAV_APPLE
 	dbw 1, SWEET_KISS
 	dbw 1, DISARMING_VOICE
 	dbw 1, DISABLE

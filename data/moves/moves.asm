@@ -611,4 +611,7 @@ Moves1:
 	move EFFECT_PUNISHMENT,          1, DARK,     PHYSICAL, 100,  5,   0 ; PUNISHMENT
 	move EFFECT_STORED_POWER,        1, PSYCHIC,  SPECIAL,  100, 10,   0 ; STORED_POWER
 	move EFFECT_STORED_POWER,        1, DARK,     PHYSICAL, 100, 10,   0 ; POWER_TRIP
+	move EFFECT_TAR_SHOT,            0, ROCK,     STATUS,   100, 15,   0 ; TAR_SHOT
+	move EFFECT_DEFENSE_DOWN_HIT,   80, GRASS,    PHYSICAL, 100, 10, 100 ; GRAV_APPLE
+	move EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,    SPECIAL,  100, 10, 100 ; APPLE_ACID
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -75,4 +75,7 @@ Find_Command:
 
 	cp EFFECT_UPROOT
 	jp z, BattleCommand_Uproot
+
+	cp EFFECT_TAR_SHOT
+	jp z, BattleCommand_TarShot
 	ret

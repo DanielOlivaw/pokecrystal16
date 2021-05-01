@@ -600,6 +600,9 @@ MoveDescriptions1:
 	dw PunishmentDescription
 	dw StoredPowerDescription
 	dw PowerTripDescription
+	dw TarShotDescription
+	dw GravAppleDescription
+	dw AppleAcidDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1992,6 +1995,7 @@ BrickBreakDescription:
 
 ThunderousKickDescription:
 FireLashDescription:
+GravAppleDescription:
 	db   "An attack that"
 	next "lowers DEFENSE.@"
 
@@ -2561,5 +2565,13 @@ StoredPowerDescription:
 PowerTripDescription:
 	db   "Power is based on"
 	next "the user's boosts.@"
+
+TarShotDescription:
+	db   "Lowers SPEED and"
+	next "covers foe in tar.@"
+
+AppleAcidDescription:
+	db   "An attack that"
+	next "lowers SPCL.DEF.@"
 
 		;"123456789123456789"

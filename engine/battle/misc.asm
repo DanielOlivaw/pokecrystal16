@@ -49,13 +49,25 @@ GetPlayerBackpicCoords:
 	lb bc, 6, 6
 	ret
 
-DoChargeBoost:
-; Charge doubles the power damage of the next Electric move used by the user
+SubstatusBoosts:
 	ld a, BATTLE_VARS_SUBSTATUS6
 	call GetBattleVarAddr
 	bit SUBSTATUS_ELECTRIC_CHARGED, [hl]
-	ret z
+	call nz, DoChargeBoost
 
+	ld a, BATTLE_VARS_SUBSTATUS7
+	call GetBattleVarAddr
+	bit SUBSTATUS_ME_FIRST, [hl]
+	call nz, DoMeFirstBoost
+
+	ld a, BATTLE_VARS_SUBSTATUS7_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_TAR_SHOT, [hl]
+	jr nz, DoTarShotBoost
+	ret
+
+DoChargeBoost:
+; Charge doubles the power damage of the next electric move used by the user.
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	and TYPE_MASK
@@ -67,16 +79,22 @@ DoChargeBoost:
 
 DoMeFirstBoost:
 ; When Me First steals a move, it boosts its power by 50%.
-	ld a, BATTLE_VARS_SUBSTATUS7
-	call GetBattleVarAddr
-	bit SUBSTATUS_ME_FIRST, [hl]
-	ret z
-
 	ld de, .MeFirstBoost
 	jr ApplyBoostModifier
 
 .MeFirstBoost
 	db 0, MORE_EFFECTIVE
+
+DoTarShotBoost:
+; Tar Shot doubles the power damage of fire moves used on the target.
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp FIRE
+	ret nz
+
+	farcall DoubleDamage
+	ret
 
 DoWeatherModifiers:
 	ld de, WeatherTypeModifiers

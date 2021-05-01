@@ -2977,6 +2977,20 @@ StoredPower:
 	kingsrock
 	endmove
 
+TarShot:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	speeddown
+	lowersub
+	statdownanim
+	raisesub
+	farcommand
+	statdownmessage
+	statdownfailtext
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

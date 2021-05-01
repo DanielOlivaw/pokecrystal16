@@ -1392,13 +1392,7 @@ BattleCommand_Stab:
 
 	push hl
 	push de
-	farcall DoChargeBoost
-	pop de
-	pop hl
-
-	push hl
-	push de
-	farcall DoMeFirstBoost
+	farcall SubstatusBoosts
 	pop de
 	pop hl
 

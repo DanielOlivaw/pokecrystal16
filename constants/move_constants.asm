@@ -600,6 +600,9 @@
 	const PUNISHMENT
 	const STORED_POWER
 	const POWER_TRIP
+	const TAR_SHOT
+	const GRAV_APPLE
+	const APPLE_ACID
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

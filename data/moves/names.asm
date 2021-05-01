@@ -593,4 +593,7 @@ MoveNames::
 	db "PUNISHMENT@"
 	db "STORED POWER@"
 	db "POWER TRIP@"
+	db "TAR SHOT@"
+	db "GRAV APPLE@"
+	db "APPLE ACID@"
 	  ;"123456123456@"
