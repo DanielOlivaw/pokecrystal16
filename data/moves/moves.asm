@@ -614,4 +614,7 @@ Moves1:
 	move EFFECT_TAR_SHOT,            0, ROCK,     STATUS,   100, 15,   0 ; TAR_SHOT
 	move EFFECT_DEFENSE_DOWN_HIT,   80, GRASS,    PHYSICAL, 100, 10, 100 ; GRAV_APPLE
 	move EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,    SPECIAL,  100, 10, 100 ; APPLE_ACID
+	move EFFECT_STATUS_SELF,         0, FIGHTING, STATUS,   100, 15,   0 ; OCTOLOCK
+	move EFFECT_RESET_STATS_HIT,   100, STEEL,    SPECIAL,  100,  5,   0 ; CHRONO_SHIFT
+	move EFFECT_TRICK_ROOM_HIT,    100, WATER,    SPECIAL,  100,  5,   0 ; COSMIC_WARP
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

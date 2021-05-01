@@ -624,6 +624,9 @@ BattleAnimations::
 	dw BattleAnim_TarShot
 	dw BattleAnim_GravApple
 	dw BattleAnim_AppleAcid
+	dw BattleAnim_Octolock
+	dw BattleAnim_ChronoShift
+	dw BattleAnim_CosmicWarp
 
 	dw BattleAnim_SweetScent2
 
@@ -1007,6 +1010,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_CosmicWarp:
+BattleAnim_ChronoShift:
+BattleAnim_Octolock:
 BattleAnim_TarShot:
 BattleAnim_GravApple:
 BattleAnim_AppleAcid:

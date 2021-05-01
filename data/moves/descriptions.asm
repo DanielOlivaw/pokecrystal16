@@ -603,6 +603,9 @@ MoveDescriptions1:
 	dw TarShotDescription
 	dw GravAppleDescription
 	dw AppleAcidDescription
+	dw OctolockDescription
+	dw ChronoShiftDescription
+	dw CosmicWarpDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1415,6 +1418,7 @@ SleepTalkDescription:
 	next "while asleep.@"
 
 HealBellDescription:
+AromatherapyDescription:
 	db   "Eliminates all"
 	next "status problems.@"
 
@@ -1475,10 +1479,12 @@ SweetScentDescription:
 	next "evasiveness.@"
 
 IronTailDescription:
+LiquidationDescription:
 	db   "An attack that may"
 	next "reduce DEFENSE.@"
 
 MetalClawDescription:
+MeteorMashDescription:
 	db   "An attack that may"
 	next "up user's ATTACK.@"
 
@@ -1490,7 +1496,6 @@ MorningSunDescription:
 SynthesisDescription:
 MoonlightDescription:
 ShoreUpDescription:
-		;"123456789123456789"
 	db   "Restores HP based"
 	next "on the weather.@"
 
@@ -1511,6 +1516,9 @@ SunnyDayDescription:
 	next "moves for 5 turns.@"
 
 CrunchDescription:
+RazorShellDescription:
+RockSmashDescription:
+CrushClawDescription:
 	db   "An attack that may"
 	next "lower DEFENSE.@"
 
@@ -1527,16 +1535,15 @@ ExtremespeedDescription:
 	next "strike move.@"
 
 AncientpowerDescription:
+OminousWindDescription:
+SilverWindDescription:
 	db   "An attack that may"
 	next "raise all stats.@"
 
 FutureSightDescription:
+DoomDesireDescription:
 	db   "An attack that"
 	next "hits on 3rd turn.@"
-
-RockSmashDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
 
 BeatUpDescription:
 	db   "Party #MON join"
@@ -1640,10 +1647,6 @@ CharmVoiceDescription:
 	db   "A charming cry"
 	next "that never misses.@"
 
-MeteorMashDescription:
-	db   "An attack that may"
-	next "up user's ATTACK.@"
-
 CosmicPowerDescription:
 DefendOrderDescription:
 	db   "Heightens DEFENSE"
@@ -1693,10 +1696,6 @@ PoisonFangDescription:
 	db   "An attack that may"
 	next "badly poison.@"
 
-AromatherapyDescription:
-	db   "Eliminates all"
-	next "status problems.@"
-
 XScissorDescription:
 	db   "Slashes with"
 	next "crossed claws.@"
@@ -1705,10 +1704,6 @@ CrossPoisonDescription:
 PoisonTailDescription:
 	db   "May cause poison."
 	next "High crit ratio.@"
-
-SilverWindDescription:
-	db   "An attack that may"
-	next "raise all stats.@"
 
 HoneClawsDescription:
 	db   "Increases ATTACK"
@@ -1850,10 +1845,6 @@ VenomDrenchDescription:
 	db   "Lowers the stats"
 	next "of a poisoned foe.@"
 
-RazorShellDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
-
 PaybackDescription:
 GyroBallDescription:
 	db   "Stronger if the"
@@ -1864,9 +1855,6 @@ WakeUpSlapDescription:
 	next "wakes a sleeper.@"
 
 TrickDescription:
-	db   "Tricks the foe in-"
-	next "to trading items.@"
-
 SwitcherooDescription:
 	db   "Tricks the foe in-"
 	next "to trading items.@"
@@ -1925,6 +1913,8 @@ DragonPulseDescription:
 	next "the user's mouth.@"
 
 DragonDanceDescription:
+WildFuryDescription:
+ShiftGearDescription:
 	db   "Increases ATTACK"
 	next "and SPEED.@"
 
@@ -1964,10 +1954,6 @@ BabyDollEyesDescription:
 MuddyWaterDescription:
 	db   "A wave that may"
 	next "reduce accuracy.@"
-
-LiquidationDescription:
-	db   "An attack that may"
-	next "reduce DEFENSE.@"
 
 BlockDescription:
 	db   "Blocks escape with"
@@ -2035,10 +2021,6 @@ DynamoRushDescription:
 ShatterClawDescription:
 	db   "Shatters a frozen"
 	next "target with claws.@"
-
-WildFuryDescription:
-	db   "Increases ATTACK"
-	next "and SPEED.@"
 
 WindRideDescription:
 	db   "An airborne tackle"
@@ -2164,10 +2146,6 @@ BlazeKickDescription:
 	db   "May cause a burn."
 	next "High crit ratio.@"
 
-OminousWindDescription:
-	db   "An attack that may"
-	next "raise all stats.@"
-
 ArmThrustDescription:
 	db   "Repeatedly strikes"
 	next "2-5 times.@"
@@ -2255,10 +2233,6 @@ GrudgeDescription:
 	db   "Depletes all PP of"
 	next "a finishing move.@"
 
-CrushClawDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
-
 WillOWispDescription:
 	db   "Inflicts a burn"
 	next "with intense fire.@"
@@ -2291,10 +2265,6 @@ PrecipiceBladesDescription:
 DragonAscentDescription:
 	db   "Sacrifices DEFENSE"
 	next "and SPCL.DEF.@"
-
-DoomDesireDescription:
-	db   "An attack that"
-	next "hits on 3rd turn.@"
 
 TrickRoomDescription:
 	db   "Reverses the move"
@@ -2521,10 +2491,6 @@ VacuumWaveDescription:
 	db   "A wave of vacuum"
 	next "that hits first.@"
 
-ShiftGearDescription:
-	db   "Increases ATTACK"
-	next "and SPEED.@"
-
 MindBlownDescription:
 	db   "Makes the user's"
 	next "own head expode.@"
@@ -2573,5 +2539,17 @@ TarShotDescription:
 AppleAcidDescription:
 	db   "An attack that"
 	next "lowers SPCL.DEF.@"
+
+OctolockDescription:
+	db   "Traps the foe and"
+	next "lowers defenses.@"
+
+ChronoShiftDescription:
+	db   "Shifts time to re-"
+	next "vert stat changes.@"
+
+CosmicWarpDescription:
+	db   "Warps space to re-"
+	next "verse move order.@"
 
 		;"123456789123456789"

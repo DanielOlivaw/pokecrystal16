@@ -2,6 +2,7 @@ BattleCommand_TrickRoom:
 
 	farcall AnimateCurrentMove
 
+BattleCommand_TrickRoomHit:
 ; If Trick Room is not up, set Trick Room for 5 turns.
 	ld hl, wTrickRoom
 	ld a, [hl]

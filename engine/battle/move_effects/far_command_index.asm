@@ -78,4 +78,7 @@ Find_Command:
 
 	cp EFFECT_TAR_SHOT
 	jp z, BattleCommand_TarShot
+
+	cp EFFECT_TRICK_ROOM_HIT
+	jp z, BattleCommand_TrickRoomHit
 	ret

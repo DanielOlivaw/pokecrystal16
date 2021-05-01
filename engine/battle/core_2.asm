@@ -3,14 +3,15 @@ Core2_NewTurnEndEffects:
 	call EndChargeEffect
 	call EndLaserFocusEffect
 	call EndPowderAndElectrifyEffect
+	call HandleRetaliate
+	call HandleDefrost
 	call HandleYawn
+	call HandleOctolock
 	call HandleAquaRing
 	call HandleIngrain
-	call HandleDefrost
 	call HandleLuckyChant
 	call HandleMagnetRise
 	call HandleTrickRoom
-	call HandleRetaliate
 	call HandleLeftovers
 	call HandleWishEffect
 	call HandleSafeguard
@@ -218,6 +219,43 @@ HandleYawn:
 .lower_yawn_count
 	xor a
 	ld [bc], a
+	ret
+
+HandleOctolock:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+; Player first
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus7
+	call .do_it
+
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus7
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	ld hl, wEnemySubStatus7
+	call .do_it
+	call SetPlayerTurn
+	ld hl, wPlayerSubStatus7
+.do_it
+	bit SUBSTATUS_OCTOLOCK, [hl]
+	ret z
+
+	ld de, OCTOLOCK
+	callfar Call_PlayBattleAnim
+
+	farcall BattleCommand_DefenseDown
+	ld a, DEFENSE
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
+
+	farcall BattleCommand_SpecialDefenseDown
+	ld a, SP_DEFENSE
+	ld [wLoweredStat], a
+	farcall BattleCommand_StatDownMessage
 	ret
 
 HandleAquaRing:

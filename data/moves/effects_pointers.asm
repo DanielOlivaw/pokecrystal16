@@ -235,3 +235,4 @@ MoveEffectsPointers:
 	dw Punishment             ; EFFECT_PUNISHMENT
 	dw StoredPower            ; EFFECT_STORED_POWER
 	dw TarShot                ; EFFECT_TAR_SHOT
+	dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT

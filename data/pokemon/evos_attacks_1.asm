@@ -2012,6 +2012,8 @@ ChanseyEvosAttacks:
 TangelaEvosAttacks:
 	dbww EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH
 	db 0 ; no more evolutions
+	dbw 1, HEX
+	dbw 1, CONFUSE_RAY
 	dbw 1, NIGHT_SHADE
 	dbw 1, CONSTRICT
 	dbw 1, ABSORB
@@ -2341,6 +2343,13 @@ EeveeEvosAttacks:
 
 VaporeonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
+	dbw 1, SWIFT
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
@@ -2359,6 +2368,13 @@ VaporeonEvosAttacks:
 
 JolteonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
+	dbw 1, SWIFT
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
@@ -2377,6 +2393,12 @@ JolteonEvosAttacks:
 
 FlareonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, SWIFT
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP

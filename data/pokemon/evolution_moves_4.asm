@@ -69,12 +69,12 @@ EvolutionMovePointers4::
 	dw AbomasnowEvolutionMoves  ; ABOMASNOW
 	dw NoEvolutionMoves4        ; WEAVILE
 	dw NoEvolutionMoves4        ; MAGNEZONE
-	dw NoEvolutionMoves4        ; TANGROWTH
+	dw TangrowthEvolutionMoves  ; TANGROWTH
 	dw NoEvolutionMoves4        ; ELECTIVIRE
-	dw NoEvolutionMoves4        ; TOGEKISS
+	dw TogekissEvolutionMoves   ; TOGEKISS
 	dw YanmegaEvolutionMoves    ; YANMEGA
-	dw NoEvolutionMoves4        ; LEAFEON
-	dw NoEvolutionMoves4        ; GLACEON
+	dw LeafeonEvolutionMoves    ; LEAFEON
+	dw GlaceonEvolutionMoves    ; GLACEON
 	dw GliscorEvolutionMoves    ; GLISCOR
 	dw MamoswineEvolutionMoves  ; MAMOSWINE
 	dw PorygonZEvolutionMoves   ; PORYGON_Z
@@ -130,6 +130,7 @@ RampardosEvolutionMoves:
 
 BastiodonEvolutionMoves:
 BronzongEvolutionMoves:
+TangrowthEvolutionMoves:
 	dw BLOCK
 	db 0 ; no more evolution moves
 
@@ -179,8 +180,20 @@ AbomasnowEvolutionMoves:
 	dw ICE_PUNCH
 	db 0 ; no more evolution moves
 
+TogekissEvolutionMoves:
+	dw AIR_SLASH
+	db 0 ; no more evolution moves
+
 YanmegaEvolutionMoves:
 	dw BUG_BITE
+	db 0 ; no more evolution moves
+
+LeafeonEvolutionMoves:
+	dw RAZOR_LEAF
+	db 0 ; no more evolution moves
+
+GlaceonEvolutionMoves:
+	dw ICY_WIND
 	db 0 ; no more evolution moves
 
 MamoswineEvolutionMoves:

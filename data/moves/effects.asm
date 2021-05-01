@@ -2991,6 +2991,27 @@ TarShot:
 	statdownfailtext
 	endmove
 
+TrickRoomHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	farcommand
+	kingsrock
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

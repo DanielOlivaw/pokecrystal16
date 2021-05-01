@@ -26,4 +26,5 @@ MoveEffectPriorities:
 	db EFFECT_FORCE_SWITCH_HIT,   1
 	db EFFECT_FORCE_SWITCH,       1
 	db EFFECT_TRICK_ROOM,         0
+	db EFFECT_TRICK_ROOM_HIT,     0
 	db -1

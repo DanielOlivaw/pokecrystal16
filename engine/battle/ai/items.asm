@@ -16,6 +16,10 @@ AI_SwitchOrTryItem:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, DontSwitch
 
+	ld a, [wPlayerSubStatus7]
+	bit SUBSTATUS_OCTOLOCK, a
+	jr nz, DontSwitch
+
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jr nz, DontSwitch

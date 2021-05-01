@@ -603,6 +603,9 @@
 	const TAR_SHOT
 	const GRAV_APPLE
 	const APPLE_ACID
+	const OCTOLOCK
+	const CHRONO_SHIFT
+	const COSMIC_WARP
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

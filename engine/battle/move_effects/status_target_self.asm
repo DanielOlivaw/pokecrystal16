@@ -304,4 +304,10 @@ Find_StatusTargetSelf:
 	ld bc, MISTY_TERRAIN
 	call CompareMove2
 	jp z, BattleCommand_MistyTerrain
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, OCTOLOCK
+	call CompareMove2
+	jp z, BattleCommand_Octolock
 	ret

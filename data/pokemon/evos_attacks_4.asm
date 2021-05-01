@@ -1422,12 +1422,53 @@ WeavileEvosAttacks:
 
 MagnezoneEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, BARRIER
+	dbw 1, MIRROR_COAT
+	dbw 1, THUNDERSHOCK
 	dbw 1, TACKLE
+	dbw 4, SUPERSONIC
+	dbw 7, THUNDER_WAVE
+	dbw 10, MAGNET_BOMB
+	dbw 13, GYRO_BALL
+	dbw 16, SPARK
+	dbw 19, SONICBOOM
+	dbw 22, SHOCK_WAVE
+	dbw 25, MIRROR_SHOT
+	dbw 28, SCREECH
+	dbw 29, TRI_ATTACK
+	dbw 31, MAGNET_RISE
+	dbw 36, FLASH_CANNON
+	dbw 41, DISCHARGE
+	dbw 46, METAL_SOUND
+	dbw 51, LIGHT_SCREEN
+	dbw 56, LOCK_ON
+	dbw 61, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 TangrowthEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, HEX
+	dbw 1, CONFUSE_RAY
+	dbw 1, NIGHT_SHADE
+	dbw 1, CONSTRICT
+	dbw 1, ABSORB
+	dbw 1, BIND
+	dbw 1, BLOCK
+	dbw 4, STUN_SPORE
+	dbw 7, GROWTH
+	dbw 10, MEGA_DRAIN
+	dbw 16, VINE_WHIP
+	dbw 17, INGRAIN
+	dbw 20, POISONPOWDER
+	dbw 24, KNOCK_OFF
+	dbw 28, SLEEP_POWDER
+	dbw 32, GIGA_DRAIN
+	dbw 36, ANCIENTPOWER
+	dbw 40, SLAM
+	dbw 44, UPROOT
+	dbw 48, TICKLE
+	dbw 52, WRING_OUT
+	dbw 56, POWER_WHIP
 	db 0 ; no more level-up moves
 
 ElectivireEvosAttacks:
@@ -1451,7 +1492,27 @@ ElectivireEvosAttacks:
 
 TogekissEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, DOUBLE_EDGE
+	dbw 1, ENCORE
+	dbw 1, WIND_RIDE
+	dbw 1, MAGICAL_LEAF
+	dbw 1, GROWL
+	dbw 1, POUND
+	dbw 1, FAIRY_WIND
+	dbw 1, AIR_SLASH
+	dbw 4, SWEET_KISS
+	dbw 8, LIFE_DEW
+	dbw 12, CHARM
+	dbw 16, TRI_ATTACK
+	dbw 20, ANCIENTPOWER
+	dbw 24, METRONOME
+	dbw 28, EXTREMESPEED
+	dbw 32, YAWN
+	dbw 36, AURA_SPHERE
+	dbw 40, SAFEGUARD
+	dbw 44, SKY_ATTACK
+	dbw 48, BATON_PASS
+	dbw 52, WISH
 	db 0 ; no more level-up moves
 
 YanmegaEvosAttacks:
@@ -1478,12 +1539,51 @@ YanmegaEvosAttacks:
 
 LeafeonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
+	dbw 1, SWIFT
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, RAZOR_LEAF
+	dbw 5, SAND_ATTACK
+	dbw 10, QUICK_ATTACK
+	dbw 15, BABY_DOLL_EYES
+	dbw 20, GRASSWHISTLE
+	dbw 25, MAGICAL_LEAF
+	dbw 30, SYNTHESIS
+	dbw 35, SUNNY_DAY
+	dbw 40, GIGA_DRAIN
+	dbw 45, SWORDS_DANCE
+	dbw 50, LEAF_BLADE
 	db 0 ; no more level-up moves
 
 GlaceonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, SWIFT
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, ICY_WIND
+	dbw 5, SAND_ATTACK
+	dbw 10, QUICK_ATTACK
+	dbw 15, BABY_DOLL_EYES
+	dbw 20, ICE_SHARD
+	dbw 25, BITE
+	dbw 30, ICE_FANG
+	dbw 35, HAIL
+	dbw 40, FREEZE_DRY
+	dbw 45, MIRROR_COAT
+	dbw 50, BLIZZARD
 	db 0 ; no more level-up moves
 
 GliscorEvosAttacks:
@@ -1672,22 +1772,67 @@ FroslassEvosAttacks:
 
 RotomEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ASTONISH
+	dbw 1, DOUBLE_TEAM
+	dbw 5, THUNDERSHOCK
+	dbw 10, CONFUSE_RAY
+	dbw 15, CHARGE
+	dbw 20, SHOCK_WAVE
+	dbw 25, THUNDER_WAVE
+	dbw 30, OMINOUS_WIND
+	dbw 35, SUBSTITUTE
+	dbw 40, HEX
+	dbw 45, TRICK
+	dbw 50, DISCHARGE
+	dbw 55, UPROAR
 	db 0 ; no more level-up moves
 
 UxieEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 1, REST
+	dbw 7, SWIFT
+	dbw 14, ENDURE
+	dbw 21, PSYBEAM
+	dbw 28, YAWN
+	dbw 35, EXTRASENSORY
+	dbw 42, AMNESIA
+	dbw 49, PSYCHIC
+	dbw 56, FLAIL
+	dbw 63, FUTURE_SIGHT
+	dbw 70, MEMENTO
 	db 0 ; no more level-up moves
 
 MespritEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 1, REST
+	dbw 7, SWIFT
+	dbw 14, PROTECT
+	dbw 21, PSYBEAM
+	dbw 28, LUCKY_CHANT
+	dbw 35, EXTRASENSORY
+	dbw 42, CHARM
+	dbw 49, PSYCHIC
+	dbw 56, FLATTER
+	dbw 63, FUTURE_SIGHT
+	dbw 70, HEALING_WISH
 	db 0 ; no more level-up moves
 
 AzelfEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 1, REST
+	dbw 7, SWIFT
+	dbw 14, DETECT
+	dbw 21, PSYBEAM
+	dbw 28, LASER_FOCUS
+	dbw 35, EXTRASENSORY
+	dbw 42, NASTY_PLOT
+	dbw 49, PSYCHIC
+	dbw 56, UPROAR
+	dbw 63, FUTURE_SIGHT
+	dbw 70, EXPLOSION
 	db 0 ; no more level-up moves
 
 DialgaEvosAttacks:

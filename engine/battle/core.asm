@@ -901,6 +901,10 @@ TryEnemyFlee:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .Stay
 
+	ld a, [wPlayerSubStatus7]
+	bit SUBSTATUS_OCTOLOCK, a
+	jr nz, .Stay
+
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jr nz, .Stay
@@ -3815,6 +3819,8 @@ endr
 	ld [wEnemyTurnsTaken], a
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
+	ld hl, wPlayerSubStatus7
+	res SUBSTATUS_OCTOLOCK, [hl]
 	ret
 
 ResetEnemyStatLevels:
@@ -3900,6 +3906,10 @@ TryToRunAwayFromBattle:
 
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
+	jp nz, .cant_escape
+
+	ld a, [wEnemySubStatus7]
+	bit SUBSTATUS_OCTOLOCK, a
 	jp nz, .cant_escape
 
 	ld a, [wPlayerSubStatus5]
@@ -4308,6 +4318,8 @@ endr
 	ld [wPlayerTurnsTaken], a
 	ld hl, wEnemySubStatus5
 	res SUBSTATUS_CANT_RUN, [hl]
+	ld hl, wEnemySubStatus7
+	res SUBSTATUS_OCTOLOCK, [hl]
 	ret
 
 BreakAttraction:
@@ -5565,6 +5577,9 @@ TryPlayerSwitch:
 	jr nz, .trapped
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .trapped
+	ld a, [wEnemySubStatus7]
+	bit SUBSTATUS_OCTOLOCK, a
 	jr nz, .trapped
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_INGRAINED, a

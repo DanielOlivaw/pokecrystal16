@@ -118,10 +118,12 @@ TangelEvosAttacks:
 	dbw 22, KNOCK_OFF
 	dbw 25, SLEEP_POWDER
 	dbw 28, GIGA_DRAIN
-	dbw 31, SLAM
-	dbw 34, TICKLE
-	dbw 37, WRING_OUT
-	dbw 40, POWER_WHIP
+	dbw 31, CONFUSE_RAY
+	dbw 34, SLAM
+	dbw 37, HEX
+	dbw 40, TICKLE
+	dbw 43, WRING_OUT
+	dbw 46, POWER_WHIP
 	db 0 ; no more level-up moves
 
 MolancoraEvosAttacks:
@@ -1106,6 +1108,12 @@ QuagsireEvosAttacks:
 
 EspeonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
@@ -1124,6 +1132,13 @@ EspeonEvosAttacks:
 
 UmbreonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
+	dbw 1, SWIFT
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
