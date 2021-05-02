@@ -4718,6 +4718,20 @@ HandleHPHealingItem:
 .less
 	call ItemRecoveryAnim
 	call SetOpponentAteBerry
+
+; BERRY restores 10 HP.
+; GOLD_BERRY restores 1/4 of the user's max HP.
+	ld a, c
+	cp 99
+	jr nz, .heal_set_amount
+
+	call SwitchTurnCore
+	call GetQuarterMaxHP
+	call SwitchTurnCore
+	call RestoreHP
+	jp UseOpponentItem
+
+.heal_set_amount
 	; store max HP in wBuffer1/2
 	ld a, [hli]
 	ld [wBuffer2], a

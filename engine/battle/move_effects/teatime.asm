@@ -41,6 +41,9 @@ OpponentUseHeldHPHealingItem_Teatime:
 	cp HELD_BERRY
 	ret nz
 	ld b, 0 ; bc contains HP to restore
+	ld a, c
+	cp 99
+	call z, .sitrus_berry
 	ld a, [hl]
 	farcall ItemRecoveryAnim
 	callfar RestoreHP
@@ -48,6 +51,12 @@ OpponentUseHeldHPHealingItem_Teatime:
 	farcall UseOpponentItem
 	xor a
 	ld [wAttackMissed], a
+	ret
+
+.sitrus_berry
+	farcall BattleCommand_SwitchTurn
+	callfar GetQuarterMaxHP
+	farcall BattleCommand_SwitchTurn
 	ret
 
 OpponentUseHeldStatusHealingItem_Teatime:
