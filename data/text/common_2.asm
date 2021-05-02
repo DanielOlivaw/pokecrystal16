@@ -761,6 +761,12 @@ AbsorbingPowerText::
 	line "is absorbing"
 	cont "power!"
 	prompt
+
+OverflowingWithSpacePowerText::
+	text_start
+	line "is overflowing"
+	cont "with space power!"
+	prompt
 		;"123456789123456789"
 
 _ActorNameText::

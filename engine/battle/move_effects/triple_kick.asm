@@ -26,7 +26,7 @@ TripleKickEffect:
 	ld [hl], a
 	ret
 
-BattleCommand_KickCounter:
+TripleKickCounter:
 ; kickcounter
 
 	ld hl, wKickCounter

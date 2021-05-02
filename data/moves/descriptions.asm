@@ -613,6 +613,17 @@ MoveDescriptions1:
 	dw BreakingSwipeDescription
 	dw DragonDartsDescription
 	dw ThunderCageDescription
+	dw FrenzyPlantDescription
+	dw BlastBurnDescription
+	dw HydroCannonDescription
+	dw DracoMeteorDescription
+	dw VoltTackleDescription
+	dw SteelBeamDescription
+	dw ScorchingSandsDescription
+	dw DualWingbeatDescription
+	dw MeteorBeamDescription
+	dw SkitterSmackDescription
+	dw TripleAxelDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -686,6 +697,7 @@ SolarbeamDescription:
 SkullBashDescription:
 SkyAttackDescription:
 SolarBladeDescription:
+MeteorBeamDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
@@ -921,6 +933,9 @@ HyperBeamDescription:
 GigaImpactDescription:
 RoarOfTimeDescription:
 RockWreckerDescription:
+FrenzyPlantDescription:
+BlastBurnDescription:
+HydroCannonDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
@@ -1266,6 +1281,7 @@ SketchDescription:
 	next "move permanently.@"
 
 TripleKickDescription:
+TripleAxelDescription:
 	db   "Hits three times"
 	next "with rising power.@"
 
@@ -1806,6 +1822,7 @@ LeafTornadoDescription:
 LeafStormDescription:
 PsychoBoostDescription:
 FleurCannonDescription:
+DracoMeteorDescription:
 	db   "Sharply reduces"
 	next "user's SPCL.ATK.@"
 
@@ -2127,6 +2144,7 @@ BulletPunchDescription:
 	next "strikes first.@"
 
 StruggleBugDescription:
+SkitterSmackDescription:
 	db   "An attack that"
 	next "lowers SPCL.ATK.@"
 
@@ -2577,5 +2595,21 @@ FishiousRendDescription:
 DragonDartsDescription:
 	db   "Attacks twice"
 	next "using DREEPY.@"
+
+VoltTackleDescription:
+	db   "Hurts the user and"
+	next "may paralyze.@"
+
+SteelBeamDescription:
+	db   "A beam that also"
+	next "hurts the user.@"
+
+ScorchingSandsDescription:
+	db   "Hot sand that may"
+	next "cause a burn.@"
+
+DualWingbeatDescription:
+	db   "Slams the foe"
+	next "twice with wings.@"
 
 		;"123456789123456789"

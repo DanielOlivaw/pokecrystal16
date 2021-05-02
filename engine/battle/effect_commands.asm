@@ -219,6 +219,7 @@ CheckPlayerTurn:
 	dw BURN_UP
 	dw FLARE_UP
 	dw STEAM_ERUPTION
+	dw SCORCHING_SANDS
 	; dw SCALD
 	dw -1
 
@@ -474,6 +475,7 @@ CheckEnemyTurn:
 	dw BURN_UP
 	dw FLARE_UP
 	dw STEAM_ERUPTION
+	dw SCORCHING_SANDS
 	; dw SCALD
 	dw -1
 
@@ -1156,6 +1158,8 @@ BattleCommand_DoTurn:
 	db EFFECT_RAZOR_WIND
 	db EFFECT_SKY_ATTACK
 	db EFFECT_SKULL_BASH
+	db EFFECT_METEOR_BEAM
+	db EFFECT_GEOMANCY
 	db EFFECT_SOLARBEAM
 	db EFFECT_FLY
 	db EFFECT_ROLLOUT
@@ -1352,6 +1356,10 @@ INCLUDE "data/battle/critical_hit_chances.asm"
 
 BattleCommand_TripleKick:
 	farcall TripleKickEffect
+	ret
+
+BattleCommand_KickCounter:
+	farcall TripleKickCounter
 	ret
 
 BattleCommand_Stab:
@@ -2419,6 +2427,8 @@ BattleCommand_LowerSub:
 	jr z, .charge_turn
 	cp EFFECT_GEOMANCY
 	jr z, .charge_turn
+	cp EFFECT_METEOR_BEAM
+	jr z, .charge_turn
 
 .already_charged
 	call .Rampage
@@ -2494,6 +2504,8 @@ BattleCommand_MoveAnimNoSub:
 	cp EFFECT_DOUBLE_HIT
 	jr z, .alternate_anim
 	cp EFFECT_POISON_MULTI_HIT
+	jr z, .alternate_anim
+	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .alternate_anim
 	cp EFFECT_TRIPLE_KICK
 	jr z, .triplekick
@@ -2626,6 +2638,8 @@ BattleCommand_FailureText:
 	cp EFFECT_DOUBLE_HIT
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
+	jr z, .multihit
+	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .multihit
 	cp EFFECT_BEAT_UP
 	jr z, .multihit
@@ -3044,6 +3058,8 @@ BattleCommand_CheckFaint:
 	cp EFFECT_DOUBLE_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_POISON_MULTI_HIT
+	jr z, .multiple_hit_raise_sub
+	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_TRIPLE_KICK
 	jr z, .multiple_hit_raise_sub
@@ -3765,6 +3781,8 @@ BattleCommand_DamageCalc:
 ; Variable-hit moves and Conversion can have a power of 0.
 	cp EFFECT_MULTI_HIT
 	jr z, .skip_zero_damage_check
+	cp EFFECT_PRIORITY_MULTI_HIT
+	jr z, .skip_zero_damage_check
 
 	cp EFFECT_CONVERSION
 	jr z, .skip_zero_damage_check
@@ -4435,6 +4453,8 @@ DoSubstituteDamage:
 	cp EFFECT_DOUBLE_HIT
 	jr z, .ok
 	cp EFFECT_POISON_MULTI_HIT
+	jr z, .ok
+	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .ok
 	cp EFFECT_TRIPLE_KICK
 	jr z, .ok
@@ -6871,10 +6891,14 @@ BattleCommand_Charge:
 	ld hl, .UsedText
 	call BattleTextbox
 
+	ld b, endturn_command
+	push bc
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	pop bc
 	cp EFFECT_SKULL_BASH
-	ld b, endturn_command
+	jp z, SkipToBattleCommand
+	cp EFFECT_METEOR_BEAM
 	jp z, SkipToBattleCommand
 	jp EndMoveEffect
 
@@ -6915,6 +6939,7 @@ BattleCommand_Charge:
 	dw PHANTOM_FORCE, .PhantomForce
 	dw TIME_TRAVEL,   .TimeTravel
 	dw GEOMANCY,      .Geomancy
+	dw METEOR_BEAM,   .MeteorBeam
 	dw -1
 
 .RazorWind:
@@ -6966,6 +6991,11 @@ BattleCommand_Charge:
 .Geomancy:
 ; 'is absorbing power!'
 	text_far AbsorbingPowerText
+	text_end
+
+.MeteorBeam:
+; 'is overflowing with space power!'
+	text_far OverflowingWithSpacePowerText
 	text_end
 
 BattleCommand_TrapTarget:
@@ -7050,11 +7080,16 @@ BattleCommand_Recoil:
 	jr z, .get_half_damage
 	cp EFFECT_RECOIL_HIT_THIRD
 	jp z, .get_third_damage
+	cp EFFECT_FLARE_BLITZ
+	jp z, .get_third_damage
+	cp EFFECT_VOLT_TACKLE
+	jp z, .get_third_damage
 	cp EFFECT_STRUGGLE
 	jp z, .struggle
 	cp EFFECT_MIND_BLOWN
 	jp z, .mind_blown
 
+; EFFECT_RECOIL_HIT_QUARTER and EFFECT_UPROOT
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 	ld d, a

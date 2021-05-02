@@ -238,98 +238,326 @@ LiepardEvosAttacks:
 MunnaEvosAttacks:
 	dbbw  EVOLVE_ITEM, MOON_STONE, MUSHARNA
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, STORED_POWER
+	dbw 1, DEFENSE_CURL
+	dbw 4, HYPNOSIS
+	dbw 8, PSYBEAM
+	dbw 12, LUCKY_CHANT
+	dbw 16, MOONLIGHT
+	dbw 20, ZEN_HEADBUTT
+	dbw 24, SYNCHRONOISE
+	dbw 28, CALM_MIND
+	dbw 32, YAWN
+	dbw 36, PSYCHIC
+	dbw 40, NIGHTMARE
+	dbw 44, MOONBLAST
+	dbw 48, DREAM_EATER
+	dbw 52, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 MusharnaEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, STORED_POWER
+	dbw 1, DEFENSE_CURL
+	dbw 4, HYPNOSIS
+	dbw 8, PSYBEAM
+	dbw 12, LUCKY_CHANT
+	dbw 16, MOONLIGHT
+	dbw 20, ZEN_HEADBUTT
+	dbw 24, SYNCHRONOISE
+	dbw 28, CALM_MIND
+	dbw 32, YAWN
+	dbw 36, PSYCHIC
+	dbw 40, NIGHTMARE
+	dbw 44, MOONBLAST
+	dbw 48, DREAM_EATER
+	dbw 52, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 RoggenrolaEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 25, TR_ANYTIME, BOLDORE
 	db 0 ; no more evolutions
+	dbw 1, SAND_ATTACK
 	dbw 1, TACKLE
+	dbw 4, HARDEN
+	dbw 8, MUD_SLAP
+	dbw 12, ROCK_THROW
+	dbw 16, IRON_DEFENSE
+	dbw 20, HEADBUTT
+	dbw 24, ROCK_SLIDE
+	dbw 28, STEALTH_ROCK
+	dbw 32, ROCK_BLAST
+	dbw 36, SANDSTORM
+	dbw 40, STONE_EDGE
+	dbw 44, EXPLOSION
 	db 0 ; no more level-up moves
 
 BoldoreEvosAttacks:
 	dbbw EVOLVE_ITEM, HEART_STONE, GIGALITH
 	dbbw EVOLVE_TRADE, -1, GIGALITH
 	db 0 ; no more evolutions
+	dbw 1, SAND_ATTACK
 	dbw 1, TACKLE
+	dbw 4, HARDEN
+	dbw 8, MUD_SLAP
+	dbw 12, ROCK_THROW
+	dbw 16, IRON_DEFENSE
+	dbw 20, HEADBUTT
+	dbw 24, ROCK_SLIDE
+	dbw 24, POWER_GEM
+	dbw 30, STEALTH_ROCK
+	dbw 36, ROCK_BLAST
+	dbw 42, SANDSTORM
+	dbw 48, STONE_EDGE
+	dbw 54, EXPLOSION
 	db 0 ; no more level-up moves
 
 GigalithEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SAND_ATTACK
 	dbw 1, TACKLE
+	dbw 4, HARDEN
+	dbw 8, MUD_SLAP
+	dbw 12, ROCK_THROW
+	dbw 16, IRON_DEFENSE
+	dbw 20, HEADBUTT
+	dbw 24, ROCK_SLIDE
+	dbw 24, POWER_GEM
+	dbw 30, STEALTH_ROCK
+	dbw 36, ROCK_BLAST
+	dbw 42, SANDSTORM
+	dbw 48, STONE_EDGE
+	dbw 54, EXPLOSION
 	db 0 ; no more level-up moves
 
 WoobatEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, SWOOBAT
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, GUST
+	dbw 1, ODOR_SLEUTH
+	dbw 5, CONFUSION
+	dbw 10, ENDEAVOR
+	dbw 15, HEART_STAMP
+	dbw 20, AIR_CUTTER
+	dbw 25, ATTRACT
+	dbw 30, AMNESIA
+	dbw 35, AIR_SLASH
+	dbw 40, PSYCHIC
+	dbw 45, CALM_MIND
+	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 SwoobatEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, GUST
+	dbw 1, ODOR_SLEUTH
+	dbw 5, CONFUSION
+	dbw 10, ENDEAVOR
+	dbw 15, HEART_STAMP
+	dbw 20, AIR_CUTTER
+	dbw 25, ATTRACT
+	dbw 30, AMNESIA
+	dbw 35, AIR_SLASH
+	dbw 40, PSYCHIC
+	dbw 45, CALM_MIND
+	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 AudinoEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 5, DISARMING_VOICE
+	dbw 9, DOUBLESLAP
+	dbw 14, PLAY_NICE
+	dbw 18, BABY_DOLL_EYES
+	dbw 23, ZEN_HEADBUTT
+	dbw 27, REFRESH
+	dbw 32, TAKE_DOWN
+	dbw 36, ATTRACT
+	dbw 41, HYPER_VOICE
+	dbw 45, LIFE_DEW
+	dbw 50, DOUBLE_EDGE
+	dbw 54, MISTY_TERRAIN
 	db 0 ; no more level-up moves
 
 TimburrEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 25, TR_ANYTIME, GURDURR
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POUND
+	dbw 1, LEER
+	dbw 3, BIDE
+	dbw 6, LOW_KICK
+	dbw 9, ROCK_THROW
+	dbw 12, FOCUS_ENERGY
+	dbw 15, BULK_UP
+	dbw 18, WAKE_UP_SLAP
+	dbw 21, CHIP_AWAY
+	dbw 24, ROCK_SLIDE
+	dbw 27, SLAM
+	dbw 30, DYNAMICPUNCH
+	dbw 33, SCARY_FACE
+	dbw 36, HAMMER_ARM
+	dbw 39, SUPERPOWER
+	dbw 42, FOCUS_PUNCH
 	db 0 ; no more level-up moves
 
 GurdurrEvosAttacks:
 	dbbw EVOLVE_ITEM, HEART_STONE, CONKELDURR
 	dbbw EVOLVE_TRADE, -1, CONKELDURR
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POUND
+	dbw 1, LEER
+	dbw 3, BIDE
+	dbw 6, LOW_KICK
+	dbw 9, ROCK_THROW
+	dbw 12, FOCUS_ENERGY
+	dbw 15, BULK_UP
+	dbw 18, WAKE_UP_SLAP
+	dbw 21, CHIP_AWAY
+	dbw 24, ROCK_SLIDE
+	dbw 29, SLAM
+	dbw 34, DYNAMICPUNCH
+	dbw 39, SCARY_FACE
+	dbw 44, HAMMER_ARM
+	dbw 49, SUPERPOWER
+	dbw 54, FOCUS_PUNCH
 	db 0 ; no more level-up moves
 
 ConkeldurrEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POUND
+	dbw 1, LEER
+	dbw 3, BIDE
+	dbw 6, LOW_KICK
+	dbw 9, ROCK_THROW
+	dbw 12, FOCUS_ENERGY
+	dbw 15, BULK_UP
+	dbw 18, WAKE_UP_SLAP
+	dbw 21, CHIP_AWAY
+	dbw 24, ROCK_SLIDE
+	dbw 24, STONE_EDGE
+	dbw 29, SLAM
+	dbw 34, DYNAMICPUNCH
+	dbw 39, SCARY_FACE
+	dbw 44, HAMMER_ARM
+	dbw 49, SUPERPOWER
+	dbw 54, FOCUS_PUNCH
 	db 0 ; no more level-up moves
 
 SewaddleEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, SWADLOON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 6, BUG_BITE
+	dbw 12, RAZOR_LEAF
+	dbw 18, STRUGGLE_BUG
+	dbw 24, ENDURE
+	dbw 30, STICKY_WEB
+	dbw 36, BUG_BUZZ
+	dbw 42, FLAIL
 	db 0 ; no more level-up moves
 
 SwadloonEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, LEAVANNY
 	db 0 ; no more evolutions
+	dbw 1, GRASSWHISTLE
+	dbw 1, FLAIL
+	dbw 1, BUG_BUZZ
+	dbw 1, STICKY_WEB
+	dbw 1, ENDURE
 	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 6, BUG_BITE
+	dbw 12, RAZOR_LEAF
+	dbw 18, STRUGGLE_BUG
+	dbw 19, PROTECT
 	db 0 ; no more level-up moves
 
 LeavannyEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, FALSE_SWIPE
+	dbw 1, GRASSWHISTLE
+	dbw 1, FLAIL
+	dbw 1, BUG_BUZZ
+	dbw 1, ENDURE
 	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 6, BUG_BITE
+	dbw 12, RAZOR_LEAF
+	dbw 18, STRUGGLE_BUG
+	dbw 19, PROTECT
+	dbw 19, SLASH
+	dbw 24, FELL_STINGER
+	dbw 30, STICKY_WEB
+	dbw 36, LEAF_BLADE
+	dbw 42, X_SCISSOR
+	dbw 48, SWORDS_DANCE
+	dbw 54, LEAF_STORM
 	db 0 ; no more level-up moves
 
 VenipedeEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, WHIRLIPEDE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POISON_STING
+	dbw 1, DEFENSE_CURL
+	dbw 3, ROLLOUT
+	dbw 6, PURSUIT
+	dbw 9, PROTECT
+	dbw 12, POISON_TAIL
+	dbw 15, SCREECH
+	dbw 18, BUG_BITE
+	dbw 21, VENOSHOCK
+	dbw 24, AGILITY
+	dbw 27, STEAMROLLER
+	; dbw 30, ROCK_CLIMB
+	dbw 33, TOXIC
+	dbw 36, VENOM_DRENCH
+	dbw 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 WhirlipedeEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, SCOLIPEDE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POISON_STING
+	dbw 1, DEFENSE_CURL
+	dbw 3, ROLLOUT
+	dbw 6, PURSUIT
+	dbw 9, PROTECT
+	dbw 12, POISON_TAIL
+	dbw 15, SCREECH
+	dbw 18, BUG_BITE
+	dbw 21, VENOSHOCK
+	dbw 21, IRON_DEFENSE
+	dbw 25, AGILITY
+	dbw 29, STEAMROLLER
+	; dbw 33, ROCK_CLIMB
+	dbw 37, TOXIC
+	dbw 41, VENOM_DRENCH
+	dbw 45, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ScolipedeEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POISON_STING
+	dbw 1, DEFENSE_CURL
+	dbw 3, ROLLOUT
+	dbw 6, PURSUIT
+	dbw 9, PROTECT
+	dbw 12, POISON_TAIL
+	dbw 15, SCREECH
+	dbw 18, BUG_BITE
+	dbw 21, VENOSHOCK
+	dbw 21, IRON_DEFENSE
+	dbw 25, AGILITY
+	dbw 29, STEAMROLLER
+	dbw 29, BATON_PASS
+	; dbw 34, ROCK_CLIMB
+	dbw 39, TOXIC
+	dbw 44, VENOM_DRENCH
+	dbw 49, DOUBLE_EDGE
+	dbw 54, MEGAHORN
 	db 0 ; no more level-up moves
 
 CottoneeEvosAttacks:

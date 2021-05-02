@@ -1201,6 +1201,7 @@ HyperBeam:
 	rechargenextturn
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -3010,6 +3011,54 @@ TrickRoomHit:
 	buildopponentrage
 	farcommand
 	kingsrock
+	endmove
+
+VoltTackle:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	recoil
+	checkfaint
+	buildopponentrage
+	kingsrock
+	paralyzetarget
+	endmove
+
+MeteorBeam:
+	checkcharge
+	checkobedience
+	doturn
+	charge
+	usedmovetext
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endturn
+	specialattackup
+	statupmessage
 	endmove
 
 ; Excavate:

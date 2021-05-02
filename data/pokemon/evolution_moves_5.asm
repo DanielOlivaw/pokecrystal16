@@ -12,20 +12,20 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5        ; MUNNA
 	dw NoEvolutionMoves5        ; MUSHARNA
 	dw NoEvolutionMoves5        ; ROGGENROLA
-	dw NoEvolutionMoves5        ; BOLDORE
+	dw BoldoreEvolutionMoves    ; BOLDORE
 	dw NoEvolutionMoves5        ; GIGALITH
 	dw NoEvolutionMoves5        ; WOOBAT
 	dw NoEvolutionMoves5        ; SWOOBAT
 	dw NoEvolutionMoves5        ; AUDINO
 	dw NoEvolutionMoves5        ; TIMBURR
 	dw NoEvolutionMoves5        ; GURDURR
-	dw NoEvolutionMoves5        ; CONKELDURR
+	dw ConkeldurrEvolutionMoves ; CONKELDURR
 	dw NoEvolutionMoves5        ; SEWADDLE
-	dw NoEvolutionMoves5        ; SWADLOON
-	dw NoEvolutionMoves5        ; LEAVANNY
+	dw SwadloonEvolutionMoves   ; SWADLOON
+	dw LeavannyEvolutionMoves   ; LEAVANNY
 	dw NoEvolutionMoves5        ; VENIPEDE
-	dw NoEvolutionMoves5        ; WHIRLIPEDE
-	dw NoEvolutionMoves5        ; SCOLIPEDE
+	dw WhirlipedeEvolutionMoves ; WHIRLIPEDE
+	dw ScolipedeEvolutionMoves  ; SCOLIPEDE
 	dw NoEvolutionMoves5        ; COTTONEE
 	dw NoEvolutionMoves5        ; WHIMSICOTT
 	dw NoEvolutionMoves5        ; PETILIL
@@ -85,7 +85,28 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5        ; VOLCARONA
 
 SamurottEvolutionMoves:
+LeavannyEvolutionMoves:
 	dw SLASH
+	db 0 ; no more evolution moves
+
+BoldoreEvolutionMoves:
+	dw POWER_GEM
+	db 0 ; no more evolution moves
+
+ConkeldurrEvolutionMoves:
+	dw STONE_EDGE
+	db 0 ; no more evolution moves
+
+SwadloonEvolutionMoves:
+	dw PROTECT
+	db 0 ; no more evolution moves
+
+WhirlipedeEvolutionMoves:
+	dw IRON_DEFENSE
+	db 0 ; no more evolution moves
+
+ScolipedeEvolutionMoves:
+	dw BATON_PASS
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves5:

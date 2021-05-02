@@ -2421,6 +2421,6 @@ DeoxysEvosAttacks:
 	dbw 64, COSMIC_POWER
 	dbw 72, PSYCHO_BOOST
 	dbw 80, RECOVER
-	; dbw 88, METEOR_BEAM
+	dbw 88, METEOR_BEAM
 	dbw 96, HYPER_BEAM
 	db 0 ; no more level-up moves

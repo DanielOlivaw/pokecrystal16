@@ -613,6 +613,17 @@
 	const BREAKING_SWIPE
 	const DRAGON_DARTS
 	const THUNDER_CAGE
+	const FRENZY_PLANT
+	const BLAST_BURN
+	const HYDRO_CANNON
+	const DRACO_METEOR
+	const VOLT_TACKLE
+	const STEEL_BEAM
+	const SCORCHING_SANDS
+	const DUAL_WINGBEAT
+	const METEOR_BEAM
+	const SKITTER_SMACK
+	const TRIPLE_AXEL
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

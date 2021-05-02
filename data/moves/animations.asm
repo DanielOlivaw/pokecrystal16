@@ -634,6 +634,17 @@ BattleAnimations::
 	dw BattleAnim_BreakingSwipe
 	dw BattleAnim_DragonDarts
 	dw BattleAnim_ThunderCage
+	dw BattleAnim_FrenzyPlant
+	dw BattleAnim_BlastBurn
+	dw BattleAnim_HydroCannon
+	dw BattleAnim_DracoMeteor
+	dw BattleAnim_VoltTackle
+	dw BattleAnim_SteelBeam
+	dw BattleAnim_ScorchingSands
+	dw BattleAnim_DualWingbeat
+	dw BattleAnim_MeteorBeam
+	dw BattleAnim_SkitterSmack
+	dw BattleAnim_TripleAxel
 
 	dw BattleAnim_SweetScent2
 
@@ -1017,6 +1028,17 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_MeteorBeam:
+BattleAnim_SkitterSmack:
+BattleAnim_TripleAxel:
+BattleAnim_FrenzyPlant:
+BattleAnim_BlastBurn:
+BattleAnim_HydroCannon:
+BattleAnim_DracoMeteor:
+BattleAnim_VoltTackle:
+BattleAnim_SteelBeam:
+BattleAnim_ScorchingSands:
+BattleAnim_DualWingbeat:
 BattleAnim_MagicPowder:
 BattleAnim_BoltBeak:
 BattleAnim_FishiousRend:

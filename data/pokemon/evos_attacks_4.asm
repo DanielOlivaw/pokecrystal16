@@ -1160,7 +1160,7 @@ HippopotasEvosAttacks:
 	dbw 19, CRUNCH
 	dbw 22, SANDSTORM
 	dbw 26, TAKE_DOWN
-	; dbw 29, SCORCHING_SANDS
+	dbw 29, SCORCHING_SANDS
 	dbw 33, ROAR
 	dbw 36, REST
 	dbw 40, EARTHQUAKE
@@ -1183,7 +1183,7 @@ HippowdonEvosAttacks:
 	dbw 19, CRUNCH
 	dbw 22, SANDSTORM
 	dbw 26, TAKE_DOWN
-	; dbw 29, SCORCHING_SANDS
+	dbw 29, SCORCHING_SANDS
 	dbw 33, ROAR
 	dbw 38, REST
 	dbw 44, EARTHQUAKE

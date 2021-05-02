@@ -236,3 +236,5 @@ MoveEffectsPointers:
 	dw StoredPower            ; EFFECT_STORED_POWER
 	dw TarShot                ; EFFECT_TAR_SHOT
 	dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT
+	dw VoltTackle             ; EFFECT_VOLT_TACKLE
+	dw MeteorBeam             ; EFFECT_METEOR_BEAM
