@@ -1531,6 +1531,7 @@ LunatoneEvosAttacks:
 	dbw 44, FUTURE_SIGHT
 	dbw 48, EXPLOSION
 	dbw 52, MOONBLAST
+	dbw 56, METEOR_BEAM
 	db 0 ; no more level-up moves
 
 SolrockEvosAttacks:
@@ -1551,6 +1552,7 @@ SolrockEvosAttacks:
 	dbw 44, SOLARBEAM
 	dbw 48, EXPLOSION
 	dbw 52, FLARE_BLITZ
+	dbw 56, METEOR_BEAM
 	db 0 ; no more level-up moves
 
 BarboachEvosAttacks:

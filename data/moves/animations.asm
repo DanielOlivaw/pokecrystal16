@@ -645,6 +645,15 @@ BattleAnimations::
 	dw BattleAnim_MeteorBeam
 	dw BattleAnim_SkitterSmack
 	dw BattleAnim_TripleAxel
+	dw BattleAnim_Poltergeist
+	dw BattleAnim_ScaleShot
+	dw BattleAnim_MistyExplosion
+	dw BattleAnim_Overheat
+	dw BattleAnim_Scald
+	dw BattleAnim_PsychicFangs
+	dw BattleAnim_DarkestLariat
+	dw BattleAnim_TailGlow
+	dw BattleAnim_RockClimb
 
 	dw BattleAnim_SweetScent2
 
@@ -1028,6 +1037,15 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_Poltergeist:
+BattleAnim_ScaleShot:
+BattleAnim_MistyExplosion:
+BattleAnim_Overheat:
+BattleAnim_Scald:
+BattleAnim_PsychicFangs:
+BattleAnim_DarkestLariat:
+BattleAnim_TailGlow:
+BattleAnim_RockClimb:
 BattleAnim_MeteorBeam:
 BattleAnim_SkitterSmack:
 BattleAnim_TripleAxel:

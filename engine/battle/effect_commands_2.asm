@@ -112,3 +112,22 @@ INCLUDE "engine/battle/move_effects/tar_shot.asm"
 INCLUDE "engine/battle/move_effects/octolock.asm"
 INCLUDE "engine/battle/move_effects/teatime.asm"
 INCLUDE "engine/battle/move_effects/bolt_beak.asm"
+INCLUDE "engine/battle/move_effects/poltergeist.asm"
+
+CheckSafeguardEffect:
+; checksafeguard
+	ld hl, wEnemyScreens
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_turn
+	ld hl, wPlayerScreens
+.got_turn
+	bit SCREENS_SAFEGUARD, [hl]
+	ret z
+	ld a, 1
+	ld [wAttackMissed], a
+	farcall BattleCommand_MoveDelay
+	ld hl, SafeguardProtectText
+	call StdBattleTextbox
+	farcall EndMoveEffect
+	ret

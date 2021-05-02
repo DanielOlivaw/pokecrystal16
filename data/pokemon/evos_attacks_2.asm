@@ -1982,7 +1982,7 @@ SuicuneEvosAttacks:
 	dbw 36, DEFOG
 	dbw 42, CRUNCH
 	dbw 48, EXTRASENSORY
-	; dbw 54, SCALD
+	dbw 54, SCALD
 	dbw 60, MIRROR_COAT
 	dbw 66, RAIN_DANCE
 	dbw 72, HYDRO_PUMP

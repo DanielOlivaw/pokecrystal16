@@ -624,6 +624,15 @@
 	const METEOR_BEAM
 	const SKITTER_SMACK
 	const TRIPLE_AXEL
+	const POLTERGEIST
+	const SCALE_SHOT
+	const MISTY_EXPLOSION
+	const OVERHEAT
+	const SCALD
+	const PSYCHIC_FANGS
+	const DARKEST_LARIAT
+	const TAIL_GLOW
+	const ROCK_CLIMB
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

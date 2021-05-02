@@ -1465,7 +1465,7 @@ FalseSwipe:
 	damagecalc
 	stab
 	damagevariation
-	falseswipe
+	farcommand
 	checkhit
 	moveanim
 	failuretext
@@ -2273,6 +2273,7 @@ DracoMeteor:
 	overheat
 	checkfaint
 	buildopponentrage
+	defrostopponent
 	kingsrock
 	endmove
 
@@ -3059,6 +3060,56 @@ MeteorBeam:
 	endturn
 	specialattackup
 	statupmessage
+	endmove
+
+Poltergeist:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	farcommand
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
+ScaleShot:
+	checkobedience
+	usedmovetext
+	doturn
+	startloop
+	lowersub
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	moveanimnosub
+	failuretext
+	applydamage
+	criticaltext
+	cleartext
+	supereffectivelooptext
+	checkfaint
+	buildopponentrage
+	endloop
+	speedup
+	statupmessage
+	clangingscales
+	raisesub
+	kingsrock
 	endmove
 
 ; Excavate:

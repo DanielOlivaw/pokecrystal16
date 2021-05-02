@@ -238,3 +238,6 @@ MoveEffectsPointers:
 	dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT
 	dw VoltTackle             ; EFFECT_VOLT_TACKLE
 	dw MeteorBeam             ; EFFECT_METEOR_BEAM
+	dw Poltergeist            ; EFFECT_POLTERGEIST
+	dw ScaleShot              ; EFFECT_SCALE_SHOT
+	dw Selfdestruct           ; EFFECT_MISTY_EXPLOSION

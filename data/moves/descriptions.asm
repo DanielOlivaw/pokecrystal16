@@ -624,6 +624,15 @@ MoveDescriptions1:
 	dw MeteorBeamDescription
 	dw SkitterSmackDescription
 	dw TripleAxelDescription
+	dw PoltergeistDescription
+	dw ScaleShotDescription
+	dw MistyExplosionDescription
+	dw OverheatDescription
+	dw ScaldDescription
+	dw PsychicFangsDescription
+	dw DarkestLariatDescription
+	dw TailGlowDescription
+	dw RockClimbDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -916,6 +925,7 @@ PsybeamDescription:
 StrangeSteamDescription:
 SignalBeamDescription:
 WaterPulseDescription:
+RockClimbDescription:
 	db   "An attack that may"
 	next "confuse the foe.@"
 
@@ -1146,6 +1156,7 @@ MirrorMoveDescription:
 	next "same move.@"
 
 SelfdestructDescription:
+MistyExplosionDescription:
 	db   "Powerful but makes"
 	next "the user faint.@"
 
@@ -1644,6 +1655,7 @@ NuzzleDescription:
 
 NastyPlotDescription:
 FlareUpDescription:
+TailGlowDescription:
 	db   "Sharply increases"
 	next "user's SPCL.ATK.@"
 
@@ -1823,6 +1835,7 @@ LeafStormDescription:
 PsychoBoostDescription:
 FleurCannonDescription:
 DracoMeteorDescription:
+OverheatDescription:
 	db   "Sharply reduces"
 	next "user's SPCL.ATK.@"
 
@@ -2001,6 +2014,7 @@ PluckDescription:
 	next "the foe's berry.@"
 
 BrickBreakDescription:
+PsychicFangsDescription:
 	db   "Breaks screens"
 	next "like REFLECT.@"
 
@@ -2056,6 +2070,8 @@ BrightMossDescription:
 	next "for both sides.@"
 
 SacredSwordDescription:
+ChipAwayDescription:
+DarkestLariatDescription:
 	db   "Ignores the foe's"
 	next "stat changes.@"
 
@@ -2070,10 +2086,6 @@ UprootDescription:
 MagicalLeafDescription:
 	db   "Curious leaves"
 	next "that never miss.@"
-
-ChipAwayDescription:
-	db   "Ignores the foe's"
-	next "stat changes.@"
 
 CoilDescription:
 	db   "Boosts accuracy &"
@@ -2611,5 +2623,17 @@ ScorchingSandsDescription:
 DualWingbeatDescription:
 	db   "Slams the foe"
 	next "twice with wings.@"
+
+PoltergeistDescription:
+	db   "Fails if the foe"
+	next "has no item.@"
+
+ScaleShotDescription:
+	db   "Shoots scales 2-5"
+	next "times in a row.@"
+
+ScaldDescription:
+	db   "Boiling water that"
+	next "may cause a burn.@"
 
 		;"123456789123456789"

@@ -351,6 +351,7 @@ SwoobatEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GUST
 	dbw 1, ODOR_SLEUTH
+	dbw 1, PSYCHIC_FANGS
 	dbw 5, CONFUSION
 	dbw 10, ENDEAVOR
 	dbw 15, HEART_STAMP
@@ -563,28 +564,106 @@ ScolipedeEvosAttacks:
 CottoneeEvosAttacks:
 	dbbw EVOLVE_ITEM, SUN_STONE, WHIMSICOTT
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
+	dbw 1, FAIRY_WIND
+	dbw 5, STUN_SPORE
+	dbw 8, MEGA_DRAIN
+	dbw 12, RAZOR_LEAF
+	dbw 15, GROWTH
+	dbw 19, POISONPOWDER
+	dbw 22, GIGA_DRAIN
+	dbw 26, CHARM
+	dbw 29, LEECH_SEED
+	dbw 33, COTTON_SPORE
+	dbw 36, ENERGY_BALL
+	dbw 40, SUNNY_DAY
+	; dbw 43, ENDEAVOR
+	dbw 47, COTTON_GUARD
+	dbw 50, SOLARBEAM
 	db 0 ; no more level-up moves
 
 WhimsicottEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, MEMENTO
+	dbw 1, SOLARBEAM
+	dbw 1, ABSORB
+	dbw 1, FAIRY_WIND
+	dbw 1, GUST
+	dbw 5, STUN_SPORE
+	dbw 8, MEGA_DRAIN
+	dbw 12, RAZOR_LEAF
+	dbw 15, GROWTH
+	dbw 19, POISONPOWDER
+	dbw 22, GIGA_DRAIN
+	dbw 26, CHARM
+	dbw 29, LEECH_SEED
+	dbw 33, COTTON_SPORE
+	dbw 36, ENERGY_BALL
+	dbw 40, SUNNY_DAY
+	; dbw 43, ENDEAVOR
+	dbw 47, COTTON_GUARD
+	dbw 50, HURRICANE
+	dbw 54, MOONBLAST
 	db 0 ; no more level-up moves
 
 PetililEvosAttacks:
 	dbbw EVOLVE_ITEM, SUN_STONE, LILLIGANT
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ABSORB
+	dbw 1, GROWTH
+	dbw 5, STUN_SPORE
+	dbw 9, MEGA_DRAIN
+	dbw 14, AROMATHERAPY
+	dbw 18, MAGICAL_LEAF
+	dbw 23, SLEEP_POWDER
+	dbw 27, GIGA_DRAIN
+	dbw 32, LEECH_SEED
+	dbw 36, ENERGY_BALL
+	dbw 41, SYNTHESIS
+	dbw 45, SUNNY_DAY
+	dbw 50, LEAF_STORM
 	db 0 ; no more level-up moves
 
 LilligantEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, TEETER_DANCE
+	dbw 1, LEAF_STORM
+	dbw 1, ABSORB
+	dbw 1, GROWTH
+	dbw 5, STUN_SPORE
+	dbw 9, MEGA_DRAIN
+	dbw 14, AROMATHERAPY
+	dbw 18, MAGICAL_LEAF
+	dbw 23, SLEEP_POWDER
+	dbw 27, GIGA_DRAIN
+	dbw 32, LEECH_SEED
+	dbw 36, ENERGY_BALL
+	dbw 41, SYNTHESIS
+	dbw 45, SUNNY_DAY
+	dbw 50, QUIVER_DANCE
+	dbw 54, PETAL_STORM
 	db 0 ; no more level-up moves
 
 BasculinEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, WATER_GUN
+	dbw 1, TAIL_WHIP
+	dbw 3, TACKLE
+	dbw 7, FLAIL
+	dbw 10, AQUA_JET
+	dbw 14, BITE
+	dbw 17, SCARY_FACE
+	dbw 21, HEADBUTT
+	dbw 24, UPROAR
+	dbw 28, SOAK
+	dbw 31, CRUNCH
+	dbw 35, CHIP_AWAY
+	dbw 38, TAKE_DOWN
+	dbw 42, AQUA_TAIL
+	dbw 45, FINAL_GAMBIT
+	dbw 49, THRASH
+	dbw 52, DOUBLE_EDGE
+	dbw 56, HEAD_SMASH
 	db 0 ; no more level-up moves
 
 SandileEvosAttacks:

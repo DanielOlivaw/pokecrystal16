@@ -1785,6 +1785,7 @@ RotomEvosAttacks:
 	dbw 45, TRICK
 	dbw 50, DISCHARGE
 	dbw 55, UPROAR
+	dbw 60, POLTERGEIST
 	db 0 ; no more level-up moves
 
 UxieEvosAttacks:

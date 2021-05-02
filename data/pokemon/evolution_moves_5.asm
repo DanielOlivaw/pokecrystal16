@@ -15,7 +15,7 @@ EvolutionMovePointers5::
 	dw BoldoreEvolutionMoves    ; BOLDORE
 	dw NoEvolutionMoves5        ; GIGALITH
 	dw NoEvolutionMoves5        ; WOOBAT
-	dw NoEvolutionMoves5        ; SWOOBAT
+	dw SwoobatEvolutionMoves    ; SWOOBAT
 	dw NoEvolutionMoves5        ; AUDINO
 	dw NoEvolutionMoves5        ; TIMBURR
 	dw NoEvolutionMoves5        ; GURDURR
@@ -27,9 +27,9 @@ EvolutionMovePointers5::
 	dw WhirlipedeEvolutionMoves ; WHIRLIPEDE
 	dw ScolipedeEvolutionMoves  ; SCOLIPEDE
 	dw NoEvolutionMoves5        ; COTTONEE
-	dw NoEvolutionMoves5        ; WHIMSICOTT
+	dw WhimsicottEvolutionMoves ; WHIMSICOTT
 	dw NoEvolutionMoves5        ; PETILIL
-	dw NoEvolutionMoves5        ; LILLIGANT
+	dw LilligantEvolutionMoves  ; LILLIGANT
 	dw NoEvolutionMoves5        ; BASCULIN
 	dw NoEvolutionMoves5        ; SANDILE
 	dw NoEvolutionMoves5        ; KROKOROK
@@ -93,6 +93,10 @@ BoldoreEvolutionMoves:
 	dw POWER_GEM
 	db 0 ; no more evolution moves
 
+SwoobatEvolutionMoves:
+	dw PSYCHIC_FANGS
+	db 0 ; no more evolution moves
+
 ConkeldurrEvolutionMoves:
 	dw STONE_EDGE
 	db 0 ; no more evolution moves
@@ -107,6 +111,14 @@ WhirlipedeEvolutionMoves:
 
 ScolipedeEvolutionMoves:
 	dw BATON_PASS
+	db 0 ; no more evolution moves
+
+WhimsicottEvolutionMoves:
+	dw GUST
+	db 0 ; no more evolution moves
+
+LilligantEvolutionMoves:
+	dw PETAL_DANCE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves5:

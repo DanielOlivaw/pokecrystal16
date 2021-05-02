@@ -653,6 +653,7 @@ ClefairyEvosAttacks:
 	dbw 48, COSMIC_POWER
 	dbw 52, MOONBLAST
 	dbw 56, HEALING_WISH
+	dbw 60, METEOR_BEAM
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
@@ -679,6 +680,7 @@ ClefableEvosAttacks:
 	dbw 48, COSMIC_POWER
 	dbw 52, MOONBLAST
 	dbw 56, HEALING_WISH
+	dbw 60, METEOR_BEAM
 	db 0 ; no more level-up moves
 
 VulpixAEvosAttacks:
@@ -763,6 +765,7 @@ JigglypuffEvosAttacks:
 	dbw 46, HYPER_VOICE
 	dbw 49, PLAY_ROUGH
 	dbw 53, DOUBLE_EDGE
+	dbw 56, MISTY_EXPLOSION
 	db 0 ; no more level-up moves
 
 WigglytuffEvosAttacks:
@@ -792,6 +795,7 @@ WigglytuffEvosAttacks:
 	dbw 46, HYPER_VOICE
 	dbw 49, PLAY_ROUGH
 	dbw 53, DOUBLE_EDGE
+	dbw 56, MISTY_EXPLOSION
 	db 0 ; no more level-up moves
 
 ZubatEvosAttacks:
@@ -1965,6 +1969,7 @@ WeezingGEvosAttacks:
 	dbw 1, DEFOG
 	dbw 1, HEAT_WAVE
 	dbw 1, AROMATHERAPY
+	dbw 1, EXPLOSION
 	dbw 1, POISON_GAS
 	dbw 1, TACKLE
 	dbw 1, FAIRY_WIND
@@ -1980,7 +1985,7 @@ WeezingGEvosAttacks:
 	dbw 34, STRANGE_STEAM
 	dbw 37, TOXIC
 	dbw 42, BELCH
-	dbw 47, EXPLOSION
+	dbw 47, MISTY_EXPLOSION
 	dbw 52, MEMENTO
 	dbw 57, DESTINY_BOND
 	dbw 62, MISTY_TERRAIN

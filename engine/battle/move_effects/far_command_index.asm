@@ -81,4 +81,10 @@ Find_Command:
 
 	cp EFFECT_TRICK_ROOM_HIT
 	jp z, BattleCommand_TrickRoomHit
+
+	cp EFFECT_POLTERGEIST
+	jp z, BattleCommand_Poltergeist
+
+	cp EFFECT_FALSE_SWIPE
+	jp z, BattleCommand_FalseSwipe
 	ret

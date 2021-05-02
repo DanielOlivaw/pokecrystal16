@@ -220,7 +220,7 @@ CheckPlayerTurn:
 	dw FLARE_UP
 	dw STEAM_ERUPTION
 	dw SCORCHING_SANDS
-	; dw SCALD
+	dw SCALD
 	dw -1
 
 .not_frozen
@@ -476,7 +476,7 @@ CheckEnemyTurn:
 	dw FLARE_UP
 	dw STEAM_ERUPTION
 	dw SCORCHING_SANDS
-	; dw SCALD
+	dw SCALD
 	dw -1
 
 .not_frozen
@@ -2507,6 +2507,8 @@ BattleCommand_MoveAnimNoSub:
 	jr z, .alternate_anim
 	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .alternate_anim
+	cp EFFECT_SCALE_SHOT
+	jr z, .alternate_anim
 	cp EFFECT_TRIPLE_KICK
 	jr z, .triplekick
 	xor a
@@ -2641,6 +2643,8 @@ BattleCommand_FailureText:
 	jr z, .multihit
 	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .multihit
+	cp EFFECT_SCALE_SHOT
+	jr z, .multihit
 	cp EFFECT_BEAT_UP
 	jr z, .multihit
 	jp EndMoveEffect
@@ -2677,7 +2681,7 @@ BattleCommand_ApplyDamage:
 	bit SUBSTATUS_ENDURE, a
 	jr z, .focus_band
 
-	call BattleCommand_FalseSwipe
+	callfar BattleCommand_FalseSwipe
 	ld b, 0
 	jr nc, .damage
 	ld b, 1
@@ -2693,7 +2697,7 @@ BattleCommand_ApplyDamage:
 	call BattleRandom
 	cp c
 	jr nc, .damage
-	call BattleCommand_FalseSwipe
+	callfar BattleCommand_FalseSwipe
 	ld b, 0
 	jr nc, .damage
 	ld b, 2
@@ -3060,6 +3064,8 @@ BattleCommand_CheckFaint:
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_PRIORITY_MULTI_HIT
+	jr z, .multiple_hit_raise_sub
+	cp EFFECT_SCALE_SHOT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_TRIPLE_KICK
 	jr z, .multiple_hit_raise_sub
@@ -3783,6 +3789,8 @@ BattleCommand_DamageCalc:
 	jr z, .skip_zero_damage_check
 	cp EFFECT_PRIORITY_MULTI_HIT
 	jr z, .skip_zero_damage_check
+	cp EFFECT_SCALE_SHOT
+	jr z, .skip_zero_damage_check
 
 	cp EFFECT_CONVERSION
 	jr z, .skip_zero_damage_check
@@ -4263,10 +4271,6 @@ INCLUDE "engine/battle/move_effects/sketch.asm"
 
 INCLUDE "engine/battle/move_effects/sleep_talk.asm"
 
-BattleCommand_FalseSwipe:
-	farcall FalseSwipeEffect
-	ret
-
 FarPlayBattleAnimation:
 ; play animation de
 
@@ -4455,6 +4459,8 @@ DoSubstituteDamage:
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .ok
 	cp EFFECT_PRIORITY_MULTI_HIT
+	jr z, .ok
+	cp EFFECT_SCALE_SHOT
 	jr z, .ok
 	cp EFFECT_TRIPLE_KICK
 	jr z, .ok
@@ -7889,20 +7895,8 @@ SafeCheckSafeguard:
 
 BattleCommand_CheckSafeguard:
 ; checksafeguard
-	ld hl, wEnemyScreens
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_turn
-	ld hl, wPlayerScreens
-.got_turn
-	bit SCREENS_SAFEGUARD, [hl]
-	ret z
-	ld a, 1
-	ld [wAttackMissed], a
-	call BattleCommand_MoveDelay
-	ld hl, SafeguardProtectText
-	call StdBattleTextbox
-	jp EndMoveEffect
+	farcall CheckSafeguardEffect
+	ret
 
 INCLUDE "engine/battle/move_effects/baton_pass.asm"
 
