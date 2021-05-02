@@ -607,6 +607,12 @@
 	const CHRONO_SHIFT
 	const COSMIC_WARP
 	const TEATIME
+	const MAGIC_POWDER
+	const BOLT_BEAK
+	const FISHIOUS_REND
+	const BREAKING_SWIPE
+	const DRAGON_DARTS
+	const THUNDER_CAGE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

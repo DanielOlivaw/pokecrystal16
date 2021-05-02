@@ -62,6 +62,18 @@ Find_ConditionalBoost:
 	call CompareMove2
 	jp z, BattleCommand_Venoshock
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, BOLT_BEAK
+	call CompareMove2
+	jp z, BattleCommand_BoltBeak
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, FISHIOUS_REND
+	call CompareMove2
+	jp z, BattleCommand_BoltBeak
+
 ; Speed stats seem to act weirdly when used in calculations, so Gyro Ball
 ; and Electro Ball have been simplified to work similarly to Packback.
 	ld a, BATTLE_VARS_MOVE

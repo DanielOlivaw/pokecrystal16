@@ -607,6 +607,12 @@ MoveDescriptions1:
 	dw ChronoShiftDescription
 	dw CosmicWarpDescription
 	dw TeatimeDescription
+	dw MagicPowderDescription
+	dw BoltBeakDescription
+	dw FishiousRendDescription
+	dw BreakingSwipeDescription
+	dw DragonDartsDescription
+	dw ThunderCageDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1154,6 +1160,7 @@ WhirlpoolDescription:
 SandTombDescription:
 NailDownDescription:
 JawClampDescription:
+ThunderCageDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
@@ -2477,6 +2484,7 @@ AccelerockDescription:
 	next "that hits first.@"
 
 LungeDescription:
+BreakingSwipeDescription:
 	db   "An attack that"
 	next "lowers ATTACK.@"
 
@@ -2556,5 +2564,18 @@ CosmicWarpDescription:
 TeatimeDescription:
 	db   "Each #MON eats"
 	next "its held BERRY.@"
+
+MagicPowderDescription:
+	db   "Changes the foe's"
+	next "type to PSYCHIC.@"
+
+BoltBeakDescription:
+FishiousRendDescription:
+	db   "Stronger if the"
+	next "user moves first.@"
+
+DragonDartsDescription:
+	db   "Attacks twice"
+	next "using DREEPY.@"
 
 		;"123456789123456789"

@@ -63,6 +63,12 @@ Find_StatusTargetOpponent:
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
+	ld bc, MAGIC_POWDER
+	call CompareMove2
+	jp z, BattleCommand_MagicPowder
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, POWER_SPLIT
 	call CompareMove2
 	jp z, BattleCommand_PowerSplit

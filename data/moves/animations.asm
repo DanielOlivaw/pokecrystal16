@@ -628,6 +628,12 @@ BattleAnimations::
 	dw BattleAnim_ChronoShift
 	dw BattleAnim_CosmicWarp
 	dw BattleAnim_Teatime
+	dw BattleAnim_MagicPowder
+	dw BattleAnim_BoltBeak
+	dw BattleAnim_FishiousRend
+	dw BattleAnim_BreakingSwipe
+	dw BattleAnim_DragonDarts
+	dw BattleAnim_ThunderCage
 
 	dw BattleAnim_SweetScent2
 
@@ -1011,6 +1017,12 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_MagicPowder:
+BattleAnim_BoltBeak:
+BattleAnim_FishiousRend:
+BattleAnim_BreakingSwipe:
+BattleAnim_DragonDarts:
+BattleAnim_ThunderCage:
 BattleAnim_Teatime:
 BattleAnim_CosmicWarp:
 BattleAnim_ChronoShift:

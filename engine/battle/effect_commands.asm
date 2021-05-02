@@ -7024,15 +7024,16 @@ BattleCommand_TrapTarget:
 	jp StdBattleTextbox
 
 .Traps:
-	dw BIND,        UsedBindText      ; 'used BIND on'
-	dw WRAP,        WrappedByText     ; 'was WRAPPED by'
-	dw FIRE_SPIN,   FireSpinTrapText  ; 'was trapped!'
-	dw CLAMP,       ClampedByText     ; 'was CLAMPED by'
-	dw WHIRLPOOL,   WhirlpoolTrapText ; 'was trapped!'
-	dw SAND_TOMB,   SandTombTrapText  ; 'was trapped!'
-	dw NAIL_DOWN,   NailDownTrapText  ; 'was NAILED DOWN by'
-	dw INFESTATION, InfestationTrapText
-	dw JAW_CLAMP,   CaughtInJawsText  ; 'was caught in <USER>'s jaws!'
+	dw BIND,         UsedBindText      ; 'used BIND on'
+	dw WRAP,         WrappedByText     ; 'was WRAPPED by'
+	dw FIRE_SPIN,    FireSpinTrapText  ; 'was trapped!'
+	dw CLAMP,        ClampedByText     ; 'was CLAMPED by'
+	dw WHIRLPOOL,    WhirlpoolTrapText ; 'was trapped!'
+	dw SAND_TOMB,    SandTombTrapText  ; 'was trapped!'
+	dw NAIL_DOWN,    NailDownTrapText  ; 'was NAILED DOWN by'
+	dw INFESTATION,  InfestationTrapText
+	dw THUNDER_CAGE, TrappedText       ; 'trapped'
+	dw JAW_CLAMP,    CaughtInJawsText  ; 'was caught in <USER>'s jaws!'
 
 BattleCommand_Recoil:
 ; recoil

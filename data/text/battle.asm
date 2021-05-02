@@ -591,6 +591,12 @@ ClampedByText:
 	cont "<USER>!"
 	prompt
 
+TrappedText:
+	text "<USER>"
+	line "trapped"
+	cont "<TARGET>!"
+	prompt
+
 CaughtInJawsText:
 	text "<TARGET>"
 	line "was caught in"
@@ -1127,6 +1133,14 @@ CoinsScatteredText:
 
 TransformedTypeText:
 	text "<USER>"
+	line "transformed into"
+	cont "the @"
+	text_ram wStringBuffer1
+	text " type!"
+	prompt
+
+TargetTransformedTypeText:
+	text "<TARGET>"
 	line "transformed into"
 	cont "the @"
 	text_ram wStringBuffer1
@@ -1724,12 +1738,6 @@ UserBurnWasHealedText::
 	; text "<USER>"
 	; line "was defrosted!"
 	; prompt
-
-TransformedIntoWaterTypeText::
-	text "<TARGET>"
-	line "transformed into"
-	cont "the WATER type!"
-	prompt
 
 StockpileText:
 	text "<USER>"
