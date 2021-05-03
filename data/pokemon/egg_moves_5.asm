@@ -115,6 +115,7 @@ VenipedeEggMoves:
 	dw -1 ; end
 
 CottoneeEggMoves:
+	dw WIND_RIDE
 	dw -1 ; end
 
 PetililEggMoves:
@@ -130,6 +131,13 @@ DarumakaGEggMoves:
 	dw -1 ; end
 
 MaractusEggMoves:
+	dw UPROOT
+	dw WOOD_HAMMER
+	dw BOUNCE
+	dw BULLET_SEED
+	dw GRASSWHISTLE
+	dw SEED_BOMB
+	dw SPIKES
 	dw -1 ; end
 
 DwebbleEggMoves:

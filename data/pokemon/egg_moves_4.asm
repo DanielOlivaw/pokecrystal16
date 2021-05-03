@@ -126,6 +126,7 @@ CombeeEggMoves:
 	dw -1 ; end
 
 PachirisuEggMoves:
+	dw BOUNCY_TAIL
 	dw -1 ; end
 
 BuizelEggMoves:

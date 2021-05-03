@@ -39,7 +39,7 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; PERRSERKER
 	dw CursolaEvolutionMoves     ; CURSOLA
 	dw NoEvolutionMoves8         ; MR__RIME
-	dw NoEvolutionMoves8         ; RUNERIGUS
+	dw RunerigusEvolutionMoves   ; RUNERIGUS
 	dw NoEvolutionMoves8         ; MILCERY
 	dw NoEvolutionMoves8         ; ALCREMIE
 	dw NoEvolutionMoves8         ; PINCURCHIN
@@ -64,6 +64,10 @@ ObstagoonEvolutionMoves:
 
 CursolaEvolutionMoves:
 	dw PERISH_SONG
+	db 0 ; no more evolution moves
+
+RunerigusEvolutionMoves:
+	dw SHADOW_CLAW
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves8:

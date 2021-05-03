@@ -334,7 +334,24 @@ MrRimeEvosAttacks:
 
 RunerigusEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, ASTONISH
+	dbw 1, PROTECT
+	dbw 3, HAZE
+	dbw 7, NIGHT_SHADE
+	dbw 10, DISABLE
+	dbw 14, BRUTAL_SWING
+	dbw 17, CRAFTY_SHIELD
+	dbw 21, HEX
+	dbw 24, MEAN_LOOK
+	dbw 28, OMINOUS_WIND
+	dbw 31, SLAM
+	dbw 33, SHADOW_CLAW
+	dbw 37, CURSE
+	dbw 42, SHADOW_BALL
+	dbw 48, EARTHQUAKE
+	dbw 53, POWER_SPLIT
+	dbw 53, GUARD_SPLIT
+	dbw 59, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 MilceryEvosAttacks:

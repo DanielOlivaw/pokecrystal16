@@ -467,20 +467,20 @@ SandshrewAEvosAttacks:
 	dbw 1, DEFENSE_CURL
 	dbw 1, BIDE
 	dbw 3, MIST
-	dbw 6, POWDER_SNOW
-	dbw 9, ICE_BALL
-	dbw 12, FURY_CUTTER
-	dbw 15, RAPID_SPIN
-	dbw 18, METAL_CLAW
-	dbw 21, SWIFT
-	dbw 24, FURY_SWIPES
-	dbw 27, IRON_DEFENSE
-	dbw 30, SLASH
-	dbw 33, IRON_HEAD
-	dbw 36, GYRO_BALL
-	dbw 39, SWORDS_DANCE
-	dbw 42, HAIL
-	dbw 45, BLIZZARD
+	dbw 7, POWDER_SNOW
+	dbw 10, ICE_BALL
+	dbw 14, FURY_CUTTER
+	dbw 17, RAPID_SPIN
+	dbw 21, METAL_CLAW
+	dbw 24, SWIFT
+	dbw 28, FURY_SWIPES
+	dbw 31, IRON_DEFENSE
+	dbw 35, SLASH
+	dbw 38, IRON_HEAD
+	dbw 42, GYRO_BALL
+	dbw 45, SWORDS_DANCE
+	dbw 49, HAIL
+	dbw 52, BLIZZARD
 	db 0 ; no more level-up moves
 
 SandslashAEvosAttacks:
@@ -492,20 +492,20 @@ SandslashAEvosAttacks:
 	dbw 1, BIDE
 	dbw 1, ICICLE_SPEAR
 	dbw 3, MIST
-	dbw 6, POWDER_SNOW
-	dbw 9, ICE_BALL
-	dbw 12, FURY_CUTTER
-	dbw 15, RAPID_SPIN
-	dbw 18, METAL_CLAW
-	dbw 21, SWIFT
-	dbw 24, FURY_SWIPES
-	dbw 27, IRON_DEFENSE
-	dbw 30, SLASH
-	dbw 33, IRON_HEAD
-	dbw 36, GYRO_BALL
-	dbw 39, SWORDS_DANCE
-	dbw 42, HAIL
-	dbw 45, BLIZZARD
+	dbw 7, POWDER_SNOW
+	dbw 10, ICE_BALL
+	dbw 14, FURY_CUTTER
+	dbw 17, RAPID_SPIN
+	dbw 21, METAL_CLAW
+	dbw 24, SWIFT
+	dbw 28, FURY_SWIPES
+	dbw 31, IRON_DEFENSE
+	dbw 35, SLASH
+	dbw 38, IRON_HEAD
+	dbw 42, GYRO_BALL
+	dbw 45, SWORDS_DANCE
+	dbw 49, HAIL
+	dbw 52, BLIZZARD
 	db 0 ; no more level-up moves
 
 NidoranFEvosAttacks:
@@ -2476,10 +2476,10 @@ OmastarEvosAttacks:
 	dbw 33, ANCIENTPOWER
 	dbw 37, BRINE
 	dbw 39, SPIKE_CANNON
-	dbw 41, TICKLE
-	dbw 45, ROCK_BLAST
-	dbw 49, SHELL_SMASH
-	dbw 53, HYDRO_PUMP
+	dbw 42, TICKLE
+	dbw 47, ROCK_BLAST
+	dbw 52, SHELL_SMASH
+	dbw 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
@@ -2518,10 +2518,10 @@ KabutopsEvosAttacks:
 	dbw 33, PROTECT
 	dbw 37, LEECH_LIFE
 	dbw 39, SLASH
-	dbw 41, LIQUIDATION
-	dbw 45, METAL_SOUND
-	dbw 49, WRING_OUT
-	dbw 53, STONE_EDGE
+	dbw 42, LIQUIDATION
+	dbw 47, METAL_SOUND
+	dbw 52, WRING_OUT
+	dbw 57, STONE_EDGE
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:
