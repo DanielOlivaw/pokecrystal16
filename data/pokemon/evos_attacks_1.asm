@@ -190,8 +190,6 @@ CharmanderEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 1, U_TURN
-	dbw 1, RETURN
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -438,6 +436,7 @@ PikachuEvosAttacks:
 RaichuAEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SPEED_SWAP
+	dbw 1, VOLT_SWITCH
 	dbw 1, PLAY_NICE
 	dbw 1, SWEET_KISS
 	dbw 1, NUZZLE
@@ -1015,6 +1014,7 @@ PsyduckEvosAttacks:
 
 GolduckEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, FLIP_TURN
 	dbw 1, ME_FIRST
 	dbw 1, SCRATCH
 	dbw 1, TAIL_WHIP
@@ -2346,6 +2346,7 @@ EeveeEvosAttacks:
 	dbw 40, TAKE_DOWN
 	dbw 45, CHARM
 	dbw 50, DOUBLE_EDGE
+	dbw 55, TRUMP_CARD
 	db 0 ; no more level-up moves
 
 VaporeonEvosAttacks:

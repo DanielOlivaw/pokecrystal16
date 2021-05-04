@@ -648,4 +648,5 @@ Moves1:
 	move EFFECT_U_TURN,             70, BUG,      PHYSICAL, 100, 20,   0 ; U_TURN
 	move EFFECT_U_TURN,             70, ELECTRIC, SPECIAL,  100, 20,   0 ; VOLT_SWITCH
 	move EFFECT_U_TURN,             60, WATER,    PHYSICAL, 100, 20,   0 ; FLIP_TURN
+	move EFFECT_PARTING_SHOT,        0, DARK,     STATUS,   100, 20,   0 ; PARTING_SHOT
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

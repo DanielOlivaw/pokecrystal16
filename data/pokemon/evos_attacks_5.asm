@@ -944,40 +944,42 @@ ArchenEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
-	dbw 4, ROCK_THROW
-	dbw 8, WING_ATTACK
-	dbw 11, DOUBLE_TEAM
-	dbw 15, DRAGONBREATH
-	dbw 18, ANCIENTPOWER
-	dbw 22, PLUCK
-	dbw 25, SCARY_FACE
-	dbw 29, ACROBATICS
-	dbw 32, ROCK_SLIDE
-	dbw 36, CRUNCH
-	dbw 39, AGILITY
-	dbw 43, DRAGON_CLAW
-	dbw 46, THRASH
-	dbw 50, ENDEAVOR
+	dbw 3, ROCK_THROW
+	dbw 7, WING_ATTACK
+	dbw 10, DOUBLE_TEAM
+	dbw 14, DRAGONBREATH
+	dbw 17, ANCIENTPOWER
+	dbw 21, PLUCK
+	dbw 24, SCARY_FACE
+	dbw 28, U_TURN
+	dbw 31, ACROBATICS
+	dbw 35, ROCK_SLIDE
+	dbw 38, CRUNCH
+	dbw 42, AGILITY
+	dbw 45, DRAGON_CLAW
+	dbw 49, THRASH
+	; dbw 52, ENDEAVOR
 	db 0 ; no more level-up moves
 
 ArcheopsEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
-	dbw 4, ROCK_THROW
-	dbw 8, WING_ATTACK
-	dbw 11, DOUBLE_TEAM
-	dbw 15, DRAGONBREATH
-	dbw 18, ANCIENTPOWER
-	dbw 22, PLUCK
-	dbw 25, SCARY_FACE
-	dbw 29, ACROBATICS
-	dbw 32, ROCK_SLIDE
-	dbw 36, CRUNCH
-	dbw 41, AGILITY
-	dbw 47, DRAGON_CLAW
-	dbw 52, THRASH
-	dbw 58, ENDEAVOR
+	dbw 3, ROCK_THROW
+	dbw 7, WING_ATTACK
+	dbw 10, DOUBLE_TEAM
+	dbw 14, DRAGONBREATH
+	dbw 17, ANCIENTPOWER
+	dbw 21, PLUCK
+	dbw 24, SCARY_FACE
+	dbw 28, U_TURN
+	dbw 31, ACROBATICS
+	dbw 35, ROCK_SLIDE
+	dbw 39, CRUNCH
+	dbw 44, AGILITY
+	dbw 48, DRAGON_CLAW
+	dbw 53, THRASH
+	; dbw 57, ENDEAVOR
 	db 0 ; no more level-up moves
 
 SolosisEvosAttacks:
@@ -1457,18 +1459,19 @@ MienfooEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, MEDITATE
-	dbw 6, DETECT
-	dbw 10, FAKE_OUT
-	dbw 15, DOUBLESLAP
-	dbw 19, REVERSAL
-	dbw 24, FURY_SWIPES
-	dbw 28, FORCE_PALM
-	dbw 33, SWIFT
-	dbw 37, DRAIN_PUNCH
-	dbw 42, HONE_CLAWS
-	dbw 46, JUMP_KICK
-	dbw 51, BOUNCE
-	dbw 55, CALM_MIND
+	dbw 4, DETECT
+	dbw 8, FAKE_OUT
+	dbw 13, DOUBLESLAP
+	dbw 17, REVERSAL
+	dbw 21, FURY_SWIPES
+	dbw 26, FORCE_PALM
+	dbw 30, SWIFT
+	dbw 34, U_TURN
+	dbw 39, DRAIN_PUNCH
+	dbw 43, HONE_CLAWS
+	dbw 47, JUMP_KICK
+	dbw 52, BOUNCE
+	dbw 56, CALM_MIND
 	dbw 60, HI_JUMP_KICK
 	db 0 ; no more level-up moves
 
@@ -1476,19 +1479,20 @@ MienshaoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, MEDITATE
-	dbw 6, DETECT
-	dbw 10, FAKE_OUT
-	dbw 15, DOUBLESLAP
-	dbw 19, REVERSAL
-	dbw 24, FURY_SWIPES
-	dbw 28, FORCE_PALM
-	dbw 33, SWIFT
-	dbw 37, DRAIN_PUNCH
-	dbw 42, HONE_CLAWS
-	dbw 46, JUMP_KICK
+	dbw 4, DETECT
+	dbw 8, FAKE_OUT
+	dbw 13, DOUBLESLAP
+	dbw 17, REVERSAL
+	dbw 21, FURY_SWIPES
+	dbw 26, FORCE_PALM
+	dbw 30, SWIFT
+	dbw 34, U_TURN
+	dbw 39, DRAIN_PUNCH
+	dbw 43, HONE_CLAWS
+	dbw 47, JUMP_KICK
 	dbw 49, AURA_SPHERE
-	dbw 53, BOUNCE
-	dbw 59, CALM_MIND
+	dbw 54, BOUNCE
+	dbw 60, CALM_MIND
 	dbw 66, HI_JUMP_KICK
 	db 0 ; no more level-up moves
 

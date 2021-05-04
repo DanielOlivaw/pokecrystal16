@@ -243,3 +243,4 @@ MoveEffectsPointers:
 	dw Selfdestruct           ; EFFECT_MISTY_EXPLOSION
 	dw TrumpCard              ; EFFECT_TRUMP_CARD
 	dw UTurn                  ; EFFECT_U_TURN
+	dw PartingShot            ; EFFECT_PARTING_SHOT

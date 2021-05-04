@@ -196,8 +196,6 @@ FireStarterPokeBallScript:
 	waitsfx
 	buttonsound
 	givepoke CHARMANDER, 5, BERRY
-	givepoke CHARMELEON, 5, BERRY
-	givepoke CHARIZARD, 5, BERRY
 .Finish
 	closetext
 	readvar VAR_FACING

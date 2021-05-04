@@ -10,11 +10,17 @@ BattleCommand_BatonPass:
 	jp z, FailedBatonPass
 
 	call UpdateBattleMonInParty
+
+	call .check_u_turn
+	; call z, .pursuit_switch
+	jr z, .skip_anim_player
+
 	call AnimateCurrentMove
 
 	ld c, 50
 	call DelayFrames
 
+.skip_anim_player
 ; Transition into switchmon menu
 	call LoadStandardMenuHeader
 	farcall SetUpBattlePartyMenu_NoLoop
@@ -41,8 +47,10 @@ BattleCommand_BatonPass:
 	ld hl, PassedBattleMonEntrance
 	call CallBattleCore
 
-	call ResetBatonPassStatus
-	ret
+	call .check_u_turn
+	jp z, ResetUTurnStatus
+
+	jp ResetBatonPassStatus
 
 .Enemy:
 ; Wildmons don't have anything to switch to
@@ -54,7 +62,14 @@ BattleCommand_BatonPass:
 	jp z, FailedBatonPass
 
 	call UpdateEnemyMonInParty
+
+	call .check_u_turn
+	; call z, .pursuit_switch
+	jr z, .skip_anim_enemy
+
 	call AnimateCurrentMove
+
+.skip_anim_enemy
 	call BatonPass_LinkEnemySwitch
 
 ; Mobile link battles handle entrances differently
@@ -76,7 +91,24 @@ BattleCommand_BatonPass:
 	ld hl, SpikesDamage
 	call CallBattleCore
 
+	call .check_u_turn
+	jp z, ResetUTurnStatus
+
 	jr ResetBatonPassStatus
+
+.check_u_turn
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_U_TURN
+	ret z
+	cp EFFECT_PARTING_SHOT
+	ret
+
+; .pursuit_switch
+	; call BattleCommand_SwitchTurn
+	; callfar PursuitSwitch
+	; call BattleCommand_SwitchTurn
+	; ret
 
 BatonPass_LinkPlayerSwitch:
 	ld a, [wLinkMode]
@@ -121,6 +153,11 @@ BatonPass_LinkEnemySwitch:
 	jp CloseWindow
 
 FailedBatonPass:
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_U_TURN
+	ret z
+
 	call AnimateFailedMove
 	jp PrintButItFailed
 
@@ -170,6 +207,27 @@ ResetBatonPassStatus:
 	xor a
 	ld [wPlayerWrapCount], a
 	ld [wEnemyWrapCount], a
+	ret
+
+ResetUTurnStatus:
+; Reset all status changes.
+
+	ldh a, [hBattleTurn]
+	and a
+	jp nz, .Enemy
+
+	farcall ResetPlayerStatLevels
+	farcall NewBattleMonStatus
+	jr .breakattraction
+
+.Enemy
+	farcall ResetEnemyStatLevels
+	farcall NewEnemyMonStatus
+.breakattraction
+	ld hl, wPlayerSubStatus1
+	res SUBSTATUS_IN_LOVE, [hl]
+	ld hl, wEnemySubStatus1
+	res SUBSTATUS_IN_LOVE, [hl]
 	ret
 
 CheckAnyOtherAlivePartyMons:

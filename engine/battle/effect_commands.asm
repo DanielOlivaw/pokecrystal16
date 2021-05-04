@@ -6277,15 +6277,10 @@ BattleCommand_ForceSwitch:
 	and a
 	jp nz, .force_player_switch
 
-; force enemy switch
-	call .check_u_turn
-	jr z, .enemy_skip_ingrain
-
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .fail
 
-.enemy_skip_ingrain
 	ld a, [wAttackMissed]
 	and a
 	jp nz, .fail
@@ -6293,9 +6288,6 @@ BattleCommand_ForceSwitch:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer
-
-	call .check_u_turn
-	ret z
 
 	ld a, [wCurPartyLevel]
 	ld b, a
@@ -6361,20 +6353,11 @@ BattleCommand_ForceSwitch:
 	ld hl, SpikesDamage
 	jp CallBattleCore
 
-.u_turn_switch_out_text
-	ld hl, SentOutText
-	call StdBattleTextbox
-	jr .spikes_damage
-
 .force_player_switch
-	call .check_u_turn
-	jr z, .player_skip_ingrain
-
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .fail
 
-.player_skip_ingrain
 	ld a, [wAttackMissed]
 	and a
 	jp nz, .fail
@@ -6382,9 +6365,6 @@ BattleCommand_ForceSwitch:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .vs_trainer
-
-	call .check_u_turn
-	jr z, .vs_trainer
 
 	ld a, [wBattleMonLevel]
 	ld b, a
@@ -6465,9 +6445,6 @@ BattleCommand_ForceSwitch:
 	jp .spikes_damage
 
 .fail
-	call .check_u_turn
-	ret z
-
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FORCE_SWITCH_HIT
@@ -6483,9 +6460,6 @@ BattleCommand_ForceSwitch:
 	call SetBattleDraw
 	ld a, $1
 	ld [wKickCounter], a
-	
-	call .check_u_turn
-	jr z, .switch_user
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -6505,21 +6479,6 @@ BattleCommand_ForceSwitch:
 	ld hl, BlownAwayText
 .do_text
 	jp StdBattleTextbox
-
-.switch_user
-	pop af
-	ld hl, WentBackToTrainerText
-	jp StdBattleTextbox
-
-.check_u_turn
-	call BattleCommand_SwitchTurn
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_U_TURN
-	push af
-	call BattleCommand_SwitchTurn
-	pop af
-	ret
 
 CheckPlayerHasMonToSwitchTo:
 	ld a, [wPartyCount]

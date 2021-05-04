@@ -72,7 +72,7 @@ EvolutionMovePointers4::
 	dw TangrowthEvolutionMoves  ; TANGROWTH
 	dw NoEvolutionMoves4        ; ELECTIVIRE
 	dw TogekissEvolutionMoves   ; TOGEKISS
-	dw YanmegaEvolutionMoves    ; YANMEGA
+	dw NoEvolutionMoves4        ; YANMEGA
 	dw LeafeonEvolutionMoves    ; LEAFEON
 	dw GlaceonEvolutionMoves    ; GLACEON
 	dw GliscorEvolutionMoves    ; GLISCOR
@@ -182,10 +182,6 @@ AbomasnowEvolutionMoves:
 
 TogekissEvolutionMoves:
 	dw AIR_SLASH
-	db 0 ; no more evolution moves
-
-YanmegaEvolutionMoves:
-	dw BUG_BITE
 	db 0 ; no more evolution moves
 
 LeafeonEvolutionMoves:

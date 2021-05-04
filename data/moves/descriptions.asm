@@ -637,6 +637,7 @@ MoveDescriptions1:
 	dw UTurnDescription
 	dw VoltSwitchDescription
 	dw FlipTurnDescription
+	dw PartingShotDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2629,5 +2630,9 @@ VoltSwitchDescription:
 FlipTurnDescription:
 	db   "The user switches"
 	next "out after moving.@"
+
+PartingShotDescription:
+	db   "Lowers foe's stats"
+	next "before switching.@"
 
 		;"123456789123456789"

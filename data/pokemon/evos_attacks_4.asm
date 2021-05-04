@@ -387,13 +387,14 @@ ShinxEvosAttacks:
 	dbw 12, BABY_DOLL_EYES
 	dbw 15, SPARK
 	dbw 18, ROAR
-	dbw 21, SCARY_FACE
-	dbw 24, THUNDER_FANG
-	dbw 27, THUNDER_WAVE
-	dbw 30, CRUNCH
-	dbw 33, DISCHARGE
-	dbw 36, SWAGGER
-	dbw 39, WILD_CHARGE
+	dbw 21, THUNDER_FANG
+	dbw 24, SCARY_FACE
+	dbw 27, VOLT_SWITCH
+	dbw 30, THUNDER_WAVE
+	dbw 33, CRUNCH
+	dbw 36, DISCHARGE
+	dbw 39, SWAGGER
+	dbw 42, WILD_CHARGE
 	db 0 ; no more level-up moves
 
 LuxioEvosAttacks:
@@ -407,13 +408,14 @@ LuxioEvosAttacks:
 	dbw 12, BABY_DOLL_EYES
 	dbw 16, SPARK
 	dbw 20, ROAR
-	dbw 24, SCARY_FACE
-	dbw 28, THUNDER_FANG
-	dbw 32, THUNDER_WAVE
-	dbw 36, CRUNCH
-	dbw 40, DISCHARGE
-	dbw 44, SWAGGER
-	dbw 48, WILD_CHARGE
+	dbw 24, THUNDER_FANG
+	dbw 28, SCARY_FACE
+	dbw 32, VOLT_SWITCH
+	dbw 36, THUNDER_WAVE
+	dbw 40, CRUNCH
+	dbw 44, DISCHARGE
+	dbw 48, SWAGGER
+	dbw 52, WILD_CHARGE
 	db 0 ; no more level-up moves
 
 LuxrayEvosAttacks:
@@ -426,13 +428,14 @@ LuxrayEvosAttacks:
 	dbw 12, BABY_DOLL_EYES
 	dbw 16, SPARK
 	dbw 20, ROAR
-	dbw 24, SCARY_FACE
-	dbw 28, THUNDER_FANG
-	dbw 33, THUNDER_WAVE
-	dbw 38, CRUNCH
-	dbw 43, DISCHARGE
-	dbw 48, SWAGGER
-	dbw 53, WILD_CHARGE
+	dbw 24, THUNDER_FANG
+	dbw 28, SCARY_FACE
+	dbw 33, VOLT_SWITCH
+	dbw 38, THUNDER_WAVE
+	dbw 43, CRUNCH
+	dbw 48, DISCHARGE
+	dbw 53, SWAGGER
+	dbw 58, WILD_CHARGE
 	db 0 ; no more level-up moves
 
 BudewEvosAttacks:
@@ -1317,10 +1320,11 @@ FinneonEvosAttacks:
 	dbw 24, AQUA_RING
 	dbw 27, SIGNAL_BEAM
 	dbw 30, SOAK
-	dbw 33, BOUNCE
-	dbw 36, SILVER_WIND
-	dbw 39, AQUA_TAIL
-	; dbw 42, TAIL_GLOW
+	dbw 33, U_TURN
+	dbw 36, BOUNCE
+	dbw 39, SILVER_WIND
+	dbw 42, AQUA_TAIL
+	dbw 45, TAIL_GLOW
 	db 0 ; no more level-up moves
 
 LumineonEvosAttacks:
@@ -1337,10 +1341,11 @@ LumineonEvosAttacks:
 	dbw 24, AQUA_RING
 	dbw 27, SIGNAL_BEAM
 	dbw 30, SOAK
-	dbw 35, BOUNCE
-	dbw 40, SILVER_WIND
-	dbw 45, AQUA_TAIL
-	; dbw 50, TAIL_GLOW
+	dbw 35, U_TURN
+	dbw 40, BOUNCE
+	dbw 45, SILVER_WIND
+	dbw 50, AQUA_TAIL
+	dbw 55, TAIL_GLOW
 	db 0 ; no more level-up moves
 
 MantykeEvosAttacks:
@@ -1527,12 +1532,11 @@ YanmegaEvosAttacks:
 	dbw 20, SUPERSONIC
 	dbw 24, PURSUIT
 	dbw 28, WING_ATTACK
-	dbw 31, BUG_BITE
 	dbw 32, ANCIENTPOWER
 	dbw 36, HYPNOSIS
-	dbw 40, SILVER_WIND
-	dbw 44, UPROAR
-	dbw 48, SCREECH
+	dbw 40, UPROAR
+	dbw 44, SCREECH
+	dbw 48, U_TURN
 	dbw 52, AIR_SLASH
 	dbw 56, BUG_BUZZ
 	db 0 ; no more level-up moves
@@ -1595,18 +1599,19 @@ GliscorEvosAttacks:
 	dbw 1, POISON_STING
 	dbw 1, SAND_ATTACK
 	dbw 1, NIGHT_SLASH
-	dbw 5, HARDEN
-	dbw 10, QUICK_ATTACK
-	dbw 14, FAINT_ATTACK
-	dbw 19, FURY_CUTTER
-	dbw 23, KNOCK_OFF
-	dbw 28, SLASH
+	dbw 4, HARDEN
+	dbw 8, QUICK_ATTACK
+	dbw 12, FAINT_ATTACK
+	dbw 16, FURY_CUTTER
+	dbw 20, KNOCK_OFF
+	dbw 24, SLASH
+	dbw 28, U_TURN
 	dbw 32, SCREECH
-	dbw 37, ACROBATICS
-	dbw 41, X_SCISSOR
-	dbw 46, SKY_UPPERCUT
-	dbw 50, SWORDS_DANCE
-	dbw 55, GUILLOTINE
+	dbw 36, ACROBATICS
+	dbw 40, X_SCISSOR
+	dbw 44, SKY_UPPERCUT
+	dbw 48, SWORDS_DANCE
+	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 MamoswineEvosAttacks:

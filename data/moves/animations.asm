@@ -658,6 +658,7 @@ BattleAnimations::
 	dw BattleAnim_UTurn
 	dw BattleAnim_VoltSwitch
 	dw BattleAnim_FlipTurn
+	dw BattleAnim_PartingShot
 
 	dw BattleAnim_SweetScent2
 
@@ -1041,6 +1042,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_PartingShot:
 BattleAnim_UTurn:
 BattleAnim_VoltSwitch:
 BattleAnim_FlipTurn:

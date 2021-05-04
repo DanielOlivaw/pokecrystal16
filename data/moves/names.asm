@@ -630,4 +630,5 @@ MoveNames::
 	db "U-TURN@"
 	db "VOLT SWITCH@"
 	db "FLIP TURN@"
+	db "PARTING SHOT@"
 	  ;"123456123456@"

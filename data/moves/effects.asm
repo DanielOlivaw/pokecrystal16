@@ -3148,11 +3148,22 @@ UTurn:
 	criticaltext
 	supereffectivetext
 	checkfaint
-	switchturn
-	forceswitch
-	switchturn
+	batonpass
 	buildopponentrage
 	kingsrock
+	endmove
+
+PartingShot:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	multistatdown
+	lowersub
+	statdownanim
+	raisesub
+	multistatdownmessage
+	batonpass
 	endmove
 
 ; Excavate:

@@ -8,6 +8,8 @@ MultiStatDownEffect:
 	jp z, BattleCommand_AttackSpecialAttackDown
 	cp EFFECT_ATK_SP_ATK_DOWN
 	jp z, BattleCommand_AttackSpecialAttackDown
+	cp EFFECT_PARTING_SHOT
+	jp z, BattleCommand_AttackSpecialAttackDown
 	cp EFFECT_MEMENTO
 	jp z, BattleCommand_AttackSpecialAttackDown2
 
@@ -161,7 +163,7 @@ BattleCommand_AttackSpecialAttackDown2:
 MultiStatDownMessage:
 	ld a, [wFailedMessage]
 	and a
-	jr nz, .failed
+	jp nz, .failed
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -170,6 +172,8 @@ MultiStatDownMessage:
 	cp EFFECT_TEARFUL_LOOK
 	jr z, .atk_sp_atk_down
 	cp EFFECT_ATK_SP_ATK_DOWN
+	jr z, .atk_sp_atk_down
+	cp EFFECT_PARTING_SHOT
 	jr z, .atk_sp_atk_down
 	cp EFFECT_MEMENTO
 	jr z, .atk_sp_atk_down_2

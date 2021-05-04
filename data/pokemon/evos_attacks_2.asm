@@ -998,9 +998,10 @@ HoppipEvosAttacks:
 	dbw 27, WIND_RIDE
 	dbw 30, COTTON_SPORE
 	dbw 33, ACROBATICS
-	dbw 36, GIGA_DRAIN
-	dbw 39, BOUNCE
-	dbw 42, MEMENTO
+	dbw 36, U_TURN
+	dbw 39, GIGA_DRAIN
+	dbw 42, BOUNCE
+	dbw 45, MEMENTO
 	db 0 ; no more level-up moves
 
 SkiploomEvosAttacks:
@@ -1021,9 +1022,10 @@ SkiploomEvosAttacks:
 	dbw 31, WIND_RIDE
 	dbw 35, COTTON_SPORE
 	dbw 39, ACROBATICS
-	dbw 43, GIGA_DRAIN
-	dbw 47, BOUNCE
-	dbw 51, MEMENTO
+	dbw 43, U_TURN
+	dbw 47, GIGA_DRAIN
+	dbw 51, BOUNCE
+	dbw 55, MEMENTO
 	db 0 ; no more level-up moves
 
 JumpluffEvosAttacks:
@@ -1043,9 +1045,10 @@ JumpluffEvosAttacks:
 	dbw 33, WIND_RIDE
 	dbw 38, COTTON_SPORE
 	dbw 43, ACROBATICS
-	dbw 48, GIGA_DRAIN
-	dbw 53, BOUNCE
-	dbw 58, MEMENTO
+	dbw 48, U_TURN
+	dbw 53, GIGA_DRAIN
+	dbw 58, BOUNCE
+	dbw 63, MEMENTO
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
@@ -1062,9 +1065,9 @@ YanmaEvosAttacks:
 	dbw 28, WING_ATTACK
 	dbw 32, ANCIENTPOWER
 	dbw 36, HYPNOSIS
-	dbw 40, SILVER_WIND
-	dbw 44, UPROAR
-	dbw 48, SCREECH
+	dbw 40, UPROAR
+	dbw 44, SCREECH
+	dbw 48, U_TURN
 	dbw 52, AIR_SLASH
 	dbw 56, BUG_BUZZ
 	db 0 ; no more level-up moves
@@ -1174,11 +1177,12 @@ MurkrowEvosAttacks:
 SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POWER_GEM
+	dbw 1, RAIN_DANCE
 	dbw 1, AMNESIA
 	dbw 1, SLACK_OFF
-	dbw 1, HIDDEN_POWER
 	dbw 1, TACKLE
 	dbw 1, CURSE
+	dbw 1, HIDDEN_POWER
 	dbw 4, GROWL
 	dbw 8, WATER_GUN
 	dbw 12, YAWN
@@ -1191,7 +1195,7 @@ SlowkingEvosAttacks:
 	dbw 40, NASTY_PLOT
 	dbw 44, PSYCHIC_M
 	dbw 48, PSYCH_UP
-	dbw 52, RAIN_DANCE
+	dbw 52, TRUMP_CARD
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
@@ -1308,18 +1312,19 @@ GligarEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, SAND_ATTACK
-	dbw 5, HARDEN
-	dbw 10, QUICK_ATTACK
-	dbw 14, FAINT_ATTACK
-	dbw 19, FURY_CUTTER
-	dbw 23, KNOCK_OFF
-	dbw 28, SLASH
+	dbw 4, HARDEN
+	dbw 8, QUICK_ATTACK
+	dbw 12, FAINT_ATTACK
+	dbw 16, FURY_CUTTER
+	dbw 20, KNOCK_OFF
+	dbw 24, SLASH
+	dbw 28, U_TURN
 	dbw 32, SCREECH
-	dbw 37, ACROBATICS
-	dbw 41, X_SCISSOR
-	dbw 46, SKY_UPPERCUT
-	dbw 50, SWORDS_DANCE
-	dbw 55, GUILLOTINE
+	dbw 36, ACROBATICS
+	dbw 40, X_SCISSOR
+	dbw 44, SKY_UPPERCUT
+	dbw 48, SWORDS_DANCE
+	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 SteelixEvosAttacks:

@@ -474,7 +474,8 @@ PanchamEvosAttacks:
 	dbw 32, VITAL_THROW
 	dbw 36, CRUNCH
 	dbw 40, BODY_SLAM
-	dbw 44, SKY_UPPERCUT
+	dbw 44, PARTING_SHOT
+	dbw 48, SKY_UPPERCUT
 	db 0 ; no more level-up moves
 
 PangoroEvosAttacks:
@@ -490,10 +491,11 @@ PangoroEvosAttacks:
 	dbw 24, LOW_SWEEP
 	dbw 28, SLASH
 	dbw 31, NIGHT_SLASH
-	dbw 34, VITAL_THROW
-	dbw 40, CRUNCH
-	dbw 46, BODY_SLAM
-	dbw 52, SKY_UPPERCUT
+	dbw 33, VITAL_THROW
+	dbw 38, CRUNCH
+	dbw 43, BODY_SLAM
+	dbw 48, PARTING_SHOT
+	dbw 53, SKY_UPPERCUT
 	dbw 58, HAMMER_ARM
 	db 0 ; no more level-up moves
 
