@@ -1423,6 +1423,7 @@ PonytaEvosAttacks:
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_JAB
+	dbw 1, FURY_ATTACK
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 5, EMBER
@@ -1434,7 +1435,6 @@ RapidashEvosAttacks:
 	dbw 29, FIRE_SPIN
 	dbw 33, TAKE_DOWN
 	dbw 37, INFERNO
-	dbw 39, FURY_ATTACK
 	dbw 39, SMART_STRIKE
 	dbw 43, FIRE_BLAST
 	dbw 49, BOUNCE
@@ -1577,6 +1577,7 @@ SeelEvosAttacks:
 
 DewgongEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SIGNAL_BEAM
 	dbw 1, HEADBUTT
 	dbw 4, GROWL
 	dbw 8, ICY_WIND
@@ -1588,7 +1589,6 @@ DewgongEvosAttacks:
 	dbw 29, ICE_SHARD
 	dbw 32, BRINE
 	dbw 33, SHEER_COLD
-	dbw 33, SIGNAL_BEAM
 	dbw 38, TAKE_DOWN
 	dbw 43, AQUA_TAIL
 	dbw 49, ICE_BEAM

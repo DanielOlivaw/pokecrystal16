@@ -644,4 +644,5 @@ Moves1:
 	move EFFECT_SACRED_SWORD,       85, DARK,     PHYSICAL, 100, 10,   0 ; DARKEST_LARIAT
 	move EFFECT_SP_ATK_UP_2,         0, BUG,      STATUS,   100, 20,   0 ; TAIL_GLOW
 	move EFFECT_CONFUSE_HIT,        90, NORMAL,   PHYSICAL,  85, 20,  20 ; ROCK_CLIMB
+	move EFFECT_TRUMP_CARD,          1, NORMAL,   SPECIAL,  100,  5,   0 ; TRUMP_CARD
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

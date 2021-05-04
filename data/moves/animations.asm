@@ -654,6 +654,7 @@ BattleAnimations::
 	dw BattleAnim_DarkestLariat
 	dw BattleAnim_TailGlow
 	dw BattleAnim_RockClimb
+	dw BattleAnim_TrumpCard
 
 	dw BattleAnim_SweetScent2
 
@@ -1037,6 +1038,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_TrumpCard:
 BattleAnim_Poltergeist:
 BattleAnim_ScaleShot:
 BattleAnim_MistyExplosion:

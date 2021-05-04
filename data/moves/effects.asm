@@ -1621,7 +1621,7 @@ FuryCutter:
 	damagecalc
 	stab
 	checkhit
-	furycutter
+	farcommand
 	damagevariation
 	moveanim
 	failuretext
@@ -2350,7 +2350,7 @@ ResetStatsHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	resetstatstarget
+	farcommand
 	kingsrock
 	endmove
 
@@ -2648,7 +2648,7 @@ Captivate:
 	usedmovetext
 	doturn
 	checkhit
-	captivate
+	farcommand
 	lowersub
 	statdownanim
 	raisesub
@@ -2697,7 +2697,7 @@ Yawn:
 	doturn
 	checkhit
 	checksafeguard
-	yawn
+	farcommand
 	endmove
 
 Whirlpool:
@@ -2727,7 +2727,7 @@ CraftyShield:
 	checkobedience
 	usedmovetext
 	doturn
-	craftyshield
+	farcommand
 	endmove
 
 FinalGambit:
@@ -2777,7 +2777,6 @@ HeavySlam:
 	damagecalc
 	stab
 	damagevariation
-	conditionalboost
 	checkhit
 	moveanim
 	failuretext
@@ -3109,6 +3108,27 @@ ScaleShot:
 	statupmessage
 	clangingscales
 	raisesub
+	kingsrock
+	endmove
+
+TrumpCard:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	trumpcard
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
 	kingsrock
 	endmove
 

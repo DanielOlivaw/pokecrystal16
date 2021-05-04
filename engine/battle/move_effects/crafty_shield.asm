@@ -1,4 +1,4 @@
-CraftyShieldEffect:
+BattleCommand_CraftyShield:
 ; Like protect but without the decreasing success rate.
 
 	farcall CheckOpponentWentFirst

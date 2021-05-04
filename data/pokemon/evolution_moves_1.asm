@@ -216,7 +216,6 @@ GolemEvolutionMoves:
 	db 0 ; no more evolution moves
 
 RapidashEvolutionMoves:
-	dw FURY_ATTACK
 	dw SMART_STRIKE
 	db 0 ; no more evolution moves
 
@@ -230,7 +229,6 @@ MagnetonEvolutionMoves:
 
 DewgongEvolutionMoves:
 	dw SHEER_COLD
-	dw SIGNAL_BEAM
 	db 0 ; no more evolution moves
 
 MukEvolutionMoves:

@@ -1,4 +1,4 @@
-YawnEffect:
+BattleCommand_Yawn:
 ; Set Yawn status on the opponent
 
 ; Stop if the move already missed (due to Safeguard, Fly, etc.)

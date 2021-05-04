@@ -1064,6 +1064,7 @@ BattleCommand_DoTurn:
 	bit SUBSTATUS_ELECTRIFIED, a
 	jr z, .skip_electrify
 
+	push hl
 	ld a, ELECTRIC
 	push af
 	ld a, BATTLE_VARS_MOVE_TYPE
@@ -1071,6 +1072,7 @@ BattleCommand_DoTurn:
 	pop af
 	or SPECIAL
 	ld [hl], a
+	pop hl
 
 .skip_electrify
 	ldh a, [hBattleTurn]
@@ -1355,11 +1357,38 @@ INCLUDE "data/moves/critical_hit_moves.asm"
 INCLUDE "data/battle/critical_hit_chances.asm"
 
 BattleCommand_TripleKick:
-	farcall TripleKickEffect
+; triplekick
+
+	ld a, [wKickCounter]
+	ld b, a
+	inc b
+	ld hl, wCurDamage + 1
+	ld a, [hld]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+.next_kick
+	dec b
+	ret z
+	ld a, [hl]
+	add e
+	ld [hld], a
+	ld a, [hl]
+	adc d
+	ld [hli], a
+
+; No overflow.
+	jr nc, .next_kick
+	ld a, $ff
+	ld [hld], a
+	ld [hl], a
 	ret
 
 BattleCommand_KickCounter:
-	farcall TripleKickCounter
+; kickcounter
+
+	ld hl, wKickCounter
+	inc [hl]
 	ret
 
 BattleCommand_Stab:
@@ -1803,6 +1832,8 @@ BattleCommand_CheckHit:
 	cp EFFECT_LOCK_ON
 	ret z
 	cp EFFECT_PAIN_SPLIT
+	ret z
+	cp EFFECT_TRUMP_CARD
 	ret z
 	cp EFFECT_STATUS_OPP_ACC
 	ret z
@@ -7453,11 +7484,19 @@ EndRechargeOpp:
 	pop hl
 	ret
 
-INCLUDE "engine/battle/move_effects/rage.asm"
-
 INCLUDE "engine/battle/move_effects/mimic.asm"
 
-INCLUDE "engine/battle/move_effects/splash.asm"
+BattleCommand_Rage:
+; rage
+	ld a, BATTLE_VARS_SUBSTATUS4
+	call GetBattleVarAddr
+	set SUBSTATUS_RAGE, [hl]
+	ret
+
+BattleCommand_Splash:
+	call AnimateCurrentMove
+	farcall StubbedTrainerRankings_Splash
+	jp PrintNothingHappened
 
 BattleCommand_ResetStats:
 ; resetstats
@@ -7820,10 +7859,6 @@ BattleCommand_DoCureStatus:
 	farcall DoCureStatusHit
 	ret
 
-BattleCommand_ResetStatsTarget:
-	farcall ResetStatsTargetEffect
-	ret
-
 BattleCommand_Uproar:
 	farcall UproarEffect
 	ret
@@ -7836,32 +7871,24 @@ BattleCommand_ClearHazards:
 	farcall ClearHazardsEffect
 	ret
 
-BattleCommand_FuryCutter:
-	farcall FuryCutterEffect
-	ret
-
 BattleCommand_GetMagnitude:
 	farcall GetMagnitude
 	ret
 
-BattleCommand_Captivate:
-	farcall CaptivateEffect
-	ret
-
-BattleCommand_Yawn:
-	farcall YawnEffect
-	ret
-
-BattleCommand_CraftyShield:
-	farcall CraftyShieldEffect
-	ret
-
 BattleCommand_HeavySlam:
-	farcall HeavySlamPower
+	farcall HeavySlamEffect
+	ret
+
+BattleCommand_TrumpCard:
+	farcall TrumpCardEffect
 	ret
 
 LoadMovePower40:
 	ld d, 40
+	ret
+
+LoadMovePower50:
+	ld d, 50
 	ret
 
 LoadMovePower60:
@@ -7878,6 +7905,10 @@ LoadMovePower100:
 
 LoadMovePower120:
 	ld d, 120
+	ret
+
+LoadMovePower200:
+	ld d, 200
 	ret
 
 SafeCheckSafeguard:

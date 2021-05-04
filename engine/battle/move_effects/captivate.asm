@@ -1,4 +1,4 @@
-CaptivateEffect:
+BattleCommand_Captivate:
 ; Check whether the target is the opposite gender of the user
 	ld a, [wAttackMissed]
 	and a

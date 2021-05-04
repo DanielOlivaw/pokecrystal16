@@ -1,4 +1,4 @@
-ResetStatsTargetEffect:
+BattleCommand_ResetStatsTarget:
 	ld hl, wEnemyStatLevels
 	ldh a, [hBattleTurn]
 	and a

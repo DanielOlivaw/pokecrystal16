@@ -626,4 +626,5 @@ MoveNames::
 	db "DARK LARIAT@"
 	db "TAIL GLOW@"
 	db "ROCK CLIMB@"
+	db "TRUMP CARD@"
 	  ;"123456123456@"

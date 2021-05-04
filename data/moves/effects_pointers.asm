@@ -241,3 +241,4 @@ MoveEffectsPointers:
 	dw Poltergeist            ; EFFECT_POLTERGEIST
 	dw ScaleShot              ; EFFECT_SCALE_SHOT
 	dw Selfdestruct           ; EFFECT_MISTY_EXPLOSION
+	dw TrumpCard              ; EFFECT_TRUMP_CARD

@@ -87,4 +87,19 @@ Find_Command:
 
 	cp EFFECT_FALSE_SWIPE
 	jp z, BattleCommand_FalseSwipe
+
+	cp EFFECT_CAPTIVATE
+	jp z, BattleCommand_Captivate
+
+	cp EFFECT_YAWN
+	jp z, BattleCommand_Yawn
+
+	cp EFFECT_CRAFTY_SHIELD
+	jp z, BattleCommand_CraftyShield
+
+	cp EFFECT_RESET_STATS_HIT
+	jp z, BattleCommand_ResetStatsTarget
+
+	cp EFFECT_FURY_CUTTER
+	jp z, BattleCommand_FuryCutter
 	ret

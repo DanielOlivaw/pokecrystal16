@@ -76,7 +76,6 @@ BattleCommandPointers:
 	dw BattleCommand_CheckCurl
 	dw BattleCommand_RolloutPower
 	dw BattleCommand_LowKick
-	dw BattleCommand_FuryCutter
 	dw BattleCommand_HappinessPower
 	dw BattleCommand_Present
 	dw BattleCommand_DamageCalc
@@ -159,18 +158,13 @@ BattleCommandPointers:
 	dw BattleCommand_MultiStatDownMessage
 	dw BattleCommand_DoCureStatus
 	dw BattleCommand_HammerArm
-	dw BattleCommand_ResetStatsTarget
 	dw BattleCommand_DragonDance
 	dw BattleCommand_WorkUp
 	dw BattleCommand_BrightMoss
 	dw BattleCommand_Uproar
 	dw BattleCommand_UproarState
 	dw BattleCommand_WeatherBall
-	dw BattleCommand_Captivate
-	dw BattleCommand_Yawn
-	dw BattleCommand_CraftyShield
 	dw BattleCommand_Burn
-	dw BattleCommand_HeavySlam
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
 	dw BattleCommand_Awaken
@@ -178,3 +172,5 @@ BattleCommandPointers:
 	dw BattleCommand_ShiftGear
 	dw BattleCommand_Punishment
 	dw BattleCommand_StoredPower
+	dw BattleCommand_HeavySlam
+	dw BattleCommand_TrumpCard

@@ -1,5 +1,5 @@
 ; BattleCommand_HeavySlam:
-HeavySlamPower:
+HeavySlamEffect:
 ; t = target's weight, u = user's weight
 ; relative weight  power
 ; t > u/2           40

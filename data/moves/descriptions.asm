@@ -633,6 +633,7 @@ MoveDescriptions1:
 	dw DarkestLariatDescription
 	dw TailGlowDescription
 	dw RockClimbDescription
+	dw TrumpCardDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1244,6 +1245,8 @@ SplashDescription:
 	next "whatsoever.@"
 
 AcidArmorDescription:
+IronDefenseDescription:
+CottonGuardDescription:
 	db   "Sharply raises the"
 	next "user's DEFENSE.@"
 
@@ -1297,6 +1300,7 @@ TripleAxelDescription:
 	next "with rising power.@"
 
 ThiefDescription:
+CovetDescription:
 	db   "An attack that may"
 	next "steal a held item.@"
 
@@ -1437,6 +1441,7 @@ SwaggerDescription:
 	next "and raises ATTACK.@"
 
 FuryCutterDescription:
+EchoedVoiceDescription:
 	db   "Successive hits"
 	next "raise power.@"
 
@@ -1490,8 +1495,8 @@ MegahornDescription:
 	next "attack.@"
 
 DragonbreathDescription:
-	db   "A strong breath"
-	next "attack.@"
+	db   "Breath that may"
+	next "cause paralysis.@"
 
 BatonPassDescription:
 	db   "Switches while"
@@ -1591,7 +1596,6 @@ SeedBombDescription:
 PetalStormDescription:
 	db   "Attacks with a bl-"
 	next "izzard of petals.@"
-		;"123456789123456789"
 
 FireFangDescription:
 	db   "May cause a burn"
@@ -1628,10 +1632,6 @@ AquaTailDescription:
 ShellSmashDescription:
 	db   "Breaks the shell"
 	next "to boost offense.@"
-
-IronDefenseDescription:
-	db   "Sharply raises the"
-	next "user's DEFENSE.@"
 
 BugBiteDescription:
 	db   "Attacks and eats"
@@ -1689,6 +1689,7 @@ DefendOrderDescription:
 	next "and SPCL.DEF.@"
 
 MoonblastDescription:
+MistBallDescription:
 	db   "An attack that may"
 	next "lower SPCL.ATK.@"
 
@@ -1711,14 +1712,6 @@ AuroraVeilDescription:
 DazzleGleamDescription:
 	db   "Emits a powerful"
 	next "flash of light.@"
-
-EchoedVoiceDescription:
-	db   "Successive hits"
-	next "raise power.@"
-
-CovetDescription:
-	db   "An attack that may"
-	next "steal a held item.@"
 
 RoundDescription:
 	db   "Joining in doubles"
@@ -2111,10 +2104,6 @@ EerieImpulseDescription:
 	db   "Sharply lowers the"
 	next "foe's SPCL.ATK.@"
 
-CottonGuardDescription:
-	db   "Sharply raises the"
-	next "user's DEFENSE.@"
-
 BounceDescription:
 	db   "1st turn: Bounce"
 	next "2nd turn: Attack@"
@@ -2287,10 +2276,6 @@ ChargeBeamDescription:
 FieryDanceDescription:
 	db   "An attack that may"
 	next "raise SPCL.ATK.@"
-
-MistBallDescription:
-	db   "An attack that may"
-	next "lower SPCL.ATK.@"
 
 OriginPulseDescription:
 	db   "Attacks with blue"
@@ -2484,10 +2469,6 @@ PowerTrickDescription:
 	db   "Switches user's"
 	next "ATTACK & DEFENSE.@"
 
-VacuumCutDescription:
-	db   "Always inflicts"
-	next "50HP damage.@"
-
 FocusPunchDescription:
 	db   "Fails if the user"
 	next "is hit before use.@"
@@ -2635,5 +2616,9 @@ ScaleShotDescription:
 ScaldDescription:
 	db   "Boiling water that"
 	next "may cause a burn.@"
+
+TrumpCardDescription:
+	db   "Stronger the fewer"
+	next "PP this move has.@"
 
 		;"123456789123456789"

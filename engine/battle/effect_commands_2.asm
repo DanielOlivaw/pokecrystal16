@@ -7,7 +7,6 @@ INCLUDE "engine/battle/move_effects/protect_variations.asm"
 INCLUDE "engine/battle/move_effects/variable_type.asm"
 INCLUDE "engine/battle/move_effects/readying_moves.asm"
 
-INCLUDE "engine/battle/move_effects/triple_kick.asm"
 INCLUDE "engine/battle/move_effects/false_swipe.asm"
 INCLUDE "engine/battle/move_effects/leech_seed.asm"
 INCLUDE "engine/battle/move_effects/spite.asm"
@@ -113,6 +112,7 @@ INCLUDE "engine/battle/move_effects/octolock.asm"
 INCLUDE "engine/battle/move_effects/teatime.asm"
 INCLUDE "engine/battle/move_effects/bolt_beak.asm"
 INCLUDE "engine/battle/move_effects/poltergeist.asm"
+INCLUDE "engine/battle/move_effects/trump_card.asm"
 
 CheckSafeguardEffect:
 ; checksafeguard

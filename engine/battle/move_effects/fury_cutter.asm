@@ -1,4 +1,4 @@
-FuryCutterEffect:
+BattleCommand_FuryCutter:
 ; furycutter
 
 	ld hl, wPlayerFuryCutterCount
