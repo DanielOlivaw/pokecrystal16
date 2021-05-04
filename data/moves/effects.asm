@@ -3132,6 +3132,29 @@ TrumpCard:
 	kingsrock
 	endmove
 
+UTurn:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	switchturn
+	forceswitch
+	switchturn
+	buildopponentrage
+	kingsrock
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

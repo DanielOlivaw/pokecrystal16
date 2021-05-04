@@ -634,6 +634,9 @@ MoveDescriptions1:
 	dw TailGlowDescription
 	dw RockClimbDescription
 	dw TrumpCardDescription
+	dw UTurnDescription
+	dw VoltSwitchDescription
+	dw FlipTurnDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2620,5 +2623,11 @@ ScaldDescription:
 TrumpCardDescription:
 	db   "Stronger the fewer"
 	next "PP this move has.@"
+
+UTurnDescription:
+VoltSwitchDescription:
+FlipTurnDescription:
+	db   "The user switches"
+	next "out after moving.@"
 
 		;"123456789123456789"

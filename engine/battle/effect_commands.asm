@@ -6278,36 +6278,30 @@ BattleCommand_ForceSwitch:
 	jp nz, .force_player_switch
 
 ; force enemy switch
+	call .check_u_turn
+	jr z, .enemy_skip_ingrain
+
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .fail
 
+.enemy_skip_ingrain
 	ld a, [wAttackMissed]
 	and a
-	jr nz, .missed
+	jp nz, .fail
 
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer
+
+	call .check_u_turn
+	ret z
 
 	ld a, [wCurPartyLevel]
 	ld b, a
 	ld a, [wBattleMonLevel]
 	cp b
 	jr nc, .wild_force_flee
-
-	add b
-	ld c, a
-	inc c
-.random_loop_wild
-	call BattleRandom
-	cp c
-	jr nc, .random_loop_wild
-	srl b
-	srl b
-	cp b
-	jr nc, .wild_force_flee
-.missed
 	jp .fail
 
 .wild_force_flee
@@ -6322,10 +6316,7 @@ BattleCommand_ForceSwitch:
 
 .trainer
 	call FindAliveEnemyMons
-	jr c, .switch_fail
-	; ld a, [wEnemyGoesFirst]
-	; and a
-	; jr z, .switch_fail
+	jp c, .fail
 	call UpdateEnemyMonInParty
 	ld a, $1
 	ld [wKickCounter], a
@@ -6366,24 +6357,34 @@ BattleCommand_ForceSwitch:
 	ld hl, DraggedOutText
 	call StdBattleTextbox
 
+.spikes_damage
 	ld hl, SpikesDamage
 	jp CallBattleCore
 
-.switch_fail
-	jp .fail
+.u_turn_switch_out_text
+	ld hl, SentOutText
+	call StdBattleTextbox
+	jr .spikes_damage
 
 .force_player_switch
+	call .check_u_turn
+	jr z, .player_skip_ingrain
+
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_INGRAINED, a
 	jp nz, .fail
 
+.player_skip_ingrain
 	ld a, [wAttackMissed]
 	and a
-	jr nz, .player_miss
+	jp nz, .fail
 
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .vs_trainer
+
+	call .check_u_turn
+	jr z, .vs_trainer
 
 	ld a, [wBattleMonLevel]
 	ld b, a
@@ -6403,8 +6404,6 @@ BattleCommand_ForceSwitch:
 	srl b
 	cp b
 	jr nc, .wild_succeed_playeristarget
-
-.player_miss
 	jr .fail
 
 .wild_succeed_playeristarget
@@ -6420,10 +6419,6 @@ BattleCommand_ForceSwitch:
 .vs_trainer
 	call CheckPlayerHasMonToSwitchTo
 	jr c, .fail
-
-	; ld a, [wEnemyGoesFirst]
-	; cp $1
-	; jr z, .switch_fail
 
 	call UpdateBattleMonInParty
 	ld a, $1
@@ -6467,10 +6462,12 @@ BattleCommand_ForceSwitch:
 	ld hl, DraggedOutText
 	call StdBattleTextbox
 
-	ld hl, SpikesDamage
-	jp CallBattleCore
+	jp .spikes_damage
 
 .fail
+	call .check_u_turn
+	ret z
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FORCE_SWITCH_HIT
@@ -6486,6 +6483,9 @@ BattleCommand_ForceSwitch:
 	call SetBattleDraw
 	ld a, $1
 	ld [wKickCounter], a
+	
+	call .check_u_turn
+	jr z, .switch_user
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -6505,6 +6505,21 @@ BattleCommand_ForceSwitch:
 	ld hl, BlownAwayText
 .do_text
 	jp StdBattleTextbox
+
+.switch_user
+	pop af
+	ld hl, WentBackToTrainerText
+	jp StdBattleTextbox
+
+.check_u_turn
+	call BattleCommand_SwitchTurn
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_U_TURN
+	push af
+	call BattleCommand_SwitchTurn
+	pop af
+	ret
 
 CheckPlayerHasMonToSwitchTo:
 	ld a, [wPartyCount]
@@ -7815,11 +7830,7 @@ INCLUDE "engine/battle/move_effects/endure.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
-INCLUDE "engine/battle/move_effects/return.asm"
-
 INCLUDE "engine/battle/move_effects/present.asm"
-
-INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/low_kick.asm"
 
@@ -7875,40 +7886,20 @@ BattleCommand_GetMagnitude:
 	farcall GetMagnitude
 	ret
 
+BattleCommand_HappinessPower:
+	callfar HappinessPowerEffect
+	ret
+
+BattleCommand_FrustrationPower:
+	callfar FrustrationPowerEffect
+	ret
+
 BattleCommand_HeavySlam:
-	farcall HeavySlamEffect
+	callfar HeavySlamEffect
 	ret
 
 BattleCommand_TrumpCard:
-	farcall TrumpCardEffect
-	ret
-
-LoadMovePower40:
-	ld d, 40
-	ret
-
-LoadMovePower50:
-	ld d, 50
-	ret
-
-LoadMovePower60:
-	ld d, 60
-	ret
-
-LoadMovePower80:
-	ld d, 80
-	ret
-
-LoadMovePower100:
-	ld d, 100
-	ret
-
-LoadMovePower120:
-	ld d, 120
-	ret
-
-LoadMovePower200:
-	ld d, 200
+	callfar TrumpCardEffect
 	ret
 
 SafeCheckSafeguard:

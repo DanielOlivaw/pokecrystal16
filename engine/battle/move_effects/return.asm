@@ -1,4 +1,4 @@
-BattleCommand_HappinessPower:
+HappinessPowerEffect:
 ; happinesspower
 	push bc
 	ld hl, wBattleMonHappiness

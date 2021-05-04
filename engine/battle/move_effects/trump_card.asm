@@ -28,30 +28,35 @@ TrumpCardEffect:
 
 ; 4 or more PP -> 40 power
 	pop de
-	farcall LoadMovePower40
 	pop bc
+	; farcall LoadMovePower40
+	ld d, 40
 	ret
 
 .pp0
 	pop de
-	farcall LoadMovePower200
 	pop bc
+	; farcall LoadMovePower200
+	ld d, 200
 	ret
 
 .pp1
 	pop de
-	farcall LoadMovePower80
 	pop bc
+	; farcall LoadMovePower80
+	ld d, 80
 	ret
 
 .pp2
 	pop de
-	farcall LoadMovePower60
 	pop bc
+	; farcall LoadMovePower60
+	ld d, 60
 	ret
 
 .pp3
 	pop de
-	farcall LoadMovePower50
 	pop bc
+	; farcall LoadMovePower50
+	ld d, 50
 	ret

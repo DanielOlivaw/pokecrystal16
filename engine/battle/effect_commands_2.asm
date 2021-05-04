@@ -41,6 +41,8 @@ INCLUDE "engine/battle/move_effects/nightmare.asm"
 INCLUDE "engine/battle/move_effects/lock_on.asm"
 INCLUDE "engine/battle/move_effects/disable.asm"
 INCLUDE "engine/battle/move_effects/pay_day.asm"
+INCLUDE "engine/battle/move_effects/return.asm"
+INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/cut.asm"
 INCLUDE "engine/battle/move_effects/shell_smash.asm"

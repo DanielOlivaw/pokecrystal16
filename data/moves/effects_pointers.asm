@@ -242,3 +242,4 @@ MoveEffectsPointers:
 	dw ScaleShot              ; EFFECT_SCALE_SHOT
 	dw Selfdestruct           ; EFFECT_MISTY_EXPLOSION
 	dw TrumpCard              ; EFFECT_TRUMP_CARD
+	dw UTurn                  ; EFFECT_U_TURN

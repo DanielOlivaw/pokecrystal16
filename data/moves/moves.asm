@@ -645,4 +645,7 @@ Moves1:
 	move EFFECT_SP_ATK_UP_2,         0, BUG,      STATUS,   100, 20,   0 ; TAIL_GLOW
 	move EFFECT_CONFUSE_HIT,        90, NORMAL,   PHYSICAL,  85, 20,  20 ; ROCK_CLIMB
 	move EFFECT_TRUMP_CARD,          1, NORMAL,   SPECIAL,  100,  5,   0 ; TRUMP_CARD
+	move EFFECT_U_TURN,             70, BUG,      PHYSICAL, 100, 20,   0 ; U_TURN
+	move EFFECT_U_TURN,             70, ELECTRIC, SPECIAL,  100, 20,   0 ; VOLT_SWITCH
+	move EFFECT_U_TURN,             60, WATER,    PHYSICAL, 100, 20,   0 ; FLIP_TURN
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

@@ -634,6 +634,9 @@
 	const TAIL_GLOW
 	const ROCK_CLIMB
 	const TRUMP_CARD
+	const U_TURN
+	const VOLT_SWITCH
+	const FLIP_TURN
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

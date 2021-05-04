@@ -1,4 +1,4 @@
-BattleCommand_FrustrationPower:
+FrustrationPowerEffect:
 ; frustrationpower
 	push bc
 	ld hl, wBattleMonHappiness

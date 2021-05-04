@@ -627,4 +627,7 @@ MoveNames::
 	db "TAIL GLOW@"
 	db "ROCK CLIMB@"
 	db "TRUMP CARD@"
+	db "U-TURN@"
+	db "VOLT SWITCH@"
+	db "FLIP TURN@"
 	  ;"123456123456@"

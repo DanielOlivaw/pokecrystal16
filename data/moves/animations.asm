@@ -655,6 +655,9 @@ BattleAnimations::
 	dw BattleAnim_TailGlow
 	dw BattleAnim_RockClimb
 	dw BattleAnim_TrumpCard
+	dw BattleAnim_UTurn
+	dw BattleAnim_VoltSwitch
+	dw BattleAnim_FlipTurn
 
 	dw BattleAnim_SweetScent2
 
@@ -1038,6 +1041,9 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_UTurn:
+BattleAnim_VoltSwitch:
+BattleAnim_FlipTurn:
 BattleAnim_TrumpCard:
 BattleAnim_Poltergeist:
 BattleAnim_ScaleShot:

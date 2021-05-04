@@ -83,31 +83,36 @@ HeavySlamEffect:
 ; If target weighs less than 1/5 of the user's weight, set power to 120.
 	pop de
 	pop bc
-	farcall LoadMovePower120
+	; farcall LoadMovePower120
+	ld d, 120
 	ret
 
 .more_than_half
 	pop de
 	pop bc
-	farcall LoadMovePower40
+	; farcall LoadMovePower40
+	ld d, 40
 	ret
 
 .more_than_third
 	pop de
 	pop bc
-	farcall LoadMovePower60
+	; farcall LoadMovePower60
+	ld d, 60
 	ret
 
 .more_than_quarter
 	pop de
 	pop bc
-	farcall LoadMovePower80
+	; farcall LoadMovePower80
+	ld d, 80
 	ret
 
 .more_than_fifth
 	pop de
 	pop bc
-	farcall LoadMovePower100
+	; farcall LoadMovePower100
+	ld d, 100
 	ret
 
 .compare_weights
