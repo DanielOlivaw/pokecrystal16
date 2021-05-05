@@ -3166,6 +3166,30 @@ PartingShot:
 	batonpass
 	endmove
 
+DefenseUp3:
+	checkobedience
+	usedmovetext
+	doturn
+	statustargetself
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+SpecialAttackUp3:
+	checkobedience
+	usedmovetext
+	doturn
+	statustargetself
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
 ; Excavate:
 	; checkobedience
 	; usedmovetext

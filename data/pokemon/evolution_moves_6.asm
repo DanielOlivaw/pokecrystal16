@@ -41,10 +41,10 @@ EvolutionMovePointers6::
 	dw NoEvolutionMoves6        ; HELIOPTILE
 	dw HelioliskEvolutionMoves  ; HELIOLISK
 	dw NoEvolutionMoves6        ; TYRUNT
-	dw NoEvolutionMoves6        ; TYRANTRUM
+	dw TyrantrumEvolutionMoves  ; TYRANTRUM
 	dw NoEvolutionMoves6        ; AMAURA
-	dw NoEvolutionMoves6        ; AURORUS
-	dw NoEvolutionMoves6        ; SYLVEON
+	dw AurorusEvolutionMoves    ; AURORUS
+	dw SylveonEvolutionMoves    ; SYLVEON
 	dw NoEvolutionMoves6        ; HAWLUCHA
 	dw NoEvolutionMoves6        ; DEDENNE
 	dw NoEvolutionMoves6        ; CARBINK
@@ -132,6 +132,18 @@ DragalgeEvolutionMoves:
 
 HelioliskEvolutionMoves:
 	dw EERIE_IMPULSE
+	db 0 ; no more evolution moves
+
+TyrantrumEvolutionMoves:
+	dw JAW_CLAMP
+	db 0 ; no more evolution moves
+
+AurorusEvolutionMoves:
+	dw AURORA_VEIL
+	db 0 ; no more evolution moves
+
+SylveonEvolutionMoves:
+	dw DISARMING_VOICE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves6:

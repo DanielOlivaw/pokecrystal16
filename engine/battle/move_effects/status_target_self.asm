@@ -14,6 +14,10 @@ Find_StatusTargetSelf:
 	jp z, BattleCommand_HealingWish
 	cp EFFECT_SHORE_UP
 	jp z, BattleCommand_ShoreUp
+	cp EFFECT_DEFENSE_UP_3
+	jp z, BattleCommand_DefenseUp3
+	cp EFFECT_SP_ATK_UP_3
+	jp z, BattleCommand_SpecialAttackUp3
 
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar

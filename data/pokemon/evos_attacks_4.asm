@@ -1543,6 +1543,7 @@ YanmegaEvosAttacks:
 
 LeafeonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TRUMP_CARD
 	dbw 1, DOUBLE_EDGE
 	dbw 1, CHARM
 	dbw 1, TAKE_DOWN
@@ -1568,6 +1569,7 @@ LeafeonEvosAttacks:
 
 GlaceonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TRUMP_CARD
 	dbw 1, DOUBLE_EDGE
 	dbw 1, CHARM
 	dbw 1, TAKE_DOWN

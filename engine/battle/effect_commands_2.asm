@@ -116,6 +116,7 @@ INCLUDE "engine/battle/move_effects/teatime.asm"
 INCLUDE "engine/battle/move_effects/bolt_beak.asm"
 INCLUDE "engine/battle/move_effects/poltergeist.asm"
 INCLUDE "engine/battle/move_effects/trump_card.asm"
+INCLUDE "engine/battle/move_effects/stat_up_3.asm"
 
 CheckSafeguardEffect:
 ; checksafeguard

@@ -865,27 +865,115 @@ TyruntEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 39, TR_MORNDAY, TYRANTRUM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 3, ROAR
+	dbw 7, BIDE
+	dbw 10, ANCIENTPOWER
+	dbw 14, CHARM
+	dbw 17, BITE
+	dbw 21, DRAGON_TAIL
+	dbw 24, STOMP
+	dbw 28, STEALTH_ROCK
+	dbw 31, ROCK_SLIDE
+	dbw 35, CRUNCH
+	dbw 38, DRAGON_CLAW
+	dbw 42, THRASH
+	dbw 45, EARTHQUAKE
+	dbw 49, HORN_DRILL
 	db 0 ; no more level-up moves
 
 TyrantrumEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 3, ROAR
+	dbw 7, BIDE
+	dbw 10, ANCIENTPOWER
+	dbw 14, CHARM
+	dbw 17, BITE
+	dbw 21, DRAGON_TAIL
+	dbw 24, STOMP
+	dbw 28, STEALTH_ROCK
+	dbw 31, ROCK_SLIDE
+	dbw 35, CRUNCH
+	dbw 38, DRAGON_CLAW
+	dbw 38, JAW_CLAMP
+	dbw 43, THRASH
+	dbw 47, EARTHQUAKE
+	dbw 52, HORN_DRILL
+	dbw 56, HEAD_SMASH
+	dbw 61, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 AmauraEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 39, TR_NITE, AURORUS
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POWDER_SNOW
+	dbw 1, GROWL
+	dbw 3, ENCORE
+	dbw 6, ROCK_THROW
+	dbw 9, ANCIENTPOWER
+	dbw 12, ICY_WIND
+	dbw 15, ROUND_M
+	dbw 18, TAKE_DOWN
+	dbw 21, MIST
+	dbw 24, AURORA_BEAM
+	dbw 27, AVALANCHE
+	dbw 30, THUNDER_WAVE
+	dbw 33, FREEZE_DRY
+	dbw 36, LIGHT_SCREEN
+	dbw 39, ICE_BEAM
+	dbw 42, HAIL
+	dbw 45, BLIZZARD
+	dbw 48, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 AurorusEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, POWDER_SNOW
+	dbw 1, GROWL
+	dbw 3, ENCORE
+	dbw 6, ROCK_THROW
+	dbw 9, ANCIENTPOWER
+	dbw 12, ICY_WIND
+	dbw 15, ROUND_M
+	dbw 18, TAKE_DOWN
+	dbw 21, MIST
+	dbw 24, AURORA_BEAM
+	dbw 27, AVALANCHE
+	dbw 30, THUNDER_WAVE
+	dbw 33, FREEZE_DRY
+	dbw 36, LIGHT_SCREEN
+	dbw 38, AURORA_VEIL
+	dbw 42, ICE_BEAM
+	dbw 48, HAIL
+	dbw 54, BLIZZARD
+	dbw 60, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 SylveonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TRUMP_CARD
+	dbw 1, DOUBLE_EDGE
+	dbw 1, CHARM
+	dbw 1, TAKE_DOWN
+	dbw 1, BATON_PASS
+	dbw 1, REFRESH
+	dbw 1, BITE
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, DISARMING_VOICE
+	dbw 5, SAND_ATTACK
+	dbw 10, QUICK_ATTACK
+	dbw 15, BABY_DOLL_EYES
+	dbw 20, SWIFT
+	dbw 25, LIGHT_SCREEN
+	dbw 30, DRAINING_KISS
+	dbw 35, MISTY_TERRAIN
+	dbw 40, DAZZLING_GLEAM
+	dbw 45, TICKLE
+	dbw 50, MOONBLAST
 	db 0 ; no more level-up moves
 
 HawluchaEvosAttacks:

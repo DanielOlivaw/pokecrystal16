@@ -244,3 +244,5 @@ MoveEffectsPointers:
 	dw TrumpCard              ; EFFECT_TRUMP_CARD
 	dw UTurn                  ; EFFECT_U_TURN
 	dw PartingShot            ; EFFECT_PARTING_SHOT
+	dw DefenseUp3             ; EFFECT_DEFENSE_UP_3
+	dw SpecialAttackUp3       ; EFFECT_SP_ATK_UP_3

@@ -670,42 +670,46 @@ Text_AreYouABoyOrAreYouAGirl::
 	text "Do you want to be"
 	line "a boy or a girl?"
 	done
-		;"123456789123456789"
 	; text "Are you a boy?"
 	; line "Or are you a girl?"
 	; done
 
-UnknownText_0x1c0cc6::
+UsersStatText::
 	text "<USER>'s"
 	line "@"
 	text_ram wStringBuffer2
 	text_end
 
-UnknownText_0x1c0cd0::
+StatRoseDrasticallyText::
+	text_pause
+	text "<SCROLL>rose drastically!"
+	prompt
+
+StatRoseSharplyText::
 	text_pause
 	text "<SCROLL>rose sharply!"
 	prompt
 
-UnknownText_0x1c0ce0::
+StatRoseText::
 	text " rose!"
 	prompt
 
-UnknownText_0x1c0ceb::
+TargetsStatText::
 	text "<TARGET>'s"
 	line "@"
 	text_ram wStringBuffer2
 	text_end
 
-UnknownText_0x1c0cf5::
+StatHarshlyFellText::
 	text_pause
 	text "<SCROLL>harshly fell!"
 	prompt
 
-UnknownText_0x1c0d06::
+StatFellText::
 	text " fell!"
 	prompt
 
-UnknownText_0x1c0d0e::
+UserChargingMoveText::
 	text "<USER>@"
 	text_end
 
@@ -805,8 +809,6 @@ UnknownText_0x1c0dba::
 	sound_caught_mon
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c0dd8::
 	text "Give a nickname to"

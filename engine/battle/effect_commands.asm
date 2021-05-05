@@ -5390,16 +5390,25 @@ BattleCommand_StatUpMessage:
 	ld a, [wFailedMessage]
 	and a
 	ret nz
+
 	ld a, [wLoweredStat]
 	and $f
 	ld b, a
 	inc b
 	call GetStatName
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_DEFENSE_UP_3
+	jr z, .rose_drastically
+	cp EFFECT_SP_ATK_UP_3
+	jr z, .rose_drastically
+
 	ld hl, .stat
 	jp BattleTextbox
 
 .stat
-	text_far UnknownText_0x1c0cc6
+	text_far UsersStatText
 	text_asm
 	ld hl, .up
 	ld a, [wLoweredStat]
@@ -5408,13 +5417,27 @@ BattleCommand_StatUpMessage:
 	ld hl, .wayup
 	ret
 
+.waywayup
+	text_far StatRoseDrasticallyText
+	text_end
+
 .wayup
-	text_far UnknownText_0x1c0cd0
+	text_far StatRoseSharplyText
 	text_end
 
 .up
-	text_far UnknownText_0x1c0ce0
+	text_far StatRoseText
 	text_end
+
+.rose_drastically
+	ld hl, .stat3
+	jp BattleTextbox
+
+.stat3
+	text_far UsersStatText
+	text_asm
+	ld hl, .waywayup
+	ret
 
 BattleCommand_StatDownMessage:
 	ld a, [wFailedMessage]
@@ -5429,7 +5452,7 @@ BattleCommand_StatDownMessage:
 	jp BattleTextbox
 
 .stat
-	text_far UnknownText_0x1c0ceb
+	text_far TargetsStatText
 	text_asm
 	ld hl, .fell
 	ld a, [wLoweredStat]
@@ -5439,11 +5462,11 @@ BattleCommand_StatDownMessage:
 	ret
 
 .sharplyfell
-	text_far UnknownText_0x1c0cf5
+	text_far StatHarshlyFellText
 	text_end
 
 .fell
-	text_far UnknownText_0x1c0d06
+	text_far StatFellText
 	text_end
 
 TryLowerStat:
@@ -6600,7 +6623,7 @@ BattleCommand_Charge:
 	jp EndMoveEffect
 
 .UsedText:
-	text_far UnknownText_0x1c0d0e ; "<USER>"
+	text_far UserChargingMoveText ; "<USER>"
 	text_asm
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
