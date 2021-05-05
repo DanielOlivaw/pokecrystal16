@@ -269,7 +269,7 @@ MudkipEvosAttacks:
 	dbw 30, TAKE_DOWN
 	dbw 33, PROTECT
 	dbw 36, WHIRLPOOL
-	; dbw 39, ENDEAVOR
+	dbw 39, ENDEAVOR
 	dbw 42, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -293,7 +293,7 @@ MarshtompEvosAttacks:
 	dbw 35, TAKE_DOWN
 	dbw 39, PROTECT
 	dbw 43, EARTHQUAKE
-	; dbw 47, ENDEAVOR
+	dbw 47, ENDEAVOR
 	dbw 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -319,7 +319,7 @@ SwampertEvosAttacks:
 	dbw 35, HAMMER_ARM
 	dbw 40, PROTECT
 	dbw 45, EARTHQUAKE
-	; dbw 50, ENDEAVOR
+	dbw 50, ENDEAVOR
 	dbw 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -1610,7 +1610,7 @@ CorphishEvosAttacks:
 	dbw 36, SWORDS_DANCE
 	dbw 40, CRUNCH
 	dbw 44, CRABHAMMER
-	; dbw 48, ENDEAVOR
+	dbw 48, ENDEAVOR
 	dbw 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
@@ -1630,7 +1630,7 @@ CrawdauntEvosAttacks:
 	dbw 38, SWORDS_DANCE
 	dbw 43, CRUNCH
 	dbw 48, CRABHAMMER
-	; dbw 53, ENDEAVOR
+	dbw 53, ENDEAVOR
 	dbw 58, GUILLOTINE
 	db 0 ; no more level-up moves
 

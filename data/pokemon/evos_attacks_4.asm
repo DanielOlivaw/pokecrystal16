@@ -296,7 +296,7 @@ StarlyEvosAttacks:
 	dbw 16, WHIRLWIND
 	dbw 20, AERIAL_ACE
 	dbw 24, TAKE_DOWN
-	; dbw 28, ENDEAVOR
+	dbw 28, ENDEAVOR
 	dbw 32, AGILITY
 	dbw 36, BRAVE_BIRD
 	dbw 40, FINAL_GAMBIT
@@ -313,7 +313,7 @@ StaraviaEvosAttacks:
 	dbw 17, WHIRLWIND
 	dbw 22, AERIAL_ACE
 	dbw 27, TAKE_DOWN
-	; dbw 32, ENDEAVOR
+	dbw 32, ENDEAVOR
 	dbw 37, AGILITY
 	dbw 42, BRAVE_BIRD
 	dbw 47, FINAL_GAMBIT
@@ -329,7 +329,7 @@ StaraptorEvosAttacks:
 	dbw 17, WHIRLWIND
 	dbw 22, AERIAL_ACE
 	dbw 27, TAKE_DOWN
-	; dbw 32, ENDEAVOR
+	dbw 32, ENDEAVOR
 	dbw 33, CLOSE_COMBAT
 	dbw 39, AGILITY
 	dbw 46, BRAVE_BIRD
@@ -495,7 +495,7 @@ RampardosEvosAttacks:
 	dbw 15, TAKE_DOWN
 	dbw 20, SCARY_FACE
 	dbw 25, CHIP_AWAY
-	; dbw 29, ENDEAVOR
+	dbw 29, ENDEAVOR
 	dbw 32, ANCIENTPOWER
 	dbw 39, ZEN_HEADBUTT
 	dbw 46, SCREECH

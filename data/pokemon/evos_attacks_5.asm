@@ -577,7 +577,7 @@ CottoneeEvosAttacks:
 	dbw 33, COTTON_SPORE
 	dbw 36, ENERGY_BALL
 	dbw 40, SUNNY_DAY
-	; dbw 43, ENDEAVOR
+	dbw 43, ENDEAVOR
 	dbw 47, COTTON_GUARD
 	dbw 50, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -600,7 +600,7 @@ WhimsicottEvosAttacks:
 	dbw 33, COTTON_SPORE
 	dbw 36, ENERGY_BALL
 	dbw 40, SUNNY_DAY
-	; dbw 43, ENDEAVOR
+	dbw 43, ENDEAVOR
 	dbw 47, COTTON_GUARD
 	dbw 50, HURRICANE
 	dbw 54, MOONBLAST
@@ -958,7 +958,7 @@ ArchenEvosAttacks:
 	dbw 42, AGILITY
 	dbw 45, DRAGON_CLAW
 	dbw 49, THRASH
-	; dbw 52, ENDEAVOR
+	dbw 52, ENDEAVOR
 	db 0 ; no more level-up moves
 
 ArcheopsEvosAttacks:
@@ -979,7 +979,7 @@ ArcheopsEvosAttacks:
 	dbw 44, AGILITY
 	dbw 48, DRAGON_CLAW
 	dbw 53, THRASH
-	; dbw 57, ENDEAVOR
+	dbw 57, ENDEAVOR
 	db 0 ; no more level-up moves
 
 SolosisEvosAttacks:

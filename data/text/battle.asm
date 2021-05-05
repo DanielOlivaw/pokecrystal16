@@ -963,12 +963,6 @@ BlownAwayText:
 	line "was blown away!"
 	prompt
 
-WentBackToTrainerText:
-	text "<TARGET>"
-	line "went back to its"
-	cont "trainer!"
-	prompt
-
 		;"123456789123456789"
 
 PlayerHitTimesText:
@@ -1266,11 +1260,6 @@ CantBePutToSleepText:
 DraggedOutText:
 	text "<USER>"
 	line "was dragged out!"
-	prompt
-
-SentOutText:
-	text "<USER>"
-	line "was sent out!"
 	prompt
 
 ParalyzedText:

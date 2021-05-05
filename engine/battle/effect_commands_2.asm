@@ -6,6 +6,7 @@ INCLUDE "engine/battle/move_effects/multi_stat_down.asm"
 INCLUDE "engine/battle/move_effects/protect_variations.asm"
 INCLUDE "engine/battle/move_effects/variable_type.asm"
 INCLUDE "engine/battle/move_effects/readying_moves.asm"
+INCLUDE "engine/battle/move_effects/constant_damage.asm"
 
 INCLUDE "engine/battle/move_effects/false_swipe.asm"
 INCLUDE "engine/battle/move_effects/leech_seed.asm"

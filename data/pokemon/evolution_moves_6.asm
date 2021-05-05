@@ -35,11 +35,11 @@ EvolutionMovePointers6::
 	dw NoEvolutionMoves6        ; INKAY
 	dw NoEvolutionMoves6        ; MALAMAR
 	dw NoEvolutionMoves6        ; BINACLE
-	dw NoEvolutionMoves6        ; BARBARACLE
+	dw BarbaracleEvolutionMoves ; BARBARACLE
 	dw NoEvolutionMoves6        ; SKRELP
-	dw NoEvolutionMoves6        ; DRAGALGE
+	dw DragalgeEvolutionMoves   ; DRAGALGE
 	dw NoEvolutionMoves6        ; HELIOPTILE
-	dw NoEvolutionMoves6        ; HELIOLISK
+	dw HelioliskEvolutionMoves  ; HELIOLISK
 	dw NoEvolutionMoves6        ; TYRUNT
 	dw NoEvolutionMoves6        ; TYRANTRUM
 	dw NoEvolutionMoves6        ; AMAURA
@@ -120,6 +120,18 @@ DoubladeEvolutionMoves:
 
 AegislashEvolutionMoves:
 	dw KINGS_SHIELD
+	db 0 ; no more evolution moves
+
+BarbaracleEvolutionMoves:
+	dw STONE_EDGE
+	db 0 ; no more evolution moves
+
+DragalgeEvolutionMoves:
+	dw TWISTER
+	db 0 ; no more evolution moves
+
+HelioliskEvolutionMoves:
+	dw EERIE_IMPULSE
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves6:

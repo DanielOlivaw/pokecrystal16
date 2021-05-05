@@ -368,7 +368,7 @@ BeedrillEvosAttacks:
 	dbw 31, PIN_MISSILE
 	dbw 35, AGILITY
 	dbw 38, POISON_JAB
-	; dbw 42, ENDEAVOR
+	dbw 42, ENDEAVOR
 	dbw 45, FELL_STINGER
 	db 0 ; no more level-up moves
 
@@ -386,7 +386,7 @@ RattataAEvosAttacks:
 	dbw 26, SUCKER_PUNCH
 	dbw 29, SUPER_FANG
 	dbw 33, DOUBLE_EDGE
-	; dbw 36, ENDEAVOR
+	dbw 36, ENDEAVOR
 	db 0 ; no more level-up moves
 
 RaticateAEvosAttacks:
@@ -404,7 +404,7 @@ RaticateAEvosAttacks:
 	dbw 30, SUCKER_PUNCH
 	dbw 35, SUPER_FANG
 	dbw 41, DOUBLE_EDGE
-	; dbw 46, ENDEAVOR
+	dbw 46, ENDEAVOR
 	db 0 ; no more level-up moves
 
 PikachuEvosAttacks:
@@ -1922,7 +1922,7 @@ CuboneEvosAttacks:
 	dbw 24, RETALIATE
 	dbw 28, BONE_RUSH
 	dbw 32, FOCUS_ENERGY
-	; dbw 36, ENDEAVOR
+	dbw 36, ENDEAVOR
 	dbw 40, BONEMERANG
 	dbw 44, THRASH
 	dbw 48, DOUBLE_EDGE
@@ -1940,7 +1940,7 @@ MarowakEvosAttacks:
 	dbw 24, RETALIATE
 	dbw 30, BONE_RUSH
 	dbw 36, FOCUS_ENERGY
-	; dbw 42, ENDEAVOR
+	dbw 42, ENDEAVOR
 	dbw 48, BONEMERANG
 	dbw 54, THRASH
 	dbw 60, DOUBLE_EDGE

@@ -1759,13 +1759,13 @@ BattleCommand_CheckHit:
 	call .FocusPunchShellTrap
 
 	call .SpitUp
-	jp z, .Miss
+	jp z, .Failed
 
 	call .Synchronoise
-	jp nz, .Miss
+	jp nz, .Failed
 
 	call .Belch
-	jp z, .Miss
+	jp z, .Failed
 
 	call .DreamEater
 	jp z, .Miss
@@ -1876,6 +1876,9 @@ BattleCommand_CheckHit:
 .Hit:
 	ret
 
+.Failed
+	ld a, 4
+	ld [wFailedMessage], a
 .Miss:
 ; We don't need to keep the damage value intact if we're using (Hi) Jump Kick,
 ; since it now deals damage based on the user's max HP.
@@ -1919,7 +1922,7 @@ BattleCommand_CheckHit:
 	call CallBattleCore
 	ld hl, SubtractHPFromUser
 	call CallBattleCore
-	jr .Miss
+	jr .Failed
 
 .BurnUp:
 ; Burn Up misses if used by a non-fire-type
@@ -1940,7 +1943,7 @@ BattleCommand_CheckHit:
 	inc de
 	ld a, [de]
 	cp FIRE
-	jr nz, .Miss
+	jr nz, .Failed
 	ret
 
 .FirstTurn:
@@ -1962,7 +1965,7 @@ BattleCommand_CheckHit:
 	ld b, 1
 	ld a, [hl]
 	cp b
-	jp nz, .Miss
+	jp nz, .Failed
 	ret
 
 .FocusPunchShellTrap
@@ -1983,14 +1986,14 @@ BattleCommand_CheckHit:
 ; Shell Trap fails if the user wasn't hit by a physical move.
 	ld a, [bc]
 	and a
-	jp z, .Miss
+	jp z, .Failed
 	ret
 
 .FocusPunch
 ; Focus Punch fails if the user took damage.
 	ld a, [bc]
 	and a
-	jp nz, .Miss
+	jp nz, .Failed
 	ret
 
 .SpitUp:
@@ -2802,24 +2805,17 @@ GetFailureResultText:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .got_text
+
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_FUTURE_SIGHT
 	ld hl, ButItFailedText
-	ld de, ItFailedText
-	jr z, .got_text
-	cp EFFECT_BURN_UP
-	ld hl, ButItFailedText
 	ld de, ButItFailedText
-	jr z, .check_burn_up
-	cp EFFECT_BELCH
-	jr z, .check_belch
-	cp EFFECT_SPIT_UP
-	jp z, .check_spit_up
-	cp EFFECT_FAKE_OUT
-	jp z, .check_first_turn
-	cp EFFECT_FIRST_IMPRESSION
-	jp z, .check_first_turn
+	jr z, .got_text
+	ld a, [wFailedMessage]
+	and a
+	cp 4
+	jr z, .got_text
 .miss_text
 	ld hl, AttackMissedText
 	ld de, AttackMissed2Text
@@ -2848,70 +2844,6 @@ GetFailureResultText:
 	call CallBattleCore
 	ld hl, SubtractHPFromUser
 	jp CallBattleCore
-
-.check_burn_up:
-; Burn Up prints miss text if used by a fire-type but failure text otherwise.
-	push hl
-	push de
-	ld de, wBattleMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld de, wEnemyMonType1
-.ok
-	ld a, [de]
-	inc de
-	cp FIRE
-	jr z, .found_fire
-	ld a, [de]
-	cp FIRE
-	jr z, .found_fire
-	pop hl
-	pop de
-	jr .got_text
-
-.found_fire
-	pop hl
-	pop de
-	jr .miss_text
-
-.check_belch
-; Belch prints miss text if the user has eaten a berry but failure text otherwise.
-	push hl
-	push de
-	ld a, BATTLE_VARS_SUBSTATUS6
-	call GetBattleVar
-	bit SUBSTATUS_ATE_BERRY, a
-	pop hl
-	pop de
-	jr nz, .miss_text
-	jr .got_text
-
-.check_spit_up:
-	push hl
-	call CheckStockpileCount
-	pop hl
-	jp nz, .miss_text
-	jr .got_text
-
-.check_first_turn
-; Fake Out and First Impression print miss text if it's the user's
-; first turn out but failure text otherwise.
-	push hl
-	push de
-	ld hl, wPlayerTurnsTaken
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .FirstTurn_GotTurn
-	ld hl, wEnemyTurnsTaken
-.FirstTurn_GotTurn
-	ld b, 1
-	ld a, [hl]
-	cp b
-	pop hl
-	pop de
-	jp nz, .got_text
-	jp .miss_text
 
 FailText_CheckOpponentProtect:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
@@ -4043,254 +3975,8 @@ ConfusionDamageCalc:
 INCLUDE "data/types/type_boost_items.asm"
 
 BattleCommand_ConstantDamage:
-; constantdamage
-
-	ld hl, wBattleMonLevel
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_turn
-	ld hl, wEnemyMonLevel
-
-.got_turn
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_LEVEL_DAMAGE
-	ld b, [hl]
-	ld a, 0
-	jp z, .got_power
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_PSYWAVE
-	jr z, .psywave
-
-	cp EFFECT_SUPER_FANG
-	jr z, .super_fang
-	; cp EFFECT_ENDEAVOR
-	; jr z, .endeavor
-	cp EFFECT_FINAL_GAMBIT
-	jr z, .final_gambit
-
-	cp EFFECT_REVERSAL
-	jp z, .reversal
-	cp EFFECT_WATER_SPOUT
-	jp z, .reversal
-
-	cp EFFECT_WRING_OUT
-	jp z, .wring_out
-
-	ld a, BATTLE_VARS_MOVE_POWER
-	call GetBattleVar
-	ld b, a
-	ld a, $0
-	jr .got_power
-
-.psywave
-	ld a, b
-	srl a
-	add b
-	ld b, a
-.psywave_loop
-	call BattleRandom
-	and a
-	jr z, .psywave_loop
-	cp b
-	jr nc, .psywave_loop
-	ld b, a
-	ld a, 0
-	jr .got_power
-
-.super_fang
-	ld hl, wEnemyMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_opponent_hp
-	ld hl, wBattleMonHP
-.got_opponent_hp
-	ld a, [hli]
-	srl a
-	ld b, a
-	ld a, [hl]
-	rr a
-	jr .get_power
-
-; .endeavor
-	; ld hl, wEnemyMonHP
-	; ld bc, wBattleMonHP
-	; ldh a, [hBattleTurn]
-	; and a
-	; jr z, .got_both_hp
-	; ld hl, wBattleMonHP
-	; ld bc, wEnemyMonHP
-; .got_both_hp
-	;; subtract bc from hl
-	; push bc
-	; ld a, b
-	; cpl
-	; ld b, a
-	; ld a, c
-	; cpl
-	; ld c, a
-	; inc bc
-	; add hl, bc
-	; pop bc
-
-	; ld a, [hli]
-	; ld b, a
-	; ld a, [hl]
-	; push af
-	; ld a, b
-	; pop bc
-	; and a
-	; jr nz, .got_power
-	; or b
-	; ld a, 0
-	; jr nz, .got_power
-	; ld a, 1
-	; ld [wFailedMessage], a
-	; ld [wAttackMissed], a
-	; ret
-
-.final_gambit
-	ld hl, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_user_hp
-	ld hl, wEnemyMonHP
-.got_user_hp
-	ld a, [hli]
-	ld b, a
-	ld a, [hl]
-.get_power
-	push af
-	ld a, b
-	pop bc
-	and a
-	jr nz, .got_power
-	or b
-	ld a, 0
-	jr nz, .got_power
-	ld b, 1
-	jr .got_power
-
-.got_power
-	ld hl, wCurDamage
-	ld [hli], a
-	ld [hl], b
+	callfar ConstantDamageEffect
 	ret
-	
-.wring_out
-; Wring Out will borrow the Reversal formula,
-; but loads the opponent's HP instead of the user's.
-	ld hl, wEnemyMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .reversal_got_hp
-	ld hl, wBattleMonHP
-	jr .reversal_got_hp
-
-.reversal
-	ld hl, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .reversal_got_hp
-	ld hl, wEnemyMonHP
-.reversal_got_hp
-	xor a
-	ldh [hDividend], a
-	ldh [hMultiplicand + 0], a
-	ld a, [hli]
-	ldh [hMultiplicand + 1], a
-	ld a, [hli]
-	ldh [hMultiplicand + 2], a
-	ld a, 48
-	ldh [hMultiplier], a
-	call Multiply
-	ld a, [hli]
-	ld b, a
-	ld a, [hl]
-	ldh [hDivisor], a
-	ld a, b
-	and a
-	jr z, .skip_to_divide
-
-	ldh a, [hProduct + 4]
-	srl b
-	rr a
-	srl b
-	rr a
-	ldh [hDivisor], a
-	ldh a, [hProduct + 2]
-	ld b, a
-	srl b
-	ldh a, [hProduct + 3]
-	rr a
-	srl b
-	rr a
-	ldh [hDividend + 3], a
-	ld a, b
-	ldh [hDividend + 2], a
-
-.skip_to_divide
-	ld b, 4
-	call Divide
-	ldh a, [hQuotient + 3]
-	ld b, a
-
-; Water Spout uses the same formula as Reversal,
-; but loads a different table of values.
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_WATER_SPOUT
-	jr z, .eruption_water_spout_power
-	cp EFFECT_WRING_OUT
-	jr z, .wring_out_power
-
-	ld hl, FlailReversalPower
-	jr .reversal_loop
-
-.wring_out_power:
-	ld hl, WringOutPower
-	jr .reversal_loop
-
-.eruption_water_spout_power:
-	ld hl, EruptionWaterSpoutPower
-.reversal_loop
-	ld a, [hli]
-	cp b
-	jr nc, .break_loop
-	inc hl
-	jr .reversal_loop
-
-.break_loop
-	ldh a, [hBattleTurn]
-	and a
-	ld a, [hl]
-	jr nz, .notPlayersTurn
-
-	ld hl, wPlayerMoveStructPower
-	ld [hl], a
-	push hl
-	call PlayerAttackDamage
-	jr .notEnemysTurn
-
-.notPlayersTurn
-	ld hl, wEnemyMoveStructPower
-	ld [hl], a
-	push hl
-	call EnemyAttackDamage
-
-.notEnemysTurn
-	call BattleCommand_DamageCalc
-	pop hl
-	ld [hl], 1
-	ret
-
-INCLUDE "data/moves/flail_reversal_power.asm"
-
-INCLUDE "data/moves/eruption_water_spout_power.asm"
-
-INCLUDE "data/moves/wring_out_power.asm"
 
 INCLUDE "engine/battle/move_effects/encore.asm"
 

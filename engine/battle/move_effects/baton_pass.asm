@@ -1,6 +1,10 @@
 BattleCommand_BatonPass:
 ; batonpass
 
+	ld a, [wAttackMissed]
+	and a
+	jp nz, FailedBatonPass
+
 	ldh a, [hBattleTurn]
 	and a
 	jp nz, .Enemy
@@ -156,6 +160,8 @@ FailedBatonPass:
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_U_TURN
+	ret z
+	cp EFFECT_PARTING_SHOT
 	ret z
 
 	call AnimateFailedMove
