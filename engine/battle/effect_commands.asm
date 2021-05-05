@@ -7570,6 +7570,20 @@ BattleCommand_TrumpCard:
 	callfar TrumpCardEffect
 	ret
 
+BattleCommand_ElectroBall:
+	callfar ElectroBallEffect
+	push hl
+	push bc
+	push de
+	ld a, d
+	ld [wDeciramBuffer], a
+	ld hl, MagnitudeText
+	call StdBattleTextbox
+	pop de
+	pop bc
+	pop hl
+	ret
+
 SafeCheckSafeguard:
 	push hl
 	ld hl, wEnemyScreens

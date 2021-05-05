@@ -1092,37 +1092,39 @@ JoltikEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, SPIDER_WEB
-	dbw 4, FURY_CUTTER
-	dbw 8, ELECTROWEB
-	dbw 12, BUG_BITE
-	dbw 16, STRING_SHOT
-	dbw 20, THUNDER_WAVE
+	dbw 3, FURY_CUTTER
+	dbw 7, ELECTROWEB
+	dbw 10, BUG_BITE
+	dbw 14, STRING_SHOT
+	dbw 17, THUNDER_WAVE
+	dbw 21, ELECTRO_BALL
 	dbw 24, SIGNAL_BEAM
 	dbw 28, AGILITY
-	dbw 32, SUCKER_PUNCH
-	dbw 36, SLASH
-	dbw 40, DISCHARGE
-	dbw 44, SCREECH
-	dbw 48, BUG_BUZZ
+	dbw 31, SUCKER_PUNCH
+	dbw 35, SLASH
+	dbw 38, DISCHARGE
+	dbw 42, SCREECH
+	dbw 45, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 GalvantulaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, SPIDER_WEB
-	dbw 4, FURY_CUTTER
-	dbw 8, ELECTROWEB
-	dbw 12, BUG_BITE
-	dbw 16, STRING_SHOT
-	dbw 20, THUNDER_WAVE
+	dbw 3, FURY_CUTTER
+	dbw 7, ELECTROWEB
+	dbw 10, BUG_BITE
+	dbw 14, STRING_SHOT
+	dbw 17, THUNDER_WAVE
+	dbw 21, ELECTRO_BALL
 	dbw 24, SIGNAL_BEAM
 	dbw 28, AGILITY
-	dbw 32, SUCKER_PUNCH
+	dbw 31, SUCKER_PUNCH
+	dbw 35, SLASH
 	dbw 35, STICKY_WEB
-	dbw 38, SLASH
-	dbw 44, DISCHARGE
-	dbw 50, SCREECH
-	dbw 56, BUG_BUZZ
+	dbw 41, DISCHARGE
+	dbw 48, SCREECH
+	dbw 54, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 FerroseedEvosAttacks:

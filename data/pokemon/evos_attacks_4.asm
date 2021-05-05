@@ -575,16 +575,17 @@ PachirisuEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, BIDE
 	dbw 4, QUICK_ATTACK
-	dbw 9, CHARM
-	dbw 13, SPARK
-	dbw 18, ENDURE
-	dbw 22, NUZZLE
-	dbw 27, SWIFT
-	dbw 31, THUNDER_WAVE
-	dbw 36, SUPER_FANG
-	dbw 40, DISCHARGE
-	dbw 45, SWEET_KISS
-	dbw 49, HYPER_FANG
+	dbw 8, CHARM
+	dbw 12, SPARK
+	dbw 16, ENDURE
+	dbw 20, NUZZLE
+	dbw 24, SWIFT
+	dbw 28, ELECTRO_BALL
+	dbw 32, SWEET_KISS
+	dbw 36, THUNDER_WAVE
+	dbw 40, SUPER_FANG
+	dbw 44, DISCHARGE
+	dbw 48, HYPER_FANG
 	db 0 ; no more level-up moves
 
 BuizelEvosAttacks:
@@ -1434,10 +1435,10 @@ MagnezoneEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	dbw 13, GYRO_BALL
-	dbw 16, SPARK
+	dbw 13, ELECTRO_BALL
+	dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
-	dbw 22, SHOCK_WAVE
+	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 29, TRI_ATTACK
@@ -1485,14 +1486,15 @@ ElectivireEvosAttacks:
 	dbw 12, SWIFT
 	dbw 16, SHOCK_WAVE
 	dbw 20, THUNDER_WAVE
-	dbw 24, SCREECH
-	dbw 28, THUNDERPUNCH
-	dbw 33, DISCHARGE
-	dbw 38, LOW_KICK
-	dbw 43, THUNDERBOLT
-	dbw 48, LIGHT_SCREEN
-	dbw 53, THUNDER
-	dbw 58, GIGA_IMPACT
+	dbw 24, ELECTRO_BALL
+	dbw 28, SCREECH
+	dbw 33, THUNDERPUNCH
+	dbw 38, DISCHARGE
+	dbw 43, LOW_KICK
+	dbw 48, THUNDERBOLT
+	dbw 53, LIGHT_SCREEN
+	dbw 58, THUNDER
+	dbw 63, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 TogekissEvosAttacks:
@@ -1781,18 +1783,19 @@ RotomEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ASTONISH
 	dbw 1, DOUBLE_TEAM
-	dbw 5, THUNDERSHOCK
-	dbw 10, CONFUSE_RAY
-	dbw 15, CHARGE
-	dbw 20, SHOCK_WAVE
-	dbw 25, THUNDER_WAVE
-	dbw 30, OMINOUS_WIND
-	dbw 35, SUBSTITUTE
-	dbw 40, HEX
-	dbw 45, TRICK
-	dbw 50, DISCHARGE
-	dbw 55, UPROAR
-	dbw 60, POLTERGEIST
+	dbw 4, THUNDERSHOCK
+	dbw 8, CONFUSE_RAY
+	dbw 12, CHARGE
+	dbw 16, ELECTRO_BALL
+	dbw 20, THUNDER_WAVE
+	dbw 24, SHOCK_WAVE
+	dbw 28, OMINOUS_WIND
+	dbw 32, SUBSTITUTE
+	dbw 36, HEX
+	dbw 40, TRICK
+	dbw 44, DISCHARGE
+	dbw 48, UPROAR
+	dbw 52, POLTERGEIST
 	db 0 ; no more level-up moves
 
 UxieEvosAttacks:

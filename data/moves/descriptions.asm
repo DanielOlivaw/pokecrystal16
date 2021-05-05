@@ -1881,7 +1881,6 @@ VenomDrenchDescription:
 	next "of a poisoned foe.@"
 
 PaybackDescription:
-GyroBallDescription:
 	db   "Stronger if the"
 	next "user moves last.@"
 
@@ -2356,10 +2355,6 @@ HeatCrashDescription:
 	db   "Stronger if the"
 	next "user is heavier.@"
 
-ElectroBallDescription:
-	db   "Stronger if the"
-	next "user moves first.@"
-
 RefreshDescription:
 	db   "Cures paralysis,"
 	next "poison, or a burn.@"
@@ -2634,5 +2629,13 @@ FlipTurnDescription:
 PartingShotDescription:
 	db   "Lowers foe's stats"
 	next "before switching.@"
+
+ElectroBallDescription:
+	db   "Stronger when the"
+	next "user is faster.@"
+
+GyroBallDescription:
+	db   "Stronger when the"
+	next "user is slower.@"
 
 		;"123456789123456789"

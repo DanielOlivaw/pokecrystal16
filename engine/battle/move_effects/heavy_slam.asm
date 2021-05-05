@@ -90,28 +90,24 @@ HeavySlamEffect:
 .more_than_half
 	pop de
 	pop bc
-	; farcall LoadMovePower40
 	ld d, 40
 	ret
 
 .more_than_third
 	pop de
 	pop bc
-	; farcall LoadMovePower60
 	ld d, 60
 	ret
 
 .more_than_quarter
 	pop de
 	pop bc
-	; farcall LoadMovePower80
 	ld d, 80
 	ret
 
 .more_than_fifth
 	pop de
 	pop bc
-	; farcall LoadMovePower100
 	ld d, 100
 	ret
 

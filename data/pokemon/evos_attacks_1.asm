@@ -421,7 +421,7 @@ PikachuEvosAttacks:
 	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
 	dbw 16, DOUBLE_TEAM
-	dbw 20, SHOCK_WAVE
+	dbw 20, ELECTRO_BALL
 	dbw 24, FEINT
 	dbw 28, SPARK
 	dbw 32, DISCHARGE
@@ -449,7 +449,7 @@ RaichuAEvosAttacks:
 	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
 	dbw 16, DOUBLE_TEAM
-	dbw 20, SHOCK_WAVE
+	dbw 20, ELECTRO_BALL
 	dbw 24, FEINT
 	dbw 28, SPARK
 	dbw 32, DISCHARGE
@@ -1495,10 +1495,10 @@ MagnemiteEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	dbw 13, GYRO_BALL
-	dbw 16, SPARK
+	dbw 13, ELECTRO_BALL
+	dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
-	dbw 22, SHOCK_WAVE
+	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 31, MAGNET_RISE
@@ -1518,10 +1518,10 @@ MagnetonEvosAttacks:
 	dbw 4, SUPERSONIC
 	dbw 7, THUNDER_WAVE
 	dbw 10, MAGNET_BOMB
-	dbw 13, GYRO_BALL
-	dbw 16, SPARK
+	dbw 13, ELECTRO_BALL
+	dbw 16, GYRO_BALL
 	dbw 19, SONICBOOM
-	dbw 22, SHOCK_WAVE
+	dbw 22, SPARK
 	dbw 25, MIRROR_SHOT
 	dbw 28, SCREECH
 	dbw 29, TRI_ATTACK
@@ -2217,14 +2217,15 @@ ElectabuzzEvosAttacks:
 	dbw 12, SWIFT
 	dbw 16, SHOCK_WAVE
 	dbw 20, THUNDER_WAVE
-	dbw 24, SCREECH
-	dbw 28, THUNDERPUNCH
-	dbw 33, DISCHARGE
-	dbw 38, LOW_KICK
-	dbw 43, THUNDERBOLT
-	dbw 48, LIGHT_SCREEN
-	dbw 53, THUNDER
-	dbw 58, GIGA_IMPACT
+	dbw 24, ELECTRO_BALL
+	dbw 28, SCREECH
+	dbw 33, THUNDERPUNCH
+	dbw 38, DISCHARGE
+	dbw 43, LOW_KICK
+	dbw 48, THUNDERBOLT
+	dbw 53, LIGHT_SCREEN
+	dbw 58, THUNDER
+	dbw 63, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:

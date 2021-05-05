@@ -678,7 +678,7 @@ ChinchouEvosAttacks:
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
 	dbw 4, THUNDER_WAVE
-	dbw 8, THUNDERSHOCK
+	dbw 8, ELECTRO_BALL
 	dbw 12, BUBBLEBEAM
 	dbw 16, CONFUSE_RAY
 	dbw 20, SPARK
@@ -696,7 +696,7 @@ LanturnEvosAttacks:
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
 	dbw 4, THUNDER_WAVE
-	dbw 8, THUNDERSHOCK
+	dbw 8, ELECTRO_BALL
 	dbw 12, BUBBLEBEAM
 	dbw 16, CONFUSE_RAY
 	dbw 20, SPARK
@@ -838,13 +838,14 @@ MareepEvosAttacks:
 	dbw 9, COTTON_SPORE
 	dbw 12, CHARGE
 	dbw 15, TAKE_DOWN
-	dbw 18, CONFUSE_RAY
-	dbw 21, POWER_GEM
-	dbw 24, COTTON_GUARD
+	dbw 18, ELECTRO_BALL
+	dbw 21, CONFUSE_RAY
+	dbw 24, POWER_GEM
 	dbw 27, DISCHARGE
-	dbw 30, SIGNAL_BEAM
-	dbw 32, LIGHT_SCREEN
-	dbw 36, THUNDER
+	dbw 30, COTTON_GUARD
+	dbw 33, SIGNAL_BEAM
+	dbw 36, LIGHT_SCREEN
+	dbw 39, THUNDER
 	db 0 ; no more level-up moves
 
 FlaaffyEvosAttacks:
@@ -856,14 +857,15 @@ FlaaffyEvosAttacks:
 	dbw 6, THUNDERSHOCK
 	dbw 9, COTTON_SPORE
 	dbw 12, CHARGE
-	dbw 17, TAKE_DOWN
-	dbw 22, CONFUSE_RAY
-	dbw 27, POWER_GEM
-	dbw 32, COTTON_GUARD
-	dbw 37, DISCHARGE
-	dbw 42, SIGNAL_BEAM
-	dbw 47, LIGHT_SCREEN
-	dbw 52, THUNDER
+	dbw 16, TAKE_DOWN
+	dbw 20, ELECTRO_BALL
+	dbw 24, CONFUSE_RAY
+	dbw 28, POWER_GEM
+	dbw 32, DISCHARGE
+	dbw 36, COTTON_GUARD
+	dbw 40, SIGNAL_BEAM
+	dbw 44, LIGHT_SCREEN
+	dbw 48, THUNDER
 	db 0 ; no more level-up moves
 
 AmpharosEvosAttacks:
@@ -876,16 +878,17 @@ AmpharosEvosAttacks:
 	dbw 6, THUNDERSHOCK
 	dbw 9, COTTON_SPORE
 	dbw 12, CHARGE
-	dbw 17, TAKE_DOWN
-	dbw 22, CONFUSE_RAY
-	dbw 27, POWER_GEM
+	dbw 16, TAKE_DOWN
+	dbw 20, ELECTRO_BALL
+	dbw 24, CONFUSE_RAY
+	dbw 28, POWER_GEM
 	dbw 29, THUNDERPUNCH
-	dbw 33, COTTON_GUARD
-	dbw 39, DISCHARGE
-	dbw 45, SIGNAL_BEAM
-	dbw 51, LIGHT_SCREEN
-	dbw 57, THUNDER
-	dbw 63, DRAGON_PULSE
+	dbw 33, DISCHARGE
+	dbw 38, COTTON_GUARD
+	dbw 43, SIGNAL_BEAM
+	dbw 48, LIGHT_SCREEN
+	dbw 53, THUNDER
+	dbw 58, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 BellossomEvosAttacks:
@@ -1873,13 +1876,14 @@ ElekidEvosAttacks:
 	dbw 12, SWIFT
 	dbw 16, SHOCK_WAVE
 	dbw 20, THUNDER_WAVE
-	dbw 24, SCREECH
-	dbw 28, THUNDERPUNCH
-	dbw 32, DISCHARGE
-	dbw 36, LOW_KICK
-	dbw 40, THUNDERBOLT
-	dbw 44, LIGHT_SCREEN
-	dbw 48, THUNDER
+	dbw 24, ELECTRO_BALL
+	dbw 28, SCREECH
+	dbw 32, THUNDERPUNCH
+	dbw 36, DISCHARGE
+	dbw 40, LOW_KICK
+	dbw 44, THUNDERBOLT
+	dbw 48, LIGHT_SCREEN
+	dbw 52, THUNDER
 	db 0 ; no more level-up moves
 
 MiltankEvosAttacks:

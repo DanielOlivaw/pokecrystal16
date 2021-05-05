@@ -3166,7 +3166,7 @@ PartingShot:
 	batonpass
 	endmove
 
-DefenseUp3:
+StatUp3:
 	checkobedience
 	usedmovetext
 	doturn
@@ -3178,16 +3178,25 @@ DefenseUp3:
 	statupfailtext
 	endmove
 
-SpecialAttackUp3:
+ElectroBall:
 	checkobedience
 	usedmovetext
 	doturn
-	statustargetself
-	lowersub
-	statupanim
-	raisesub
-	statupmessage
-	statupfailtext
+	critical
+	damagestats
+	electroball
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove
 
 ; Excavate:

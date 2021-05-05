@@ -174,3 +174,4 @@ BattleCommandPointers:
 	dw BattleCommand_StoredPower
 	dw BattleCommand_HeavySlam
 	dw BattleCommand_TrumpCard
+	dw BattleCommand_ElectroBall

@@ -175,6 +175,7 @@ ENDM
 	command storedpower             ; a8
 	command heavyslam               ; a9
 	command trumpcard               ; aa
+	command electroball             ; ab
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -1,248 +1,249 @@
 ; MoveEffectsPointers indexes (see data/moves/effects_pointers.asm)
 	const_def
-	const EFFECT_NORMAL_HIT
-	const EFFECT_SLEEP
-	const EFFECT_POISON_HIT
-	const EFFECT_LEECH_HIT
-	const EFFECT_BURN_HIT
-	const EFFECT_FREEZE_HIT
-	const EFFECT_PARALYZE_HIT
-	const EFFECT_SELFDESTRUCT
-	const EFFECT_DREAM_EATER
-	const EFFECT_MIRROR_MOVE
-	const EFFECT_ATTACK_UP
-	const EFFECT_DEFENSE_UP
-	const EFFECT_SPEED_UP
-	const EFFECT_SP_ATK_UP
-	const EFFECT_SP_DEF_UP
-	const EFFECT_ACCURACY_UP
-	const EFFECT_EVASION_UP
-	const EFFECT_ALWAYS_HIT
-	const EFFECT_ATTACK_DOWN
-	const EFFECT_DEFENSE_DOWN
-	const EFFECT_SPEED_DOWN
-	const EFFECT_SP_ATK_DOWN
-	const EFFECT_SP_DEF_DOWN
-	const EFFECT_ACCURACY_DOWN
-	const EFFECT_EVASION_DOWN
-	const EFFECT_RESET_STATS
-	const EFFECT_BIDE
-	const EFFECT_RAMPAGE
-	const EFFECT_FORCE_SWITCH
-	const EFFECT_MULTI_HIT
-	const EFFECT_CONVERSION
-	const EFFECT_FLINCH_HIT
-	const EFFECT_HEAL
-	const EFFECT_TOXIC
-	const EFFECT_PAY_DAY
-	const EFFECT_TRI_ATTACK
-	const EFFECT_CONDITIONAL_BOOST
-	const EFFECT_OHKO
-	const EFFECT_RAZOR_WIND
-	const EFFECT_SUPER_FANG
-	const EFFECT_STATIC_DAMAGE
-	const EFFECT_TRAP_TARGET
-	const EFFECT_BODY_SLAM
-	const EFFECT_DOUBLE_HIT
-	const EFFECT_JUMP_KICK
-	const EFFECT_STATUS_SELF
-	const EFFECT_RECOIL_HIT_QUARTER
-	const EFFECT_CONFUSE
-	const EFFECT_ATTACK_UP_2
-	const EFFECT_DEFENSE_UP_2
-	const EFFECT_SPEED_UP_2
-	const EFFECT_SP_ATK_UP_2
-	const EFFECT_SP_DEF_UP_2
-	const EFFECT_ACCURACY_UP_2
-	const EFFECT_EVASION_UP_2
-	const EFFECT_TRANSFORM
-	const EFFECT_ATTACK_DOWN_2
-	const EFFECT_DEFENSE_DOWN_2
-	const EFFECT_SPEED_DOWN_2
-	const EFFECT_SP_ATK_DOWN_2
-	const EFFECT_SP_DEF_DOWN_2
-	const EFFECT_ACCURACY_DOWN_2
-	const EFFECT_EVASION_DOWN_2
-	const EFFECT_POISON
-	const EFFECT_PARALYZE
-	const EFFECT_ATTACK_DOWN_HIT
-	const EFFECT_DEFENSE_DOWN_HIT
-	const EFFECT_SPEED_DOWN_HIT
-	const EFFECT_SP_ATK_DOWN_HIT
-	const EFFECT_SP_DEF_DOWN_HIT
-	const EFFECT_ACCURACY_DOWN_HIT
-	const EFFECT_EVASION_DOWN_HIT
-	const EFFECT_SKY_ATTACK
-	const EFFECT_CONFUSE_HIT
-	const EFFECT_POISON_MULTI_HIT
-	const EFFECT_LOW_KICK
-	const EFFECT_HYPER_BEAM
-	const EFFECT_RAGE
-	const EFFECT_MIMIC
-	const EFFECT_METRONOME
-	const EFFECT_STATUS_OPP
-	const EFFECT_SPLASH
-	const EFFECT_DISABLE
-	const EFFECT_LEVEL_DAMAGE
-	const EFFECT_PSYWAVE
-	const EFFECT_COUNTER
-	const EFFECT_ENCORE
-	const EFFECT_PAIN_SPLIT
-	const EFFECT_SNORE
-	const EFFECT_CONVERSION2
-	const EFFECT_LOCK_ON
-	const EFFECT_SKETCH
-	const EFFECT_STRUGGLE
-	const EFFECT_SLEEP_TALK
-	const EFFECT_REVERSAL
-	const EFFECT_FALSE_SWIPE
-	const EFFECT_PRIORITY_HIT
-	const EFFECT_TRIPLE_KICK
-	const EFFECT_THIEF
-	const EFFECT_FLAME_WHEEL
-	const EFFECT_GROWTH
-	const EFFECT_PROTECT
-	const EFFECT_FORESIGHT
-	const EFFECT_ENDURE
-	const EFFECT_ROLLOUT
-	const EFFECT_SWAGGER
-	const EFFECT_FURY_CUTTER
-	const EFFECT_RETURN
-	const EFFECT_PRESENT
-	const EFFECT_FRUSTRATION
-	const EFFECT_SACRED_FIRE
-	const EFFECT_MAGNITUDE
-	const EFFECT_BATON_PASS
-	const EFFECT_PURSUIT
-	const EFFECT_RAPID_SPIN
-	const EFFECT_BUG_BITE
-	const EFFECT_SUNLIGHT_HEAL
-	const EFFECT_EXTREMESPEED
-	const EFFECT_VARIABLE_TYPE
-	const EFFECT_DEFENSE_UP_HIT
-	const EFFECT_ATTACK_UP_HIT
-	const EFFECT_ALL_UP_HIT
-	const EFFECT_FAKE_OUT
-	const EFFECT_MIRROR_COAT
-	const EFFECT_SKULL_BASH
-	const EFFECT_COND_BOOST_FLINCH
-	const EFFECT_EARTHQUAKE
-	const EFFECT_FUTURE_SIGHT
-	const EFFECT_SOLARBEAM
-	const EFFECT_THUNDER
-	const EFFECT_TELEPORT
-	const EFFECT_BEAT_UP
-	const EFFECT_FLY
-	const EFFECT_DEFENSE_CURL
-	const EFFECT_ELEMENTAL_FANG
-	const EFFECT_FLARE_BLITZ
-	const EFFECT_SUCKER_PUNCH
-	const EFFECT_PLAY_NICE
-	const EFFECT_BLIZZARD
-	const EFFECT_METAL_BURST
-	const EFFECT_FLATTER
-	const EFFECT_SUPERPOWER
-	const EFFECT_COSMIC_POWER
-	const EFFECT_SHEER_COLD
-	const EFFECT_TOXIC_HIT
-	const EFFECT_HONE_CLAWS
-	const EFFECT_CLOSE_COMBAT
-	const EFFECT_BURN_UP
-	const EFFECT_CALM_MIND
-	const EFFECT_REMOVE_ITEM_HIT
-	const EFFECT_BULK_UP
-	const EFFECT_WATER_SPOUT
-	const EFFECT_WRING_OUT
-	const EFFECT_PSYSHOCK
-	const EFFECT_FOUL_PLAY
-	const EFFECT_DRACO_METEOR
-	const EFFECT_VENOM_DRENCH
-	const EFFECT_CURE_SLEEP_HIT
-	const EFFECT_HAMMER_ARM
-	const EFFECT_RESET_STATS_HIT
-	const EFFECT_DEFOG
-	const EFFECT_ATK_DEF_DOWN
-	const EFFECT_DRAGON_DANCE
-	const EFFECT_FREEZE_DRY
-	const EFFECT_ALWAYS_CRIT
-	const EFFECT_WORK_UP
-	const EFFECT_HURRICANE
-	const EFFECT_ATK_DOWN_PRIORITY
-	const EFFECT_PSYCHO_SHIFT
-	const EFFECT_ROOST
-	const EFFECT_BRICK_BREAK
-	const EFFECT_VITAL_THROW
-	const EFFECT_FORCE_SWITCH_HIT
-	const EFFECT_TRAP_HIT
-	const EFFECT_NAIL_DOWN
-	const EFFECT_DYNAMO_RUSH
-	const EFFECT_SPEED_UP_HIT
-	const EFFECT_SACRED_SWORD
-	const EFFECT_UPROOT
-	const EFFECT_UPROAR
-	const EFFECT_POISON_SPEED_DOWN
-	const EFFECT_FELL_STINGER
-	const EFFECT_BOUNCE
-	const EFFECT_TEARFUL_LOOK
-	const EFFECT_FEINT
-	const EFFECT_WEATHER_BALL
-	const EFFECT_CURE_PARALYSIS_HIT
-	const EFFECT_CAPTIVATE
-	const EFFECT_ACUPRESSURE
-	const EFFECT_SP_DEF_DOWN_2_HIT
-	const EFFECT_BELCH
-	const EFFECT_YAWN
-	const EFFECT_DIG
-	const EFFECT_DIVE
-	const EFFECT_SHADOW_FORCE
-	const EFFECT_WHIRLPOOL
-	const EFFECT_ATK_SP_ATK_DOWN
-	const EFFECT_SPIKY_SHIELD
-	const EFFECT_KINGS_SHIELD
-	const EFFECT_BANEFUL_BUNKER
-	const EFFECT_OBSTRUCT
-	const EFFECT_CRAFTY_SHIELD
-	const EFFECT_FIRST_IMPRESSION
-	const EFFECT_BURN
-	const EFFECT_SP_ATK_UP_HIT
-	const EFFECT_TRICK_ROOM
-	const EFFECT_FINAL_GAMBIT
-	const EFFECT_CONFIDE
-	const EFFECT_BODY_PRESS
-	const EFFECT_MEMENTO
-	const EFFECT_HEALING_WISH
-	const EFFECT_HEAVY_SLAM
-	const EFFECT_ENDEAVOR
-	const EFFECT_STRENGTH_SAP
-	const EFFECT_SPIT_UP
-	const EFFECT_MISTY_AMBUSH
-	const EFFECT_DROWSY_RAGE
-	const EFFECT_PRIORITY_MULTI_HIT
-	const EFFECT_POWDER
-	const EFFECT_STATUS_OPP_ACC ; same as EFFECT_STATUS_OPP, but bypasses accuracy checks
-	const EFFECT_GEOMANCY
-	const EFFECT_DEFENSE_UP_2_HIT
-	const EFFECT_FOCUS_PUNCH
-	const EFFECT_BEAK_BLAST
-	const EFFECT_SHELL_TRAP
-	const EFFECT_REVENGE
-	const EFFECT_SHORE_UP
-	const EFFECT_CLANGING_SCALES
-	const EFFECT_SHIFT_GEAR
-	const EFFECT_RECOIL_HIT_HALF
-	const EFFECT_RECOIL_HIT_THIRD
-	const EFFECT_MIND_BLOWN
-	const EFFECT_PUNISHMENT
-	const EFFECT_STORED_POWER
-	const EFFECT_TAR_SHOT
-	const EFFECT_TRICK_ROOM_HIT
-	const EFFECT_VOLT_TACKLE
-	const EFFECT_METEOR_BEAM
-	const EFFECT_POLTERGEIST
-	const EFFECT_SCALE_SHOT
-	const EFFECT_MISTY_EXPLOSION
-	const EFFECT_TRUMP_CARD
-	const EFFECT_U_TURN
-	const EFFECT_PARTING_SHOT
-	const EFFECT_DEFENSE_UP_3
-	const EFFECT_SP_ATK_UP_3
+	const EFFECT_NORMAL_HIT         ; 01
+	const EFFECT_SLEEP              ; 02
+	const EFFECT_POISON_HIT         ; 03
+	const EFFECT_LEECH_HIT          ; 04
+	const EFFECT_BURN_HIT           ; 05
+	const EFFECT_FREEZE_HIT         ; 06
+	const EFFECT_PARALYZE_HIT       ; 07
+	const EFFECT_SELFDESTRUCT       ; 08
+	const EFFECT_DREAM_EATER        ; 09
+	const EFFECT_MIRROR_MOVE        ; 0a
+	const EFFECT_ATTACK_UP          ; 0b
+	const EFFECT_DEFENSE_UP         ; 0c
+	const EFFECT_SPEED_UP           ; 0d
+	const EFFECT_SP_ATK_UP          ; 0e
+	const EFFECT_SP_DEF_UP          ; 0f
+	const EFFECT_ACCURACY_UP        ; 10
+	const EFFECT_EVASION_UP         ; 11
+	const EFFECT_ALWAYS_HIT         ; 12
+	const EFFECT_ATTACK_DOWN        ; 13
+	const EFFECT_DEFENSE_DOWN       ; 14
+	const EFFECT_SPEED_DOWN         ; 15
+	const EFFECT_SP_ATK_DOWN        ; 16
+	const EFFECT_SP_DEF_DOWN        ; 17
+	const EFFECT_ACCURACY_DOWN      ; 18
+	const EFFECT_EVASION_DOWN       ; 19
+	const EFFECT_RESET_STATS        ; 1a
+	const EFFECT_BIDE               ; 1b
+	const EFFECT_RAMPAGE            ; 1c
+	const EFFECT_FORCE_SWITCH       ; 1d
+	const EFFECT_MULTI_HIT          ; 1e
+	const EFFECT_CONVERSION         ; 1f
+	const EFFECT_FLINCH_HIT         ; 20
+	const EFFECT_HEAL               ; 21
+	const EFFECT_TOXIC              ; 22
+	const EFFECT_PAY_DAY            ; 23
+	const EFFECT_TRI_ATTACK         ; 24
+	const EFFECT_CONDITIONAL_BOOST  ; 25
+	const EFFECT_OHKO               ; 26
+	const EFFECT_RAZOR_WIND         ; 27
+	const EFFECT_SUPER_FANG         ; 28
+	const EFFECT_STATIC_DAMAGE      ; 29
+	const EFFECT_TRAP_TARGET        ; 2a
+	const EFFECT_BODY_SLAM          ; 2b
+	const EFFECT_DOUBLE_HIT         ; 2c
+	const EFFECT_JUMP_KICK          ; 2d
+	const EFFECT_STATUS_SELF        ; 2e
+	const EFFECT_RECOIL_HIT_QUARTER ; 2f
+	const EFFECT_CONFUSE            ; 30
+	const EFFECT_ATTACK_UP_2        ; 31
+	const EFFECT_DEFENSE_UP_2       ; 32
+	const EFFECT_SPEED_UP_2         ; 33
+	const EFFECT_SP_ATK_UP_2        ; 34
+	const EFFECT_SP_DEF_UP_2        ; 35
+	const EFFECT_ACCURACY_UP_2      ; 36
+	const EFFECT_EVASION_UP_2       ; 37
+	const EFFECT_TRANSFORM          ; 38
+	const EFFECT_ATTACK_DOWN_2      ; 39
+	const EFFECT_DEFENSE_DOWN_2     ; 3a
+	const EFFECT_SPEED_DOWN_2       ; 3b
+	const EFFECT_SP_ATK_DOWN_2      ; 3c
+	const EFFECT_SP_DEF_DOWN_2      ; 3d
+	const EFFECT_ACCURACY_DOWN_2    ; 3e
+	const EFFECT_EVASION_DOWN_2     ; 3f
+	const EFFECT_POISON             ; 40
+	const EFFECT_PARALYZE           ; 41
+	const EFFECT_ATTACK_DOWN_HIT    ; 42
+	const EFFECT_DEFENSE_DOWN_HIT   ; 43
+	const EFFECT_SPEED_DOWN_HIT     ; 44
+	const EFFECT_SP_ATK_DOWN_HIT    ; 45
+	const EFFECT_SP_DEF_DOWN_HIT    ; 46
+	const EFFECT_ACCURACY_DOWN_HIT  ; 47
+	const EFFECT_EVASION_DOWN_HIT   ; 48
+	const EFFECT_SKY_ATTACK         ; 49
+	const EFFECT_CONFUSE_HIT        ; 4a
+	const EFFECT_POISON_MULTI_HIT   ; 4b
+	const EFFECT_LOW_KICK           ; 4c
+	const EFFECT_HYPER_BEAM         ; 4d
+	const EFFECT_RAGE               ; 4e
+	const EFFECT_MIMIC              ; 4f
+	const EFFECT_METRONOME          ; 50
+	const EFFECT_STATUS_OPP         ; 51
+	const EFFECT_SPLASH             ; 52
+	const EFFECT_DISABLE            ; 53
+	const EFFECT_LEVEL_DAMAGE       ; 54
+	const EFFECT_PSYWAVE            ; 55
+	const EFFECT_COUNTER            ; 56
+	const EFFECT_ENCORE             ; 57
+	const EFFECT_PAIN_SPLIT         ; 58
+	const EFFECT_SNORE              ; 59
+	const EFFECT_CONVERSION2        ; 5a
+	const EFFECT_LOCK_ON            ; 5b
+	const EFFECT_SKETCH             ; 5c
+	const EFFECT_STRUGGLE           ; 5d
+	const EFFECT_SLEEP_TALK         ; 5e
+	const EFFECT_REVERSAL           ; 5f
+	const EFFECT_FALSE_SWIPE        ; 60
+	const EFFECT_PRIORITY_HIT       ; 61
+	const EFFECT_TRIPLE_KICK        ; 62
+	const EFFECT_THIEF              ; 63
+	const EFFECT_FLAME_WHEEL        ; 64
+	const EFFECT_GROWTH             ; 65
+	const EFFECT_PROTECT            ; 66
+	const EFFECT_FORESIGHT          ; 67
+	const EFFECT_ENDURE             ; 68
+	const EFFECT_ROLLOUT            ; 69
+	const EFFECT_SWAGGER            ; 6a
+	const EFFECT_FURY_CUTTER        ; 6b
+	const EFFECT_RETURN             ; 6c
+	const EFFECT_PRESENT            ; 6d
+	const EFFECT_FRUSTRATION        ; 6e
+	const EFFECT_SACRED_FIRE        ; 6f
+	const EFFECT_MAGNITUDE          ; 70
+	const EFFECT_BATON_PASS         ; 71
+	const EFFECT_PURSUIT            ; 72
+	const EFFECT_RAPID_SPIN         ; 73
+	const EFFECT_BUG_BITE           ; 74
+	const EFFECT_SUNLIGHT_HEAL      ; 75
+	const EFFECT_EXTREMESPEED       ; 76
+	const EFFECT_VARIABLE_TYPE      ; 77
+	const EFFECT_DEFENSE_UP_HIT     ; 78
+	const EFFECT_ATTACK_UP_HIT      ; 79
+	const EFFECT_ALL_UP_HIT         ; 7a
+	const EFFECT_FAKE_OUT           ; 7b
+	const EFFECT_MIRROR_COAT        ; 7c
+	const EFFECT_SKULL_BASH         ; 7d
+	const EFFECT_COND_BOOST_FLINCH  ; 7e
+	const EFFECT_EARTHQUAKE         ; 7f
+	const EFFECT_FUTURE_SIGHT       ; 80
+	const EFFECT_SOLARBEAM          ; 81
+	const EFFECT_THUNDER            ; 82
+	const EFFECT_TELEPORT           ; 83
+	const EFFECT_BEAT_UP            ; 84
+	const EFFECT_FLY                ; 85
+	const EFFECT_DEFENSE_CURL       ; 86
+	const EFFECT_ELEMENTAL_FANG     ; 87
+	const EFFECT_FLARE_BLITZ        ; 88
+	const EFFECT_SUCKER_PUNCH       ; 89
+	const EFFECT_PLAY_NICE          ; 8a
+	const EFFECT_BLIZZARD           ; 8b
+	const EFFECT_METAL_BURST        ; 8c
+	const EFFECT_FLATTER            ; 8d
+	const EFFECT_SUPERPOWER         ; 8e
+	const EFFECT_COSMIC_POWER       ; 8f
+	const EFFECT_SHEER_COLD         ; 90
+	const EFFECT_TOXIC_HIT          ; 91
+	const EFFECT_HONE_CLAWS         ; 92
+	const EFFECT_CLOSE_COMBAT       ; 93
+	const EFFECT_BURN_UP            ; 94
+	const EFFECT_CALM_MIND          ; 95
+	const EFFECT_REMOVE_ITEM_HIT    ; 96
+	const EFFECT_BULK_UP            ; 97
+	const EFFECT_WATER_SPOUT        ; 98
+	const EFFECT_WRING_OUT          ; 99
+	const EFFECT_PSYSHOCK           ; 9a
+	const EFFECT_FOUL_PLAY          ; 9b
+	const EFFECT_DRACO_METEOR       ; 9c
+	const EFFECT_VENOM_DRENCH       ; 9d
+	const EFFECT_CURE_SLEEP_HIT     ; 9e
+	const EFFECT_HAMMER_ARM         ; 9f
+	const EFFECT_RESET_STATS_HIT    ; a0
+	const EFFECT_DEFOG              ; a1
+	const EFFECT_ATK_DEF_DOWN       ; a2
+	const EFFECT_DRAGON_DANCE       ; a3
+	const EFFECT_FREEZE_DRY         ; a4
+	const EFFECT_ALWAYS_CRIT        ; a5
+	const EFFECT_WORK_UP            ; a6
+	const EFFECT_HURRICANE          ; a7
+	const EFFECT_ATK_DOWN_PRIORITY  ; a8
+	const EFFECT_PSYCHO_SHIFT       ; a9
+	const EFFECT_ROOST              ; aa
+	const EFFECT_BRICK_BREAK        ; ab
+	const EFFECT_VITAL_THROW        ; ac
+	const EFFECT_FORCE_SWITCH_HIT   ; ad
+	const EFFECT_TRAP_HIT           ; ae
+	const EFFECT_NAIL_DOWN          ; af
+	const EFFECT_DYNAMO_RUSH        ; b0
+	const EFFECT_SPEED_UP_HIT       ; b1
+	const EFFECT_SACRED_SWORD       ; b2
+	const EFFECT_UPROOT             ; b3
+	const EFFECT_UPROAR             ; b4
+	const EFFECT_POISON_SPEED_DOWN  ; b5
+	const EFFECT_FELL_STINGER       ; b6
+	const EFFECT_BOUNCE             ; b7
+	const EFFECT_TEARFUL_LOOK       ; b8
+	const EFFECT_FEINT              ; b9
+	const EFFECT_WEATHER_BALL       ; ba
+	const EFFECT_CURE_PARALYSIS_HIT ; bb
+	const EFFECT_CAPTIVATE          ; bc
+	const EFFECT_ACUPRESSURE        ; bd
+	const EFFECT_SP_DEF_DOWN_2_HIT  ; be
+	const EFFECT_BELCH              ; bf
+	const EFFECT_YAWN               ; c0
+	const EFFECT_DIG                ; c1
+	const EFFECT_DIVE               ; c2
+	const EFFECT_SHADOW_FORCE       ; c3
+	const EFFECT_WHIRLPOOL          ; c4
+	const EFFECT_ATK_SP_ATK_DOWN    ; c5
+	const EFFECT_SPIKY_SHIELD       ; c6
+	const EFFECT_KINGS_SHIELD       ; c7
+	const EFFECT_BANEFUL_BUNKER     ; c8
+	const EFFECT_OBSTRUCT           ; c9
+	const EFFECT_CRAFTY_SHIELD      ; ca
+	const EFFECT_FIRST_IMPRESSION   ; cb
+	const EFFECT_BURN               ; cc
+	const EFFECT_SP_ATK_UP_HIT      ; cd
+	const EFFECT_TRICK_ROOM         ; ce
+	const EFFECT_FINAL_GAMBIT       ; cf
+	const EFFECT_CONFIDE            ; d0
+	const EFFECT_BODY_PRESS         ; d1
+	const EFFECT_MEMENTO            ; d2
+	const EFFECT_HEALING_WISH       ; d3
+	const EFFECT_HEAVY_SLAM         ; d4
+	const EFFECT_ENDEAVOR           ; d5
+	const EFFECT_STRENGTH_SAP       ; d6
+	const EFFECT_SPIT_UP            ; d7
+	const EFFECT_MISTY_AMBUSH       ; d8
+	const EFFECT_DROWSY_RAGE        ; d9
+	const EFFECT_PRIORITY_MULTI_HIT ; da
+	const EFFECT_POWDER             ; db
+	const EFFECT_STATUS_OPP_ACC     ; dc (same as EFFECT_STATUS_OPP, but bypasses accuracy checks)
+	const EFFECT_GEOMANCY           ; dd
+	const EFFECT_DEFENSE_UP_2_HIT   ; de
+	const EFFECT_FOCUS_PUNCH        ; df
+	const EFFECT_BEAK_BLAST         ; e0
+	const EFFECT_SHELL_TRAP         ; e1
+	const EFFECT_REVENGE            ; e2
+	const EFFECT_SHORE_UP           ; e3
+	const EFFECT_CLANGING_SCALES    ; e4
+	const EFFECT_SHIFT_GEAR         ; e5
+	const EFFECT_RECOIL_HIT_HALF    ; e6
+	const EFFECT_RECOIL_HIT_THIRD   ; e7
+	const EFFECT_MIND_BLOWN         ; e8
+	const EFFECT_PUNISHMENT         ; e9
+	const EFFECT_STORED_POWER       ; ea
+	const EFFECT_TAR_SHOT           ; eb
+	const EFFECT_TRICK_ROOM_HIT     ; ec
+	const EFFECT_VOLT_TACKLE        ; ed
+	const EFFECT_METEOR_BEAM        ; ee
+	const EFFECT_POLTERGEIST        ; ef
+	const EFFECT_SCALE_SHOT         ; f1
+	const EFFECT_MISTY_EXPLOSION    ; f2
+	const EFFECT_TRUMP_CARD         ; f3
+	const EFFECT_U_TURN             ; f4
+	const EFFECT_PARTING_SHOT       ; f5
+	const EFFECT_DEFENSE_UP_3       ; f6
+	const EFFECT_SP_ATK_UP_3        ; f7
+	const EFFECT_ELECTRO_BALL       ; f8
