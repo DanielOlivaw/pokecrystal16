@@ -176,6 +176,7 @@ ENDM
 	command heavyslam               ; a9
 	command trumpcard               ; aa
 	command electroball             ; ab
+	command gyroball                ; ac
 
 	enum_start $fe
 	command endturn                 ; fe

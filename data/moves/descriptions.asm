@@ -2638,4 +2638,8 @@ GyroBallDescription:
 	db   "Stronger when the"
 	next "user is slower.@"
 
+; FlyingPressDescription:
+	; db   "A FIGHTING- and"
+	; next "FLYING-type move.@"
+
 		;"123456789123456789"

@@ -7572,16 +7572,10 @@ BattleCommand_TrumpCard:
 
 BattleCommand_ElectroBall:
 	callfar ElectroBallEffect
-	push hl
-	push bc
-	push de
-	ld a, d
-	ld [wDeciramBuffer], a
-	ld hl, MagnitudeText
-	call StdBattleTextbox
-	pop de
-	pop bc
-	pop hl
+	ret
+
+BattleCommand_GyroBall:
+	callfar GyroBallEffect
 	ret
 
 SafeCheckSafeguard:

@@ -247,3 +247,4 @@ MoveEffectsPointers:
 	dw StatUp3                ; EFFECT_DEFENSE_UP_3
 	dw StatUp3                ; EFFECT_SP_ATK_UP_3
 	dw ElectroBall            ; EFFECT_ELECTRO_BALL
+	dw GyroBall               ; EFFECT_GYRO_BALL

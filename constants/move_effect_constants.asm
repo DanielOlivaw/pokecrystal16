@@ -247,3 +247,4 @@
 	const EFFECT_DEFENSE_UP_3       ; f6
 	const EFFECT_SP_ATK_UP_3        ; f7
 	const EFFECT_ELECTRO_BALL       ; f8
+	const EFFECT_GYRO_BALL          ; f9
