@@ -43,19 +43,19 @@ EvolutionMovePointers6::
 	dw NoEvolutionMoves6        ; TYRUNT
 	dw TyrantrumEvolutionMoves  ; TYRANTRUM
 	dw NoEvolutionMoves6        ; AMAURA
-	dw AurorusEvolutionMoves    ; AURORUS
+	dw NoEvolutionMoves6        ; AURORUS
 	dw SylveonEvolutionMoves    ; SYLVEON
 	dw NoEvolutionMoves6        ; HAWLUCHA
 	dw NoEvolutionMoves6        ; DEDENNE
 	dw NoEvolutionMoves6        ; CARBINK
 	dw NoEvolutionMoves6        ; GOOMY
-	dw NoEvolutionMoves6        ; SLIGGOO
-	dw NoEvolutionMoves6        ; GOODRA
+	dw SliggooEvolutionMoves    ; SLIGGOO
+	dw GoodraEvolutionMoves     ; GOODRA
 	dw NoEvolutionMoves6        ; KLEFKI
 	dw NoEvolutionMoves6        ; PHANTUMP
-	dw NoEvolutionMoves6        ; TREVENANT
+	dw TrevenantEvolutionMoves  ; TREVENANT
 	dw NoEvolutionMoves6        ; BERGMITE
-	dw NoEvolutionMoves6        ; AVALUGG
+	dw AvaluggEvolutionMoves    ; AVALUGG
 	dw NoEvolutionMoves6        ; XERNEAS
 	dw NoEvolutionMoves6        ; YVELTAL
 	dw NoEvolutionMoves6        ; ZYGARDE
@@ -138,12 +138,25 @@ TyrantrumEvolutionMoves:
 	dw JAW_CLAMP
 	db 0 ; no more evolution moves
 
-AurorusEvolutionMoves:
-	dw AURORA_VEIL
-	db 0 ; no more evolution moves
-
 SylveonEvolutionMoves:
 	dw DISARMING_VOICE
+	db 0 ; no more evolution moves
+
+SliggooEvolutionMoves:
+	dw ACID_SPRAY
+	db 0 ; no more evolution moves
+
+GoodraEvolutionMoves:
+	dw AQUA_TAIL
+	db 0 ; no more evolution moves
+
+TrevenantEvolutionMoves:
+	dw SHADOW_CLAW
+	dw UPROOT
+	db 0 ; no more evolution moves
+
+AvaluggEvolutionMoves:
+	dw BODY_SLAM
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves6:
