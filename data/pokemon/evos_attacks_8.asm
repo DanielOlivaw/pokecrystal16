@@ -61,35 +61,100 @@ EvosAttacksPointers8::
 GrookeyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, THWACKEY
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 6, BRANCH_POKE
+	dbw 10, LEECH_SEED
+	dbw 14, RAZOR_LEAF
+	dbw 18, SCREECH
+	dbw 22, KNOCK_OFF
+	dbw 26, SLAM
+	dbw 30, UPROAR
+	dbw 34, WOOD_HAMMER
+	dbw 38, ENDEAVOR
 	db 0 ; no more level-up moves
 
 ThwackeyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 35, TR_ANYTIME, RILLABOOM
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 6, BRANCH_POKE
+	dbw 10, LEECH_SEED
+	dbw 14, RAZOR_LEAF
+	dbw 15, DOUBLE_HIT
+	dbw 20, SCREECH
+	dbw 26, KNOCK_OFF
+	dbw 32, SLAM
+	dbw 38, UPROAR
+	dbw 44, WOOD_HAMMER
+	dbw 50, ENDEAVOR
 	db 0 ; no more level-up moves
 
 RillaboomEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, NOBLE_ROAR
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 6, BRANCH_POKE
+	dbw 10, LEECH_SEED
+	dbw 14, RAZOR_LEAF
+	dbw 15, DOUBLE_HIT
+	dbw 20, SCREECH
+	dbw 26, KNOCK_OFF
+	dbw 32, SLAM
+	dbw 34, DRUM_BEATING
+	dbw 40, UPROAR
+	dbw 48, WOOD_HAMMER
+	dbw 56, ENDEAVOR
+	dbw 64, BOOMBURST
 	db 0 ; no more level-up moves
 
 RookideeEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, CORVSQUIRE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 5, POWER_TRIP
+	dbw 10, HONE_CLAWS
+	dbw 15, FURY_ATTACK
+	dbw 20, PLUCK
+	dbw 25, SCARY_FACE
+	dbw 30, DRILL_PECK
+	dbw 35, SWAGGER
+	dbw 40, BRAVE_BIRD
 	db 0 ; no more level-up moves
 
 CorvsquireEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 38, TR_ANYTIME, CORVKNIGHT
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 5, POWER_TRIP
+	dbw 10, HONE_CLAWS
+	dbw 15, FURY_ATTACK
+	dbw 22, PLUCK
+	dbw 29, SCARY_FACE
+	dbw 36, DRILL_PECK
+	dbw 43, SWAGGER
+	dbw 50, BRAVE_BIRD
 	db 0 ; no more level-up moves
 
 CorvknightEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, METAL_SOUND
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 5, POWER_TRIP
+	dbw 10, HONE_CLAWS
+	dbw 15, FURY_ATTACK
+	dbw 22, PLUCK
+	dbw 29, SCARY_FACE
+	dbw 36, DRILL_PECK
+	dbw 37, STEEL_WING
+	dbw 45, SWAGGER
+	dbw 54, BRAVE_BIRD
+	dbw 63, IRON_DEFENSE
 	db 0 ; no more level-up moves
 
 BlipbugEvosAttacks:

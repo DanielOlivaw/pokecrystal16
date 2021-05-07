@@ -1237,7 +1237,6 @@ BattleCommand_Critical:
 ; Moves with EFFECT_ALWAYS_CRIT will always result in a critical hit.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-
 	cp EFFECT_ALWAYS_CRIT
 	jr nz, .get_critical_chance
 .always_crit
@@ -1797,6 +1796,9 @@ BattleCommand_CheckHit:
 	call .ToxicPoison
 	ret z
 
+	call .MinimizeHitMoves
+	ret nz
+
 	call .XAccuracy
 	ret nz
 
@@ -2057,6 +2059,7 @@ BattleCommand_CheckHit:
 
 	farcall GetProtectVariationEffect
 
+.return_nz
 	ld a, 1
 	and a
 	ret
@@ -2082,13 +2085,8 @@ BattleCommand_CheckHit:
 	call GetBattleVar
 	and TYPE_MASK
 	cp GROUND
-	jr z, .Levitating
+	jr z, .return_nz
 	xor a
-	ret
-
-.Levitating
-	ld a, 1
-	and a
 	ret
 
 .LockOn:
@@ -2112,7 +2110,7 @@ BattleCommand_CheckHit:
 .DrainSub:
 ; Return z if using an HP drain move on a substitute.
 	call CheckSubstituteOpp
-	jr z, .not_draining_sub
+	jr z, .return_nz
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
@@ -2120,11 +2118,6 @@ BattleCommand_CheckHit:
 	cp EFFECT_LEECH_HIT
 	ret z
 	cp EFFECT_DREAM_EATER
-	ret z
-
-.not_draining_sub
-	ld a, 1
-	and a
 	ret
 
 .FlyDigMoves:
@@ -2234,6 +2227,32 @@ BattleCommand_CheckHit:
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
 	ret
+
+.MinimizeHitMoves
+; Certain moves always hit if the target is minimized
+	ld hl, wEnemyMinimized
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_minimize_status
+	ld hl, wPlayerMinimized
+.got_minimize_status
+	ld a, [hl]
+	and a
+	ret z
+	ld hl, .MinimizeHitMoveList
+	call .check_move_in_list
+	jp z, .return_nz
+	xor a
+	ret
+
+.MinimizeHitMoveList
+	dw STOMP
+	dw STEAMROLLER
+	dw HEAVY_SLAM
+	dw HEAT_CRASH
+	dw DRAGON_RUSH
+	dw BODY_SLAM
+	dw -1
 
 .XAccuracy:
 	ld a, BATTLE_VARS_SUBSTATUS4
@@ -3954,13 +3973,30 @@ ConfusionDamageCalc:
 	and a
 	ret z
 
-; x2
+; x1.5 (multiply by 15 and divide by 10)
+	xor a
+	ldh [hMultiplicand + 0], a
+
+	ldh a, [hQuotient + 2]
+	ldh [hMultiplicand + 1], a
+
 	ldh a, [hQuotient + 3]
-	add a
+	ldh [hMultiplicand + 2], a
+
+	ld a, 15
+	ldh [hMultiplier], a
+
+	call Multiply
+
+	ld a, 10
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+
+	ldh a, [hQuotient + 3]
 	ldh [hProduct + 3], a
 
 	ldh a, [hQuotient + 2]
-	rl a
 	ldh [hProduct + 2], a
 
 ; Cap at $ffff.

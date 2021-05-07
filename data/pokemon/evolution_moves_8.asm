@@ -2,11 +2,11 @@ SECTION "Evolution Moves 8", ROMX
 
 EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; GROOKEY
-	dw NoEvolutionMoves8         ; THWACKEY
-	dw NoEvolutionMoves8         ; RILLABOOM
+	dw ThwackeyEvolutionMoves    ; THWACKEY
+	dw RillaboomEvolutionMoves   ; RILLABOOM
 	dw NoEvolutionMoves8         ; ROOKIDEE
 	dw NoEvolutionMoves8         ; CORVSQUIRE
-	dw NoEvolutionMoves8         ; CORVKNIGHT
+	dw CorvknightEvolutionMoves  ; CORVKNIGHT
 	dw NoEvolutionMoves8         ; BLIPBUG
 	dw NoEvolutionMoves8         ; DOTTLER
 	dw NoEvolutionMoves8         ; ORBEETLE
@@ -57,6 +57,18 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; DRAGAPULT
 	dw NoEvolutionMoves8         ; REGIELEKI
 	dw NoEvolutionMoves8         ; REGIDRAGO
+
+ThwackeyEvolutionMoves:
+	dw DOUBLE_HIT
+	db 0 ; no more evolution moves
+
+RillaboomEvolutionMoves:
+	dw DRUM_BEATING
+	db 0 ; no more evolution moves
+
+CorvknightEvolutionMoves:
+	dw STEEL_WING
+	db 0 ; no more evolution moves
 
 ObstagoonEvolutionMoves:
 	dw OBSTRUCT

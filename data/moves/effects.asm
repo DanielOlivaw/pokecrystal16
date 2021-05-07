@@ -1365,11 +1365,11 @@ StaticDamage:
 	kingsrock
 	endmove
 
-Reversal:
 HPBasedDamage:
 	checkobedience
 	usedmovetext
 	doturn
+	critical
 	constantdamage
 	stab
 	damagevariation
@@ -1377,6 +1377,7 @@ HPBasedDamage:
 	moveanim
 	failuretext
 	applydamage
+	criticaltext
 	supereffectivetext
 	checkfaint
 	buildopponentrage
@@ -2777,6 +2778,7 @@ HeavySlam:
 	damagecalc
 	stab
 	damagevariation
+	conditionalboost
 	checkhit
 	moveanim
 	failuretext
