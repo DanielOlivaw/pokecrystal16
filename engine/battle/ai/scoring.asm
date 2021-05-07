@@ -467,6 +467,8 @@ AI_Smart_LockOn:
 	call AIGetEnemyMove
 
 	ld a, [wEnemyMoveStruct + MOVE_ACC]
+	cp 3
+	jr c, .asm_3884f
 	cp 180
 	jr nc, .asm_3884f
 

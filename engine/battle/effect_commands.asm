@@ -1815,6 +1815,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_FORCE_SWITCH
 	ret z
+	cp EFFECT_CONVERSION2
+	ret z
 	cp EFFECT_STRUGGLE
 	ret z
 	cp EFFECT_PLAY_NICE

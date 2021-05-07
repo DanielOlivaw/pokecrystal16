@@ -76,7 +76,7 @@
 
 	charmap "<LV>",      $6e
 
-	charmap "<DO>",      $70 ; hiragana small do, unused
+	charmap "<%>",       $70 ; percentage sign
 	charmap "◀",         $71
 	charmap "『",         $72 ; Japanese opening quote, unused
 	charmap "<ID>",      $73

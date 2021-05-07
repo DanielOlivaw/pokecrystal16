@@ -1202,8 +1202,11 @@ PlaceMoveData:
 	hlcoord 0, 11
 	ld de, String_MoveType_Bottom
 	call PlaceString
-	hlcoord 12, 12
+	hlcoord 14, 12
 	ld de, String_MoveAtk
+	call PlaceString
+	hlcoord 18, 12
+	ld de, String_MovePercent
 	call PlaceString
 	ld a, [wCurSpecies]
 	ld b, a
@@ -1219,9 +1222,22 @@ PlaceMoveData:
 	predef PrintMoveType
 	ld a, [wCurSpecies]
 	ld l, a
+	ld a, MOVE_ACC
+	call GetMoveAttribute
+	hlcoord 15, 12
+	cp 3
+	jr c, .no_accuracy
+	ld [wDeciramBuffer], a
+	call GetMoveAccuracyAsPercentage
+	ld de, wDeciramBuffer
+	lb bc, 1, 3
+	call PrintNum
+.got_accuracy
+	ld a, [wCurSpecies]
+	ld l, a
 	ld a, MOVE_POWER
 	call GetMoveAttribute
-	hlcoord 16, 12
+	hlcoord 11, 12
 	cp 2
 	jr c, .no_power
 	ld [wDeciramBuffer], a
@@ -1229,6 +1245,11 @@ PlaceMoveData:
 	lb bc, 1, 3
 	call PrintNum
 	jr .description
+
+.no_accuracy
+	ld de, String_MoveNoPower
+	call PlaceString
+	jr .got_accuracy
 
 .no_power
 	ld de, String_MoveNoPower
@@ -1246,9 +1267,37 @@ String_MoveType_Top:
 String_MoveType_Bottom:
 	db "│        └@"
 String_MoveAtk:
-	db "ATK/@"
+	db "/@"
 String_MoveNoPower:
 	db "---@"
+String_MovePercent:
+	db "<%>@"
+
+GetMoveAccuracyAsPercentage:
+; Turn an accuracy value out of 255 into a percentage (out of 100).
+	ld a, [wDeciramBuffer]
+	cp 255
+	jr z, .max_accuracy
+	ldh [hMultiplicand + 2], a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, 20
+	ldh [hMultiplier], a
+	call Multiply
+	ld a, 51
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+	ldh a, [hQuotient + 3]
+	add 1
+	ld [wDeciramBuffer], a
+	ret
+
+.max_accuracy
+	ld a, 100
+	ld [wDeciramBuffer], a
+	ret
 
 Function132d3:
 	call Function132da

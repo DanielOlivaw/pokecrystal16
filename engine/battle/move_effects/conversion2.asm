@@ -4,6 +4,10 @@ BattleCommand_Conversion2:
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
+
+	call CheckHiddenOpponent
+	jr nz, .failed
+
 	ld hl, wBattleMonType1
 	ldh a, [hBattleTurn]
 	and a
