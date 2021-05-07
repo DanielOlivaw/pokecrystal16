@@ -103,6 +103,13 @@ WimpodEggMoves:
 	dw -1 ; end
 
 SandygastEggMoves:
+	dw AMNESIA
+	dw ANCIENTPOWER
+	dw CURSE
+	dw DESTINY_BOND
+	dw SPIT_UP
+	dw STOCKPILE
+	dw SWALLOW
 	dw -1 ; end
 
 KomalaEggMoves:
