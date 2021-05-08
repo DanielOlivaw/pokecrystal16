@@ -122,6 +122,8 @@ YawnPutToSleep:
 
 	ld hl, FellAsleepText
 	call StdBattleTextbox
+	ld de, ANIM_SLP
+	call FarPlayBattleAnimation
 
 	farcall UseHeldStatusHealingItem
 	ret

@@ -225,39 +225,116 @@ WoolooEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 24, TR_ANYTIME, DUBWOOL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, DEFENSE_CURL
+	dbw 8, ROLLOUT
+	dbw 12, GUARD_SPLIT
+	dbw 16, DOUBLE_KICK
+	dbw 20, HEADBUTT
+	dbw 24, TAKE_DOWN
+	dbw 28, GUARD_SWAP
+	dbw 32, REVERSAL
+	dbw 36, COTTON_GUARD
+	dbw 40, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DubwoolEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, DEFENSE_CURL
+	dbw 8, ROLLOUT
+	dbw 12, GUARD_SPLIT
+	dbw 16, DOUBLE_KICK
+	dbw 20, HEADBUTT
+	dbw 26, TAKE_DOWN
+	dbw 32, GUARD_SWAP
+	dbw 38, REVERSAL
+	dbw 44, COTTON_GUARD
+	dbw 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ChewtleEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, DREDNAW
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, WATER_GUN
+	dbw 5, BITE
+	dbw 10, PROTECT
+	dbw 15, JAW_CLAMP
+	dbw 20, HEADBUTT
+	dbw 25, COUNTER
+	dbw 30, JAW_LOCK
+	dbw 35, LIQUIDATION
+	dbw 40, BODY_SLAM
 	db 0 ; no more level-up moves
 
 DrednawEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, RAZOR_SHELL
+	dbw 1, ROCK_POLISH
 	dbw 1, TACKLE
+	dbw 1, WATER_GUN
+	dbw 5, BITE
+	dbw 10, PROTECT
+	dbw 15, JAW_CLAMP
+	dbw 20, HEADBUTT
+	dbw 21, ROCK_TOMB
+	dbw 26, COUNTER
+	dbw 32, JAW_LOCK
+	dbw 38, LIQUIDATION
+	dbw 44, BODY_SLAM
+	dbw 50, CRUNCH
+	dbw 56, HEAD_SMASH
 	db 0 ; no more level-up moves
 
 RolycolyEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, CARKOL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, SMOKESCREEN
+	dbw 5, RAPID_SPIN
+	dbw 10, ROCK_THROW
+	dbw 15, ROCK_POLISH
+	dbw 20, ANCIENTPOWER
+	dbw 25, INCINERATE
+	dbw 30, STEALTH_ROCK
+	dbw 35, HEAT_CRASH
+	dbw 40, ROCK_BLAST
 	db 0 ; no more level-up moves
 
 CarkolEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, COALOSSAL
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, SMOKESCREEN
+	dbw 5, RAPID_SPIN
+	dbw 10, ROCK_THROW
+	dbw 15, ROCK_POLISH
+	dbw 17, FLAME_CHARGE
+	dbw 21, ANCIENTPOWER
+	dbw 27, INCINERATE
+	dbw 33, STEALTH_ROCK
+	dbw 39, HEAT_CRASH
+	dbw 45, ROCK_BLAST
+	dbw 51, BURN_UP
 	db 0 ; no more level-up moves
 
 CoalossalEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, SMOKESCREEN
+	dbw 5, RAPID_SPIN
+	dbw 10, ROCK_THROW
+	dbw 15, ROCK_POLISH
+	dbw 17, FLAME_CHARGE
+	dbw 21, ANCIENTPOWER
+	dbw 27, INCINERATE
+	dbw 33, STEALTH_ROCK
+	dbw 33, TAR_SHOT
+	dbw 40, HEAT_CRASH
+	dbw 47, ROCK_BLAST
+	dbw 54, BURN_UP
 	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:

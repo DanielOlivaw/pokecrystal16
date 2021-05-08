@@ -15,10 +15,10 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; WOOLOO
 	dw NoEvolutionMoves8         ; DUBWOOL
 	dw NoEvolutionMoves8         ; CHEWTLE
-	dw NoEvolutionMoves8         ; DREDNAW
+	dw DrednawEvolutionMoves     ; DREDNAW
 	dw NoEvolutionMoves8         ; ROLYCOLY
-	dw NoEvolutionMoves8         ; CARKOL
-	dw NoEvolutionMoves8         ; COALOSSAL
+	dw CarkolEvolutionMoves      ; CARKOL
+	dw CoalossalEvolutionMoves   ; COALOSSAL
 	dw NoEvolutionMoves8         ; APPLIN
 	dw NoEvolutionMoves8         ; FLAPPLE
 	dw NoEvolutionMoves8         ; APPLETUN
@@ -78,6 +78,18 @@ DottlerEvolutionMoves:
 
 ThievulEvolutionMoves:
 	dw THIEF
+	db 0 ; no more evolution moves
+
+DrednawEvolutionMoves:
+	dw ROCK_TOMB
+	db 0 ; no more evolution moves
+
+CoalossalEvolutionMoves:
+	dw TAR_SHOT
+	db 0 ; no more evolution moves
+
+CarkolEvolutionMoves:
+	dw FLAME_CHARGE
 	db 0 ; no more evolution moves
 
 ObstagoonEvolutionMoves:

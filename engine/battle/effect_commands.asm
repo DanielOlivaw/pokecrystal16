@@ -1793,12 +1793,18 @@ BattleCommand_CheckHit:
 
 	call .MagnetRise
 	jp nz, .Miss
+	
+	call .PowderSporeMoves
+	jp z, .Miss
 
 	call .DrainSub
 	jp z, .Miss
 
 	call .LockOn
 	ret nz
+
+	call .ToxicPoison
+	ret z
 
 	call .FlyDigMoves
 	jp nz, .Miss
@@ -1810,9 +1816,6 @@ BattleCommand_CheckHit:
 	ret z
 
 	call .MistyAmbush
-	ret z
-
-	call .ToxicPoison
 	ret z
 
 	call .MinimizeHitMoves
@@ -1954,18 +1957,7 @@ BattleCommand_CheckHit:
 	cp EFFECT_BURN_UP
 	ret nz
 
-	ld de, wBattleMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .BurnUp_GotType
-	ld de, wEnemyMonType1
-.BurnUp_GotType
-	ld a, [de]
-	cp FIRE
-	ret z
-	inc de
-	ld a, [de]
-	cp FIRE
+	call CheckIfUserIsType
 	jr nz, .Failed
 	ret
 
@@ -2128,6 +2120,25 @@ BattleCommand_CheckHit:
 	and a
 	ret
 
+.PowderSporeMoves:
+; Grass types are immune to certain powder and spore moves.
+	ld a, GRASS
+	call CheckIfTargetIsType
+	ret nz
+.PowderSporeMoves_GrassType
+	ld hl, .PowderSporeMoveList
+	jr .check_move_in_list
+
+.PowderSporeMoveList
+	dw COTTON_SPORE
+	dw MAGIC_POWDER
+	dw POISONPOWDER
+	dw POWDER
+	dw SLEEP_POWDER
+	dw SPORE
+	dw STUN_SPORE
+	dw -1
+
 .DrainSub:
 ; Return z if using an HP drain move on a substitute.
 	call CheckSubstituteOpp
@@ -2149,11 +2160,6 @@ BattleCommand_CheckHit:
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
 	ret z
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_TOXIC
-	jr z, .ToxicPoison
 
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
@@ -2197,18 +2203,13 @@ BattleCommand_CheckHit:
 	dw -1
 
 .ToxicPoison:
-	ld de, wBattleMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .CheckPoison
-	ld de, wEnemyMonType1
-.CheckPoison:
-	ld a, [de]
-	cp POISON
-	ret z
-	inc de
-	ld a, [de]
-	cp POISON
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TOXIC
+	ret nz
+
+	ld a, POISON
+	call CheckIfUserIsType
 	ret
 
 .ThunderRain:
@@ -4272,7 +4273,7 @@ BattleCommand_SleepTarget:
 	ld a, BATTLE_VARS_SUBSTATUS4_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_UPROAR, [hl]
-	jr nz, .storm_or_uproar
+	jp nz, .storm_or_uproar
 
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
@@ -4333,6 +4334,8 @@ BattleCommand_SleepTarget:
 
 	ld hl, FellAsleepText
 	call StdBattleTextbox
+	ld de, ANIM_SLP
+	call PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 
@@ -4386,6 +4389,8 @@ BattleCommand_PoisonTarget:
 
 	ld hl, WasPoisonedText
 	call StdBattleTextbox
+	ld de, ANIM_PSN
+	call PlayOpponentBattleAnim
 
 	jr .finished
 
@@ -4397,6 +4402,8 @@ BattleCommand_PoisonTarget:
 
 	ld hl, BadlyPoisonedText
 	call StdBattleTextbox
+	ld de, ANIM_PSN
+	call PlayOpponentBattleAnim
 .finished
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4470,6 +4477,9 @@ BattleCommand_Poison:
 	call .apply_poison
 	ld hl, WasPoisonedText
 	call StdBattleTextbox
+	ld de, ANIM_PSN
+	call PlayOpponentBattleAnim
+
 	jr .finished
 
 .toxic
@@ -4480,6 +4490,8 @@ BattleCommand_Poison:
 
 	ld hl, BadlyPoisonedText
 	call StdBattleTextbox
+	ld de, ANIM_PSN
+	call PlayOpponentBattleAnim
 
 .finished
 	farcall UseHeldStatusHealingItem
@@ -4528,25 +4540,29 @@ BattleCommand_Poison:
 	ret
 
 CheckIfTargetIsPoisonOrSteelType:
-	ld de, wEnemyMonType1
+	ld a, POISON
+	call CheckIfTargetIsType
+	ret z
+	ld a, STEEL
+	; fallthrough
+CheckIfUserIsType:
+	ld b, a
+	ld de, wBattleMonType1
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .ok
-	ld de, wBattleMonType1
+	ld de, wEnemyMonType1
 .ok
 	ld a, [de]
 	inc de
-	cp POISON
-	ret z
-	cp STEEL
+	cp b
 	ret z
 	ld a, [de]
-	cp POISON
-	ret z
-	cp STEEL
+	cp b
 	ret
 
-CheckIfTargetIsFireType:
+CheckIfTargetIsType:
+	ld b, a
 	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
@@ -4555,25 +4571,10 @@ CheckIfTargetIsFireType:
 .ok
 	ld a, [de]
 	inc de
-	cp FIRE
+	cp b
 	ret z
 	ld a, [de]
-	cp FIRE
-	ret
-
-CheckIfTargetIsIceType:
-	ld de, wEnemyMonType1
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld de, wBattleMonType1
-.ok
-	ld a, [de]
-	inc de
-	cp ICE
-	ret z
-	ld a, [de]
-	cp ICE
+	cp b
 	ret
 
 PoisonOpponent:
@@ -4704,7 +4705,9 @@ BattleCommand_BurnTarget:
 	ld a, [wTypeModifier]
 	and $7f
 	ret z
-	call CheckIfTargetIsFireType ; Don't burn a Fire-type
+	; Don't burn a Fire-type
+	ld a, FIRE
+	call CheckIfTargetIsType
 	ret z
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
@@ -4730,6 +4733,8 @@ BattleCommand_BurnTarget:
 
 	ld hl, WasBurnedText
 	call StdBattleTextbox
+	ld de, ANIM_BRN
+	call PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4752,7 +4757,9 @@ BattleCommand_Burn:
 	ld a, [wTypeModifier]
 	and $7f
 	jr z, .didnt_affect
-	call CheckIfTargetIsFireType ; Don't burn a Fire-type
+	; Don't burn a Fire-type
+	ld a, FIRE
+	call CheckIfTargetIsType
 	jr z, .didnt_affect
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
@@ -4796,6 +4803,8 @@ BattleCommand_Burn:
 
 	ld hl, WasBurnedText
 	call StdBattleTextbox
+	ld de, ANIM_BRN
+	call PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4883,7 +4892,9 @@ BattleCommand_FreezeTarget:
 	ret z
 	cp WEATHER_FOG
 	ret z
-	call CheckIfTargetIsIceType ; Don't freeze an Ice-type
+	; Don't freeze an Ice-type
+	ld a, ICE
+	call CheckIfTargetIsType
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -4935,6 +4946,10 @@ BattleCommand_ParalyzeTarget:
 	ret z
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
+	ret z
+	; Don't paralyze an Electric-type
+	ld a, ELECTRIC
+	call CheckIfTargetIsType
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -6486,7 +6501,8 @@ BattleCommand_OHKO:
 	call GetBattleVar
 	cp EFFECT_SHEER_COLD
 	jr nz, .get_level
-	call CheckIfTargetIsIceType
+	ld a, ICE
+	call CheckIfTargetIsType
 	jr z, .no_effect
 
 .get_level
@@ -7120,6 +7136,10 @@ BattleCommand_Paralyze:
 	ld a, [wBattleWeather]
 	cp WEATHER_FOG
 	jr z, .fog
+	; Don't paralyze an Electric-type
+	ld a, ELECTRIC
+	call CheckIfTargetIsType
+	jr z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
@@ -7334,6 +7354,8 @@ BattleCommand_Heal:
 	ld hl, RestedText
 .no_status_to_heal
 	call StdBattleTextbox
+	ld de, ANIM_SLP
+	call FarPlayBattleAnimation
 	ldh a, [hBattleTurn]
 	and a
 	jr nz, .calc_enemy_stats
