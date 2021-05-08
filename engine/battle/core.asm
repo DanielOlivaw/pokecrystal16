@@ -7057,6 +7057,7 @@ ApplyStatusEffectOnStats:
 	jp ApplyBrnEffectOnAttack
 
 ApplyPrzEffectOnSpeed:
+; Paralysis halves the speed stat
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .enemy
@@ -7067,8 +7068,6 @@ ApplyPrzEffectOnSpeed:
 	ld a, [hld]
 	ld b, a
 	ld a, [hl]
-	srl a
-	rr b
 	srl a
 	rr b
 	ld [hli], a
@@ -7090,8 +7089,6 @@ ApplyPrzEffectOnSpeed:
 	ld a, [hl]
 	srl a
 	rr b
-	srl a
-	rr b
 	ld [hli], a
 	or b
 	jr nz, .enemy_ok
@@ -7102,6 +7099,7 @@ ApplyPrzEffectOnSpeed:
 	ret
 
 ApplyBrnEffectOnAttack:
+; A burn halves the attack stat
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .enemy

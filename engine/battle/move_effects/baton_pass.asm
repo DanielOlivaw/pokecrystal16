@@ -53,6 +53,8 @@ BattleCommand_BatonPass:
 
 	call .check_u_turn
 	jp z, ResetUTurnStatus
+	call .check_teleport
+	jp z, ResetUTurnStatus
 
 	jp ResetBatonPassStatus
 
@@ -97,6 +99,8 @@ BattleCommand_BatonPass:
 
 	call .check_u_turn
 	jp z, ResetUTurnStatus
+	call .check_teleport
+	jp z, ResetUTurnStatus
 
 	jr ResetBatonPassStatus
 
@@ -106,6 +110,12 @@ BattleCommand_BatonPass:
 	cp EFFECT_U_TURN
 	ret z
 	cp EFFECT_PARTING_SHOT
+	ret
+
+.check_teleport
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TELEPORT
 	ret
 
 ; .pursuit_switch

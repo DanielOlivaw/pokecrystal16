@@ -160,29 +160,65 @@ CorvknightEvosAttacks:
 BlipbugEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 10, TR_ANYTIME, DOTTLER
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, STRUGGLE_BUG
 	db 0 ; no more level-up moves
 
 DottlerEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, ORBEETLE
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, STRUGGLE_BUG
+	dbw 9, REFLECT
+	dbw 9, LIGHT_SCREEN
+	dbw 9, CONFUSION
 	db 0 ; no more level-up moves
 
 OrbeetleEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, STRUGGLE_BUG
+	dbw 9, REFLECT
+	dbw 9, LIGHT_SCREEN
+	dbw 9, CONFUSION
+	dbw 32, CONFUSE_RAY
+	dbw 35, AGILITY
+	dbw 37, PSYBEAM
+	dbw 40, HYPNOSIS
+	dbw 42, BUG_BUZZ
+	dbw 45, MIRROR_COAT
+	dbw 47, PSYCHIC
+	dbw 50, CALM_MIND
 	db 0 ; no more level-up moves
 
 NickitEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, THIEVUL
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, QUICK_ATTACK
+	dbw 1, TAIL_WHIP
+	dbw 4, BEAT_UP
+	dbw 8, HONE_CLAWS
+	dbw 12, FAINT_ATTACK
+	dbw 16, SNARL
+	dbw 20, NASTY_PLOT
+	dbw 24, SUCKER_PUNCH
+	dbw 28, NIGHT_SLASH
+	dbw 32, TAIL_SLAP
+	dbw 36, FOUL_PLAY
 	db 0 ; no more level-up moves
 
 ThievulEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, TACKLE
+	dbw 1, QUICK_ATTACK
+	dbw 1, TAIL_WHIP
+	dbw 4, BEAT_UP
+	dbw 8, HONE_CLAWS
+	dbw 12, FAINT_ATTACK
+	dbw 16, SNARL
+	dbw 17, THIEF
+	dbw 22, NASTY_PLOT
+	dbw 28, SUCKER_PUNCH
+	dbw 34, NIGHT_SLASH
+	dbw 40, TAIL_SLAP
+	dbw 46, FOUL_PLAY
+	dbw 52, PARTING_SHOT
 	db 0 ; no more level-up moves
 
 WoolooEvosAttacks:

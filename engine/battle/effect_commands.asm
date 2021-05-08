@@ -208,6 +208,10 @@ CheckPlayerTurn:
 
 	ld hl, FrozenSolidText
 	call StdBattleTextbox
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_FRZ
+	call FarPlayBattleAnimation
 
 	call CantMove
 	jp EndTurn
@@ -343,6 +347,11 @@ CheckPlayerTurn:
 
 	ld hl, FullyParalyzedText
 	call StdBattleTextbox
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_PAR
+	call FarPlayBattleAnimation
+
 	call CantMove
 	jp EndTurn
 
@@ -421,6 +430,7 @@ CheckEnemyTurn:
 	ld [wNumHits], a
 	ld de, ANIM_SLP
 	call FarPlayBattleAnimation
+
 	jr .fast_asleep
 
 .woke_up
@@ -465,6 +475,11 @@ CheckEnemyTurn:
 
 	ld hl, FrozenSolidText
 	call StdBattleTextbox
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_FRZ
+	call FarPlayBattleAnimation
+
 	call CantMove
 	jp EndTurn
 
@@ -623,8 +638,12 @@ CheckEnemyTurn:
 
 	ld hl, FullyParalyzedText
 	call StdBattleTextbox
-	call CantMove
+	xor a
+	ld [wNumHits], a
+	ld de, ANIM_PAR
+	call FarPlayBattleAnimation
 
+	call CantMove
 	; fallthrough
 
 EndTurn:

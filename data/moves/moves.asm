@@ -62,7 +62,7 @@ Moves1:
 	move EFFECT_MULTI_HIT,          25, BUG,      PHYSICAL,  95, 20,   0 ; PIN_MISSILE
 	move EFFECT_DEFENSE_DOWN,        0, NORMAL,   STATUS,   100, 30,   0 ; LEER
 	move EFFECT_FLINCH_HIT,         60, DARK,     PHYSICAL, 100, 25,  30 ; BITE
-	move EFFECT_ATTACK_DOWN,         0, NORMAL,   STATUS,     1, 40,   0 ; GROWL
+	move EFFECT_ATTACK_DOWN,         0, NORMAL,   STATUS,   100, 40,   0 ; GROWL
 	move EFFECT_FORCE_SWITCH,        0, NORMAL,   STATUS,     1, 20,   0 ; ROAR
 	move EFFECT_SLEEP,               0, NORMAL,   STATUS,    55, 15,   0 ; SING
 	move EFFECT_CONFUSE,             0, NORMAL,   STATUS,    55, 20,   0 ; SUPERSONIC
@@ -221,7 +221,7 @@ Moves1:
 	move EFFECT_STATUS_SELF,         0, ROCK,     STATUS,     1, 10,   0 ; SANDSTORM
 	move EFFECT_LEECH_HIT,          75, GRASS,    SPECIAL,  100, 10,   0 ; GIGA_DRAIN
 	move EFFECT_ENDURE,              0, NORMAL,   STATUS,     1, 10,   0 ; ENDURE
-	move EFFECT_ATTACK_DOWN_2,       0, FAIRY,    STATUS,     1, 20,   0 ; CHARM
+	move EFFECT_ATTACK_DOWN_2,       0, FAIRY,    STATUS,   100, 20,   0 ; CHARM
 	move EFFECT_ROLLOUT,            30, ROCK,     PHYSICAL,  90, 20,   0 ; ROLLOUT
 	move EFFECT_FALSE_SWIPE,        40, NORMAL,   PHYSICAL, 100, 40,   0 ; FALSE_SWIPE
 	move EFFECT_SWAGGER,             0, NORMAL,   STATUS,    85, 15, 100 ; SWAGGER

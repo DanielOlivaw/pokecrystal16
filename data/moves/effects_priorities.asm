@@ -25,6 +25,7 @@ MoveEffectPriorities:
 	db EFFECT_MIRROR_COAT,        2
 	db EFFECT_FORCE_SWITCH_HIT,   1
 	db EFFECT_FORCE_SWITCH,       1
+	db EFFECT_TELEPORT,           1
 	db EFFECT_TRICK_ROOM,         0
 	db EFFECT_TRICK_ROOM_HIT,     0
 	db -1

@@ -1,6 +1,53 @@
 BattleCommand_Teleport:
 ; teleport
 
+; Teleport fails if the user is trapped.
+; Ingrain doesn't affect teleport.
+
+; Binding moves
+	ld hl, wPlayerWrapCount
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_trap
+	ld hl, wEnemyWrapCount
+.got_trap
+	ld a, [hl]
+	and a
+	jr nz, .failed
+
+; Mean Look, Block, etc.
+	ld a, BATTLE_VARS_SUBSTATUS5_OPP
+	call GetBattleVar
+	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .failed
+
+; Octolock
+	ld a, BATTLE_VARS_SUBSTATUS7_OPP
+	call GetBattleVar
+	bit SUBSTATUS_OCTOLOCK, a
+	jr nz, .failed
+
+; Teleport tries to switch out the user for an ally
+; (handled by the baton pass code) if the user is the player
+; or an enemy trainer.
+
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .switch_out_user
+
+; Teleport will only end the battle if the user is an enemy wild Pokemon.
+	ld a, [wBattleMode]
+	dec a
+	jr z, .run_away
+.switch_out_user
+	jp BattleCommand_BatonPass
+
+.failed
+	call AnimateFailedMove
+	jp PrintButItFailed
+
+.run_away
+; Certain battle types don't allow fleeing.
 	ld a, [wBattleType]
 	cp BATTLETYPE_SHINY
 	jr z, .failed
@@ -11,76 +58,7 @@ BattleCommand_Teleport:
 	cp BATTLETYPE_SUICUNE
 	jr z, .failed
 
-	ld a, BATTLE_VARS_SUBSTATUS5_OPP
-	call GetBattleVar
-	bit SUBSTATUS_CANT_RUN, a
-	jr nz, .failed
-
-	ld a, BATTLE_VARS_SUBSTATUS7_OPP
-	call GetBattleVar
-	bit SUBSTATUS_OCTOLOCK, a
-	jr nz, .failed
-
-	ld a, BATTLE_VARS_SUBSTATUS5
-	call GetBattleVar
-	bit SUBSTATUS_INGRAINED, a
-	jr nz, .failed
-; Only need to check these next things if it's your turn
-	; ldh a, [hBattleTurn]
-	; and a
-	; jr nz, .enemy_turn
-; Can't teleport from a trainer battle
-	ld a, [wBattleMode]
-	dec a
-	; jr nz, .failed
-	jr z, .run_away
-	; fallthrough
-	
-; If your level is greater than the opponent's, you run without fail.
-	; ld a, [wCurPartyLevel]
-	; ld b, a
-	; ld a, [wBattleMonLevel]
-	; cp b
-	; jr nc, .run_away
-; Generate a number between 0 and (YourLevel + TheirLevel).
-	; add b
-	; ld c, a
-	; inc c
-; .loop_player
-	; call BattleRandom
-	; cp c
-	; jr nc, .loop_player
-; If that number is greater than 4 times your level, run away.
-	; srl b
-	; srl b
-	; cp b
-	; jr nc, .run_away
-
-.failed
-	call AnimateFailedMove
-	jp PrintButItFailed
-
-; .enemy_turn
-	; ld a, [wBattleMode]
-	; dec a
-	; jr nz, .failed
-	; ld a, [wBattleMonLevel]
-	; ld b, a
-	; ld a, [wCurPartyLevel]
-	; cp b
-	; jr nc, .run_away
-	; add b
-	; ld c, a
-	; inc c
-; .loop_enemy
-	; call BattleRandom
-	; cp c
-	; jr nc, .loop_enemy
-	; srl b
-	; srl b
-	; cp b
-	; jr c, .failed
-.run_away
+; End a wild battle.
 	call UpdateBattleMonInParty
 	xor a
 	ld [wNumHits], a

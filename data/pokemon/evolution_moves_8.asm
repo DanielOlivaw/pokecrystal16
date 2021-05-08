@@ -8,10 +8,10 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; CORVSQUIRE
 	dw CorvknightEvolutionMoves  ; CORVKNIGHT
 	dw NoEvolutionMoves8         ; BLIPBUG
-	dw NoEvolutionMoves8         ; DOTTLER
+	dw DottlerEvolutionMoves     ; DOTTLER
 	dw NoEvolutionMoves8         ; ORBEETLE
 	dw NoEvolutionMoves8         ; NICKIT
-	dw NoEvolutionMoves8         ; THIEVUL
+	dw ThievulEvolutionMoves     ; THIEVUL
 	dw NoEvolutionMoves8         ; WOOLOO
 	dw NoEvolutionMoves8         ; DUBWOOL
 	dw NoEvolutionMoves8         ; CHEWTLE
@@ -68,6 +68,16 @@ RillaboomEvolutionMoves:
 
 CorvknightEvolutionMoves:
 	dw STEEL_WING
+	db 0 ; no more evolution moves
+
+DottlerEvolutionMoves:
+	dw REFLECT
+	dw LIGHT_SCREEN
+	dw CONFUSION
+	db 0 ; no more evolution moves
+
+ThievulEvolutionMoves:
+	dw THIEF
 	db 0 ; no more evolution moves
 
 ObstagoonEvolutionMoves:
