@@ -20,23 +20,23 @@ EvolutionMovePointers8::
 	dw CarkolEvolutionMoves      ; CARKOL
 	dw CoalossalEvolutionMoves   ; COALOSSAL
 	dw NoEvolutionMoves8         ; APPLIN
-	dw NoEvolutionMoves8         ; FLAPPLE
-	dw NoEvolutionMoves8         ; APPLETUN
+	dw FlappleEvolutionMoves     ; FLAPPLE
+	dw AppletunEvolutionMoves    ; APPLETUN
 	dw NoEvolutionMoves8         ; ARROKUDA
-	dw NoEvolutionMoves8         ; BARASKEWDA
+	dw BaraskewdaEvolutionMoves  ; BARASKEWDA
 	dw NoEvolutionMoves8         ; TOXEL
-	dw NoEvolutionMoves8         ; TOXTRICITY
+	dw ToxtricityEvolutionMoves  ; TOXTRICITY
 	dw NoEvolutionMoves8         ; SIZZLIPEDE
 	dw NoEvolutionMoves8         ; CENTISKRCH
 	dw NoEvolutionMoves8         ; CLOBBOPUS
 	dw NoEvolutionMoves8         ; GRAPPLOCT
 	dw NoEvolutionMoves8         ; SINISTEA
-	dw NoEvolutionMoves8         ; POLTEAGYST
+	dw PolteagystEvolutionMoves  ; POLTEAGYST
 	dw NoEvolutionMoves8         ; HATENNA
-	dw NoEvolutionMoves8         ; HATTREM
-	dw NoEvolutionMoves8         ; HATTERENE
+	dw HattremEvolutionMoves     ; HATTREM
+	dw HattereneEvolutionMoves   ; HATTERENE
 	dw ObstagoonEvolutionMoves   ; OBSTAGOON
-	dw NoEvolutionMoves8         ; PERRSERKER
+	dw PerrserkerEvolutionMoves  ; PERRSERKER
 	dw CursolaEvolutionMoves     ; CURSOLA
 	dw NoEvolutionMoves8         ; MR__RIME
 	dw RunerigusEvolutionMoves   ; RUNERIGUS
@@ -44,17 +44,17 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; ALCREMIE
 	dw NoEvolutionMoves8         ; PINCURCHIN
 	dw NoEvolutionMoves8         ; SNOM
-	dw NoEvolutionMoves8         ; FROSMOTH
+	dw FrosmothEvolutionMoves    ; FROSMOTH
 	dw NoEvolutionMoves8         ; CUFANT
-	dw NoEvolutionMoves8         ; COPPERAJAH
+	dw CopperajahEvolutionMoves  ; COPPERAJAH
 	dw NoEvolutionMoves8         ; DRACOZOLT
 	dw NoEvolutionMoves8         ; ARCTOZOLT
 	dw NoEvolutionMoves8         ; DRACOVISH
 	dw NoEvolutionMoves8         ; ARCTOVISH
 	dw NoEvolutionMoves8         ; DURALUDON
 	dw NoEvolutionMoves8         ; DREEPY
-	dw NoEvolutionMoves8         ; DRAKLOAK
-	dw NoEvolutionMoves8         ; DRAGAPULT
+	dw DrakloakEvolutionMoves    ; DRAKLOAK
+	dw DragapultEvolutionMoves   ; DRAGAPULT
 	dw NoEvolutionMoves8         ; REGIELEKI
 	dw NoEvolutionMoves8         ; REGIDRAGO
 
@@ -84,16 +84,49 @@ DrednawEvolutionMoves:
 	dw ROCK_TOMB
 	db 0 ; no more evolution moves
 
-CoalossalEvolutionMoves:
-	dw TAR_SHOT
-	db 0 ; no more evolution moves
-
 CarkolEvolutionMoves:
 	dw FLAME_CHARGE
 	db 0 ; no more evolution moves
 
+CoalossalEvolutionMoves:
+	dw TAR_SHOT
+	db 0 ; no more evolution moves
+
+FlappleEvolutionMoves:
+	dw WING_ATTACK
+	db 0 ; no more evolution moves
+
+AppletunEvolutionMoves:
+	dw HEADBUTT
+	db 0 ; no more evolution moves
+
+BaraskewdaEvolutionMoves:
+	dw FLIP_TURN
+	db 0 ; no more evolution moves
+
+ToxtricityEvolutionMoves:
+	dw SPARK
+	db 0 ; no more evolution moves
+
+PolteagystEvolutionMoves:
+	dw TEATIME
+	dw POLTERGEIST
+	db 0 ; no more evolution moves
+
+HattremEvolutionMoves:
+	dw BRUTAL_SWING
+	db 0 ; no more evolution moves
+
+HattereneEvolutionMoves:
+	dw PSYCHO_CUT
+	db 0 ; no more evolution moves
+
 ObstagoonEvolutionMoves:
 	dw OBSTRUCT
+	db 0 ; no more evolution moves
+
+PerrserkerEvolutionMoves:
+	dw IRON_HEAD
 	db 0 ; no more evolution moves
 
 CursolaEvolutionMoves:
@@ -102,6 +135,22 @@ CursolaEvolutionMoves:
 
 RunerigusEvolutionMoves:
 	dw SHADOW_CLAW
+	db 0 ; no more evolution moves
+
+FrosmothEvolutionMoves:
+	dw ICY_WIND
+	db 0 ; no more evolution moves
+
+CopperajahEvolutionMoves:
+	dw HEAVY_SLAM
+	db 0 ; no more evolution moves
+
+DrakloakEvolutionMoves:
+	dw DRAGON_PULSE
+	db 0 ; no more evolution moves
+
+DragapultEvolutionMoves:
+	dw DRAGON_DARTS
 	db 0 ; no more evolution moves
 
 NoEvolutionMoves8:

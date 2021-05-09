@@ -42,7 +42,7 @@ EggMovePointers7::
 	dw TogedemaruEggMoves
 	dw MimikyuEggMoves
 	dw DrampaEggMoves
-	dw DhelmiseEggMoves
+	dw NoEggMoves7
 	dw JangmoOEggMoves
 	dw NoEggMoves7
 	dw NoEggMoves7
@@ -113,23 +113,60 @@ SandygastEggMoves:
 	dw -1 ; end
 
 KomalaEggMoves:
+	dw CHARM
+	dw PLAY_ROUGH
+	dw SING
+	dw WISH
+	dw ENDEAVOR
+	dw SUPERPOWER
+	dw ZEN_HEADBUTT
 	dw -1 ; end
 
 TurtonatorEggMoves:
+	dw FIRE_SPIN
+	dw HEAD_SMASH
+	dw REVENGE
+	dw HEAT_WAVE
+	dw CURSE
+	dw RAPID_SPIN
+	dw HEAT_CRASH
 	dw -1 ; end
 
 TogedemaruEggMoves:
+	dw DISARMING_VOICE
+	dw FAKE_OUT
+	dw FLAIL
+	dw PRESENT
+	dw TICKLE
+	dw WISH
+	dw ENCORE
+	dw REVERSAL
+	dw TWINEEDLE
 	dw -1 ; end
 
 MimikyuEggMoves:
+	dw CURSE
+	dw DESTINY_BOND
+	dw GRUDGE
+	dw NIGHTMARE
 	dw -1 ; end
 
 DrampaEggMoves:
-	dw -1 ; end
-
-DhelmiseEggMoves:
+	dw DRAGON_RUSH
+	dw MIST
+	dw TICKLE
+	dw HURRICANE
+	dw RAZOR_WIND
+	dw PLAY_ROUGH
 	dw -1 ; end
 
 JangmoOEggMoves:
+	dw COUNTER
+	dw DRAGONBREATH
+	dw FOCUS_PUNCH
+	dw REVERSAL
+	dw AQUA_TAIL
+	dw -1 ; end
+
 NoEggMoves7:
 	dw -1 ; end

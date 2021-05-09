@@ -1957,6 +1957,7 @@ BattleCommand_CheckHit:
 	cp EFFECT_BURN_UP
 	ret nz
 
+	ld a, FIRE
 	call CheckIfUserIsType
 	jr nz, .Failed
 	ret
@@ -4545,13 +4546,13 @@ CheckIfTargetIsPoisonOrSteelType:
 	ret z
 	ld a, STEEL
 	; fallthrough
-CheckIfUserIsType:
+CheckIfTargetIsType:
 	ld b, a
-	ld de, wBattleMonType1
+	ld de, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .ok
-	ld de, wEnemyMonType1
+	ld de, wBattleMonType1
 .ok
 	ld a, [de]
 	inc de
@@ -4561,13 +4562,13 @@ CheckIfUserIsType:
 	cp b
 	ret
 
-CheckIfTargetIsType:
+CheckIfUserIsType:
 	ld b, a
-	ld de, wEnemyMonType1
+	ld de, wBattleMonType1
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .ok
-	ld de, wBattleMonType1
+	ld de, wEnemyMonType1
 .ok
 	ld a, [de]
 	inc de

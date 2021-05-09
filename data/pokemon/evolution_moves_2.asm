@@ -9,11 +9,11 @@ EvolutionMovePointers2::
 	dw ChimeowEvolutionMoves    ; CHIMEOW
 	dw NoEvolutionMoves2        ; TYKER
 	dw StraigarEvolutionMoves   ; STRAIGAR
-	dw NoEvolutionMoves2        ; SWANDAME
+	dw SwandameEvolutionMoves   ; SWANDAME
 	dw NoEvolutionMoves2        ; KURSTRAW
-	dw NoEvolutionMoves2        ; PHANDARIN
+	dw PhandarinEvolutionMoves  ; PHANDARIN
 	dw NoEvolutionMoves2        ; WOLFROST
-	dw NoEvolutionMoves2        ; WARWOLF
+	dw WarwolfEvolutionMoves    ; WARWOLF
 	dw NoEvolutionMoves2        ; CHIKORITA
 	dw NoEvolutionMoves2        ; BAYLEEF
 	dw MeganiumEvolutionMoves   ; MEGANIUM
@@ -113,6 +113,18 @@ ChimeowEvolutionMoves:
 
 StraigarEvolutionMoves:
 	dw DYNAMO_RUSH
+	db 0 ; no more evolution moves
+
+SwandameEvolutionMoves:
+	dw SACRED_SWORD
+	db 0 ; no more evolution moves
+
+PhandarinEvolutionMoves:
+	dw STOMP
+	db 0 ; no more evolution moves
+
+WarwolfEvolutionMoves:
+	dw WILD_FURY
 	db 0 ; no more evolution moves
 
 MeganiumEvolutionMoves:

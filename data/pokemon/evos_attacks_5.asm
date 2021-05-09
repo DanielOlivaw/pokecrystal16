@@ -512,7 +512,7 @@ VenipedeEvosAttacks:
 	dbw 21, VENOSHOCK
 	dbw 24, AGILITY
 	dbw 27, STEAMROLLER
-	; dbw 30, ROCK_CLIMB
+	dbw 30, TAKE_DOWN
 	dbw 33, TOXIC
 	dbw 36, VENOM_DRENCH
 	dbw 39, DOUBLE_EDGE
@@ -533,7 +533,7 @@ WhirlipedeEvosAttacks:
 	dbw 21, IRON_DEFENSE
 	dbw 25, AGILITY
 	dbw 29, STEAMROLLER
-	; dbw 33, ROCK_CLIMB
+	dbw 33, TAKE_DOWN
 	dbw 37, TOXIC
 	dbw 41, VENOM_DRENCH
 	dbw 45, DOUBLE_EDGE
@@ -554,7 +554,7 @@ ScolipedeEvosAttacks:
 	dbw 25, AGILITY
 	dbw 29, STEAMROLLER
 	dbw 29, BATON_PASS
-	; dbw 34, ROCK_CLIMB
+	dbw 34, TAKE_DOWN
 	dbw 39, TOXIC
 	dbw 44, VENOM_DRENCH
 	dbw 49, DOUBLE_EDGE
@@ -1411,7 +1411,6 @@ CubchooEvosAttacks:
 BearticEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, AQUA_JET
-	dbw 1, WILD_FURY
 	dbw 1, POWDER_SNOW
 	dbw 1, GROWL
 	dbw 3, BIDE
@@ -1431,7 +1430,8 @@ BearticEvosAttacks:
 	dbw 44, REST
 	dbw 48, BLIZZARD
 	dbw 52, SHEER_COLD
-	dbw 56, SUPERPOWER
+	dbw 56, WILD_FURY
+	dbw 60, SUPERPOWER
 	db 0 ; no more level-up moves
 
 StunfiskEvosAttacks:

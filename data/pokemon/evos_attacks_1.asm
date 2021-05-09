@@ -975,22 +975,22 @@ VenomothEvosAttacks:
 MeowthGEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 28, TR_ANYTIME, PERRSERKER
 	db 0 ; no more evolutions
+	dbw 1, PLAY_ROUGH
+	dbw 1, NASTY_PLOT
 	dbw 1, THIEF
 	dbw 1, FEINT
-	dbw 1, NASTY_PLOT
-	dbw 1, PLAY_ROUGH
 	dbw 1, FAKE_OUT
 	dbw 1, GROWL
 	dbw 5, SCRATCH
-	dbw 9, PAY_DAY
-	dbw 13, METAL_CLAW
-	dbw 17, HONE_CLAWS
-	dbw 22, SWAGGER
-	dbw 27, FURY_SWIPES
+	dbw 10, PAY_DAY
+	dbw 14, METAL_CLAW
+	dbw 19, HONE_CLAWS
+	dbw 23, SWAGGER
+	dbw 28, FURY_SWIPES
 	dbw 32, SCREECH
 	dbw 37, SLASH
-	dbw 42, METAL_SOUND
-	dbw 47, THRASH
+	dbw 41, METAL_SOUND
+	dbw 46, THRASH
 	db 0 ; no more level-up moves
 
 PsyduckEvosAttacks:
@@ -1550,8 +1550,8 @@ FarfetchDEvosAttacks:
 	dbw 32, SLASH
 	dbw 35, SWORDS_DANCE
 	dbw 39, NIGHT_SLASH
-	dbw 42, ACROBATICS
-	dbw 46, AIR_SLASH
+	dbw 42, AIR_SLASH
+	dbw 46, ACROBATICS
 	dbw 49, LEAF_BLADE
 	dbw 53, AGILITY
 	dbw 56, BRAVE_BIRD
