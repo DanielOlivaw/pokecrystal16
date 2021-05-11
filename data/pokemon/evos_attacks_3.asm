@@ -874,17 +874,17 @@ MawileEvosAttacks:
 	dbw 1, ASTONISH
 	dbw 1, GROWL
 	dbw 3, FAIRY_WIND
-	dbw 7, BATON_PASS
-	dbw 10, BITE
-	dbw 14, JAW_CLAMP
-	dbw 17, STOCKPILE
-	dbw 17, SWALLOW
-	dbw 17, SPIT_UP
-	dbw 21, VICEGRIP
-	dbw 24, FAINT_ATTACK
-	dbw 28, SUCKER_PUNCH
-	dbw 31, IRON_DEFENSE
-	dbw 35, GUILE_FANG
+	dbw 7, BITE
+	dbw 10, JAW_CLAMP
+	dbw 14, STOCKPILE
+	dbw 14, SWALLOW
+	dbw 14, SPIT_UP
+	dbw 17, VICEGRIP
+	dbw 21, FAINT_ATTACK
+	dbw 24, GUILE_FANG
+	dbw 28, BATON_PASS
+	dbw 31, SUCKER_PUNCH
+	dbw 35, IRON_DEFENSE
 	dbw 38, CRUNCH
 	dbw 42, SWEET_SCENT
 	dbw 45, IRON_HEAD

@@ -1081,10 +1081,6 @@ RageDescription:
 	db   "Raises ATTACK if"
 	next "the user is hit.@"
 
-TeleportDescription:
-	db   "A move for fleeing"
-	next "from battle.@"
-
 MimicDescription:
 	db   "Copies a move used"
 	next "by the foe.@"
@@ -2637,6 +2633,10 @@ ElectroBallDescription:
 GyroBallDescription:
 	db   "Stronger when the"
 	next "user is slower.@"
+
+TeleportDescription:
+	db   "The user switches"
+	next "with an ally.@"
 
 ; FlyingPressDescription:
 	; db   "A FIGHTING- and"

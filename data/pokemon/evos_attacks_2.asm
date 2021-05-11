@@ -1457,10 +1457,10 @@ SnubbullEvosAttacks:
 	dbw 8, LICK
 	dbw 12, RAGE
 	dbw 16, BITE
-	dbw 20, FEY_FURY
+	dbw 20, GUILE_FANG
 	dbw 24, HEADBUTT
 	dbw 28, ROAR
-	dbw 32, GUILE_FANG
+	dbw 32, FEY_FURY
 	dbw 36, PAYBACK
 	dbw 40, PLAY_ROUGH
 	dbw 44, CRUNCH
@@ -1478,10 +1478,10 @@ GranbullEvosAttacks:
 	dbw 8, LICK
 	dbw 12, RAGE
 	dbw 16, BITE
-	dbw 20, FEY_FURY
+	dbw 20, GUILE_FANG
 	dbw 25, HEADBUTT
 	dbw 30, ROAR
-	dbw 35, GUILE_FANG
+	dbw 35, FEY_FURY
 	dbw 40, PAYBACK
 	dbw 45, PLAY_ROUGH
 	dbw 50, CRUNCH

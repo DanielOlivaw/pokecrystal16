@@ -1167,12 +1167,13 @@ BergmiteEvosAttacks:
 	dbw 21, BITE
 	dbw 24, CURSE
 	dbw 27, ICE_FANG
-	dbw 30, IRON_DEFENSE
-	dbw 33, RECOVER
-	dbw 36, TAKE_DOWN
-	dbw 39, CRUNCH
-	dbw 42, BLIZZARD
-	dbw 45, DOUBLE_EDGE
+	dbw 30, ICE_BALL
+	dbw 33, IRON_DEFENSE
+	dbw 36, RECOVER
+	dbw 39, TAKE_DOWN
+	dbw 42, CRUNCH
+	dbw 45, BLIZZARD
+	dbw 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 AvaluggEvosAttacks:
@@ -1188,13 +1189,14 @@ AvaluggEvosAttacks:
 	dbw 21, BITE
 	dbw 24, CURSE
 	dbw 27, ICE_FANG
-	dbw 30, IRON_DEFENSE
-	dbw 33, RECOVER
-	dbw 36, TAKE_DOWN
+	dbw 30, ICE_BALL
+	dbw 33, IRON_DEFENSE
+	dbw 36, RECOVER
 	dbw 36, BODY_SLAM
-	dbw 41, CRUNCH
-	dbw 46, BLIZZARD
-	dbw 51, DOUBLE_EDGE
+	dbw 40, TAKE_DOWN
+	dbw 44, CRUNCH
+	dbw 48, BLIZZARD
+	dbw 52, DOUBLE_EDGE
 	dbw 56, SKULL_BASH
 	db 0 ; no more level-up moves
 

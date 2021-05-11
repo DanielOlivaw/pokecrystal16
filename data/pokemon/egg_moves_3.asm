@@ -170,6 +170,7 @@ SableyeEggMoves:
 	dw -1 ; end
 
 MawileEggMoves:
+	dw PSYCHIC_FANGS
 	dw -1 ; end
 
 AronEggMoves:
