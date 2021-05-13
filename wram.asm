@@ -497,8 +497,8 @@ wPlayerSubStatus7::
 ; 6 powdered
 ; 5 electrified
 ; 4 tar shot
-; 3 
-; 2 
+; 3 octolock
+; 2 embargo
 ; 1 
 ; 0 
 	db

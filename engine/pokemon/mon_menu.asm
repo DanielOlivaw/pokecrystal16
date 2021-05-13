@@ -1205,9 +1205,6 @@ PlaceMoveData:
 	hlcoord 14, 12
 	ld de, String_MoveAtk
 	call PlaceString
-	hlcoord 18, 12
-	ld de, String_MovePercent
-	call PlaceString
 	ld a, [wCurSpecies]
 	ld b, a
 	farcall GetMoveCategoryName
@@ -1232,6 +1229,9 @@ PlaceMoveData:
 	ld de, wDeciramBuffer
 	lb bc, 1, 3
 	call PrintNum
+	hlcoord 18, 12
+	ld de, String_MovePercent
+	call PlaceString
 .got_accuracy
 	ld a, [wCurSpecies]
 	ld l, a

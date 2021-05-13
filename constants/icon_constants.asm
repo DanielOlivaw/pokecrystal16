@@ -3,233 +3,140 @@
 	const ICON_NULL
 	; const ICON_POLIWAG
 	; const ICON_DIGLETT
-	; const ICON_BIRD
-	; const ICON_MONSTER
 	; const ICON_BUG
-	; const ICON_HUMANSHAPE
-	; const ICON_FOX
 	; const ICON_EQUINE
-	; const ICON_SHELL
 	; const ICON_BLOB
-	; const ICON_SERPENT
 	; const ICON_VOLTORB
-	; const ICON_CATERPILLAR
-	; const ICON_FIGHTER
 	const ICON_EGG
-	; const ICON_JELLYFISH
 	; const ICON_MOTH
 	; const ICON_BAT
-	; const ICON_BIGMON
 	const ICON_BULBASAUR
-	const ICON_IVYSAUR
 	const ICON_VENUSAUR
 	const ICON_CHARMANDER
-	const ICON_CHARMELEON
 	const ICON_CHARIZARD
 	const ICON_SQUIRTLE
-	const ICON_WARTORTLE 
-	const ICON_BLASTOISE 
-	const ICON_CATERPIE  
-	const ICON_METAPOD   
-	const ICON_BUTTERFREE
-	const ICON_WEEDLE    
-	const ICON_KAKUNA    
-	const ICON_BEEDRILL  
+	const ICON_BLASTOISE
+	const ICON_CATERPILLAR
+	const ICON_KAKUNA
+	const ICON_VIVILLON
+	const ICON_BEEDRILL
 	const ICON_RATTATA
-	const ICON_RATICATE
 	const ICON_PIKACHU
-	const ICON_RAICHU
-	const ICON_SANDSHREW
-	const ICON_SANDSLASH
+	const ICON_MONSTER
 	const ICON_NIDORAN_F
-	const ICON_NIDORINA
-	const ICON_NIDOQUEEN
-	const ICON_NIDORAN_M
-	const ICON_NIDORINO
-	const ICON_NIDOKING
 	const ICON_CLEFAIRY
-	const ICON_CLEFABLE 
-	const ICON_VULPIX
-	const ICON_NINETALES
+	const ICON_FOX
 	const ICON_JIGGLYPUFF
-	const ICON_WIGGLYTUFF
-	const ICON_ZUBAT 
-	const ICON_GOLBAT
+	const ICON_ZUBAT
 	const ICON_ODDISH
-	const ICON_GLOOM     
-	const ICON_VILEPLUME 
-	const ICON_PARAS     
-	const ICON_PARASECT  
-	const ICON_VENONAT   
-	const ICON_VENOMOTH  
+	const ICON_GRUBBIN
 	const ICON_MEOWTH
-	const ICON_PSYDUCK   
-	const ICON_GOLDUCK   
-	const ICON_MANKEY    
-	const ICON_PRIMEAPE  
-	const ICON_GROWLITHE 
-	const ICON_ARCANINE  
-	const ICON_ABRA      
-	const ICON_KADABRA   
-	const ICON_ALAKAZAM  
-	const ICON_MACHOP    
-	const ICON_MACHOKE   
-	const ICON_MACHAMP   
-	const ICON_BELLSPROUT
-	const ICON_WEEPINBELL
+	const ICON_PSYDUCK
+	const ICON_ABRA
+	const ICON_ALAKAZAM
+	const ICON_FIGHTER
 	const ICON_VICTREEBEL
-	const ICON_TENTACOOL 
-	const ICON_TENTACRUEL
+	const ICON_JELLYFISH
 	const ICON_GEODUDE
-	const ICON_GRAVELER
-	const ICON_GOLEM   
-	const ICON_PONYTA  
-	const ICON_RAPIDASH
+	const ICON_PONYTA
 	const ICON_SLOWPOKE
-	const ICON_SLOWBRO
-	const ICON_MAGNEMITE 
-	const ICON_MAGNETON  
+	const ICON_MAGNEMITE
 	const ICON_FARFETCH_D
-	const ICON_SEEL      
-	const ICON_DEWGONG   
-	const ICON_GRIMER    
-	const ICON_MUK       
-	const ICON_SHELLDER  
-	const ICON_CLOYSTER  
-	const ICON_GASTLY    
-	const ICON_HAUNTER  
-	const ICON_GHOST 
-	const ICON_ONIX     
-	const ICON_DROWZEE  
-	const ICON_HYPNO    
-	const ICON_KRABBY   
-	const ICON_KINGLER  
-	const ICON_EXEGGCUTE
-	const ICON_EXEGGUTOR
-	const ICON_CUBONE   
-	const ICON_KOFFING
-	const ICON_WEEZING
+	const ICON_WALREIN
+	const ICON_DITTO
+	const ICON_SHELL
+	const ICON_GASTLY
+	const ICON_GHOST
+	const ICON_SERPENT
+	const ICON_HUMANSHAPE
+	const ICON_KRABBY
+	const ICON_SUDOWOODO
 	const ICON_CHANSEY
 	const ICON_TANGELA
-	const ICON_KANGASKHAN
-	const ICON_HORSEA
 	const ICON_SEADRA
 	const ICON_STARYU
-	const ICON_STARMIE 
-	const ICON_MIME
-	const ICON_SCYTHER   
-	const ICON_ELECTABUZZ
-	const ICON_PINSIR    
-	const ICON_TAUROS   
+	const ICON_SCYTHER
+	const ICON_BIGMON
+	const ICON_TAUROS
 	const ICON_FISH
 	const ICON_GYARADOS
-	const ICON_LAPRAS 
-	const ICON_DITTO   
-	const ICON_EEVEE   
-	const ICON_VAPOREON
-	const ICON_JOLTEON 
-	const ICON_FLAREON 
-	const ICON_PORYGON 
-	const ICON_OMANYTE 
-	const ICON_OMASTAR 
-	const ICON_KABUTO  
-	const ICON_KABUTOPS
-	const ICON_AERODACTYL
+	const ICON_LAPRAS
+	const ICON_EEVEE
+	const ICON_PORYGON2
 	const ICON_SNORLAX
 	const ICON_ARTICUNO
 	const ICON_ZAPDOS
 	const ICON_MOLTRES
-	const ICON_DRATINI
-	const ICON_DRAGONITE
 	const ICON_MEWTWO
 	const ICON_MEW
-	const ICON_CHIKORITA 
-	const ICON_BAYLEEF   
-	const ICON_MEGANIUM  
-	const ICON_CYNDAQUIL 
-	const ICON_QUILAVA   
-	const ICON_TYPHLOSION
-	const ICON_TOTODILE  
-	const ICON_CROCONAW  
-	const ICON_FERALIGATR
-	const ICON_SENTRET   
-	const ICON_FURRET    
-	const ICON_HOOTHOOT  
-	const ICON_NOCTOWL   
-	const ICON_LEDYBA    
-	const ICON_LEDIAN    
-	const ICON_SPINARAK  
-	const ICON_CROBAT  
-	const ICON_CHINCHOU
-	const ICON_LANTURN 
-	const ICON_PICHU
-	const ICON_CLEFFA
-	const ICON_IGGLYBUFF
-	const ICON_TOGEPI   
-	const ICON_TOGETIC  
-	const ICON_NATU     
-	const ICON_XATU     
-	const ICON_MAREEP   
-	const ICON_FLAAFFY  
-	const ICON_AMPHAROS 
-	const ICON_BELLOSSOM
-	const ICON_MARILL   
-	const ICON_AZUMARILL
-	const ICON_SUDOWOODO
-	const ICON_HOPPIP  
-	const ICON_SKIPLOOM
-	const ICON_JUMPLUFF
-	const ICON_YANMA   
-	const ICON_WOOPER  
-	const ICON_QUAGSIRE
-	const ICON_ESPEON  
-	const ICON_UMBREON 
-	const ICON_MURKROW 
-	const ICON_SLOWKING
-	const ICON_MISDREAVUS
-	const ICON_UNOWN
-	const ICON_GIRAFARIG 
-	const ICON_PINECO    
-	const ICON_FORRETRESS
-	const ICON_DUNSPARCE 
-	const ICON_GLIGAR    
-	const ICON_STEELIX   
-	const ICON_SNUBBULL  
-	const ICON_GRANBULL  
-	const ICON_SCYTHER_2 
-	const ICON_SHUCKLE  
-	const ICON_HERACROSS
-	const ICON_SNEASEL  
+	const ICON_TANGEL
 	const ICON_TEDDIURSA
-	const ICON_URSARING 
-	const ICON_SLUGMA   
-	const ICON_MAGCARGO 
-	const ICON_SWINUB   
-	const ICON_PILOSWINE
+	const ICON_WOLFROST
+	const ICON_CHIKORITA
+	const ICON_MEGANIUM
+	const ICON_CYNDAQUIL
+	const ICON_TYPHLOSION
+	const ICON_TOTODILE
+	const ICON_FERALIGATR
+	const ICON_SENTRET
+	const ICON_BIRD
+	const ICON_LEDIAN
+	const ICON_JOLTIK
+	const ICON_CHINCHOU
+	const ICON_TOGEPI
+	const ICON_FLAAFFY
+	const ICON_YANMA
+	const ICON_UNOWN
+	const ICON_GIRAFARIG
+	const ICON_FERROSEED
+	const ICON_DUNSPARCE
+	const ICON_GLIGAR
+	const ICON_SHUCKLE
+	const ICON_SNEASEL
+	const ICON_SLUGMA
+	const ICON_SWINUB
 	const ICON_CORSOLA
-	const ICON_REMORAID 
 	const ICON_OCTILLERY
-	const ICON_MANTINE  
-	const ICON_SKARMORY 
-	const ICON_HOUNDOUR 
-	const ICON_HOUNDOOM 
-	const ICON_SEADRA_2
-	const ICON_PHANPY   
-	const ICON_DONPHAN  
-	const ICON_PORYGON2 
-	const ICON_SMEARGLE 
-	const ICON_ELEKID   
-	const ICON_MILTANK  
-	const ICON_BLISSEY  
-	const ICON_RAIKOU   
-	const ICON_ENTEI    
-	const ICON_SUICUNE  
-	const ICON_LARVITAR 
-	const ICON_PUPITAR  
-	const ICON_TYRANITAR
-	const ICON_HO_OH
+	const ICON_MANTINE
+	const ICON_DONPHAN
+	const ICON_MILTANK
+	const ICON_RAIKOU
+	const ICON_ENTEI
+	const ICON_SUICUNE
 	const ICON_LUGIA
+	const ICON_HO_OH
 	const ICON_CELEBI
+	const ICON_TREECKO
+	const ICON_SCEPTILE
+	const ICON_TORCHIC
+	const ICON_BLAZIKEN
+	const ICON_MUDKIP
+	const ICON_SWAMPERT
+	const ICON_ZIGZAGOON
+	const ICON_LOTAD
+	const ICON_WINGULL
+	const ICON_GARDEVOIR
+	const ICON_SHROOMISH
+	const ICON_MAKUHITA
+	const ICON_GOLURK
+	const ICON_MAWILE
+	const ICON_ROSELIA
+	const ICON_WAILMER
+	const ICON_NUMEL
+	const ICON_ALTARIA
+	const ICON_CARBINK
+	const ICON_CHIMECHO
+	const ICON_SNORUNT
+	const ICON_TYRUNT
+	const ICON_SHELGON
+	const ICON_METANG
+	const ICON_REGI
+	const ICON_LATIAS
+	const ICON_KYOGRE
+	const ICON_GROUDON
+	const ICON_RAYQUAZA
+	const ICON_JIRACHI
+	const ICON_DEOXYS
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def

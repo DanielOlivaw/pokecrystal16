@@ -275,15 +275,6 @@ FlyFunction_GetMonIcon:
 	call GetIcon_a
 	ret
 
-Unreferenced_GetMonIcon2:
-	push de
-	ld a, [wTempIconSpecies]
-	call ReadMonMenuIcon
-	ld [wCurIcon], a
-	pop de
-	call GetIcon_de
-	ret
-
 GetMemIconGFX:
 	ld a, [wCurIconTile]
 GetIconGFX:
@@ -348,25 +339,28 @@ endr
 
 GetIconBank:
 	ld a, [wCurIcon]
-	cp ICON_JIGGLYPUFF ; first icon in Icons2
+	; cp ICON_JIGGLYPUFF ; first icon in Icons2
 	lb bc, BANK("Mon Icons 1"), 8
-	ret c
-	cp ICON_PONYTA ; first icon in Icons3
-	lb bc, BANK("Mon Icons 2"), 8
-	ret c
-	cp ICON_MIME ; first icon in Icons4
-	lb bc, BANK("Mon Icons 3"), 8
-	ret c
-	cp ICON_TYPHLOSION ; first icon in Icons5
-	lb bc, BANK("Mon Icons 4"), 8
-	ret c
-	cp ICON_WOOPER ; first icon in Icons6
-	lb bc, BANK("Mon Icons 5"), 8
-	ret c
-	cp ICON_PHANPY ; first icon in Icons7
-	lb bc, BANK("Mon Icons 6"), 8
-	ret c
-	ld b, BANK("Mon Icons 7")
+	; ret c
+	; cp ICON_PONYTA ; first icon in Icons3
+	; lb bc, BANK("Mon Icons 2"), 8
+	; ret c
+	; cp ICON_MIME ; first icon in Icons4
+	; lb bc, BANK("Mon Icons 3"), 8
+	; ret c
+	; cp ICON_TYPHLOSION ; first icon in Icons5
+	; lb bc, BANK("Mon Icons 4"), 8
+	; ret c
+	; cp ICON_WOOPER ; first icon in Icons6
+	; lb bc, BANK("Mon Icons 5"), 8
+	; ret c
+	; cp ICON_PHANPY ; first icon in Icons7
+	; lb bc, BANK("Mon Icons 6"), 8
+	; ret c
+	; cp ICON_SEEDOT ; first icon in Icons8
+	; lb bc, BANK("Mon Icons 7"), 8
+	; ret c
+	; ld b, BANK("Mon Icons 8")
 	ret
 
 GetGFXUnlessMobile:
