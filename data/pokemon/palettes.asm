@@ -244,12 +244,12 @@ INCBIN "gfx/pokemon/ditto/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ditto/shiny.pal"
 INCBIN "gfx/pokemon/eevee/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/eevee/shiny.pal"
-INCBIN "gfx/pokemon/flareon/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/flareon/shiny.pal"
-INCBIN "gfx/pokemon/jolteon/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/jolteon/shiny.pal"
 INCBIN "gfx/pokemon/vaporeon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/vaporeon/shiny.pal"
+INCBIN "gfx/pokemon/jolteon/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/jolteon/shiny.pal"
+INCBIN "gfx/pokemon/flareon/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/flareon/shiny.pal"
 INCBIN "gfx/pokemon/porygon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/porygon/shiny.pal"
 INCBIN "gfx/pokemon/omanyte/front.gbcpal", middle_colors

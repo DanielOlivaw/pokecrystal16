@@ -129,9 +129,9 @@ NewPokedexOrder:
 	dw LAPRAS
 	dw DITTO
 	dw EEVEE
-	dw FLAREON
-	dw JOLTEON
 	dw VAPOREON
+	dw JOLTEON
+	dw FLAREON
 	dw ESPEON
 	dw UMBREON
 	dw LEAFEON

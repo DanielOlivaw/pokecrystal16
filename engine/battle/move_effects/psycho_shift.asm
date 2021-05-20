@@ -1,16 +1,29 @@
 BattleCommand_PsychoShift:
 ; psychoshift
 
+; Doesn't work on an opponent with a status condition already.
+	ld hl, wEnemyMonStatus
+	ld de, wEnemyScreens
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_status
+	ld hl, wBattleMonStatus
+	ld de, wPlayerScreens
+.got_status
+	ld a, [hl]
+	and a
+	jr nz, .failed
+
+	ld a, [de]
+	bit SCREENS_SAFEGUARD, a
+	jr nz, .failed
+
 	call .get_status
 
 ; Check sleep (just in case this is called by Sleep Talk, I guess)
 	ld a, [hl]
 	and SLP
 	jr nz, .sleep
-
-; Check freezing (removed because I remembered that you can't act while frozen)
-	; bit FRZ, [hl]
-	; jr nz, .freeze
 
 ; Check paralysis
 	bit PAR, [hl]
@@ -32,8 +45,8 @@ BattleCommand_PsychoShift:
 	call .get_status
 	bit PSN, [hl]
 	jr nz, .poison
-	
-; failed
+
+.failed
 	farcall AnimateFailedMove
 	farcall PrintButItFailed
 	ret
@@ -41,17 +54,6 @@ BattleCommand_PsychoShift:
 .sleep
 	farcall BattleCommand_SleepTarget
 	jp AwakenUser
-
-; .freeze
-	; push hl
-	; call BattleCommand_Freeze
-	; pop hl
-	; call .get_status
-	; res FRZ, [hl]
-	; call UpdateUserInParty
-	; call RefreshBattleHuds
-	; ld hl, UserWasDefrostedText
-	; jp StdBattleTextbox
 	
 .paralysis
 	farcall BattleCommand_Paralyze
@@ -63,7 +65,7 @@ BattleCommand_PsychoShift:
 	jp StdBattleTextbox
 
 .burn
-	; farcall BattleCommand_Burn
+	farcall BattleCommand_Burn
 	call .get_status
 	res BRN, [hl]
 	call UpdateUserInParty

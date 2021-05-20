@@ -51,7 +51,7 @@ IconPointers:
 	dw SudowoodoIcon
 	dw ChanseyIcon
 	dw TangelaIcon
-	dw SeadraIcon
+	dw HorseaIcon
 	dw StaryuIcon
 	dw ScytherIcon
 	dw BigmonIcon

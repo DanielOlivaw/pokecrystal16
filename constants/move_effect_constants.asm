@@ -216,7 +216,7 @@
 	const EFFECT_STRENGTH_SAP       ; d6
 	const EFFECT_SPIT_UP            ; d7
 	const EFFECT_MISTY_AMBUSH       ; d8
-	const EFFECT_DROWSY_RAGE        ; d9
+	const EFFECT_DROWSY_WRATH       ; d9
 	const EFFECT_PRIORITY_MULTI_HIT ; da
 	const EFFECT_POWDER             ; db
 	const EFFECT_STATUS_OPP_ACC     ; dc (same as EFFECT_STATUS_OPP, but bypasses accuracy checks)

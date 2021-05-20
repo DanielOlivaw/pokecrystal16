@@ -94,7 +94,7 @@ AI_Setup:
 	cp EFFECT_EVASION_UP + 1
 	jr c, .statup
 
-;	cp EFFECT_ATTACK_DOWN - 1
+	cp EFFECT_ATTACK_DOWN - 1
 	jr z, .checkmove
 	cp EFFECT_EVASION_DOWN + 1
 	jr c, .statdown
@@ -104,12 +104,48 @@ AI_Setup:
 	cp EFFECT_EVASION_UP_2 + 1
 	jr c, .statup
 
-;	cp EFFECT_ATTACK_DOWN_2 - 1
+	cp EFFECT_ATTACK_DOWN_2 - 1
 	jr z, .checkmove
 	cp EFFECT_EVASION_DOWN_2 + 1
 	jr c, .statdown
 
-	jr .checkmove
+	cp EFFECT_PLAY_NICE
+	jr z, .statdown
+	cp EFFECT_VENOM_DRENCH
+	jr z, .statdown
+	cp EFFECT_ATK_DEF_DOWN
+	jr z, .statdown
+	cp EFFECT_ATK_DOWN_PRIORITY
+	jr z, .statdown
+	cp EFFECT_POISON_SPEED_DOWN
+	jr z, .statdown
+	cp EFFECT_TEARFUL_LOOK
+	jr z, .statdown
+	cp EFFECT_CAPTIVATE
+	jr z, .statdown
+	cp EFFECT_ATK_SP_ATK_DOWN
+	jr z, .statdown
+	cp EFFECT_CONFIDE
+	jr z, .statdown
+
+	cp EFFECT_HONE_CLAWS
+	jr z, .statup
+	cp EFFECT_CALM_MIND
+	jr z, .statup
+	cp EFFECT_BULK_UP
+	jr z, .statup
+	cp EFFECT_WORK_UP
+	jr z, .statup
+	cp EFFECT_ACUPRESSURE
+	jr z, .statup
+	cp EFFECT_GEOMANCY
+	jr z, .statup
+	cp EFFECT_SHIFT_GEAR
+	jr z, .statup
+	cp EFFECT_DEFENSE_UP_3
+	jr z, .statup
+	cp EFFECT_SP_ATK_UP_3
+	jr nz, .checkmove
 
 .statup
 	ld a, [wEnemyTurnsTaken]
@@ -125,19 +161,19 @@ AI_Setup:
 
 .encourage
 	call AI_50_50
-	jr c, .checkmove
+	jp c, .checkmove
 
 	dec [hl]
 	dec [hl]
-	jr .checkmove
+	jp .checkmove
 
 .discourage
 	call Random
 	cp 12 percent
-	jr c, .checkmove
+	jp c, .checkmove
 	inc [hl]
 	inc [hl]
-	jr .checkmove
+	jp .checkmove
 
 
 AI_Types:
@@ -468,10 +504,11 @@ AI_Smart_LockOn:
 
 	ld a, [wEnemyMoveStruct + MOVE_ACC]
 	cp 3
-	jr c, .asm_3884f
+	jr nc, .always_hits_1
 	cp 180
 	jr nc, .asm_3884f
 
+.always_hits_1
 	ld a, $1
 	ldh [hBattleTurn], a
 
@@ -521,9 +558,12 @@ AI_Smart_LockOn:
 	call AIGetEnemyMove
 
 	ld a, [wEnemyMoveStruct + MOVE_ACC]
+	cp 3
+	jr nc, .always_hits_2
 	cp 180
 	jr nc, .asm_3888b
 
+.always_hits_2
 	dec [hl]
 	dec [hl]
 	jr .asm_3888b

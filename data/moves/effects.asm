@@ -2847,7 +2847,7 @@ MistyAmbush:
 	flinchtarget
 	endmove
 
-DrowsyRage:
+DrowsyWrath:
 	checkobedience
 	usedmovetext
 	doturn

@@ -7719,7 +7719,7 @@ GetOpponentItem:
 	ld hl, wBattleMonItem
 .go
 	ld b, [hl]
-	jp GetItemHeldEffect
+	; fallthrough
 
 GetItemHeldEffect:
 ; Return the effect of item b in bc.

@@ -107,9 +107,9 @@ PokedexDataPointerTable:
 	dba LaprasPokedexEntry
 	dba DittoPokedexEntry
 	dba EeveePokedexEntry
-	dba FlareonPokedexEntry
-	dba JolteonPokedexEntry
 	dba VaporeonPokedexEntry
+	dba JolteonPokedexEntry
+	dba FlareonPokedexEntry
 	dba PorygonPokedexEntry
 	dba OmanytePokedexEntry
 	dba OmastarPokedexEntry

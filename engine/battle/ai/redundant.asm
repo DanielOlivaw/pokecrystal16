@@ -25,23 +25,109 @@ AI_Redundant:
 	dbw EFFECT_FORESIGHT,     .Foresight
 	dbw EFFECT_TELEPORT,      .Teleport
 	dbw EFFECT_SUNLIGHT_HEAL, .Heal
+	dbw EFFECT_SHORE_UP,      .Heal
+	dbw EFFECT_STRENGTH_SAP,  .Heal
 	dbw EFFECT_SWAGGER,       .Swagger
 	dbw EFFECT_FUTURE_SIGHT,  .FutureSight
+
+	dbw EFFECT_POLTERGEIST,      .Poltergeist
+	dbw EFFECT_SPIT_UP,          .SpitUp
+	dbw EFFECT_ENDEAVOR,         .Endeavor
+	dbw EFFECT_FAKE_OUT,         .FirstTurn
+	dbw EFFECT_FIRST_IMPRESSION, .FirstTurn
+	dbw EFFECT_YAWN,             .Yawn
+	dbw EFFECT_BELCH,            .Belch
+	dbw EFFECT_CAPTIVATE,        .Captivate
+	dbw EFFECT_PSYCHO_SHIFT,     .PsychoShift
+	dbw EFFECT_BURN_UP,          .BurnUp
+	dbw EFFECT_FLATTER,          .Swagger
+	dbw EFFECT_STATUS_SELF,      .StatusSelf ; TEATIME, OCTOLOCK, FAIRY_LOCK, WISH, CULTIVATE, WEATHERVANE, SWALLOW, REFRESH, MAGNET_RISE, AQUA_RING, LUCKY_CHANT, INGRAIN, BLOCK, STOCKPILE, MISTY_TERRAIN, SPIKES, TOXIC_SPIKES, STEALTH_ROCK, STICKY_WEB, AURORA_VEIL, HAIL, LIGHT_SCREEN, REFLECT, SUBSTITUTE, MEAN_LOOK, PERISH_SONG, SANDSTORM, SUNNY_DAY, RAIN_DANCE, SAFEGUARD, FOCUS_ENERGY, MIST
+	dbw EFFECT_STATUS_OPP,       .StatusOpp ; MAGIC_POWDER, SOAK, TRICK, SWITCHEROO, LEECH_SEED, NIGHTMARE, ATTRACT
+	; SYNCHRONOISE
 	db -1
 
-.LightScreen:
-	ld a, [wEnemyScreens]
-	bit SCREENS_LIGHT_SCREEN, a
+.Poltergeist:
+	ld a, [wBattleMonItem]
+	and a
+	jp z, .Redundant
+	jp .NotRedundant
+
+.SpitUp:
+	ld a, [wEnemyStockpileCount]
+	and a
+	jp z, .Redundant
+	jp .NotRedundant
+
+.Endeavor:
+	ld hl, wEnemyMonHP
+	ld de, wBattleMonHP
+; Enemy's HP in bc
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+; Player's HP in de
+	ld h, d
+	ld l, e
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld e, a
+; Fails if the player's HP is more than the enemy's.
+	ld a, b
+	cp d
+	jp c, .NotRedundant
+	ld a, c
+	cp e
+	jp nc, .Redundant
+	jp .NotRedundant
+
+.FirstTurn:
+	ld a, [wEnemyTurnsTaken]
+	cp 1
 	ret
 
-.Mist:
-	ld a, [wEnemySubStatus4]
-	bit SUBSTATUS_MIST, a
+.Yawn:
+	ld a, [wPlayerSubStatus6]
+	bit SUBSTATUS_DROWSY, a
+	ret nz
+	ld a, [wBattleWeather]
+	cp WEATHER_STORM
+	jp z, .Redundant
+	ld a, [wBattleMonStatus]
+	and a
 	ret
 
-.FocusEnergy:
-	ld a, [wEnemySubStatus4]
-	bit SUBSTATUS_FOCUS_ENERGY, a
+.Belch:
+	ld a, [wEnemySubStatus6]
+	bit SUBSTATUS_ATE_BERRY, a
+	jp z, .Redundant
+	jp .NotRedundant
+
+.Captivate:
+	farcall CheckOppositeGender
+	jp c, .Redundant
+	jp .NotRedundant
+
+.PsychoShift:
+	ld a, [wEnemyMonStatus]
+	and a
+	jp z, .Redundant
+	ld a, [wBattleMonStatus]
+	and a
+	ret nz
+	ld a, [wPlayerScreens]
+	bit SCREENS_SAFEGUARD, a
+	ret
+
+.BurnUp:
+	ld hl, wEnemyMonType1
+	ld a, [hl]
+	inc hl
+	cp FIRE
+	ret z
+	ld a, [hl]
+	cp FIRE
 	ret
 
 .Confuse:
@@ -55,16 +141,6 @@ AI_Redundant:
 .Transform:
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
-	ret
-
-.Reflect:
-	ld a, [wEnemyScreens]
-	bit SCREENS_REFLECT, a
-	ret
-
-.Substitute:
-	ld a, [wEnemySubStatus4]
-	bit SUBSTATUS_SUBSTITUTE, a
 	ret
 
 .LeechSeed:
@@ -89,11 +165,6 @@ AI_Redundant:
 	jp z, .Redundant
 	jp .NotRedundant
 
-.MeanLook:
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_CANT_RUN, a
-	ret
-
 .Nightmare:
 	ld a, [wBattleMonStatus]
 	and a
@@ -102,51 +173,9 @@ AI_Redundant:
 	bit SUBSTATUS_NIGHTMARE, a
 	ret
 
-.Spikes:
-	ld a, [wPlayerScreens]
-	bit SCREENS_SPIKES, a
-	ret
-
-.ToxicSpikes:
-	ld a, [wPlayerScreens]
-	bit SCREENS_TOXIC_SPIKES, a
-	ret
-
-.StealthRock:
-	ld a, [wPlayerScreens]
-	bit SCREENS_STEALTH_ROCK, a
-	ret
-
-.StickyWeb:
-	ld a, [wPlayerScreens]
-	bit SCREENS_STICKY_WEB, a
-	ret
-
 .Foresight:
 	ld a, [wPlayerSubStatus1]
 	bit SUBSTATUS_IDENTIFIED, a
-	ret
-
-.PerishSong:
-	ld a, [wPlayerSubStatus1]
-	bit SUBSTATUS_PERISH, a
-	ret
-
-.Sandstorm:
-	ld a, [wBattleWeather]
-	cp WEATHER_SANDSTORM
-	jr z, .Redundant
-	jr .NotRedundant
-
-.Hail:
-	ld a, [wBattleWeather]
-	cp WEATHER_HAIL
-	jr z, .Redundant
-	jr .NotRedundant
-
-.AuroraVeil:
-	ld a, [wEnemyScreens]
-	bit SCREENS_AURORA_VEIL, a
 	ret
 
 .Attract:
@@ -155,23 +184,6 @@ AI_Redundant:
 	ld a, [wPlayerSubStatus1]
 	bit SUBSTATUS_IN_LOVE, a
 	ret
-
-.Safeguard:
-	ld a, [wEnemyScreens]
-	bit SCREENS_SAFEGUARD, a
-	ret
-
-.RainDance:
-	ld a, [wBattleWeather]
-	cp WEATHER_RAIN
-	jr z, .Redundant
-	jr .NotRedundant
-
-.SunnyDay:
-	ld a, [wBattleWeather]
-	cp WEATHER_SUN
-	jr z, .Redundant
-	jr .NotRedundant
 
 .DreamEater:
 	ld a, [wBattleMonStatus]
@@ -189,11 +201,21 @@ AI_Redundant:
 	bit 5, a
 	ret
 
+.Teleport:
+	ld a, [wEnemyWrapCount]
+	and a
+	ret nz
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_CANT_RUN, a
+	ret nz
+	ld a, [wPlayerSubStatus7]
+	bit SUBSTATUS_OCTOLOCK, a
+	ret
+
 .Heal:
 	farcall AICheckEnemyMaxHP
 	jr nc, .NotRedundant
-
-.Teleport:
+	; fallthrough
 .Redundant:
 	ld a, 1
 	and a
@@ -201,4 +223,11 @@ AI_Redundant:
 
 .NotRedundant:
 	xor a
+	ret
+
+.StatusSelf:
+	farcall FindMove_StatusSelf
+	ret
+
+.StatusOpp:
 	ret

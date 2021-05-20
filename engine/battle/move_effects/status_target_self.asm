@@ -253,6 +253,18 @@ Find_StatusTargetSelf:
 	call CompareMove2
 	jp z, BattleCommand_ClangorousSoul
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, OCTOLOCK
+	call CompareMove2
+	jp z, BattleCommand_Octolock
+
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, TEATIME
+	call CompareMove2
+	jp z, BattleCommand_Teatime
+
 ; Entry hazards
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
@@ -308,16 +320,4 @@ Find_StatusTargetSelf:
 	ld bc, MISTY_TERRAIN
 	call CompareMove2
 	jp z, BattleCommand_MistyTerrain
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, OCTOLOCK
-	call CompareMove2
-	jp z, BattleCommand_Octolock
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TEATIME
-	call CompareMove2
-	jp z, BattleCommand_Teatime
 	ret

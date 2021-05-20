@@ -243,8 +243,8 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_OAMSET_PARTY_MON_WITH_ITEM_2      ; 40
 	const SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_1         ; 41
 	const SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_2         ; 42
-	const SPRITE_ANIM_OAMSET_UNUSED_43                  ; 43
-	const SPRITE_ANIM_OAMSET_UNUSED_44                  ; 44
+	const SPRITE_ANIM_OAMSET_PARTY_MON_1                ; 43
+	const SPRITE_ANIM_OAMSET_PARTY_MON_2                ; 44
 	const SPRITE_ANIM_OAMSET_UNUSED_45                  ; 45
 	const SPRITE_ANIM_OAMSET_UNUSED_46                  ; 46
 	const SPRITE_ANIM_OAMSET_UNUSED_47                  ; 47

@@ -6,4 +6,7 @@ StatusOnlyEffects:
 	db EFFECT_TOXIC
 	db EFFECT_POISON
 	db EFFECT_PARALYZE
+	db EFFECT_BURN
+	db EFFECT_YAWN
+	db EFFECT_PSYCHO_SHIFT
 	db -1 ; end
