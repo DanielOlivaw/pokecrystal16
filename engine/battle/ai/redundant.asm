@@ -41,9 +41,9 @@ AI_Redundant:
 	dbw EFFECT_PSYCHO_SHIFT,     .PsychoShift
 	dbw EFFECT_BURN_UP,          .BurnUp
 	dbw EFFECT_FLATTER,          .Swagger
-	dbw EFFECT_STATUS_SELF,      .StatusSelf ; TEATIME, OCTOLOCK, FAIRY_LOCK, WISH, CULTIVATE, WEATHERVANE, SWALLOW, REFRESH, MAGNET_RISE, AQUA_RING, LUCKY_CHANT, INGRAIN, BLOCK, STOCKPILE, MISTY_TERRAIN, SPIKES, TOXIC_SPIKES, STEALTH_ROCK, STICKY_WEB, AURORA_VEIL, HAIL, LIGHT_SCREEN, REFLECT, SUBSTITUTE, MEAN_LOOK, PERISH_SONG, SANDSTORM, SUNNY_DAY, RAIN_DANCE, SAFEGUARD, FOCUS_ENERGY, MIST
-	dbw EFFECT_STATUS_OPP,       .StatusOpp ; MAGIC_POWDER, SOAK, TRICK, SWITCHEROO, LEECH_SEED, NIGHTMARE, ATTRACT
-	; SYNCHRONOISE
+	dbw EFFECT_SYNCHRONOISE,     .Synchronoise
+	dbw EFFECT_STATUS_SELF,      .FindMoveFar ; TEATIME, OCTOLOCK, FAIRY_LOCK, WISH, CULTIVATE, WEATHERVANE, SWALLOW, REFRESH, MAGNET_RISE, AQUA_RING, LUCKY_CHANT, INGRAIN, BLOCK, STOCKPILE, MISTY_TERRAIN, SPIKES, TOXIC_SPIKES, STEALTH_ROCK, STICKY_WEB, AURORA_VEIL, HAIL, LIGHT_SCREEN, REFLECT, SUBSTITUTE, MEAN_LOOK, PERISH_SONG, SANDSTORM, SUNNY_DAY, RAIN_DANCE, SAFEGUARD, FOCUS_ENERGY, MIST
+	dbw EFFECT_STATUS_OPP,       .FindMoveFar ; MAGIC_POWDER, SOAK, TRICK, SWITCHEROO, LEECH_SEED, NIGHTMARE, ATTRACT
 	db -1
 
 .Poltergeist:
@@ -143,11 +143,6 @@ AI_Redundant:
 	bit SUBSTATUS_TRANSFORMED, a
 	ret
 
-.LeechSeed:
-	ld a, [wPlayerSubStatus4]
-	bit SUBSTATUS_LEECH_SEED, a
-	ret
-
 .Disable:
 	ld a, [wPlayerDisableCount]
 	and a
@@ -162,27 +157,12 @@ AI_Redundant:
 .SleepTalk:
 	ld a, [wEnemyMonStatus]
 	and SLP
-	jp z, .Redundant
-	jp .NotRedundant
-
-.Nightmare:
-	ld a, [wBattleMonStatus]
-	and a
-	jp z, .Redundant
-	ld a, [wPlayerSubStatus1]
-	bit SUBSTATUS_NIGHTMARE, a
-	ret
+	jr z, .Redundant
+	jr .NotRedundant
 
 .Foresight:
 	ld a, [wPlayerSubStatus1]
 	bit SUBSTATUS_IDENTIFIED, a
-	ret
-
-.Attract:
-	farcall CheckOppositeGender
-	jr c, .Redundant
-	ld a, [wPlayerSubStatus1]
-	bit SUBSTATUS_IN_LOVE, a
 	ret
 
 .DreamEater:
@@ -212,6 +192,14 @@ AI_Redundant:
 	bit SUBSTATUS_OCTOLOCK, a
 	ret
 
+.Synchronoise:
+	farcall CheckAnySharedType
+	ret
+
+.FindMoveFar:
+	farcall FindMove_Redundant
+	ret
+
 .Heal:
 	farcall AICheckEnemyMaxHP
 	jr nc, .NotRedundant
@@ -223,11 +211,4 @@ AI_Redundant:
 
 .NotRedundant:
 	xor a
-	ret
-
-.StatusSelf:
-	farcall FindMove_StatusSelf
-	ret
-
-.StatusOpp:
 	ret

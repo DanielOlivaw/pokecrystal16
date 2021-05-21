@@ -1,5 +1,33 @@
-FindMove_StatusSelf:
+FindMove_Redundant:
 	ld hl, wEnemyMoveStruct + MOVE_ANIM
+
+	ld bc, MAGIC_POWDER
+	call .CompareMove
+	jp z, .MagicPowder
+
+	ld bc, SOAK
+	call .CompareMove
+	jp z, .Soak
+
+	ld bc, TRICK
+	call .CompareMove
+	jp z, .Trick
+
+	ld bc, SWITCHEROO
+	call .CompareMove
+	jp z, .Trick
+
+	ld bc, LEECH_SEED
+	call .CompareMove
+	jp z, .LeechSeed
+
+	ld bc, NIGHTMARE
+	call .CompareMove
+	jp z, .Nightmare
+
+	ld bc, ATTRACT
+	call .CompareMove
+	jp z, .Attract
 
 	ld bc, TEATIME
 	call .CompareMove
@@ -141,6 +169,57 @@ FindMove_StatusSelf:
 	ld a, l
 	ret nz
 	cp c
+	ret
+
+.MagicPowder:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp PSYCHIC
+	jp nz, .NotRedundant
+	ld a, [hl]
+	cp PSYCHIC
+	jp z, .Redundant
+	jp .NotRedundant
+
+.Soak:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp WATER
+	jp nz, .NotRedundant
+	ld a, [hl]
+	cp WATER
+	jp z, .Redundant
+	jp .NotRedundant
+
+.LeechSeed:
+	ld a, [wPlayerSubStatus4]
+	bit SUBSTATUS_LEECH_SEED, a
+	ret
+
+.Trick:
+	ld a, [wEnemyMonItem]
+	and a
+	jp nz, .NotRedundant
+	ld a, [wBattleMonItem]
+	and a
+	jp z, .Redundant
+	jp .NotRedundant
+
+.Nightmare:
+	ld a, [wBattleMonStatus]
+	and a
+	jp z, .Redundant
+	ld a, [wPlayerSubStatus1]
+	bit SUBSTATUS_NIGHTMARE, a
+	ret
+
+.Attract:
+	farcall CheckOppositeGender
+	jp c, .Redundant
+	ld a, [wPlayerSubStatus1]
+	bit SUBSTATUS_IN_LOVE, a
 	ret
 
 .Weathervane:

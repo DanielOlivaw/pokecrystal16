@@ -504,11 +504,10 @@ AI_Smart_LockOn:
 
 	ld a, [wEnemyMoveStruct + MOVE_ACC]
 	cp 3
-	jr nc, .always_hits_1
+	jr c, .asm_3884f
 	cp 180
 	jr nc, .asm_3884f
 
-.always_hits_1
 	ld a, $1
 	ldh [hBattleTurn], a
 
@@ -559,11 +558,10 @@ AI_Smart_LockOn:
 
 	ld a, [wEnemyMoveStruct + MOVE_ACC]
 	cp 3
-	jr nc, .always_hits_2
+	jr c, .asm_3888b
 	cp 180
 	jr nc, .asm_3888b
 
-.always_hits_2
 	dec [hl]
 	dec [hl]
 	jr .asm_3888b

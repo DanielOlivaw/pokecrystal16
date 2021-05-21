@@ -248,3 +248,4 @@
 	const EFFECT_SP_ATK_UP_3        ; f7
 	const EFFECT_ELECTRO_BALL       ; f8
 	const EFFECT_GYRO_BALL          ; f9
+	const EFFECT_SYNCHRONOISE       ; fa
