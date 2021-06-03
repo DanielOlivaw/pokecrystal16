@@ -21,10 +21,9 @@ BattleCommand_KnockOff:
 
 ; Incinerate only removes berries
 
-	ld a, BATTLE_VARS_MOVE
+	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	ld bc, INCINERATE
-	call CompareMove2
+	cp EFFECT_INCINERATE
 	call z, .incinerate_berries_enemy
 
 	ld a, [wEffectFailed]
@@ -64,10 +63,9 @@ BattleCommand_KnockOff:
 
 ; Incinerate only removes berries
 
-	ld a, BATTLE_VARS_MOVE
+	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	ld bc, INCINERATE
-	call CompareMove2
+	cp EFFECT_INCINERATE
 	call z, .incinerate_berries_player
 
 	ld a, [wEffectFailed]
@@ -83,10 +81,9 @@ BattleCommand_KnockOff:
 	ld [de], a
 
 .stole
-	ld a, BATTLE_VARS_MOVE
+	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	ld bc, INCINERATE
-	call CompareMove2
+	cp EFFECT_INCINERATE
 	jr z, .incinerate_text
 
 	call GetItemName

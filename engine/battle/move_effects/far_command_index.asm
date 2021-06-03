@@ -1,23 +1,4 @@
 Find_Command:
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, DYNAMO_RUSH
-	call CompareMove2
-	jp z, BattleCommand_DynamoRush
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUILE_FANG
-	call CompareMove2
-	jp z, BattleCommand_GuileFang
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, DATA_PULSE
-	call CompareMove2
-	jp z, BattleCommand_DataPulse
-
-
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
@@ -55,7 +36,9 @@ Find_Command:
 	cp EFFECT_BURN_UP
 	jp z, BattleCommand_BurnUp
 
-	cp EFFECT_REMOVE_ITEM_HIT
+	cp EFFECT_KNOCK_OFF
+	jp z, BattleCommand_KnockOff
+	cp EFFECT_INCINERATE
 	jp z, BattleCommand_KnockOff
 
 	cp EFFECT_DEFOG
@@ -102,4 +85,13 @@ Find_Command:
 
 	cp EFFECT_FURY_CUTTER
 	jp z, BattleCommand_FuryCutter
+
+	cp EFFECT_DYNAMO_RUSH
+	jp z, BattleCommand_DynamoRush
+
+	cp EFFECT_GUILE_FANG
+	jp z, BattleCommand_GuileFang
+
+	cp EFFECT_DATA_PULSE
+	jp z, BattleCommand_DataPulse
 	ret

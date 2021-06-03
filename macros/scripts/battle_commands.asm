@@ -177,6 +177,10 @@ ENDM
 	command trumpcard               ; aa
 	command electroball             ; ab
 	command gyroball                ; ac
+	command dynamorush              ; ad
+	command guilefang               ; ae
+	command datapulse               ; af
+	command mefirst                 ; b0
 
 	enum_start $fe
 	command endturn                 ; fe

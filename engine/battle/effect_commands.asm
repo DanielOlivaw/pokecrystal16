@@ -2031,10 +2031,9 @@ BattleCommand_CheckHit:
 .Synchronoise
 ; Return nz if the user is using Synchronoise
 ; but doesn't share a type with the target.
-	ld a, BATTLE_VARS_MOVE
+	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	ld bc, SYNCHRONOISE
-	call CompareMove
+	cp EFFECT_SYNCHRONOISE
 	jp z, CheckAnySharedType
 	xor a
 	ret

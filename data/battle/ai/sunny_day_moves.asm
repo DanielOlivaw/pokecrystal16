@@ -31,4 +31,5 @@ SunnyDayMoves:
 	dw MIND_BLOWN
 	dw BLAST_BURN
 	dw OVERHEAT
+	dw WEATHER_BALL
 	dw -1 ; end

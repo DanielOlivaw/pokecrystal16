@@ -190,6 +190,13 @@ MirrorMove:
 	mirrormove
 	endmove
 
+MeFirst:
+	checkobedience
+	usedmovetext
+	doturn
+	mefirst
+	endmove
+
 AttackUp:
 	checkobedience
 	usedmovetext
@@ -2554,7 +2561,51 @@ DynamoRush:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	farcommand
+	dynamorush
+	endmove
+
+GuileFang:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	guilefang
+	endmove
+
+DataPulse:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	datapulse
 	endmove
 
 Uproot:

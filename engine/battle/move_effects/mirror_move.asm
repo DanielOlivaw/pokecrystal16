@@ -1,10 +1,4 @@
 BattleCommand_MirrorMove:
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ME_FIRST
-	call CompareMove
-	jp z, BattleCommand_MeFirst
-
 ; mirrormove
 	call ClearLastMove
 

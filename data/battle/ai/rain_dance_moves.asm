@@ -31,4 +31,5 @@ RainDanceMoves:
 	dw HYDRO_CANNON
 	dw SCALD
 	dw FLIP_TURN
+	dw WEATHER_BALL
 	dw -1 ; end

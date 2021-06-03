@@ -149,7 +149,7 @@
 	const EFFECT_CLOSE_COMBAT       ; 93
 	const EFFECT_BURN_UP            ; 94
 	const EFFECT_CALM_MIND          ; 95
-	const EFFECT_REMOVE_ITEM_HIT    ; 96
+	const EFFECT_KNOCK_OFF          ; 96
 	const EFFECT_BULK_UP            ; 97
 	const EFFECT_WATER_SPOUT        ; 98
 	const EFFECT_WRING_OUT          ; 99
@@ -249,3 +249,7 @@
 	const EFFECT_ELECTRO_BALL       ; f8
 	const EFFECT_GYRO_BALL          ; f9
 	const EFFECT_SYNCHRONOISE       ; fa
+	const EFFECT_INCINERATE         ; fb
+	const EFFECT_GUILE_FANG         ; fc
+	const EFFECT_DATA_PULSE         ; fd
+	const EFFECT_ME_FIRST           ; fe

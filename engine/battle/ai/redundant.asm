@@ -42,6 +42,8 @@ AI_Redundant:
 	dbw EFFECT_BURN_UP,          .BurnUp
 	dbw EFFECT_FLATTER,          .Swagger
 	dbw EFFECT_SYNCHRONOISE,     .Synchronoise
+	dbw EFFECT_SHEER_COLD,       .SheerCold
+	dbw EFFECT_VENOM_DRENCH,     .VenomDrench
 	dbw EFFECT_STATUS_SELF,      .FindMoveFar ; TEATIME, OCTOLOCK, FAIRY_LOCK, WISH, CULTIVATE, WEATHERVANE, SWALLOW, REFRESH, MAGNET_RISE, AQUA_RING, LUCKY_CHANT, INGRAIN, BLOCK, STOCKPILE, MISTY_TERRAIN, SPIKES, TOXIC_SPIKES, STEALTH_ROCK, STICKY_WEB, AURORA_VEIL, HAIL, LIGHT_SCREEN, REFLECT, SUBSTITUTE, MEAN_LOOK, PERISH_SONG, SANDSTORM, SUNNY_DAY, RAIN_DANCE, SAFEGUARD, FOCUS_ENERGY, MIST
 	dbw EFFECT_STATUS_OPP,       .FindMoveFar ; MAGIC_POWDER, SOAK, TRICK, SWITCHEROO, LEECH_SEED, NIGHTMARE, ATTRACT
 	db -1
@@ -171,6 +173,12 @@ AI_Redundant:
 	jr z, .Redundant
 	jr .NotRedundant
 
+.VenomDrench:
+	ld hl, wBattleMonStatus
+	bit PSN, [hl]
+	jr z, .Redundant
+	jr .NotRedundant
+
 .Swagger:
 	ld a, [wPlayerSubStatus6]
 	bit SUBSTATUS_CONFUSED, a
@@ -195,6 +203,17 @@ AI_Redundant:
 .Synchronoise:
 	farcall CheckAnySharedType
 	ret
+
+.SheerCold:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp ICE
+	jr z, .Redundant
+	ld a, [hl]
+	cp ICE
+	jr z, .Redundant
+	jr .NotRedundant
 
 .FindMoveFar:
 	farcall FindMove_Redundant

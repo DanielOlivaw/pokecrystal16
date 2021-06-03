@@ -149,7 +149,7 @@ MoveEffectsPointers:
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
 	dw BurnUp                 ; EFFECT_BURN_UP
 	dw CalmMind               ; EFFECT_CALM_MIND
-	dw RemoveItemHit          ; EFFECT_REMOVE_ITEM_HIT
+	dw RemoveItemHit          ; EFFECT_KNOCK_OFF
 	dw BulkUp                 ; EFFECT_BULK_UP
 	dw HPBasedDamage          ; EFFECT_WATER_SPOUT
 	dw HPBasedDamage          ; EFFECT_WRING_OUT
@@ -249,3 +249,7 @@ MoveEffectsPointers:
 	dw ElectroBall            ; EFFECT_ELECTRO_BALL
 	dw GyroBall               ; EFFECT_GYRO_BALL
 	dw NormalHit              ; EFFECT_SYNCHRONOISE
+	dw RemoveItemHit          ; EFFECT_INCINERATE
+	dw GuileFang              ; EFFECT_GUILE_FANG
+	dw DataPulse              ; EFFECT_DATA_PULSE
+	dw MeFirst                ; EFFECT_ME_FIRST

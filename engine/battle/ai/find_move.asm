@@ -392,6 +392,10 @@ FindMove_Redundant:
 	ret
 
 .AuroraVeil:
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
+	jr nz, .Redundant
+
 	ld a, [wEnemyScreens]
 	bit SCREENS_AURORA_VEIL, a
 	ret
