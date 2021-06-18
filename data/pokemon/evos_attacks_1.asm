@@ -188,12 +188,8 @@ VenusaurEvosAttacks:
 CharmanderEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, CHARMELEON
 	db 0 ; no more evolutions
-	; dbw 1, SCRATCH
-	; dbw 1, GROWL
-	dbw 1, ACROBATICS
-	dbw 1, LEECH_SEED
-	dbw 1, CURSE
-	dbw 1, REFLECT_TYPE
+	dbw 1, SCRATCH
+	dbw 1, GROWL
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
