@@ -1,28 +1,35 @@
 Find_VariableType:
 ; Moves that can change type
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_WEATHER_BALL
-	jp z, BattleCommand_WeatherBall
 
+; Find the appropriate battle command based on the move index.
+; Based on code from engine/battle/ai/redundant.asm
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	ld bc, JUDGEMENT
-	call CompareMove2
-	jr z, BattleCommand_Judgement
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MULTI_ATTACK
-	call CompareMove2
-	jr z, BattleCommand_Judgement
+	ld hl, VariableTypeMoves
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, HIDDEN_POWER
-	call CompareMove2
-	ret nz
-; fallthrough
+	push hl
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld de, 2
+	call IsInHalfwordArray
+	ret nc
+
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
+
+VariableTypeMoves:
+	dww WEATHER_BALL, 	BattleCommand_WeatherBall
+	dww JUDGEMENT, 		BattleCommand_Judgement
+	dww MULTI_ATTACK, 	BattleCommand_Judgement
+	dww HIDDEN_POWER,	BattleCommand_HiddenPower
+	db -1 ; end
 
 BattleCommand_HiddenPower:
 ; hiddenpower

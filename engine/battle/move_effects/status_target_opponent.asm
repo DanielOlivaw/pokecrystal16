@@ -2,116 +2,49 @@ Find_StatusTargetOpponent:
 ; Status moves that target the opponent
 ; and have the same structure in effects.asm
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FORESIGHT
-	jp z, BattleCommand_Foresight
-	cp EFFECT_LOCK_ON
-	jp z, BattleCommand_LockOn
-	cp EFFECT_PAIN_SPLIT
-	jp z, BattleCommand_PainSplit
-	cp EFFECT_POWDER
-	jp z, BattleCommand_Powder
-
+; Find the appropriate battle command based on the move index.
+; Based on code from engine/battle/ai/redundant.asm
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	ld bc, LEECH_SEED
-	call CompareMove2
-	jp z, BattleCommand_LeechSeed
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SPITE
-	call CompareMove2
-	jp z, BattleCommand_Spite
+	ld hl, StatusTargetOpponentMoves
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, NIGHTMARE
-	call CompareMove2
-	jp z, BattleCommand_Nightmare
+	push hl
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld de, 2
+	call IsInHalfwordArray
+	ret nc
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ATTRACT
-	call CompareMove2
-	jp z, BattleCommand_Attract
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, REFLECT_TYPE
-	call CompareMove2
-	jp z, BattleCommand_ReflectType
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TRICK
-	call CompareMove2
-	jp z, BattleCommand_Trick
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SWITCHEROO
-	call CompareMove2
-	jp z, BattleCommand_Trick
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SOAK
-	call CompareMove2
-	jp z, BattleCommand_Soak
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MAGIC_POWDER
-	call CompareMove2
-	jp z, BattleCommand_MagicPowder
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, POWER_SPLIT
-	call CompareMove2
-	jp z, BattleCommand_PowerSplit
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUARD_SPLIT
-	call CompareMove2
-	jp z, BattleCommand_GuardSplit
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TOPSY_TURVY
-	call CompareMove2
-	jp z, BattleCommand_TopsyTurvy
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ELECTRIFY
-	call CompareMove2
-	jp z, BattleCommand_Electrify
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SPEED_SWAP
-	call CompareMove2
-	jp z, BattleCommand_SpeedSwap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, POWER_SWAP
-	call CompareMove2
-	jp z, BattleCommand_PowerSwap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUARD_SWAP
-	call CompareMove2
-	jp z, BattleCommand_GuardSwap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, HEART_SWAP
-	call CompareMove2
-	jp z, BattleCommand_HeartSwap
-	ret
+StatusTargetOpponentMoves:
+	dww FORESIGHT, 		BattleCommand_Foresight
+	dww LOCK_ON, 		BattleCommand_LockOn
+	dww PAIN_SPLIT, 	BattleCommand_PainSplit
+	dww POWDER, 		BattleCommand_Powder
+	dww LEECH_SEED, 	BattleCommand_LeechSeed
+	dww SPITE, 			BattleCommand_Spite
+	dww NIGHTMARE, 		BattleCommand_Nightmare
+	dww ATTRACT, 		BattleCommand_Attract
+	dww REFLECT_TYPE, 	BattleCommand_ReflectType
+	dww TRICK, 			BattleCommand_Trick
+	dww SWITCHEROO, 	BattleCommand_Trick
+	dww SOAK, 			BattleCommand_Soak
+	dww MAGIC_POWDER, 	BattleCommand_MagicPowder
+	dww POWER_SPLIT, 	BattleCommand_PowerSplit
+	dww GUARD_SPLIT, 	BattleCommand_GuardSplit
+	dww TOPSY_TURVY, 	BattleCommand_TopsyTurvy
+	dww ELECTRIFY, 		BattleCommand_Electrify
+	dww SPEED_SWAP, 	BattleCommand_SpeedSwap
+	dww POWER_SWAP, 	BattleCommand_PowerSwap
+	dww GUARD_SWAP, 	BattleCommand_GuardSwap
+	dww HEART_SWAP, 	BattleCommand_HeartSwap
+	db -1 ; end

@@ -7,7 +7,6 @@ BattleCommand_TrickRoomHit:
 	ld hl, wTrickRoom
 	ld a, [hl]
 	and a
-	ld [hl], 5
 	jr z, .new_trick_room
 
 ; If Trick Room is already up, remove Trick Room.
@@ -16,5 +15,6 @@ BattleCommand_TrickRoomHit:
 	jp StdBattleTextbox
 
 .new_trick_room
+	ld [hl], 5
 	ld hl, TrickRoomText
 	jp StdBattleTextbox

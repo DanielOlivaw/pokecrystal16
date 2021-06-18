@@ -188,8 +188,12 @@ VenusaurEvosAttacks:
 CharmanderEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, CHARMELEON
 	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, GROWL
+	; dbw 1, SCRATCH
+	; dbw 1, GROWL
+	dbw 1, ACROBATICS
+	dbw 1, LEECH_SEED
+	dbw 1, CURSE
+	dbw 1, REFLECT_TYPE
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
@@ -2578,10 +2582,11 @@ SnorlaxEvosAttacks:
 	dbw 36, HEAVY_SLAM
 	dbw 39, AMNESIA
 	dbw 43, HIGH_HORSEPOWER
-	dbw 46, HAMMER_ARM
-	dbw 50, BELLY_DRUM
-	dbw 53, BELCH
-	dbw 57, GIGA_IMPACT
+	dbw 46, DROWSY_WRATH
+	dbw 50, HAMMER_ARM
+	dbw 53, BELLY_DRUM
+	dbw 57, BELCH
+	dbw 60, GIGA_IMPACT
 	db 0 ; no more level-up moves
 
 ArticunoGEvosAttacks:

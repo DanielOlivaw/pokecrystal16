@@ -1,97 +1,52 @@
 Find_Command:
+; Find the appropriate battle command based on the move effect.
+; Based on code from engine/battle/ai/redundant.asm
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
-	cp EFFECT_DISABLE
-	jp z, BattleCommand_Disable
+	ld hl, FarCommand_BattleCommands
+	ld de, 3
+	call IsInArray
+	ret nc
 
-	cp EFFECT_PAY_DAY
-	jp z, BattleCommand_PayDay
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
 
-	cp EFFECT_SELFDESTRUCT
-	jp z, BattleCommand_Selfdestruct
-	cp EFFECT_FINAL_GAMBIT
-	jp z, BattleCommand_Selfdestruct
-	cp EFFECT_MEMENTO
-	jp z, BattleCommand_Selfdestruct
-	cp EFFECT_HEALING_WISH
-	jp z, BattleCommand_Selfdestruct
-
-	cp EFFECT_THIEF
-	jp z, BattleCommand_Thief
-
-	cp EFFECT_BUG_BITE
-	jp z, BattleCommand_BugBite
-
-	cp EFFECT_SUCKER_PUNCH
-	jp z, BattleCommand_SuckerPunch
-
-	cp EFFECT_COUNTER
-	jp z, BattleCommand_Counter
-	cp EFFECT_MIRROR_COAT
-	jp z, BattleCommand_Counter
-	cp EFFECT_METAL_BURST
-	jp z, BattleCommand_Counter
-
-	cp EFFECT_BURN_UP
-	jp z, BattleCommand_BurnUp
-
-	cp EFFECT_KNOCK_OFF
-	jp z, BattleCommand_KnockOff
-	cp EFFECT_INCINERATE
-	jp z, BattleCommand_KnockOff
-
-	cp EFFECT_DEFOG
-	jp z, BattleCommand_Defog
-
-	cp EFFECT_PSYCHO_SHIFT
-	jp z, BattleCommand_PsychoShift
-
-	cp EFFECT_ROOST
-	jp z, BattleCommand_Roost
-
-	cp EFFECT_BRICK_BREAK
-	jp z, BattleCommand_BrickBreak
-
-	cp EFFECT_TRAP_HIT
-	jp z, BattleCommand_TrapHit
-
-	cp EFFECT_UPROOT
-	jp z, BattleCommand_Uproot
-
-	cp EFFECT_TAR_SHOT
-	jp z, BattleCommand_TarShot
-
-	cp EFFECT_TRICK_ROOM_HIT
-	jp z, BattleCommand_TrickRoomHit
-
-	cp EFFECT_POLTERGEIST
-	jp z, BattleCommand_Poltergeist
-
-	cp EFFECT_FALSE_SWIPE
-	jp z, BattleCommand_FalseSwipe
-
-	cp EFFECT_CAPTIVATE
-	jp z, BattleCommand_Captivate
-
-	cp EFFECT_YAWN
-	jp z, BattleCommand_Yawn
-
-	cp EFFECT_CRAFTY_SHIELD
-	jp z, BattleCommand_CraftyShield
-
-	cp EFFECT_RESET_STATS_HIT
-	jp z, BattleCommand_ResetStatsTarget
-
-	cp EFFECT_FURY_CUTTER
-	jp z, BattleCommand_FuryCutter
-
-	cp EFFECT_DYNAMO_RUSH
-	jp z, BattleCommand_DynamoRush
-
-	cp EFFECT_GUILE_FANG
-	jp z, BattleCommand_GuileFang
-
-	cp EFFECT_DATA_PULSE
-	jp z, BattleCommand_DataPulse
-	ret
+FarCommand_BattleCommands:
+	dbw EFFECT_DISABLE, 		BattleCommand_Disable
+	dbw EFFECT_PAY_DAY, 		BattleCommand_PayDay
+	dbw EFFECT_SELFDESTRUCT, 	BattleCommand_Selfdestruct
+	dbw EFFECT_FINAL_GAMBIT, 	BattleCommand_Selfdestruct
+	dbw EFFECT_MEMENTO, 		BattleCommand_Selfdestruct
+	dbw EFFECT_HEALING_WISH, 	BattleCommand_Selfdestruct
+	dbw EFFECT_THIEF, 			BattleCommand_Thief
+	dbw EFFECT_BUG_BITE, 		BattleCommand_BugBite
+	dbw EFFECT_SUCKER_PUNCH, 	BattleCommand_SuckerPunch
+	dbw EFFECT_COUNTER, 		BattleCommand_Counter
+	dbw EFFECT_MIRROR_COAT, 	BattleCommand_Counter
+	dbw EFFECT_METAL_BURST, 	BattleCommand_Counter
+	dbw EFFECT_BURN_UP, 		BattleCommand_BurnUp
+	dbw EFFECT_KNOCK_OFF, 		BattleCommand_KnockOff
+	dbw EFFECT_INCINERATE, 		BattleCommand_KnockOff
+	dbw EFFECT_DEFOG, 			BattleCommand_Defog
+	dbw EFFECT_PSYCHO_SHIFT, 	BattleCommand_PsychoShift
+	dbw EFFECT_ROOST, 			BattleCommand_Roost
+	dbw EFFECT_BRICK_BREAK, 	BattleCommand_BrickBreak
+	dbw EFFECT_TRAP_HIT, 		BattleCommand_TrapHit
+	dbw EFFECT_UPROOT, 			BattleCommand_Uproot
+	dbw EFFECT_TAR_SHOT, 		BattleCommand_TarShot
+	dbw EFFECT_TRICK_ROOM_HIT, 	BattleCommand_TrickRoomHit
+	dbw EFFECT_POLTERGEIST, 	BattleCommand_Poltergeist
+	dbw EFFECT_FALSE_SWIPE, 	BattleCommand_FalseSwipe
+	dbw EFFECT_CAPTIVATE, 		BattleCommand_Captivate
+	dbw EFFECT_YAWN, 			BattleCommand_Yawn
+	dbw EFFECT_CRAFTY_SHIELD, 	BattleCommand_CraftyShield
+	dbw EFFECT_RESET_STATS_HIT, BattleCommand_ResetStatsTarget
+	dbw EFFECT_FURY_CUTTER, 	BattleCommand_FuryCutter
+	dbw EFFECT_DYNAMO_RUSH, 	BattleCommand_DynamoRush
+	dbw EFFECT_GUILE_FANG, 		BattleCommand_GuileFang
+	dbw EFFECT_DATA_PULSE, 		BattleCommand_DataPulse
+	db -1 ; end

@@ -66,7 +66,9 @@ BattleCommand_WeatherBall:
 .finish
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
+	push af
 	farcall BattleCommand_DamageStats ; damagestats
+	pop af
 	ret
 
 ; Weather Ball's double damage in weather is handled by weather_modifiers.asm

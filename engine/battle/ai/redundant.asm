@@ -79,6 +79,10 @@ AI_Redundant:
 	ld a, b
 	cp d
 	jp c, .NotRedundant
+	jr z, .Endeavor_continue
+	jp .Redundant
+
+.Endeavor_continue
 	ld a, c
 	cp e
 	jp nc, .Redundant
@@ -86,7 +90,7 @@ AI_Redundant:
 
 .FirstTurn:
 	ld a, [wEnemyTurnsTaken]
-	cp 1
+	and a
 	ret
 
 .Yawn:
@@ -216,7 +220,7 @@ AI_Redundant:
 	jr .NotRedundant
 
 .FindMoveFar:
-	farcall FindMove_Redundant
+	farcall FindMove_AI_Redundant
 	ret
 
 .Heal:

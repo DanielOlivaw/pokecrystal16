@@ -1,155 +1,61 @@
 Find_ConditionalBoost:
-; All moves and effects that double damage
+; All moves and effects that can double damage
 
+; Find the appropriate battle command based on the move index.
+; Based on code from engine/battle/ai/redundant.asm
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+
+	ld hl, ConditionalBoostMoves
+
+	push hl
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld de, 2
+	call IsInHalfwordArray
+	ret nc
+
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
+
+ConditionalBoostMoves:
 ; Moves with EFFECT_CONDITIONAL_BOOST
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ACROBATICS
-	call CompareMove2
-	jp z, BattleCommand_Acrobatics
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, BRINE
-	call CompareMove2
-	jp z, BattleCommand_Brine
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, CUT ; Cut deals double damage to Grass-types
-	call CompareMove2
-	jp z, BattleCommand_Cut
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, FACADE
-	call CompareMove2
-	jp z, BattleCommand_Facade
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, HEX
-	call CompareMove2
-	jp z, BattleCommand_Hex
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, PAYBACK
-	call CompareMove2
-	jp z, BattleCommand_Payback
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, RETALIATE
-	call CompareMove2
-	jp z, BattleCommand_Retaliate
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ROUND_M
-	call CompareMove2
-	jp z, BattleCommand_Round
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SHATTER_CLAW
-	call CompareMove2
-	jp z, BattleCommand_ShatterClaw
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, VENOSHOCK
-	call CompareMove2
-	jp z, BattleCommand_Venoshock
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, BOLT_BEAK
-	call CompareMove2
-	jp z, BattleCommand_BoltBeak
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, FISHIOUS_REND
-	call CompareMove2
-	jp z, BattleCommand_BoltBeak
-
-; Speed stats seem to act weirdly when used in calculations, so Gyro Ball
-; and Electro Ball have been simplified to work similarly to Packback.
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GYRO_BALL
-	call CompareMove2
-	jp z, BattleCommand_Payback
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ELECTRO_BALL
-	call CompareMove2
-	jp z, BattleCommand_MoveFirstBoost
-
+	dww ACROBATICS,		BattleCommand_Acrobatics
+	dww BRINE, 			BattleCommand_Brine
+	dww CUT, 			BattleCommand_Cut ; Cut deals double damage to Grass-types
+	dww FACADE, 		BattleCommand_Facade
+	dww HEX, 			BattleCommand_Hex
+	dww PAYBACK, 		BattleCommand_Payback
+	dww RETALIATE, 		BattleCommand_Retaliate
+	dww ROUND_M, 		BattleCommand_Round
+	dww SHATTER_CLAW, 	BattleCommand_ShatterClaw
+	dww VENOSHOCK, 		BattleCommand_Venoshock
+	dww BOLT_BEAK, 		BattleCommand_BoltBeak
+	dww FISHIOUS_REND, 	BattleCommand_BoltBeak
 ; Moves with EFFECT_COND_BOOST_FLINCH
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, DRAGON_RUSH
-	call CompareMove2
-	jp z, BattleCommand_DoubleMinimizeDamage
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GUST
-	call CompareMove2
-	jr z, BattleCommand_DoubleFlyingDamage
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, STEAMROLLER
-	call CompareMove2
-	jr z, BattleCommand_DoubleMinimizeDamage
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, STOMP
-	call CompareMove2
-	jr z, BattleCommand_DoubleMinimizeDamage
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SURF
-	call CompareMove2
-	jr z, BattleCommand_DoubleDivingDamage
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TWISTER
-	call CompareMove2
-	jr z, BattleCommand_DoubleFlyingDamage
-
-
+	dww DRAGON_RUSH, 	BattleCommand_DoubleMinimizeDamage
+	dww GUST, 			BattleCommand_DoubleFlyingDamage
+	dww STEAMROLLER, 	BattleCommand_DoubleMinimizeDamage
+	dww STOMP, 			BattleCommand_DoubleMinimizeDamage
+	dww SURF, 			BattleCommand_DoubleDivingDamage
+	dww TWISTER, 		BattleCommand_DoubleFlyingDamage
 ; Other effects that use conditionalboost
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-
-	cp EFFECT_CURE_SLEEP_HIT ; Wake-Up Slap
-	jp z, BattleCommand_CureSleepHit
-	cp EFFECT_CURE_PARALYSIS_HIT ; SmellingSalt
-	jp z, BattleCommand_CureParalysisHit
-	cp EFFECT_FREEZE_DRY
-	jp z, BattleCommand_FreezeDry
-	cp EFFECT_REVENGE
-	jp z, BattleCommand_Revenge
-
-	cp EFFECT_BODY_SLAM
-	jr z, BattleCommand_DoubleMinimizeDamage
-	cp EFFECT_HEAVY_SLAM
-	jr z, BattleCommand_DoubleMinimizeDamage
-	cp EFFECT_MAGNITUDE
-	jr z, BattleCommand_DoubleUndergroundDamage
-	cp EFFECT_EARTHQUAKE
-	jr z, BattleCommand_DoubleUndergroundDamage
-	cp EFFECT_WHIRLPOOL
-	jr z, BattleCommand_DoubleDivingDamage
-	ret
+	dww WAKE_UP_SLAP, 	BattleCommand_CureSleepHit
+	dww SMELLINGSALT, 	BattleCommand_CureParalysisHit
+	dww FREEZE_DRY, 	BattleCommand_FreezeDry
+	dww REVENGE, 		BattleCommand_Revenge
+	dww BODY_SLAM, 		BattleCommand_DoubleMinimizeDamage
+	dww HEAVY_SLAM, 	BattleCommand_DoubleMinimizeDamage
+	dww MAGNITUDE, 		BattleCommand_DoubleUndergroundDamage
+	dww EARTHQUAKE, 	BattleCommand_DoubleUndergroundDamage
+	dww WHIRLPOOL, 		BattleCommand_DoubleDivingDamage
+	db -1 ; end
 
 BattleCommand_ShatterClaw:
 ; Double damage if the target is frozen

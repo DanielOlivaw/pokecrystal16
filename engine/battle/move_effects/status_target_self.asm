@@ -2,322 +2,89 @@ Find_StatusTargetSelf:
 ; Many move effects that target the user or the battlefield,
 ; resulting in the same structure in effects.asm
 
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_SUNLIGHT_HEAL
-	jp z, BattleCommand_HealSun
-	cp EFFECT_CONVERSION
-	jp z, BattleCommand_Conversion
-	cp EFFECT_TRICK_ROOM
-	jp z, BattleCommand_TrickRoom
-	cp EFFECT_HEALING_WISH
-	jp z, BattleCommand_HealingWish
-	cp EFFECT_SHORE_UP
-	jp z, BattleCommand_ShoreUp
-	cp EFFECT_DEFENSE_UP_3
-	jp z, BattleCommand_DefenseUp3
-	cp EFFECT_SP_ATK_UP_3
-	jp z, BattleCommand_SpecialAttackUp3
-
+; Find the appropriate battle command based on the move index.
+; Based on code from engine/battle/ai/redundant.asm
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	ld bc, FOCUS_ENERGY
-	call CompareMove2
-	jp z, BattleCommand_FocusEnergy
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, HEAL_BELL
-	call CompareMove2
-	jp z, BattleCommand_HealBell
+	ld hl, StatusTargetSelfMoves
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, AROMATHERAPY
-	call CompareMove2
-	jp z, BattleCommand_HealBell
+	push hl
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	pop hl
+	ld de, 2
+	call IsInHalfwordArray
+	ret nc
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MEAN_LOOK
-	call CompareMove2
-	jp z, BattleCommand_ArenaTrap
+	inc hl
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
 
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SPIDER_WEB
-	call CompareMove2
-	jp z, BattleCommand_ArenaTrap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, BLOCK
-	call CompareMove2
-	jp z, BattleCommand_ArenaTrap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, FAIRY_LOCK
-	call CompareMove2
-	jp z, BattleCommand_ArenaTrap
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SAFEGUARD
-	call CompareMove2
-	jp z, BattleCommand_Safeguard
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MIST
-	call CompareMove2
-	jp z, BattleCommand_Mist
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, LIGHT_SCREEN
-	call CompareMove2
-	jp z, BattleCommand_LightScreen
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, REFLECT
-	call CompareMove2
-	jp z, BattleCommand_Reflect
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, AURORA_VEIL
-	call CompareMove2
-	jp z, BattleCommand_AuroraVeil
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SUBSTITUTE
-	call CompareMove2
-	jp z, BattleCommand_Substitute
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, DESTINY_BOND
-	call CompareMove2
-	jp z, BattleCommand_DestinyBond
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, CURSE
-	call CompareMove2
-	jp z, BattleCommand_Curse
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, PERISH_SONG
-	call CompareMove2
-	jp z, BattleCommand_PerishSong
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, BELLY_DRUM
-	call CompareMove2
-	jp z, BattleCommand_BellyDrum
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, PSYCH_UP
-	call CompareMove2
-	jp z, BattleCommand_PsychUp
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SHELL_SMASH
-	call CompareMove2
-	jp z, BattleCommand_ShellSmash
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, QUIVER_DANCE
-	call CompareMove2
-	jp z, BattleCommand_QuiverDance
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, BRIGHT_MOSS
-	call CompareMove2
-	jp z, BattleCommand_BrightMoss
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, INGRAIN
-	call CompareMove2
-	jp z, BattleCommand_Ingrain
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, COIL
-	call CompareMove2
-	jp z, BattleCommand_Coil
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, ACUPRESSURE
-	call CompareMove2
-	jp z, BattleCommand_Acupressure
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, CHARGE
-	call CompareMove2
-	jp z, BattleCommand_ElectricCharge
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, LUCKY_CHANT
-	call CompareMove2
-	jp z, BattleCommand_LuckyChant
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, AQUA_RING
-	call CompareMove2
-	jp z, BattleCommand_AquaRing
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GRUDGE
-	call CompareMove2
-	jp z, BattleCommand_Grudge
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MAGNET_RISE
-	call CompareMove2
-	jp z, BattleCommand_MagnetRise
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, REFRESH
-	call CompareMove2
-	jp z, BattleCommand_Refresh
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, STOCKPILE
-	call CompareMove2
-	jp z, BattleCommand_Stockpile
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SWALLOW
-	call CompareMove2
-	jp z, BattleCommand_Swallow
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, WEATHERVANE
-	call CompareMove2
-	jp z, BattleCommand_Weathervane
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, CULTIVATE
-	call CompareMove2
-	jp z, BattleCommand_Cultivate
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, LASER_FOCUS
-	call CompareMove2
-	jp z, BattleCommand_LaserFocus
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, WISH
-	call CompareMove2
-	jp z, BattleCommand_Wish
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, GEOMANCY
-	call CompareMove2
-	jp z, BattleCommand_Geomancy
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, POWER_TRICK
-	call CompareMove2
-	jp z, BattleCommand_PowerTrick
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, CLANGOROUS_SOUL
-	call CompareMove2
-	jp z, BattleCommand_ClangorousSoul
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, OCTOLOCK
-	call CompareMove2
-	jp z, BattleCommand_Octolock
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TEATIME
-	call CompareMove2
-	jp z, BattleCommand_Teatime
-
+StatusTargetSelfMoves:
+	dww MORNING_SUN, 		BattleCommand_HealSun
+	dww SYNTHESIS, 			BattleCommand_HealSun
+	dww MOONLIGHT, 			BattleCommand_HealSun
+	dww CONVERSION, 		BattleCommand_Conversion
+	dww TRICK_ROOM,			BattleCommand_TrickRoom
+	dww HEALING_WISH, 		BattleCommand_HealingWish
+	dww SHORE_UP, 			BattleCommand_ShoreUp
+	dww COTTON_GUARD, 		BattleCommand_DefenseUp3
+	dww TAIL_GLOW,			BattleCommand_SpecialAttackUp3
+	dww FOCUS_ENERGY, 		BattleCommand_FocusEnergy
+	dww HEAL_BELL, 			BattleCommand_HealBell
+	dww AROMATHERAPY, 		BattleCommand_HealBell
+	dww MEAN_LOOK, 			BattleCommand_ArenaTrap
+	dww SPIDER_WEB, 		BattleCommand_ArenaTrap
+	dww BLOCK, 				BattleCommand_ArenaTrap
+	dww FAIRY_LOCK, 		BattleCommand_ArenaTrap
+	dww SAFEGUARD, 			BattleCommand_Safeguard
+	dww MIST, 				BattleCommand_Mist
+	dww LIGHT_SCREEN, 		BattleCommand_LightScreen
+	dww REFLECT, 			BattleCommand_Reflect
+	dww AURORA_VEIL, 		BattleCommand_AuroraVeil
+	dww SUBSTITUTE, 		BattleCommand_Substitute
+	dww DESTINY_BOND, 		BattleCommand_DestinyBond
+	dww CURSE, 				BattleCommand_Curse
+	dww PERISH_SONG, 		BattleCommand_PerishSong
+	dww BELLY_DRUM, 		BattleCommand_BellyDrum
+	dww PSYCH_UP, 			BattleCommand_PsychUp
+	dww SHELL_SMASH, 		BattleCommand_ShellSmash
+	dww QUIVER_DANCE, 		BattleCommand_QuiverDance
+	dww BRIGHT_MOSS, 		BattleCommand_BrightMoss
+	dww INGRAIN, 			BattleCommand_Ingrain
+	dww COIL, 				BattleCommand_Coil
+	dww ACUPRESSURE, 		BattleCommand_Acupressure
+	dww CHARGE, 			BattleCommand_ElectricCharge
+	dww LUCKY_CHANT, 		BattleCommand_LuckyChant
+	dww AQUA_RING, 			BattleCommand_AquaRing
+	dww GRUDGE, 			BattleCommand_Grudge
+	dww MAGNET_RISE, 		BattleCommand_MagnetRise
+	dww REFRESH, 			BattleCommand_Refresh
+	dww STOCKPILE, 			BattleCommand_Stockpile
+	dww SWALLOW, 			BattleCommand_Swallow
+	dww WEATHERVANE, 		BattleCommand_Weathervane
+	dww CULTIVATE, 			BattleCommand_Cultivate
+	dww LASER_FOCUS, 		BattleCommand_LaserFocus
+	dww WISH, 				BattleCommand_Wish
+	dww GEOMANCY, 			BattleCommand_Geomancy
+	dww POWER_TRICK, 		BattleCommand_PowerTrick
+	dww CLANGOROUS_SOUL, 	BattleCommand_ClangorousSoul
+	dww OCTOLOCK, 			BattleCommand_Octolock
+	dww TEATIME, 			BattleCommand_Teatime
 ; Entry hazards
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SPIKES
-	call CompareMove2
-	jp z, BattleCommand_Spikes
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, TOXIC_SPIKES
-	call CompareMove2
-	jp z, BattleCommand_Spikes
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, STEALTH_ROCK
-	call CompareMove2
-	jp z, BattleCommand_Spikes
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, STICKY_WEB
-	call CompareMove2
-	jp z, BattleCommand_Spikes
-
+	dww SPIKES, 			BattleCommand_Spikes
+	dww TOXIC_SPIKES, 		BattleCommand_Spikes
+	dww STEALTH_ROCK, 		BattleCommand_Spikes
+	dww STICKY_WEB, 		BattleCommand_Spikes
 ; Weather
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SUNNY_DAY
-	call CompareMove2
-	jp z, BattleCommand_StartSun
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, RAIN_DANCE
-	call CompareMove2
-	jp z, BattleCommand_StartRain
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, SANDSTORM
-	call CompareMove2
-	jp z, BattleCommand_StartSandstorm
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, HAIL
-	call CompareMove2
-	jp z, BattleCommand_StartHail
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVar
-	ld bc, MISTY_TERRAIN
-	call CompareMove2
-	jp z, BattleCommand_MistyTerrain
-	ret
+	dww SUNNY_DAY, 			BattleCommand_StartSun
+	dww RAIN_DANCE, 		BattleCommand_StartRain
+	dww SANDSTORM, 			BattleCommand_StartSandstorm
+	dww HAIL, 				BattleCommand_StartHail
+	dww MISTY_TERRAIN, 		BattleCommand_MistyTerrain
+	db -1 ; end
