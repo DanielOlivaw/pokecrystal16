@@ -154,6 +154,10 @@ INCLUDE "engine/battle/effect_commands.asm"
 SECTION "Effect Commands 2", ROMX
 
 INCLUDE "engine/battle/effect_commands_2.asm"
+
+
+SECTION "AI Misc", ROMX
+
 INCLUDE "engine/battle/ai/find_move.asm"
 
 

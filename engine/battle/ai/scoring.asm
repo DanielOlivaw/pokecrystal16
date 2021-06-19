@@ -150,7 +150,7 @@ AI_Setup:
 	jr z, .statup
 
 	push hl
-	ld hl, .ShellSmashQuiverDance
+	ld hl, .OtherStatUpMoves
 	call AI_CheckMoveInList
 	pop hl
 	jp nc, .checkmove
@@ -183,9 +183,14 @@ AI_Setup:
 	inc [hl]
 	jp .checkmove
 
-.ShellSmashQuiverDance
+.OtherStatUpMoves
 	dw SHELL_SMASH
 	dw QUIVER_DANCE
+	dw FOCUS_ENERGY
+	dw MIST
+	dw COIL
+	dw LUCKY_CHANT
+	dw POWER_TRICK
 	dw -1 ; end
 
 
@@ -1488,7 +1493,7 @@ AI_Smart_CottonGuard:
 	jr nc, .discourage
 
 ; 80% chance to greatly encourage this move if
-; enemy's Special Defense level is lower than +1,
+; enemy's Defense level is lower than +1,
 ; and the player's Pokemon is Physical-oriented.
 	cp BASE_STAT_LEVEL + 1
 	ret nc
@@ -2173,7 +2178,6 @@ AI_Smart_FellStinger:
 	ret
 
 AI_Smart_Thief:
-AI_Smart_KnockOff:
 AI_Smart_FinalGambit:
 AI_Smart_Healing_Wish:
 ; Don't use one of these moves unless it's the only move available.
@@ -2184,9 +2188,12 @@ AI_Smart_Healing_Wish:
 	ret
 
 AI_Smart_Conversion2:
+; 90% chance to discourage this move if the player's last
+; move was not very effective.
+; 50% chance to encourage this move if the player's last
+; move was super-effective.
 	ld a, [wLastPlayerMove]
 	and a
-	; jr nz, .discourage
 	jr z, .discourage
 
 	push hl
@@ -2695,12 +2702,15 @@ AI_Smart_WeatherBall:
 	callfar BattleCheckTypeMatchup
 	pop hl
 
-; Discourage Weather Ball if not very effective.
+; fallthrough
+
+AI_VariableTypeMatchup:
+; Discourage this move if not very effective.
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE
 	jr c, .bad
 
-; Encourage Weather Ball if super-effective.
+; Encourage this move if super-effective.
 	ld a, [wTypeMatchup]
 	cp EFFECTIVE + 1
 	ret c
@@ -3015,7 +3025,22 @@ AI_Smart_Incinerate:
 	farcall CheckItemPocket
 	ld a, [wItemAttributeParamBuffer]
 	cp BERRIES
-	ret z
+	ret nz
+
+	call AI_80_20
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_KnockOff:
+; 80% chance to encourage this move if the player is holding a berry.
+; Otherwise, dismiss this move.
+	ld a, [wBattleMonItem]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BERRIES
+	jp nz, AIDiscourageMove
 
 	call AI_80_20
 	ret c

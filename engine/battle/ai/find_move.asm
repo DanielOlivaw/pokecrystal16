@@ -19,89 +19,86 @@ FindMove_AI_Smart_Scoring:
 	ret
 
 .Moves:
-	dww CUT, 				AI_Smart_Cut
-	dww GUST, 				AI_Smart_Gust
-	dww SURF, 				AI_Smart_Surf
-	dww VENOSHOCK, 			AI_Smart_Venoshock
-	dww HEX, 				AI_Smart_Hex
-	dww BRINE, 				AI_Smart_Brine
-	dww PAYBACK, 			AI_Smart_Payback
-	dww SHATTER_CLAW, 		AI_Smart_ShatterClaw
-	dww ACROBATICS, 		AI_Smart_Acrobatics
-	dww RETALIATE, 			AI_Smart_Retaliate
-	dww FACADE, 			AI_Smart_Facade
-	dww BOLT_BEAK,			AI_Smart_BoltBeak
-	dww FISHIOUS_REND,		AI_Smart_BoltBeak
-	dww STOMP,				AI_Smart_Stomp
-	dww TWISTER,			AI_Smart_Twister
-	dww STEAMROLLER,		AI_Smart_Stomp
-	dww DRAGON_RUSH,		AI_Smart_Stomp
-	dww LIGHT_SCREEN,		AI_Smart_LightScreen
-	dww REFLECT,			AI_Smart_Reflect
-	dww SUBSTITUTE,			AI_Smart_Substitute
-	dww SPIDER_WEB,			AI_Smart_MeanLook
-	dww CURSE,				AI_Smart_Curse
-	dww BELLY_DRUM,			AI_Smart_BellyDrum
-	dww SPIKES,				AI_Smart_Spikes
-	dww DESTINY_BOND,		AI_Smart_DestinyBond
-	dww PERISH_SONG,		AI_Smart_PerishSong
-	dww SANDSTORM,			AI_Smart_Sandstorm
-	dww MEAN_LOOK,			AI_Smart_MeanLook
-	dww HEAL_BELL,			AI_Smart_HealBell
-	dww SAFEGUARD,			AI_Smart_Safeguard
-	dww RAIN_DANCE,			AI_Smart_RainDance
-	dww SUNNY_DAY,			AI_Smart_SunnyDay
-	dww PSYCH_UP,			AI_Smart_PsychUp
-	dww SHELL_SMASH,		AI_Smart_ShellSmash
-	dww QUIVER_DANCE,		AI_Smart_QuiverDance
-	dww HAIL,				AI_Smart_Hail
-	dww AURORA_VEIL,		AI_Smart_AuroraVeil
-	dww AROMATHERAPY,		AI_Smart_HealBell
-	dww TOXIC_SPIKES,		AI_Smart_Spikes
-	dww STEALTH_ROCK,		AI_Smart_Spikes
-	dww STICKY_WEB,			AI_Smart_Spikes
-	dww MISTY_TERRAIN,		AI_Smart_MistyTerrain
-	dww STOCKPILE,			AI_Smart_Stockpile
-	dww BLOCK,				AI_Smart_MeanLook
-	dww BRIGHT_MOSS,		AI_Smart_BrightMoss
-	dww INGRAIN,			AI_Smart_Ingrain
-	dww COIL,				AI_Smart_Coil
-	dww CHARGE,				AI_Smart_Charge
-	dww LUCKY_CHANT,		AI_Smart_LuckyChant
-	dww AQUA_RING,			AI_Smart_AquaRing
-	dww GRUDGE,				AI_Smart_Grudge
-	dww MAGNET_RISE,		AI_Smart_MagnetRise
-	dww REFRESH,			AI_Smart_Refresh
-	dww SWALLOW,			AI_Smart_Swallow
-	dww WEATHERVANE,		AI_Smart_Weathervane
-	dww CULTIVATE,			AI_Smart_Cultivate
-	dww LASER_FOCUS,		AI_Smart_LaserFocus
-	dww WISH,				AI_Smart_Wish
-	dww FAIRY_LOCK,			AI_Smart_FairyLock
-	dww POWER_TRICK,		AI_Smart_PowerTrick
-	dww CLANGOROUS_SOUL,	AI_Smart_ClangorousSoul
-	dww OCTOLOCK,			AI_Smart_Octolock
-	dww TEATIME,			AI_Smart_Teatime
-	dww LEECH_SEED,			AI_Smart_LeechSeed
-	dww NIGHTMARE,			AI_Smart_Nightmare
-	dww SPITE,				AI_Smart_Spite
-	dww ATTRACT,			AI_Smart_Attract
-	dww TRICK,				AI_Smart_Trick
-	dww SWITCHEROO,			AI_Smart_Switcheroo
-	dww SOAK,				AI_Smart_Soak
-	dww MAGIC_POWDER,		AI_Smart_MagicPowder
-	dww REFLECT_TYPE,		AI_Smart_ReflectType
-	dww POWER_SPLIT,		AI_Smart_PowerSplit
-	dww GUARD_SPLIT,		AI_Smart_GuardSplit
-	dww TOPSY_TURVY,		AI_Smart_TopsyTurvy
-	dww ELECTRIFY,			AI_Smart_Electrify
-	dww SPEED_SWAP,			AI_Smart_SpeedSwap
-	dww POWER_SWAP,			AI_Smart_PowerSwap
-	dww GUARD_SWAP,			AI_Smart_GuardSwap
-	dww HEART_SWAP,			AI_Smart_HeartSwap
-	dww HIDDEN_POWER,		AI_Smart_HiddenPower
-	dww JUDGEMENT,			AI_Smart_Judgement
-	dww MULTI_ATTACK,		AI_Smart_Judgement
+	dww CUT,             AI_Smart_Cut
+	dww GUST,            AI_Smart_Gust
+	dww SURF,            AI_Smart_Surf
+	dww VENOSHOCK,       AI_Smart_Venoshock
+	dww HEX,             AI_Smart_Hex
+	dww BRINE,           AI_Smart_Brine
+	dww PAYBACK,         AI_Smart_Payback
+	dww SHATTER_CLAW,    AI_Smart_ShatterClaw
+	dww ACROBATICS,      AI_Smart_Acrobatics
+	dww RETALIATE,       AI_Smart_Retaliate
+	dww FACADE,          AI_Smart_Facade
+	dww BOLT_BEAK,       AI_Smart_BoltBeak
+	dww FISHIOUS_REND,   AI_Smart_BoltBeak
+	dww STOMP,           AI_Smart_Stomp
+	dww TWISTER,         AI_Smart_Twister
+	dww STEAMROLLER,     AI_Smart_Stomp
+	dww DRAGON_RUSH,     AI_Smart_Stomp
+	dww LIGHT_SCREEN,    AI_Smart_LightScreen
+	dww REFLECT,         AI_Smart_Reflect
+	dww SUBSTITUTE,      AI_Smart_Substitute
+	dww SPIDER_WEB,      AI_Smart_MeanLook
+	dww CURSE,           AI_Smart_Curse
+	dww BELLY_DRUM,      AI_Smart_BellyDrum
+	dww SPIKES,          AI_Smart_Spikes
+	dww DESTINY_BOND,    AI_Smart_DestinyBond
+	dww PERISH_SONG,     AI_Smart_PerishSong
+	dww SANDSTORM,       AI_Smart_Sandstorm
+	dww MEAN_LOOK,       AI_Smart_MeanLook
+	dww HEAL_BELL,       AI_Smart_HealBell
+	dww SAFEGUARD,       AI_Smart_Safeguard
+	dww RAIN_DANCE,      AI_Smart_RainDance
+	dww SUNNY_DAY,       AI_Smart_SunnyDay
+	dww PSYCH_UP,        AI_Smart_PsychUp
+	dww SHELL_SMASH,     AI_Smart_ShellSmash
+	dww QUIVER_DANCE,    AI_Smart_QuiverDance
+	dww HAIL,            AI_Smart_Hail
+	dww AURORA_VEIL,     AI_Smart_AuroraVeil
+	dww AROMATHERAPY,    AI_Smart_HealBell
+	dww TOXIC_SPIKES,    AI_Smart_Spikes
+	dww STEALTH_ROCK,    AI_Smart_Spikes
+	dww STICKY_WEB,      AI_Smart_Spikes
+	dww MISTY_TERRAIN,   AI_Smart_MistyTerrain
+	dww STOCKPILE,       AI_Smart_Stockpile
+	dww BLOCK,           AI_Smart_MeanLook
+	dww BRIGHT_MOSS,     AI_Smart_BrightMoss
+	dww INGRAIN,         AI_Smart_Ingrain
+	; dww CHARGE,          AI_Smart_Charge
+	dww AQUA_RING,       AI_Smart_AquaRing
+	dww GRUDGE,          AI_Smart_Grudge
+	dww MAGNET_RISE,     AI_Smart_MagnetRise
+	dww REFRESH,         AI_Smart_Refresh
+	dww SWALLOW,         AI_Smart_Swallow
+	dww WEATHERVANE,     AI_Smart_Weathervane
+	dww CULTIVATE,       AI_Smart_Cultivate
+	dww LASER_FOCUS,     AI_Smart_LaserFocus
+	dww WISH,            AI_Smart_Wish
+	dww FAIRY_LOCK,      AI_Smart_MeanLook
+	dww CLANGOROUS_SOUL, AI_Smart_ClangorousSoul
+	dww OCTOLOCK,        AI_Smart_Octolock
+	dww TEATIME,         AI_Smart_Teatime
+	dww LEECH_SEED,      AI_Smart_LeechSeed
+	dww NIGHTMARE,       AI_Smart_Nightmare
+	dww SPITE,           AI_Smart_Spite
+	dww ATTRACT,         AI_Smart_Attract
+	dww TRICK,           AI_Smart_Trick
+	dww SWITCHEROO,      AI_Smart_Trick
+	; dww SOAK,            AI_Smart_Soak
+	; dww MAGIC_POWDER,    AI_Smart_MagicPowder
+	; dww REFLECT_TYPE,    AI_Smart_ReflectType
+	dww POWER_SPLIT,     AI_Smart_PowerSplit
+	dww GUARD_SPLIT,     AI_Smart_GuardSplit
+	dww TOPSY_TURVY,     AI_Smart_TopsyTurvy
+	dww ELECTRIFY,       AI_Smart_Electrify
+	dww SPEED_SWAP,      AI_Smart_SpeedSwap
+	dww POWER_SWAP,      AI_Smart_PowerSwap
+	dww GUARD_SWAP,      AI_Smart_GuardSwap
+	dww HEART_SWAP,      AI_Smart_HeartSwap
+	dww HIDDEN_POWER,    AI_Smart_HiddenPower
+	dww JUDGEMENT,       AI_Smart_Judgement
+	dww MULTI_ATTACK,    AI_Smart_Judgement
 	db -1 ; end
 
 AI_Smart_Cut:
@@ -352,29 +349,26 @@ AI_Smart_Curse:
 	jr z, .ghost_curse
 
 	callfar AICheckEnemyHalfHP
-	jr nc, .encourage
+	jr nc, .discourage
 
 	ld a, [wEnemyAtkLevel]
 	cp BASE_STAT_LEVEL + 4
-	jr nc, .encourage
+	jr nc, .discourage
 	cp BASE_STAT_LEVEL + 2
 	ret nc
 
-	ld a, [wBattleMonType1]
-	cp GHOST
-	jr z, .greatly_encourage
 	callfar AI_80_20
 	ret c
 	dec [hl]
 	dec [hl]
 	ret
 
-.approve
+.dismiss
 	inc [hl]
 	inc [hl]
-.greatly_encourage
+.greatly_discourage
 	inc [hl]
-.encourage
+.discourage
 	inc [hl]
 	ret
 
@@ -391,7 +385,7 @@ AI_Smart_Curse:
 	push hl
 	callfar AICheckLastPlayerMon
 	pop hl
-	jr nz, .approve
+	jr nz, .dismiss
 
 	jr .ghost_continue
 
@@ -403,10 +397,10 @@ AI_Smart_Curse:
 
 .ghost_continue
 	callfar AICheckEnemyQuarterHP
-	jp nc, .approve
+	jp nc, .dismiss
 
 	callfar AICheckEnemyHalfHP
-	jr nc, .greatly_encourage
+	jr nc, .greatly_discourage
 
 	callfar AICheckEnemyMaxHP
 	ret nc
@@ -461,6 +455,7 @@ AI_Smart_Spikes:
 	ret
 
 AI_Smart_DestinyBond:
+AI_Smart_Grudge:
 	pop hl
 ; Discourage this move if enemy's HP is above 25%.
 
@@ -599,6 +594,8 @@ AI_Smart_Hail:
 	dw AURORA_VEIL
 	db -1 ; end
 
+INCLUDE "data/battle/ai/rain_dance_moves.asm"
+
 AI_Smart_RainDance:
 ; Greatly discourage this move if it would favour the player type-wise.
 ; Particularly, if the player is a Water-type.
@@ -610,14 +607,35 @@ AI_Smart_RainDance:
 
 	ld a, [wBattleMonType2]
 	cp WATER
-	jr z, AIBadWeatherType
+	jp z, AIBadWeatherType
 	cp FIRE
-	jr z, AIGoodWeatherType
+	jp z, AIGoodWeatherType
 
 	ld hl, RainDanceMoves
 	jr AI_Smart_WeatherMove
 
-INCLUDE "data/battle/ai/rain_dance_moves.asm"
+AI_Smart_MistyTerrain:
+; Greatly discourage this move if it would favour the player type-wise.
+; Particularly, if the player is a Water-type.
+	ld a, [wBattleMonType1]
+	cp DRAGON
+	jp z, AIGoodWeatherType
+
+	ld a, [wBattleMonType2]
+	cp DRAGON
+	jp z, AIGoodWeatherType
+
+	ld hl, .FogMoves
+	jr AI_Smart_WeatherMove
+
+.FogMoves
+; AI_SMART prefers these moves during fog.
+	dw WEATHER_BALL
+	dw MISTY_EXPLOSION
+	dw MISTY_AMBUSH
+	db -1 ; end
+
+INCLUDE "data/battle/ai/sunny_day_moves.asm"
 
 AI_Smart_SunnyDay:
 ; Greatly discourage this move if it would favour the player type-wise.
@@ -687,8 +705,6 @@ AIGoodWeatherType:
 	dec [hl]
 	ret
 
-INCLUDE "data/battle/ai/sunny_day_moves.asm"
-
 AI_Smart_MeanLook:
 	pop hl
 	callfar AICheckEnemyHalfHP
@@ -717,6 +733,49 @@ AI_Smart_MeanLook:
 	cp $b ; not very effective
 	pop hl
 	ret nc
+
+.discourage
+	inc [hl]
+	ret
+
+.encourage
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_Octolock:
+	pop hl
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+
+	push hl
+	callfar AICheckLastPlayerMon
+	pop hl
+	jr z, .discourage
+
+; 80% chance to greatly encourage this move if the player is badly poisoned.
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_TOXIC, a
+	jr nz, .encourage
+
+; 80% chance to greatly encourage this move if the player is either
+; in love, identified, stuck in Rollout, or has a Nightmare.
+	ld a, [wPlayerSubStatus1]
+	and 1 << SUBSTATUS_IN_LOVE | 1 << SUBSTATUS_ROLLOUT | 1 << SUBSTATUS_IDENTIFIED | 1 << SUBSTATUS_NIGHTMARE
+	jr nz, .encourage
+
+; Encourage this move if the player only has not very effective moves against the enemy.
+	push hl
+	callfar CheckPlayerMoveTypeMatchups
+	ld a, [wEnemyAISwitchScore]
+	cp $b ; not very effective
+	pop hl
+	ret c
+	dec [hl]
+	ret
 
 .discourage
 	inc [hl]
@@ -796,6 +855,7 @@ AI_Smart_Safeguard:
 	ret
 
 AI_Smart_PsychUp:
+AI_Smart_HeartSwap:
 	ld hl, wEnemyAtkLevel
 	ld b, NUM_LEVEL_STATS
 	ld c, 100
@@ -851,12 +911,530 @@ AI_Smart_PsychUp:
 	inc [hl]
 	ret
 
+AI_Smart_ShellSmash:
+; Discourage this move if the enemy's HP is below 50%.
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+
+; Discourage this move if the enemy's attack, special attack,
+; or speed is already high.
+	ld a, [wEnemyAtkLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+
+	ld a, [wEnemySAtkLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+
+	ld a, [wEnemySpdLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+	cp BASE_STAT_LEVEL + 2
+	ret nc
+
+; Otherwise, 80% chance to greatly encourage this move.
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	dec [hl]
+	ret
+
+.discourage
+	inc [hl]
+	inc [hl]
+	ret
+
+AI_Smart_QuiverDance:
+; Discourage this move if enemy's HP is lower than 50%.
+	call AICheckEnemyHalfHP
+	jr nc, .discourage
+
+; Discourage this move if enemy's special attack,
+; special defense, or speed level is higher than +3.
+	ld a, [wEnemySAtkLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+
+	ld a, [wEnemySDefLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+
+	ld a, [wEnemySpdLevel]
+	cp BASE_STAT_LEVEL + 4
+	jr nc, .discourage
+	cp BASE_STAT_LEVEL + 2
+	ret nc
+
+; 80% chance to greatly encourage this move if
+; the player's Pokemon is Special-oriented.
+
+	push hl
+; Get the pointer for the player's Pokémon's base Attack
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, BaseData
+	ld a, BANK(BaseData)
+	call LoadIndirectPointer
+	ld bc, BASE_ATK
+	add hl, bc
+; Get the Pokémon's base Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	ld d, a
+; Get the pointer for the player's Pokémon's base Special Attack
+	ld bc, BASE_SAT - BASE_ATK
+	add hl, bc
+; Get the Pokémon's base Special Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	pop hl
+; If its base Attack is greater than its base Special Attack,
+; don't encourage this move as much.
+	cp d
+	jr c, .encourage
+
+	call AI_80_20
+	ret c
+	dec [hl]
+.encourage
+	dec [hl]
+	ret
+
+.discourage
+	inc [hl]
+	inc [hl]
+	ret
+
+AI_Smart_Stockpile:
+	pop hl
+; 50% chance to encourage this move if the
+; enemy's HP is above 50%.
+	callfar AICheckEnemyHalfHP
+	jr c, .maybe_encourage
+
+; 90% chance to greatly discourage this move
+; if the enemy is at max defense & special defense.
+	ld a, [wEnemyDefLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .greatly_discourage
+
+	ld a, [wEnemySDefLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .greatly_discourage
+
+; Otherwise, 50% chance to discourage this
+; move if the enemy's HP is below 50%.
+	callfar AI_50_50
+	ret c
+	inc [hl]
+	ret
+
+.maybe_encourage
+	callfar AI_50_50
+	ret c
+	dec [hl]
+	ret
+
+.greatly_discourage
+	call Random
+	cp 10 percent
+	ret c
+	inc [hl]
+	inc [hl]
+	ret
+
+AI_Smart_BrightMoss:
+	pop hl
+; 60% chance to encourage this move if the enemy's accuracy is sharply lowered.
+	ld a, [wEnemyAccLevel]
+	cp BASE_STAT_LEVEL - 2
+	jr c, .encourage
+
+; 60% chance to encourage this move if the player's evasion is sharply raised.
+	ld a, [wPlayerEvaLevel]
+	cp BASE_STAT_LEVEL + 3
+	jr nc, .encourage
+
+; 92% chance to discourage this move otherwise.
+	call Random
+	cp 8 percent
+	ret c
+
+	inc [hl]
+	ret
+
+.encourage
+	call Random
+	cp 39 percent + 1
+	ret c
+	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_Ingrain:
+; Greatly disourage this move if the player has shown
+; super-effective moves against the enemy.
+; Consider player's type(s) if its moves are unknown.
+; Otherwise, follow Aqua Ring scoring.
+	callfar CheckPlayerMoveTypeMatchups
+	ld a, [wEnemyAISwitchScore]
+	cp 10 ; neutral
+	jr nc, AI_Smart_AquaRing
+	pop hl
+	inc [hl]
+	inc [hl]
+	inc [hl]
+	ret
+
+AI_Smart_AquaRing:
+	pop hl
+; Greatly disourage this move if the enemy's HP is below 25%.
+	callfar AICheckEnemyQuarterHP
+	jr nc, .greatly_discourage
+
+; 50% chance to encourage this move if the enemy's HP is full.
+	callfar AICheckEnemyMaxHP
+	jr c, .maybe_encourage
+
+; Encourage this move if the enemy's HP is above 50%.
+	callfar AICheckEnemyHalfHP
+	ret nc
+	dec [hl]
+	ret
+
+.greatly_discourage
+	inc [hl]
+	inc [hl]
+	inc [hl]
+	ret
+
+.maybe_encourage
+	callfar AI_50_50
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_MagnetRise:
+	pop hl
+; 80% chance to encourage this move on turn 1 if the
+; player is ground-type.
+	ld a, [wEnemyTurnsTaken]
+	and a
+	jr z, .check_ground
+
+; 90% chance to greatly encourage this move if the player
+; just used a ground-type move.
+	ld a, [wLastPlayerMove]
+	and a
+	ret z
+
+	push hl
+	ld l, a
+	ld a, MOVE_TYPE
+	call GetMoveAttribute
+	ld [wPlayerMoveStruct + MOVE_TYPE], a
+	and TYPE_MASK
+	cp GROUND
+	pop hl
+	ret nz
+	
+	call Random
+	cp 10 percent
+	ret c
+	dec [hl]
+	dec [hl]
+	ret
+
+.check_ground
+	ld a, [wBattleMonType1]
+	cp GROUND
+	jr z, .encourage
+	ld a, [wBattleMonType2]
+	cp GROUND
+	ret nz
+
+.encourage
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_Refresh:
+	pop hl
+; Greatly encourage this move if the enemy is burned, poisoned, or paralyzed.
+	ld a, [wEnemyMonStatus]
+	bit PAR, a
+	jr nz, .encourage
+	bit BRN, a
+	jr nz, .encourage
+	bit PSN, a
+	ret z
+
+.encourage
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_Swallow:
+AI_Smart_Wish:
+	pop hl
+	callfar AI_Smart_Heal
+	ret
+
+AI_Smart_Weathervane:
+	pop hl
+; Greatly discourage this move if the enemy's HP is below 25%.
+	callfar AICheckEnemyQuarterHP
+	jr nc, .greatly_discourage
+
+; 80% chance to encourage this move in hail or a sandstorm.
+	ld a, [wBattleWeather]
+	cp WEATHER_SANDSTORM
+	jr z, .encourage
+	cp WEATHER_HAIL
+	jr z, .encourage
+
+.check_last_move
+; 50% chance to encourage this move in weather of a type that
+; would make the enemy resist the player's last move.
+	push hl
+	ld hl, wEnemyMonType1
+
+	ld a, [wBattleWeather]
+	cp WEATHER_SUN
+	jr z, .sun
+	cp WEATHER_RAIN
+	jr z, .rain
+	cp WEATHER_SANDSTORM
+	jr z, .sandstorm
+	cp WEATHER_HAIL
+	jr z, .hail
+	cp WEATHER_FOG
+	jr z, .fog
+	cp WEATHER_STORM
+	jr z, .storm
+	pop hl
+
+.greatly_discourage
+	inc [hl]
+	inc [hl]
+	ret
+
+.encourage
+	callfar AI_80_20
+	jr c, .check_last_move
+	dec [hl]
+	ret
+
+.sun
+	ld a, FIRE
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.rain
+	ld a, WATER
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.sandstorm
+	ld a, ROCK
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.hail
+	ld a, ICE
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.fog
+	ld a, FAIRY
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.storm
+	ld a, ELECTRIC
+	predef CheckTypeMatchup
+	pop hl
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE
+	jr c, .greatly_discourage
+	ret z
+	jr .maybe_encourage
+
+.maybe_encourage
+	callfar AI_50_50
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_Cultivate:
+	pop hl
+; Discourage this move if enemy's HP is below 50%.
+	callfar AICheckEnemyHalfHP
+	jr c, .encourage
+	inc [hl]
+	ret
+
+.encourage
+; 50% chance to encourage this move if enemy's HP is above 50%.
+	callfar AI_50_50
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_LaserFocus:
+	pop hl
+; Discourage this move if the enemy's HP is below 50%.
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+
+; Discourage this move if the player's HP is below 25%.
+	callfar AICheckPlayerQuarterHP
+	jr nc, .discourage
+
+; 60% chance to encourage this move if the player's
+; defense or special defense is at least +2.
+	ld a, [wEnemyDefLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr nc, .encourage
+
+	ld a, [wEnemySDefLevel]
+	cp BASE_STAT_LEVEL + 2
+	jr nc, .encourage
+
+.discourage
+	inc [hl]
+	inc [hl]
+	ret
+
+.encourage
+	call Random
+	cp 39 percent + 1
+	ret c
+	dec [hl]
+	ret
+
+AI_Smart_ClangorousSoul:
+	pop hl
+; Dismiss this move if any of the enemy's stats are maxed
+; or if enemy's HP is below 50%.
+; Else, discourage this move if enemy's HP is not full.
+
+	ld a, [wEnemyAtkLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .discourage
+
+	ld a, [wEnemyDefLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .discourage
+
+	ld a, [wEnemySAtkLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .discourage
+
+	ld a, [wEnemySDefLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .discourage
+
+	ld a, [wEnemySpdLevel]
+	cp BASE_STAT_LEVEL + 6
+	jr nc, .discourage
+
+	callfar AICheckEnemyMaxHP
+	ret c
+
+	inc [hl]
+
+	callfar AICheckEnemyHalfHP
+	ret c
+
+.discourage
+	ld a, [hl]
+	add $5
+	ld [hl], a
+	ret
+
+AI_Smart_Teatime:
+	pop hl
+; If the player has a berry and the enemy doesn't, 60% chance
+; to encourage this move on the player's first turn.
+; Otherwise, dismiss this move.
+
+	ld a, [wBattleMonItem]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BERRIES
+	jp nz, FindMove_AIDiscourageMove
+
+	ld a, [wEnemyMonItem]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BERRIES
+	jp z, FindMove_AIDiscourageMove
+
+	ld a, [wPlayerTurnsTaken]
+	and a
+	jp nz, FindMove_AIDiscourageMove
+
+	call Random
+	cp 39 percent + 1
+	ret c
+	dec [hl]
+	ret
+
 AI_Smart_LeechSeed:
 	pop hl
 ; Discourage this move if player's HP is below 50%.
 	callfar AICheckPlayerHalfHP
 	ret c
 	inc [hl]
+	ret
+
+AI_Smart_Nightmare:
+	pop hl
+; The AI_Basic layer will make sure that
+; Nightmare is only used against sleeping targets.
+
+; Discourage this move if player's HP is below 50%.
+; 50% chance to encourage this move otherwise.
+	callfar AICheckPlayerHalfHP
+	jr c, .encourage
+	inc [hl]
+	ret
+
+.encourage
+	callfar AI_50_50
+	ret c
+	dec [hl]
 	ret
 
 AI_Smart_Spite:
@@ -933,11 +1511,106 @@ AI_Smart_Attract:
 	ret
 
 .first_turn
-	call Random
-	cp 79 percent - 1
-	ret nc
+	callfar AI_80_20
+	ret c
 	dec [hl]
 	ret
+
+AI_Smart_Trick:
+	pop hl
+; If the player has a berry and the enemy is holding
+; nothing, 80% to encourage this move.
+; Otherwise, dismiss this move.
+
+	ld a, [wBattleMonItem]
+	ld [wCurItem], a
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BERRIES
+	jp nz, FindMove_AIDiscourageMove
+
+	ld a, [wEnemyMonItem]
+	and a
+	jp nz, FindMove_AIDiscourageMove
+
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	ret
+
+; AI_Smart_PowerSplit:
+; Encourage at both high HP, base offensive stats much lower than player's
+
+; AI_Smart_GuardSplit:
+; Encourage at both high HP, base defensive stats much lower than player's
+
+; AI_Smart_TopsyTurvy:
+; Encourage at both high HP, player's total stat boosts positive
+
+AI_Smart_Electrify:
+	pop hl
+; Dismiss this move if the player is faster than the enemy.
+	callfar AICompareSpeed
+	jr nc, FindMove_AIDiscourageMove
+
+; Greatly discourage this move if player's or enemy's HP is below 25%.
+	callfar AICheckPlayerQuarterHP
+	jr nc, .discourage
+	callfar AICheckEnemyQuarterHP
+	jr nc, .discourage
+
+; Greatly discourage this move if the player has not
+; shown a super-effective move against the enemy.
+; Consider player's type(s) if its moves are unknown.
+	push hl
+	callfar CheckPlayerMoveTypeMatchups
+	ld a, [wEnemyAISwitchScore]
+	cp 10 ; neutral
+	pop hl
+	jr nc, .discourage
+
+; 80% chance to encourage this move if player's
+; last move was super-effective.
+	ld a, [wLastPlayerMove]
+	and a
+	ret z
+
+	push hl
+	ld l, a
+	ld a, MOVE_TYPE
+	call GetMoveAttribute
+	ld [wPlayerMoveStruct + MOVE_TYPE], a
+
+	xor a
+	ldh [hBattleTurn], a
+
+	callfar BattleCheckTypeMatchup
+
+	ld a, [wTypeMatchup]
+	cp EFFECTIVE + 1
+	pop hl
+	ret c
+
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	ret
+
+.discourage
+	inc [hl]
+	inc [hl]
+	ret
+
+; AI_Smart_SpeedSwap:
+; Encourage at both high HP, base speed stat much lower than player's
+
+; AI_Smart_PowerSwap:
+; Encourage at both high HP, if player has boosted offenses
+; or if enemy has lowered offenses
+
+; AI_Smart_GuardSwap:
+; Encourage at both high HP, if player has boosted defenses
+; or if enemy has lowered defenses
 
 AI_Smart_HiddenPower:
 	ld a, 1
@@ -948,22 +1621,19 @@ AI_Smart_HiddenPower:
 	callfar BattleCheckTypeMatchup
 	pop hl
 
-; Discourage Hidden Power if not very effective.
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE
-	jr c, .bad
-
-; Encourage Hidden Power if super-effective.
-	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 1
-	ret c
-
-.good
-	dec [hl]
+	callfar AI_VariableTypeMatchup
 	ret
 
-.bad
-	inc [hl]
+AI_Smart_Judgement:
+	ld a, 1
+	ldh [hBattleTurn], a
+
+; Calculate Judgement's type based on enemy's DVs.
+	callfar JudgementType
+	callfar BattleCheckTypeMatchup
+	pop hl
+
+	callfar AI_VariableTypeMatchup
 	ret
 
 FindMove_AIDiscourageMove:
@@ -990,46 +1660,46 @@ FindMove_AI_Redundant:
 	jp hl
 
 .Moves:
-	dww MAGIC_POWDER,	.MagicPowder
-	dww SOAK,			.Soak
-	dww TRICK,			.Trick
-	dww SWITCHEROO,		.Trick
-	dww LEECH_SEED,		.LeechSeed
-	dww NIGHTMARE,		.Nightmare
-	dww ATTRACT,		.Attract
-	dww TEATIME,		.Teatime
-	dww WISH,			.Wish
-	dww CULTIVATE,		.Cultivate
-	dww WEATHERVANE,	.Weathervane
-	dww SWALLOW,		.Swallow
-	dww REFRESH,		.Refresh
-	dww MAGNET_RISE,	.MagnetRise
-	dww AQUA_RING,		.AquaRing
-	dww LUCKY_CHANT,	.LuckyChant
-	dww INGRAIN,		.Ingrain
-	dww STOCKPILE,		.Stockpile
-	dww MISTY_TERRAIN,	.MistyTerrain
-	dww SPIKES,			.Spikes
-	dww TOXIC_SPIKES,	.ToxicSpikes
-	dww STEALTH_ROCK,	.StealthRock
-	dww STICKY_WEB,		.StickyWeb
-	dww AURORA_VEIL,	.AuroraVeil
-	dww HAIL,			.Hail
-	dww LIGHT_SCREEN,	.LightScreen
-	dww REFLECT,		.Reflect
-	dww SUBSTITUTE,		.Substitute
-	dww OCTOLOCK,		.ArenaTrap
-	dww FAIRY_LOCK,		.ArenaTrap
-	dww SPIDER_WEB,		.ArenaTrap
-	dww BLOCK,			.ArenaTrap
-	dww MEAN_LOOK,		.ArenaTrap
-	dww PERISH_SONG,	.PerishSong
-	dww SANDSTORM,		.Sandstorm
-	dww SUNNY_DAY,		.SunnyDay
-	dww RAIN_DANCE,		.RainDance
-	dww SAFEGUARD,		.Safeguard
-	dww FOCUS_ENERGY,	.FocusEnergy
-	dww MIST,			.Mist
+	dww MAGIC_POWDER,  .MagicPowder
+	dww SOAK,          .Soak
+	dww TRICK,         .Trick
+	dww SWITCHEROO,    .Trick
+	dww LEECH_SEED,    .LeechSeed
+	dww NIGHTMARE,     .Nightmare
+	dww ATTRACT,       .Attract
+	dww TEATIME,       .Teatime
+	dww WISH,          .Wish
+	dww CULTIVATE,     .Cultivate
+	dww WEATHERVANE,   .Weathervane
+	dww SWALLOW,       .Swallow
+	dww REFRESH,       .Refresh
+	dww MAGNET_RISE,   .MagnetRise
+	dww AQUA_RING,     .AquaRing
+	dww LUCKY_CHANT,   .LuckyChant
+	dww INGRAIN,       .Ingrain
+	dww STOCKPILE,     .Stockpile
+	dww MISTY_TERRAIN, .MistyTerrain
+	dww SPIKES,        .Spikes
+	dww TOXIC_SPIKES,  .ToxicSpikes
+	dww STEALTH_ROCK,  .StealthRock
+	dww STICKY_WEB,    .StickyWeb
+	dww AURORA_VEIL,   .AuroraVeil
+	dww HAIL,          .Hail
+	dww LIGHT_SCREEN,  .LightScreen
+	dww REFLECT,       .Reflect
+	dww SUBSTITUTE,    .Substitute
+	dww OCTOLOCK,      .ArenaTrap
+	dww FAIRY_LOCK,    .ArenaTrap
+	dww SPIDER_WEB,    .ArenaTrap
+	dww BLOCK,         .ArenaTrap
+	dww MEAN_LOOK,     .ArenaTrap
+	dww PERISH_SONG,   .PerishSong
+	dww SANDSTORM,     .Sandstorm
+	dww SUNNY_DAY,     .SunnyDay
+	dww RAIN_DANCE,    .RainDance
+	dww SAFEGUARD,     .Safeguard
+	dww FOCUS_ENERGY,  .FocusEnergy
+	dww MIST,          .Mist
 	db -1 ; end
 
 .MagicPowder:
