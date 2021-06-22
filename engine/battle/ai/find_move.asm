@@ -92,7 +92,7 @@ FindMove_AI_Smart_Scoring:
 	dww GUARD_SPLIT,     AI_Smart_GuardSplit
 	dww TOPSY_TURVY,     AI_Smart_TopsyTurvy
 	dww ELECTRIFY,       AI_Smart_Electrify
-	dww SPEED_SWAP,      AI_Smart_SpeedSwap
+	; dww SPEED_SWAP,      AI_Smart_SpeedSwap
 	dww POWER_SWAP,      AI_Smart_PowerSwap
 	dww GUARD_SWAP,      AI_Smart_GuardSwap
 	dww HEART_SWAP,      AI_Smart_HeartSwap
@@ -710,6 +710,7 @@ AI_Smart_MeanLook:
 	callfar AICheckEnemyHalfHP
 	jr nc, .discourage
 
+; Dismiss this move if this is the player's last Pokemon.
 	push hl
 	callfar AICheckLastPlayerMon
 	pop hl
@@ -912,6 +913,7 @@ AI_Smart_HeartSwap:
 	ret
 
 AI_Smart_ShellSmash:
+	pop hl
 ; Discourage this move if the enemy's HP is below 50%.
 	callfar AICheckEnemyHalfHP
 	jr nc, .discourage
@@ -945,6 +947,7 @@ AI_Smart_ShellSmash:
 	ret
 
 AI_Smart_QuiverDance:
+	pop hl
 ; Discourage this move if enemy's HP is lower than 50%.
 	call AICheckEnemyHalfHP
 	jr nc, .discourage
@@ -1538,20 +1541,253 @@ AI_Smart_Trick:
 	dec [hl]
 	ret
 
-; AI_Smart_PowerSplit:
-; Encourage at both high HP, base offensive stats much lower than player's
+AI_Smart_PowerSplit:
+; Discourage this move if player's HP or enemy's HP is lower than 50%.
+	callfar AICheckPlayerHalfHP
+	jr nc, .discourage
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
 
-; AI_Smart_GuardSplit:
-; Encourage at both high HP, base defensive stats much lower than player's
+; Encourage this move if the enemy's base attack stat is
+; less than half of the player's base attack, and the
+; enemy's base special attack stat is less than the
+; player's base special attack.
+	call .get_attack
 
-; AI_Smart_TopsyTurvy:
+; Divide the player's base attack stat by 2.
+	srl h
+	rr l
+
+	call .compare_hl_bc
+	jr nc, .check2
+
+	call .get_special_attack
+	call .compare_hl_bc
+	jr nc, .check2
+	jr .encourage
+
+.check2
+; Encourage this move if the enemy's base special attack
+; stat is less than half of the player's base special
+; attack, and the enemy's base attack stat is less
+; than the player's base attack.
+; Otherwise, discourage this move.
+	call .get_special_attack
+
+; Divide the player's base special attack stat by 2.
+	srl h
+	rr l
+
+	call .compare_hl_bc
+	jr nc, .discourage
+
+	call .get_attack
+	call .compare_hl_bc
+	jr nc, .discourage
+
+.encourage
+	pop hl
+	dec [hl]
+	dec [hl]
+	ret
+
+.discourage
+	pop hl
+	inc [hl]
+	inc [hl]
+	ret
+
+.compare_hl_bc
+; Returns c if hl > bc
+	ld a, b
+	cp h
+	ret c
+	ld a, c
+	cp l
+	ret
+
+.get_attack
+; Get player's base attack stat in hl.
+	ld a, [wPlayerAttack]
+	ld h, a
+	ld a, [wPlayerAttack + 1]
+	ld l, a
+	
+; Get enemy's base attack stat in bc.
+	ld a, [wEnemyAttack]
+	ld b, a
+	ld a, [wEnemyAttack + 1]
+	ld c, a
+	ret
+
+.get_special_attack
+; Get player's base special attack stat in hl.
+	ld a, [wPlayerSpAtk]
+	ld h, a
+	ld a, [wPlayerSpAtk + 1]
+	ld l, a
+	
+; Get enemy's base special attack stat in bc.
+	ld a, [wEnemySpAtk]
+	ld b, a
+	ld a, [wEnemySpAtk + 1]
+	ld c, a
+	ret
+
+AI_Smart_GuardSplit:
+; Discourage this move if player's HP or enemy's HP is lower than 50%.
+	callfar AICheckPlayerHalfHP
+	jr nc, .discourage
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+
+; Encourage this move if the enemy's base defense stat is
+; less than half of the player's base defense, and the
+; enemy's base special defense stat is less than the
+; player's base special defense.
+	call .get_defense
+
+; Divide the player's base defense stat by 2.
+	srl h
+	rr l
+
+	call .compare_hl_bc
+	jr nc, .check2
+
+	call .get_special_defense
+	call .compare_hl_bc
+	jr nc, .check2
+	jr .encourage
+
+.check2
+; Encourage this move if the enemy's base special defense
+; stat is less than half of the player's base special
+; defense, and the enemy's base defense stat is less
+; than the player's base defense.
+; Otherwise, discourage this move.
+	call .get_special_defense
+
+; Divide the player's base special defense stat by 2.
+	srl h
+	rr l
+
+	call .compare_hl_bc
+	jr nc, .discourage
+
+	call .get_defense
+	call .compare_hl_bc
+	jr nc, .discourage
+
+.encourage
+	pop hl
+	dec [hl]
+	dec [hl]
+	ret
+
+.discourage
+	pop hl
+	inc [hl]
+	inc [hl]
+	inc [hl]
+	ret
+
+.compare_hl_bc
+; Returns c if hl > bc
+	ld a, b
+	cp h
+	ret c
+	ld a, c
+	cp l
+	ret
+
+.get_defense
+; Get player's base defense stat in hl.
+	ld a, [wPlayerDefense]
+	ld h, a
+	ld a, [wPlayerDefense + 1]
+	ld l, a
+	
+; Get enemy's base defense stat in bc.
+	ld a, [wEnemyDefense]
+	ld b, a
+	ld a, [wEnemyDefense + 1]
+	ld c, a
+	ret
+
+.get_special_defense
+; Get player's base special defense stat in hl.
+	ld a, [wPlayerSpDef]
+	ld h, a
+	ld a, [wPlayerSpDef + 1]
+	ld l, a
+	
+; Get enemy's base special defense stat in bc.
+	ld a, [wEnemySpDef]
+	ld b, a
+	ld a, [wEnemySpDef + 1]
+	ld c, a
+	ret
+
+AI_Smart_TopsyTurvy:
 ; Encourage at both high HP, player's total stat boosts positive
+
+; Calculate the sum of all player's stat level modifiers.
+; Add 100 first to prevent underflow.
+; Put the result in d. d will range between 58 and 142.
+	ld hl, wPlayerAtkLevel
+	ld b, NUM_LEVEL_STATS
+	ld d, 100
+
+.player_loop
+	ld a, [hli]
+	sub BASE_STAT_LEVEL
+	add d
+	ld d, a
+	dec b
+	jr nz, .player_loop
+
+; Greatly encourage this move if the player's total stat level modifiers
+; are +4 or higher (d >= 104).
+	pop hl
+	ld a, d
+	cp 104
+	jr nc, .greatly_encourage
+; Dismiss this move if the player's total stat level modifiers
+; are neutral or negative (d < 101).
+	cp 101
+	jp c, FindMove_AIDiscourageMove
+
+; 80% chance to discourage this move if the
+; enemy's HP or the player's HP is below 50%.
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+	callfar AICheckPlayerHalfHP
+	jr nc, .discourage
+
+; Otherwise, 60% chance to encourage this move.
+	call Random
+	cp 39 percent + 1
+	ret c
+	dec [hl]
+	ret
+
+.greatly_encourage
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+.discourage
+	callfar AI_80_20
+	ret c
+	inc [hl]
+	ret
 
 AI_Smart_Electrify:
 	pop hl
 ; Dismiss this move if the player is faster than the enemy.
 	callfar AICompareSpeed
-	jr nc, FindMove_AIDiscourageMove
+	jp nc, FindMove_AIDiscourageMove
 
 ; Greatly discourage this move if player's or enemy's HP is below 25%.
 	callfar AICheckPlayerQuarterHP
@@ -1601,16 +1837,61 @@ AI_Smart_Electrify:
 	inc [hl]
 	ret
 
-; AI_Smart_SpeedSwap:
-; Encourage at both high HP, base speed stat much lower than player's
+AI_Smart_PowerSwap:
+	pop hl
+; Dismiss this move if the enemy's offensive stat changes
+; are both equal to or greater than the player's.
+	ld a, [wPlayerAtkLevel]
+	ld b, a
+	ld a, [wEnemyAtkLevel]
+	cp b
+	jr c, AI_StatSwapCheckHP
 
-; AI_Smart_PowerSwap:
-; Encourage at both high HP, if player has boosted offenses
-; or if enemy has lowered offenses
+	ld a, [wPlayerSAtkLevel]
+	ld c, a
+	ld a, [wEnemySAtkLevel]
+	cp c
+	jr nc, FindMove_AIDiscourageMove
+	jr AI_StatSwapCheckHP
 
-; AI_Smart_GuardSwap:
-; Encourage at both high HP, if player has boosted defenses
-; or if enemy has lowered defenses
+AI_Smart_GuardSwap:
+	pop hl
+; Dismiss this move if the enemy's offensive stat changes
+; are both equal to or greater than the player's.
+	ld a, [wPlayerAtkLevel]
+	ld b, a
+	ld a, [wEnemyAtkLevel]
+	cp b
+	jr c, AI_StatSwapCheckHP
+
+	ld a, [wPlayerSAtkLevel]
+	ld c, a
+	ld a, [wEnemySAtkLevel]
+	cp c
+	jr nc, FindMove_AIDiscourageMove
+
+; fallthrough
+
+AI_StatSwapCheckHP:
+; Over 90% chance to discourage this move if player's
+; or enemy's HP is below 50%.
+	callfar AICheckPlayerHalfHP
+	jr nc, .discourage
+	callfar AICheckEnemyHalfHP
+	jr nc, .discourage
+
+; 80% chance to encourage this move.
+	callfar AI_80_20
+	ret c
+	dec [hl]
+	ret
+
+.discourage
+	call Random
+	cp 8 percent
+	ret c
+	inc [hl]
+	ret
 
 AI_Smart_HiddenPower:
 	ld a, 1

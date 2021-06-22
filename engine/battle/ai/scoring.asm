@@ -191,6 +191,7 @@ AI_Setup:
 	dw COIL
 	dw LUCKY_CHANT
 	dw POWER_TRICK
+	dw SPEED_SWAP
 	dw -1 ; end
 
 
@@ -814,9 +815,16 @@ AI_Smart_EvasionUp:
 	call AICheckEnemyMaxHP
 	jr nc, .hp_mismatch_1
 
-; ...greatly encourage this move if player is badly poisoned.
+; ...greatly encourage this move if player is badly poisoned...
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TOXIC, a
+	jr nz, .greatly_encourage
+
+; ...or if the enemy has Aqua Ring or Ingrain.
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jr nz, .greatly_encourage
+	bit SUBSTATUS_AQUA_RING, a
 	jr nz, .greatly_encourage
 
 ; ...70% chance to greatly encourage this move if player is not badly poisoned.
@@ -983,9 +991,16 @@ AI_Smart_AccuracyDown:
 	call AICheckEnemyHalfHP
 	jr nc, .hp_mismatch_1
 
-; ...greatly encourage this move if player is badly poisoned.
+; ...greatly encourage this move if player is badly poisoned...
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TOXIC, a
+	jr nz, .greatly_encourage
+
+; ...or if the enemy has Aqua Ring or Ingrain.
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_INGRAINED, a
+	jr nz, .greatly_encourage
+	bit SUBSTATUS_AQUA_RING, a
 	jr nz, .greatly_encourage
 
 ; ...70% chance to greatly encourage this move if player is not badly poisoned.
@@ -1171,7 +1186,28 @@ AI_Smart_ForceSwitch:
 	ld a, [wEnemyAISwitchScore]
 	cp 10 ; neutral
 	pop hl
-	ret c
+	jr nc, .discourage
+
+; Otherwise, encourage this move if the player's HP is above 50%
+; and there's an entry hazard on the player's side.
+	call AICheckPlayerHalfHP
+	ret nc
+
+	ld a, [wPlayerScreens]
+	bit SCREENS_SPIKES, a
+	jr nz, .encourage
+	bit SCREENS_TOXIC_SPIKES, a
+	jr nz, .encourage
+	bit SCREENS_STEALTH_ROCK, a
+	jr nz, .encourage
+	bit SCREENS_STICKY_WEB, a
+	ret z
+
+.encourage
+	dec [hl]
+	ret
+
+.discourage
 	inc [hl]
 	ret
 
@@ -1383,6 +1419,14 @@ AI_Smart_RazorWind:
 ; Discourage if the player has a protection move
 	ld a, [wEnemyMoveStruct + MOVE_EFFECT]
 	cp EFFECT_PROTECT
+	jr z, .dismiss
+	cp EFFECT_SPIKY_SHIELD
+	jr z, .dismiss
+	cp EFFECT_KINGS_SHIELD
+	jr z, .dismiss
+	cp EFFECT_BANEFUL_BUNKER
+	jr z, .dismiss
+	cp EFFECT_OBSTRUCT
 	jr z, .dismiss
 	dec c
 	jr nz, .checkmove
@@ -2363,17 +2407,6 @@ AI_Smart_Protect:
 	bit SUBSTATUS_LASER_FOCUS, a
 	jr nz, .encourage
 
-; Encourage this move if the player is affected by Toxic, Leech Seed, or Curse.
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_TOXIC, a
-	jr nz, .encourage
-	ld a, [wPlayerSubStatus4]
-	bit SUBSTATUS_LEECH_SEED, a
-	jr nz, .encourage
-	ld a, [wPlayerSubStatus1]
-	bit SUBSTATUS_CURSE, a
-	jr nz, .encourage
-
 ; Encourage this move if the enemy has used Ingrain, Aqua Ring, or Octolock
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_INGRAINED, a
@@ -2383,6 +2416,17 @@ AI_Smart_Protect:
 
 	ld a, [wEnemySubStatus7]
 	bit SUBSTATUS_OCTOLOCK, a
+	jr nz, .encourage
+
+; Encourage this move if the player is affected by Toxic, Leech Seed, or Curse.
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_TOXIC, a
+	jr nz, .encourage
+	ld a, [wPlayerSubStatus4]
+	bit SUBSTATUS_LEECH_SEED, a
+	jr nz, .encourage
+	ld a, [wPlayerSubStatus1]
+	bit SUBSTATUS_CURSE, a
 	jr nz, .encourage
 
 ; Discourage this move if the player's Rollout count is not boosted enough.
