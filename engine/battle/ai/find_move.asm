@@ -1729,8 +1729,6 @@ AI_Smart_GuardSplit:
 	ret
 
 AI_Smart_TopsyTurvy:
-; Encourage at both high HP, player's total stat boosts positive
-
 ; Calculate the sum of all player's stat level modifiers.
 ; Add 100 first to prevent underflow.
 ; Put the result in d. d will range between 58 and 142.
