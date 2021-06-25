@@ -17,7 +17,7 @@ BattleCommand_Defog:
 .no_fog
 
 ; Remove the target's Mist
-	ld a, BATTLE_VARS_SUBSTATUS4
+	ld a, BATTLE_VARS_SUBSTATUS4_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_MIST, [hl]
 	jr z, .no_mist_target

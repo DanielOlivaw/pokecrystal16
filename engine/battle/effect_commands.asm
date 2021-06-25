@@ -1863,6 +1863,8 @@ BattleCommand_CheckHit:
 	ret z
 	cp EFFECT_STATUS_OPP_ACC
 	ret z
+	cp EFFECT_DEFOG
+	ret z
 
 	call .StatModifiers
 
@@ -7674,6 +7676,77 @@ BattleCommand_CheckSafeguard:
 ; checksafeguard
 	farcall CheckSafeguardEffect
 	ret
+
+BattleCommand_DefogAnim:
+; defoganim
+	ld a, [wBattleWeather]
+	cp WEATHER_FOG
+	jr z, .animate
+
+	ld a, BATTLE_VARS_SUBSTATUS4_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_MIST, [hl]
+	jr nz, .animate
+
+	ld hl, wEnemyScreens
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .check_target_screens
+	ld hl, wPlayerScreens
+.check_target_screens
+	bit SCREENS_REFLECT, [hl]
+	jr nz, .animate
+	bit SCREENS_LIGHT_SCREEN, [hl]
+	jr nz, .animate
+	bit SCREENS_SAFEGUARD, [hl]
+	jr nz, .animate
+	bit SCREENS_AURORA_VEIL, [hl]
+	jr nz, .animate
+	bit SCREENS_SPIKES, [hl]
+	jr nz, .animate
+	bit SCREENS_TOXIC_SPIKES, [hl]
+	jr nz, .animate
+	bit SCREENS_STEALTH_ROCK, [hl]
+	jr nz, .animate
+	bit SCREENS_STICKY_WEB, [hl]
+	jr nz, .animate
+
+	ld hl, wPlayerScreens
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .check_user_screens
+	ld hl, wEnemyScreens
+.check_user_screens
+	bit SCREENS_SPIKES, [hl]
+	jr nz, .animate
+	bit SCREENS_TOXIC_SPIKES, [hl]
+	jr nz, .animate
+	bit SCREENS_STEALTH_ROCK, [hl]
+	jr nz, .animate
+	bit SCREENS_STICKY_WEB, [hl]
+	jr nz, .animate
+
+	ld a, [wFailedMessage]
+	and a
+	jr nz, .done
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .done
+
+.animate
+	ld a, [wFailedMessage]
+	and a
+	jr nz, .animate_fail_text
+	call BattleCommand_StatDownAnim
+	jp BattleCommand_StatDownMessage
+
+.done
+	jp BattleCommand_StatDownFailText
+
+.animate_fail_text
+	xor a
+	ld [wAttackMissed], a
+	jp BattleCommand_StatDownAnim
 
 INCLUDE "engine/battle/move_effects/baton_pass.asm"
 

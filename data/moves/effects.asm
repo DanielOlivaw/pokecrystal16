@@ -2368,12 +2368,8 @@ Defog:
 	doturn
 	checkhit
 	evasiondown
-	lowersub
-	statdownanim
-	raisesub
+	defoganim
 	farcommand
-	statdownmessage
-	statdownfailtext
 	endmove
 
 DragonDance:

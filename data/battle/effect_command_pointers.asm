@@ -180,3 +180,4 @@ BattleCommandPointers:
 	dw BattleCommand_GuileFang
 	dw BattleCommand_DataPulse
 	dw BattleCommand_MeFirst
+	dw BattleCommand_DefogAnim
