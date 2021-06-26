@@ -221,6 +221,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_ENEMYFEET_2ROW
 	const ANIM_OBJ_PLAYERHEAD_2ROW
 	const ANIM_OBJ_HAIL
+	const ANIM_OBJ_MUDDY_WATER
 ; From Rangi's Polished Crystal
 	const ANIM_OBJ_ENERGY_BALL
 	const ANIM_OBJ_GEM

@@ -7736,14 +7736,14 @@ BattleCommand_DefogAnim:
 .animate
 	ld a, [wFailedMessage]
 	and a
-	jr nz, .animate_fail_text
+	jr nz, .animate_without_stat_text
 	call BattleCommand_StatDownAnim
 	jp BattleCommand_StatDownMessage
 
 .done
 	jp BattleCommand_StatDownFailText
 
-.animate_fail_text
+.animate_without_stat_text
 	xor a
 	ld [wAttackMissed], a
 	jp BattleCommand_StatDownAnim

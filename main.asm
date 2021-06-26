@@ -464,6 +464,10 @@ SECTION "Move Animations 2", ROMX
 
 INCLUDE "data/moves/animations.asm"
 
+; SECTION "Move Animations 3", ROMX
+
+; INCLUDE "data/moves/animations_2.asm"
+
 
 SECTION "Font Inversed", ROMX
 

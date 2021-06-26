@@ -190,6 +190,7 @@ CharmanderEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, GROWL
+	dbw 1, FREEZING_GLARE
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
 	dbw 12, DRAGON_RAGE
