@@ -2586,6 +2586,8 @@ BattleCommand_MoveAnimNoSub:
 	jr z, .alternate_anim
 	cp EFFECT_SCALE_SHOT
 	jr z, .alternate_anim
+	; cp EFFECT_FORCE_SWITCH_HIT
+	; jr z, .alternate_anim
 	cp EFFECT_TRIPLE_KICK
 	jr z, .triplekick
 	xor a
@@ -6241,26 +6243,29 @@ BattleCommand_ForceSwitch:
 .succeed
 	push af
 	call SetBattleDraw
+
 	ld a, $1
 	ld [wKickCounter], a
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FORCE_SWITCH_HIT
-	jr z, .skip_animation
 
 	call AnimateCurrentMove
 	ld c, 20
 	call DelayFrames
-.skip_animation
 	pop af
 
+	push af
 	ld hl, FledInFearText
 	ld bc, ROAR
 	call CompareMove
 	jr z, .do_text
+	pop af
+	push af
 	ld hl, BlownAwayText
+	ld bc, WHIRLWIND
+	call CompareMove
+	jr z, .do_text
+	ld hl, KnockedAwayText
 .do_text
+	pop af
 	jp StdBattleTextbox
 
 CheckPlayerHasMonToSwitchTo:

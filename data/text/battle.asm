@@ -963,6 +963,11 @@ BlownAwayText:
 	line "was blown away!"
 	prompt
 
+KnockedAwayText:
+	text "<TARGET>"
+	line "was knocked away!"
+	prompt
+
 		;"123456789123456789"
 
 PlayerHitTimesText:

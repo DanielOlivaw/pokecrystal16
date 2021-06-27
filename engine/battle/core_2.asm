@@ -17,6 +17,25 @@ Core2_NewTurnEndEffects:
 	call HandleSafeguard
 	jp HandleScreens
 
+CheckMaxHP:
+; Return z if we're already at max HP
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld hl, wEnemyMonHP
+.got_hp
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	cp b
+	ret nz
+	ld a, [hl]
+	cp c
+	ret
+
 HandleLeftovers:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -39,6 +58,17 @@ HandleLeftovers:
 	ld a, b
 	cp HELD_LEFTOVERS
 	ret nz
+	call CheckMaxHP
+	ret z
+	xor a
+	ld [wNumHits], a
+	if HIGH(RECOVER)
+		ld a, HIGH(RECOVER)
+	endc
+	ld [wFXAnimID + 1], a
+	ld a, LOW(RECOVER)
+	ld [wFXAnimID], a
+	predef PlayBattleAnim
 	farcall RestoreSixteenthMaxHP
 	ld hl, BattleText_TargetRecoveredWithItem
 	jp StdBattleTextbox
@@ -280,8 +310,18 @@ HandleAquaRing:
 .do_it
 	bit SUBSTATUS_AQUA_RING, [hl]
 	ret z
-	farcall RestoreSixteenthMaxHP
+	call CheckMaxHP
 	ret z
+	xor a
+	ld [wNumHits], a
+	if HIGH(AQUA_RING)
+		ld a, HIGH(AQUA_RING)
+	endc
+	ld [wFXAnimID + 1], a
+	ld a, LOW(AQUA_RING)
+	ld [wFXAnimID], a
+	predef PlayBattleAnim
+	farcall RestoreSixteenthMaxHP
 	ld hl, VeilOfWaterRestoredText
 	jp StdBattleTextbox
 
@@ -307,8 +347,18 @@ HandleIngrain:
 .do_it
 	bit SUBSTATUS_INGRAINED, [hl]
 	ret z
-	farcall RestoreSixteenthMaxHP
+	call CheckMaxHP
 	ret z
+	xor a
+	ld [wNumHits], a
+	if HIGH(INGRAIN)
+		ld a, HIGH(INGRAIN)
+	endc
+	ld [wFXAnimID + 1], a
+	ld a, LOW(INGRAIN)
+	ld [wFXAnimID], a
+	predef PlayBattleAnim
+	farcall RestoreSixteenthMaxHP
 	ld hl, AbsorbedNutrientsText
 	jp StdBattleTextbox
 
