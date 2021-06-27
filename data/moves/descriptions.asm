@@ -1246,7 +1246,6 @@ SplashDescription:
 
 AcidArmorDescription:
 IronDefenseDescription:
-CottonGuardDescription:
 	db   "Sharply raises the"
 	next "user's DEFENSE.@"
 
@@ -2637,6 +2636,10 @@ GyroBallDescription:
 TeleportDescription:
 	db   "The user switches"
 	next "with an ally.@"
+
+CottonGuardDescription:
+	db   "Drastically raises"
+	next "user's DEFENSE.@"
 
 ; FlyingPressDescription:
 	; db   "A FIGHTING- and"

@@ -351,11 +351,11 @@ HandleIngrain:
 	ret z
 	xor a
 	ld [wNumHits], a
-	if HIGH(INGRAIN)
-		ld a, HIGH(INGRAIN)
+	if HIGH(RECOVER)
+		ld a, HIGH(RECOVER)
 	endc
 	ld [wFXAnimID + 1], a
-	ld a, LOW(INGRAIN)
+	ld a, LOW(RECOVER)
 	ld [wFXAnimID], a
 	predef PlayBattleAnim
 	farcall RestoreSixteenthMaxHP
