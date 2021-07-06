@@ -22,11 +22,11 @@ IsHMMove::
 	; jp IsInHalfwordArray
 
 .HMMoves:
-	dw CUT
-	dw FLY
-	dw SURF
-	dw STRENGTH
-	dw FLASH
-	dw WATERFALL
-	dw WHIRLPOOL
+	dw CUT            ; HM01
+	dw FLY            ; HM02
+	dw SURF           ; HM03
+	dw STRENGTH       ; HM04
+	dw WHIRLPOOL      ; HM05
+	dw ROCK_CLIMB     ; HM06
+	dw DIVE           ; HM07
 	dw -1 ; end

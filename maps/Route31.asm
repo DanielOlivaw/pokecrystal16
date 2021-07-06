@@ -206,7 +206,7 @@ Route31MailRecipientScript:
 	writetext Text_Route31ReadingMail
 	buttonsound
 	setevent EVENT_GAVE_KENYA
-	verbosegivetmhm TM_NIGHTMARE
+	verbosegivetmhm TM_STEALTH_ROCK
 	iffalse .NoRoomForItems
 	setevent EVENT_GOT_TM50_NIGHTMARE
 .DescribeNightmare:
@@ -350,19 +350,20 @@ Text_Route31ReadingMail:
 	done
 
 Text_Route31DescribeNightmare:
-	text "TM50 is NIGHTMARE."
+	text "TM76 is STEALTH"
+	line "ROCK."
 
 	para "It's a wicked move"
-	line "that steadily cuts"
+	line "that cuts the HP"
 
-	para "the HP of a sleep-"
-	line "ing enemy."
+	para "of enemies that"
+	line "enter battle."
 
-	para "Ooooh…"
-	line "That's scary…"
+	; para "Ooooh…"
+	; line "That's scary…"
 
-	para "I don't want to"
-	line "have bad dreams."
+	; para "I don't want to"
+	; line "have bad dreams."
 	done
 
 Text_Route31WrongMail:

@@ -9,9 +9,6 @@ _MainMenu:
 	farcall MainMenu
 	jp StartTitleScreen
 
-; unused
-	ret
-
 PrintDayOfWeek:
 	push de
 	ld hl, .Days

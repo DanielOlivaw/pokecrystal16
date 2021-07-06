@@ -76,7 +76,7 @@ SageLiScript:
 	opentext
 	writetext SageLiTakeThisFlashText
 	buttonsound
-	verbosegivetmhm HM_FLASH
+	verbosegivetmhm TM_TAIL_GLOW
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
 	writetext SageLiFlashExplanationText
@@ -237,20 +237,20 @@ SageLiTakeThisFlashText:
 	para "no problem using"
 	line "this move."
 
-	para "Take this FLASH"
-	line "HM."
+	para "Take this TAIL"
+	line "GLOW TM."
 	done
 
 SageLiFlashExplanationText:
-	text "FLASH illuminates"
-	line "even the darkest"
-	cont "of all places."
+	text "TAIL GLOW illumin-"
+	line "ates even the"
+	cont "darkest of places."
 
-	para "But to use it out"
-	line "of battle, you"
+	; para "But to use it out"
+	; line "of battle, you"
 
-	para "need the BADGE"
-	line "from VIOLET's GYM."
+	; para "need the BADGE"
+	; line "from VIOLET's GYM."
 	done
 
 SageLiAfterBattleText:

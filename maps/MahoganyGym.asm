@@ -42,7 +42,7 @@ MahoganyGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	writetext PryceText_GlacierBadgeSpeech
 	buttonsound
-	verbosegivetmhm TM_ICY_WIND
+	verbosegivetmhm TM_HAIL
 	iffalse MahoganyGym_NoRoomForIcyWind
 	setevent EVENT_GOT_TM16_ICY_WIND
 	writetext PryceText_IcyWindSpeech
@@ -213,14 +213,20 @@ PryceText_GlacierBadgeSpeech:
 
 PryceText_IcyWindSpeech:
 	text "That TM contains"
-	line "ICY WIND."
+	line "HAIL."
 
-	para "It inflicts damage"
-	line "and lowers speed."
+	para "It summons a hail-"
+	line "storm that lasts"
 
-	para "It demonstrates"
-	line "the harshness of"
-	cont "winter."
+	para "for five turns."
+	line "The hailstorm"
+
+	para "damages all types"
+	line "except ICE."
+
+	; para "It demonstrates"
+	; line "the harshness of"
+	; cont "winter."
 	done
 
 PryceText_CherishYourPokemon:

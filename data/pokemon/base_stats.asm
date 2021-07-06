@@ -7,15 +7,21 @@ tmhm: MACRO
 ; used in data/pokemon/base_stats/*.asm
 _tms1 = 0 ; TM01-TM24 (24)
 _tms2 = 0 ; TM25-TM48 (24)
-_tms3 = 0 ; TM49-TM50 + HM01-HM07 + MT01-MT03 (12/24)
+_tms3 = 0 ; TM49-TM72 (24)
+_tms4 = 0 ; TM73-TM96 (24)
+_tms5 = 0 ; TM97-TM99 + HM01-HM07 + MT01-MT03 (13/24)
 rept _NARG
 	if DEF(\1_TMNUM)
 	if \1_TMNUM < 24 + 1
 _tms1 = _tms1 | (1 << ((\1_TMNUM) - 1))
 	elif \1_TMNUM < 48 + 1
 _tms2 = _tms2 | (1 << ((\1_TMNUM) - 1 - 24))
-	else
+	elif \1_TMNUM < 72 + 1
 _tms3 = _tms3 | (1 << ((\1_TMNUM) - 1 - 48))
+	elif \1_TMNUM < 96 + 1
+_tms4 = _tms4 | (1 << ((\1_TMNUM) - 1 - 72))
+	else
+_tms5 = _tms5 | (1 << ((\1_TMNUM) - 1 - 96))
 	endc
 	else
 		fail "\1 is not a TM, HM, or move tutor move"
@@ -30,9 +36,17 @@ rept 3 ; TM25-TM48 (24/24)
 	db _tms2 & $ff
 _tms2 = _tms2 >> 8
 endr
-rept 2 ; TM49-TM50 + HM01-HM07 + MT01-MT03 (12/16)
+rept 3 ; TM49-TM72 (24/24)
 	db _tms3 & $ff
 _tms3 = _tms3 >> 8
+endr
+rept 3 ; TM73-TM96 (24/24)
+	db _tms4 & $ff
+_tms4 = _tms4 >> 8
+endr
+rept 2 ; TM97-TM99 + HM01-HM07 + MT01-MT03 (13/16)
+	db _tms5 & $ff
+_tms5 = _tms5 >> 8
 endr
 ENDM
 
@@ -40,9 +54,9 @@ BaseData::
 	; the parameter to indirect_table must be a compile-time constant, and BASE_DATA_SIZE is not
 	if ((__RGBDS_MAJOR__ << 24) | (__RGBDS_MINOR__ << 8) | __RGBDS_PATCH__) >= $400
 		; if this version of RGBDS supports asserts, just assert that the size is correct
-		assert $20 == BASE_DATA_SIZE, "Please adjust the table size (and this assertion) to match BASE_DATA_SIZE"
+		assert $22 == BASE_DATA_SIZE, "Please adjust the table size (and this assertion) to match BASE_DATA_SIZE"
 	endc
-	indirect_table $20, 1
+	indirect_table $22, 1
 	indirect_entries CELEBI, BaseData1
 	indirect_entries DEOXYS, BaseData2
 	indirect_entries ARCEUS, BaseData3

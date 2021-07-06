@@ -290,9 +290,9 @@ OWFlash:
 
 .CheckUseFlash:
 ; Flash
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
+	; ld de, ENGINE_ZEPHYRBADGE
+	; farcall CheckBadge
+	; jr c, .nozephyrbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -310,9 +310,9 @@ OWFlash:
 	ld a, $80
 	ret
 
-.nozephyrbadge
-	ld a, $80
-	ret
+; .nozephyrbadge
+	; ld a, $80
+	; ret
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -649,10 +649,10 @@ WaterfallFunction:
 
 .TryWaterfall:
 ; Waterfall
-	ld de, ENGINE_RISINGBADGE
-	farcall CheckBadge
-	ld a, $80
-	ret c
+	; ld de, ENGINE_RISINGBADGE
+	; farcall CheckBadge
+	; ld a, $80
+	; ret c
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld hl, Script_WaterfallFromMenu
@@ -720,9 +720,9 @@ TryWaterfallOW::
 	ld hl, WATERFALL
 	call CheckPartyMoveIndex
 	jr c, .failed
-	ld de, ENGINE_RISINGBADGE
-	call CheckEngineFlag
-	jr c, .failed
+	; ld de, ENGINE_RISINGBADGE
+	; call CheckEngineFlag
+	; jr c, .failed
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)

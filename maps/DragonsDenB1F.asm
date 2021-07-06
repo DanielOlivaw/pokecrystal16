@@ -60,7 +60,7 @@ DragonsDenB1F_ClairScene:
 	; playsound SFX_ITEM
 	; waitsfx
 	; itemnotify
-	verbosegivetmhm TM_DRAGONBREATH
+	verbosegivetmhm TM_DRAGON_PULSE
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext ClairText_DescribeDragonbreathDragonDen
 	buttonsound
@@ -217,12 +217,12 @@ ClairText_GiveDragonbreathDragonDen:
 
 NotifyReceiveDragonbreath:
 	text "<PLAYER> received"
-	line "TM24."
+	line "TM59 DRAGON PULSE."
 	done
 
 ClairText_DescribeDragonbreathDragonDen:
 	text "That contains"
-	line "DRAGONBREATH."
+	line "DRAGON PULSE."
 
 	para "No, it doesn't"
 	line "have anything to"

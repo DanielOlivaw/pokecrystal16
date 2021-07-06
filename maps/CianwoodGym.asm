@@ -58,7 +58,7 @@ CianwoodGymChuckScript:
 	setevent EVENT_BEAT_BLACKBELT_LUNG
 	writetext ChuckExplainBadgeText
 	buttonsound
-	verbosegivetmhm TM_DYNAMICPUNCH
+	verbosegivetmhm TM_BRICK_BREAK
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
 	writetext ChuckExplainTMText
@@ -216,14 +216,14 @@ ChuckExplainBadgeText:
 	done
 
 ChuckExplainTMText:
-	text "That is DYNAMIC-"
-	line "PUNCH."
+	text "That is BRICK"
+	line "BREAK."
 
-	para "It doesn't always"
-	line "hit, but when it"
+	para "It smashes right"
+	line "through barriers"
 
-	para "does, it causes"
-	line "confusion!"
+	para "like REFLECT and"
+	line "LIGHT SCREEN!"
 	done
 
 ChuckAfterText:

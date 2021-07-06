@@ -80,7 +80,7 @@ PokefanF_SnoreFarmer:
 FarmerFScript_GiveSnore:
 	writetext FarmerFText_HealedMiltank
 	buttonsound
-	verbosegivetmhm TM_SNORE
+	verbosegivetmhm TM_ENDURE
 	iffalse FarmerFScript_NoRoomForSnore
 	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
 FarmerFScript_GotSnore:
@@ -179,13 +179,17 @@ Text_ReceivedTM13:
 
 FarmerFText_SnoreSpeech:
 	text "That there's"
-	line "SNORE."
+	line "ENDURE."
 
 	para "It's a rare move"
-	line "that only works"
+	line "that keeps the"
+	
+	para "user from"
+	line "faintin'."
+	; line "that only works"
 
-	para "while the #MON"
-	line "is asleep."
+	; para "while the #MON"
+	; line "is asleep."
 
 	para "You best think how"
 	line "you ought to use"

@@ -73,8 +73,9 @@ GoldenrodDeptStore5FReceptionistScript:
 	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
 	buttonsound
 	ifgreater 150 - 1, .VeryHappy
-	ifgreater 50 - 1, .SomewhatHappy
-	sjump .NotVeryHappy
+	; ifgreater 50 - 1, .SomewhatHappy
+	; sjump .NotVeryHappy
+	sjump .SomewhatHappy
 
 .VeryHappy:
 	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
@@ -93,16 +94,16 @@ GoldenrodDeptStore5FReceptionistScript:
 	closetext
 	end
 
-.NotVeryHappy:
-	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
-	buttonsound
-	checktmhm TM_FRUSTRATION
-	iftrue .AlreadyGotTM
-	verbosegivetmhm TM_FRUSTRATION
-	; iffalse .Done
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-	closetext
-	end
+; .NotVeryHappy:
+	; writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+	; buttonsound
+	; checktmhm TM_FRUSTRATION
+	; iftrue .AlreadyGotTM
+	; verbosegivetmhm TM_FRUSTRATION
+	;; iffalse .Done
+	; setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+	; closetext
+	; end
 
 .AlreadyGotTM
 	writetext GoldenrodDeptStore5FAlreadyGotTMText

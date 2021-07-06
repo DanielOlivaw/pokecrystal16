@@ -16,7 +16,7 @@ SilverCaveRoom1Protein:
 	itemball PROTEIN
 
 SilverCaveRoom1EscapeRope:
-	itemball DUSK_STONE
+	itemball RAZOR_CLAW
 
 SilverCaveRoom1UltraBall:
 	itemball ULTRA_BALL

@@ -185,7 +185,7 @@ FirebreatherRaySeenText:
 	done
 
 FirebreatherRayBeatenText:
-	text "FLASH!"
+	text "TAIL GLOW!"
 	done
 
 FirebreatherRayAfterBattleText:

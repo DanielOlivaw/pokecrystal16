@@ -306,8 +306,8 @@ WRAM0
 WRAMX 1
 	"WRAM 1"
 	"Enemy Party"
-	"Party"
 WRAMX 2
+	"Party"
 	"Pic Animations"
 	align 8
 	"16-bit WRAM tables"

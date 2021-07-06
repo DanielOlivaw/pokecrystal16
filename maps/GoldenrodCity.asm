@@ -101,9 +101,9 @@ MoveTutorScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FLAMETHROWER@"
-	db "THUNDERBOLT@"
-	db "ICE BEAM@"
+	db "FLAME CHARGE@"
+	db "SHOCK WAVE@"
+	db "FROST BREATH@"
 	db "CANCEL@"
 
 .Refused:

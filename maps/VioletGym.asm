@@ -38,7 +38,7 @@ VioletGymFalknerScript:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound
-	verbosegivetmhm TM_MUD_SLAP
+	verbosegivetmhm TM_AERIAL_ACE
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
 	writetext FalknerTMMudSlapText
@@ -156,11 +156,11 @@ FalknerZephyrBadgeText:
 	line "raises the attack"
 	cont "power of #MON."
 
-	para "It also enables"
-	line "#MON to use"
+	; para "It also enables"
+	; line "#MON to use"
 
-	para "FLASH, if they"
-	line "have it, anytime."
+	; para "FLASH, if they"
+	; line "have it, anytime."
 
 	para "Here--take this"
 	line "too."
@@ -181,19 +181,29 @@ FalknerTMMudSlapText:
 	line "be used as many"
 	cont "times as you want."
 
-	para "TM31 contains"
-	line "MUD-SLAP."
+	para "TM40 contains"
+	line "AERIAL ACE."
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "It always hits its"
+	line "target, even if"
 
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "your accuracy's"
+	line "been lowered."
 	done
+
+	; para "TM31 contains"
+	; line "MUD-SLAP."
+
+	; para "It reduces the"
+	; line "enemy's accuracy"
+
+	; para "while it causes"
+	; line "damage."
+
+	; para "In other words, it"
+	; line "is both defensive"
+	; cont "and offensive."
+	; done
 
 FalknerFightDoneText:
 	text "There are #MON"

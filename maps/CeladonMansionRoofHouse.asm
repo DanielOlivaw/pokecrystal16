@@ -23,7 +23,7 @@ CeladonMansionRoofHousePharmacistScript:
 .Night:
 	writetext CeladonMansionRoofHousePharmacistStoryText
 	buttonsound
-	verbosegivetmhm TM_CURSE
+	verbosegivetmhm TM_OMINOUS_WIND
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM03_CURSE
 .GotCurse:
@@ -101,17 +101,19 @@ CeladonMansionRoofHousePharmacistStoryText:
 
 	para "For listening so"
 	line "patiently, you may"
-	cont "take this--TM03!"
+	cont "take this--TM95!"
 	done
 
 CeladonMansionRoofHousePharmacistCurseText:
-	text "TM03 is CURSE."
+	text "TM95 is OMINOUS"
+	line "WIND."
 
 	para "It's a terrifying"
-	line "move that slowly"
+	line "move that may"
 
-	para "whittles down the"
-	line "victim's HP."
+	para "raise all of the"
+	line "user's stats at"
+	cont "once."
 	done
 
 CeladonMansionRoofHouse_MapEvents:
