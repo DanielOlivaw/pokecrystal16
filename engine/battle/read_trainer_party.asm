@@ -89,7 +89,10 @@ ReadTrainerPartyPieces:
 	cp $ff
 	ret z
 
+; level
 	ld [wCurPartyLevel], a
+
+; species
 	call GetNextTrainerDataByte
 	push hl
 	push af
@@ -100,15 +103,18 @@ ReadTrainerPartyPieces:
 	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 
+; add to party
 	ld a, OTPARTYMON
 	ld [wMonType], a
 	predef TryAddMonToParty
 	pop hl
 	inc hl ;because hl was pushed before the last call to GetNextTrainerDataByte
 
+; item?
 	ld a, [wOtherTrainerType]
 	and TRAINERTYPE_ITEM
 	jr z, .no_item
+
 	push hl
 	ld a, [wOTPartyCount]
 	dec a
@@ -117,10 +123,12 @@ ReadTrainerPartyPieces:
 	ld d, h
 	ld e, l
 	pop hl
+
 	call GetNextTrainerDataByte
 	ld [de], a
 .no_item
 
+; moves?
 	ld a, [wOtherTrainerType]
 	rra ; TRAINERTYPE_MOVES_F == 0
 	jr nc, .no_moves

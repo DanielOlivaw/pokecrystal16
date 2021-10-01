@@ -1191,13 +1191,6 @@ BattleAnim_SpacialRend:
 BattleAnim_Retaliate:
 BattleAnim_Facade:
 BattleAnim_TrickRoom:
-BattleAnim_WillOWisp:
-BattleAnim_ShadowPunch:
-BattleAnim_Synchronoise:
-BattleAnim_FrostBreath:
-BattleAnim_IceBall:
-BattleAnim_HeartStamp:
-BattleAnim_ChargeBeam:
 BattleAnim_MistBall:
 BattleAnim_LusterPurge:
 BattleAnim_OriginPulse:
@@ -1205,9 +1198,6 @@ BattleAnim_PrecipiceBlades:
 BattleAnim_DragonAscent:
 BattleAnim_DoomDesire:
 BattleAnim_PsychoBoost:
-BattleAnim_ShadowClaw:
-BattleAnim_CrushClaw:
-BattleAnim_PoisonTail:
 BattleAnim_TeeterDance:
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -1459,6 +1449,7 @@ BattleAnim_FirePunch:
 	anim_ret
 
 BattleAnim_FireSpin:
+BattleAnim_WillOWisp:
 	anim_1gfx ANIM_GFX_FIRE
 .loop
 	anim_sound 6, 2, SFX_EMBER
@@ -1577,6 +1568,7 @@ BattleAnim_IceBeam:
 
 BattleAnim_Blizzard:
 BattleAnim_FreezeDry:
+BattleAnim_FrostBreath:
 	anim_1gfx ANIM_GFX_ICE
 .loop
 	anim_sound 6, 2, SFX_SHINE
@@ -2093,6 +2085,7 @@ BattleAnim_Vicegrip:
 	anim_ret
 
 BattleAnim_Scratch:
+BattleAnim_CrushClaw:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_SCRATCH
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 144, 48, $0
@@ -2468,6 +2461,7 @@ BattleAnim_Supersonic:
 
 BattleAnim_Screech:
 BattleAnim_MetalSound:
+BattleAnim_Synchronoise:
 	anim_1gfx ANIM_GFX_PSYCHIC
 	anim_bgeffect ANIM_BG_1F, $8, $1, $20
 	anim_sound 6, 2, SFX_SCREECH
@@ -4004,6 +3998,7 @@ BattleAnim_LuckyChant:
 
 BattleAnim_MachPunch:
 BattleAnim_Feint:
+BattleAnim_ShadowPunch:
 	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_sound 0, 0, SFX_MENU
@@ -4041,6 +4036,22 @@ BattleAnim_ShadowSneak:
 	anim_wait 8
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj ANIM_OBJ_04, 136, 48, $0
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_1D
+	anim_call BattleAnim_ShowMon_0
+	anim_wait 4
+	anim_ret
+
+BattleAnim_ShadowClaw:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 0, SFX_CURSE
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_1D, $0, $1, $80
+	anim_wait 96
+	anim_sound 0, 1, SFX_SCRATCH
+	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 144, 48, $0
+	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 140, 44, $0
+	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 136, 40, $0
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_1D
 	anim_call BattleAnim_ShowMon_0
@@ -4149,6 +4160,7 @@ BattleAnim_Caltrops:
 	anim_ret
 
 BattleAnim_ZapCannon:
+BattleAnim_ChargeBeam:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
 	anim_bgp $1b
 	anim_obp0 $30
@@ -4383,6 +4395,7 @@ BattleAnim_Captivate:
 	anim_ret
 
 BattleAnim_Rollout:
+BattleAnim_IceBall:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_SPARK
 	anim_call BattleAnim_TargetObj_2Row
@@ -4571,12 +4584,16 @@ BattleAnim_Return:
 	anim_wait 64
 	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
 	anim_wait 32
+	anim_call BattleAnim_ReturnHit
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
+BattleAnim_ReturnHit:
 	anim_bgeffect ANIM_BG_25, $0, $1, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj ANIM_OBJ_03, 136, 40, $0
 	anim_wait 8
-	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_Present:
@@ -4833,13 +4850,17 @@ BattleAnim_ShieldBash:
 	anim_wait 4
 	anim_1gfx ANIM_GFX_HIT
 	anim_resetobp0
+	anim_call BattleAnim_TailHit
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
+BattleAnim_TailHit:
 	anim_bgeffect ANIM_BG_26, $0, $1, $0
 	anim_wait 16
 	anim_sound 0, 1, SFX_MEGA_KICK
 	anim_obj ANIM_OBJ_00, 136, 48, $0
 	anim_wait 16
 	anim_incbgeffect ANIM_BG_26
-	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_MetalClaw:
@@ -5939,8 +5960,10 @@ BattleAnim_CrossPoison:
 	anim_ret
 
 BattleAnim_ZenHeadbutt:
+BattleAnim_HeartStamp:
 ; From Pokémon Prism
 	anim_1gfx ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_2Row
 	anim_call BattleAnim_UserZen
 	anim_sound 0, 1, SFX_TACKLE
 	anim_obj ANIM_OBJ_01, 17, 0,  7, 0, $0
@@ -5950,7 +5973,6 @@ BattleAnim_ZenHeadbutt:
 	anim_ret
 
 BattleAnim_UserZen:
-	anim_call BattleAnim_TargetObj_2Row
 	anim_sound 0, 0, SFX_PSYCHIC
 	anim_bgeffect ANIM_BG_TELEPORT, $0, $1, $0
 	anim_wait 32
@@ -6070,6 +6092,7 @@ BattleAnim_NobleRoar:
 
 BattleAnim_PsychoCut:
 	anim_1gfx ANIM_GFX_CUT
+	anim_call BattleAnim_TargetObj_2Row
 	anim_call BattleAnim_UserZen
 	anim_sound 0, 1, SFX_CUT
 	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
@@ -7160,8 +7183,13 @@ BattleAnim_Grudge:
 	anim_wait 32
 	anim_ret
 
-; 48, 92
-; 136, 46
+BattleAnim_PoisonTail:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_POISON
+	anim_call BattleAnim_TargetObj_1Row
+	anim_call BattleAnim_TailHit
+	anim_call BattleAnim_Toxic_branch_cbc15
+	anim_wait 64
+	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:
 BattleAnim_GigaDrain_branch_cbab3:

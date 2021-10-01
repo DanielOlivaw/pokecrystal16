@@ -170,11 +170,11 @@ FireStarterPokeBallScript:
 	iftrue .Chimchar
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .Fennekin
-	; random 5
-	; ifequal 1, .Cyndaquil
-	; ifequal 2, .Torchic
-	; ifequal 3, .Chimchar
-	; ifequal 4, .Fennekin
+	random 5
+	ifequal 1, .Cyndaquil
+	ifequal 2, .Torchic
+	ifequal 3, .Chimchar
+	ifequal 4, .Fennekin
 .Charmander
 	setevent EVENT_CHARMANDER_IS_FIRE_STARTER
 	pokepic CHARMANDER
@@ -1109,46 +1109,46 @@ ElmText_Intro:
 	text "ELM: <PLAY_G>!"
 	line "There you are!"
 
-	; para "I needed to ask"
-	; line "you a favor."
+	para "I needed to ask"
+	line "you a favor."
 
-	; para "I'm conducting new"
-	; line "#MON research"
+	para "I'm conducting new"
+	line "#MON research"
 
-	; para "right now. I was"
-	; line "wondering if you"
+	para "right now. I was"
+	line "wondering if you"
 
-	; para "could help me with"
-	; line "it, <PLAY_G>."
+	para "could help me with"
+	line "it, <PLAY_G>."
 
-	; para "You see…"
+	para "You see…"
 
-	; para "I'm writing a"
-	; line "paper that I want"
+	para "I'm writing a"
+	line "paper that I want"
 
-	; para "to present at a"
-	; line "conference."
+	para "to present at a"
+	line "conference."
 
-	; para "But there are some"
-	; line "things I don't"
+	para "But there are some"
+	line "things I don't"
 
-	; para "quite understand"
-	; line "yet."
+	para "quite understand"
+	line "yet."
 
-	; para "So!"
+	para "So!"
 
-	; para "I'd like you to"
-	; line "raise a #MON"
+	para "I'd like you to"
+	line "raise a #MON"
 
-	; para "that I recently"
-	; line "caught."
+	para "that I recently"
+	line "caught."
 	done
 
 ElmText_Accepted:
 	text "Thanks, <PLAY_G>!"
 
-	; para "You're a great"
-	; line "help!"
+	para "You're a great"
+	line "help!"
 	done
 
 ElmText_Refused:
@@ -1160,71 +1160,71 @@ ElmText_ResearchAmbitions:
 	text "When I announce my"
 	line "findings, I'm sure"
 
-	; para "we'll delve a bit"
-	; line "deeper into the"
+	para "we'll delve a bit"
+	line "deeper into the"
 
-	; para "many mysteries of"
-	; line "#MON."
+	para "many mysteries of"
+	line "#MON."
 
-	; para "You can count on"
-	; line "it!"
+	para "You can count on"
+	line "it!"
 	done
 
 ElmText_GotAnEmail:
 	text "Oh, hey! I got an"
 	line "e-mail!"
 
-	; para "<……><……><……>"
-	; line "Hm… Uh-huh…"
+	para "<……><……><……>"
+	line "Hm… Uh-huh…"
 
-	; para "Okay…"
+	para "Okay…"
 	done
 
 ElmText_MissionFromMrPokemon:
 	text "Hey, listen."
 
-	; para "I have an acquain-"
-	; line "tance called MR."
-	; cont "#MON."
+	para "I have an acquain-"
+	line "tance called MR."
+	cont "#MON."
 
-	; para "He keeps finding"
-	; line "weird things and"
+	para "He keeps finding"
+	line "weird things and"
 
-	; para "raving about his"
-	; line "discoveries."
+	para "raving about his"
+	line "discoveries."
 
-	; para "Anyway, I just got"
-	; line "an e-mail from him"
+	para "Anyway, I just got"
+	line "an e-mail from him"
 
-	; para "saying that this"
-	; line "time it's real."
+	para "saying that this"
+	line "time it's real."
 
-	; para "It is intriguing,"
-	; line "but we're busy"
+	para "It is intriguing,"
+	line "but we're busy"
 
-	; para "with our #MON"
-	; line "research…"
+	para "with our #MON"
+	line "research…"
 
-	; para "Wait!"
+	para "Wait!"
 
-	; para "I know!"
+	para "I know!"
 
-	; para "<PLAY_G>, can you"
-	; line "go in our place?"
+	para "<PLAY_G>, can you"
+	line "go in our place?"
 	done
 
 ElmText_ChooseAPokemon:
 	text "I want you to"
 	line "raise one of the"
 
-	; para "#MON contained"
-	; line "in these BALLS."
+	para "#MON contained"
+	line "in these BALLS."
 
-	; para "You'll be that"
-	; line "#MON's first"
-	; cont "partner, <PLAY_G>!"
+	para "You'll be that"
+	line "#MON's first"
+	cont "partner, <PLAY_G>!"
 
-	; para "Go on. Pick one!"
+	para "Go on. Pick one!"
 	done
 
 ElmText_LetYourMonBattleIt:
@@ -1287,31 +1287,31 @@ ElmDirectionsText1:
 	text "MR.#MON lives a"
 	line "little bit beyond"
 
-	; para "CHERRYGROVE, the"
-	; line "next city over."
+	para "CHERRYGROVE, the"
+	line "next city over."
 
-	; para "It's almost a"
-	; line "direct route"
+	para "It's almost a"
+	line "direct route"
 
-	; para "there, so you"
-	; line "can't miss it."
+	para "there, so you"
+	line "can't miss it."
 
-	; para "But just in case,"
-	; line "here's my phone"
+	para "But just in case,"
+	line "here's my phone"
 
-	; para "number. Call me if"
-	; line "anything comes up!"
+	para "number. Call me if"
+	line "anything comes up!"
 	done
 
 ElmDirectionsText2:
 	text "If your #MON is"
 	line "hurt, you should"
 
-	; para "heal it with this"
-	; line "machine."
+	para "heal it with this"
+	line "machine."
 
-	; para "Feel free to use"
-	; line "it anytime."
+	para "Feel free to use"
+	line "it anytime."
 	done
 
 ElmDirectionsText3:

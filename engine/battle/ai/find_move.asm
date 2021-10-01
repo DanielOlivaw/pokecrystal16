@@ -2282,10 +2282,12 @@ FindMove_AI_Redundant:
 	jr nc, .NotRedundant
 	; fallthrough
 .Redundant:
+	pop hl
 	ld a, 1
 	and a
 	ret
 
 .NotRedundant:
+	pop hl
 	xor a
 	ret
