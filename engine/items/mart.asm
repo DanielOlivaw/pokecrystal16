@@ -461,6 +461,7 @@ GetMartDialogGroup:
 	dwb .BargainShopPointers, 1
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
+	dwb .TMMartPointers, 0
 
 .StandardMartPointers:
 	dw MartHowManyText
@@ -493,6 +494,14 @@ GetMartDialogGroup:
 	dw PharmacyPackFullText
 	dw PharmacyThanksText
 	dw BuyMenuLoop
+
+.TMMartPointers:
+	dw MartHowManyText
+	dw TMMartFinalPriceText
+	dw MartNoMoneyText
+	dw MartPackFullText
+	dw MartThanksText
+	dw BuyTMMenuLoop
 
 BuyMenuLoop:
 	farcall PlaceMoneyTopRight
