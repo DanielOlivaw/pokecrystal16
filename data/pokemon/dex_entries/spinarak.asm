@@ -1,4 +1,4 @@
-	db "STRINGSPIT@" ; species name
+	db "STRING SPIT@" ; species name
 	dw 108, 190 ; height, weight
 
 	db   "If prey becomes"

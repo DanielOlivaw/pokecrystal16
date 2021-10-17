@@ -2483,7 +2483,7 @@ FisherGroup:
 
 	next_list_item ; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 10
+	db 8
 	dw BASCULIN
 	db -1 ; end
 
@@ -2506,9 +2506,9 @@ FisherGroup:
 	next_list_item ; FISHER (5)
 	db "HENRY@", TRAINERTYPE_NORMAL
 	db 8
-	dw LOTAD
+	dw FINNEON
 	db 8
-	dw LOTAD
+	dw FINNEON
 	db -1 ; end
 
 	next_list_item ; FISHER (6)
@@ -2684,7 +2684,7 @@ FisherGroup:
 	db "RALPH@", TRAINERTYPE_MOVES
 	db 35
 	dw MAREANIE
-	dw TOXIC, MINIMIZE, SURF, PIN_MISSILE
+	dw TOXIC, TOXIC_SPIKES, SURF, PIN_MISSILE
 	db 39
 	dw BASCULIN
 	dw ENDURE, FLAIL, FURY_ATTACK, WATERFALL
@@ -2694,13 +2694,13 @@ FisherGroup:
 	db "TULLY@", TRAINERTYPE_MOVES
 	db 34
 	dw BASCULIN
-	dw SUPERSONIC, RAIN_DANCE, WATERFALL, FURY_ATTACK
+	dw SUPERSONIC, RAIN_DANCE, WATERFALL, TAKE_DOWN
 	db 34
 	dw BASCULIN
-	dw SUPERSONIC, RAIN_DANCE, WATERFALL, FURY_ATTACK
+	dw SUPERSONIC, RAIN_DANCE, WATERFALL, TAKE_DOWN
 	db 37
 	dw MAREANIE
-	dw ROLLOUT, SURF, PIN_MISSILE, TAKE_DOWN
+	dw TOXIC, SURF, PIN_MISSILE, VENOSHOCK
 	db -1 ; end
 
 	end_list_items
@@ -3839,7 +3839,7 @@ FirebreatherGroup:
 	next_list_item ; FIREBREATHER (7)
 	db "RAY@", TRAINERTYPE_NORMAL
 	db 9
-	dw VULPIX_A
+	dw LITWICK
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (8)
