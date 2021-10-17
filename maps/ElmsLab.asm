@@ -935,8 +935,12 @@ CopScript:
 	turnobject ELMSLAB_OFFICER, LEFT
 	opentext
 	writetext ElmsLabOfficerText1
+.TryNameRival
 	buttonsound
 	special NameRival
+	writetext ElmsLabOfficerTextConfirmName
+	yesorno
+	iffalse .TryNameRival
 	writetext ElmsLabOfficerText2
 	waitbutton
 	closetext
@@ -1677,6 +1681,10 @@ ElmsLabOfficerText1:
 	para "Did you happen to"
 	line "get his name?"
 	done
+
+ElmsLabOfficerTextConfirmName:
+	text "Are you sure his"
+	line "name was <RIVAL>?"
 
 ElmsLabOfficerText2:
 	text "OK! So <RIVAL>"

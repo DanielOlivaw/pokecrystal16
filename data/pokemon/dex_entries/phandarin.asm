@@ -7,5 +7,5 @@
 
 	page "The talisman on"
 	next "its chest limits"
-	next "its powers.@"
+	next "its dark powers.@"
 

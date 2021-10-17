@@ -2,7 +2,7 @@
 	dw 203, 22 ; height, weight
 
 	db   "A doll that was"
-	next "used for dark rit-"
+	next "used for evil rit-"
 	next "uals gained a life"
 
 	page "of its own. The"

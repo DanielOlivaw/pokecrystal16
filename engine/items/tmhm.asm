@@ -284,7 +284,7 @@ TMHM_ShowTMMoveDescription:
 	ld a, [wTempTMHM]
 	ld [wCurSpecies], a
 	hlcoord 1, 14
-	call PrintMoveDesc
+	predef PrintMoveDesc
 	jp TMHM_JoypadLoop
 
 TMHM_ChooseTMorHM:

@@ -2,10 +2,18 @@
 	dw 211, 485 ; height, weight
 
 		;"123456789123456789"
-	db   "A bigger fire on"
-	next "its tail and a"
-	next "brighter blue face"
+	db   "It uses ceilings"
+	next "and walls to"
+	next "launch aerial"
 
-	page "pattern means its"
-	next "rank in its pack"
-	next "is higher.@"
+	page "attacks. Its fiery"
+	next "tail is but one"
+	next "weapon.@"
+
+	; db   "A bigger fire on"
+	; next "its tail and a"
+	; next "brighter blue face"
+
+	; page "pattern means its"
+	; next "rank in its pack"
+	; next "is higher.@"

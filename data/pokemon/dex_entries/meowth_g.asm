@@ -1,4 +1,4 @@
-	db "SCRATCHCAT@" ; species name
+	db "SCRATCH CAT@" ; species name
 	dw 104, 165 ; height, weight
 
 	db   "Living with a"

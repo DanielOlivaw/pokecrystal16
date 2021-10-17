@@ -4,7 +4,7 @@
 		;"123456789123456789"
 	db   "Its appearance is"
 	next "seen as an omen."
-	next "The type of luck"
+	next "The fortune"
 
 	page "foretold by its"
 	next "bell's chimes"
