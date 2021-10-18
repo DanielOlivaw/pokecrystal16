@@ -6937,23 +6937,24 @@ BattleAnim_BrightMoss:
 	anim_sound 0, 1, SFX_FLASH
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $0
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $0
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $8
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $8
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $10
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $10
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $18
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $18
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $20
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $20
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $28
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $28
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $30
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $30
 	anim_wait 4
-	anim_obj ANIM_OBJ_FLASH, 44, 88, $38
+	anim_obj ANIM_OBJ_SHINY, 48, 96, $38
 	anim_wait 32
 	anim_ret
+
 
 BattleAnim_Ingrain:
 	anim_1gfx ANIM_GFX_CHARGE

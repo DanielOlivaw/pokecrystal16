@@ -650,11 +650,12 @@ PerrserkerEvosAttacks:
 	dbw 19, HONE_CLAWS
 	dbw 23, SWAGGER
 	dbw 27, IRON_HEAD
-	dbw 30, FURY_SWIPES
-	dbw 36, SCREECH
-	dbw 43, SLASH
-	dbw 49, METAL_SOUND
-	dbw 56, THRASH
+	dbw 29, FURY_SWIPES
+	dbw 34, SCREECH
+	dbw 40, SLASH
+	dbw 45, METAL_SOUND
+	dbw 51, THRASH
+	dbw 56, WILD_FURY
 	db 0 ; no more level-up moves
 
 CursolaEvosAttacks:

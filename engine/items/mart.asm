@@ -821,7 +821,7 @@ TMMenuHeader_Buy:
 
 HerbShopLadyIntroText:
 	; Hello, dear. I sell inexpensive herbal medicine. They're good, but a trifle bitter. Your #MON may not like them. Hehehehe…
-	text_far HerbShopLadyIntroText
+	text_far _HerbShopLadyIntroText
 	text_end
 
 HerbalLadyHowManyText:

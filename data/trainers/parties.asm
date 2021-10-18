@@ -26,8 +26,8 @@ WhitneyGroup:
 	next_list_item ; WHITNEY (1)
 	db "WHITNEY@", TRAINERTYPE_MOVES
 	db 18
-	dw CLEFAIRY
-	dw DOUBLESLAP, MIMIC, ENCORE, METRONOME
+	dw STUFFUL
+	dw ENDURE, BABY_DOLL_EYES, LEER, BRUTAL_SWING
 	db 20
 	dw MILTANK
 	dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
@@ -1128,8 +1128,8 @@ LassGroup:
 	next_list_item ; LASS (1)
 	db "CARRIE@", TRAINERTYPE_MOVES
 	db 18
-	dw SNUBBULL
-	dw SCARY_FACE, CHARM, BITE, LICK
+	dw TEDDIURSA
+	dw FAINT_ATTACK, FURY_SWIPES, BABY_DOLL_EYES, SCRATCH
 	db -1 ; end
 
 	next_list_item ; LASS (2)
@@ -1721,13 +1721,11 @@ BeautyGroup:
 	db -1 ; end
 
 	next_list_item ; BEAUTY (2)
-	db "SAMANTHA@", TRAINERTYPE_MOVES
+	db "SAMANTHA@", TRAINERTYPE_NORMAL
 	db 16
 	dw GLAMEOW
-	dw SCRATCH, GROWL, BITE, SLASH
 	db 16
 	dw GLAMEOW
-	dw SCRATCH, GROWL, BITE, SLASH
 	db -1 ; end
 
 	next_list_item ; BEAUTY (3)
@@ -1905,10 +1903,10 @@ PokemaniacGroup:
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (11)
-	db "ISSAC@", TRAINERTYPE_MOVES
+	db "ISAAC@", TRAINERTYPE_MOVES
 	db 12
-	dw AUDINO
-	dw LICK, SUPERSONIC, CUT, NO_MOVE
+	dw HELIOLISK
+	dw THUNDERSHOCK, POUND, TAIL_WHIP, MUD_SLAP
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (12)
@@ -3244,7 +3242,7 @@ SuperNerdGroup:
 	db 7
 	dw MAGNEMITE
 	db 11
-	dw FERROSEED
+	dw ELEKID
 	db 7
 	dw MAGNEMITE
 	db 9
@@ -3833,7 +3831,7 @@ FirebreatherGroup:
 	db 11
 	dw HEATMOR
 	db 13
-	dw DURANT
+	dw HEATMOR
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (7)
@@ -3858,13 +3856,13 @@ JugglerGroup:
 	next_list_item ; JUGGLER (1)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 2
-	dw FERROSEED
+	dw PINECO
 	db 6
-	dw FERROSEED
+	dw PINECO
 	db 10
-	dw FERROSEED
+	dw PINECO
 	db 14
-	dw FERROSEED
+	dw PINECO
 	db -1 ; end
 
 	next_list_item ; JUGGLER (2)
@@ -3892,37 +3890,37 @@ JugglerGroup:
 	next_list_item ; JUGGLER (4)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 6
-	dw FERROSEED
+	dw PINECO
 	db 10
-	dw FERROSEED
+	dw PINECO
 	db 14
-	dw FERROSEED
+	dw PINECO
 	db 18
-	dw FERROSEED
+	dw PINECO
 	db -1 ; end
 
 	next_list_item ; JUGGLER (5)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 18
-	dw FERROSEED
+	dw PINECO
 	db 22
-	dw FERROSEED
+	dw PINECO
 	db 26
-	dw FERROSEED
+	dw PINECO
 	db 30
-	dw SPRITZEE
+	dw PINECO
 	db -1 ; end
 
 	next_list_item ; JUGGLER (6)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 18
-	dw FERROSEED
+	dw PINECO
 	db 22
-	dw FERROSEED
+	dw PINECO
 	db 26
-	dw FERROSEED
+	dw PINECO
 	db 30
-	dw SPRITZEE
+	dw PINECO
 	db -1 ; end
 
 	end_list_items

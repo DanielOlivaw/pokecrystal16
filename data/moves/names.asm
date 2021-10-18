@@ -403,7 +403,7 @@ MoveNames::
 	db "NAIL DOWN@"
 	db "DYNAMO RUSH@"
 	db "SHATTER CLAW@"
-	db "BERSERKERAGE@"
+	db "WILD RAGE@"
 	db "WIND RIDE@"
 	db "BRIGHT MOSS@"
 	db "SHIELD BASH@"
