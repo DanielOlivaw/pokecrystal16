@@ -1,0 +1,20 @@
+SECTION "Base Stats 10", ROMX
+
+BaseData10:
+INCLUDE "data/pokemon/base_stats/milcery.asm"
+INCLUDE "data/pokemon/base_stats/alcremie.asm"
+INCLUDE "data/pokemon/base_stats/pincurchin.asm"
+INCLUDE "data/pokemon/base_stats/snom.asm"
+INCLUDE "data/pokemon/base_stats/frosmoth.asm"
+INCLUDE "data/pokemon/base_stats/cufant.asm"
+INCLUDE "data/pokemon/base_stats/copperajah.asm"
+INCLUDE "data/pokemon/base_stats/dracozolt.asm"
+INCLUDE "data/pokemon/base_stats/arctozolt.asm"
+INCLUDE "data/pokemon/base_stats/dracovish.asm"
+INCLUDE "data/pokemon/base_stats/arctovish.asm"
+INCLUDE "data/pokemon/base_stats/duraludon.asm"
+INCLUDE "data/pokemon/base_stats/dreepy.asm"
+INCLUDE "data/pokemon/base_stats/drakloak.asm"
+INCLUDE "data/pokemon/base_stats/dragapult.asm"
+INCLUDE "data/pokemon/base_stats/regieleki.asm"
+INCLUDE "data/pokemon/base_stats/regidrago.asm"

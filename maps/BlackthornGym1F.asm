@@ -66,7 +66,7 @@ BlackthornGymClairScript:
 	iftrue .GotTM24
 	writetext BlackthornGymClairText_YouKeptMeWaiting
 	buttonsound
-	verbosegivetmhm TM_DRAGONBREATH
+	verbosegivetmhm TM_DRAGON_PULSE
 	; givetmhm TM_DRAGONBREATH
 	; iffalse .BagFull
 	; getitemname STRING_BUFFER_3, TM_DRAGONBREATH
@@ -232,12 +232,12 @@ BlackthornGymClairText_YouKeptMeWaiting:
 
 BlackthornGymText_ReceivedTM24:
 	text "<PLAYER> received"
-	line "TM24."
+	line "TM59 DRAGON PULSE."
 	done
 
 BlackthornGymClairText_DescribeTM24:
 	text "That contains"
-	line "DRAGONBREATH."
+	line "DRAGON PULSE."
 
 	para "No, it doesn't"
 	line "have anything to"

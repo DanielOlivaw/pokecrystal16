@@ -41,7 +41,7 @@ AzaleaGymBugsyScript:
 	setevent EVENT_BEAT_BUG_CATCHER_JOSH
 	writetext BugsyText_HiveBadgeSpeech
 	buttonsound
-	verbosegivetmhm TM_FURY_CUTTER
+	verbosegivetmhm TM_U_TURN
 	iffalse .NoRoomForFuryCutter
 	setevent EVENT_GOT_TM49_FURY_CUTTER
 	writetext BugsyText_FuryCutterSpeech
@@ -204,19 +204,17 @@ BugsyText_HiveBadgeSpeech:
 	done
 
 BugsyText_FuryCutterSpeech:
-	text "TM49 contains"
-	line "FURY CUTTER."
+	text "TM89 contains"
+	line "U-TURN."
 
-	para "If you don't miss,"
-	line "it gets stronger"
-	cont "every turn."
+	para "It lets your"
+	line "#MON attack,"
 
-	para "The longer your"
-	line "battle goes, the"
-	cont "better it gets."
+	para "then switch with"
+	line "the next #MON in"
+	cont "your party."
 
 	para "Isn't that great?"
-	line "I discovered it!"
 	done
 
 BugsyText_BugMonsAreDeep:
@@ -224,7 +222,7 @@ BugsyText_BugMonsAreDeep:
 	line "deep. There are"
 
 	para "many mysteries to"
-	line "be explored."
+	line "explore."
 
 	para "Study your favor-"
 	line "ites thoroughly."

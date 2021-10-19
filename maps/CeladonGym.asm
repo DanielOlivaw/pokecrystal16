@@ -38,7 +38,7 @@ CeladonGymErikaScript:
 	iftrue .GotGigaDrain
 	writetext ErikaExplainTMText
 	buttonsound
-	verbosegivetmhm TM_GIGA_DRAIN
+	verbosegivetmhm TM_ENERGY_BALL
 	iffalse .GotGigaDrain
 	setevent EVENT_GOT_TM19_GIGA_DRAIN
 .GotGigaDrain:
@@ -162,14 +162,13 @@ ErikaExplainTMText:
 	line "Please, I wish you"
 	cont "to have this TM."
 
-	para "It is GIGA DRAIN."
+	para "It is ENERGY BALL."
 
 	para "It is a wonderful"
-	line "move that drains"
+	line "move that may"
 
-	para "half the damage it"
-	line "inflicts to heal"
-	cont "your #MON."
+	para "lower your foe's"
+	line "SPCL.DEF."
 
 	para "Please use it if"
 	line "it pleases you…"

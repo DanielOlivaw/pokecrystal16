@@ -49,7 +49,7 @@ Route34IlexForestGateTeacherScript:
 	iftrue .GotSweetScent
 	writetext Route34IlexForestGateTeacherText
 	buttonsound
-	verbosegivetmhm TM_SWEET_SCENT
+	verbosegivetmhm TM_FALSE_SWIPE
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 .GotSweetScent:
@@ -90,21 +90,32 @@ Route34IlexForestGateTeacherText:
 	text "Oh, honey. You're"
 	line "making a #DEX?"
 
-	para "It must be hard if"
-	line "#MON won't"
+	; para "It must be hard if"
+	; line "#MON won't"
 
-	para "appear. Try using"
-	line "this TM."
+	; para "appear. Try using"
+	; line "this TM."
+	; done
+
+	para "Try using this TM."
 	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
+	; text "It's SWEET SCENT."
 
-	para "Use it wherever"
-	line "#MON appear."
+	; para "Use it wherever"
+	; line "#MON appear."
 
-	para "#MON will be"
-	line "enticed by it."
+	; para "#MON will be"
+	; line "enticed by it."
+	; done
+	text "It's FALSE SWIPE."
+
+	para "Use it to wear"
+	line "down wild #MON"
+
+	para "without knocking"
+	line "them out."
 	done
 
 Route34IlexForestGateTeacher_ForestIsRestless:

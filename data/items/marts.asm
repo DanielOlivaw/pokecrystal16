@@ -223,7 +223,10 @@ MartGoldenrod4F:
 	db -1 ; end
 
 MartGoldenrod5F:
-	db 3 ; # items
+	db 6 ; # items
+	dbw TM_PROTECT,      2000
+	dbw TM_LIGHT_SCREEN, 2000
+	dbw TM_REFLECT,      2000
 	dbw TM_THUNDERPUNCH, 3000
 	dbw TM_FIRE_PUNCH,   3000
 	dbw TM_ICE_PUNCH,    3000
@@ -376,12 +379,12 @@ MartCeladon2F2:
 	db -1 ; end
 
 MartCeladon3F:
-	db 5 ; # items
-	dbw TM_PSYCH_UP,     3000
-	dbw TM_PROTECT,      3000
-	dbw TM_THUNDERPUNCH, 3000
-	dbw TM_FIRE_PUNCH,   3000
-	dbw TM_ICE_PUNCH,    3000
+	db 4 ; # items
+	dbw TM_SAFEGUARD,    2000
+	dbw TM_WEATHER_BALL, 3000
+	dbw TM_FOCUS_BLAST,  5500
+	dbw TM_STEALTH_ROCK, 2000
+	dbw TM_DARK_PULSE,   3000
 	db -1 ; end
 
 MartCeladon4F:

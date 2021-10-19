@@ -1136,17 +1136,17 @@ KadabraEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, TELEPORT
 	dbw 15, CONFUSION
-	dbw 19, DISABLE
-	dbw 23, PSYBEAM
-	dbw 26, KINESIS
-	dbw 29, PSYCHO_CUT
-	dbw 32, REFLECT
-	dbw 35, PSYSHOCK
-	dbw 38, RECOVER
-	dbw 41, PSYCHIC_M
-	dbw 44, CALM_MIND
-	dbw 47, FUTURE_SIGHT
-	dbw 50, TRICK
+	dbw 20, DISABLE
+	dbw 24, PSYBEAM
+	dbw 28, KINESIS
+	dbw 32, PSYCHO_CUT
+	dbw 36, REFLECT
+	dbw 40, PSYSHOCK
+	dbw 44, RECOVER
+	dbw 48, PSYCHIC_M
+	dbw 52, CALM_MIND
+	dbw 56, FUTURE_SIGHT
+	dbw 60, TRICK
 	db 0 ; no more level-up moves
 
 AlakazamEvosAttacks:
@@ -1154,17 +1154,17 @@ AlakazamEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, TELEPORT
 	dbw 15, CONFUSION
-	dbw 19, DISABLE
-	dbw 23, PSYBEAM
-	dbw 26, KINESIS
-	dbw 29, PSYCHO_CUT
-	dbw 32, REFLECT
-	dbw 35, PSYSHOCK
-	dbw 38, RECOVER
-	dbw 41, PSYCHIC_M
-	dbw 44, CALM_MIND
-	dbw 47, FUTURE_SIGHT
-	dbw 50, TRICK
+	dbw 20, DISABLE
+	dbw 24, PSYBEAM
+	dbw 28, KINESIS
+	dbw 32, PSYCHO_CUT
+	dbw 36, REFLECT
+	dbw 40, PSYSHOCK
+	dbw 44, RECOVER
+	dbw 48, PSYCHIC_M
+	dbw 52, CALM_MIND
+	dbw 56, FUTURE_SIGHT
+	dbw 60, TRICK
 	db 0 ; no more level-up moves
 
 MachopEvosAttacks:
@@ -1182,13 +1182,12 @@ MachopEvosAttacks:
 	dbw 24, SCARY_FACE
 	dbw 27, VITAL_THROW
 	dbw 30, WAKE_UP_SLAP
-	dbw 33, STRENGTH ; HM? Should this be removed?
-	dbw 36, DUAL_CHOP
-	dbw 39, SUBMISSION
-	dbw 42, BULK_UP
-	dbw 45, DYNAMICPUNCH
-	dbw 48, CROSS_CHOP
-	dbw 51, DOUBLE_EDGE
+	dbw 33, DUAL_CHOP
+	dbw 36, SUBMISSION
+	dbw 39, BULK_UP
+	dbw 42, DYNAMICPUNCH
+	dbw 45, CROSS_CHOP
+	dbw 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachokeEvosAttacks:
@@ -1207,13 +1206,12 @@ MachokeEvosAttacks:
 	dbw 24, SCARY_FACE
 	dbw 27, VITAL_THROW
 	dbw 31, WAKE_UP_SLAP
-	dbw 35, STRENGTH ; HM? Should this be removed?
-	dbw 39, DUAL_CHOP
-	dbw 43, SUBMISSION
-	dbw 47, BULK_UP
-	dbw 51, DYNAMICPUNCH
-	dbw 55, CROSS_CHOP
-	dbw 59, DOUBLE_EDGE
+	dbw 35, DUAL_CHOP
+	dbw 39, SUBMISSION
+	dbw 43, BULK_UP
+	dbw 47, DYNAMICPUNCH
+	dbw 51, CROSS_CHOP
+	dbw 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MachampEvosAttacks:
@@ -1230,13 +1228,12 @@ MachampEvosAttacks:
 	dbw 24, SCARY_FACE
 	dbw 27, VITAL_THROW
 	dbw 31, WAKE_UP_SLAP
-	dbw 35, STRENGTH ; HM? Should this be removed?
-	dbw 39, DUAL_CHOP
-	dbw 43, SUBMISSION
-	dbw 47, BULK_UP
-	dbw 51, DYNAMICPUNCH
-	dbw 55, CROSS_CHOP
-	dbw 59, DOUBLE_EDGE
+	dbw 35, DUAL_CHOP
+	dbw 39, SUBMISSION
+	dbw 43, BULK_UP
+	dbw 47, DYNAMICPUNCH
+	dbw 51, CROSS_CHOP
+	dbw 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 BellsproutEvosAttacks:

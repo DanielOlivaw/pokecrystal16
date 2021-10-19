@@ -76,7 +76,7 @@ SageLiScript:
 	opentext
 	writetext SageLiTakeThisFlashText
 	buttonsound
-	verbosegivetmhm HM_FLASH
+	verbosegivetmhm TM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
 	writetext SageLiFlashExplanationText
@@ -157,7 +157,7 @@ SproutTowerElderLecturesRivalText:
 	cont "trainer."
 
 	para "As promised, here"
-	line "is your HM."
+	line "is your TM."
 
 	para "But let me say"
 	line "this: You should"
@@ -238,7 +238,7 @@ SageLiTakeThisFlashText:
 	line "this move."
 
 	para "Take this FLASH"
-	line "HM."
+	line "TM."
 	done
 
 SageLiFlashExplanationText:
@@ -246,11 +246,16 @@ SageLiFlashExplanationText:
 	line "even the darkest"
 	cont "of all places."
 
-	para "But to use it out"
-	line "of battle, you"
+	para "I hope you learn"
+	line "and grow from your"
+	cont "journey."
+	done
 
-	para "need the BADGE"
-	line "from VIOLET's GYM."
+	; para "But to use it out"
+	; line "of battle, you"
+
+	; para "need the BADGE"
+	; line "from VIOLET's GYM."
 	done
 
 SageLiAfterBattleText:

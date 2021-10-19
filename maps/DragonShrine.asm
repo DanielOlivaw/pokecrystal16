@@ -634,22 +634,32 @@ DragonShrinePlayerReceivedRisingBadgeText:
 	done
 
 DragonShrineRisingBadgeExplanationText:
-	text "RISINGBADGE will"
-	line "enable your"
+	text "With RISINGBADGE,"
+	line "all #MON will"
 
-	para "#MON to use the"
-	line "move for climbing"
-	cont "waterfalls."
+	para "recognize you as a"
+	line "trainer and obey"
 
-	para "Also, all #MON"
-	line "will recognize you"
-
-	para "as a trainer and"
-	line "obey your every"
-
-	para "command without"
-	line "question."
+	para "your every command"
+	line "without question."
 	done
+
+	; text "RISINGBADGE will"
+	; line "enable your"
+
+	; para "#MON to use the"
+	; line "move for climbing"
+	; cont "waterfalls."
+
+	; para "Also, all #MON"
+	; line "will recognize you"
+
+	; para "as a trainer and"
+	; line "obey your every"
+
+	; para "command without"
+	; line "question."
+	; done
 
 DragonShrineSpeechlessText:
 	text "<……><……><……><……><……><……>"

@@ -171,7 +171,7 @@ PowerPlantManager:
 	iftrue .GotZapCannon
 	writetext PowerPlantManagerTakeThisTMText
 	buttonsound
-	verbosegivetmhm TM_ZAP_CANNON
+	verbosegivetmhm TM_WILD_CHARGE
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM07_ZAP_CANNON
 	writetext PowerPlantManagerTM07IsZapCannonText
@@ -331,8 +331,8 @@ PowerPlantManagerWhoWouldRuinMyGeneratorText:
 	para "If I catch him,"
 	line "he's going to get"
 
-	para "a taste of my ZAP"
-	line "CANNON!"
+	para "a taste of my WILD"
+	line "CHARGE!"
 	done
 
 PowerPlantManagerIWontForgiveCulpritText:
@@ -365,8 +365,8 @@ PowerPlantManagerTakeThisTMText:
 	done
 
 PowerPlantManagerTM07IsZapCannonText:
-	text "MANAGER: TM07 is"
-	line "my ZAP CANNON."
+	text "MANAGER: TM93 is"
+	line "my WILD CHARGE."
 
 	para "It's a powerful"
 	line "technique!"
@@ -374,7 +374,7 @@ PowerPlantManagerTM07IsZapCannonText:
 	para "It's not what any-"
 	line "one would consider"
 
-	para "accurate, but it"
+	para "safe, but it"
 	line "packs a wallop!"
 	done
 

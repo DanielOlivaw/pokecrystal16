@@ -2752,7 +2752,7 @@ wMobileBattleRoomSceneID::                        db ; d9c0
 
 ; fight counts
 wJackFightCount::    db ; d9f2
-wBeverlyFightCount:: db ; unused
+; wBeverlyFightCount:: db ; unused
 wHueyFightCount::    db
 wGavenFightCount::   db
 wBethFightCount::    db
@@ -2765,28 +2765,28 @@ wLizFightCount::     db
 wAnthonyFightCount:: db
 wToddFightCount::    db
 wGinaFightCount::    db
-wIrwinFightCount::   db ; unused
+; wIrwinFightCount::   db ; unused
 wArnieFightCount::   db
 wAlanFightCount::    db
 wDanaFightCount::    db
 wChadFightCount::    db
-wDerekFightCount::   db ; unused
+; wDerekFightCount::   db ; unused
 wTullyFightCount::   db
 wBrentFightCount::   db
 wTiffanyFightCount:: db
 wVanceFightCount::   db
 wWiltonFightCount::  db
-wKenjiFightCount::   db ; unused
+; wKenjiFightCount::   db ; unused
 wParryFightCount::   db
 wErinFightCount::    db
 ; da0e
 
-	ds 11 ;100 ; Space needed for new pack pockets
+	; ds 100 ; Space needed for new pack pockets
 
 wEventFlags:: flag_array NUM_EVENTS ; da72
 ; db6c
 
-	ds 6
+	; ds 6 ; removed to make space for more TMs
 
 wCurBox:: db ; db72
 
@@ -2877,7 +2877,7 @@ wPlayerMonSelection:: ds 3
 wdc5f:: db
 wdc60:: db
 
-	ds 18
+	; ds 18 ; removed to make space for more TMs
 
 wStepCount:: db ; dc73
 wPoisonStepCount:: db ; dc74
@@ -2891,7 +2891,7 @@ wSafariTimeRemaining:: dw ; dc7a
 
 wPhoneList:: ds CONTACT_LIST_SIZE ; dc7c
 ; dc86
-	ds 23
+	; ds 23 ; removed to make space for more TMs
 
 wLuckyNumberShowFlag:: db ; dc9d
 	ds 1

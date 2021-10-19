@@ -95,12 +95,13 @@ GoldenrodDeptStore5FReceptionistScript:
 
 .NotVeryHappy:
 	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
-	buttonsound
-	checktmhm TM_FRUSTRATION
-	iftrue .AlreadyGotTM
-	verbosegivetmhm TM_FRUSTRATION
+	; buttonsound
+	; checktmhm TM_FRUSTRATION
+	; iftrue .AlreadyGotTM
+	; verbosegivetmhm TM_FRUSTRATION
 	; iffalse .Done
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+	; setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+	waitbutton
 	closetext
 	end
 
@@ -176,9 +177,15 @@ GoldenrodDeptStore5FReceptionistItsAdorableText:
 	done
 
 GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText:
-	text "It looks evil. How"
-	line "about this TM for"
-	cont "it?"
+	; text "It looks evil. How"
+	; line "about this TM for"
+	; cont "it?"
+	; done
+
+	text "It looks evil."
+
+	para "You should teach"
+	line "it good TM moves."
 	done
 
 GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText:

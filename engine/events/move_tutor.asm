@@ -35,14 +35,17 @@ MoveTutor:
 
 .GetMoveTutorMove:
 	ld a, [wScriptVar]
-	cp MOVETUTOR_FLAMETHROWER
-	ld hl, FLAMETHROWER
+	cp MOVETUTOR_FRENZY_PLANT
+	ld hl, FRENZY_PLANT
 	jr z, .ok
-	cp MOVETUTOR_THUNDERBOLT
-	ld hl, THUNDERBOLT
+	cp MOVETUTOR_BLAST_BURN
+	ld hl, BLAST_BURN
 	jr z, .ok
-	; MOVETUTOR_ICE_BEAM
-	ld hl, ICE_BEAM
+	cp MOVETUTOR_HYDRO_CANNON
+	ld hl, HYDRO_CANNON
+	jr z, .ok
+	; MOVETUTOR_DRACO_METEOR
+	ld hl, DRACO_METEOR
 .ok
 	jp GetMoveIDFromIndex
 
