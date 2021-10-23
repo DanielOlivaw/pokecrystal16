@@ -10,16 +10,12 @@ IsHM::
 	ret
 
 IsHMMove::
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, .HMMoves
-	ld de, 1
-	jp IsInArray
-
-	; call GetMoveIndexFromID
-	; ld b, h
-	; ld c, l
-	; ld hl, .HMMoves
-	; ld de, 2
-	; jp IsInHalfwordArray
+	ld de, 2
+	jp IsInHalfwordArray
 
 .HMMoves:
 	dw CUT       
