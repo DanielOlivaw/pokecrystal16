@@ -44,16 +44,16 @@ DecorationAttributes:
 	decoration DECO_DOLL,    0,              SET_UP_DOLL,       EVENT_DECO_BULBASAUR_DOLL,       SPRITE_BULBASAUR
 	decoration DECO_DOLL,    1,              SET_UP_DOLL,       EVENT_DECO_CHARMANDER_DOLL,      SPRITE_CHARMANDER
 	decoration DECO_DOLL,    2,              SET_UP_DOLL,       EVENT_DECO_SQUIRTLE_DOLL,        SPRITE_SQUIRTLE
-	decoration DECO_DOLL,    9,              SET_UP_DOLL,       EVENT_DECO_POLIWAG_DOLL,         SPRITE_POLIWAG
-	decoration DECO_DOLL,    8,              SET_UP_DOLL,       EVENT_DECO_DIGLETT_DOLL,         SPRITE_DIGLETT
-	decoration DECO_DOLL,    18,             SET_UP_DOLL,       EVENT_DECO_STARMIE_DOLL,         SPRITE_STARMIE
+	decoration DECO_DOLL,    9,              SET_UP_DOLL,       EVENT_DECO_POLIWAG_DOLL,         SPRITE_ABRA
+	decoration DECO_DOLL,    8,              SET_UP_DOLL,       EVENT_DECO_DIGLETT_DOLL,         SPRITE_ROCKRUFF
+	decoration DECO_DOLL,    18,             SET_UP_DOLL,       EVENT_DECO_STARMIE_DOLL,         SPRITE_GROWLITHE
 	decoration DECO_DOLL,    19,             SET_UP_DOLL,       EVENT_DECO_MAGIKARP_DOLL,        SPRITE_MAGIKARP
 	decoration DECO_DOLL,    7,              SET_UP_DOLL,       EVENT_DECO_ODDISH_DOLL,          SPRITE_ODDISH
 	decoration DECO_DOLL,    15,             SET_UP_DOLL,       EVENT_DECO_GENGAR_DOLL,          SPRITE_GENGAR
-	decoration DECO_DOLL,    14,             SET_UP_DOLL,       EVENT_DECO_SHELLDER_DOLL,        SPRITE_SHELLDER
-	decoration DECO_DOLL,    13,             SET_UP_DOLL,       EVENT_DECO_GRIMER_DOLL,          SPRITE_GRIMER
-	decoration DECO_DOLL,    17,             SET_UP_DOLL,       EVENT_DECO_VOLTORB_DOLL,         SPRITE_VOLTORB
-	decoration DECO_DOLL,    3,              SET_UP_DOLL,       EVENT_DECO_WEEDLE_DOLL,          SPRITE_WEEDLE
+	decoration DECO_DOLL,    14,             SET_UP_DOLL,       EVENT_DECO_SHELLDER_DOLL,        SPRITE_DRATINI
+	decoration DECO_DOLL,    13,             SET_UP_DOLL,       EVENT_DECO_GRIMER_DOLL,          SPRITE_PSYDUCK
+	decoration DECO_DOLL,    17,             SET_UP_DOLL,       EVENT_DECO_VOLTORB_DOLL,         SPRITE_TOGEPI
+	decoration DECO_DOLL,    3,              SET_UP_DOLL,       EVENT_DECO_WEEDLE_DOLL,          SPRITE_STARLY
 	decoration DECO_DOLL,    22,             SET_UP_DOLL,       EVENT_DECO_UNOWN_DOLL,           SPRITE_UNOWN
 	decoration DECO_DOLL,    12,             SET_UP_DOLL,       EVENT_DECO_GEODUDE_DOLL,         SPRITE_GEODUDE
 	decoration DECO_DOLL,    10,             SET_UP_DOLL,       EVENT_DECO_MACHOP_DOLL,          SPRITE_MACHOP

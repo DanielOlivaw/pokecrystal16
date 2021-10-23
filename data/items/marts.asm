@@ -379,7 +379,7 @@ MartCeladon2F2:
 	db -1 ; end
 
 MartCeladon3F:
-	db 4 ; # items
+	db 5 ; # items
 	dbw TM_SAFEGUARD,    2000
 	dbw TM_WEATHER_BALL, 3000
 	dbw TM_FOCUS_BLAST,  5500

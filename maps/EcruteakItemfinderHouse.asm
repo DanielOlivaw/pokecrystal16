@@ -86,10 +86,10 @@ ItemfinderExplanationText:
 	para "that aren't ob-"
 	line "vious."
 
-	para "Use ITEMFINDER to"
-	line "check if there is"
+	para "Use that machine"
+	line "to check if there"
 
-	para "an item on the"
+	para "is an item on the"
 	line "ground near you."
 
 	para "It doesn't show"

@@ -4824,7 +4824,7 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (1)
 	db "WILLIAM@", TRAINERTYPE_ITEM
 	db 14
-	dw RAICHU_A
+	dw DELCATTY
 	db BERRY
 	db -1 ; end
 
@@ -4966,33 +4966,38 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (2)
-	db "NAOKO@", TRAINERTYPE_NORMAL
+	db "NAOKO@", TRAINERTYPE_MOVES
 	db 17
 	dw FLAREON
+	dw BABY_DOLL_EYES, QUICK_ATTACK, EMBER, TAIL_WHIP
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (3)
-	db "SAYO@", TRAINERTYPE_NORMAL
+	db "SAYO@", TRAINERTYPE_MOVES
 	db 17
 	dw ESPEON
+	dw SAND_ATTACK, QUICK_ATTACK, CONFUSION, GROWL
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (4)
-	db "ZUKI@", TRAINERTYPE_NORMAL
+	db "ZUKI@", TRAINERTYPE_MOVES
 	db 17
 	dw UMBREON
+	dw BABY_DOLL_EYES, QUICK_ATTACK, PURSUIT, TAIL_WHIP
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (5)
-	db "KUNI@", TRAINERTYPE_NORMAL
+	db "KUNI@", TRAINERTYPE_MOVES
 	db 17
 	dw VAPOREON
+	dw BABY_DOLL_EYES, QUICK_ATTACK, WATER_GUN, TAIL_WHIP
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (6)
-	db "MIKI@", TRAINERTYPE_NORMAL
+	db "MIKI@", TRAINERTYPE_MOVES
 	db 17
 	dw JOLTEON
+	dw SAND_ATTACK, QUICK_ATTACK, THUNDERSHOCK, GROWL
 	db -1 ; end
 
 	end_list_items
