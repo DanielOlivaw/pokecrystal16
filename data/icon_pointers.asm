@@ -149,9 +149,9 @@ IconPointers:
 	dw HaxorusIcon
 	dw LucarioIcon
 	dw CroagunkIcon
-	; dw UxieIcon
+	dw MespritIcon
 	dw AurorusIcon
-	; dw ShayminIcon
+	dw ShayminIcon
 	dw ArceusIcon
 	dw RockruffIcon
 	dw VenonatIcon

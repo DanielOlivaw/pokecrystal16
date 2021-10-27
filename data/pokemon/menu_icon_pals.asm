@@ -423,16 +423,16 @@ MonMenuIconPals:
 	icon_pals GRAY,   BLUE   ; DUSKNOIR
 	icon_pals BLUE,   BLUE   ; FROSLASS
 	icon_pals RED,    PINK   ; ROTOM
-	icon_pals GOLD,   GOLD   ; UXIE
-	icon_pals PINK,   PINK   ; MESPRIT
-	icon_pals BLUE,   BLUE   ; AZELF
+	icon_pals GOLD,   BROWN  ; UXIE
+	icon_pals PINK,   RED    ; MESPRIT
+	icon_pals BLUE,   PURPLE ; AZELF
 	icon_pals BLUE,   GREEN  ; DIALGA
 	icon_pals PURPLE, PINK   ; PALKIA
 	icon_pals GOLD,   BLUE   ; REGIGIGAS
 	icon_pals GRAY,   GOLD   ; GIRATINA
 	icon_pals PINK,   BLUE   ; CRESSELIA
 	icon_pals RED,    PINK   ; DARKRAI
-	icon_pals PURPLE, PURPLE               ; SHAYMIN
+	icon_pals GREEN,  BLUE   ; SHAYMIN
 	icon_pals GOLD,   GOLD   ; ARCEUS
 	icon_pals BLUE,   BLUE   ; OSHAWOTT
 	icon_pals BLUE,   PURPLE ; DEWOTT
