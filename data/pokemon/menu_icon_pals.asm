@@ -687,3 +687,4 @@ MonMenuIconPals:
 	icon_pals RED,    GOLD   ; DRAGAPULT
 	icon_pals GOLD,   GOLD   ; REGIELEKI
 	icon_pals PINK,   PINK   ; REGIDRAGO
+	icon_pals BROWN,  BLUE   ; EGG

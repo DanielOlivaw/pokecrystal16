@@ -117,7 +117,10 @@ GetMenuMonIconPalette:
 GetMenuMonIconPalette_PredeterminedShininess:
 	push af
 	ld a, [wCurPartySpecies]
+	cp EGG
+	jr z, .egg
 	call GetPokemonIndexFromID
+.got_pal_index
 	ld bc, MonMenuIconPals - 1
 	add hl, bc
 	ld e, [hl]
@@ -129,6 +132,10 @@ GetMenuMonIconPalette_PredeterminedShininess:
 	and $f
 	ld l, a
 	ret
+
+.egg
+	ld hl, 684 ; index of EGG in menu_icon_pals.asm
+	jr .got_pal_index
 
 LoadMenuMonIcon:
 	push hl
