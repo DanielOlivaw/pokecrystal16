@@ -53,12 +53,12 @@ HiddenPowerGuyText2:
 
 	para "It draws out the"
 	line "power of #MON"
-	cont "for attacking."
+	cont "to attack"
 
 	para "Remember this: its"
-	line "type and power de-"
-	cont "pend on the #-"
-	cont "MON using it."
+	line "type depends on"
+	cont "the #MON using"
+	cont "it."
 	done
 
 HiddenPowerGuyText3:

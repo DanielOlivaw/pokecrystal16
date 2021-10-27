@@ -31,7 +31,7 @@ ENDM
 	add_tm ROAR           ; TM05
 	add_tm TOXIC          ; TM06
 	add_tm HAIL           ; TM07
-	add_tm BULK_UP        ; TM08
+	add_tm CURSE          ; TM08
 	add_tm VENOSHOCK      ; TM09
 	add_tm HIDDEN_POWER   ; TM10
 	add_tm SUNNY_DAY      ; TM11
@@ -95,7 +95,7 @@ ENDM
 	add_tm ROCK_POLISH    ; TM69
 	add_tm FLASH          ; TM70
 	add_tm DUAL_CHOP      ; TM71
-	add_tm CURSE          ; TM72
+	add_tm ICY_WIND       ; TM72
 	add_tm THUNDER_WAVE   ; TM73
 	add_tm GYRO_BALL      ; TM74
 	add_tm SWORDS_DANCE   ; TM75
@@ -138,4 +138,5 @@ NUM_HMS EQU const_value - HM01
 	add_mt BLAST_BURN
 	add_mt HYDRO_CANNON
 	add_mt DRACO_METEOR
+	add_mt STEEL_BEAM
 NUM_TM_HM_TUTOR EQU __enum__ + -1

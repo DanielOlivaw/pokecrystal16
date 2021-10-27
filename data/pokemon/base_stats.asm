@@ -9,7 +9,7 @@ _tms1 = 0 ; TM01-TM24 (24)
 _tms2 = 0 ; TM25-TM48 (24)
 _tms3 = 0 ; TM49-TM72 (24)
 _tms4 = 0 ; TM73-TM96 (24)
-_tms5 = 0 ; TM97-TM99 + HM01-HM07 + MT01-MT04 (14/24)
+_tms5 = 0 ; TM97-TM99 + HM01-HM07 + MT01-MT05 (15/24)
 rept _NARG
 	if DEF(\1_TMNUM)
 	if \1_TMNUM < 24 + 1
@@ -44,7 +44,7 @@ rept 3 ; TM73-TM96 (24/24)
 	db _tms4 & $ff
 _tms4 = _tms4 >> 8
 endr
-rept 2 ; TM97-TM99 + HM01-HM07 + MT01-MT04 (14/24)
+rept 2 ; TM97-TM99 + HM01-HM07 + MT01-MT05 (15/24)
 	db _tms5 & $ff
 _tms5 = _tms5 >> 8
 endr

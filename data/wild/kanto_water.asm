@@ -16,39 +16,39 @@ KantoWaterWildMons:
 
 	map_id ROUTE_4
 	db 4 percent ; encounter rate
-	dbw 10, BASCULIN
-	dbw 5, BASCULIN
-	dbw 10, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
-	dbw 10, PSYDUCK
-	dbw 5, PSYDUCK
-	dbw 10, GOLDUCK
+	dbw 40, PSYDUCK
+	dbw 35, PSYDUCK
+	dbw 40, GOLDUCK
 
 	map_id ROUTE_9
 	db 4 percent ; encounter rate
-	dbw 15, BASCULIN
-	dbw 10, BASCULIN
-	dbw 15, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
 
 	map_id ROUTE_10_NORTH
 	db 4 percent ; encounter rate
-	dbw 15, BASCULIN
-	dbw 10, BASCULIN
-	dbw 15, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
 
 	map_id ROUTE_12
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 35, TENTACOOL
+	dbw 35, QUAGSIRE
+	dbw 35, TENTACRUEL
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 35, TENTACOOL
+	dbw 35, QUAGSIRE
+	dbw 35, TENTACRUEL
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
@@ -70,33 +70,33 @@ KantoWaterWildMons:
 
 	map_id ROUTE_22
 	db 2 percent ; encounter rate
-	dbw 10, BUIZEL
-	dbw 5, BUIZEL
-	dbw 10, FLOATZEL
+	dbw 40, BUIZEL
+	dbw 35, BUIZEL
+	dbw 40, FLOATZEL
 
 	map_id ROUTE_24
 	db 4 percent ; encounter rate
-	dbw 10, BASCULIN
-	dbw 5, BASCULIN
-	dbw 10, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
 
 	map_id ROUTE_25
 	db 4 percent ; encounter rate
-	dbw 10, BASCULIN
-	dbw 5, BASCULIN
-	dbw 10, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
 
 	map_id ROUTE_26
 	db 6 percent ; encounter rate
-	dbw 30, TENTACOOL
-	dbw 25, TENTACOOL
-	dbw 30, TENTACRUEL
+	dbw 40, TENTACOOL
+	dbw 35, TENTACOOL
+	dbw 40, TENTACRUEL
 
 	map_id ROUTE_27
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 40, TENTACOOL
+	dbw 35, TENTACOOL
+	dbw 40, TENTACRUEL
 
 	map_id ROUTE_28
 	db 2 percent ; encounter rate
@@ -106,21 +106,21 @@ KantoWaterWildMons:
 
 	map_id PALLET_TOWN
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 45, TENTACOOL
+	dbw 40, TENTACOOL
+	dbw 45, TENTACRUEL
 
 	map_id VIRIDIAN_CITY
 	db 2 percent ; encounter rate
-	dbw 10, BUIZEL
-	dbw 5, BUIZEL
-	dbw 10, FLOATZEL
+	dbw 40, BUIZEL
+	dbw 35, BUIZEL
+	dbw 40, FLOATZEL
 
 	map_id CERULEAN_CITY
 	db 4 percent ; encounter rate
-	dbw 10, BASCULIN
-	dbw 5, BASCULIN
-	dbw 10, BASCULIN
+	dbw 40, BASCULIN
+	dbw 35, BASCULIN
+	dbw 40, BASCULIN
 
 	map_id VERMILION_CITY
 	db 6 percent ; encounter rate
@@ -130,15 +130,15 @@ KantoWaterWildMons:
 
 	map_id CELADON_CITY
 	db 2 percent ; encounter rate
-	dbw 20, GRIMER
-	dbw 15, GRIMER
-	dbw 15, MUK
+	dbw 40, GRIMER
+	dbw 35, GRIMER
+	dbw 35, MUK
 
 	map_id FUCHSIA_CITY
 	db 2 percent ; encounter rate
-	dbw 20, MAGIKARP
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
+	dbw 40, MAGIKARP
+	dbw 35, MAGIKARP
+	dbw 30, MAGIKARP
 
 	map_id CINNABAR_ISLAND
 	db 6 percent ; encounter rate

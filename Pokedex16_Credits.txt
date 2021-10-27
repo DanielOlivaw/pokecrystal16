@@ -20,8 +20,8 @@ Rattata (Alolan)            Pia Carrot                        Kevin RDS
 Raticate (Alolan)           Pia Carrot                        Game Freak
 Pikachu                     Game Freak                        Game Freak
 Raichu (Alolan)             Enderific                         Pia Carrot
-Sandshrew (Alolan)          Enderific                         Pia Carrot
-Sandslash (Alolan)          Pia Carrot                        Pia Carrot
+Sandshrew (Alolan)          Enderific                         SkidMarc25
+Sandslash (Alolan)          SkidMarc25                        SkidMarc25
 Nidoran♀                    Game Freak                        Game Freak
 Nidorina                    Game Freak                        Game Freak
 Nidoqueen                   Game Freak                        Game Freak
@@ -43,7 +43,7 @@ Paras                       Game Freak                        Game Freak
 Parasect                    Game Freak                        Game Freak
 Venonat                     Game Freak                        Game Freak
 Venomoth                    Game Freak                        Game Freak
-Meowth (Galarian)           utytft                            utytft
+Meowth (Galarian)           utytft                            SkidMarc25
 Psyduck                     Game Freak                        Game Freak
 Golduck                     Game Freak                        Game Freak
 Mankey                      Game Freak                        Game Freak
@@ -597,7 +597,7 @@ Toxapex                     leParagon                         leParagon
 Mudbray                     SupahSanti                        Bummer
 Mudsdale                    leParagon, Bummer                 leParagon, Bummer
 Dewpider                    LakeOfDance                       leParagon
-Araquanid                   LakeOfDance                       leParagon
+Araquanid                   utytft                            leParagon
 Fomantis                    Pia Carrot                        utytft
 Lurantis                    EeVeeEe1999                       utytft
 Morelull                    leParagon, Bummer                 leParagon, Bummer
@@ -664,7 +664,7 @@ Sinistea                    EeVeeEe1999                       Game Freak
 Polteagyst                  French Cyndaquil                  French Cyndaquil
 Hatenna                     Cinnaboopa                        Game Freak
 Hattrem                     Cinnaboopa                        Game Freak
-Hatterene                   LeParagon, Menyu                  leParagon
+Hatterene                   SkidMarc25                        leParagon
 Obstagoon                   French Cyndaquil                  French Cyndaquil
 Perrserker                  utytft                            utytft
 Cursola                     Menyu                             Menyu

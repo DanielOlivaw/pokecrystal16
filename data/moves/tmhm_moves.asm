@@ -8,7 +8,7 @@ TMHMMoves:
 	dw ROAR           ; TM05
 	dw TOXIC          ; TM06
 	dw HAIL           ; TM07
-	dw BULK_UP        ; TM08
+	dw CURSE          ; TM08
 	dw VENOSHOCK      ; TM09
 	dw HIDDEN_POWER   ; TM10
 	dw SUNNY_DAY      ; TM11
@@ -72,7 +72,7 @@ TMHMMoves:
 	dw ROCK_POLISH    ; TM69
 	dw FLASH          ; TM70
 	dw DUAL_CHOP      ; TM71
-	dw CURSE          ; TM72
+	dw ICY_WIND       ; TM72
 	dw THUNDER_WAVE   ; TM73
 	dw GYRO_BALL      ; TM74
 	dw SWORDS_DANCE   ; TM75
@@ -113,4 +113,5 @@ TMHMMoves:
 	dw BLAST_BURN
 	dw HYDRO_CANNON
 	dw DRACO_METEOR
+	dw STEEL_BEAM
 	dw 0 ; end

@@ -44,8 +44,11 @@ MoveTutor:
 	cp MOVETUTOR_HYDRO_CANNON
 	ld hl, HYDRO_CANNON
 	jr z, .ok
-	; MOVETUTOR_DRACO_METEOR
+	cp MOVETUTOR_DRACO_METEOR
 	ld hl, DRACO_METEOR
+	jr z, .ok
+	; MOVETUTOR_STEEL_BEAM
+	ld hl, STEEL_BEAM
 .ok
 	jp GetMoveIDFromIndex
 

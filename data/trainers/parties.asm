@@ -2481,8 +2481,8 @@ FisherGroup:
 
 	next_list_item ; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 8
-	dw BASCULIN
+	db 10
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (3)
@@ -2524,7 +2524,7 @@ FisherGroup:
 	next_list_item ; FISHER (7)
 	db "TULLY@", TRAINERTYPE_NORMAL
 	db 18
-	dw MAREANIE
+	dw ARROKUDA
 	db -1 ; end
 
 	next_list_item ; FISHER (8)
@@ -2610,31 +2610,31 @@ FisherGroup:
 	next_list_item ; FISHER (16)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 17
-	dw BASCULIN
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (17)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 17
-	dw MAREANIE
-	db 19
 	dw BASCULIN
+	db 19
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (18)
 	db "TULLY@", TRAINERTYPE_NORMAL
 	db 23
-	dw MAREANIE
+	dw ARROKUDA
 	db -1 ; end
 
 	next_list_item ; FISHER (19)
 	db "TULLY@", TRAINERTYPE_NORMAL
 	db 32
-	dw BASCULIN
+	dw BARASKEWDA
 	db 32
 	dw BASCULIN
 	db 32
-	dw MAREANIE
+	dw BASCULIN
 	db -1 ; end
 
 	next_list_item ; FISHER (20)
@@ -2650,55 +2650,55 @@ FisherGroup:
 	next_list_item ; FISHER (21)
 	db "SCOTT@", TRAINERTYPE_NORMAL
 	db 30
-	dw MAREANIE
+	dw FINNEON
 	db 30
-	dw MAREANIE
+	dw FINNEON
 	db 34
-	dw BASCULIN
+	dw LUMINEON
 	db -1 ; end
 
 	next_list_item ; FISHER (22)
 	db "WILTON@", TRAINERTYPE_MOVES
 	db 34
 	dw BASCULIN
-	dw SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
+	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
 	db 34
 	dw BASCULIN
-	dw SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
+	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
 	db 38
-	dw REMORAID
-	dw PSYBEAM, AURORA_BEAM, BUBBLEBEAM, HYPER_BEAM
+	dw BASCULIN
+	dw CRUNCH, CHIP_AWAY, SCARY_FACE, AQUA_JET
 	db -1 ; end
 
 	next_list_item ; FISHER (23)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 30
-	dw MAREANIE
-	db 32
 	dw BASCULIN
+	db 32
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (24)
 	db "RALPH@", TRAINERTYPE_MOVES
 	db 35
-	dw MAREANIE
-	dw TOXIC, TOXIC_SPIKES, SURF, PIN_MISSILE
-	db 39
 	dw BASCULIN
-	dw ENDURE, FLAIL, FURY_ATTACK, WATERFALL
+	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
+	db 39
+	dw ANCHORRAGE
+	dw ANCHOR_SHOT, AQUA_TAIL, SCARY_FACE, THRASH
 	db -1 ; end
 
 	next_list_item ; FISHER (25)
 	db "TULLY@", TRAINERTYPE_MOVES
-	db 34
-	dw BASCULIN
-	dw SUPERSONIC, RAIN_DANCE, WATERFALL, TAKE_DOWN
-	db 34
-	dw BASCULIN
-	dw SUPERSONIC, RAIN_DANCE, WATERFALL, TAKE_DOWN
 	db 37
-	dw MAREANIE
-	dw TOXIC, SURF, PIN_MISSILE, VENOSHOCK
+	dw BARASKEWDA
+	dw LASER_FOCUS, FLIP_TURN, AQUA_JET, BITE
+	db 34
+	dw BASCULIN
+	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
+	db 34
+	dw BASCULIN
+	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
 	db -1 ; end
 
 	end_list_items
@@ -3856,13 +3856,13 @@ JugglerGroup:
 	next_list_item ; JUGGLER (1)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 2
-	dw PINECO
+	dw APPLIN
 	db 6
-	dw PINECO
+	dw APPLIN
 	db 10
-	dw PINECO
+	dw APPLIN
 	db 14
-	dw PINECO
+	dw APPLIN
 	db -1 ; end
 
 	next_list_item ; JUGGLER (2)
@@ -3878,49 +3878,49 @@ JugglerGroup:
 	next_list_item ; JUGGLER (3)
 	db "HORTON@", TRAINERTYPE_NORMAL
 	db 33
-	dw SPRITZEE
+	dw PINECO
 	db 33
-	dw SPRITZEE
+	dw PINECO
 	db 33
-	dw SPRITZEE
+	dw PINECO
 	db 33
-	dw SPRITZEE
+	dw FORRETRESS
 	db -1 ; end
 
 	next_list_item ; JUGGLER (4)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 6
-	dw PINECO
+	dw APPLIN
 	db 10
-	dw PINECO
+	dw APPLIN
 	db 14
-	dw PINECO
+	dw APPLIN
 	db 18
-	dw PINECO
+	dw APPLIN
 	db -1 ; end
 
 	next_list_item ; JUGGLER (5)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 18
-	dw PINECO
+	dw APPLIN
 	db 22
-	dw PINECO
+	dw APPLIN
 	db 26
-	dw PINECO
+	dw APPLIN
 	db 30
-	dw PINECO
+	dw FLAPPLE
 	db -1 ; end
 
 	next_list_item ; JUGGLER (6)
 	db "IRWIN@", TRAINERTYPE_NORMAL
 	db 18
-	dw PINECO
+	dw APPLIN
 	db 22
-	dw PINECO
+	dw APPLIN
 	db 26
-	dw PINECO
+	dw APPLIN
 	db 30
-	dw PINECO
+	dw FLAPPLE
 	db -1 ; end
 
 	end_list_items

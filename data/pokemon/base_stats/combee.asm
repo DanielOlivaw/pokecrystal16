@@ -16,5 +16,5 @@
 	dn EGG_BUG, EGG_BUG ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm OMINOUS_WIND
 	; end
