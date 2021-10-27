@@ -53,7 +53,7 @@ HiddenPowerGuyText2:
 
 	para "It draws out the"
 	line "power of #MON"
-	cont "to attack"
+	cont "to attack."
 
 	para "Remember this: its"
 	line "type depends on"
