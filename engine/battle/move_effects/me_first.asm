@@ -65,6 +65,7 @@ BattleCommand_MeFirst:
 	pop hl
 	pop af
 ; Use the move.
+	call AnimateCurrentMove
 	jp UseOpponentMove
 
 .cant_steal_moves

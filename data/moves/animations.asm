@@ -1173,31 +1173,8 @@ BattleAnim_DarkVoid:
 BattleAnim_SeedFlare:
 BattleAnim_HealingWish:
 BattleAnim_LunarDance:
-BattleAnim_Memento:
-BattleAnim_BodyPress:
-BattleAnim_MeFirst:
-BattleAnim_MagnetRise:
-BattleAnim_FinalGambit:
 BattleAnim_HealOrder:
 BattleAnim_DefendOrder:
-BattleAnim_AttackOrder:
-BattleAnim_MysticalFire:
-BattleAnim_Confide:
-BattleAnim_Chatter:
-BattleAnim_PowerUpPunch:
-BattleAnim_MagnetBomb:
-BattleAnim_RoarOfTime:
-BattleAnim_SpacialRend:
-BattleAnim_Retaliate:
-BattleAnim_Facade:
-BattleAnim_TrickRoom:
-BattleAnim_MistBall:
-BattleAnim_LusterPurge:
-BattleAnim_OriginPulse:
-BattleAnim_PrecipiceBlades:
-BattleAnim_DragonAscent:
-BattleAnim_DoomDesire:
-BattleAnim_PsychoBoost:
 BattleAnim_TeeterDance:
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -1249,6 +1226,7 @@ BattleAnim_Doubleslap_branch_c961b:
 	anim_ret
 
 BattleAnim_CometPunch:
+BattleAnim_PowerUpPunch:
 BattleAnim_NeedleArm:
 	anim_1gfx ANIM_GFX_HIT
 	anim_if_param_equal $1, BattleAnim_CometPunch_branch_c9641
@@ -2034,6 +2012,7 @@ BattleAnim_Poisonpowder:
 BattleAnim_SleepPowder:
 BattleAnim_Spore:
 BattleAnim_StunSpore:
+BattleAnim_AttackOrder:
 	anim_1gfx ANIM_GFX_POWDER
 .loop
 	anim_sound 0, 1, SFX_POWDER
@@ -2295,6 +2274,7 @@ BattleAnim_Softboiled:
 
 BattleAnim_FocusEnergy:
 BattleAnim_Autotomize:
+BattleAnim_MagnetRise:
 BattleAnim_RazorWind_branch_c9fb5:
 BattleAnim_SkullBash_branch_c9fb5:
 BattleAnim_SkyAttack_branch_c9fb5:
@@ -2677,6 +2657,7 @@ BattleAnim_Tackle:
 
 BattleAnim_BodySlam:
 BattleAnim_StormThrow:
+BattleAnim_BodyPress:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
@@ -2713,6 +2694,8 @@ BattleAnim_Uproot:
 	anim_ret
 
 BattleAnim_DoubleEdge:
+BattleAnim_Retaliate:
+BattleAnim_FinalGambit:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $10
@@ -2973,6 +2956,7 @@ BattleAnim_PetalDance:
 
 BattleAnim_Barrage:
 BattleAnim_MudBomb:
+BattleAnim_MagnetBomb:
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_EXPLOSION
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
@@ -3282,6 +3266,7 @@ BattleAnim_Psybeam:
 	anim_ret
 
 BattleAnim_DreamEater:
+BattleAnim_MeFirst:
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_bgp $1b
 	anim_obp0 $27
@@ -3554,6 +3539,7 @@ BattleAnim_Barrier:
 
 BattleAnim_Waterfall:
 BattleAnim_SkyUppercut:
+BattleAnim_DragonAscent:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_25, $0, $1, $0
@@ -3957,6 +3943,8 @@ BattleAnim_PowerGem:
 	anim_ret
 
 BattleAnim_Spite:
+BattleAnim_Confide:
+BattleAnim_Memento:
 	anim_1gfx ANIM_GFX_ANGELS
 	anim_obj ANIM_OBJ_SPITE, 132, 16, $0
 	anim_sound 0, 1, SFX_SPITE
@@ -4577,6 +4565,7 @@ BattleAnim_HealBell:
 	anim_ret
 
 BattleAnim_Return:
+BattleAnim_Facade:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
@@ -4744,6 +4733,7 @@ BattleAnim_Megahorn:
 
 BattleAnim_Dragonbreath:
 BattleAnim_Incinerate:
+BattleAnim_MysticalFire:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_sound 6, 2, SFX_EMBER
 .loop
@@ -5226,6 +5216,7 @@ BattleAnim_Ancientpower:
 	anim_ret
 
 BattleAnim_ShadowBall:
+BattleAnim_MistBall:
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_SMOKE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
@@ -5236,6 +5227,8 @@ BattleAnim_ShadowBall:
 	anim_ret
 
 BattleAnim_FutureSight:
+BattleAnim_DoomDesire:
+BattleAnim_TrickRoom:
 	anim_1gfx ANIM_GFX_WIND
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -5519,6 +5512,7 @@ BattleAnim_HeatWave:
 	anim_ret
 
 BattleAnim_WaterPulse:
+BattleAnim_OriginPulse:
 ; From Rangi's Polished Crystal
 	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_PSYCHIC
 	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
@@ -5727,6 +5721,7 @@ BattleAnim_MetalBurst:
 	anim_ret
 
 BattleAnim_EarthPower:
+BattleAnim_PrecipiceBlades:
 ; From Rangi's Polished Crystal
 	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_ROCKS
 	anim_sound 0, 0, SFX_EGG_BOMB
@@ -5857,6 +5852,8 @@ BattleAnim_AuroraVeil:
 	anim_ret
 
 BattleAnim_DazzleGleam:
+BattleAnim_LusterPurge:
+BattleAnim_RoarOfTime:
 ; From Rangi's Polished Crystal
 	anim_3gfx ANIM_GFX_SPEED, ANIM_GFX_HIT, ANIM_GFX_SHINE
 	anim_sound 0, 1, SFX_MOONLIGHT
@@ -6041,6 +6038,7 @@ BattleAnim_WaterAttack:
 
 BattleAnim_CloseCombat:
 ; From Rangi's Polished Crystal
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_RAZOR_WIND
 	anim_call BattleAnim_AgilityLines
 	anim_wait 12
@@ -6080,6 +6078,7 @@ BattleAnim_BulletPunch:
 
 BattleAnim_Howl:
 BattleAnim_NobleRoar:
+BattleAnim_Chatter:
 	anim_1gfx ANIM_GFX_NOISE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_cry $1
@@ -6091,6 +6090,7 @@ BattleAnim_NobleRoar:
 	anim_ret
 
 BattleAnim_PsychoCut:
+BattleAnim_SpacialRend:
 	anim_1gfx ANIM_GFX_CUT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_call BattleAnim_UserZen
@@ -6382,6 +6382,7 @@ BattleAnim_Hex:
 
 BattleAnim_Psyshock:
 BattleAnim_Psystrike:
+BattleAnim_PsychoBoost:
 	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
 	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
@@ -6644,10 +6645,10 @@ BattleAnim_StrangeSteam:
 	anim_1gfx ANIM_GFX_HAZE
 	anim_sound 0, 0, SFX_SURF
 .loop
-	anim_obj ANIM_OBJ_MIST, 132, 36, $0
+	anim_obj ANIM_OBJ_MIST, 132, 16, $0
 	anim_wait 8
 	anim_sound 0, 1, SFX_MENU
-	anim_loop 6, .loop
+	anim_loop 10, .loop
 	anim_wait 96
 	anim_ret
 
