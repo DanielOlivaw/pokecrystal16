@@ -107,11 +107,22 @@ TangelEggMoves:
 	dw FLAIL
 	dw CONFUSION
 	dw MEGA_DRAIN
-	dw REFLECT
 	dw AMNESIA
+	dw ENDEAVOR
+	dw LEECH_SEED
+	dw GIGA_DRAIN
+	dw LEAF_STORM
+	dw POWER_SWAP
+	dw WAKE_UP_SLAP
 	dw -1 ; end
 
 MolancoraEggMoves:
+	dw AQUA_JET
+	dw AQUA_RING
+	dw HEAVY_SLAM
+	dw DOUBLE_EDGE
+	dw BRINE
+	dw HARDEN
 	dw -1 ; end
 
 MeowsyEggMoves:
@@ -119,6 +130,13 @@ MeowsyEggMoves:
 	dw CHARM
 	dw HYPNOSIS
 	dw AMNESIA
+	dw COVET
+	dw DOUBLE_EDGE
+	dw FLAIL
+	dw NIGHT_SLASH
+	dw TAIL_WHIP
+	dw ODOR_SLEUTH
+	dw PUNISHMENT
 	dw -1 ; end
 
 MoibelleEggMoves:
@@ -127,20 +145,39 @@ MoibelleEggMoves:
 	dw METAL_SOUND
 	dw PURSUIT
 	dw CHARM
+	dw NIGHT_SLASH
+	dw FAIRY_WIND
 	dw -1 ; end
 
 TykerEggMoves:
 	dw BABY_DOLL_EYES
 	dw SPARK
+	dw GROWL
 	dw DEFENSE_CURL
 	dw ROLLOUT
+	dw FIRE_FANG
+	dw CHARM
+	dw FURY_SWIPES
 	dw -1 ; end
 
 KurstrawEggMoves:
+	dw MEGA_DRAIN
+	dw GIGA_DRAIN
+	dw FUTURE_SIGHT
+	dw PSYWAVE
+	dw PHANTOM_FORCE
+	dw CONFUSE_RAY
 	dw -1 ; end
 
 WolfrostEggMoves:
+	dw SNARL
+	dw REFRESH
 	dw ICE_BALL
+	dw FROST_BREATH
+	dw MOONLIGHT
+	dw MOONBLAST
+	dw ICICLE_CRASH
+	dw GROWL
 	dw -1 ; end
 
 ChikoritaEggMoves:
