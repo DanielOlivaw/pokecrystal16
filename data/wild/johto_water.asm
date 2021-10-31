@@ -166,7 +166,7 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_44
 	db 2 percent ; encounter rate
-	dbw 25, BUIZEL
+	dbw 25, BERGMITE
 	dbw 20, BUIZEL
 	dbw 25, FLOATZEL
 

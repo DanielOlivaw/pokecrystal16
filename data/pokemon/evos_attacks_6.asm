@@ -184,7 +184,7 @@ DelphoxEvosAttacks:
 	dbw 40, FLAMETHROWER
 	dbw 45, SUNNY_DAY
 	dbw 50, FIRE_BLAST
-	dbw 55, PSYCHIC
+	dbw 55, PSYCHIC_M
 	dbw 60, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
@@ -536,7 +536,7 @@ MeowsticEvosAttacks:
 	dbw 42, SIGNAL_BEAM
 	dbw 45, EXTRASENSORY
 	dbw 48, SHADOW_BALL
-	dbw 51, PSYCHIC
+	dbw 51, PSYCHIC_M
 	dbw 54, MISTY_TERRAIN
 	dbw 57, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -620,7 +620,7 @@ SpritzeeEvosAttacks:
 	dbw 21, ATTRACT
 	dbw 24, FLAIL
 	dbw 27, MISTY_TERRAIN
-	dbw 30, PSYCHIC
+	dbw 30, PSYCHIC_M
 	dbw 33, CHARM
 	dbw 36, CALM_MIND
 	dbw 39, MOONBLAST
@@ -639,7 +639,7 @@ AromatisseEvosAttacks:
 	dbw 21, ATTRACT
 	dbw 24, FLAIL
 	dbw 27, MISTY_TERRAIN
-	dbw 30, PSYCHIC
+	dbw 30, PSYCHIC_M
 	dbw 33, CHARM
 	dbw 36, CALM_MIND
 	dbw 39, MOONBLAST
@@ -1233,7 +1233,7 @@ YveltalEvosAttacks:
 	dbw 24, ROOST
 	dbw 30, AIR_SLASH
 	dbw 36, DARK_PULSE
-	dbw 42, PSYCHIC
+	dbw 42, PSYCHIC_M
 	dbw 48, OBLIVION_WING
 	dbw 54, PHANTOM_FORCE
 	dbw 60, FOUL_PLAY

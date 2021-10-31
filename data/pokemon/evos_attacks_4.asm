@@ -966,7 +966,7 @@ MimeJrEvosAttacks:
 	dbw 36, SAFEGUARD
 	dbw 39, DAZZLING_GLEAM
 	dbw 42, TRICK
-	dbw 45, PSYCHIC
+	dbw 45, PSYCHIC_M
 	dbw 48, TEETER_DANCE
 	db 0 ; no more level-up moves
 
@@ -1676,7 +1676,7 @@ GalladeEvosAttacks:
 	dbw 1, DREAM_EATER
 	dbw 1, CALM_MIND
 	dbw 1, LIFE_DEW
-	dbw 1, PSYCHIC
+	dbw 1, PSYCHIC_M
 	dbw 1, CHARM
 	dbw 1, DAZZLING_GLEAM
 	dbw 1, HYPNOSIS
@@ -1808,7 +1808,7 @@ UxieEvosAttacks:
 	dbw 28, YAWN
 	dbw 35, EXTRASENSORY
 	dbw 42, AMNESIA
-	dbw 49, PSYCHIC
+	dbw 49, PSYCHIC_M
 	dbw 56, FLAIL
 	dbw 63, FUTURE_SIGHT
 	dbw 70, MEMENTO
@@ -1824,7 +1824,7 @@ MespritEvosAttacks:
 	dbw 28, LUCKY_CHANT
 	dbw 35, EXTRASENSORY
 	dbw 42, CHARM
-	dbw 49, PSYCHIC
+	dbw 49, PSYCHIC_M
 	dbw 56, FLATTER
 	dbw 63, FUTURE_SIGHT
 	dbw 70, HEALING_WISH
@@ -1840,7 +1840,7 @@ AzelfEvosAttacks:
 	dbw 28, LASER_FOCUS
 	dbw 35, EXTRASENSORY
 	dbw 42, NASTY_PLOT
-	dbw 49, PSYCHIC
+	dbw 49, PSYCHIC_M
 	dbw 56, UPROAR
 	dbw 63, FUTURE_SIGHT
 	dbw 70, EXPLOSION
@@ -1936,7 +1936,7 @@ CresseliaEvosAttacks:
 	dbw 36, PSYCHO_CUT
 	dbw 42, MOONLIGHT
 	dbw 48, SAFEGUARD
-	dbw 54, PSYCHIC
+	dbw 54, PSYCHIC_M
 	dbw 60, MOONBLAST
 	dbw 66, FUTURE_SIGHT
 	dbw 72, LUNAR_DANCE

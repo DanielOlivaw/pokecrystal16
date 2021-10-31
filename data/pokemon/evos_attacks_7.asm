@@ -610,7 +610,7 @@ OranguruEvosAttacks:
 	dbw 24, NASTY_PLOT
 	dbw 30, ZEN_HEADBUTT
 	dbw 36, TRICK_ROOM
-	dbw 42, PSYCHIC
+	dbw 42, PSYCHIC_M
 	dbw 48, FOUL_PLAY
 	dbw 54, FUTURE_SIGHT
 	db 0 ; no more level-up moves

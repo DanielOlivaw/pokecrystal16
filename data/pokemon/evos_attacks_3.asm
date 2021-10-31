@@ -588,7 +588,7 @@ RaltsEvosAttacks:
 	dbw 21, PSYBEAM
 	dbw 24, HYPNOSIS
 	dbw 27, CHARM
-	dbw 30, PSYCHIC
+	dbw 30, PSYCHIC_M
 	dbw 33, CALM_MIND
 	dbw 36, DREAM_EATER
 	dbw 39, STORED_POWER
@@ -610,7 +610,7 @@ KirliaEvosAttacks:
 	dbw 22, PSYBEAM
 	dbw 26, HYPNOSIS
 	dbw 30, CHARM
-	dbw 34, PSYCHIC
+	dbw 34, PSYCHIC_M
 	dbw 38, CALM_MIND
 	dbw 42, DREAM_EATER
 	dbw 46, STORED_POWER
@@ -634,7 +634,7 @@ GardevoirEvosAttacks:
 	dbw 26, HYPNOSIS
 	dbw 29, DAZZLING_GLEAM
 	dbw 31, WISH
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 41, CALM_MIND
 	dbw 46, DREAM_EATER
 	dbw 51, STORED_POWER
@@ -1270,7 +1270,7 @@ SpoinkEvosAttacks:
 	dbw 32, REST
 	dbw 36, SNORE
 	dbw 40, PAYBACK
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 48, BOUNCE
 	db 0 ; no more level-up moves
 
@@ -1289,7 +1289,7 @@ GrumpigEvosAttacks:
 	dbw 34, REST
 	dbw 40, SNORE
 	dbw 46, PAYBACK
-	dbw 52, PSYCHIC
+	dbw 52, PSYCHIC_M
 	dbw 58, BOUNCE
 	db 0 ; no more level-up moves
 
@@ -1525,7 +1525,7 @@ LunatoneEvosAttacks:
 	dbw 20, POWER_GEM
 	dbw 24, PSYSHOCK
 	dbw 28, COSMIC_POWER
-	dbw 32, PSYCHIC
+	dbw 32, PSYCHIC_M
 	dbw 36, STONE_EDGE
 	dbw 40, MOONLIGHT
 	dbw 44, FUTURE_SIGHT
@@ -1546,7 +1546,7 @@ SolrockEvosAttacks:
 	dbw 20, ROCK_SLIDE
 	dbw 24, ZEN_HEADBUTT
 	dbw 28, COSMIC_POWER
-	dbw 32, PSYCHIC
+	dbw 32, PSYCHIC_M
 	dbw 36, STONE_EDGE
 	dbw 40, MORNING_SUN
 	dbw 44, SOLARBEAM
@@ -2087,7 +2087,7 @@ GorebyssEvosAttacks:
 	dbw 27, CAPTIVATE
 	dbw 31, LEECH_LIFE
 	dbw 36, BATON_PASS
-	dbw 40, PSYCHIC
+	dbw 40, PSYCHIC_M
 	dbw 45, AQUA_TAIL
 	dbw 49, COIL
 	dbw 54, HYDRO_PUMP
@@ -2209,7 +2209,7 @@ MetangEvosAttacks:
 	dbw 30, BULLET_PUNCH
 	dbw 35, ZEN_HEADBUTT
 	dbw 40, SCARY_FACE
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 50, METEOR_MASH
 	dbw 55, IRON_DEFENSE
 	dbw 60, AGILITY
@@ -2227,7 +2227,7 @@ MetagrossEvosAttacks:
 	dbw 30, BULLET_PUNCH
 	dbw 35, ZEN_HEADBUTT
 	dbw 40, SCARY_FACE
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 44, HAMMER_ARM
 	dbw 52, METEOR_MASH
 	dbw 59, IRON_DEFENSE
@@ -2309,7 +2309,7 @@ LatiasEvosAttacks:
 	dbw 45, ZEN_HEADBUTT
 	dbw 50, DRAGON_PULSE
 	dbw 55, REFLECT_TYPE
-	dbw 60, PSYCHIC
+	dbw 60, PSYCHIC_M
 	dbw 65, GUARD_SPLIT
 	dbw 70, HEALING_WISH
 	dbw 75, PSYCHO_SHIFT
@@ -2330,7 +2330,7 @@ LatiosEvosAttacks:
 	dbw 45, ZEN_HEADBUTT
 	dbw 50, DRAGON_PULSE
 	dbw 55, DEFOG
-	dbw 60, PSYCHIC
+	dbw 60, PSYCHIC_M
 	dbw 65, POWER_SPLIT
 	dbw 70, MEMENTO
 	dbw 75, PSYCHO_SHIFT
@@ -2399,7 +2399,7 @@ JirachiEvosAttacks:
 	dbw 24, LIFE_DEW
 	dbw 31, ZEN_HEADBUTT
 	dbw 39, LUCKY_CHANT
-	dbw 46, PSYCHIC
+	dbw 46, PSYCHIC_M
 	dbw 54, METEOR_MASH
 	dbw 61, HEALING_WISH
 	dbw 69, REST
@@ -2417,7 +2417,7 @@ DeoxysEvosAttacks:
 	dbw 16, TELEPORT
 	dbw 24, PURSUIT
 	dbw 32, KNOCK_OFF
-	dbw 40, PSYCHIC
+	dbw 40, PSYCHIC_M
 	dbw 48, PSYCHO_SHIFT
 	dbw 56, ZEN_HEADBUTT
 	dbw 64, COSMIC_POWER

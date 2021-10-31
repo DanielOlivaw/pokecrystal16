@@ -444,7 +444,7 @@ RaichuAEvosAttacks:
 	dbw 1, CHARM
 	dbw 1, THUNDERSHOCK
 	dbw 1, TAIL_WHIP
-	dbw 1, PSYCHIC
+	dbw 1, PSYCHIC_M
 	dbw 4, GROWL
 	dbw 8, QUICK_ATTACK
 	dbw 12, THUNDER_WAVE
@@ -2117,7 +2117,7 @@ StaryuEvosAttacks:
 	dbw 36, REFLECT_TYPE
 	dbw 39, LIGHT_SCREEN
 	dbw 43, POWER_GEM
-	dbw 46, PSYCHIC
+	dbw 46, PSYCHIC_M
 	dbw 50, RECOVER
 	dbw 53, COSMIC_POWER
 	dbw 57, HYDRO_PUMP
@@ -2139,7 +2139,7 @@ StarmieEvosAttacks:
 	dbw 36, REFLECT_TYPE
 	dbw 39, LIGHT_SCREEN
 	dbw 43, POWER_GEM
-	dbw 46, PSYCHIC
+	dbw 46, PSYCHIC_M
 	dbw 50, RECOVER
 	dbw 53, COSMIC_POWER
 	dbw 57, HYDRO_PUMP
@@ -2174,7 +2174,7 @@ MrMimeGEvosAttacks:
 	dbw 36, MIRROR_COAT
 	dbw 39, FREEZE_DRY
 	dbw 42, TRICK
-	dbw 45, PSYCHIC
+	dbw 45, PSYCHIC_M
 	dbw 48, TEETER_DANCE
 	db 0 ; no more level-up moves
 

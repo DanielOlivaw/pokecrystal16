@@ -331,7 +331,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 12, NIDORAN_M
 	dbw 12, NIDORAN_F
-	dbw 14, LEDYBA
+	dbw 14, BUDEW
 	dbw 13, AUDINO
 	dbw 10, SCATTERBUG
 	dbw 10, SCATTERBUG
@@ -339,17 +339,17 @@ JohtoGrassWildMons:
 	; day
 	dbw 12, NIDORAN_F
 	dbw 12, NIDORAN_M
-	dbw 14, COTTONEE
+	dbw 14, BUDEW
 	dbw 13, AUDINO
 	dbw 10, SCATTERBUG
 	dbw 10, SCATTERBUG
 	dbw 10, SCATTERBUG
 	; nite
-	dbw 12, PSYDUCK
-	dbw 13, HOOTHOOT
-	dbw 14, SPINARAK
-	dbw 15, HOOTHOOT
+	dbw 12, DRIFLOON
+	dbw 13, MOIBELLE
 	dbw 10, VENONAT
+	dbw 13, AUDINO
+	dbw 14, MOIBELLE
 	dbw 12, VENONAT
 	dbw 12, VENONAT
 
@@ -359,7 +359,7 @@ JohtoGrassWildMons:
 	dbw 20, NATU
 	dbw 22, BALTOY
 	dbw 18, BRONZOR
-	dbw 24, YAMASK_G
+	dbw 24, GOLETT
 	dbw 20, SMEARGLE
 	dbw 22, SMEARGLE
 	dbw 22, SMEARGLE
@@ -367,15 +367,15 @@ JohtoGrassWildMons:
 	dbw 20, NATU
 	dbw 22, BALTOY
 	dbw 18, BRONZOR
-	dbw 24, YAMASK_G
+	dbw 24, GOLETT
 	dbw 20, SMEARGLE
 	dbw 22, SMEARGLE
 	dbw 22, SMEARGLE
 	; nite
-	dbw 20, NATU
+	dbw 20, YAMASK_G
 	dbw 22, BALTOY
 	dbw 18, BRONZOR
-	dbw 24, YAMASK_G
+	dbw 24, GOLETT
 	dbw 22, WOOPER
 	dbw 22, QUAGSIRE
 	dbw 22, QUAGSIRE
@@ -545,18 +545,18 @@ JohtoGrassWildMons:
 	map_id ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
+	dbw 5, SCATTERBUG
+	dbw 5, VENIPEDE
+	dbw 7, SPEWPA
+	dbw 7, SEEDOT
 	dbw 7, FOMANTIS
 	dbw 6, PARAS
 	dbw 6, PARAS
 	; day
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
+	dbw 5, SCATTERBUG
+	dbw 5, VENIPEDE
+	dbw 7, SPEWPA
+	dbw 7, SEEDOT
 	dbw 7, FOMANTIS
 	dbw 6, PARAS
 	dbw 6, PARAS
@@ -681,51 +681,51 @@ JohtoGrassWildMons:
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 21, SWINUB
+	dbw 22, SNOVER
 	dbw 22, ZUBAT
-	dbw 22, GOLBAT
 	dbw 23, SWINUB
+	dbw 22, SNOM
 	dbw 24, GOLBAT
-	dbw 22, GOLBAT
 	dbw 22, GOLBAT
 	; day
 	dbw 21, SWINUB
+	dbw 22, SNOVER
 	dbw 22, ZUBAT
-	dbw 22, GOLBAT
 	dbw 23, SWINUB
+	dbw 22, SNOM
 	dbw 24, GOLBAT
-	dbw 22, GOLBAT
 	dbw 22, GOLBAT
 	; nite
 	dbw 21, WOLFROST
+	dbw 22, SNOVER
 	dbw 22, ZUBAT
-	dbw 22, GOLBAT
 	dbw 23, WOLFROST
+	dbw 22, SNOM
 	dbw 24, GOLBAT
-	dbw 22, GOLBAT
 	dbw 22, GOLBAT
 
 	map_id ICE_PATH_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 22, SWINUB
+	dbw 23, SANDSHREW_A
 	dbw 23, ZUBAT
-	dbw 23, GOLBAT
 	dbw 24, SWINUB
 	dbw 25, GOLBAT
 	dbw 23, GOLBAT
 	dbw 22, CUBCHOO
 	; day
 	dbw 22, SWINUB
+	dbw 23, SANDSHREW_A
 	dbw 23, ZUBAT
-	dbw 23, GOLBAT
 	dbw 24, SWINUB
 	dbw 25, GOLBAT
 	dbw 23, GOLBAT
 	dbw 22, CUBCHOO
 	; nite
 	dbw 22, WOLFROST
+	dbw 23, VULPIX_A
 	dbw 23, ZUBAT
-	dbw 23, GOLBAT
 	dbw 24, WOLFROST
 	dbw 25, GOLBAT
 	dbw 23, GOLBAT
@@ -735,24 +735,24 @@ JohtoGrassWildMons:
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 23, SWINUB
+	dbw 24, SANDSHREW_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
 	dbw 25, SWINUB
 	dbw 26, GOLBAT
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	; day
 	dbw 23, SWINUB
+	dbw 24, SANDSHREW_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
 	dbw 25, SWINUB
 	dbw 26, GOLBAT
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	; nite
 	dbw 23, WOLFROST
+	dbw 24, VULPIX_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
 	dbw 25, WOLFROST
 	dbw 26, GOLBAT
 	dbw 22, SNEASEL
@@ -762,24 +762,24 @@ JohtoGrassWildMons:
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 23, SWINUB
+	dbw 24, SANDSHREW_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
-	dbw 25, SWINUB
+	dbw 25, DARUMAKA_G
 	dbw 26, GOLBAT
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	; day
 	dbw 23, SWINUB
+	dbw 24, SANDSHREW_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
-	dbw 25, SWINUB
+	dbw 25, DARUMAKA_G
 	dbw 26, GOLBAT
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	; nite
-	dbw 23, WOLFROST
+	dbw 23, SNORUNT
+	dbw 24, VULPIX_A
 	dbw 24, ZUBAT
-	dbw 24, GOLBAT
 	dbw 25, WOLFROST
 	dbw 26, GOLBAT
 	dbw 22, SNEASEL
@@ -788,26 +788,26 @@ JohtoGrassWildMons:
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 24, SWINUB
+	dbw 24, DARUMAKA_G
 	dbw 25, ZUBAT
 	dbw 25, GOLBAT
-	dbw 26, SWINUB
+	dbw 26, DARUMAKA_G
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	dbw 26, CUBCHOO
 	; day
-	dbw 24, SWINUB
+	dbw 24, DARUMAKA_G
 	dbw 25, ZUBAT
 	dbw 25, GOLBAT
-	dbw 26, SWINUB
+	dbw 26, DARUMAKA_G
 	dbw 22, CUBCHOO
 	dbw 24, CUBCHOO
 	dbw 26, CUBCHOO
 	; nite
-	dbw 24, WOLFROST
+	dbw 24, SNORUNT
 	dbw 25, ZUBAT
 	dbw 25, GOLBAT
-	dbw 26, WOLFROST
+	dbw 26, SNORUNT
 	dbw 22, SNEASEL
 	dbw 24, SNEASEL
 	dbw 26, SNEASEL
@@ -1277,18 +1277,18 @@ JohtoGrassWildMons:
 	dbw 4, SHINX
 	dbw 5, POOCHYENA
 	dbw 7, SHROOMISH
-	dbw 6, HOPPIP
+	dbw 6, COTTONEE
 	dbw 7, FLETCHLING
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 7, COTTONEE
+	dbw 7, COTTONEE
 	; day
 	dbw 4, SHINX
 	dbw 5, POOCHYENA
 	dbw 7, SHROOMISH
-	dbw 6, HOPPIP
+	dbw 6, COTTONEE
 	dbw 7, FLETCHLING
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 7, COTTONEE
+	dbw 7, COTTONEE
 	; nite
 	dbw 4, WOOPER
 	dbw 5, POOCHYENA
@@ -1304,26 +1304,26 @@ JohtoGrassWildMons:
 	dbw 6, GRUBBIN
 	dbw 6, STARLY
 	dbw 6, MANKEY
-	dbw 6, HOPPIP
-	dbw 7, SEEDOT
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 6, TANGEL
+	dbw 7, MUNNA
+	dbw 7, TANGEL
+	dbw 7, TANGEL
 	; day
 	dbw 6, GRUBBIN
 	dbw 6, STARLY
 	dbw 6, MANKEY
-	dbw 6, HOPPIP
-	dbw 7, SEEDOT
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 6, TANGEL
+	dbw 7, MUNNA
+	dbw 7, TANGEL
+	dbw 7, TANGEL
 	; nite
-	dbw 6, GRUBBIN
+	dbw 6, MUNNA
 	dbw 6, ZUBAT
 	dbw 6, NICKIT
-	dbw 6, MUNNA
-	dbw 7, SEEDOT
+	dbw 6, TANGEL
 	dbw 7, MUNNA
-	dbw 7, MUNNA
+	dbw 7, TANGEL
+	dbw 7, TANGEL
 
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1430,8 +1430,8 @@ JohtoGrassWildMons:
 	dbw 15, HOOTHOOT
 	dbw 16, MUDBRAY
 	dbw 15, NOCTOWL
-	dbw 15, MURKROW
-	dbw 15, MURKROW
+	dbw 15, HOUNDOUR
+	dbw 15, HOUNDOUR
 
 	map_id ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1544,7 +1544,7 @@ JohtoGrassWildMons:
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, TANGELA
+	dbw 23, TYKER
 	dbw 22, BUIZEL
 	dbw 22, PANCHAM
 	dbw 24, PANCHAM
@@ -1552,7 +1552,7 @@ JohtoGrassWildMons:
 	dbw 26, TROPIUS
 	dbw 26, TROPIUS
 	; day
-	dbw 23, TANGELA
+	dbw 23, TYKER
 	dbw 22, BUIZEL
 	dbw 22, PANCHAM
 	dbw 24, PANCHAM
@@ -1560,7 +1560,7 @@ JohtoGrassWildMons:
 	dbw 26, TROPIUS
 	dbw 26, TROPIUS
 	; nite
-	dbw 23, TANGELA
+	dbw 23, TYKER
 	dbw 22, BUIZEL
 	dbw 22, PANCHAM
 	dbw 24, PANCHAM

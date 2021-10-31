@@ -248,7 +248,7 @@ MunnaEvosAttacks:
 	dbw 24, SYNCHRONOISE
 	dbw 28, CALM_MIND
 	dbw 32, YAWN
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 40, NIGHTMARE
 	dbw 44, MOONBLAST
 	dbw 48, DREAM_EATER
@@ -267,7 +267,7 @@ MusharnaEvosAttacks:
 	dbw 24, SYNCHRONOISE
 	dbw 28, CALM_MIND
 	dbw 32, YAWN
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 40, NIGHTMARE
 	dbw 44, MOONBLAST
 	dbw 48, DREAM_EATER
@@ -342,7 +342,7 @@ WoobatEvosAttacks:
 	dbw 25, ATTRACT
 	dbw 30, AMNESIA
 	dbw 35, AIR_SLASH
-	dbw 40, PSYCHIC
+	dbw 40, PSYCHIC_M
 	dbw 45, CALM_MIND
 	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -359,7 +359,7 @@ SwoobatEvosAttacks:
 	dbw 25, ATTRACT
 	dbw 30, AMNESIA
 	dbw 35, AIR_SLASH
-	dbw 40, PSYCHIC
+	dbw 40, PSYCHIC_M
 	dbw 45, CALM_MIND
 	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -997,7 +997,7 @@ SolosisEvosAttacks:
 	dbw 32, PSYSHOCK
 	dbw 36, LIGHT_SCREEN
 	dbw 36, REFLECT
-	dbw 40, PSYCHIC
+	dbw 40, PSYCHIC_M
 	dbw 44, PAIN_SPLIT
 	dbw 48, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -1017,7 +1017,7 @@ DuosionEvosAttacks:
 	dbw 33, PSYSHOCK
 	dbw 38, LIGHT_SCREEN
 	dbw 38, REFLECT
-	dbw 43, PSYCHIC
+	dbw 43, PSYCHIC_M
 	dbw 48, PAIN_SPLIT
 	dbw 53, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -1038,7 +1038,7 @@ ReuniclusEvosAttacks:
 	dbw 38, LIGHT_SCREEN
 	dbw 38, REFLECT
 	dbw 40, HAMMER_ARM
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 50, PAIN_SPLIT
 	dbw 56, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -1232,7 +1232,7 @@ ElgyemEvosAttacks:
 	dbw 28, ZEN_HEADBUTT
 	dbw 32, PSYCH_UP
 	dbw 37, RECOVER
-	dbw 41, PSYCHIC
+	dbw 41, PSYCHIC_M
 	dbw 46, CALM_MIND
 	dbw 50, SYNCHRONOISE
 	dbw 55, METEOR_BEAM
@@ -1251,7 +1251,7 @@ BeheeyemEvosAttacks:
 	dbw 28, ZEN_HEADBUTT
 	dbw 32, PSYCH_UP
 	dbw 37, RECOVER
-	dbw 41, PSYCHIC
+	dbw 41, PSYCHIC_M
 	dbw 48, CALM_MIND
 	dbw 54, SYNCHRONOISE
 	dbw 61, METEOR_BEAM

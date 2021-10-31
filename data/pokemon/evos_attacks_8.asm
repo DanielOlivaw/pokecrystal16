@@ -184,7 +184,7 @@ OrbeetleEvosAttacks:
 	dbw 40, HYPNOSIS
 	dbw 42, BUG_BUZZ
 	dbw 45, MIRROR_COAT
-	dbw 47, PSYCHIC
+	dbw 47, PSYCHIC_M
 	dbw 50, CALM_MIND
 	db 0 ; no more level-up moves
 
@@ -574,7 +574,7 @@ HatennaEvosAttacks:
 	dbw 24, LIFE_DEW
 	dbw 30, DAZZLING_GLEAM
 	dbw 36, CALM_MIND
-	dbw 42, PSYCHIC
+	dbw 42, PSYCHIC_M
 	dbw 48, HEALING_WISH
 	db 0 ; no more level-up moves
 
@@ -590,7 +590,7 @@ HattremEvosAttacks:
 	dbw 30, DAZZLING_GLEAM
 	dbw 31, BRUTAL_SWING
 	dbw 37, CALM_MIND
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 51, HEALING_WISH
 	db 0 ; no more level-up moves
 
@@ -607,7 +607,7 @@ HattereneEvosAttacks:
 	dbw 31, BRUTAL_SWING
 	dbw 37, CALM_MIND
 	dbw 41, PSYCHO_CUT
-	dbw 45, PSYCHIC
+	dbw 45, PSYCHIC_M
 	dbw 53, HEALING_WISH
 	dbw 61, MAGIC_POWDER
 	db 0 ; no more level-up moves
@@ -709,7 +709,7 @@ MrRimeEvosAttacks:
 	dbw 36, MIRROR_COAT
 	dbw 39, FREEZE_DRY
 	dbw 42, TRICK
-	dbw 45, PSYCHIC
+	dbw 45, PSYCHIC_M
 	dbw 48, TEETER_DANCE
 	db 0 ; no more level-up moves
 

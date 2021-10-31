@@ -311,7 +311,7 @@ KurstrawEvosAttacks:
 	dbw 32, SUBSTITUTE
 	dbw 36, SHADOW_SNEAK
 	dbw 40, PAYBACK
-	dbw 44, PSYCHIC
+	dbw 44, PSYCHIC_M
 	dbw 48, LEECH_LIFE
 	dbw 52, PAIN_SPLIT
 	dbw 56, DESTINY_BOND
@@ -320,7 +320,7 @@ KurstrawEvosAttacks:
 PhandarinEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, DESTINY_BOND
-	dbw 1, PSYCHIC
+	dbw 1, PSYCHIC_M
 	dbw 1, CONFUSION
 	dbw 1, SPLASH
 	dbw 1, ABSORB
@@ -350,10 +350,10 @@ WolfrostEvosAttacks:
 	dbw 4, POWDER_SNOW
 	dbw 9, HOWL
 	dbw 13, FURY_SWIPES
-	dbw 18, AVALANCHE
-	dbw 22, HONE_CLAWS
-	dbw 27, SAFEGUARD
-	dbw 31, SLASH
+	dbw 18, SAFEGUARD
+	dbw 22, SLASH
+	dbw 27, AVALANCHE
+	dbw 31, HONE_CLAWS
 	dbw 36, SCREECH
 	dbw 40, SHATTER_CLAW
 	dbw 45, NIGHT_SLASH
@@ -369,10 +369,10 @@ WarwolfEvosAttacks:
 	dbw 4, POWDER_SNOW
 	dbw 9, HOWL
 	dbw 13, FURY_SWIPES
-	dbw 18, AVALANCHE
-	dbw 22, HONE_CLAWS
-	dbw 27, SAFEGUARD
-	dbw 31, SLASH
+	dbw 18, SAFEGUARD
+	dbw 22, SLASH
+	dbw 27, AVALANCHE
+	dbw 31, HONE_CLAWS
 	dbw 34, WILD_FURY
 	dbw 36, SCREECH
 	dbw 40, SHATTER_CLAW
@@ -1326,7 +1326,7 @@ GirafarigEvosAttacks:
 	dbw 35, CRUNCH
 	dbw 40, BATON_PASS
 	dbw 45, NASTY_PLOT
-	dbw 50, PSYCHIC
+	dbw 50, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 PinecoEvosAttacks:

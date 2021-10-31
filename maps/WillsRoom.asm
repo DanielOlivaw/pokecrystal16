@@ -89,7 +89,7 @@ WillScript_WillBeforeText:
 	para "I have trained all"
 	line "around the world,"
 
-	para "making my psychic"
+	para "making my fairy"
 	line "#MON powerful."
 
 	para "And, at last, I've"

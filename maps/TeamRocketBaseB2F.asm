@@ -285,7 +285,7 @@ RocketBaseElectrodeScript:
 	opentext
 	writetext UnknownText_0x6d809
 	buttonsound
-	verbosegiveitem HM_WHIRLPOOL
+	verbosegivetmhm HM_WHIRLPOOL
 	setevent EVENT_GOT_HM06_WHIRLPOOL
 	writetext UnknownText_0x6d8f8
 	waitbutton
@@ -717,7 +717,7 @@ UnknownText_0x6d809:
 	para "The LAKE should be"
 	line "back to normal."
 
-	para "You're the hero!"
+	para "You're the best!"
 	line "Let me thank you"
 
 	para "on behalf of all"
@@ -765,7 +765,7 @@ UnknownText_0x6d994:
 	para "Knowing that, will"
 	line "you keep going?"
 
-	para "…"
+	para "………"
 
 	para "I see. No, you're"
 	line "right."
