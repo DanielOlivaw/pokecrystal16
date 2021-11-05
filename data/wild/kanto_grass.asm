@@ -794,7 +794,7 @@ KantoGrassWildMons:
 	dbw 52, SEVIPER
 	dbw 51, SWABLU
 	dbw 53, ALTARIA
-	dbw 53, ALTARIA
+	dbw 53, LARVESTA
 	; day
 	dbw 49, TANGELA
 	dbw 50, PONYTA
@@ -802,7 +802,7 @@ KantoGrassWildMons:
 	dbw 52, SEVIPER
 	dbw 51, SWABLU
 	dbw 53, ALTARIA
-	dbw 53, ALTARIA
+	dbw 53, LARVESTA
 	; nite
 	dbw 49, TANGELA
 	dbw 50, FLOATZEL
@@ -810,6 +810,6 @@ KantoGrassWildMons:
 	dbw 50, FLOATZEL
 	dbw 52, GOLBAT
 	dbw 52, GOLBAT
-	dbw 52, GOLBAT
+	dbw 52, LARVESTA
 
 	db -1 ; end

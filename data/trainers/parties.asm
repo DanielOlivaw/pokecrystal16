@@ -598,9 +598,9 @@ ScientistGroup:
 	next_list_item ; SCIENTIST (1)
 	db "ROSS@", TRAINERTYPE_NORMAL
 	db 22
-	dw KOFFING
+	dw CHARJABUG
 	db 22
-	dw KOFFING
+	dw CHARJABUG
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (2)
@@ -610,7 +610,7 @@ ScientistGroup:
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (3)
-	db "JED@", TRAINERTYPE_NORMAL
+	db "GREGG@", TRAINERTYPE_NORMAL
 	db 20
 	dw MAGNEMITE
 	db 20
@@ -620,17 +620,17 @@ ScientistGroup:
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (4)
-	db "MARC@", TRAINERTYPE_NORMAL
+	db "GARETT@", TRAINERTYPE_NORMAL
 	db 27
-	dw MAGNEMITE
+	dw JOLTIK
 	db 27
-	dw MAGNEMITE
+	dw JOLTIK
 	db 27
-	dw MAGNEMITE
+	dw JOLTIK
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (5)
-	db "RICH@", TRAINERTYPE_MOVES
+	db "TRENTON@", TRAINERTYPE_MOVES
 	db 30
 	dw PORYGON
 	dw CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
@@ -670,17 +670,17 @@ YoungsterGroup:
 	next_list_item ; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_NORMAL
 	db 2
-	dw PIKIPEK
+	dw FLETCHLING
 	db 4
-	dw RATTATA_A
+	dw SENTRET
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_NORMAL
 	db 6
-	dw RATTATA_A
+	dw BIDOOF
 	db 8
-	dw ZUBAT
+	dw WOOBAT
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (4)
@@ -691,21 +691,21 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (5)
 	db "SAMUEL@", TRAINERTYPE_NORMAL
-	db 7
-	dw RATTATA_A
+	db 9
+	dw ZIGZAGOON_G
+	db 12
+	dw FOMANTIS
 	db 10
-	dw SANDSHREW_A
-	db 8
-	dw SWABLU
-	db 8
-	dw SWABLU
+	dw STARLY
+	db 10
+	dw STARLY
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (6)
 	db "IAN@", TRAINERTYPE_NORMAL
-	db 10
-	dw MANKEY
 	db 12
+	dw MANKEY
+	db 14
 	dw ROCKRUFF
 	db -1 ; end
 
@@ -724,42 +724,46 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (9)
 	db "WARREN@", TRAINERTYPE_NORMAL
-	db 35
-	dw ALTARIA
+	db 48
+	dw COPPERAJAH
+	db 52
+	dw MIENSHAO
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (10)
 	db "JIMMY@", TRAINERTYPE_NORMAL
-	db 33
-	dw RATICATE_A
-	db 33
-	dw SEVIPER
+	db 48
+	dw CACTURNE
+	db 48
+	dw EELEKTROSS
+	db 48
+	dw DRIFBLIM
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (11)
 	db "OWEN@", TRAINERTYPE_NORMAL
-	db 35
-	dw GROWLITHE
+	db 45
+	dw KOMALA
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (12)
 	db "JASON@", TRAINERTYPE_NORMAL
-	db 33
-	dw SANDSLASH_A
-	db 33
-	dw CROBAT
+	db 43
+	dw PERRSERKER
+	db 45
+	dw FLYGON
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (13)
 	db "JOEY@", TRAINERTYPE_MOVES
-	db 30
+	db 32
 	dw RATICATE_A
 	dw TAIL_WHIP, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (14)
 	db "JOEY@", TRAINERTYPE_MOVES
-	db 37
+	db 45
 	dw RATICATE_A
 	dw HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
@@ -772,224 +776,228 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 12
-	dw ODDISH
+	dw SEEDOT
 	db 15
-	dw FERROSEED
+	dw SHINX
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (2)
 	db "KIPP@", TRAINERTYPE_NORMAL
-	db 27
-	dw FERROSEED
-	db 27
-	dw MAGNEMITE
-	db 31
-	dw FERROSEED
-	db 31
-	dw MAGNETON
+	db 37
+	dw TYNAMO
+	db 37
+	dw BELDUM
+	db 41
+	dw EELEKTRIK
+	db 41
+	dw METANG
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (3)
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 16
+	db 18
 	dw TANGEL
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (4)
 	db "JOHNNY@", TRAINERTYPE_NORMAL
-	db 29
-	dw BELLSPROUT
-	db 31
-	dw WEEPINBELL
-	db 33
-	dw VICTREEBEL
+	db 39
+	dw FERROSEED
+	db 41
+	dw GLISCOR
+	db 43
+	dw FERROTHORN
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (5)
 	db "DANNY@", TRAINERTYPE_NORMAL
-	db 31
-	dw MR__MIME_G
-	db 31
-	dw ELECTABUZZ
-	db 31
-	dw LAMPENT
+	db 51
+	dw SHIFTRY
+	db 51
+	dw AVALUGG
+	db 51
+	dw DUSKNOIR
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (6)
 	db "TOMMY@", TRAINERTYPE_NORMAL
-	db 32
-	dw XATU
-	db 34
-	dw ALAKAZAM
+	db 42
+	dw GRUMPIG
+	db 44
+	dw ORBEETLE
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (7)
 	db "DUDLEY@", TRAINERTYPE_NORMAL
-	db 35
-	dw ODDISH
+	db 41
+	dw PHANTUMP
+	db 45
+	dw TREVENANT
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (8)
 	db "JOE@", TRAINERTYPE_NORMAL
-	db 33
-	dw TANGELA
-	db 33
-	dw VAPOREON
+	db 43
+	dw GOGOAT
+	db 43
+	dw PALOSSAND
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (9)
 	db "BILLY@", TRAINERTYPE_NORMAL
-	db 27
-	dw PARAS
-	db 27
-	dw PARAS
-	db 27
-	dw FLOATZEL
-	db 35
-	dw DITTO
+	db 37
+	dw TRAPINCH
+	db 37
+	dw TRAPINCH
+	db 37
+	dw GOLISOPOD
+	db 45
+	dw MIMIKYU
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (10)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 19
-	dw MR__MIME_G
+	db 21
+	dw MAWILE
+	db 21
+	dw BLIPBUG
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (11)
 	db "NATE@", TRAINERTYPE_NORMAL
-	db 32
+	db 42
 	dw LEDIAN
-	db 32
-	dw EXEGGUTOR_A
+	db 42
+	dw DUOSION
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (12)
 	db "RICKY@", TRAINERTYPE_NORMAL
-	db 32
-	dw CRABRAWLER
-	db 32
-	dw DITTO
+	db 42
+	dw MIENFOO
+	db 42
+	dw PINCURCHIN
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (13)
 	db "JACK@", TRAINERTYPE_NORMAL
-	db 14
-	dw ODDISH
-	db 17
-	dw FERROSEED
+	db 19
+	dw NUZLEAF
+	db 22
+	dw LUXIO
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (14)
 	db "JACK@", TRAINERTYPE_NORMAL
-	db 28
-	dw GLOOM
-	db 31
-	dw GALVANTULA
+	db 30
+	dw NUZLEAF
+	db 33
+	dw LUXRAY
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (15)
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 17
+	db 22
 	dw TANGELA
-	db 17
+	db 22
 	dw YANMA
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (16)
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 20
+	db 30
 	dw NATU
-	db 22
+	db 32
 	dw TANGELA
-	db 20
-	dw QUAGSIRE
-	db 25
+	db 30
+	dw BIBAREL
+	db 35
 	dw YANMA
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (17)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 19
-	dw MR__MIME_G
-	db 19
-	dw MAGNEMITE
+	db 21
+	dw MAWILE
+	db 21
+	dw DOTTLER
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (18)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 27
-	dw MR__MIME_G
+	dw MAWILE
 	db 31
-	dw MAGNETON
+	dw ORBEETLE
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (19)
 	db "JACK@", TRAINERTYPE_NORMAL
-	db 30
-	dw GLOOM
-	db 33
-	dw GROWLITHE
-	db 33
-	dw GALVANTULA
+	db 40
+	dw NUZLEAF
+	db 43
+	dw SWIRLIX
+	db 43
+	dw LUXRAY
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (20)
 	db "JACK@", TRAINERTYPE_MOVES
-	db 35
-	dw GALVANTULA
-	dw SCREECH, SONICBOOM, ROLLOUT, LIGHT_SCREEN
-	db 35
-	dw GROWLITHE
-	dw SUNNY_DAY, LEER, TAKE_DOWN, FLAME_WHEEL
-	db 37
-	dw VILEPLUME
-	dw SOLARBEAM, SLEEP_POWDER, ACID, MOONLIGHT
+	db 45
+	dw LUXRAY
+	dw CRUNCH, VOLT_SWITCH, THUNDER_WAVE, THUNDER_FANG
+	db 45
+	dw SLURPUFF
+	dw COTTON_GUARD, LIGHT_SCREEN, PLAY_ROUGH, WISH
+	db 47
+	dw SHIFTRY
+	dw HURRICANE, SUCKER_PUNCH, LEAF_TORNADO, FAKE_OUT
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (21)
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 27
-	dw NATU
-	db 27
+	db 40
+	dw XATU
+	db 40
 	dw TANGELA
-	db 30
-	dw QUAGSIRE
-	db 30
+	db 43
+	dw BIBAREL
+	db 43
 	dw YANMA
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (22)
 	db "ALAN@", TRAINERTYPE_MOVES
-	db 35
+	db 45
 	dw XATU
-	dw PECK, NIGHT_SHADE, SWIFT, FUTURE_SIGHT
-	db 32
-	dw TANGELA
-	dw POISONPOWDER, VINE_WHIP, BIND, MEGA_DRAIN
-	db 32
-	dw YANMA
-	dw QUICK_ATTACK, DOUBLE_TEAM, SONICBOOM, SUPERSONIC
-	db 35
-	dw QUAGSIRE
-	dw TAIL_WHIP, SLAM, AMNESIA, EARTHQUAKE
+	dw AIR_SLASH, PSYCHO_SHIFT, OMINOUS_WIND, PSYCHIC_M
+	db 48
+	dw TANGROWTH
+	dw POISONPOWDER, ANCIENTPOWER, HEX, GIGA_DRAIN
+	db 48
+	dw YANMEGA
+	dw WING_ATTACK, SCREECH, NIGHT_SLASH, SUPERSONIC
+	db 45
+	dw BIBAREL
+	dw AQUA_JET, TAKE_DOWN, CURSE, CRUNCH
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (23)
 	db "CHAD@", TRAINERTYPE_NORMAL
 	db 30
-	dw MR__MIME_G
+	dw MAWILE
 	db 34
-	dw MAGNETON
+	dw ORBEETLE
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (24)
 	db "CHAD@", TRAINERTYPE_MOVES
 	db 34
-	dw MR__MIME_G
-	dw PSYCHIC_M, LIGHT_SCREEN, REFLECT, ENCORE
+	dw MAWILE
+	dw SUCKER_PUNCH, GROWL, GUILE_FANG, JAW_CLAMP
 	db 38
-	dw MAGNETON
-	dw ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
+	dw ORBEETLE
+	dw PSYBEAM, CONFUSE_RAY, SIGNAL_BEAM, CHARGE_BEAM
 	db -1 ; end
 
 	end_list_items
@@ -1011,145 +1019,151 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (3)
 	db "BRYAN@", TRAINERTYPE_NORMAL
-	db 12
-	dw PIKIPEK
 	db 14
-	dw TRUMBEAK
+	dw STARLY
+	db 16
+	dw STARAVIA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (4)
 	db "THEO@", TRAINERTYPE_NORMAL
-	db 17
-	dw PIKIPEK
-	db 15
-	dw PIKIPEK
+	db 18
+	dw FLETCHLING
+	db 16
+	dw FLETCHLING
 	db 19
-	dw PIKIPEK
-	db 15
-	dw PIKIPEK
-	db 15
-	dw PIKIPEK
+	dw FLETCHLING
+	db 16
+	dw FLETCHLING
+	db 16
+	dw FLETCHLING
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (5)
 	db "TOBY@", TRAINERTYPE_NORMAL
-	db 15
-	dw CHATOT
 	db 16
-	dw CHATOT
+	dw TRUMBEAK
 	db 17
-	dw CHATOT
+	dw TRUMBEAK
+	db 18
+	dw TRUMBEAK
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (6)
 	db "DENIS@", TRAINERTYPE_NORMAL
-	db 18
-	dw STARLY
 	db 20
+	dw ROOKIDEE
+	db 22
 	dw SKARMORY
-	db 18
-	dw STARLY
+	db 20
+	dw ROOKIDEE
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (7)
 	db "VANCE@", TRAINERTYPE_NORMAL
-	db 25
-	dw TRUMBEAK
-	db 25
-	dw TRUMBEAK
+	db 32
+	dw FLETCHINDR
+	db 32
+	dw FLETCHINDR
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (8)
 	db "HANK@", TRAINERTYPE_NORMAL
 	db 12
-	dw PIKIPEK
+	dw ROOKIDEE
 	db 34
-	dw TOUCANNON
+	dw CORVSQUIRE
+	db 50
+	dw CORVKNIGHT
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (9)
 	db "ROY@", TRAINERTYPE_NORMAL
-	db 29
-	dw ALTARIA
-	db 35
-	dw ALTARIA
+	db 39
+	dw TOUCANNON
+	db 45
+	dw TOUCANNON
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (10)
 	db "BORIS@", TRAINERTYPE_NORMAL
-	db 30
-	dw CHATOT
-	db 28
-	dw CHATOT
-	db 32
-	dw SKARMORY
+	db 42
+	dw WINGULL
+	db 40
+	dw WINGULL
+	db 44
+	dw PELIPPER
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
-	db 34
-	dw NOCTOWL
+	db 48
+	dw STARAPTOR
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (12)
 	db "JOSE@", TRAINERTYPE_NORMAL
-	db 36
-	dw FARFETCH_D
+	db 46
+	dw HAWLUCHA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (13)
 	db "PETER@", TRAINERTYPE_NORMAL
 	db 6
-	dw PIKIPEK
+	dw STARLY
 	db 6
-	dw PIKIPEK
+	dw STARLY
 	db 8
-	dw SWABLU
+	dw ROWLET
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
-	db 34
-	dw FARFETCH_D
+	db 38
+	dw HAWLUCHA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
-	db 34
+	db 40
 	dw FARFETCH_D
+	db 40
+	dw FARFETCH_D
+	db 42
+	dw SWANDAME
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (16)
 	db "BRET@", TRAINERTYPE_NORMAL
-	db 32
-	dw TRUMBEAK
-	db 32
-	dw ALTARIA
+	db 41
+	dw DARTRIX
+	db 41
+	dw DECIDUEYE
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (17)
 	db "JOSE@", TRAINERTYPE_MOVES
-	db 40
-	dw FARFETCH_D
-	dw FURY_ATTACK, DETECT, FLY, SLASH
+	db 50
+	dw HAWLUCHA
+	dw HI_JUMP_KICK, AERIAL_ACE, SWORDS_DANCE, ROOST
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (18)
 	db "VANCE@", TRAINERTYPE_NORMAL
-	db 32
-	dw TRUMBEAK
-	db 32
-	dw TRUMBEAK
+	db 42
+	dw TALONFLAME
+	db 42
+	dw TALONFLAME
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (19)
 	db "VANCE@", TRAINERTYPE_MOVES
-	db 38
-	dw TOUCANNON
-	dw TOXIC, QUICK_ATTACK, WHIRLWIND, FLY
-	db 38
-	dw TOUCANNON
-	dw SWIFT, DETECT, STEEL_WING, FLY
+	db 48
+	dw TALONFLAME
+	dw AERIAL_ACE, STEEL_WING, FLARE_BLITZ, ROOST
+	db 48
+	dw TALONFLAME
+	dw ACROBATICS, STEEL_WING, FLARE_BLITZ, FLAME_CHARGE
 	db -1 ; end
 
 	end_list_items
@@ -1174,65 +1188,65 @@ LassGroup:
 
 	next_list_item ; LASS (3)
 	db "ALICE@", TRAINERTYPE_NORMAL
-	db 30
-	dw GLOOM
-	db 34
+	db 41
+	dw WEEPINBELL
+	db 45
 	dw SEVIPER
-	db 30
-	dw GLOOM
+	db 41
+	dw WEEPINBELL
 	db -1 ; end
 
 	next_list_item ; LASS (4)
 	db "KRISE@", TRAINERTYPE_NORMAL
-	db 12
-	dw ODDISH
-	db 15
+	db 14
+	dw PETILIL
+	db 17
 	dw CUBONE
 	db -1 ; end
 
 	next_list_item ; LASS (5)
 	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
+	db 23
 	dw TOGEDEMARU
 	db -1 ; end
 
 	next_list_item ; LASS (6)
 	db "LINDA@", TRAINERTYPE_NORMAL
-	db 30
+	db 40
 	dw BULBASAUR
-	db 32
+	db 42
 	dw IVYSAUR
-	db 34
+	db 44
 	dw VENUSAUR
 	db -1 ; end
 
 	next_list_item ; LASS (7)
 	db "LAURA@", TRAINERTYPE_NORMAL
-	db 28
-	dw GLOOM
-	db 31
-	dw TRUMBEAK
-	db 31
-	dw BELLOSSOM
+	db 38
+	dw COTTONEE
+	db 41
+	dw RIBOMBEE
+	db 41
+	dw MARACTUS
 	db -1 ; end
 
 	next_list_item ; LASS (8)
 	db "SHANNON@", TRAINERTYPE_NORMAL
-	db 29
-	dw PARAS
-	db 29
-	dw PARAS
-	db 32
-	dw PARASECT
+	db 39
+	dw COMBEE
+	db 39
+	dw COMBEE
+	db 42
+	dw VESPIQUEN
 	db -1 ; end
 
 	next_list_item ; LASS (9)
 	db "MICHELLE@", TRAINERTYPE_NORMAL
-	db 32
-	dw SKIPLOOM
-	db 33
-	dw HOPPIP
-	db 34
+	db 44
+	dw SWADLOON
+	db 45
+	dw SPRITZEE
+	db 46
 	dw JUMPLUFF
 	db -1 ; end
 
@@ -1240,70 +1254,85 @@ LassGroup:
 	db "DANA@", TRAINERTYPE_MOVES
 	db 18
 	dw FLAAFFY
-	dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
+	dw TAKE_DOWN, COTTON_SPORE, THUNDERSHOCK, THUNDER_WAVE
 	db 18
-	dw PSYDUCK
-	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
+	dw HATENNA
+	dw PSYBEAM, AROMATHERAPY, DISARMING_VOICE, PLAY_NICE
+	db 18
+	dw CUBCHOO
+	dw BRINE, FURY_SWIPES, ICY_WIND, PLAY_NICE
 	db -1 ; end
 
 	next_list_item ; LASS (11)
 	db "ELLEN@", TRAINERTYPE_NORMAL
-	db 30
+	db 40
 	dw WIGGLYTUFF
-	db 34
+	db 44
 	dw GRANBULL
 	db -1 ; end
 
 	next_list_item ; LASS (12)
 	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; LASS (13)
 	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; LASS (14)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 21
+	db 25
 	dw FLAAFFY
-	dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
-	db 21
-	dw PSYDUCK
-	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
+	dw TAKE_DOWN, COTTON_SPORE, ELECTRO_BALL, THUNDER_WAVE
+	db 25
+	dw HATENNA
+	dw PSYBEAM, LIFE_DEW, DISARMING_VOICE, PLAY_NICE
+	db 25
+	dw CUBCHOO
+	dw BRINE, SLASH, FROST_BREATH, PLAY_NICE
 	db -1 ; end
 
 	next_list_item ; LASS (15)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 29
-	dw PSYDUCK
-	dw SCRATCH, DISABLE, CONFUSION, SCREECH
-	db 29
+	db 33
+	dw HATTREM
+	dw PSYBEAM, LIFE_DEW, DAZZLING_GLEAM, PLAY_NICE
+	db 33
 	dw AMPHAROS
-	dw TACKLE, THUNDERSHOCK, THUNDER_WAVE, COTTON_SPORE
+	dw POWER_GEM, DISCHARGE, THUNDER_WAVE, COTTON_SPORE
+	db 33
+	dw CUBCHOO
+	dw BRINE, SLASH, ICICLE_CRASH, CHARM
 	db -1 ; end
 
 	next_list_item ; LASS (16)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 32
-	dw PSYDUCK
-	dw SCRATCH, DISABLE, CONFUSION, SCREECH
-	db 32
+	db 42
 	dw AMPHAROS
-	dw TACKLE, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
+	dw POWER_GEM, DISCHARGE, THUNDER_WAVE, COTTON_GUARD
+	db 42
+	dw HATTERENE
+	dw PSYBEAM, LIFE_DEW, DAZZLING_GLEAM, CALM_MIND
+	db 42
+	dw BEARTIC
+	dw BRINE, THRASH, SHATTER_CLAW, HAIL
 	db -1 ; end
 
 	next_list_item ; LASS (17)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 36
+	db 46
 	dw AMPHAROS
-	dw SWIFT, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
-	db 36
-	dw GOLDUCK
-	dw DISABLE, SURF, PSYCHIC_M, SCREECH
+	dw POWER_GEM, DISCHARGE, SIGNAL_BEAM, COTTON_GUARD
+	db 46
+	dw HATTERENE
+	dw PSYCHIC_M, LIFE_DEW, DAZZLING_GLEAM, CALM_MIND
+	db 46
+	dw BEARTIC
+	dw SLEEP_TALK, THRASH, SHATTER_CLAW, REST
 	db -1 ; end
 
 	end_list_items
@@ -1334,24 +1363,24 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (1)
 	db "NICK@", TRAINERTYPE_MOVES
 	db 26
-	dw MONFERNO
-	dw EMBER, SMOKESCREEN, RAGE, DOUBLE_KICK
+	dw CHIKORITA
+	dw LEECH_SEED, LIGHT_SCREEN, REFLECT, MAGICAL_LEAF
 	db 26
-	dw PRINPLUP
-	dw GROWL, WATER_GUN, PECK, CURSE
+	dw CYNDAQUIL
+	dw FLAME_WHEEL, DEFENSE_CURL, SWIFT, ROLLOUT
 	db 26
-	dw GROTLE
-	dw LEECH_SEED, POISONPOWDER, SLEEP_POWDER, RAZOR_LEAF
+	dw TOTODILE
+	dw SCARY_FACE, WATER_GUN, SLASH, ICE_FANG
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (2)
-	db "AARON@", TRAINERTYPE_NORMAL
-	db 24
-	dw IVYSAUR
-	db 24
-	dw CHARMELEON
-	db 24
-	dw WARTORTLE
+	db "ALTON@", TRAINERTYPE_NORMAL
+	db 27
+	dw QUILLADIN
+	db 27
+	dw BRAIXEN
+	db 27
+	dw FROGADIER
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (3)
@@ -1374,164 +1403,154 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (5)
 	db "MIKE@", TRAINERTYPE_NORMAL
-	db 37
-	dw DRAGONAIR
+	db 38
+	dw FRAXURE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (6)
 	db "GAVEN@", TRAINERTYPE_MOVES
-	db 35
+	db 45
 	dw VICTREEBEL
-	dw WRAP, TOXIC, ACID, RAZOR_LEAF
-	db 35
-	dw KINGLER
-	dw BUBBLEBEAM, STOMP, GUILLOTINE, PROTECT
-	db 35
-	dw FLAREON
-	dw SAND_ATTACK, QUICK_ATTACK, BITE, FIRE_SPIN
+	dw WRING_OUT, TOXIC, POISON_JAB, LEAF_TORNADO
+	db 45
+	dw CRAWDAUNT
+	dw RAZOR_SHELL, SWIFT, CRUNCH, PROTECT
+	db 45
+	dw AEGISLASH
+	dw IRON_HEAD, RETALIATE, KINGS_SHIELD, SHADOW_SNEAK
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (7)
 	db "GAVEN@", TRAINERTYPE_ITEM_MOVES
-	db 39
+	db 49
 	dw VICTREEBEL
 	db NO_ITEM
-	dw GIGA_DRAIN, TOXIC, SLUDGE_BOMB, RAZOR_LEAF
-	db 39
-	dw KINGLER
-	db KINGS_ROCK
-	dw SURF, STOMP, GUILLOTINE, BLIZZARD
-	db 39
-	dw FLAREON
+	dw WRING_OUT, TOXIC, POISON_JAB, LEAF_TORNADO
+	db 49
+	dw CRAWDAUNT
 	db NO_ITEM
-	dw FLAMETHROWER, QUICK_ATTACK, BITE, FIRE_SPIN
+	dw CRABHAMMER, SWIFT, CRUNCH, PROTECT
+	db 49
+	dw AEGISLASH
+	db KINGS_ROCK
+	dw IRON_HEAD, RETALIATE, KINGS_SHIELD, SHADOW_SNEAK
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (8)
 	db "RYAN@", TRAINERTYPE_MOVES
-	db 25
-	dw TOUCANNON
-	dw SAND_ATTACK, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
-	db 27
-	dw ELECTABUZZ
-	dw THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
+	db 34
+	dw STARAPTOR
+	dw TAKE_DOWN, CLOSE_COMBAT, WHIRLWIND, AERIAL_ACE
+	db 36
+	dw URSARING
+	dw SLASH, SCARY_FACE, FAINT_ATTACK, PLAY_NICE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (9)
 	db "JAKE@", TRAINERTYPE_MOVES
-	db 33
-	dw PARASECT
-	dw LEECH_LIFE, SPORE, SLASH, SWORDS_DANCE
 	db 35
-	dw GOLDUCK
-	dw CONFUSION, SCREECH, PSYCH_UP, FURY_SWIPES
+	dw PARASECT
+	dw X_SCISSOR, SPORE, CROSS_POISON, SWORDS_DANCE
+	db 37
+	dw BEARTIC
+	dw SHATTER_CLAW, FROST_BREATH, AQUA_JET, CHARM
+	db 35
+	dw PASSIMIAN
+	dw THRASH, BEAT_UP, BULK_UP, BRICK_BREAK
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (10)
 	db "GAVEN@", TRAINERTYPE_MOVES
-	db 32
+	db 35
 	dw VICTREEBEL
-	dw WRAP, TOXIC, ACID, RAZOR_LEAF
-	db 32
-	dw KINGLER
-	dw BUBBLEBEAM, STOMP, GUILLOTINE, PROTECT
-	db 32
-	dw FLAREON
-	dw SAND_ATTACK, QUICK_ATTACK, BITE, FIRE_SPIN
+	dw WRAP, TOXIC, POISON_JAB, LEAF_TORNADO
+	db 35
+	dw CRAWDAUNT
+	dw RAZOR_SHELL, SWIFT, NIGHT_SLASH, PROTECT
+	db 35
+	dw DOUBLADE
+	dw DUAL_CHOP, RETALIATE, AERIAL_ACE, SHADOW_SNEAK
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (11)
 	db "BLAKE@", TRAINERTYPE_MOVES
-	db 33
+	db 36
 	dw MAGNETON
-	dw THUNDERBOLT, SUPERSONIC, SWIFT, SCREECH
-	db 31
+	dw ELECTRO_BALL, SUPERSONIC, TRI_ATTACK, FLASH_CANNON
+	db 34
 	dw QUAGSIRE
-	dw WATER_GUN, SLAM, AMNESIA, EARTHQUAKE
-	db 31
-	dw WHIMSICOTT
-	dw LEECH_SEED, SUNNY_DAY, SLEEP_POWDER, SOLARBEAM
+	dw AQUA_TAIL, YAWN, RAIN_DANCE, MUD_BOMB
+	db 34
+	dw TROPIUS
+	dw CULTIVATE, WHIRLWIND, FLY, LEAF_TORNADO
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (12)
 	db "BRIAN@", TRAINERTYPE_MOVES
-	db 35
-	dw SANDSLASH_A
-	dw ICY_WIND, POISON_STING, SLASH, SWIFT
+	db 38
+	dw ABSOL
+	dw NIGHT_SLASH, FOCUS_ENERGY, SLASH, PSYCHO_CUT
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (13)
 	db "ERICK@", TRAINERTYPE_NORMAL
-	db 10
-	dw BULBASAUR
-	db 10
-	dw CHARMANDER
-	db 10
-	dw SQUIRTLE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (14)
 	db "ANDY@", TRAINERTYPE_NORMAL
-	db 10
-	dw BULBASAUR
-	db 10
-	dw CHARMANDER
-	db 10
-	dw SQUIRTLE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (15)
 	db "TYLER@", TRAINERTYPE_NORMAL
-	db 10
-	dw BULBASAUR
-	db 10
-	dw CHARMANDER
-	db 10
-	dw SQUIRTLE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (16)
 	db "SEAN@", TRAINERTYPE_NORMAL
-	db 35
-	dw FLAREON
-	db 35
-	dw TANGELA
-	db 35
+	db 44
+	dw AMPHAROS
+	db 44
+	dw CHANDELURE
+	db 44
 	dw TAUROS
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (17)
 	db "KEVIN@", TRAINERTYPE_NORMAL
-	db 38
-	dw DRUDDIGON
-	db 35
-	dw CHARMELEON
-	db 35
-	dw WARTORTLE
+	db 48
+	dw GARCHOMP
+	db 45
+	dw BLAZIKEN
+	db 45
+	dw GRENINJA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (18)
 	db "STEVE@", TRAINERTYPE_NORMAL
-	db 14
-	dw BULBASAUR
-	db 14
-	dw CHARMANDER
-	db 14
-	dw SQUIRTLE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (19)
 	db "ALLEN@", TRAINERTYPE_MOVES
-	db 27
-	dw BRAIXEN
-	dw EMBER, SMOKESCREEN, CONFUSION, SCARY_FACE
+	db 35
+	dw GROVYLE
+	dw X_SCISSOR, GIGA_DRAIN, PURSUIT, AGILITY
+	db 35
+	dw HELIOPTILE
+	dw VOLT_SWITCH, BULLDOZE, RAZOR_WIND, THUNDER_WAVE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (20)
-	db "DARIN@", TRAINERTYPE_MOVES
+	db "KOBE@", TRAINERTYPE_MOVES
 	db 37
-	dw DRAGONAIR
-	dw WRAP, SURF, DRAGON_RAGE, SLAM
+	dw SHELGON
+	dw SCARY_FACE, CRUNCH, DRAGON_CLAW, HEADBUTT
 	db -1 ; end
 
 	end_list_items
@@ -1546,33 +1565,33 @@ CooltrainerFGroup:
 	db 22
 	dw VAPOREON
 	db 22
-	dw JOLTEON
+	dw LEAFEON
 	db 22
 	dw SYLVEON
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (2)
 	db "LOIS@", TRAINERTYPE_MOVES
-	db 25
-	dw SKIPLOOM
-	dw SYNTHESIS, POISONPOWDER, MEGA_DRAIN, LEECH_SEED
-	db 25
+	db 28
+	dw SKIDDO
+	dw SYNTHESIS, BULLDOZE, RAZOR_LEAF, LEECH_SEED
+	db 28
 	dw NINETALES_A
-	dw EMBER, QUICK_ATTACK, CONFUSE_RAY, SAFEGUARD
+	dw ICY_WIND, FAINT_ATTACK, CONFUSE_RAY, DAZZLING_GLEAM
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (3)
 	db "FRAN@", TRAINERTYPE_NORMAL
 	db 37
-	dw SEADRA
+	dw VIBRAVA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (4)
 	db "LOLA@", TRAINERTYPE_NORMAL
 	db 34
-	dw DRATINI
+	dw GIBLE
 	db 36
-	dw DRAGONAIR
+	dw GABITE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (5)
@@ -1585,101 +1604,103 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (6)
 	db "IRENE@", TRAINERTYPE_NORMAL
-	db 22
-	dw MOLANCORA
 	db 24
-	dw ANCHORRAGE
+	dw ARROKUDA
+	db 26
+	dw BARASKEWDA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (7)
 	db "KELLY@", TRAINERTYPE_NORMAL
-	db 27
-	dw MARILL
-	db 24
-	dw WARTORTLE
-	db 24
-	dw WARTORTLE
+	db 36
+	dw TOGETIC
+	db 33
+	dw DEWOTT
+	db 33
+	dw DEWOTT
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (8)
 	db "JOYCE@", TRAINERTYPE_MOVES
-	db 36
+	db 38
 	dw PIKACHU
-	dw QUICK_ATTACK, DOUBLE_TEAM, THUNDERBOLT, THUNDER
-	db 32
-	dw GRENINJA
-	dw SWIFT, CURSE, SURF, RAIN_DANCE
+	dw QUICK_ATTACK, DOUBLE_TEAM, RAIN_DANCE, THUNDER
+	db 36
+	dw SWAMPERT
+	dw HAMMER_ARM, MUDDY_WATER, ROCK_SLIDE, EARTH_POWER
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (9)
 	db "BETH@", TRAINERTYPE_MOVES
-	db 36
+	db 40
 	dw RAPIDASH
-	dw STOMP, FIRE_SPIN, FURY_ATTACK, AGILITY
+	dw POISON_JAB, INFERNO, SMART_STRIKE, FLAME_CHARGE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (10)
 	db "REENA@", TRAINERTYPE_NORMAL
-	db 31
-	dw STARMIE
-	db 33
-	dw NIDOQUEEN
-	db 31
-	dw STARMIE
+	db 34
+	dw GOOMY
+	db 36
+	dw MILOTIC
+	db 34
+	dw SNORUNT
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (11)
 	db "MEGAN@", TRAINERTYPE_MOVES
-	db 32
-	dw BULBASAUR
-	dw GROWL, LEECH_SEED, POISONPOWDER, RAZOR_LEAF
-	db 32
-	dw IVYSAUR
-	dw GROWL, LEECH_SEED, POISONPOWDER, RAZOR_LEAF
-	db 32
-	dw VENUSAUR
-	dw BODY_SLAM, SLEEP_POWDER, RAZOR_LEAF, SWEET_SCENT
+	db 35
+	dw TURTWIG
+	dw CURSE, LEECH_SEED, BITE, GIGA_DRAIN
+	db 35
+	dw GROTLE
+	dw CURSE, LEECH_SEED, BULLDOZE, LEAF_TORNADO
+	db 35
+	dw TORTERRA
+	dw CURSE, LEECH_SEED, EARTHQUAKE, WOOD_HAMMER
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (12)
 	db "BETH@", TRAINERTYPE_MOVES
-	db 39
+	db 46
 	dw RAPIDASH
-	dw STOMP, FIRE_SPIN, FURY_ATTACK, AGILITY
+	dw POISON_JAB, FIRE_BLAST, SMART_STRIKE, FLAME_CHARGE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (13)
 	db "CAROL@", TRAINERTYPE_NORMAL
-	db 35
+	db 44
 	dw EELEKTROSS
-	db 35
-	dw STARMIE
-	db 35
-	dw NINETALES_A
+	db 44
+	dw BANETTE
+	db 44
+	dw LOPUNNY
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (14)
 	db "QUINN@", TRAINERTYPE_NORMAL
-	db 38
-	dw IVYSAUR
-	db 38
-	dw STARMIE
+	db 52
+	dw MEGANIUM
+	db 52
+	dw BISHARP
+	db 50
+	dw SALAMENCE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (15)
 	db "EMMA@", TRAINERTYPE_NORMAL
 	db 28
-	dw FLOATZEL
+	dw SANDYGAST
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (16)
 	db "CYBIL@", TRAINERTYPE_MOVES
-	db 25
-	dw BUTTERFREE
-	dw CONFUSION, SLEEP_POWDER, WHIRLWIND, GUST
-	db 25
+	db 32
+	dw AUDINO
+	dw ZEN_HEADBUTT, BABY_DOLL_EYES, REFRESH, TAKE_DOWN
+	db 32
 	dw BELLOSSOM
-	dw ABSORB, STUN_SPORE, ACID, SOLARBEAM
+	dw GIGA_DRAIN, STUN_SPORE, ACID, QUIVER_DANCE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (17)
@@ -1692,49 +1713,49 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (18)
 	db "BETH@", TRAINERTYPE_ITEM_MOVES
-	db 43
+	db 50
 	dw RAPIDASH
 	db FOCUS_BAND
-	dw STOMP, FIRE_SPIN, FURY_ATTACK, FIRE_BLAST
+	dw POISON_JAB, FIRE_BLAST, BOUNCE, FLAME_CHARGE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (19)
 	db "REENA@", TRAINERTYPE_NORMAL
-	db 34
-	dw STARMIE
-	db 36
-	dw NIDOQUEEN
-	db 34
-	dw STARMIE
+	db 42
+	dw SLIGGOO
+	db 44
+	dw MILOTIC
+	db 42
+	dw GLALIE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (20)
 	db "REENA@", TRAINERTYPE_ITEM_MOVES
-	db 38
-	dw STARMIE
+	db 48
+	dw GLALIE
 	db NO_ITEM
-	dw DOUBLE_TEAM, PSYCHIC_M, WATERFALL, CONFUSE_RAY
-	db 40
-	dw NIDOQUEEN
-	db PINK_BOW
-	dw EARTHQUAKE, DOUBLE_KICK, TOXIC, BODY_SLAM
-	db 38
-	dw STARMIE
+	dw DOUBLE_TEAM, CRUNCH, FREEZE_DRY, HAIL
+	db 48
+	dw MILOTIC
 	db NO_ITEM
-	dw BLIZZARD, PSYCHIC_M, WATERFALL, RECOVER
+	dw HYDRO_PUMP, DRAGON_TAIL, ICE_BEAM, RECOVER
+	db 50
+	dw GOODRA
+	db DRAGON_FANG
+	dw AQUA_TAIL, DRAGON_PULSE, ACID_SPRAY, CURSE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (21)
 	db "CARA@", TRAINERTYPE_MOVES
 	db 33
-	dw HORSEA
-	dw SMOKESCREEN, LEER, WHIRLPOOL, TWISTER
+	dw JANGMO_O
+	dw DRAGON_TAIL, SCREECH, HEADBUTT, SCALE_SHOT
 	db 33
-	dw HORSEA
-	dw SMOKESCREEN, LEER, WHIRLPOOL, TWISTER
+	dw JANGMO_O
+	dw DRAGON_TAIL, SCREECH, HEADBUTT, SCALE_SHOT
 	db 35
-	dw SEADRA
-	dw SWIFT, LEER, WATERFALL, TWISTER
+	dw HAKAMO_O
+	dw DRAGON_TAIL, SCREECH, SKY_UPPERCUT, SCALE_SHOT
 	db -1 ; end
 
 	end_list_items
@@ -1743,123 +1764,119 @@ BeautyGroup:
 	next_list_item ; BEAUTY (1)
 	db "VICTORIA@", TRAINERTYPE_NORMAL
 	db 9
-	dw SENTRET
+	dw BUNEARY
 	db 13
-	dw SENTRET
+	dw BUNEARY
 	db 17
-	dw SENTRET
+	dw BUNEARY
 	db -1 ; end
 
 	next_list_item ; BEAUTY (2)
 	db "SAMANTHA@", TRAINERTYPE_NORMAL
-	db 16
+	db 17
 	dw GLAMEOW
-	db 16
+	db 17
 	dw GLAMEOW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (3)
 	db "JULIE@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (4)
 	db "JACLYN@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (5)
 	db "BRENDA@", TRAINERTYPE_NORMAL
-	db 16
-	dw FURRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (6)
 	db "CASSIE@", TRAINERTYPE_NORMAL
-	db 28
-	dw VILEPLUME
-	db 34
-	dw BUTTERFREE
+	db 49
+	dw AROMATISSE
+	db 45
+	dw RIBOMBEE
 	db -1 ; end
 
 	next_list_item ; BEAUTY (7)
 	db "CAROLINE@", TRAINERTYPE_NORMAL
-	db 30
-	dw MARILL
-	db 32
-	dw SEEL
-	db 30
-	dw MARILL
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (8)
 	db "CARLENE@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (9)
 	db "JESSICA@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (10)
 	db "RACHAEL@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (11)
 	db "ANGELICA@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (12)
 	db "KENDRA@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (13)
 	db "VERONICA@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (14)
 	db "JULIA@", TRAINERTYPE_NORMAL
-	db 32
-	dw PARAS
-	db 32
-	dw PETILIL
-	db 35
-	dw PARASECT
+	db 44
+	dw SHROOMISH
+	db 44
+	dw CARNIVINE
+	db 47
+	dw BRELOOM
 	db -1 ; end
 
 	next_list_item ; BEAUTY (15)
 	db "THERESA@", TRAINERTYPE_NORMAL
-	db 15
-	dw SENTRET
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BEAUTY (16)
 	db "VALERIE@", TRAINERTYPE_MOVES
-	db 17
+	db 18
 	dw HOPPIP
-	dw SYNTHESIS, TAIL_WHIP, TACKLE, POISONPOWDER
-	db 17
+	dw SYNTHESIS, FAIRY_WIND, MEGA_DRAIN, POISONPOWDER
+	db 18
 	dw SKIPLOOM
-	dw SYNTHESIS, TAIL_WHIP, TACKLE, STUN_SPORE
+	dw SYNTHESIS, FAIRY_WIND, MEGA_DRAIN, STUN_SPORE
 	db -1 ; end
 
 	next_list_item ; BEAUTY (17)
 	db "OLIVIA@", TRAINERTYPE_NORMAL
-	db 19
-	dw CORSOLA_G
+	db 21
+	dw FLOETTE
 	db -1 ; end
 
 	end_list_items
@@ -1874,9 +1891,9 @@ PokemaniacGroup:
 	next_list_item ; POKEMANIAC (2)
 	db "ANDREW@", TRAINERTYPE_NORMAL
 	db 24
-	dw MAROWAK
+	dw DREDNAW
 	db 24
-	dw MAROWAK
+	dw DREDNAW
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (3)
@@ -1887,84 +1904,82 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (4)
 	db "SHANE@", TRAINERTYPE_NORMAL
-	db 16
+	db 19
 	dw NIDORINA
-	db 16
+	db 19
 	dw NIDORINO
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (5)
 	db "BEN@", TRAINERTYPE_NORMAL
-	db 19
-	dw SLOWBRO
+	db 24
+	dw CROCONAW
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL
-	db 19
-	dw AUDINO
+	db 24
+	dw GABITE
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
 	db "RON@", TRAINERTYPE_NORMAL
-	db 19
-	dw NIDOKING
+	db 22
+	dw DRAMPA
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (8)
 	db "ETHAN@", TRAINERTYPE_NORMAL
-	db 31
-	dw AXEW
-	db 31
-	dw DRUDDIGON
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (9)
 	db "BRENT@", TRAINERTYPE_NORMAL
-	db 25
+	db 27
 	dw KANGASKHAN
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (10)
 	db "BRENT@", TRAINERTYPE_MOVES
-	db 36
-	dw PORYGON
+	db 46
+	dw PORYGON2
 	dw RECOVER, PSYCHIC_M, CONVERSION2, TRI_ATTACK
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (11)
 	db "ISAAC@", TRAINERTYPE_MOVES
-	db 12
-	dw HELIOLISK
-	dw THUNDERSHOCK, POUND, TAIL_WHIP, MUD_SLAP
+	db 14
+	dw MUNCHLAX
+	dw TACKLE, DEFENSE_CURL, LICK, ODOR_SLEUTH
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (12)
 	db "DONALD@", TRAINERTYPE_NORMAL
-	db 10
-	dw SLOWPOKE
-	db 10
-	dw SLOWPOKE
+	db 13
+	dw ARON
+	db 13
+	dw ARON
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (13)
 	db "ZACH@", TRAINERTYPE_NORMAL
-	db 27
-	dw BAGON
+	db 34
+	dw MAROWAK
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (14)
 	db "BRENT@", TRAINERTYPE_MOVES
-	db 41
+	db 50
 	dw CHANSEY
 	dw ROLLOUT, ATTRACT, EGG_BOMB, SOFTBOILED
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (15)
 	db "MILLER@", TRAINERTYPE_NORMAL
-	db 17
+	db 20
 	dw NIDOKING
-	db 17
+	db 20
 	dw NIDOQUEEN
 	db -1 ; end
 
@@ -1973,160 +1988,162 @@ PokemaniacGroup:
 GruntMGroup:
 	next_list_item ; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 14
-	dw KOFFING
+	db 8
+	dw POOCHYENA
+	db 12
+	dw SANDILE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 7
-	dw RATTATA_A
+	dw NICKIT
 	db 9
-	dw ZUBAT
+	dw SPINARAK
 	db 9
-	dw ZUBAT
+	dw SPINARAK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
+	db 26
 	dw RATICATE_A
-	db 24
+	db 26
 	dw RATICATE_A
 	db -1 ; end
 
 	next_list_item ; GRUNTM (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
-	dw GRIMER
-	db 23
-	dw GRIMER
 	db 25
-	dw MUK
+	dw GULPIN
+	db 25
+	dw GULPIN
+	db 27
+	dw SWALOT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 21
-	dw RATTATA_A
-	db 21
-	dw RATTATA_A
 	db 23
-	dw RATTATA_A
+	dw PAWNIARD
 	db 23
-	dw RATTATA_A
-	db 23
-	dw RATTATA_A
+	dw PAWNIARD
+	db 25
+	dw PAWNIARD
+	db 25
+	dw PAWNIARD
+	db 25
+	dw PAWNIARD
 	db -1 ; end
 
 	next_list_item ; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
-	dw ZUBAT
-	db 26
-	dw ZUBAT
+	db 28
+	dw CROAGUNK
+	db 28
+	dw CROAGUNK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (7)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
+	db 25
 	dw KOFFING
-	db 23
-	dw GRIMER
-	db 23
-	dw ZUBAT
-	db 23
-	dw RATTATA_A
+	db 25
+	dw PANCHAM
+	db 25
+	dw SKORUPI
+	db 25
+	dw GLAMEOW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (8)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
-	dw WEEZING_G
+	db 28
+	dw THIEVUL
 	db -1 ; end
 
 	next_list_item ; GRUNTM (9)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
-	dw RATICATE_A
 	db 26
-	dw KOFFING
+	dw LINOONE_G
+	db 28
+	dw MAREANIE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 22
-	dw ZUBAT
 	db 24
-	dw GOLBAT
-	db 22
+	dw PURRLOIN
+	db 26
+	dw LIEPARD
+	db 24
 	dw GRIMER
 	db -1 ; end
 
 	next_list_item ; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
-	dw MUK
-	db 23
-	dw KOFFING
 	db 25
-	dw RATTATA_A
+	dw THIEVUL
+	db 25
+	dw MURKROW
+	db 27
+	dw ZANGOOSE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (12)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
-	db 33
-	dw HOUNDOUR
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (13)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 27
-	dw RATTATA_A
+	dw STUNKY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (14)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
-	dw RATICATE_A
-	db 24
+	db 26
+	dw LINOONE_G
+	db 26
 	dw GOLBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (15)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
-	dw GRIMER
-	db 23
-	dw WEEZING_G
+	db 28
+	dw CROAGUNK
+	db 25
+	dw RATICATE_A
 	db -1 ; end
 
 	next_list_item ; GRUNTM (16)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 16
-	dw RATTATA_A
+	dw ZIGZAGOON_G
 	db 16
-	dw RATTATA_A
+	dw ZIGZAGOON_G
 	db 16
-	dw RATTATA_A
+	dw ZIGZAGOON_G
 	db 16
-	dw RATTATA_A
+	dw ZIGZAGOON_G
 	db -1 ; end
 
 	next_list_item ; GRUNTM (17)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 18
-	dw GOLBAT
+	dw HOUNDOUR
 	db -1 ; end
 
 	next_list_item ; GRUNTM (18)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 17
-	dw RATTATA_A
+	dw STUNKY
 	db 17
 	dw ZUBAT
 	db 17
-	dw RATTATA_A
+	dw STUNKY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (19)
@@ -2152,54 +2169,52 @@ GruntMGroup:
 	db 17
 	dw GRIMER
 	db 18
-	dw RATTATA_A
+	dw ZIGZAGOON_G
 	db -1 ; end
 
 	next_list_item ; GRUNTM (22)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
-	db 36
-	dw GOLBAT
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (23)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
-	db 30
-	dw KOFFING
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (24)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
-	dw KOFFING
-	db 25
-	dw KOFFING
+	db 27
+	dw SCRAGGY
+	db 27
+	dw SCRAGGY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
-	dw KOFFING
-	db 24
-	dw MUK
+	db 26
+	dw POOCHYENA
+	db 26
+	dw ARIADOS
 	db -1 ; end
 
 	next_list_item ; GRUNTM (26)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 15
-	dw RATTATA_A
-	db 15
-	dw RATTATA_A
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (27)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
-	db 22
-	dw ZUBAT
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (28)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 19
+	db 20
 	dw RATICATE_A
 	db -1 ; end
 
@@ -2213,18 +2228,14 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (30)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
-	dw GOLBAT
-	db 25
-	dw GOLBAT
-	db 30
-	dw SEVIPER
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (31)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 30
-	dw GOLBAT
+	db 45
+	dw DRAPION
 	db -1 ; end
 
 	end_list_items
@@ -2232,30 +2243,32 @@ GruntMGroup:
 GentlemanGroup:
 	next_list_item ; GENTLEMAN (1)
 	db "PRESTON@", TRAINERTYPE_NORMAL
-	db 18
+	db 20
 	dw HONEDGE
-	db 18
+	db 20
 	dw HONEDGE
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (2)
 	db "EDWARD@", TRAINERTYPE_NORMAL
-	db 33
+	db 42
+	dw POLTEAGYST
+	db 44
 	dw PURUGLY
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (3)
 	db "GREGORY@", TRAINERTYPE_NORMAL
-	db 37
-	dw PIKACHU
-	db 33
+	db 46
 	dw FLAAFFY
+	db 43
+	dw MANECTRIC
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (4)
 	db "VIRGIL@", TRAINERTYPE_NORMAL
-	db 20
-	dw PONYTA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (5)
@@ -2269,14 +2282,18 @@ GentlemanGroup:
 SkierGroup:
 	next_list_item ; SKIER (1)
 	db "ROXANNE@", TRAINERTYPE_NORMAL
+	db 24
+	dw DARUMAKA_G
 	db 28
-	dw MR__MIME_G
+	dw DARMANITAN_G
 	db -1 ; end
 
 	next_list_item ; SKIER (2)
 	db "CLARISSA@", TRAINERTYPE_NORMAL
+	db 24
+	dw SNOM
 	db 28
-	dw DEWGONG
+	dw FROSMOTH
 	db -1 ; end
 
 	end_list_items
@@ -2284,22 +2301,30 @@ SkierGroup:
 TeacherGroup:
 	next_list_item ; TEACHER (1)
 	db "COLETTE@", TRAINERTYPE_NORMAL
-	db 36
-	dw CLEFAIRY
+	db 45
+	dw CLEFABLE
+	db 45
+	dw LEAVANNY
+	db 42
+	dw VIVILLON
 	db -1 ; end
 
 	next_list_item ; TEACHER (2)
 	db "HILLARY@", TRAINERTYPE_NORMAL
-	db 32
-	dw CRABRAWLER
-	db 36
-	dw CUBONE
+	db 40
+	dw HAPPINY
+	db 40
+	dw HAPPINY
+	db 44
+	dw ORANGURU
 	db -1 ; end
 
 	next_list_item ; TEACHER (3)
 	db "SHIRLEY@", TRAINERTYPE_NORMAL
-	db 35
-	dw JIGGLYPUFF
+	db 44
+	dw CHATOT
+	db 44
+	dw FLORGES
 	db -1 ; end
 
 	end_list_items
@@ -2337,20 +2362,20 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (2)
 	db "ROB@", TRAINERTYPE_NORMAL
-	db 32
+	db 52
 	dw BEEDRILL
-	db 32
+	db 48
 	dw BUTTERFREE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (3)
 	db "ED@", TRAINERTYPE_NORMAL
-	db 30
+	db 48
+	dw PINECO
+	db 48
 	dw BEEDRILL
-	db 30
-	dw BEEDRILL
-	db 30
-	dw BEEDRILL
+	db 48
+	dw BUTTERFREE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (4)
@@ -2368,38 +2393,38 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (5)
 	db "BENNY@", TRAINERTYPE_NORMAL
 	db 7
-	dw WEEDLE
+	dw SCATTERBUG
 	db 9
-	dw KAKUNA
+	dw SPEWPA
 	db 12
-	dw BEEDRILL
+	dw VIVILLON
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (6)
 	db "AL@", TRAINERTYPE_NORMAL
 	db 12
-	dw CATERPIE
+	dw SURSKIT
 	db 12
-	dw WEEDLE
+	dw DEWPIDER
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (7)
 	db "JOSH@", TRAINERTYPE_NORMAL
 	db 13
-	dw PARAS
+	dw SIZZLIPEDE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (8)
 	db "ARNIE@", TRAINERTYPE_NORMAL
-	db 15
-	dw VENONAT
+	db 17
+	dw SURSKIT
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (9)
 	db "KEN@", TRAINERTYPE_NORMAL
-	db 30
-	dw ARIADOS
-	db 32
+	db 39
+	dw GALVANTULA
+	db 41
 	dw PINSIR
 	db -1 ; end
 
@@ -2417,87 +2442,89 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (11)
 	db "WADE@", TRAINERTYPE_NORMAL
-	db 14
+	db 18
 	dw BUTTERFREE
-	db 14
+	db 18
 	dw BUTTERFREE
-	db 15
+	db 19
 	dw BEEDRILL
-	db 14
+	db 18
 	dw BUTTERFREE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (12)
 	db "DOUG@", TRAINERTYPE_NORMAL
-	db 34
-	dw ARIADOS
+	db 52
+	dw BUTTERFREE
+	db 50
+	dw DURANT
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (13)
 	db "ARNIE@", TRAINERTYPE_NORMAL
-	db 19
-	dw VENONAT
+	db 24
+	dw MASQUERAIN
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (14)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 28
-	dw VENOMOTH
-	dw DISABLE, SUPERSONIC, CONFUSION, LEECH_LIFE
+	db 36
+	dw MASQUERAIN
+	dw SILVER_WIND, AIR_CUTTER, BUBBLEBEAM, STUN_SPORE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (15)
 	db "WADE@", TRAINERTYPE_MOVES
-	db 24
+	db 26
 	dw BUTTERFREE
-	dw CONFUSION, POISONPOWDER, SUPERSONIC, WHIRLWIND
-	db 24
+	dw GUST, SILVER_WIND, SUPERSONIC, POISONPOWDER
+	db 26
 	dw BUTTERFREE
-	dw CONFUSION, STUN_SPORE, SUPERSONIC, WHIRLWIND
-	db 25
+	dw GUST, SILVER_WIND, STRING_SHOT, SLEEP_POWDER
+	db 27
 	dw BEEDRILL
-	dw FURY_ATTACK, FOCUS_ENERGY, TWINEEDLE, RAGE
-	db 24
+	dw PURSUIT, BUG_BITE, TWINEEDLE, VENOSHOCK
+	db 26
 	dw BUTTERFREE
-	dw CONFUSION, SLEEP_POWDER, SUPERSONIC, WHIRLWIND
+	dw GUST, SILVER_WIND, PSYBEAM, STUN_SPORE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (16)
 	db "WADE@", TRAINERTYPE_MOVES
-	db 30
+	db 40
 	dw BUTTERFREE
-	dw CONFUSION, POISONPOWDER, SUPERSONIC, GUST
-	db 30
+	dw AIR_SLASH, BUG_BUZZ, SUPERSONIC, POISONPOWDER
+	db 40
 	dw BUTTERFREE
-	dw CONFUSION, STUN_SPORE, SUPERSONIC, GUST
-	db 32
+	dw AIR_SLASH, BUG_BUZZ, WHIRLWIND, SLEEP_POWDER
+	db 42
 	dw BEEDRILL
-	dw FURY_ATTACK, PURSUIT, TWINEEDLE, DOUBLE_TEAM
-	db 34
+	dw TOXIC_SPIKES, PIN_MISSILE, POISON_JAB, VENOSHOCK
+	db 44
 	dw BUTTERFREE
-	dw PSYBEAM, SLEEP_POWDER, GUST, WHIRLWIND
+	dw AIR_SLASH, BUG_BUZZ, PSYBEAM, CAPTIVATE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (17)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 36
-	dw VENOMOTH
-	dw GUST, SUPERSONIC, PSYBEAM, LEECH_LIFE
+	db 43
+	dw MASQUERAIN
+	dw BUG_BUZZ, AIR_CUTTER, BUBBLEBEAM, HAZE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (18)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 40
-	dw VENOMOTH
-	dw GUST, SUPERSONIC, PSYCHIC_M, TOXIC
+	db 48
+	dw MASQUERAIN
+	dw BUG_BUZZ, AIR_CUTTER, WHIRLWIND, STICKY_WEB
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (19)
 	db "WAYNE@", TRAINERTYPE_NORMAL
 	db 8
-	dw LEDYBA
-	db 10
 	dw PARAS
+	db 10
+	dw VENIPEDE
 	db -1 ; end
 
 	end_list_items
@@ -2518,49 +2545,51 @@ FisherGroup:
 	next_list_item ; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 10
-	dw MOLANCORA
+	dw ARROKUDA
 	db -1 ; end
 
 	next_list_item ; FISHER (3)
 	db "ARNOLD@", TRAINERTYPE_NORMAL
-	db 34
+	db 44
 	dw TENTACRUEL
+	db 54
+	dw CURSOLA
 	db -1 ; end
 
 	next_list_item ; FISHER (4)
 	db "KYLE@", TRAINERTYPE_NORMAL
-	db 28
-	dw BASCULIN
-	db 31
-	dw FLOATZEL
-	db 31
-	dw BASCULIN
+	db 39
+	dw RELICANTH
+	db 42
+	dw WAILORD
+	db 42
+	dw WAILORD
 	db -1 ; end
 
 	next_list_item ; FISHER (5)
 	db "HENRY@", TRAINERTYPE_NORMAL
 	db 8
-	dw FINNEON
+	dw CORPHISH
 	db 8
-	dw FINNEON
+	dw CORPHISH
 	db -1 ; end
 
 	next_list_item ; FISHER (6)
 	db "MARVIN@", TRAINERTYPE_NORMAL
 	db 10
 	dw MAGIKARP
-	db 10
+	db 20
 	dw GYARADOS
 	db 15
 	dw MAGIKARP
-	db 15
+	db 20
 	dw GYARADOS
 	db -1 ; end
 
 	next_list_item ; FISHER (7)
 	db "TULLY@", TRAINERTYPE_NORMAL
-	db 18
-	dw ARROKUDA
+	db 21
+	dw BASCULIN
 	db -1 ; end
 
 	next_list_item ; FISHER (8)
@@ -2571,170 +2600,170 @@ FisherGroup:
 
 	next_list_item ; FISHER (9)
 	db "RAYMOND@", TRAINERTYPE_NORMAL
-	db 22
+	db 24
 	dw MAGIKARP
-	db 22
+	db 24
 	dw MAGIKARP
-	db 22
+	db 24
 	dw MAGIKARP
-	db 22
+	db 24
 	dw MAGIKARP
 	db -1 ; end
 
 	next_list_item ; FISHER (10)
 	db "WILTON@", TRAINERTYPE_NORMAL
-	db 23
-	dw BASCULIN
-	db 23
-	dw BASCULIN
-	db 25
-	dw BASCULIN
+	db 30
+	dw BARBOACH
+	db 30
+	dw BARBOACH
+	db 32
+	dw WHISCASH
 	db -1 ; end
 
 	next_list_item ; FISHER (11)
 	db "EDGAR@", TRAINERTYPE_MOVES
-	db 25
-	dw REMORAID
-	dw LOCK_ON, PSYBEAM, AURORA_BEAM, BUBBLEBEAM
-	db 25
-	dw REMORAID
-	dw LOCK_ON, PSYBEAM, AURORA_BEAM, BUBBLEBEAM
+	db 32
+	dw MOLANCORA
+	dw THRASH, IRON_HEAD, SLAM, LEER
+	db 32
+	dw MOLANCORA
+	dw THRASH, IRON_HEAD, SLAM, LEER
 	db -1 ; end
 
 	next_list_item ; FISHER (12)
 	db "JONAH@", TRAINERTYPE_NORMAL
-	db 25
-	dw SHELLDER
-	db 29
+	db 34
+	dw MOLANCORA
+	db 38
 	dw OCTILLERY
-	db 25
+	db 38
 	dw REMORAID
-	db 29
-	dw CLOYSTER
+	db 38
+	dw ANCHORRAGE
 	db -1 ; end
 
 	next_list_item ; FISHER (13)
 	db "MARTIN@", TRAINERTYPE_NORMAL
-	db 32
-	dw REMORAID
-	db 32
-	dw REMORAID
+	db 42
+	dw BARASKEWDA
+	db 42
+	dw BARASKEWDA
 	db -1 ; end
 
 	next_list_item ; FISHER (14)
 	db "STEPHEN@", TRAINERTYPE_NORMAL
-	db 25
-	dw MAGIKARP
-	db 25
-	dw MAGIKARP
-	db 31
-	dw MAREANIE
-	db 31
-	dw TENTACRUEL
+	db 39
+	dw FEEBAS
+	db 39
+	dw FEEBAS
+	db 45
+	dw FRILLISH
+	db 45
+	dw CRAWDAUNT
 	db -1 ; end
 
 	next_list_item ; FISHER (15)
 	db "BARNEY@", TRAINERTYPE_NORMAL
-	db 30
-	dw GYARADOS
-	db 30
-	dw GYARADOS
-	db 30
-	dw GYARADOS
+	db 40
+	dw LANTURN
+	db 43
+	dw HUNTAIL
+	db 43
+	dw RELICANTH
 	db -1 ; end
 
 	next_list_item ; FISHER (16)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 17
-	dw MOLANCORA
+	db 20
+	dw ARROKUDA
 	db -1 ; end
 
 	next_list_item ; FISHER (17)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 17
+	db 23
 	dw BASCULIN
-	db 19
-	dw MOLANCORA
+	db 25
+	dw ARROKUDA
 	db -1 ; end
 
 	next_list_item ; FISHER (18)
 	db "TULLY@", TRAINERTYPE_NORMAL
-	db 23
-	dw ARROKUDA
+	db 28
+	dw BASCULIN
 	db -1 ; end
 
 	next_list_item ; FISHER (19)
 	db "TULLY@", TRAINERTYPE_NORMAL
-	db 32
-	dw BARASKEWDA
-	db 32
+	db 42
 	dw BASCULIN
-	db 32
-	dw BASCULIN
+	db 42
+	dw WHISCASH
+	db 42
+	dw WHISCASH
 	db -1 ; end
 
 	next_list_item ; FISHER (20)
 	db "WILTON@", TRAINERTYPE_NORMAL
-	db 29
+	db 40
 	dw BASCULIN
-	db 29
+	db 40
 	dw BASCULIN
-	db 32
+	db 43
 	dw BASCULIN
 	db -1 ; end
 
 	next_list_item ; FISHER (21)
 	db "SCOTT@", TRAINERTYPE_NORMAL
-	db 30
+	db 33
 	dw FINNEON
-	db 30
+	db 33
 	dw FINNEON
-	db 34
+	db 37
 	dw LUMINEON
 	db -1 ; end
 
 	next_list_item ; FISHER (22)
 	db "WILTON@", TRAINERTYPE_MOVES
-	db 34
+	db 44
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
-	db 34
+	db 44
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
-	db 38
+	db 48
 	dw BASCULIN
 	dw CRUNCH, CHIP_AWAY, SCARY_FACE, AQUA_JET
 	db -1 ; end
 
 	next_list_item ; FISHER (23)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 30
+	db 40
 	dw BASCULIN
-	db 32
-	dw MOLANCORA
+	db 42
+	dw BARASKEWDA
 	db -1 ; end
 
 	next_list_item ; FISHER (24)
 	db "RALPH@", TRAINERTYPE_MOVES
-	db 35
+	db 45
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
-	db 39
-	dw ANCHORRAGE
-	dw ANCHOR_SHOT, AQUA_TAIL, SCARY_FACE, THRASH
+	db 49
+	dw BARASKEWDA
+	dw LIQUIDATION, CRUNCH, LASER_FOCUS, AQUA_JET
 	db -1 ; end
 
 	next_list_item ; FISHER (25)
 	db "TULLY@", TRAINERTYPE_MOVES
-	db 37
-	dw BARASKEWDA
-	dw LASER_FOCUS, FLIP_TURN, AQUA_JET, BITE
-	db 34
+	db 49
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
-	db 34
-	dw BASCULIN
-	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
+	db 46
+	dw WHISCASH
+	dw AQUA_TAIL, MAGNITUDE, REST, SNORE
+	db 46
+	dw WHISCASH
+	dw AQUA_TAIL, MUD_BOMB, ZEN_HEADBUTT, AMNESIA
 	db -1 ; end
 
 	end_list_items
@@ -2742,38 +2771,38 @@ FisherGroup:
 SwimmerMGroup:
 	next_list_item ; SWIMMERM (1)
 	db "HAROLD@", TRAINERTYPE_NORMAL
-	db 32
-	dw REMORAID
-	db 30
+	db 52
+	dw MANTINE
+	db 50
 	dw SEADRA
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (2)
 	db "SIMON@", TRAINERTYPE_NORMAL
 	db 20
-	dw TENTACOOL
+	dw FRILLISH
 	db 20
-	dw TENTACOOL
+	dw FRILLISH
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (3)
 	db "RANDALL@", TRAINERTYPE_NORMAL
-	db 18
-	dw SHELLDER
 	db 20
+	dw CLAMPERL
+	db 22
 	dw WARTORTLE
-	db 18
-	dw SHELLDER
+	db 20
+	dw CLAMPERL
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (4)
 	db "CHARLIE@", TRAINERTYPE_NORMAL
 	db 21
-	dw SHELLDER
-	db 19
-	dw TENTACOOL
-	db 19
-	dw TENTACRUEL
+	dw CHEWTLE
+	db 23
+	dw DREDNAW
+	db 21
+	dw MANTYKE
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (5)
@@ -2789,13 +2818,13 @@ SwimmerMGroup:
 	db 17
 	dw TENTACOOL
 	db 19
-	dw REMORAID
+	dw CARVANHA
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (6)
 	db "BERKE@", TRAINERTYPE_NORMAL
 	db 23
-	dw MAREANIE
+	dw SKRELP
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (7)
@@ -2807,132 +2836,102 @@ SwimmerMGroup:
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (8)
-	db "MATHEW@", TRAINERTYPE_NORMAL
-	db 23
-	dw KRABBY
+	db "MATTHEW@", TRAINERTYPE_NORMAL
+	db 25
+	dw INKAY
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (9)
 	db "HAL@", TRAINERTYPE_NORMAL
-	db 24
-	dw SEEL
-	db 25
-	dw DEWGONG
-	db 24
-	dw SEEL
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (10)
 	db "PATON@", TRAINERTYPE_NORMAL
-	db 26
-	dw PILOSWINE
-	db 26
-	dw PILOSWINE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (11)
 	db "DARYL@", TRAINERTYPE_NORMAL
-	db 24
-	dw SHELLDER
-	db 25
-	dw CLOYSTER
-	db 24
-	dw SHELLDER
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (12)
 	db "WALTER@", TRAINERTYPE_NORMAL
-	db 15
-	dw HORSEA
-	db 15
-	dw HORSEA
-	db 20
-	dw SEADRA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (13)
 	db "TONY@", TRAINERTYPE_NORMAL
-	db 13
-	dw STARYU
-	db 18
-	dw STARMIE
-	db 16
-	dw HORSEA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (14)
 	db "JEROME@", TRAINERTYPE_NORMAL
-	db 26
-	dw SEADRA
-	db 28
-	dw TENTACOOL
-	db 30
-	dw TENTACRUEL
-	db 28
-	dw BASCULIN
+	db 46
+	dw MARSHTOMP
+	db 48
+	dw FRILLISH
+	db 50
+	dw JELLICENT
+	db 48
+	dw BARBARACLE
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (15)
 	db "TUCKER@", TRAINERTYPE_NORMAL
-	db 30
+	db 50
 	dw SHELLDER
-	db 34
+	db 54
 	dw CLOYSTER
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (16)
 	db "RICK@", TRAINERTYPE_NORMAL
-	db 13
-	dw STARYU
-	db 18
-	dw STARMIE
-	db 16
-	dw HORSEA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (17)
 	db "CAMERON@", TRAINERTYPE_NORMAL
-	db 34
-	dw MARILL
+	db 54
+	dw AZUMARILL
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (18)
 	db "SETH@", TRAINERTYPE_NORMAL
-	db 29
+	db 49
 	dw QUAGSIRE
-	db 29
+	db 49
 	dw OCTILLERY
-	db 32
+	db 52
 	dw QUAGSIRE
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (19)
 	db "JAMES@", TRAINERTYPE_NORMAL
-	db 13
-	dw STARYU
-	db 18
-	dw STARMIE
-	db 16
-	dw HORSEA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (20)
 	db "LEWIS@", TRAINERTYPE_NORMAL
-	db 13
-	dw STARYU
-	db 18
-	dw STARMIE
-	db 16
-	dw HORSEA
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (21)
 	db "PARKER@", TRAINERTYPE_NORMAL
-	db 32
+	db 42
 	dw HORSEA
-	db 32
+	db 42
 	dw HORSEA
-	db 35
+	db 45
 	dw SEADRA
 	db -1 ; end
 
@@ -2941,146 +2940,148 @@ SwimmerMGroup:
 SwimmerFGroup:
 	next_list_item ; SWIMMERF (1)
 	db "ELAINE@", TRAINERTYPE_NORMAL
-	db 21
+	db 23
 	dw STARYU
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (2)
 	db "PAULA@", TRAINERTYPE_NORMAL
-	db 19
-	dw STARYU
-	db 19
+	db 22
+	dw CHINCHOU
+	db 22
 	dw SHELLDER
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (3)
 	db "KAYLEE@", TRAINERTYPE_NORMAL
-	db 18
-	dw BASCULIN
 	db 20
-	dw BASCULIN
-	db 20
-	dw BASCULIN
+	dw PIPLUP
+	db 22
+	dw PIPLUP
+	db 22
+	dw PRINPLUP
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (4)
 	db "SUSIE@", TRAINERTYPE_MOVES
-	db 20
-	dw PSYDUCK
-	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
 	db 22
+	dw PSYDUCK
+	dw FURY_SWIPES, WATER_PULSE, DISABLE, CONFUSION
+	db 24
 	dw BASCULIN
-	dw PECK, TAIL_WHIP, SUPERSONIC, HORN_ATTACK
+	dw UPROAR, BITE, AQUA_JET, SCARY_FACE
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (5)
 	db "DENISE@", TRAINERTYPE_NORMAL
-	db 22
+	db 24
 	dw SEEL
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (6)
 	db "KARA@", TRAINERTYPE_NORMAL
 	db 20
-	dw STARYU
+	dw BUIZEL
 	db 20
-	dw STARMIE
+	dw LUVDISC
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (7)
 	db "WENDY@", TRAINERTYPE_MOVES
-	db 21
-	dw HORSEA
-	dw BUBBLE, SMOKESCREEN, LEER, WATER_GUN
-	db 21
-	dw HORSEA
-	dw DRAGON_RAGE, SMOKESCREEN, LEER, WATER_GUN
+	db 23
+	dw WAILMER
+	dw ROLLOUT, WATER_PULSE, MIST, ASTONISH
+	db 23
+	dw WAILMER
+	dw HEAVY_SLAM, WATER_PULSE, GROWL, ASTONISH
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (8)
 	db "LISA@", TRAINERTYPE_NORMAL
-	db 28
-	dw MR__MIME_G
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (9)
 	db "JILL@", TRAINERTYPE_NORMAL
-	db 28
-	dw DEWGONG
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (10)
 	db "MARY@", TRAINERTYPE_NORMAL
-	db 20
-	dw BASCULIN
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (11)
 	db "KATIE@", TRAINERTYPE_NORMAL
-	db 33
-	dw DEWGONG
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (12)
 	db "DAWN@", TRAINERTYPE_NORMAL
-	db 34
-	dw BASCULIN
+	db 49
+	dw SHARPEDO
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (13)
 	db "TARA@", TRAINERTYPE_NORMAL
-	db 20
-	dw BASCULIN
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (14)
 	db "NICOLE@", TRAINERTYPE_NORMAL
-	db 29
+	db 49
 	dw MARILL
-	db 29
+	db 49
 	dw MARILL
-	db 32
+	db 52
 	dw LAPRAS
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (15)
 	db "LORI@", TRAINERTYPE_NORMAL
-	db 32
-	dw STARMIE
-	db 32
-	dw STARMIE
+	db 42
+	dw LUDICOLO
+	db 42
+	dw LUDICOLO
+	db 42
+	dw LUDICOLO
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (16)
 	db "JODY@", TRAINERTYPE_NORMAL
-	db 20
-	dw BASCULIN
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (17)
 	db "NIKKI@", TRAINERTYPE_NORMAL
-	db 28
+	db 48
 	dw SEEL
-	db 28
+	db 48
 	dw SEEL
-	db 28
+	db 48
 	dw SEEL
-	db 28
+	db 48
 	dw DEWGONG
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (18)
 	db "DIANA@", TRAINERTYPE_NORMAL
-	db 37
-	dw GOLDUCK
+	db 47
+	dw GASTRODON
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (19)
 	db "BRIANA@", TRAINERTYPE_NORMAL
-	db 35
-	dw BASCULIN
-	db 35
-	dw BASCULIN
+	db 45
+	dw LUMINEON
+	db 45
+	dw LUMINEON
 	db -1 ; end
 
 	end_list_items
@@ -3088,114 +3089,118 @@ SwimmerFGroup:
 SailorGroup:
 	next_list_item ; SAILOR (1)
 	db "EUGENE@", TRAINERTYPE_NORMAL
-	db 17
-	dw FLOATZEL
-	db 17
-	dw RATICATE_A
 	db 19
+	dw BUIZEL
+	db 19
+	dw RATICATE_A
+	db 21
 	dw KRABBY
 	db -1 ; end
 
 	next_list_item ; SAILOR (2)
 	db "HUEY@", TRAINERTYPE_NORMAL
-	db 18
-	dw LOTAD
-	db 18
-	dw FLOATZEL
+	db 20
+	dw SPHEAL
+	db 20
+	dw SPHEAL
 	db -1 ; end
 
 	next_list_item ; SAILOR (3)
 	db "TERRELL@", TRAINERTYPE_NORMAL
-	db 20
+	db 21
 	dw MEOWTH_G
 	db -1 ; end
 
 	next_list_item ; SAILOR (4)
 	db "KENT@", TRAINERTYPE_MOVES
-	db 18
-	dw KRABBY
-	dw BUBBLE, LEER, VICEGRIP, HARDEN
 	db 20
-	dw KRABBY
-	dw BUBBLEBEAM, LEER, VICEGRIP, HARDEN
+	dw BINACLE
+	dw ANCIENTPOWER, WATER_GUN, FURY_SWIPES, MUD_SLAP
+	db 22
+	dw BINACLE
+	dw ANCIENTPOWER, WATER_GUN, FURY_CUTTER, WITHDRAW
 	db -1 ; end
 
 	next_list_item ; SAILOR (5)
 	db "ERNEST@", TRAINERTYPE_NORMAL
-	db 18
-	dw MAKUHITA
-	db 18
-	dw MAKUHITA
-	db 18
-	dw FLOATZEL
+	db 23
+	dw CLOBBOPUS
+	db 23
+	dw CLOBBOPUS
+	db 23
+	dw SHELLOS
 	db -1 ; end
 
 	next_list_item ; SAILOR (6)
 	db "JEFF@", TRAINERTYPE_NORMAL
-	db 32
-	dw RATICATE_A
-	db 32
+	db 40
+	dw MAKUHITA
+	db 42
+	dw HARIYAMA
+	db 42
 	dw RATICATE_A
 	db -1 ; end
 
 	next_list_item ; SAILOR (7)
 	db "GARRETT@", TRAINERTYPE_NORMAL
-	db 34
+	db 40
+	dw DHELMISE
+	db 42
 	dw KINGLER
 	db -1 ; end
 
 	next_list_item ; SAILOR (8)
 	db "KENNETH@", TRAINERTYPE_NORMAL
-	db 28
-	dw MACHOP
-	db 28
-	dw MACHOP
-	db 28
-	dw CRABOMABLE
-	db 28
-	dw MACHOP
+	db 38
+	dw CRABRAWLER
+	db 38
+	dw CRABRAWLER
+	db 38
+	dw FERALIGATR
+	db 38
+	dw CRABRAWLER
 	db -1 ; end
 
 	next_list_item ; SAILOR (9)
-	db "STANLY@", TRAINERTYPE_NORMAL
-	db 31
+	db "STANLEY@", TRAINERTYPE_NORMAL
+	db 41
 	dw MACHOP
-	db 33
+	db 43
 	dw MACHOKE
-	db 26
-	dw PSYDUCK
+	db 36
+	dw FLOATZEL
 	db -1 ; end
 
 	next_list_item ; SAILOR (10)
 	db "HARRY@", TRAINERTYPE_NORMAL
-	db 19
-	dw WOOPER
+	db 20
+	dw TOTODILE
 	db -1 ; end
 
 	next_list_item ; SAILOR (11)
 	db "HUEY@", TRAINERTYPE_NORMAL
-	db 28
-	dw FLOATZEL
-	db 28
-	dw FLOATZEL
+	db 33
+	dw SEALEO
+	db 33
+	dw SEALEO
 	db -1 ; end
 
 	next_list_item ; SAILOR (12)
 	db "HUEY@", TRAINERTYPE_NORMAL
-	db 34
-	dw FLOATZEL
-	db 34
-	dw CRABOMABLE
+	db 44
+	dw WALREIN
+	db 44
+	dw WALREIN
 	db -1 ; end
 
 	next_list_item ; SAILOR (13)
 	db "HUEY@", TRAINERTYPE_MOVES
-	db 38
-	dw DRAGALGE
-	dw WHIRLPOOL, RAIN_DANCE, BODY_SLAM, PERISH_SONG
-	db 38
-	dw CRABOMABLE
-	dw SURF, STRENGTH, ICE_PUNCH, SUBMISSION
+	db 48
+	dw WALREIN
+	dw BLIZZARD, HAIL, BODY_SLAM, ENCORE
+	db 48
+	dw WALREIN
+	dw BLIZZARD, REST, SLEEP_TALK, BRINE
 	db -1 ; end
 
 	end_list_items
@@ -3209,111 +3214,100 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (2)
 	db "ERIC@", TRAINERTYPE_NORMAL
-	db 11
-	dw GRIMER
-	db 11
-	dw GRIMER
+	db 14
+	dw ELEKID
+	db 14
+	dw ELEKID
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (3)
 	db "GREGG@", TRAINERTYPE_NORMAL
-	db 20
-	dw MAGNEMITE
-	db 20
-	dw MAGNEMITE
-	db 20
-	dw MAGNEMITE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (4)
 	db "JAY@", TRAINERTYPE_NORMAL
-	db 22
-	dw KOFFING
-	db 22
-	dw KOFFING
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (5)
 	db "DAVE@", TRAINERTYPE_NORMAL
-	db 24
-	dw DITTO
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (6)
 	db "SAM@", TRAINERTYPE_NORMAL
-	db 34
+	db 44
 	dw GRIMER
-	db 34
+	db 44
 	dw MUK
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (7)
 	db "TOM@", TRAINERTYPE_NORMAL
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
+	db 42
+	dw METANG
+	db 42
+	dw METANG
+	db 45
+	dw METAGROSS
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (8)
 	db "PAT@", TRAINERTYPE_NORMAL
-	db 36
+	db 46
 	dw PORYGON_Z
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (9)
 	db "SHAWN@", TRAINERTYPE_NORMAL
-	db 31
-	dw MAGNEMITE
-	db 33
+	db 41
+	dw CHARJABUG
+	db 43
 	dw MUK
-	db 31
-	dw MAGNEMITE
+	db 41
+	dw CHARJABUG
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (10)
 	db "TERU@", TRAINERTYPE_NORMAL
-	db 7
+	db 8
 	dw MAGNEMITE
-	db 11
-	dw ELEKID
-	db 7
+	db 12
+	dw BELDUM
+	db 8
 	dw MAGNEMITE
-	db 9
+	db 10
 	dw MAGNEMITE
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (11)
 	db "RUSS@", TRAINERTYPE_NORMAL
-	db 27
-	dw MAGNEMITE
-	db 27
-	dw MAGNEMITE
-	db 27
-	dw MAGNEMITE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (12)
 	db "NORTON@", TRAINERTYPE_MOVES
-	db 30
-	dw PORYGON
-	dw CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (13)
 	db "HUGH@", TRAINERTYPE_MOVES
-	db 39
+	db 41
 	dw SEADRA
-	dw SMOKESCREEN, TWISTER, SURF, WATERFALL
+	dw SMOKESCREEN, DRAGONBREATH, SURF, WATERFALL
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES
-	db 19
+	db 25
 	dw SLOWPOKE
-	dw CURSE, WATER_GUN, GROWL, STRENGTH
+	dw CURSE, WATER_PULSE, YAWN, STRENGTH
 	db -1 ; end
 
 	end_list_items
@@ -3456,20 +3450,20 @@ Rival2Group:
 GuitaristGroup:
 	next_list_item ; GUITARIST (1)
 	db "CLYDE@", TRAINERTYPE_NORMAL
-	db 34
+	db 44
 	dw ELECTABUZZ
 	db -1 ; end
 
 	next_list_item ; GUITARIST (2)
 	db "VINCENT@", TRAINERTYPE_NORMAL
-	db 27
-	dw MAGNEMITE
-	db 33
-	dw FERROSEED
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
+	db 37
+	dw LUXIO
+	db 43
+	dw TOXTRICITY
+	db 42
+	dw LUXRAY
+	db 42
+	dw LUXRAY
 	db -1 ; end
 
 	end_list_items
@@ -3477,38 +3471,38 @@ GuitaristGroup:
 HikerGroup:
 	next_list_item ; HIKER (1)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
-	db 16
+	db 20
 	dw GEODUDE
-	db 18
-	dw MAKUHITA
+	db 22
+	dw MACHOP
 	db -1 ; end
 
 	next_list_item ; HIKER (2)
 	db "RUSSELL@", TRAINERTYPE_NORMAL
 	db 4
-	dw GEODUDE
+	dw ROGGENROLA
 	db 6
-	dw GEODUDE
+	dw ROGGENROLA
 	db 8
-	dw GEODUDE
+	dw ROGGENROLA
 	db -1 ; end
 
 	next_list_item ; HIKER (3)
 	db "PHILLIP@", TRAINERTYPE_NORMAL
 	db 23
-	dw GEODUDE
+	dw BRONZOR
 	db 23
-	dw GEODUDE
-	db 23
-	dw GRAVELER
+	dw ROGGENROLA
+	db 25
+	dw BOLDORE
 	db -1 ; end
 
 	next_list_item ; HIKER (4)
 	db "LEONARD@", TRAINERTYPE_NORMAL
 	db 23
-	dw GEODUDE
+	dw HIPPOPOTAS
 	db 25
-	dw MAKUHITA
+	dw GURDURR
 	db -1 ; end
 
 	next_list_item ; HIKER (5)
@@ -3516,55 +3510,61 @@ HikerGroup:
 	db 11
 	dw GEODUDE
 	db 11
-	dw MEDITITE
+	dw MACHOP
 	db -1 ; end
 
 	next_list_item ; HIKER (6)
 	db "BENJAMIN@", TRAINERTYPE_NORMAL
-	db 14
-	dw ROCKRUFF
-	db 14
+	db 17
+	dw TIMBURR
+	db 17
 	dw GEODUDE
-	db 16
-	dw GIBLE
+	db 19
+	dw GLIGAR
 	db -1 ; end
 
 	next_list_item ; HIKER (7)
 	db "ERIK@", TRAINERTYPE_NORMAL
-	db 24
-	dw MACHOP
-	db 27
+	db 31
+	dw NUMEL
+	db 34
 	dw GRAVELER
-	db 27
-	dw GURDURR
+	db 34
+	dw HIPPOWDON
 	db -1 ; end
 
 	next_list_item ; HIKER (8)
 	db "MICHAEL@", TRAINERTYPE_NORMAL
-	db 25
-	dw GEODUDE
-	db 25
-	dw GRAVELER
-	db 25
-	dw GOLEM
+	db 32
+	dw ROGGENROLA
+	db 32
+	dw BOLDORE
+	db 32
+	dw GIGALITH
 	db -1 ; end
 
 	next_list_item ; HIKER (9)
 	db "PARRY@", TRAINERTYPE_NORMAL
-	db 35
-	dw ONIX
-	db 33
-	dw SWINUB
+	db 45
+	dw NOSEPASS
+	db 43
+	dw PILOSWINE
 	db -1 ; end
 
 	next_list_item ; HIKER (10)
 	db "TIMOTHY@", TRAINERTYPE_MOVES
-	db 27
-	dw ROCKRUFF
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
-	db 27
-	dw GABITE
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
+	db 32
+	dw SHIELDON
+	dw IRON_HEAD, METAL_SOUND, ANCIENTPOWER, PROTECT
+	db 34
+	dw RAMPARDOS
+	dw TAKE_DOWN, ENDEAVOR, PURSUIT, LEER
+	db 32
+	dw CRANIDOS
+	dw CHIP_AWAY, SCARY_FACE, PURSUIT, FOCUS_ENERGY
+	db 34
+	dw BASTIODON
+	dw IRON_HEAD, IRON_DEFENSE, TAKE_DOWN, BLOCK
 	db -1 ; end
 
 	next_list_item ; HIKER (11)
@@ -3583,56 +3583,58 @@ HikerGroup:
 
 	next_list_item ; HIKER (12)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
-	db 25
+	db 28
 	dw GRAVELER
-	db 27
+	db 30
 	dw GRAVELER
-	db 29
+	db 32
 	dw MACHOKE
+	db 30
+	dw DUNSPARCE
 	db -1 ; end
 
 	next_list_item ; HIKER (13)
 	db "TIM@", TRAINERTYPE_NORMAL
-	db 31
-	dw GRAVELER
-	db 31
-	dw GRAVELER
-	db 31
-	dw GRAVELER
+	db 41
+	dw CARBINK
+	db 41
+	dw CARBINK
+	db 41
+	dw CARBINK
 	db -1 ; end
 
 	next_list_item ; HIKER (14)
 	db "NOLAND@", TRAINERTYPE_NORMAL
-	db 31
-	dw SANDSLASH_A
-	db 33
-	dw GOLEM
+	db 41
+	dw BRONZOR
+	db 43
+	dw CRUSTLE
 	db -1 ; end
 
 	next_list_item ; HIKER (15)
-	db "SIDNEY@", TRAINERTYPE_NORMAL
-	db 34
-	dw GABITE
-	db 32
-	dw ONIX
+	db "CLARKE@", TRAINERTYPE_NORMAL
+	db 44
+	dw MUDSDALE
+	db 42
+	dw PUPITAR
 	db -1 ; end
 
 	next_list_item ; HIKER (16)
 	db "KENNY@", TRAINERTYPE_NORMAL
-	db 27
-	dw SANDSLASH_A
-	db 29
-	dw GRAVELER
-	db 31
-	dw GOLEM
-	db 29
-	dw GRAVELER
+	db 38
+	dw DONPHAN
+	db 40
+	dw LAIRON
+	db 42
+	dw AGGRON
+	db 40
+	dw WARWOLF
 	db -1 ; end
 
 	next_list_item ; HIKER (17)
 	db "JIM@", TRAINERTYPE_NORMAL
-	db 35
-	dw MACHAMP
+	db 45
+	dw CONKELDURR
 	db -1 ; end
 
 	next_list_item ; HIKER (18)
@@ -3643,44 +3645,51 @@ HikerGroup:
 
 	next_list_item ; HIKER (19)
 	db "PARRY@", TRAINERTYPE_MOVES
-	db 35
-	dw PILOSWINE
-	dw EARTHQUAKE, BLIZZARD, REST, TAKE_DOWN
-	db 35
-	dw GABITE
-	dw MAGNITUDE, DIG, MUD_SLAP, SLASH
-	db 38
-	dw STEELIX
-	dw DIG, IRON_TAIL, SANDSTORM, SLAM
+	db 45
+	dw MAMOSWINE
+	dw EARTHQUAKE, ICE_SHARD, REST, TAKE_DOWN
+	db 45
+	dw SUDOWOODO
+	dw COUNTER, SUCKER_PUNCH, ROCK_SLIDE, WOOD_HAMMER
+	db 48
+	dw PROBOPASS
+	dw POWER_GEM, EARTH_POWER, MAGNET_GRIP, DISCHARGE
 	db -1 ; end
 
 	next_list_item ; HIKER (20)
 	db "PARRY@", TRAINERTYPE_NORMAL
+	db 31
+	dw NOSEPASS
 	db 29
-	dw ONIX
+	dw SWINUB
 	db -1 ; end
 
 	next_list_item ; HIKER (21)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
-	db 30
+	db 41
 	dw GRAVELER
-	db 30
-	dw GRAVELER
-	db 32
-	dw MACHOKE
+	db 41
+	dw GOLEM
+	db 43
+	dw MACHAMP
+	db 41
+	dw DUNSPARCE
 	db -1 ; end
 
 	next_list_item ; HIKER (22)
 	db "ANTHONY@", TRAINERTYPE_MOVES
-	db 34
+	db 45
 	dw GRAVELER
-	dw MAGNITUDE, SELFDESTRUCT, DEFENSE_CURL, ROLLOUT
-	db 36
+	dw EARTHQUAKE, EXPLOSION, STEALTH_ROCK, ROCK_BLAST
+	db 47
 	dw GOLEM
-	dw MAGNITUDE, SELFDESTRUCT, DEFENSE_CURL, ROLLOUT
-	db 34
-	dw MACHOKE
-	dw KARATE_CHOP, VITAL_THROW, HEADBUTT, DIG
+	dw EARTHQUAKE, EXPLOSION, STEAMROLLER, ROCK_BLAST
+	db 47
+	dw MACHAMP
+	dw WAKE_UP_SLAP, DUAL_CHOP, REVENGE, BULK_UP
+	db 45
+	dw DUNSPARCE
+	dw ROOST, TAKE_DOWN, GLARE, DRILL_RUN
 	db -1 ; end
 
 	end_list_items
@@ -3688,82 +3697,74 @@ HikerGroup:
 BikerGroup:
 	next_list_item ; BIKER (1)
 	db "BENNY@", TRAINERTYPE_NORMAL
-	db 20
-	dw KOFFING
-	db 20
-	dw KOFFING
-	db 20
-	dw KOFFING
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BIKER (2)
 	db "KAZU@", TRAINERTYPE_NORMAL
-	db 20
-	dw KOFFING
-	db 20
-	dw KOFFING
-	db 20
-	dw KOFFING
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BIKER (3)
 	db "DWAYNE@", TRAINERTYPE_NORMAL
-	db 27
+	db 37
 	dw KOFFING
-	db 28
+	db 38
 	dw KOFFING
-	db 29
+	db 39
 	dw KOFFING
-	db 30
+	db 40
 	dw KOFFING
 	db -1 ; end
 
 	next_list_item ; BIKER (4)
 	db "HARRIS@", TRAINERTYPE_NORMAL
-	db 34
-	dw FLAREON
+	db 44
+	dw TYPHLOSION
 	db -1 ; end
 
 	next_list_item ; BIKER (5)
 	db "ZEKE@", TRAINERTYPE_NORMAL
-	db 32
-	dw KOFFING
-	db 32
-	dw KOFFING
+	db 42
+	dw WHIRLIPEDE
+	db 42
+	dw WHIRLIPEDE
 	db -1 ; end
 
 	next_list_item ; BIKER (6)
 	db "CHARLES@", TRAINERTYPE_NORMAL
-	db 30
+	db 42
 	dw KOFFING
-	db 30
-	dw COMBUSKEN
-	db 30
-	dw WEEZING_G
+	db 41
+	dw CHARMELEON
+	db 41
+	dw QUILAVA
 	db -1 ; end
 
 	next_list_item ; BIKER (7)
 	db "RILEY@", TRAINERTYPE_NORMAL
-	db 34
-	dw WEEZING_G
+	db 44
+	dw SCRAFTY
 	db -1 ; end
 
 	next_list_item ; BIKER (8)
 	db "JOEL@", TRAINERTYPE_NORMAL
-	db 32
-	dw DURANT
-	db 32
+	db 42
+	dw HEATMOR
+	db 42
 	dw HEATMOR
 	db -1 ; end
 
 	next_list_item ; BIKER (9)
 	db "GLENN@", TRAINERTYPE_NORMAL
-	db 28
+	db 38
 	dw KOFFING
-	db 30
-	dw HEATMOR
-	db 32
-	dw WEEZING_G
+	db 40
+	dw WHIRLIPEDE
+	db 42
+	dw SCRAFTY
 	db -1 ; end
 
 	end_list_items
@@ -3793,33 +3794,33 @@ BlaineGroup:
 BurglarGroup:
 	next_list_item ; BURGLAR (1)
 	db "DUNCAN@", TRAINERTYPE_NORMAL
-	db 23
+	db 26
 	dw KOFFING
-	db 25
-	dw QUILAVA
-	db 23
+	db 28
+	dw NICKIT
+	db 26
 	dw KOFFING
 	db -1 ; end
 
 	next_list_item ; BURGLAR (2)
 	db "EDDIE@", TRAINERTYPE_MOVES
-	db 26
-	dw GROWLITHE
-	dw ROAR, EMBER, LEER, TAKE_DOWN
-	db 24
+	db 29
+	dw THIEVUL
+	dw THIEF, SNARL, NASTY_PLOT, HONE_CLAWS
+	db 27
 	dw KOFFING
-	dw TACKLE, SMOG, SLUDGE, SMOKESCREEN
+	dw HAZE, POISON_GAS, SLUDGE, SELFDESTRUCT
 	db -1 ; end
 
 	next_list_item ; BURGLAR (3)
 	db "COREY@", TRAINERTYPE_NORMAL
-	db 25
+	db 35
 	dw KOFFING
-	db 28
-	dw COMBUSKEN
-	db 25
+	db 38
+	dw THIEVUL
+	db 35
 	dw KOFFING
-	db 30
+	db 40
 	dw KOFFING
 	db -1 ; end
 
@@ -3828,36 +3829,32 @@ BurglarGroup:
 FirebreatherGroup:
 	next_list_item ; FIREBREATHER (1)
 	db "OTIS@", TRAINERTYPE_NORMAL
-	db 29
-	dw HEATMOR
-	db 32
+	db 49
+	dw DELPHOX
+	db 52
 	dw WEEZING_G
-	db 29
-	dw HEATMOR
+	db 49
+	dw CAMERUPT
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (2)
 	db "DICK@", TRAINERTYPE_NORMAL
-	db 17
-	dw MONFERNO
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (3)
 	db "NED@", TRAINERTYPE_NORMAL
-	db 15
-	dw KOFFING
-	db 16
-	dw GROWLITHE
-	db 15
-	dw KOFFING
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (4)
 	db "BURT@", TRAINERTYPE_NORMAL
-	db 32
+	db 52
 	dw KOFFING
-	db 32
-	dw SLUGMA
+	db 52
+	dw MAGCARGO
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (5)
@@ -3870,25 +3867,25 @@ FirebreatherGroup:
 
 	next_list_item ; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
-	db 11
-	dw HEATMOR
-	db 13
-	dw HEATMOR
+	db 12
+	dw TORKOAL
+	db 14
+	dw TORKOAL
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (7)
 	db "RAY@", TRAINERTYPE_NORMAL
 	db 9
-	dw LITWICK
+	dw FENNEKIN
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (8)
 	db "LYLE@", TRAINERTYPE_NORMAL
-	db 28
+	db 38
 	dw KOFFING
-	db 31
-	dw FLAREON
-	db 28
+	db 41
+	dw LAMPENT
+	db 38
 	dw KOFFING
 	db -1 ; end
 
@@ -3909,24 +3906,24 @@ JugglerGroup:
 
 	next_list_item ; JUGGLER (2)
 	db "FRITZ@", TRAINERTYPE_NORMAL
-	db 29
+	db 39
 	dw MR__MIME_G
-	db 29
-	dw SLURPUFF
-	db 29
-	dw MACHOKE
+	db 39
+	dw LOMBRE
+	db 39
+	dw INFERNAPE
 	db -1 ; end
 
 	next_list_item ; JUGGLER (3)
 	db "HORTON@", TRAINERTYPE_NORMAL
-	db 33
-	dw PINECO
-	db 33
-	dw PINECO
-	db 33
-	dw PINECO
-	db 33
-	dw FORRETRESS
+	db 43
+	dw ROTOM
+	db 43
+	dw ROTOM
+	db 43
+	dw ROTOM
+	db 43
+	dw ROTOM
 	db -1 ; end
 
 	next_list_item ; JUGGLER (4)
@@ -3970,62 +3967,46 @@ JugglerGroup:
 BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (1)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 27
-	dw ONIX
-	db 30
-	dw MEDICHAM
-	db 27
-	dw ONIX
-	db 32
-	dw MACHOKE
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (2)
 	db "YOSHI@", TRAINERTYPE_MOVES
 	db 27
-	dw MEDICHAM
-	dw DOUBLE_KICK, MEDITATE, JUMP_KICK, FOCUS_ENERGY
+	dw BEWEAR
+	dw BIND, TAKE_DOWN, PAYBACK, BIDE
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (3)
 	db "KENJI@", TRAINERTYPE_MOVES
-	db 33
-	dw ONIX
-	dw BIND, ROCK_THROW, TOXIC, DIG
-	db 38
-	dw MACHAMP
-	dw HEADBUTT, SWAGGER, THUNDERPUNCH, VITAL_THROW
-	db 33
-	dw STEELIX
-	dw EARTHQUAKE, ROCK_THROW, IRON_TAIL, SANDSTORM
-	db 36
-	dw MEDICHAM
-	dw DOUBLE_TEAM, HI_JUMP_KICK, MUD_SLAP, SWIFT
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (4)
 	db "LAO@", TRAINERTYPE_MOVES
 	db 27
-	dw BEWEAR
-	dw COMET_PUNCH, THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH
+	dw BRELOOM
+	dw FORCE_PALM, MACH_PUNCH, STUN_SPORE, HEADBUTT
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (5)
 	db "NOB@", TRAINERTYPE_MOVES
 	db 25
-	dw MACHOP
-	dw LEER, FOCUS_ENERGY, KARATE_CHOP, SEISMIC_TOSS
+	dw TIMBURR
+	dw ROCK_SLIDE, WAKE_UP_SLAP, LOW_KICK, BULK_UP
 	db 25
-	dw MACHOKE
-	dw LEER, KARATE_CHOP, SEISMIC_TOSS, ROCK_SLIDE
+	dw GURDURR
+	dw ROCK_SLIDE, WAKE_UP_SLAP, LOW_KICK, BULK_UP
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (6)
 	db "KIYO@", TRAINERTYPE_NORMAL
-	db 34
-	dw MEDICHAM
-	db 34
-	dw BEWEAR
+	db 37
+	dw LUCARIO
+	db 37
+	dw LUCARIO
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (7)
@@ -4035,50 +4016,56 @@ BlackbeltGroup:
 	db 23
 	dw MANKEY
 	db 25
-	dw PRIMEAPE
+	dw HERACROSS
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 28
-	dw MACHOKE
+	db 35
+	dw CRABOMABLE
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (9)
 	db "WAI@", TRAINERTYPE_NORMAL
-	db 30
+	db 40
 	dw MACHOKE
-	db 32
+	db 42
 	dw MACHOKE
-	db 34
-	dw MACHOKE
+	db 44
+	dw MEDITITE
 	db -1 ; end
 
 	end_list_items
 
 ExecutiveMGroup:
 	next_list_item ; EXECUTIVEM (1)
-	db "EXECUTIVE@", TRAINERTYPE_MOVES
+	db "ARCHER@", TRAINERTYPE_MOVES
 	db 33
-	dw HOUNDOUR
-	dw EMBER, ROAR, BITE, FAINT_ATTACK
+	dw LYCANROC_MN
+	dw ROCK_TOMB, HOWL, BITE, COUNTER
 	db 33
 	dw KOFFING
-	dw TACKLE, SLUDGE, SMOKESCREEN, HAZE
+	dw GYRO_BALL, SLUDGE_BOMB, SMOKESCREEN, HAZE
+	db 34
+	dw GOLBAT
+	dw WING_ATTACK, POISON_FANG, SCREECH, BITE
 	db 35
 	dw HOUNDOOM
-	dw EMBER, SMOG, BITE, FAINT_ATTACK
+	dw FIRE_FANG, THUNDER_FANG, ROAR, FAINT_ATTACK
 	db -1 ; end
 
 	next_list_item ; EXECUTIVEM (2)
-	db "EXECUTIVE@", TRAINERTYPE_MOVES
+	db "PROTON@", TRAINERTYPE_MOVES
+	db 31
+	dw KROKOROK
+	dw POWER_TRIP, DIG, HONE_CLAWS, SAND_TOMB
 	db 36
-	dw GOLBAT
-	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
+	dw MIGHTYENA
+	dw CRUNCH, FIRE_FANG, SWAGGER, ROAR
 	db -1 ; end
 
 	next_list_item ; EXECUTIVEM (3)
-	db "EXECUTIVE@", TRAINERTYPE_MOVES
+	db "PETREL@", TRAINERTYPE_MOVES
 	db 30
 	dw KOFFING
 	dw TACKLE, SELFDESTRUCT, SLUDGE, SMOKESCREEN
@@ -4088,7 +4075,7 @@ ExecutiveMGroup:
 	db 30
 	dw KOFFING
 	dw TACKLE, SELFDESTRUCT, SLUDGE, SMOKESCREEN
-	db 32
+	db 35
 	dw WEEZING_G
 	dw TACKLE, EXPLOSION, SLUDGE, SMOKESCREEN
 	db 30
@@ -4100,12 +4087,12 @@ ExecutiveMGroup:
 	db -1 ; end
 
 	next_list_item ; EXECUTIVEM (4)
-	db "EXECUTIVE@", TRAINERTYPE_NORMAL
-	db 22
-	dw ZUBAT
-	db 24
+	db "PETREL@", TRAINERTYPE_NORMAL
+	db 25
+	dw DEINO
+	db 27
 	dw RATICATE_A
-	db 22
+	db 25
 	dw KOFFING
 	db -1 ; end
 
@@ -4114,47 +4101,53 @@ ExecutiveMGroup:
 PsychicGroup:
 	next_list_item ; PSYCHIC_T (1)
 	db "NATHAN@", TRAINERTYPE_NORMAL
+	db 23
+	dw SOLOSIS
 	db 26
-	dw GIRAFARIG
+	dw CORSOLA_G
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (2)
 	db "FRANKLIN@", TRAINERTYPE_NORMAL
-	db 37
+	db 48
 	dw KADABRA
+	db 45
+	dw SOLROCK
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (3)
 	db "HERMAN@", TRAINERTYPE_NORMAL
-	db 30
-	dw EXEGGCUTE
-	db 30
-	dw EXEGGCUTE
-	db 30
-	dw EXEGGUTOR_A
+	db 42
+	dw MUNNA
+	db 42
+	dw MUNNA
+	db 42
+	dw MUSHARNA
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (4)
 	db "FIDEL@", TRAINERTYPE_NORMAL
-	db 34
+	db 44
 	dw XATU
+	db 42
+	dw MISMAGIUS
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (5)
 	db "GREG@", TRAINERTYPE_MOVES
 	db 17
-	dw DROWZEE
-	dw HYPNOSIS, DISABLE, DREAM_EATER, NO_MOVE
+	dw LUNATONE
+	dw HYPNOSIS, ROCK_POLISH, DREAM_EATER, HARDEN
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (6)
 	db "NORMAN@", TRAINERTYPE_MOVES
-	db 17
-	dw SLOWPOKE
-	dw TACKLE, GROWL, WATER_GUN, NO_MOVE
-	db 20
-	dw SLOWPOKE
-	dw CURSE, BODY_SLAM, WATER_GUN, CONFUSION
+	db 18
+	dw SPOINK
+	dw CONFUSE_RAY, PSYCH_UP, PSYBEAM, ODOR_SLEUTH
+	db 21
+	dw SPOINK
+	dw CONFUSE_RAY, PSYCH_UP, PSYBEAM, ZEN_HEADBUTT
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (7)
@@ -4165,53 +4158,55 @@ PsychicGroup:
 	db 13
 	dw ABRA
 	dw TELEPORT, FLASH, NO_MOVE, NO_MOVE
-	db 15
+	db 16
 	dw KADABRA
 	dw TELEPORT, KINESIS, CONFUSION, NO_MOVE
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (8)
 	db "PHIL@", TRAINERTYPE_MOVES
-	db 24
-	dw NATU
-	dw LEER, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
-	db 26
-	dw KADABRA
-	dw DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
+	db 31
+	dw BRAIXEN
+	dw WILL_O_WISP, PSYSHOCK, LIGHT_SCREEN, FIRE_SPIN
+	db 33
+	dw SWOOBAT
+	dw AIR_CUTTER, PSYCHIC_FANGS, AMNESIA, ATTRACT
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (9)
 	db "RICHARD@", TRAINERTYPE_NORMAL
+	db 35
+	dw RUNERIGUS
 	db 36
-	dw ESPEON
+	dw GALLADE
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (10)
 	db "GILBERT@", TRAINERTYPE_NORMAL
-	db 30
+	db 33
 	dw STARMIE
-	db 30
+	db 33
 	dw EXEGGCUTE
-	db 34
+	db 37
 	dw GIRAFARIG
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (11)
 	db "JARED@", TRAINERTYPE_NORMAL
-	db 32
-	dw MR__MIME_G
-	db 32
-	dw EXEGGCUTE
-	db 35
-	dw EXEGGCUTE
+	db 42
+	dw CLAYDOL
+	db 42
+	dw MEOWSTIC
+	db 45
+	dw MEOWSTIC
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (12)
 	db "RODNEY@", TRAINERTYPE_NORMAL
-	db 29
-	dw DROWZEE
-	db 33
-	dw HYPNO
+	db 39
+	dw ELGYEM
+	db 43
+	dw BEHEEYEM
 	db -1 ; end
 
 	end_list_items
@@ -4225,61 +4220,61 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (2)
 	db "GINA@", TRAINERTYPE_NORMAL
-	db 9
+	db 11
 	dw HOPPIP
-	db 9
+	db 11
 	dw HOPPIP
-	db 12
+	db 14
 	dw ROSELIA
 	db -1 ; end
 
 	next_list_item ; PICNICKER (3)
 	db "BROOKE@", TRAINERTYPE_MOVES
 	db 16
-	dw PIKACHU
-	dw THUNDERSHOCK, GROWL, QUICK_ATTACK, DOUBLE_TEAM
+	dw PACHIRISU
+	dw SPARK, GROWL, QUICK_ATTACK, CHARM
 	db -1 ; end
 
 	next_list_item ; PICNICKER (4)
 	db "KIM@", TRAINERTYPE_NORMAL
-	db 15
+	db 16
 	dw VULPIX_A
 	db -1 ; end
 
 	next_list_item ; PICNICKER (5)
 	db "CINDY@", TRAINERTYPE_NORMAL
-	db 36
+	db 48
 	dw NIDOQUEEN
 	db -1 ; end
 
 	next_list_item ; PICNICKER (6)
 	db "HOPE@", TRAINERTYPE_NORMAL
-	db 34
-	dw PACHIRISU
+	db 44
+	dw DUBWOOL
 	db -1 ; end
 
 	next_list_item ; PICNICKER (7)
 	db "SHARON@", TRAINERTYPE_NORMAL
-	db 31
+	db 48
 	dw FURRET
-	db 33
-	dw RAPIDASH
+	db 50
+	dw FLORGES
 	db -1 ; end
 
 	next_list_item ; PICNICKER (8)
 	db "DEBRA@", TRAINERTYPE_NORMAL
-	db 33
-	dw BASCULIN
+	db 42
+	dw GOREBYSS
 	db -1 ; end
 
 	next_list_item ; PICNICKER (9)
 	db "GINA@", TRAINERTYPE_NORMAL
-	db 14
-	dw HOPPIP
-	db 14
+	db 17
 	dw HOPPIP
 	db 17
-	dw GROVYLE
+	dw HOPPIP
+	db 20
+	dw ROSELIA
 	db -1 ; end
 
 	next_list_item ; PICNICKER (10)
@@ -4287,152 +4282,176 @@ PicnickerGroup:
 	db 16
 	dw PONYTA
 	db 16
-	dw PONYTA
+	dw FLABEBE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (11)
 	db "LIZ@", TRAINERTYPE_NORMAL
-	db 15
-	dw WEEPINBELL
-	db 15
+	db 17
+	dw RALTS
+	db 17
 	dw NIDORINA
 	db -1 ; end
 
 	next_list_item ; PICNICKER (12)
 	db "LIZ@", TRAINERTYPE_NORMAL
-	db 19
-	dw WEEPINBELL
-	db 19
-	dw NIDORINO
 	db 21
+	dw KIRLIA
+	db 21
+	dw NIDORINO
+	db 23
 	dw NIDOQUEEN
 	db -1 ; end
 
 	next_list_item ; PICNICKER (13)
 	db "HEIDI@", TRAINERTYPE_NORMAL
-	db 32
-	dw SKIPLOOM
-	db 32
-	dw SKIPLOOM
+	db 44
+	dw MILCERY
+	db 42
+	dw ALCREMIE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (14)
 	db "EDNA@", TRAINERTYPE_NORMAL
-	db 30
-	dw NIDORINA
-	db 34
+	db 41
+	dw MEOWSTIC
+	db 45
 	dw RAICHU_A
 	db -1 ; end
 
 	next_list_item ; PICNICKER (15)
 	db "GINA@", TRAINERTYPE_NORMAL
-	db 26
-	dw SKIPLOOM
-	db 26
-	dw SKIPLOOM
-	db 29
-	dw GROVYLE
+	db 28
+	dw JUMPLUFF
+	db 28
+	dw JUMPLUFF
+	db 31
+	dw ROSELIA
 	db -1 ; end
 
 	next_list_item ; PICNICKER (16)
 	db "TIFFANY@", TRAINERTYPE_MOVES
+	db 32
+	dw RIBOMBEE
+	dw DRAINING_KISS, STUN_SPORE, STRUGGLE_BUG, POLLEN_PUFF
 	db 31
+	dw SINISTEA
+	dw SUCKER_PUNCH, PROTECT, GIGA_DRAIN, AROMATHERAPY
+	db 33
 	dw CLEFAIRY
-	dw ENCORE, SING, DOUBLESLAP, MINIMIZE
+	dw WAKE_UP_SLAP, LUCKY_CHANT, METRONOME, DISARMING_VOICE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (17)
 	db "TIFFANY@", TRAINERTYPE_MOVES
+	db 38
+	dw RIBOMBEE
+	dw DRAINING_KISS, STUN_SPORE, STRUGGLE_BUG, POLLEN_PUFF
 	db 37
-	dw CLEFAIRY
-	dw ENCORE, DOUBLESLAP, MINIMIZE, METRONOME
+	dw POLTEAGYST
+	dw SUCKER_PUNCH, STRENGTH_SAP, GIGA_DRAIN, NASTY_PLOT
+	db 38
+	dw CLEFABLE
+	dw WAKE_UP_SLAP, BODY_SLAM, METRONOME, DISARMING_VOICE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (18)
 	db "ERIN@", TRAINERTYPE_NORMAL
-	db 32
-	dw PONYTA
-	db 32
-	dw PONYTA
+	db 42
+	dw RAPIDASH
+	db 42
+	dw FLOETTE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (19)
 	db "TANYA@", TRAINERTYPE_NORMAL
-	db 37
+	db 49
 	dw EXEGGUTOR_A
 	db -1 ; end
 
 	next_list_item ; PICNICKER (20)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 20
+	db 23
+	dw CUTIEFLY
+	dw DRAINING_KISS, STUN_SPORE, STRUGGLE_BUG, SILVER_WIND
+	db 23
+	dw SINISTEA
+	dw SUCKER_PUNCH, PROTECT, MEGA_DRAIN, WITHDRAW
+	db 25
 	dw CLEFAIRY
-	dw ENCORE, SING, DOUBLESLAP, MINIMIZE
+	dw WAKE_UP_SLAP, MINIMIZE, STORED_POWER, DISARMING_VOICE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (21)
 	db "ERIN@", TRAINERTYPE_MOVES
-	db 36
-	dw PONYTA
-	dw DOUBLE_TEAM, STOMP, FIRE_SPIN, SUNNY_DAY
-	db 34
+	db 48
+	dw FLORGES
+	dw MOONBLAST, MISTY_TERRAIN, MAGICAL_LEAF, WISH
+	db 46
 	dw RAICHU_A
-	dw SWIFT, MUD_SLAP, QUICK_ATTACK, THUNDERBOLT
-	db 36
-	dw PONYTA
-	dw DOUBLE_TEAM, STOMP, FIRE_SPIN, SUNNY_DAY
+	dw NUZZLE, NASTY_PLOT, PSYCHIC_M, THUNDERBOLT
+	db 50
+	dw RAPIDASH
+	dw SOLARBEAM, BOUNCE, FIRE_BLAST, SUNNY_DAY
 	db -1 ; end
 
 	next_list_item ; PICNICKER (22)
 	db "LIZ@", TRAINERTYPE_NORMAL
-	db 24
-	dw WEEPINBELL
-	db 26
+	db 42
+	dw GARDEVOIR
+	db 44
 	dw NIDORINO
-	db 26
+	db 44
 	dw NIDOQUEEN
 	db -1 ; end
 
 	next_list_item ; PICNICKER (23)
 	db "LIZ@", TRAINERTYPE_MOVES
-	db 30
-	dw WEEPINBELL
-	dw SLEEP_POWDER, POISONPOWDER, STUN_SPORE, SLUDGE_BOMB
-	db 32
+	db 46
+	dw GARDEVOIR
+	dw HYPNOSIS, DREAM_EATER, CALM_MIND, DAZZLING_GLEAM
+	db 48
 	dw NIDOKING
-	dw EARTHQUAKE, DOUBLE_KICK, POISON_STING, IRON_TAIL
-	db 32
+	dw EARTHQUAKE, MEGAHORN, POISON_JAB, IRON_TAIL
+	db 48
 	dw NIDOQUEEN
-	dw EARTHQUAKE, DOUBLE_KICK, TAIL_WHIP, BODY_SLAM
+	dw EARTHQUAKE, SUPERPOWER, CRUNCH, CHIP_AWAY
 	db -1 ; end
 
 	next_list_item ; PICNICKER (24)
 	db "GINA@", TRAINERTYPE_NORMAL
-	db 30
-	dw SKIPLOOM
-	db 30
-	dw SKIPLOOM
-	db 32
-	dw GROVYLE
+	db 40
+	dw JUMPLUFF
+	db 40
+	dw JUMPLUFF
+	db 42
+	dw ROSERADE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (25)
 	db "GINA@", TRAINERTYPE_MOVES
-	db 33
+	db 43
 	dw JUMPLUFF
-	dw STUN_SPORE, SUNNY_DAY, LEECH_SEED, COTTON_SPORE
-	db 33
+	dw STUN_SPORE, SUNNY_DAY, LEECH_SEED, ACROBATICS
+	db 43
 	dw JUMPLUFF
-	dw SUNNY_DAY, SLEEP_POWDER, LEECH_SEED, COTTON_SPORE
-	db 38
-	dw SCEPTILE
-	dw SOLARBEAM, RAZOR_LEAF, HEADBUTT, MUD_SLAP
+	dw SUNNY_DAY, SLEEP_POWDER, LEECH_SEED, ENERGY_BALL
+	db 48
+	dw ROSERADE
+	dw SOLARBEAM, INGRAIN, TOXIC, SYNTHESIS
 	db -1 ; end
 
 	next_list_item ; PICNICKER (26)
 	db "TIFFANY@", TRAINERTYPE_MOVES
 	db 43
-	dw CLEFAIRY
-	dw METRONOME, ENCORE, MOONLIGHT, MINIMIZE
+	dw RIBOMBEE
+	dw DAZZLING_GLEAM, STUN_SPORE, STRUGGLE_BUG, POLLEN_PUFF
+	db 43
+	dw POLTEAGYST
+	dw SHADOW_BALL, STRENGTH_SAP, GIGA_DRAIN, NASTY_PLOT
+	db 45
+	dw CLEFABLE
+	dw METEOR_MASH, BODY_SLAM, MOONLIGHT, DISARMING_VOICE
 	db -1 ; end
 
 	end_list_items
@@ -4448,193 +4467,173 @@ CamperGroup:
 	db "TODD@", TRAINERTYPE_NORMAL
 	db 14
 	dw PSYDUCK
+	db 16
+	dw TYKER
 	db -1 ; end
 
 	next_list_item ; CAMPER (3)
 	db "IVAN@", TRAINERTYPE_NORMAL
-	db 10
+	db 12
 	dw ROCKRUFF
-	db 10
-	dw ZUBAT
-	db 14
+	db 12
+	dw LOTAD
+	db 16
 	dw ROCKRUFF
 	db -1 ; end
 
 	next_list_item ; CAMPER (4)
 	db "ELLIOT@", TRAINERTYPE_NORMAL
 	db 13
-	dw SANDSHREW_A
+	dw WOOLOO
 	db 15
 	dw MARILL
 	db -1 ; end
 
 	next_list_item ; CAMPER (5)
 	db "BARRY@", TRAINERTYPE_NORMAL
-	db 36
+	db 48
 	dw NIDOKING
 	db -1 ; end
 
 	next_list_item ; CAMPER (6)
 	db "LLOYD@", TRAINERTYPE_NORMAL
-	db 34
-	dw NIDOKING
+	db 45
+	dw COALOSSAL
 	db -1 ; end
 
 	next_list_item ; CAMPER (7)
 	db "DEAN@", TRAINERTYPE_NORMAL
-	db 33
+	db 44
 	dw GOLDUCK
-	db 31
-	dw SANDSLASH_A
+	db 42
+	dw SCIZOR
 	db -1 ; end
 
 	next_list_item ; CAMPER (8)
 	db "SID@", TRAINERTYPE_NORMAL
-	db 32
-	dw GABITE
-	db 29
+	db 43
+	dw VIBRAVA
+	db 40
 	dw PRIMEAPE
-	db 29
-	dw CRABOMABLE
+	db 40
+	dw GRAPPLOCT
 	db -1 ; end
 
 	next_list_item ; CAMPER (9)
 	db "HARVEY@", TRAINERTYPE_NORMAL
-	db 15
-	dw NIDORINO
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (10)
 	db "DALE@", TRAINERTYPE_NORMAL
-	db 15
-	dw NIDORINO
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (11)
 	db "TED@", TRAINERTYPE_NORMAL
+	db 15
+	dw CACNEA
 	db 17
-	dw MANKEY
+	dw PANCHAM
 	db -1 ; end
 
 	next_list_item ; CAMPER (12)
 	db "TODD@", TRAINERTYPE_NORMAL
-	db 17
-	dw GEODUDE
-	db 17
-	dw GEODUDE
-	db 23
+	db 21
+	dw ROGGENROLA
+	db 21
+	dw ROGGENROLA
+	db 27
 	dw PSYDUCK
 	db -1 ; end
 
 	next_list_item ; CAMPER (13)
 	db "TODD@", TRAINERTYPE_NORMAL
-	db 23
-	dw GEODUDE
-	db 23
-	dw GEODUDE
-	db 26
-	dw PSYDUCK
+	db 33
+	dw BOLDORE
+	db 33
+	dw BOLDORE
+	db 36
+	dw GOLDUCK
 	db -1 ; end
 
 	next_list_item ; CAMPER (14)
 	db "THOMAS@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (15)
 	db "LEROY@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (16)
 	db "DAVID@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (17)
 	db "JOHN@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (18)
 	db "JERRY@", TRAINERTYPE_NORMAL
-	db 37
-	dw SANDSLASH_A
+	db 48
+	dw LYCANROC_MD
 	db -1 ; end
 
 	next_list_item ; CAMPER (19)
 	db "SPENCER@", TRAINERTYPE_NORMAL
-	db 17
-	dw SANDSHREW_A
-	db 17
-	dw SANDSLASH_A
 	db 19
-	dw ZUBAT
+	dw ELECTRIKE
+	db 19
+	dw ELECTRIKE
+	db 21
+	dw AXEW
 	db -1 ; end
 
 	next_list_item ; CAMPER (20)
 	db "TODD@", TRAINERTYPE_NORMAL
-	db 30
-	dw GRAVELER
-	db 30
-	dw GRAVELER
-	db 30
+	db 40
+	dw BOLDORE
+	db 40
+	dw BOLDORE
+	db 40
 	dw SLUGMA
-	db 32
-	dw PSYDUCK
+	db 42
+	dw GOLDUCK
 	db -1 ; end
 
 	next_list_item ; CAMPER (21)
 	db "TODD@", TRAINERTYPE_MOVES
-	db 33
-	dw GRAVELER
-	dw SELFDESTRUCT, ROCK_THROW, HARDEN, MAGNITUDE
-	db 33
-	dw GRAVELER
-	dw SELFDESTRUCT, ROCK_THROW, HARDEN, MAGNITUDE
-	db 36
+	db 44
+	dw GIGALITH
+	dw HEADBUTT, ROCK_SLIDE, IRON_DEFENSE, STEALTH_ROCK
+	db 44
+	dw GIGALITH
+	dw HEADBUTT, ROCK_BLAST, MUD_SLAP, SANDSTORM
+	db 47
 	dw MAGCARGO
-	dw ROCK_THROW, HARDEN, AMNESIA, FLAMETHROWER
-	db 34
+	dw ANCIENTPOWER, CLEAR_SMOG, SHELL_SMASH, LAVA_PLUME
+	db 45
 	dw GOLDUCK
-	dw DISABLE, PSYCHIC_M, SURF, PSYCH_UP
+	dw DISABLE, ZEN_HEADBUTT, AQUA_TAIL, PSYCH_UP
 	db -1 ; end
 
 	next_list_item ; CAMPER (22)
 	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 30
-	dw ALTARIA
-	db 30
-	dw PRIMEAPE
-	db 30
+	db 32
+	dw SWANDAME
+	db 32
+	dw MONFERNO
+	db 32
 	dw TAUROS
 	db -1 ; end
 
@@ -4642,29 +4641,29 @@ CamperGroup:
 
 ExecutiveFGroup:
 	next_list_item ; EXECUTIVEF (1)
-	db "EXECUTIVE@", TRAINERTYPE_MOVES
+	db "ARIANA@", TRAINERTYPE_MOVES
 	db 32
 	dw SEVIPER
-	dw WRAP, POISON_STING, BITE, GLARE
+	dw SCREECH, POISON_FANG, NIGHT_SLASH, GLARE
 	db 32
 	dw VILEPLUME
-	dw ABSORB, SWEET_SCENT, SLEEP_POWDER, ACID
+	dw GIGA_DRAIN, SWEET_SCENT, SLEEP_POWDER, ACID
 	db 32
 	dw HONCHKROW
-	dw PECK, PURSUIT, HAZE, NIGHT_SHADE
+	dw WING_ATTACK, FAINT_ATTACK, HAZE, MEAN_LOOK
 	db -1 ; end
 
 	next_list_item ; EXECUTIVEF (2)
-	db "EXECUTIVE@", TRAINERTYPE_MOVES
-	db 23
+	db "ARIANA@", TRAINERTYPE_MOVES
+	db 26
 	dw SEVIPER
-	dw WRAP, LEER, POISON_STING, BITE
-	db 23
+	dw SCREECH, POISON_FANG, BITE, GLARE
+	db 26
 	dw GLOOM
-	dw ABSORB, SWEET_SCENT, SLEEP_POWDER, ACID
-	db 25
+	dw GIGA_DRAIN, SWEET_SCENT, SLEEP_POWDER, ACID
+	db 28
 	dw MURKROW
-	dw PECK, PURSUIT, HAZE, NO_MOVE
+	dw WING_ATTACK, FAINT_ATTACK, HAZE, MEAN_LOOK
 	db -1 ; end
 
 	end_list_items
@@ -4682,8 +4681,6 @@ SageGroup:
 
 	next_list_item ; SAGE (2)
 	db "NICO@", TRAINERTYPE_NORMAL
-	db 3
-	dw BELLSPROUT
 	db 3
 	dw BELLSPROUT
 	db 3
@@ -4707,7 +4704,7 @@ SageGroup:
 	next_list_item ; SAGE (5)
 	db "JEFFREY@", TRAINERTYPE_NORMAL
 	db 22
-	dw HAUNTER
+	dw GOLETT
 	db -1 ; end
 
 	next_list_item ; SAGE (6)
@@ -4755,7 +4752,7 @@ SageGroup:
 	db 32
 	dw NOCTOWL
 	db 32
-	dw FLAREON
+	dw GLACEON
 	db -1 ; end
 
 	next_list_item ; SAGE (11)
@@ -4763,7 +4760,7 @@ SageGroup:
 	db 32
 	dw NOCTOWL
 	db 32
-	dw JOLTEON
+	dw LEAFEON
 	db -1 ; end
 
 	next_list_item ; SAGE (12)
@@ -4771,7 +4768,7 @@ SageGroup:
 	db 32
 	dw NOCTOWL
 	db 32
-	dw VAPOREON
+	dw SYLVEON
 	db -1 ; end
 
 	end_list_items
@@ -4780,52 +4777,52 @@ MediumGroup:
 	next_list_item ; MEDIUM (1)
 	db "MARTHA@", TRAINERTYPE_NORMAL
 	db 18
-	dw GASTLY
+	dw YAMASK_G
 	db 20
-	dw HAUNTER
+	dw SABLEYE
 	db 20
-	dw GASTLY
+	dw YAMASK_G
 	db -1 ; end
 
 	next_list_item ; MEDIUM (2)
 	db "GRACE@", TRAINERTYPE_NORMAL
 	db 20
-	dw HAUNTER
+	dw DUSKULL
 	db 20
-	dw HAUNTER
+	dw DUSKULL
 	db -1 ; end
 
 	next_list_item ; MEDIUM (3)
 	db "BETHANY@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; MEDIUM (4)
 	db "MARGRET@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; MEDIUM (5)
 	db "ETHEL@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; MEDIUM (6)
 	db "REBECCA@", TRAINERTYPE_NORMAL
-	db 35
-	dw DROWZEE
-	db 35
+	db 45
 	dw HYPNO
+	db 45
+	dw BRONZONG
 	db -1 ; end
 
 	next_list_item ; MEDIUM (7)
 	db "DORIS@", TRAINERTYPE_NORMAL
-	db 34
-	dw SLOWPOKE
-	db 36
+	db 44
+	dw CHIMECHO
+	db 46
 	dw SLOWBRO
 	db -1 ; end
 
@@ -4835,11 +4832,13 @@ BoarderGroup:
 	next_list_item ; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
 	db 24
-	dw SEEL
+	dw SNOVER
 	db 25
-	dw DEWGONG
+	dw SNORUNT
 	db 24
-	dw SEEL
+	dw WOLFROST
+	db 25
+	dw SNORUNT
 	db -1 ; end
 
 	next_list_item ; BOARDER (2)
@@ -4853,11 +4852,11 @@ BoarderGroup:
 	next_list_item ; BOARDER (3)
 	db "DOUGLAS@", TRAINERTYPE_NORMAL
 	db 24
-	dw SHELLDER
+	dw SANDSHREW_A
 	db 25
-	dw CLOYSTER
+	dw SANDSLASH_A
 	db 24
-	dw SHELLDER
+	dw SANDSHREW_A
 	db -1 ; end
 
 	end_list_items
@@ -4866,130 +4865,141 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (1)
 	db "WILLIAM@", TRAINERTYPE_ITEM
 	db 14
-	dw DELCATTY
+	dw DEDENNE
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (2)
-	db "DEREK@", TRAINERTYPE_ITEM
-	db 17
-	dw PIKACHU
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (3)
-	db "ROBERT@", TRAINERTYPE_ITEM
-	db 33
-	dw QUAGSIRE
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (4)
-	db "JOSHUA@", TRAINERTYPE_ITEM
-	db 23
-	dw PIKACHU
-	db BERRY
-	db 23
-	dw PIKACHU
-	db BERRY
-	db 23
-	dw PIKACHU
-	db BERRY
-	db 23
-	dw PIKACHU
-	db BERRY
-	db 23
-	dw PIKACHU
-	db BERRY
-	db 23
-	dw PIKACHU
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (5)
-	db "CARTER@", TRAINERTYPE_ITEM
-	db 29
-	dw BULBASAUR
-	db BERRY
-	db 29
-	dw CHARMANDER
-	db BERRY
-	db 29
-	dw SQUIRTLE
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (6)
-	db "TREVOR@", TRAINERTYPE_ITEM
-	db 33
-	dw PSYDUCK
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (7)
-	db "BRANDON@", TRAINERTYPE_ITEM
-	db 13
-	dw SNUBBULL
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (8)
-	db "JEREMY@", TRAINERTYPE_ITEM
-	db 28
-	dw MEOWTH_G
-	db BERRY
-	db 28
-	dw MEOWTH_G
-	db BERRY
-	db 28
-	dw MEOWTH_G
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (9)
-	db "COLIN@", TRAINERTYPE_ITEM
-	db 32
-	dw DARUMAKA_G
-	db BERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANM (10)
 	db "DEREK@", TRAINERTYPE_ITEM
 	db 19
 	dw PIKACHU
 	db BERRY
 	db -1 ; end
 
-	next_list_item ; POKEFANM (11)
-	db "DEREK@", TRAINERTYPE_ITEM
-	db 36
+	next_list_item ; POKEFANM (3)
+	db "ROBERT@", TRAINERTYPE_ITEM
+	db 43
+	dw STOUTLAND
+	db BERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANM (4)
+	db "JOSHUA@", TRAINERTYPE_ITEM
+	db 32
+	dw PIKACHU
+	db BERRY
+	db 32
+	dw PIKACHU
+	db BERRY
+	db 32
+	dw PIKACHU
+	db BERRY
+	db 32
+	dw PIKACHU
+	db BERRY
+	db 32
+	dw PIKACHU
+	db BERRY
+	db 32
 	dw PIKACHU
 	db BERRY
 	db -1 ; end
 
+	next_list_item ; POKEFANM (5)
+	db "CARTER@", TRAINERTYPE_ITEM
+	db 39
+	dw BULBASAUR
+	db BERRY
+	db 39
+	dw CHARMANDER
+	db BERRY
+	db 39
+	dw SQUIRTLE
+	db BERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANM (6)
+	db "TREVOR@", TRAINERTYPE_ITEM_MOVES
+	db 43
+	dw SMEARGLE
+	db BERRY
+	dw SPORE, SPIKES, WHIRLWIND, SKETCH
+	db -1 ; end
+
+	next_list_item ; POKEFANM (7)
+	db "BRANDON@", TRAINERTYPE_ITEM
+	db 15
+	dw LILLIPUP
+	db BERRY
+	db 15
+	dw MAREEP
+	db BERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANM (8)
+	db "JEREMY@", TRAINERTYPE_ITEM
+	db 38
+	dw MEOWSY
+	db BERRY
+	db 38
+	dw MOIBELLE
+	db BERRY
+	db 38
+	dw SKITTY
+	db BERRY
+	db 38
+	dw GLAMEOW
+	db BERRY
+	db 38
+	dw PURRLOIN
+	db BERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANM (9)
+	db "COLIN@", TRAINERTYPE_ITEM
+	db 42
+	dw ABOMASNOW
+	db BERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANM (10)
+	db "DEREK@", TRAINERTYPE_NORMAL
+	db 1
+	dw MEW
+	db -1 ; end
+
+	next_list_item ; POKEFANM (11)
+	db "DEREK@", TRAINERTYPE_NORMAL
+	db 1
+	dw MEW
+	db -1 ; end
+
 	next_list_item ; POKEFANM (12)
 	db "ALEX@", TRAINERTYPE_ITEM
-	db 29
+	db 39
+	dw KINGLER
+	db BERRY
+	db 39
 	dw NIDOKING
 	db BERRY
-	db 29
+	db 39
 	dw SLOWKING
 	db BERRY
-	db 29
-	dw BASCULIN
+	db 39
+	dw KINGDRA
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (13)
 	db "REX@", TRAINERTYPE_ITEM
-	db 35
+	db 45
 	dw PHANPY
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (14)
 	db "ALLAN@", TRAINERTYPE_ITEM
-	db 35
+	db 45
 	dw TEDDIURSA
 	db BERRY
 	db -1 ; end
@@ -4999,47 +5009,43 @@ PokefanMGroup:
 KimonoGirlGroup:
 	next_list_item ; KIMONO_GIRL (1)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 20
-	dw SKIPLOOM
-	db 20
-	dw VULPIX_A
-	db 18
-	dw SKIPLOOM
+	db 1
+	dw MEW
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_MOVES
-	db 17
+	db 20
 	dw FLAREON
-	dw BABY_DOLL_EYES, QUICK_ATTACK, EMBER, TAIL_WHIP
+	dw SMOG, QUICK_ATTACK, EMBER, TAIL_WHIP
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_MOVES
-	db 17
+	db 20
 	dw ESPEON
-	dw SAND_ATTACK, QUICK_ATTACK, CONFUSION, GROWL
+	dw SAND_ATTACK, QUICK_ATTACK, CONFUSION, SWIFT
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_MOVES
-	db 17
+	db 20
 	dw UMBREON
-	dw BABY_DOLL_EYES, QUICK_ATTACK, PURSUIT, TAIL_WHIP
+	dw CONFUSE_RAY, QUICK_ATTACK, PURSUIT, TAIL_WHIP
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_MOVES
-	db 17
+	db 20
 	dw VAPOREON
-	dw BABY_DOLL_EYES, QUICK_ATTACK, WATER_GUN, TAIL_WHIP
+	dw BABY_DOLL_EYES, QUICK_ATTACK, WATER_GUN, HAZE
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_MOVES
-	db 17
+	db 20
 	dw JOLTEON
-	dw SAND_ATTACK, QUICK_ATTACK, THUNDERSHOCK, GROWL
+	dw THUNDER_WAVE, QUICK_ATTACK, THUNDERSHOCK, GROWL
 	db -1 ; end
 
 	end_list_items
@@ -5057,20 +5063,20 @@ TwinsGroup:
 	db "ANN & ANNE@", TRAINERTYPE_MOVES
 	db 16
 	dw CLEFAIRY
-	dw GROWL, ENCORE, DOUBLESLAP, METRONOME
+	dw STORED_POWER, DEFENSE_CURL, DOUBLESLAP, DISARMING_VOICE
 	db 16
 	dw JIGGLYPUFF
-	dw SING, DEFENSE_CURL, POUND, DISABLE
+	dw SING, PLAY_NICE, ECHOED_VOICE, DISABLE
 	db -1 ; end
 
 	next_list_item ; TWINS (3)
 	db "ANN & ANNE@", TRAINERTYPE_MOVES
 	db 16
 	dw JIGGLYPUFF
-	dw SING, DEFENSE_CURL, POUND, DISABLE
+	dw SING, PLAY_NICE, ECHOED_VOICE, DISABLE
 	db 16
 	dw CLEFAIRY
-	dw GROWL, ENCORE, DOUBLESLAP, METRONOME
+	dw STORED_POWER, DEFENSE_CURL, DOUBLESLAP, DISARMING_VOICE
 	db -1 ; end
 
 	next_list_item ; TWINS (4)
@@ -5083,54 +5089,54 @@ TwinsGroup:
 
 	next_list_item ; TWINS (5)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
-	db 35
-	dw VICTREEBEL
-	db 35
-	dw VILEPLUME
+	db 47
+	dw WHIMSICOTT
+	db 47
+	dw LILLIGANT
 	db -1 ; end
 
 	next_list_item ; TWINS (6)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
-	db 35
-	dw VILEPLUME
-	db 35
-	dw VICTREEBEL
+	db 47
+	dw LILLIGANT
+	db 47
+	dw WHIMSICOTT
 	db -1 ; end
 
 	next_list_item ; TWINS (7)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL
-	db 31
-	dw TEDDIURSA
-	db 31
-	dw PHANPY
+	db 45
+	dw MIME_JR
+	db 45
+	dw BONSLY
 	db -1 ; end
 
 	next_list_item ; TWINS (8)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL
-	db 31
-	dw PHANPY
-	db 31
-	dw TEDDIURSA
+	db 45
+	dw BONSLY
+	db 45
+	dw MIME_JR
 	db -1 ; end
 
 	next_list_item ; TWINS (9)
 	db "LEA & PIA@", TRAINERTYPE_MOVES
 	db 35
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, FLAMETHROWER, HEADBUTT
+	dw APPLETUN
+	dw RECOVER, CURSE, BULLET_SEED, BODY_SLAM
 	db 35
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, ICE_BEAM, HEADBUTT
+	dw FLAPPLE
+	dw WING_ATTACK, DRAGON_DANCE, LEECH_SEED, ACID_SPRAY
 	db -1 ; end
 
 	next_list_item ; TWINS (10)
 	db "LEA & PIA@", TRAINERTYPE_MOVES
-	db 38
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, ICE_BEAM, HEADBUTT
-	db 38
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, FLAMETHROWER, HEADBUTT
+	db 35
+	dw FLAPPLE
+	dw WING_ATTACK, DRAGON_DANCE, LEECH_SEED, ACID_SPRAY
+	db 35
+	dw APPLETUN
+	dw RECOVER, CURSE, BULLET_SEED, BODY_SLAM
 	db -1 ; end
 
 	end_list_items
@@ -5138,21 +5144,21 @@ TwinsGroup:
 PokefanFGroup:
 	next_list_item ; POKEFANF (1)
 	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 14
+	db 16
 	dw SNUBBULL
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANF (2)
 	db "RUTH@", TRAINERTYPE_ITEM
-	db 17
+	db 19
 	dw PIKACHU
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANF (3)
 	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 18
+	db 20
 	dw SNUBBULL
 	db BERRY
 	db -1 ; end
@@ -5166,26 +5172,26 @@ PokefanFGroup:
 
 	next_list_item ; POKEFANF (5)
 	db "GEORGIA@", TRAINERTYPE_ITEM
-	db 23
+	db 31
 	dw SENTRET
 	db BERRY
-	db 23
+	db 31
 	dw SENTRET
 	db BERRY
-	db 23
+	db 31
 	dw SENTRET
 	db BERRY
-	db 28
+	db 36
 	dw FURRET
 	db BERRY
-	db 23
+	db 31
 	dw SENTRET
 	db BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANF (6)
 	db "JAIME@", TRAINERTYPE_ITEM
-	db 16
+	db 20
 	dw MEOWTH_G
 	db BERRY
 	db -1 ; end
@@ -5246,7 +5252,7 @@ OfficerGroup:
 	next_list_item ; OFFICER (1)
 	db "KEITH@", TRAINERTYPE_NORMAL
 	db 17
-	dw GROWLITHE
+	dw HERDIER
 	db -1 ; end
 
 	next_list_item ; OFFICER (2)
@@ -5263,45 +5269,45 @@ GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 9
-	dw ZUBAT
+	dw GLAMEOW
 	db 11
 	dw SCRAGGY
 	db -1 ; end
 
 	next_list_item ; GRUNTF (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 28
 	dw SEVIPER
 	db -1 ; end
 
 	next_list_item ; GRUNTF (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
+	db 27
 	dw GLOOM
-	db 25
+	db 27
 	dw GLOOM
 	db -1 ; end
 
 	next_list_item ; GRUNTF (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 21
-	dw SCRAGGY
-	db 23
-	dw ODDISH
-	db 21
-	dw SCRAGGY
 	db 24
+	dw PURRLOIN
+	db 26
+	dw ODDISH
+	db 24
+	dw PURRLOIN
+	db 27
 	dw GLOOM
 	db -1 ; end
 
 	next_list_item ; GRUNTF (5)
 	db "GRUNT@", TRAINERTYPE_MOVES
 	db 18
-	dw SCRAGGY
-	dw FACADE, PAYBACK, SAND_ATTACK, LOW_KICK
+	dw MAREANIE
+	dw VENOSHOCK, TOXIC_SPIKES, BITE, POISON_STING
 	db 18
-	dw GLOOM
-	dw ABSORB, SWEET_SCENT, STUN_SPORE, SLEEP_POWDER
+	dw SNEASEL
+	dw LEER, FAINT_ATTACK, METAL_CLAW, QUICK_ATTACK
 	db -1 ; end
 
 	end_list_items
@@ -5309,15 +5315,15 @@ GruntFGroup:
 MysticalmanGroup:
 	next_list_item ; MYSTICALMAN (1)
 	db "EUSINE@", TRAINERTYPE_MOVES
-	db 23
-	dw DROWZEE
-	dw DREAM_EATER, HYPNOSIS, DISABLE, CONFUSION
-	db 23
-	dw HAUNTER
-	dw LICK, HYPNOSIS, MEAN_LOOK, CURSE
 	db 25
-	dw GALVANTULA
-	dw SCREECH, SONICBOOM, THUNDER, ROLLOUT
+	dw DROWZEE
+	dw DREAM_EATER, HYPNOSIS, DISABLE, PSYBEAM
+	db 25
+	dw HAUNTER
+	dw HEX, HYPNOSIS, MEAN_LOOK, CURSE
+	db 27
+	dw HELIOLISK
+	dw EERIE_IMPULSE, CHARGE, VOLT_SWITCH, BULLDOZE
 	db -1 ; end
 
 	end_list_items

@@ -1631,7 +1631,7 @@ JohtoGrassWildMons:
 	dbw 44, RAPIDASH
 	dbw 41, SWABLU
 	dbw 43, ALTARIA
-	dbw 43, ALTARIA
+	dbw 43, LARVESTA
 	; day
 	dbw 41, TANGELA
 	dbw 42, PONYTA
@@ -1639,7 +1639,7 @@ JohtoGrassWildMons:
 	dbw 44, RAPIDASH
 	dbw 41, SWABLU
 	dbw 43, ALTARIA
-	dbw 43, ALTARIA
+	dbw 43, LARVESTA
 	; nite
 	dbw 41, TANGELA
 	dbw 42, FLOATZEL
@@ -1647,6 +1647,6 @@ JohtoGrassWildMons:
 	dbw 44, FLOATZEL
 	dbw 40, GOLBAT
 	dbw 44, GOLBAT
-	dbw 44, GOLBAT
+	dbw 44, LARVESTA
 
 	db -1 ; end
