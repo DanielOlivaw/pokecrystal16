@@ -193,6 +193,14 @@ FinneonEggMoves:
 	dw -1 ; end
 
 MantykeEggMoves:
+	dw TWISTER
+	dw HYDRO_PUMP
+	dw HAZE
+	dw SLAM
+	dw CONFUSE_RAY
+	dw MIRROR_COAT
+	dw SPLASH
+	dw AMNESIA
 	dw -1 ; end
 
 SnoverEggMoves:

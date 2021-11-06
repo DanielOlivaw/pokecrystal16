@@ -3,7 +3,7 @@ TMHMMoves:
 ; TMs
 	dw HONE_CLAWS     ; TM01
 	dw HEADBUTT       ; TM02
-	dw CURSE          ; TM03
+	dw PSYSHOCK       ; TM03
 	dw CALM_MIND      ; TM04
 	dw ROAR           ; TM05
 	dw TOXIC          ; TM06

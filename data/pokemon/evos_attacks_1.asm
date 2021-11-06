@@ -410,6 +410,7 @@ RaticateAEvosAttacks:
 PikachuEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, RAICHU_A
 	db 0 ; no more evolutions
+	dbw 1, PRESENT
 	dbw 1, PLAY_NICE
 	dbw 1, SWEET_KISS
 	dbw 1, NUZZLE
