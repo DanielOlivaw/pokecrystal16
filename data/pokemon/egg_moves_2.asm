@@ -372,27 +372,6 @@ MareepEggMoves:
 	dw SAND_ATTACK
 	dw -1 ; end
 
-MarillEggMoves:
-	dw PRESENT
-	dw AMNESIA
-	dw FUTURE_SIGHT
-	dw BELLY_DRUM
-	dw PERISH_SONG
-	dw SUPERSONIC
-	dw AQUA_JET
-	dw SING
-	dw SOAK
-	dw TICKLE
-	dw BODY_SLAM
-	dw WEATHERVANE
-	dw ENCORE
-	dw FAKE_TEARS
-	dw MUDDY_WATER
-	dw REFRESH
-	dw SLAM
-	dw SUPERPOWER
-	dw -1 ; end
-
 HoppipEggMoves:
 	dw CONFUSION
 	dw ENCORE
