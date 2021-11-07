@@ -76,18 +76,17 @@ FennekinEggMoves:
 	dw HEAT_WAVE
 	dw HYPNOSIS
 	dw WISH
-	dw INCINERATE
 	dw -1 ; end
 
 FroakieEggMoves:
 	dw MIND_READER
 	dw POWER_UP_PUNCH
 	dw TOXIC_SPIKES
+	dw WEATHERVANE
 	dw -1 ; end
 
 FletchlingEggMoves:
 	dw FLAME_CHARGE
-	dw DEFOG
 	dw HEAT_WAVE
 	dw -1 ; end
 
@@ -108,11 +107,9 @@ SkiddoEggMoves:
 	dw DEFENSE_CURL
 	dw MILK_DRINK
 	dw ROLLOUT
-	dw GIGA_DRAIN
 	dw -1 ; end
 
 PanchamEggMoves:
-	dw FOUL_PLAY
 	dw ME_FIRST
 	dw POWER_TRIP
 	dw SEISMIC_TOSS
@@ -163,7 +160,7 @@ InkayEggMoves:
 BinacleEggMoves:
 	dw SWITCHEROO
 	dw TICKLE
-	dw LIQUIDATION
+	dw NIGHT_SLASH
 	dw SAND_ATTACK
 	dw -1 ; end
 
@@ -172,7 +169,6 @@ SkrelpEggMoves:
 	dw DRAGON_TAIL
 	dw HAZE
 	dw TWISTER
-	dw PLAY_ROUGH
 	dw TOXIC_SPIKES
 	dw VENOM_DRENCH
 	dw -1 ; end
@@ -180,18 +176,16 @@ SkrelpEggMoves:
 HelioptileEggMoves:
 	dw AGILITY
 	dw GLARE
-	dw MAGNET_RISE
 	dw DRAGON_RUSH
 	dw DRAGON_TAIL
+	dw SCALE_SHOT
 	dw -1 ; end
 
 TyruntEggMoves:
-	dw CURSE
 	dw DRAGON_DANCE
 	dw FIRE_FANG
 	dw ICE_FANG
 	dw POISON_FANG
-	dw ROCK_POLISH
 	dw THUNDER_FANG
 	dw ROCK_THROW
 	dw -1 ; end
@@ -203,8 +197,6 @@ AmauraEggMoves:
 	dw MIRROR_COAT
 	dw ROCK_THROW
 	dw TAKE_DOWN
-	dw AQUA_TAIL
-	dw FROST_BREATH
 	dw BARRIER
 	dw MAGNET_RISE
 	dw -1 ; end
@@ -215,7 +207,6 @@ HawluchaEggMoves:
 	dw FEINT
 	dw ME_FIRST
 	dw CROSS_CHOP
-	dw DEFOG
 	dw MEAN_LOOK
 	dw -1 ; end
 
@@ -224,15 +215,11 @@ DedenneEggMoves:
 	dw MAGNET_RISE
 	dw TEARFUL_LOOK
 	dw EERIE_IMPULSE
-	dw THUNDERPUNCH
 	dw -1 ; end
 
 GoomyEggMoves:
 	dw ACID_ARMOR
 	dw COUNTER
-	dw CURSE
-	dw ENDURE
-	dw IRON_TAIL
 	dw LIFE_DEW
 	dw POISON_TAIL
 	dw -1 ; end
@@ -242,7 +229,6 @@ KlefkiEggMoves:
 	dw SWITCHEROO
 	dw IRON_DEFENSE
 	dw LOCK_ON
-	dw THIEF
 	dw -1 ; end
 
 PhantumpEggMoves:
@@ -260,9 +246,6 @@ BergmiteEggMoves:
 	dw BARRIER
 	dw MIRROR_COAT
 	dw MIST
-	dw FROST_BREATH
 	dw RECOVER
-	dw -1 ; end
-
 NoEggMoves6:
 	dw -1 ; end

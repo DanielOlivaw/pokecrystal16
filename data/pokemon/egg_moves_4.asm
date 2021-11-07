@@ -331,7 +331,6 @@ StunkyEggMoves:
 BonslyEggMoves:
 	dw DEFENSE_CURL
 	dw HARDEN
-	dw ROCK_POLISH
 	dw ROLLOUT
 	dw SAND_TOMB
 	dw SELFDESTRUCT
