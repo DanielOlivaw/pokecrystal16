@@ -60,10 +60,7 @@ EggMovePointers7::
 RowletEggMoves:
 	dw BATON_PASS
 	dw CONFUSE_RAY
-	dw CURSE
-	dw DEFOG
 	dw HAZE
-	dw OMINOUS_WIND
 	dw DOUBLE_TEAM
 	dw KNOCK_OFF
 	dw -1 ; end
@@ -71,29 +68,18 @@ RowletEggMoves:
 PikipekEggMoves:
 	dw BOOMBURST
 	dw BRAVE_BIRD
-	dw MIRROR_MOVE
-	dw UPROAR
-	dw DEFOG
-	dw HEAT_WAVE
-	dw HYPER_VOICE
 	dw -1 ; end
 
 GrubbinEggMoves:
-	dw CHARGE_BEAM
 	dw DISCHARGE
 	dw ELECTROWEB
-	dw ENDURE
 	dw HARDEN
-	dw MUD_SHOT
-	dw MAGNET_RISE
 	dw -1 ; end
 
 CrabrawlerEggMoves:
 	dw AMNESIA
 	dw ENDEAVOR
 	dw SUPERPOWER
-	dw DRAIN_PUNCH
-	dw FOCUS_PUNCH
 	dw -1 ; end
 
 CutieflyEggMoves:
@@ -115,11 +101,9 @@ RockruffEggMoves:
 
 MareanieEggMoves:
 	dw HAZE
-	dw INFESTATION
 	dw SPIT_UP
 	dw STOCKPILE
 	dw SWALLOW
-	dw IRON_DEFENSE
 	dw -1 ; end
 
 MudbrayEggMoves:
@@ -130,7 +114,6 @@ MudbrayEggMoves:
 	dw MUD_BOMB
 	dw DOUBLE_EDGE
 	dw FISSURE
-	dw ROAR
 	dw -1 ; end
 
 DewpiderEggMoves:
@@ -143,11 +126,8 @@ DewpiderEggMoves:
 
 FomantisEggMoves:
 	dw AROMATHERAPY
-	dw DEFOG
 	dw GIGA_DRAIN
 	dw LEAF_STORM
-	dw WEATHER_BALL
-	dw BUG_BITE
 	dw -1 ; end
 
 MorelullEggMoves:
@@ -159,23 +139,16 @@ MorelullEggMoves:
 	dw -1 ; end
 
 StuffulEggMoves:
-	dw ENDURE
 	dw FORCE_PALM
-	dw ICE_PUNCH
 	dw MEGA_KICK
-	dw THUNDERPUNCH
 	dw DEFENSE_CURL
 	dw ROLLOUT
 	dw STOMP
 	dw -1 ; end
 
 OranguruEggMoves:
-	dw DREAM_EATER
 	dw EXTRASENSORY
 	dw YAWN
-	dw COVET
-	dw PAIN_SPLIT
-	dw TRICK
 	dw -1 ; end
 
 PassimianEggMoves:
@@ -199,7 +172,6 @@ WimpodEggMoves:
 SandygastEggMoves:
 	dw AMNESIA
 	dw ANCIENTPOWER
-	dw CURSE
 	dw DESTINY_BOND
 	dw SPIT_UP
 	dw STOCKPILE
@@ -209,22 +181,15 @@ SandygastEggMoves:
 
 KomalaEggMoves:
 	dw CHARM
-	dw PLAY_ROUGH
 	dw SING
 	dw WISH
-	dw ENDEAVOR
-	dw SUPERPOWER
-	dw ZEN_HEADBUTT
 	dw -1 ; end
 
 TurtonatorEggMoves:
 	dw FIRE_SPIN
 	dw HEAD_SMASH
 	dw REVENGE
-	dw HEAT_WAVE
-	dw CURSE
 	dw RAPID_SPIN
-	dw HEAT_CRASH
 	dw -1 ; end
 
 TogedemaruEggMoves:
@@ -240,7 +205,6 @@ TogedemaruEggMoves:
 	dw -1 ; end
 
 MimikyuEggMoves:
-	dw CURSE
 	dw DESTINY_BOND
 	dw GRUDGE
 	dw NIGHTMARE
@@ -252,7 +216,6 @@ DrampaEggMoves:
 	dw TICKLE
 	dw HURRICANE
 	dw RAZOR_WIND
-	dw PLAY_ROUGH
 	dw -1 ; end
 
 JangmoOEggMoves:
@@ -260,8 +223,5 @@ JangmoOEggMoves:
 	dw DRAGONBREATH
 	dw FOCUS_PUNCH
 	dw REVERSAL
-	dw AQUA_TAIL
-	dw -1 ; end
-
 NoEggMoves7:
 	dw -1 ; end
