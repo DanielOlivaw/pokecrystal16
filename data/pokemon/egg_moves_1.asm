@@ -156,6 +156,7 @@ CharmanderEggMoves:
 	dw FLARE_BLITZ
 	dw FOCUS_PUNCH
 	dw OUTRAGE
+	dw DRAGON_CLAW
 	dw -1 ; end
 
 SquirtleEggMoves:
@@ -174,6 +175,7 @@ SquirtleEggMoves:
 	dw FORESIGHT
 	dw MUDDY_WATER
 	dw REFRESH
+	dw FLIP_TURN
 	dw -1 ; end
 
 RattataAEggMoves:
@@ -199,6 +201,7 @@ SandshrewAEggMoves:
 	dw CHIP_AWAY
 	dw ICICLE_CRASH
 	dw ICICLE_SPEAR
+	dw FROST_BREATH
 	dw -1 ; end
 
 NidoranFEggMoves:
@@ -249,6 +252,7 @@ VulpixAEggMoves:
 	dw EXTRASENSORY
 	dw POWER_SWAP
 	dw TAIL_SLAP
+	dw FROST_BREATH
 	dw -1 ; end
 
 ZubatEggMoves:
@@ -507,6 +511,7 @@ GastlyEggMoves:
 	dw REFLECT_TYPE
 	dw SMOG
 	dw SCARY_FACE
+	dw POLTERGEIST
 	dw -1 ; end
 
 OnixEggMoves:
@@ -518,6 +523,7 @@ OnixEggMoves:
 	dw ROLLOUT
 	dw HEAVY_SLAM
 	dw ROCK_BLAST
+	dw METEOR_BEAM
 	dw -1 ; end
 
 DrowzeeEggMoves:
@@ -623,6 +629,8 @@ HorseaEggMoves:
 	dw MUDDY_WATER
 	dw OUTRAGE
 	dw RAZOR_WIND
+	dw SCALE_SHOT
+	dw FLIP_TURN
 	dw -1 ; end
 
 ScytherEggMoves:
@@ -661,6 +669,7 @@ LaprasEggMoves:
 	dw FUTURE_SIGHT
 	dw REFRESH
 	dw WHIRLPOOL
+	dw FROST_BREATH
 	dw -1 ; end
 
 EeveeEggMoves:
@@ -717,6 +726,7 @@ AerodactylEggMoves:
 	dw WHIRLWIND
 	dw PURSUIT
 	dw FORESIGHT
+	dw DRAGON_CLAW
 	dw -1 ; end
 
 DratiniEggMoves:
@@ -728,5 +738,6 @@ DratiniEggMoves:
 	dw MIST
 	dw HAZE
 	dw SUPERSONIC
+	dw SCALE_SHOT
 NoEggMoves1:
 	dw -1 ; end

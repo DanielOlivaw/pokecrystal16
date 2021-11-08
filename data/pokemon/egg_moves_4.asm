@@ -334,6 +334,7 @@ BonslyEggMoves:
 	dw ROLLOUT
 	dw SAND_TOMB
 	dw SELFDESTRUCT
+	dw METEOR_BEAM
 	dw -1 ; end
 
 MimeJrEggMoves:
@@ -383,6 +384,7 @@ SpiritombEggMoves:
 	dw CAPTIVATE
 	dw NIGHTMARE
 	dw SHADOW_SNEAK
+	dw POLTERGEIST
 	dw -1 ; end
 
 GibleEggMoves:
@@ -396,6 +398,7 @@ GibleEggMoves:
 	dw OUTRAGE
 	dw SAND_TOMB
 	dw SCARY_FACE
+	dw SCALE_SHOT
 	dw -1 ; end
 
 MunchlaxEggMoves:
@@ -520,5 +523,6 @@ SnoverEggMoves:
 	dw MAGICAL_LEAF
 	dw SEED_BOMB
 	dw MIST
+	dw FROST_BREATH
 NoEggMoves4:
 	dw -1 ; end

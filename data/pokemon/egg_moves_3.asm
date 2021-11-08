@@ -290,6 +290,7 @@ AzurillEggMoves:
 	dw REFRESH
 	dw SLAM
 	dw SUPERPOWER
+	dw MISTY_EXPLOSION
 	dw -1 ; end
 
 NosepassEggMoves:
@@ -402,6 +403,8 @@ CarvanhaEggMoves:
 	dw HYDRO_PUMP
 	dw PSYCHIC_FANGS
 	dw SWIFT
+	dw SCALE_SHOT
+	dw FLIP_TURN
 	dw -1 ; end
 
 WailmerEggMoves:
@@ -446,6 +449,7 @@ TorkoalEggMoves:
 	dw CLEAR_SMOG
 	dw ERUPTION
 	dw SUPERPOWER
+	dw SCORCHING_SANDS
 	dw -1 ; end
 
 SpoinkEggMoves:
@@ -585,6 +589,7 @@ FeebasEggMoves:
 	dw TICKLE
 	dw BRINE
 	dw CAPTIVATE
+	dw SCALE_SHOT
 	dw -1 ; end
 
 ShuppetEggMoves:
@@ -605,6 +610,7 @@ DuskullEggMoves:
 	dw PAIN_SPLIT
 	dw DESTINY_BOND
 	dw FAINT_ATTACK
+	dw POLTERGEIST
 	dw -1 ; end
 
 TropiusEggMoves:
@@ -655,6 +661,7 @@ SphealEggMoves:
 	dw SWALLOW
 	dw YAWN
 	dw ROLLOUT
+	dw FROST_BREATH
 	dw -1 ; end
 
 ClamperlEggMoves:
@@ -677,6 +684,7 @@ RelicanthEggMoves:
 	dw MAGNITUDE
 	dw MUDDY_WATER
 	dw SNORE
+	dw SCALE_SHOT
 	dw -1 ; end
 
 LuvdiscEggMoves:

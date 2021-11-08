@@ -63,11 +63,12 @@ GrookeyEggMoves:
 	dw GROWTH
 	dw HAMMER_ARM
 	dw LEECH_SEED
+	dw DRAIN_PUNCH
+	dw MAGICAL_LEAF
+	dw LOW_KICK
 	dw -1 ; end
 
 RookideeEggMoves:
-	dw DEFOG
-	dw ROCK_SMASH
 	dw ROOST
 	dw SAND_ATTACK
 	dw SKY_ATTACK
@@ -76,7 +77,6 @@ RookideeEggMoves:
 	dw -1 ; end
 
 BlipbugEggMoves:
-	dw INFESTATION
 	dw RECOVER
 	dw STICKY_WEB
 	dw SUPERSONIC
@@ -85,7 +85,6 @@ BlipbugEggMoves:
 NickitEggMoves:
 	dw HOWL
 	dw KNOCK_OFF
-	dw PAY_DAY
 	dw BATON_PASS
 	dw -1 ; end
 
@@ -93,7 +92,6 @@ WoolooEggMoves:
 	dw COUNTER
 	dw STOMP
 	dw SWAGGER
-	dw PAYBACK
 	dw ELECTRO_BALL
 	dw -1 ; end
 
@@ -101,12 +99,18 @@ ChewtleEggMoves:
 	dw DRAGON_TAIL
 	dw SKULL_BASH
 	dw SCALE_SHOT
+	dw ICE_FANG
+	dw REVENGE
+	dw SCALE_SHOT
 	dw -1 ; end
 
 RolycolyEggMoves:
 	dw BLOCK
 	dw EXPLOSION
 	dw MUD_SLAP
+	dw STONE_EDGE
+	dw SELFDESTRUCT
+	dw METEOR_BEAM
 	dw -1 ; end
 
 ApplinEggMoves:
@@ -121,12 +125,16 @@ ArrokudaEggMoves:
 	dw NIGHT_SLASH
 	dw SLASH
 	dw THRASH
+	dw DRILL_RUN
+	dw SCALE_SHOT
 	dw -1 ; end
 
 ToxelEggMoves:
 	dw ENDEAVOR
 	dw METAL_SOUND
 	dw POWER_UP_PUNCH
+	dw ROUND_M
+	dw ENCORE
 	dw -1 ; end
 
 SizzlipedeEggMoves:
@@ -134,6 +142,7 @@ SizzlipedeEggMoves:
 	dw KNOCK_OFF
 	dw ROLLOUT
 	dw STRUGGLE_BUG
+	dw BUG_BUZZ
 	dw -1 ; end
 
 ClobbopusEggMoves:
@@ -149,16 +158,23 @@ HatennaEggMoves:
 	dw NUZZLE
 	dw FEY_FURY
 	dw MISTY_AMBUSH
+	dw STORED_POWER
+	dw MAGICAL_LEAF
 	dw -1 ; end
 
 MilceryEggMoves:
 	dw BABY_DOLL_EYES
 	dw FEY_FURY
+	dw CHARM
 	dw -1 ; end
 
 PincurchinEggMoves:
 	dw MEMENTO
 	dw SUCKER_PUNCH
+	dw LIQUIDATION
+	dw PIN_MISSILE
+	dw SPIKES
+	dw TOXIC_SPIKES
 	dw -1 ; end
 
 SnomEggMoves:
@@ -166,11 +182,11 @@ SnomEggMoves:
 	dw FAIRY_WIND
 	dw SILVER_WIND
 	dw MIRROR_COAT
+	dw ICICLE_SPEAR
 	dw -1 ; end
 
 CufantEggMoves:
 	dw BELCH
-	dw CURSE
 	dw DEFENSE_CURL
 	dw DOUBLE_EDGE
 	dw FISSURE
@@ -184,17 +200,16 @@ DuraludonEggMoves:
 	dw MIRROR_COAT
 	dw NIGHT_SLASH
 	dw SLASH
+	dw HEAVY_SLAM
 	dw -1 ; end
 
 DreepyEggMoves:
 	dw CONFUSE_RAY
-	dw CURSE
 	dw DISABLE
 	dw DOUBLE_TEAM
 	dw DRAGON_TAIL
 	dw GRUDGE
 	dw SUCKER_PUNCH
-	dw U_TURN
 	dw -1 ; end
 
 NoEggMoves8:

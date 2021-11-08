@@ -68,18 +68,23 @@ RowletEggMoves:
 PikipekEggMoves:
 	dw BOOMBURST
 	dw BRAVE_BIRD
+	dw HEAT_WAVE
+	dw HYPER_VOICE
 	dw -1 ; end
 
 GrubbinEggMoves:
 	dw DISCHARGE
 	dw ELECTROWEB
 	dw HARDEN
+	dw MAGNET_RISE
 	dw -1 ; end
 
 CrabrawlerEggMoves:
 	dw AMNESIA
 	dw ENDEAVOR
 	dw SUPERPOWER
+	dw BULK_UP
+	dw FROST_BREATH
 	dw -1 ; end
 
 CutieflyEggMoves:
@@ -104,6 +109,9 @@ MareanieEggMoves:
 	dw SPIT_UP
 	dw STOCKPILE
 	dw SWALLOW
+	dw BRINE
+	dw SLUDGE_WAVE
+	dw FROST_BREATH
 	dw -1 ; end
 
 MudbrayEggMoves:
@@ -122,12 +130,15 @@ DewpiderEggMoves:
 	dw STOCKPILE
 	dw SPIT_UP
 	dw STICKY_WEB
+	dw FROST_BREATH
 	dw -1 ; end
 
 FomantisEggMoves:
 	dw AROMATHERAPY
 	dw GIGA_DRAIN
 	dw LEAF_STORM
+	dw LEECH_LIFE
+	dw MAGICAL_LEAF
 	dw -1 ; end
 
 MorelullEggMoves:
@@ -149,6 +160,9 @@ StuffulEggMoves:
 OranguruEggMoves:
 	dw EXTRASENSORY
 	dw YAWN
+	dw MEGA_PUNCH
+	dw SNORE
+	dw TRICK
 	dw -1 ; end
 
 PassimianEggMoves:
@@ -183,6 +197,7 @@ KomalaEggMoves:
 	dw CHARM
 	dw SING
 	dw WISH
+	dw BULK_UP
 	dw -1 ; end
 
 TurtonatorEggMoves:
@@ -190,6 +205,8 @@ TurtonatorEggMoves:
 	dw HEAD_SMASH
 	dw REVENGE
 	dw RAPID_SPIN
+	dw DRAGON_CLAW
+	dw SCALE_SHOT
 	dw -1 ; end
 
 TogedemaruEggMoves:
@@ -208,6 +225,8 @@ MimikyuEggMoves:
 	dw DESTINY_BOND
 	dw GRUDGE
 	dw NIGHTMARE
+	dw HEX
+	dw PHANTOM_FORCE
 	dw -1 ; end
 
 DrampaEggMoves:
@@ -216,6 +235,8 @@ DrampaEggMoves:
 	dw TICKLE
 	dw HURRICANE
 	dw RAZOR_WIND
+	dw DRAGON_CLAW
+	dw SCALE_SHOT
 	dw -1 ; end
 
 JangmoOEggMoves:
@@ -223,5 +244,6 @@ JangmoOEggMoves:
 	dw DRAGONBREATH
 	dw FOCUS_PUNCH
 	dw REVERSAL
+	dw IRON_HEAD
 NoEggMoves7:
 	dw -1 ; end

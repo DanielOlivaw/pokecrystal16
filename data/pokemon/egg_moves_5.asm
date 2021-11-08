@@ -136,6 +136,7 @@ RoggenrolaEggMoves:
 	dw HEAVY_SLAM
 	dw LOCK_ON
 	dw MAGNITUDE
+	dw METEOR_BEAM
 	dw -1 ; end
 
 WoobatEggMoves:
@@ -232,6 +233,8 @@ BasculinEggMoves:
 	dw REVENGE
 	dw SWIFT
 	dw ENDEAVOR
+	dw SCALE_SHOT
+	dw FLIP_TURN
 	dw -1 ; end
 
 SandileEggMoves:
@@ -247,6 +250,7 @@ SandileEggMoves:
 	dw THUNDER_FANG
 	dw AQUA_TAIL
 	dw SPITE
+	dw SCORCHING_SANDS
 	dw -1 ; end
 
 DarumakaGEggMoves:
@@ -293,6 +297,7 @@ ScraggyEggMoves:
 	dw FAKE_OUT
 	dw FAINT_ATTACK
 	dw POWER_UP_PUNCH
+	dw DRAGON_CLAW
 	dw -1 ; end
 
 YamaskGEggMoves:
@@ -303,6 +308,7 @@ YamaskGEggMoves:
 	dw NASTY_PLOT
 	dw NIGHTMARE
 	dw TOXIC_SPIKES
+	dw POLTERGEIST
 	dw -1 ; end
 
 TirtougaEggMoves:
@@ -344,6 +350,7 @@ FrillishEggMoves:
 	dw RECOVER
 	dw BUBBLEBEAM
 	dw STRENGTH_SAP
+	dw POLTERGEIST
 	dw -1 ; end
 
 JoltikEggMoves:
@@ -397,6 +404,7 @@ AxewEggMoves:
 	dw RAZOR_WIND
 	dw REVERSAL
 	dw FIRST_IMPRESSION
+	dw SCALE_SHOT
 	dw -1 ; end
 
 CubchooEggMoves:
@@ -441,6 +449,7 @@ DruddigonEggMoves:
 	dw SUCKER_PUNCH
 	dw THUNDER_FANG
 	dw NIGHT_SLASH
+	dw SCALE_SHOT
 	dw -1 ; end
 
 PawniardEggMoves:
@@ -461,6 +470,7 @@ HeatmorEggMoves:
 	dw SUCKER_PUNCH
 	dw TICKLE
 	dw WRAP
+	dw SCORCHING_SANDS
 	dw -1 ; end
 
 DurantEggMoves:

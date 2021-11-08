@@ -171,6 +171,8 @@ SkrelpEggMoves:
 	dw TWISTER
 	dw TOXIC_SPIKES
 	dw VENOM_DRENCH
+	dw SCALE_SHOT
+	dw FLIP_TURN
 	dw -1 ; end
 
 HelioptileEggMoves:
@@ -188,6 +190,7 @@ TyruntEggMoves:
 	dw POISON_FANG
 	dw THUNDER_FANG
 	dw ROCK_THROW
+	dw SCALE_SHOT
 	dw -1 ; end
 
 AmauraEggMoves:
@@ -199,6 +202,7 @@ AmauraEggMoves:
 	dw TAKE_DOWN
 	dw BARRIER
 	dw MAGNET_RISE
+	dw FROST_BREATH
 	dw -1 ; end
 
 HawluchaEggMoves:
@@ -239,6 +243,7 @@ PhantumpEggMoves:
 	dw SEED_BOMB
 	dw DISABLE
 	dw SUCKER_PUNCH
+	dw POLTERGEIST
 	dw -1 ; end
 
 BergmiteEggMoves:
@@ -247,5 +252,6 @@ BergmiteEggMoves:
 	dw MIRROR_COAT
 	dw MIST
 	dw RECOVER
+	dw FROST_BREATH
 NoEggMoves6:
 	dw -1 ; end

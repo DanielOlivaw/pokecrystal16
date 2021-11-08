@@ -222,6 +222,7 @@ TotodileEggMoves:
 	dw FAKE_TEARS
 	dw FLATTER
 	dw METAL_CLAW
+	dw DRAGON_CLAW
 	dw -1 ; end
 
 SentretEggMoves:
@@ -320,6 +321,7 @@ CleffaEggMoves:
 	dw FAKE_TEARS
 	dw MISTY_TERRAIN
 	dw STORED_POWER
+	dw MISTY_EXPLOSION
 	dw -1 ; end
 
 IgglybuffEggMoves:
