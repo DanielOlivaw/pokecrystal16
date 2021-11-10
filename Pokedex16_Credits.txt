@@ -16,6 +16,9 @@ Butterfree                  Menyu                             Game Freak
 Weedle                      Game Freak                        Game Freak
 Kakuna                      Game Freak                        Game Freak
 Beedrill                    Game Freak                        Game Freak
+Pidgey                      Game Freak                        Game Freak
+Pidgeotto                   Game Freak                        Game Freak
+Pidgeot                     Game Freak                        Game Freak
 Rattata (Alolan)            Pia Carrot                        Kevin RDS
 Raticate (Alolan)           Pia Carrot                        Game Freak
 Pikachu                     Game Freak                        Game Freak
@@ -87,6 +90,7 @@ Exeggcute                   Game Freak                        Game Freak
 Exeggutor (Alolan)          SkidMarc25                        Pia Carrot
 Cubone                      Game Freak                        Game Freak
 Marowak                     Game Freak                        Game Freak
+Lickitung                   Game Freak                        Game Freak
 Koffing                     Game Freak                        Game Freak
 Weezing (Galarian)          Pia Carrot                        French Cyndaquil
 Chansey                     Matdemo159                        Game Freak
@@ -94,6 +98,8 @@ Tangela                     Game Freak                        Game Freak
 Kangaskhan                  Game Freak                        Game Freak
 Horsea                      Game Freak                        Game Freak
 Seadra                      Game Freak                        Game Freak
+Goldeen                     Game Freak                        Game Freak
+Seaking                     Game Freak                        Game Freak
 Staryu                      Game Freak                        Game Freak
 Starmie                     Game Freak                        Game Freak
 Mr. Mime (Galarian)         utytft                            utytft
@@ -123,7 +129,7 @@ Dratini                     Game Freak                        Game Freak
 Dragonair                   Game Freak                        Game Freak
 Dragonite                   Game Freak                        Game Freak
 Mewtwo                      Game Freak                        Game Freak
-Mew                         SirWhibbles, LouLilie             Game Freak
+Mew                         JaceDeane, LouLilie               Game Freak
 GS beta Tangela pre-evo     Game Freak                        Game Freak
 GS beta fish                Rool, SoupPotato                  Rool, SoupPotato
 GS beta shark               marcstuts0842                     marcstuts0842
@@ -174,6 +180,8 @@ Sudowoodo                   Game Freak                        Game Freak
 Hoppip                      Game Freak                        Game Freak
 Skiploom                    Game Freak                        Game Freak
 Jumpluff                    Game Freak                        Game Freak
+Sunkern                     Game Freak                        Game Freak
+Sunflora                    Game Freak                        Game Freak
 Yanma                       Game Freak                        Game Freak
 Wooper                      Game Freak                        Game Freak
 Quagsire                    Game Freak                        Game Freak
@@ -183,6 +191,7 @@ Murkrow                     Game Freak                        Game Freak
 Slowking                    Game Freak                        Game Freak
 Misdreavus                  Game Freak                        Game Freak
 Unown                       Game Freak                        Game Freak
+Wobbuffet                   Game Freak                        Game Freak
 Girafarig                   Game Freak                        Game Freak
 Pineco                      Game Freak                        Game Freak
 Forretress                  Game Freak                        Game Freak
@@ -204,6 +213,7 @@ Piloswine                   Game Freak                        Game Freak
 Corsola (Galarian)          utytft                            utytft
 Remoraid                    Game Freak                        Game Freak
 Octillery                   Game Freak                        Game Freak
+Delibird                    Game Freak                        Game Freak
 Mantine                     Game Freak                        Game Freak
 Skarmory                    Game Freak                        Game Freak
 Houndour                    Game Freak                        Game Freak
@@ -244,6 +254,8 @@ Ludicolo                    Blue Emerald                      bloodless
 Seedot                      Blue Emerald                      bloodless
 Nuzleaf                     Blue Emerald, COMBOY              bloodless
 Shiftry                     Blue Emerald                      COMBOY
+Taillow                     Blue Emerald                      bloodless
+Swellow                     Blue Emerald                      bloodless
 Wingull                     Blue Emerald                      bloodless
 Pelipper                    Blue Emerald                      bloodless
 Ralts                       Blue Emerald                      bloodless
@@ -253,6 +265,9 @@ Surskit                     Blue Emerald                      bloodless
 Masquerain                  Blue Emerald                      bloodless
 Shroomish                   Blue Emerald                      bloodless
 Breloom                     Blue Emerald                      bloodless
+Whismur                     Blue Emerald                      bloodless
+Loudred                     Blue Emerald                      bloodless
+Exploud                     Blue Emerald                      bloodless
 Makuhita                    Blue Emerald                      bloodless
 Hariyama                    Blue Emerald                      bloodless
 Azurill                     Blue Emerald                      bloodless
@@ -276,7 +291,7 @@ Sharpedo                    Blue Emerald                      bloodless
 Wailmer                     Blue Emerald                      bloodless
 Wailord                     Blue Emerald                      bloodless
 Numel                       Blue Emerald                      bloodless
-Camerupt                    Blue Emerald                      bloodless
+Camerupt                    COMBOY                            COMBOY
 Torkoal                     Blue Emerald                      bloodless
 Spoink                      Blue Emerald                      bloodless
 Grumpig                     Blue Emerald                      bloodless
@@ -310,6 +325,7 @@ Dusclops                    Blue Emerald                      bloodless
 Tropius                     Blue Emerald                      bloodless
 Chimecho                    Blue Emerald                      bloodless
 Absol                       Bummer                            COMBOY
+Wynaut                      Blue Emerald                      bloodless
 Snorunt                     Blue Emerald                      bloodless
 Glalie                      Blue Emerald                      bloodless
 Spheal                      Matdemo159                        bloodless
@@ -406,6 +422,7 @@ Snover                      bloodless                         bloodless
 Abomasnow                   bloodless                         COMBOY
 Weavile                     bloodless                         bloodless
 Magnezone                   Solo993                           bloodless
+Lickilicky                  bloodless                         bloodless
 Tangrowth                   COMBOY                            bloodless
 Electivire                  amvz08                            Chaos Rush
 Togekiss                    Kreestanala                       COMBOY
@@ -476,9 +493,13 @@ Tirtouga                    COMBOY                            COMBOY
 Carracosta                  Chris2Balls                       COMBOY
 Archen                      lakeofdance                       COMBOY
 Archeops                    Jphyper                           COMBOY
+Zorua                       Bummer                            COMBOY
+Zoroark                     Bummer                            Bummer
 Solosis                     Game Freak                        COMBOY
 Duosion                     lakeofdance                       lakeofdance
 Reuniclus                   EeVeeEe1999                       Game Freak
+Deerling                    Bummer                            COMBOY
+Sawsbuck                    Maddalena                         COMBOY
 Frillish (Female)           Game Freak                        COMBOY
 Frillish (Male)             Pokekoks                          Pokekoks
 Jellicent (Female)          COMBOY                            COMBOY
@@ -537,32 +558,32 @@ Skiddo                      Vale98PM                          Bummer
 Gogoat                      Dragonball253                     Bummer
 Pancham                     Pia Carrot                        Chamber
 Pangoro                     Chamber                           Chamber
-Espurr                      SirWhibbles                       Solo993
+Espurr                      JaceDeane                         Solo993
 Meowstic (Female)           Noscium                           Faintster
-Meowstic (Male)             Pia Carrot                        SirWhibbles
-Honedge                     SirWhibbles                       SirWhibbles
+Meowstic (Male)             Pia Carrot                        JaceDeane
+Honedge                     JaceDeane                         JaceDeane
 Doublade                    Bummer                            Bummer
 Aegislash                   Bummer                            Bummer
-Spritzee                    lakeofdance                       SirWhibbles
-Aromatisse                  Bummer                            SirWhibbles
+Spritzee                    lakeofdance                       JaceDeane
+Aromatisse                  Bummer                            JaceDeane
 Swirlix                     lakeofdance                       COMBOY
 Slurpuff                    lakeofdance                       COMBOY
 Inkay                       leParagon                         leParagon
 Malamar                     Bummer                            Bummer
 Binacle                     Bummer                            Bummer
 Barbaracle                  Bummer                            Bummer
-Skrelp                      Sleet                             SirWhibbles
+Skrelp                      Sleet                             JaceDeane
 Dragalge                    Pia Carrot                        Chamber
 Helioptile                  Wobblebuns                        Chamber
 Heliolisk                   Chamber                           Chamber
 Tyrunt                      Neslug                            MrDollSteak, Bummer
 Tyrantrum                   Bummer                            MrDollSteak, Bummer
 Amaura                      Chamber                           Chamber
-Aurorus                     Chamber                           SirWhibbles
+Aurorus                     Chamber                           JaceDeane
 Sylveon                     Solo993                           Solo993
 Hawlucha                    Solo993                           Solo993
 Dedenne                     Solo993                           Solo993
-Carbink                     Bummer                            SirWhibbles
+Carbink                     Bummer                            JaceDeane
 Goomy                       Wobblebuns                        MrDollSteak
 Sliggoo                     COMBOY                            COMBOY
 Goodra                      Wisgarus                          Wisgarus
@@ -574,9 +595,9 @@ Avalugg                     Dragonball253                     Captain Cohete
 Xerneas                     MyLittleKeldeo                    Pia Carrot
 Yveltal                     Fexiled                           MrDollSteak
 Zygarde                     Fexiled                           MrDollSteak
-Diancie                     SirWhibbles                       SirWhibbles
+Diancie                     JaceDeane                         JaceDeane
 Volcanion                   RubenSalazar                      leParagon
-Rowlet                      Enderific                         SirWhibbles
+Rowlet                      Enderific                         JaceDeane
 Dartrix                     leParagon                         leParagon
 Decidueye                   JaegarLucciano                    Falgaia
 Pikipek                     SupahSanti                        leParagon
@@ -610,6 +631,7 @@ Wimpod                      Pia Carrot                        leParagon
 Golisopod                   LakeOfDance                       Falgaia
 Sandygast                   SupahSanti                        Z-nogyroP, goranthegreat
 Palossand                   Bronzeswagger                     Z-nogyroP, Kevin RDS, goranthegreat
+Pyukumuku                   SupahSanti                        princessofmusic
 Type: Null                  CopyRobot1                        *
 Silvally                    leParagon                         leParagon
 Komala                      SupahSanti                        leParagon
@@ -646,7 +668,7 @@ Wooloo                      Bronzeswagger                     leParagon
 Dubwool                     KingOfThe-X-Roads                 leParagon
 Chewtle                     Menyu                             leParagon
 Drednaw                     EeVeeEe1999                       utytft
-Rolycoly                    EeVeeEe1999, SirWhibbles          leParagon
+Rolycoly                    EeVeeEe1999, JaceDeane            leParagon
 Carkol                      utytft                            utytft
 Coalossal                   Menyu                             utytft
 Applin                      utytft                            utytft
@@ -671,17 +693,19 @@ Cursola                     Menyu                             Menyu
 Mr. Rime                    Menyu                             utytft
 Runerigus                   EeVeeEe1999                       utytft
 Milcery                     Wisgarus                          leParagon
-Alcremie                    SirWhibbles                       leParagon
-Pincurchin                  utytft                            utytft
+Alcremie                    JaceDeane                         leParagon
+Pincurchin                  JaceDeane                         utytft
 Snom                        Wisgarus                          Wisgarus
 Frosmoth                    Menyu                             utytft
+Stonjourner                 Menyu                             leParagon
+Eiscue                      Menyu                             leParagon
 Cufant                      utytft                            utytft
 Copperajah                  Enderific                         utytft
 Dracozolt                   lakeofdance                       utytft
 Arctozolt                   lakeofdance                       utytft
 Dracovish                   utytft                            TheAetherPlayer
 Arctovish                   utytft                            utytft
-Duraludon                   Enderific, SirWhibbles            utytft
+Duraludon                   Enderific, JaceDeane              utytft
 Dreepy                      Enderific                         tlefonmann
 Drakloak                    Enderific                         utytft
 Dragapult                   Menyu                             tlefonmann
