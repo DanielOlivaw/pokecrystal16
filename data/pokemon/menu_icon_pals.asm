@@ -19,6 +19,9 @@ MonMenuIconPals:
 	icon_pals BROWN,  GOLD   ; WEEDLE
 	icon_pals BROWN,  GREEN  ; KAKUNA
 	icon_pals RED,    BLUE   ; BEEDRILL
+	icon_pals BROWN,  GOLD   ; PIDGEY
+	icon_pals BROWN,  GOLD   ; PIDGEOTTO
+	icon_pals BROWN,  GOLD   ; PIDGEOT
 	icon_pals GRAY,   RED    ; RATTATA_A
 	icon_pals GRAY,   RED    ; RATICATE_A
 	icon_pals RED,    BROWN  ; PIKACHU
@@ -92,6 +95,7 @@ MonMenuIconPals:
 	icon_pals GREEN,  RED    ; EXEGGUTOR_A
 	icon_pals BROWN,  GREEN  ; CUBONE
 	icon_pals BROWN,  GREEN  ; MAROWAK
+	icon_pals PINK,   GOLD   ; LICKITUNG
 	icon_pals PURPLE, BLUE   ; KOFFING
 	icon_pals GRAY,   BROWN  ; WEEZING_G
 	icon_pals PINK,   GREEN  ; CHANSEY
@@ -99,6 +103,8 @@ MonMenuIconPals:
 	icon_pals BROWN,  GRAY   ; KANGASKHAN
 	icon_pals BLUE,   GREEN  ; HORSEA
 	icon_pals BLUE,   PURPLE ; SEADRA
+	icon_pals RED,    GOLD   ; GOLDEEN
+	icon_pals RED,    GOLD   ; SEAKING
 	icon_pals RED,    BLUE   ; STARYU
 	icon_pals PURPLE, BLUE   ; STARMIE
 	icon_pals BLUE,   PURPLE ; MR__MIME_G
@@ -179,6 +185,8 @@ MonMenuIconPals:
 	icon_pals GREEN,  GREEN  ; HOPPIP
 	icon_pals GOLD,   GOLD   ; SKIPLOOM
 	icon_pals GOLD,   PURPLE ; JUMPLUFF
+	icon_pals GREEN,  GREEN  ; SUNKERN
+	icon_pals GOLD,   BROWN  ; SUNFLORA
 	icon_pals RED,    BLUE   ; YANMA
 	icon_pals BLUE,   PINK   ; WOOPER
 	icon_pals BLUE,   PURPLE ; QUAGSIRE
@@ -188,6 +196,7 @@ MonMenuIconPals:
 	icon_pals RED,    PINK   ; SLOWKING
 	icon_pals GRAY,   GOLD   ; MISDREAVUS
 	icon_pals GRAY,   GRAY   ; UNOWN
+	icon_pals BLUE,   PINK   ; WOBBUFFET
 	icon_pals PURPLE, BLUE   ; GIRAFARIG
 	icon_pals GREEN,  RED    ; PINECO
 	icon_pals RED,    BROWN  ; FORRETRESS
@@ -209,6 +218,7 @@ MonMenuIconPals:
 	icon_pals GRAY,   GRAY   ; CORSOLA_G
 	icon_pals BLUE,   PINK   ; REMORAID
 	icon_pals RED,    BROWN  ; OCTILLERY
+	icon_pals RED,    PURPLE ; DELIBIRD
 	icon_pals GRAY,   BLUE   ; MANTINE
 	icon_pals GRAY,   GREEN  ; SKARMORY
 	icon_pals RED,    BLUE   ; HOUNDOUR
@@ -249,6 +259,8 @@ MonMenuIconPals:
 	icon_pals BROWN,  GRAY   ; SEEDOT
 	icon_pals GREEN,  GREEN  ; NUZLEAF
 	icon_pals BROWN,  RED    ; SHIFTRY
+	icon_pals BLUE,   GREEN  ; TAILLOW
+	icon_pals BLUE,   GREEN  ; SWELLOW
 	icon_pals BLUE,   GREEN  ; WINGULL
 	icon_pals BLUE,   GREEN  ; PELIPPER
 	icon_pals GREEN,  BLUE   ; RALTS
@@ -258,6 +270,9 @@ MonMenuIconPals:
 	icon_pals RED,    GREEN  ; MASQUERAIN
 	icon_pals GREEN,  RED    ; SHROOMISH
 	icon_pals GREEN,  RED    ; BRELOOM
+	icon_pals PURPLE, PINK   ; WHISMUR
+	icon_pals BLUE,   PURPLE ; LOUDRED
+	icon_pals BLUE,   PURPLE ; EXPLOUD
 	icon_pals GRAY,   RED    ; MAKUHITA
 	icon_pals BROWN,  PURPLE ; HARIYAMA
 	icon_pals BLUE,   GREEN  ; AZURILL
@@ -315,6 +330,7 @@ MonMenuIconPals:
 	icon_pals GREEN,  GOLD   ; TROPIUS
 	icon_pals PINK,   RED    ; CHIMECHO
 	icon_pals GRAY,   RED    ; ABSOL
+	icon_pals BLUE,   PINK   ; WYNAUT
 	icon_pals RED,    GOLD   ; SNORUNT
 	icon_pals BLUE,   RED    ; GLALIE
 	icon_pals BLUE,   PURPLE ; SPHEAL
@@ -409,6 +425,7 @@ MonMenuIconPals:
 	icon_pals GREEN,  BLUE   ; ABOMASNOW
 	icon_pals RED,    GOLD   ; WEAVILE
 	icon_pals GRAY,   BROWN  ; MAGNEZONE
+	icon_pals PINK,   GOLD   ; LICKILICKY
 	icon_pals BLUE,   GREEN  ; TANGROWTH
 	icon_pals GOLD,   RED    ; ELECTIVIRE
 	icon_pals BLUE,   RED    ; TOGEKISS
@@ -479,9 +496,13 @@ MonMenuIconPals:
 	icon_pals BLUE,   GRAY   ; CARRACOSTA
 	icon_pals RED,    RED    ; ARCHEN
 	icon_pals RED,    RED    ; ARCHEOPS
+	icon_pals RED,    BLUE   ; ZORUA
+	icon_pals RED,    PURPLE ; ZOROARK
 	icon_pals GREEN,  BLUE   ; SOLOSIS
 	icon_pals GREEN,  BLUE   ; DUOSION
 	icon_pals GREEN,  BLUE   ; REUNICLUS
+	icon_pals BROWN,  PINK   ; DEERLING
+	icon_pals BROWN,  PINK   ; SAWSBUCK
 	icon_pals PURPLE, PURPLE               ; FRILLISH
 	icon_pals PURPLE, PURPLE               ; JELLICENT
 	icon_pals BLUE,   PURPLE ; JOLTIK
@@ -610,6 +631,7 @@ MonMenuIconPals:
 	icon_pals PURPLE, RED    ; GOLISOPOD
 	icon_pals RED,    GOLD   ; SANDYGAST
 	icon_pals RED,    GOLD   ; PALOSSAND
+	icon_pals PINK,   GOLD   ; PYUKUMUKU
 	icon_pals GRAY,   BROWN  ; TYPE__NULL
 	icon_pals GRAY,   BROWN  ; SILVALLY
 	icon_pals GRAY,   GRAY   ; KOMALA
@@ -675,6 +697,8 @@ MonMenuIconPals:
 	icon_pals PURPLE, GRAY   ; PINCURCHIN
 	icon_pals BLUE,   GREEN  ; SNOM
 	icon_pals BLUE,   GREEN  ; FROSMOTH
+	icon_pals GRAY,   GRAY   ; STONJOURNR
+	icon_pals BLUE,   PINK   ; EISCUE
 	icon_pals RED,    GOLD   ; CUFANT
 	icon_pals BLUE,   GREEN  ; COPPERAJAH
 	icon_pals RED,    GRAY   ; DRACOZOLT

@@ -51,6 +51,8 @@ EvosAttacksPointers2::
 	dw HoppipEvosAttacks
 	dw SkiploomEvosAttacks
 	dw JumpluffEvosAttacks
+	dw SunkernEvosAttacks
+	dw SunfloraEvosAttacks
 	dw YanmaEvosAttacks
 	dw WooperEvosAttacks
 	dw QuagsireEvosAttacks
@@ -60,6 +62,7 @@ EvosAttacksPointers2::
 	dw SlowkingEvosAttacks
 	dw MisdreavusEvosAttacks
 	dw UnownEvosAttacks
+	dw WobbuffetEvosAttacks
 	dw GirafarigEvosAttacks
 	dw PinecoEvosAttacks
 	dw ForretressEvosAttacks
@@ -81,6 +84,7 @@ EvosAttacksPointers2::
 	dw CorsolaGEvosAttacks
 	dw RemoraidEvosAttacks
 	dw OctilleryEvosAttacks
+	dw DelibirdEvosAttacks
 	dw MantineEvosAttacks
 	dw SkarmoryEvosAttacks
 	dw HoundourEvosAttacks
@@ -1136,6 +1140,49 @@ JumpluffEvosAttacks:
 	dbw 63, MEMENTO
 	db 0 ; no more level-up moves
 
+SunkernEvosAttacks:
+	dbbw EVOLVE_ITEM, SUN_STONE, SUNFLORA
+	db 0 ; no more evolutions
+	dbw 1, ABSORB
+	dbw 1, GROWTH
+	dbw 4, GRASSWHISTLE
+	dbw 8, MEGA_DRAIN
+	dbw 12, LEECH_SEED
+	dbw 16, RAZOR_LEAF
+	dbw 20, INGRAIN
+	dbw 24, ENDEAVOR
+	dbw 28, GIGA_DRAIN
+	dbw 32, SYNTHESIS
+	dbw 36, SOLARBEAM
+	dbw 40, DOUBLE_EDGE
+	dbw 44, SUNNY_DAY
+	dbw 48, SEED_BOMB
+	db 0 ; no more level-up moves
+
+SunfloraEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ENDEAVOR
+	dbw 1, SYNTHESIS
+	dbw 1, SEED_BOMB
+	dbw 1, MORNING_SUN
+	dbw 1, ABSORB
+	dbw 1, GROWTH
+	dbw 1, POUND
+	dbw 4, GRASSWHISTLE
+	dbw 8, MEGA_DRAIN
+	dbw 12, LEECH_SEED
+	dbw 16, RAZOR_LEAF
+	dbw 20, INGRAIN
+	dbw 24, BULLET_SEED
+	dbw 28, GIGA_DRAIN
+	dbw 32, PETAL_STORM
+	dbw 36, SOLARBEAM
+	dbw 40, DOUBLE_EDGE
+	dbw 44, SUNNY_DAY
+	dbw 48, PETAL_DANCE
+	dbw 52, LEAF_STORM
+	db 0 ; no more level-up moves
+
 YanmaEvosAttacks:
 	dbww EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
 	db 0 ; no more evolutions
@@ -1307,6 +1354,18 @@ MisdreavusEvosAttacks:
 UnownEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, HIDDEN_POWER
+	db 0 ; no more level-up moves
+
+WobbuffetEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SPLASH
+	dbw 1, CHARM
+	dbw 1, ENCORE
+	dbw 1, AMNESIA
+	dbw 1, COUNTER
+	dbw 1, MIRROR_COAT
+	dbw 1, SAFEGUARD
+	dbw 1, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:
@@ -1762,6 +1821,12 @@ OctilleryEvosAttacks:
 	dbw 42, HYDRO_PUMP
 	dbw 48, SOAK
 	dbw 54, HYPER_BEAM
+	db 0 ; no more level-up moves
+
+DelibirdEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PRESENT
+	dbw 25, DRILL_PECK
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:

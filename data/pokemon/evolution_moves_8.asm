@@ -45,6 +45,8 @@ EvolutionMovePointers8::
 	dw NoEvolutionMoves8         ; PINCURCHIN
 	dw NoEvolutionMoves8         ; SNOM
 	dw FrosmothEvolutionMoves    ; FROSMOTH
+	dw NoEvolutionMoves8         ; STONJOURNR
+	dw NoEvolutionMoves8         ; EISCUE
 	dw NoEvolutionMoves8         ; CUFANT
 	dw CopperajahEvolutionMoves  ; COPPERAJAH
 	dw NoEvolutionMoves8         ; DRACOZOLT

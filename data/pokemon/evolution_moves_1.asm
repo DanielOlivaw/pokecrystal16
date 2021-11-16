@@ -16,6 +16,9 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; WEEDLE
 	dw KakunaEvolutionMoves      ; KAKUNA
 	dw BeedrillEvolutionMoves    ; BEEDRILL
+	dw NoEvolutionMoves1         ; PIDGEY
+	dw NoEvolutionMoves1         ; PIDGEOTTO
+	dw NoEvolutionMoves1         ; PIDGEOT
 	dw NoEvolutionMoves1         ; RATTATA_A
 	dw RaticateAEvolutionMoves   ; RATICATE_A
 	dw NoEvolutionMoves1         ; PIKACHU
@@ -89,6 +92,7 @@ EvolutionMovePointers1:
 	dw ExeggutorAEvolutionMoves  ; EXEGGUTOR_A
 	dw NoEvolutionMoves1         ; CUBONE
 	dw NoEvolutionMoves1         ; MAROWAK
+	dw NoEvolutionMoves1         ; LICKITUNG
 	dw NoEvolutionMoves1         ; KOFFING
 	dw WeezingGEvolutionMoves    ; WEEZING_G
 	dw NoEvolutionMoves1         ; CHANSEY
@@ -96,6 +100,8 @@ EvolutionMovePointers1:
 	dw NoEvolutionMoves1         ; KANGASKHAN
 	dw NoEvolutionMoves1         ; HORSEA
 	dw NoEvolutionMoves1         ; SEADRA
+	dw NoEvolutionMoves1         ; GOLDEEN
+	dw NoEvolutionMoves1         ; SEAKING
 	dw NoEvolutionMoves1         ; STARYU
 	dw NoEvolutionMoves1         ; STARMIE
 	dw MrMimeGEvolutionMoves     ; MR__MIME_G

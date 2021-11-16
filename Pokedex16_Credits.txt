@@ -112,9 +112,9 @@ Gyarados                    Game Freak                        Game Freak
 Lapras                      Game Freak                        Game Freak
 Ditto                       Game Freak                        Game Freak
 Eevee                       Game Freak                        Game Freak
-Flareon                     Game Freak                        Game Freak
-Jolteon                     Game Freak                        Game Freak
 Vaporeon                    Game Freak                        Game Freak
+Jolteon                     Game Freak                        Game Freak
+Flareon                     Game Freak                        Game Freak
 Porygon                     Game Freak                        Game Freak
 Omanyte                     Game Freak                        Game Freak
 Omastar                     Game Freak                        Game Freak

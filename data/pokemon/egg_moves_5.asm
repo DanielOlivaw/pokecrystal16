@@ -46,8 +46,12 @@ EggMovePointers5::
 	dw NoEggMoves5
 	dw ArchenEggMoves
 	dw NoEggMoves5
+	dw ZoruaEggMoves
+	dw NoEggMoves5
 	dw SolosisEggMoves
 	dw NoEggMoves5
+	dw NoEggMoves5
+	dw DeerlingEggMoves
 	dw NoEggMoves5
 	dw FrillishEggMoves
 	dw NoEggMoves5
@@ -333,12 +337,30 @@ ArchenEggMoves:
 	dw DOUBLE_TEAM
 	dw -1 ; end
 
+ZoruaEggMoves:
+	dw CAPTIVATE
+	dw COUNTER
+	dw DETECT
+	dw EXTRASENSORY
+	dw MEMENTO
+	dw SUCKER_PUNCH
+	dw -1 ; end
+
 SolosisEggMoves:
 	dw ACID_ARMOR
 	dw ASTONISH
 	dw CONFUSE_RAY
 	dw NIGHT_SHADE
 	dw TRICK
+	dw -1 ; end
+
+DeerlingEggMoves:
+	dw AGILITY
+	dw BATON_PASS
+	dw FAKE_TEARS
+	dw GRASSWHISTLE
+	dw ODOR_SLEUTH
+	dw SYNTHESIS
 	dw -1 ; end
 
 FrillishEggMoves:

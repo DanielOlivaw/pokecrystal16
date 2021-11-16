@@ -16,6 +16,9 @@ EvosAttacksPointers1::
 	dw WeedleEvosAttacks
 	dw KakunaEvosAttacks
 	dw BeedrillEvosAttacks
+	dw PidgeyEvosAttacks
+	dw PidgeottoEvosAttacks
+	dw PidgeotEvosAttacks
 	dw RattataAEvosAttacks
 	dw RaticateAEvosAttacks
 	dw PikachuEvosAttacks
@@ -89,6 +92,7 @@ EvosAttacksPointers1::
 	dw ExeggutorAEvosAttacks
 	dw CuboneEvosAttacks
 	dw MarowakEvosAttacks
+	dw LickitungEvosAttacks
 	dw KoffingEvosAttacks
 	dw WeezingGEvosAttacks
 	dw ChanseyEvosAttacks
@@ -96,6 +100,8 @@ EvosAttacksPointers1::
 	dw KangaskhanEvosAttacks
 	dw HorseaEvosAttacks
 	dw SeadraEvosAttacks
+	dw GoldeenEvosAttacks
+	dw SeakingEvosAttacks
 	dw StaryuEvosAttacks
 	dw StarmieEvosAttacks
 	dw MrMimeGEvosAttacks
@@ -372,6 +378,62 @@ BeedrillEvosAttacks:
 	dbw 45, FELL_STINGER
 	db 0 ; no more level-up moves
 
+PidgeyEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 18, TR_ANYTIME, PIDGEOTTO
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, SAND_ATTACK
+	dbw 6, GUST
+	dbw 9, QUICK_ATTACK
+	dbw 12, WHIRLWIND
+	dbw 15, TWISTER
+	dbw 18, FEATHERDANCE
+	dbw 21, WING_ATTACK
+	dbw 24, AGILITY
+	dbw 27, WIND_RIDE
+	dbw 30, ROOST
+	dbw 33, AIR_SLASH
+	dbw 36, MIRROR_MOVE
+	dbw 39, HURRICANE
+	db 0 ; no more level-up moves
+
+PidgeottoEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 36, TR_ANYTIME, PIDGEOT
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, SAND_ATTACK
+	dbw 6, GUST
+	dbw 9, QUICK_ATTACK
+	dbw 12, WHIRLWIND
+	dbw 15, TWISTER
+	dbw 19, FEATHERDANCE
+	dbw 23, WING_ATTACK
+	dbw 27, AGILITY
+	dbw 31, WIND_RIDE
+	dbw 35, ROOST
+	dbw 39, AIR_SLASH
+	dbw 43, MIRROR_MOVE
+	dbw 47, HURRICANE
+	db 0 ; no more level-up moves
+
+PidgeotEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, SAND_ATTACK
+	dbw 6, GUST
+	dbw 9, QUICK_ATTACK
+	dbw 12, WHIRLWIND
+	dbw 15, TWISTER
+	dbw 19, FEATHERDANCE
+	dbw 23, WING_ATTACK
+	dbw 27, AGILITY
+	dbw 31, WIND_RIDE
+	dbw 35, ROOST
+	dbw 40, AIR_SLASH
+	dbw 45, MIRROR_MOVE
+	dbw 50, HURRICANE
+	db 0 ; no more level-up moves
+
 RattataAEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_NITE, RATICATE_A
 	db 0 ; no more evolutions
@@ -410,7 +472,6 @@ RaticateAEvosAttacks:
 PikachuEvosAttacks:
 	dbbw EVOLVE_ITEM, THUNDERSTONE, RAICHU_A
 	db 0 ; no more evolutions
-	dbw 1, PRESENT
 	dbw 1, PLAY_NICE
 	dbw 1, SWEET_KISS
 	dbw 1, NUZZLE
@@ -1944,6 +2005,27 @@ MarowakEvosAttacks:
 	dbw 60, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
+LickitungEvosAttacks:
+	dbww EVOLVE_MOVE, ROLLOUT, LICKILICKY
+	db 0 ; no more evolutions
+	dbw 1, LICK
+	dbw 1, DEFENSE_CURL
+	dbw 4, SUPERSONIC
+	dbw 8, WRAP
+	dbw 12, DISABLE
+	dbw 16, STOMP
+	dbw 20, KNOCK_OFF
+	dbw 24, REFRESH
+	dbw 28, SLAM
+	dbw 32, ROLLOUT
+	dbw 36, SCREECH
+	dbw 40, CHIP_AWAY
+	dbw 44, ME_FIRST
+	dbw 48, POWER_WHIP
+	dbw 52, WRING_OUT
+	dbw 56, BELLY_DRUM
+	db 0 ; no more level-up moves
+
 KoffingEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 35, TR_ANYTIME, WEEZING_G
 	db 0 ; no more evolutions
@@ -2099,6 +2181,42 @@ SeadraEvosAttacks:
 	dbw 47, HYDRO_PUMP
 	dbw 52, DRAGON_DANCE
 	dbw 57, RAIN_DANCE
+	db 0 ; no more level-up moves
+
+GoldeenEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 33, TR_ANYTIME, SEAKING
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, TAIL_WHIP
+	dbw 4, SUPERSONIC
+	dbw 9, FURY_ATTACK
+	dbw 13, WATER_PULSE
+	dbw 18, HORN_ATTACK
+	dbw 22, AGILITY
+	dbw 27, AQUA_RING
+	dbw 31, FLAIL
+	dbw 36, WATERFALL
+	dbw 40, SOAK
+	dbw 45, MEGAHORN
+	dbw 49, HORN_DRILL
+	db 0 ; no more level-up moves
+
+SeakingEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POISON_JAB
+	dbw 1, PECK
+	dbw 1, TAIL_WHIP
+	dbw 4, SUPERSONIC
+	dbw 9, FURY_ATTACK
+	dbw 13, WATER_PULSE
+	dbw 18, HORN_ATTACK
+	dbw 22, AGILITY
+	dbw 27, AQUA_RING
+	dbw 31, FLAIL
+	dbw 38, WATERFALL
+	dbw 44, SOAK
+	dbw 51, MEGAHORN
+	dbw 57, HORN_DRILL
 	db 0 ; no more level-up moves
 
 StaryuEvosAttacks:

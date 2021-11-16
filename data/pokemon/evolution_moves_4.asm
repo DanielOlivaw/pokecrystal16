@@ -69,6 +69,7 @@ EvolutionMovePointers4::
 	dw AbomasnowEvolutionMoves  ; ABOMASNOW
 	dw NoEvolutionMoves4        ; WEAVILE
 	dw NoEvolutionMoves4        ; MAGNEZONE
+	dw NoEvolutionMoves4        ; LICKILICKY
 	dw TangrowthEvolutionMoves  ; TANGROWTH
 	dw NoEvolutionMoves4        ; ELECTIVIRE
 	dw TogekissEvolutionMoves   ; TOGEKISS

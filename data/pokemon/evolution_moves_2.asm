@@ -51,6 +51,8 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; HOPPIP
 	dw NoEvolutionMoves2        ; SKIPLOOM
 	dw NoEvolutionMoves2        ; JUMPLUFF
+	dw NoEvolutionMoves2        ; SUNKERN
+	dw SunfloraEvolutionMoves   ; SUNFLORA
 	dw NoEvolutionMoves2        ; YANMA
 	dw NoEvolutionMoves2        ; WOOPER
 	dw NoEvolutionMoves2        ; QUAGSIRE
@@ -60,6 +62,7 @@ EvolutionMovePointers2::
 	dw SlowkingEvolutionMoves   ; SLOWKING
 	dw NoEvolutionMoves2        ; MISDREAVUS
 	dw NoEvolutionMoves2        ; UNOWN
+	dw WobbuffetEvolutionMoves  ; WOBBUFFET
 	dw NoEvolutionMoves2        ; GIRAFARIG
 	dw NoEvolutionMoves2        ; PINECO
 	dw ForretressEvolutionMoves ; FORRETRESS
@@ -81,6 +84,7 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; CORSOLA_G
 	dw NoEvolutionMoves2        ; REMORAID
 	dw OctilleryEvolutionMoves  ; OCTILLERY
+	dw NoEvolutionMoves2        ; DELIBIRD
 	dw NoEvolutionMoves2        ; MANTINE
 	dw NoEvolutionMoves2        ; SKARMORY
 	dw NoEvolutionMoves2        ; HOUNDOUR
@@ -179,6 +183,10 @@ SudowoodoEvolutionMoves:
 	dw SLAM
 	db 0 ; no more evolution moves
 
+SunfloraEvolutionMoves:
+	dw POUND
+	db 0 ; no more evolution moves
+
 EspeonEvolutionMoves:
 	dw CONFUSION
 	db 0 ; no more evolution moves
@@ -189,6 +197,13 @@ UmbreonEvolutionMoves:
 
 SlowkingEvolutionMoves:
 	dw HIDDEN_POWER
+	db 0 ; no more evolution moves
+
+WobbuffetEvolutionMoves:
+	dw COUNTER
+	dw MIRROR_COAT
+	dw SAFEGUARD
+	dw DESTINY_BOND
 	db 0 ; no more evolution moves
 
 ForretressEvolutionMoves:

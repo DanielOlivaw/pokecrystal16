@@ -1,6 +1,7 @@
 	db "GOLDFISH@" ; species name
 	dw 403, 860 ; height, weight
 
+		;"123456789123456789"
 	db   "When autumn comes,"
 	next "the males patrol"
 	next "the area around"

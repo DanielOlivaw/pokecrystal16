@@ -141,8 +141,10 @@ AlphabeticalPokedexOrder:
 	dw DARTRIX
 	dw DECIDUEYE
 	dw DEDENNE
+	dw DEERLING
 	dw DEINO
 	dw DELCATTY
+	dw DELIBIRD
 	dw DELPHOX
 	dw DEOXYS
 	dw DEWGONG
@@ -183,6 +185,7 @@ AlphabeticalPokedexOrder:
 	dw EELEKTRIK
 	dw EELEKTROSS
 	dw EEVEE
+	dw EISCUE
 	dw ELECTABUZZ
 	dw ELECTIVIRE
 	dw ELECTRIKE
@@ -194,6 +197,7 @@ AlphabeticalPokedexOrder:
 	dw ESPURR
 	dw EXEGGCUTE
 	dw EXEGGUTOR_A
+	dw EXPLOUD
 	dw FARFETCH_D
 	dw FEEBAS
 	dw FENNEKIN
@@ -241,6 +245,7 @@ AlphabeticalPokedexOrder:
 	dw GLOOM
 	dw GOGOAT
 	dw GOLBAT
+	dw GOLDEEN
 	dw GOLDUCK
 	dw GOLEM
 	dw GOLETT
@@ -333,6 +338,8 @@ AlphabeticalPokedexOrder:
 	dw LEAVANNY
 	dw LEDIAN
 	dw LEDYBA
+	dw LICKILICKY
+	dw LICKITUNG
 	dw LIEPARD
 	dw LILEEP
 	dw LILLIGANT
@@ -342,6 +349,7 @@ AlphabeticalPokedexOrder:
 	dw LOMBRE
 	dw LOPUNNY
 	dw LOTAD
+	dw LOUDRED
 	dw LUCARIO
 	dw LUDICOLO
 	dw LUGIA
@@ -454,6 +462,9 @@ AlphabeticalPokedexOrder:
 	dw PHANTUMP
 	dw PHEROMOSA
 	dw PICHU
+	dw PIDGEOT
+	dw PIDGEOTTO
+	dw PIDGEY
 	dw PIKACHU
 	dw PIKIPEK
 	dw PILOSWINE
@@ -474,6 +485,7 @@ AlphabeticalPokedexOrder:
 	dw PUPITAR
 	dw PURRLOIN
 	dw PURUGLY
+	dw PYUKUMUKU
 	dw QUAGSIRE
 	dw QUILAVA
 	dw QUILLADIN
@@ -513,6 +525,7 @@ AlphabeticalPokedexOrder:
 	dw SANDSHREW_A
 	dw SANDSLASH_A
 	dw SANDYGAST
+	dw SAWSBUCK
 	dw SCATTERBUG
 	dw SCEPTILE
 	dw SCIZOR
@@ -521,6 +534,7 @@ AlphabeticalPokedexOrder:
 	dw SCRAGGY
 	dw SCYTHER
 	dw SEADRA
+	dw SEAKING
 	dw SEALEO
 	dw SEEDOT
 	dw SEEL
@@ -578,6 +592,7 @@ AlphabeticalPokedexOrder:
 	dw STARMIE
 	dw STARYU
 	dw STEELIX
+	dw STONJOURNR
 	dw STOUTLAND
 	dw STRAIGAR
 	dw STUFFUL
@@ -585,16 +600,20 @@ AlphabeticalPokedexOrder:
 	dw STUNKY
 	dw SUDOWOODO
 	dw SUICUNE
+	dw SUNFLORA
+	dw SUNKERN
 	dw SURSKIT
 	dw SWABLU
 	dw SWADLOON
 	dw SWALOT
 	dw SWAMPERT
 	dw SWANDAME
+	dw SWELLOW
 	dw SWINUB
 	dw SWIRLIX
 	dw SWOOBAT
 	dw SYLVEON
+	dw TAILLOW
 	dw TALONFLAME
 	dw TANGEL
 	dw TANGELA
@@ -664,13 +683,16 @@ AlphabeticalPokedexOrder:
 	dw WHIMSICOTT
 	dw WHIRLIPEDE
 	dw WHISCASH
+	dw WHISMUR
 	dw WIGGLYTUFF
 	dw WIMPOD
 	dw WINGULL
+	dw WOBBUFFET
 	dw WOLFROST
 	dw WOOBAT
 	dw WOOLOO
 	dw WOOPER
+	dw WYNAUT
 	dw XATU
 	dw XERNEAS
 	dw XURKITREE
@@ -681,6 +703,8 @@ AlphabeticalPokedexOrder:
 	dw ZANGOOSE
 	dw ZAPDOS_G
 	dw ZIGZAGOON_G
+	dw ZOROARK
+	dw ZORUA
 	dw ZUBAT
 	dw ZWEILOUS
     dw ZYGARDE

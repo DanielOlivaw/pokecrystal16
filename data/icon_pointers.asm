@@ -244,6 +244,7 @@ IconPointers:
 	dw MorelullIcon
 	dw AipomIcon
 	dw SandygastIcon
+	dw PyukumukuIcon
 	dw Type_nullIcon
 	dw SilvallyIcon
 	dw TogedemaruIcon
@@ -263,4 +264,3 @@ IconPointers:
 	dw SizzlipedeIcon
 	dw ClobbopusIcon
 	dw PolteageistIcon
-	dw PincurchinIcon

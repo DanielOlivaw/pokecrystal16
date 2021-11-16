@@ -46,9 +46,13 @@ EvosAttacksPointers5::
 	dw CarracostaEvosAttacks
 	dw ArchenEvosAttacks
 	dw ArcheopsEvosAttacks
+	dw ZoruaEvosAttacks
+	dw ZoroarkEvosAttacks
 	dw SolosisEvosAttacks
 	dw DuosionEvosAttacks
 	dw ReuniclusEvosAttacks
+	dw DeerlingEvosAttacks
+	dw SawsbuckEvosAttacks
 	dw FrillishEvosAttacks
 	dw JellicentEvosAttacks
 	dw JoltikEvosAttacks
@@ -982,6 +986,46 @@ ArcheopsEvosAttacks:
 	dbw 57, ENDEAVOR
 	db 0 ; no more level-up moves
 
+ZoruaEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, ZOROARK
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 4, PURSUIT
+	dbw 8, HONE_CLAWS
+	dbw 12, FURY_SWIPES
+	dbw 16, FAINT_ATTACK
+	dbw 20, SCARY_FACE
+	dbw 24, KNOCK_OFF
+	dbw 28, FAKE_TEARS
+	dbw 32, PUNISHMENT
+	dbw 36, AGILITY
+	; dbw 40, NIGHT_DAZE
+	dbw 44, NASTY_PLOT
+	dbw 48, FOUL_PLAY
+	db 0 ; no more level-up moves
+
+ZoroarkEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, U_TURN
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 4, PURSUIT
+	dbw 8, HONE_CLAWS
+	dbw 12, FURY_SWIPES
+	dbw 16, FAINT_ATTACK
+	dbw 20, SCARY_FACE
+	dbw 24, KNOCK_OFF
+	dbw 28, FAKE_TEARS
+	dbw 29, NIGHT_SLASH
+	dbw 29, NIGHT_SLASH
+	dbw 34, PUNISHMENT
+	dbw 40, AGILITY
+	; dbw 46, NIGHT_DAZE
+	dbw 52, NASTY_PLOT
+	dbw 58, FOUL_PLAY
+	db 0 ; no more level-up moves
+
 SolosisEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 32, TR_ANYTIME, DUOSION
 	db 0 ; no more evolutions
@@ -1041,6 +1085,44 @@ ReuniclusEvosAttacks:
 	dbw 44, PSYCHIC_M
 	dbw 50, PAIN_SPLIT
 	dbw 56, FUTURE_SIGHT
+	db 0 ; no more level-up moves
+
+DeerlingEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, SAWSBUCK
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, SAND_ATTACK
+	dbw 8, DOUBLE_KICK
+	dbw 12, LEECH_SEED
+	dbw 16, FAINT_ATTACK
+	dbw 20, AROMATHERAPY
+	dbw 24, ENERGY_BALL
+	dbw 28, TAKE_DOWN
+	dbw 32, WEATHERVANE
+	dbw 36, JUMP_KICK
+	dbw 40, CHARM
+	dbw 44, DOUBLE_EDGE
+	dbw 48, SOLARBEAM
+	db 0 ; no more level-up moves
+
+SawsbuckEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, SAND_ATTACK
+	dbw 8, DOUBLE_KICK
+	dbw 12, LEECH_SEED
+	dbw 16, FAINT_ATTACK
+	dbw 20, AROMATHERAPY
+	dbw 24, ENERGY_BALL
+	dbw 28, TAKE_DOWN
+	dbw 32, WEATHERVANE
+	dbw 33, HORN_LEECH
+	dbw 38, JUMP_KICK
+	dbw 44, CHARM
+	dbw 50, DOUBLE_EDGE
+	dbw 56, SOLARBEAM
 	db 0 ; no more level-up moves
 
 FrillishEvosAttacks:

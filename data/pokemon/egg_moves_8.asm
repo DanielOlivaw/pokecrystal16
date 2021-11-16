@@ -45,6 +45,8 @@ EggMovePointers8::
 	dw PincurchinEggMoves
 	dw SnomEggMoves
 	dw NoEggMoves8
+	dw StonjournrEggMoves
+	dw EiscueEggMoves
 	dw CufantEggMoves
 	dw NoEggMoves8
 	dw NoEggMoves8
@@ -183,6 +185,22 @@ SnomEggMoves:
 	dw SILVER_WIND
 	dw MIRROR_COAT
 	dw ICICLE_SPEAR
+	dw -1 ; end
+
+StonjournrEggMoves:
+	dw ANCIENTPOWER
+	dw ROCK_BLAST
+	dw IRON_DEFENSE
+	dw METEOR_BEAM
+	dw -1 ; end
+
+EiscueEggMoves:
+	dw AQUA_RING
+	dw BELLY_DRUM
+	dw DOUBLE_EDGE
+	dw HEAD_SMASH
+	dw ICICLE_CRASH
+	dw SOAK
 	dw -1 ; end
 
 CufantEggMoves:

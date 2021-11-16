@@ -20,6 +20,8 @@ EggMovePointers3::
 	dw SeedotEggMoves
 	dw NoEggMoves3
 	dw NoEggMoves3
+	dw TaillowEggMoves
+	dw NoEggMoves3
 	dw WingullEggMoves
 	dw NoEggMoves3
 	dw RaltsEggMoves
@@ -28,6 +30,9 @@ EggMovePointers3::
 	dw SurskitEggMoves
 	dw NoEggMoves3
 	dw ShroomishEggMoves
+	dw NoEggMoves3
+	dw WhismurEggMoves
+	dw NoEggMoves3
 	dw NoEggMoves3
 	dw MakuhitaEggMoves
 	dw NoEggMoves3
@@ -86,6 +91,7 @@ EggMovePointers3::
 	dw TropiusEggMoves
 	dw NoEggMoves3
 	dw AbsolEggMoves
+	dw NoEggMoves3
 	dw SnoruntEggMoves
 	dw NoEggMoves3
 	dw SphealEggMoves
@@ -208,6 +214,19 @@ SeedotEggMoves:
 	dw RAZOR_WIND
 	dw -1 ; end
 
+TaillowEggMoves:
+	dw BOOMBURST
+	dw BRAVE_BIRD
+	dw HURRICANE
+	dw PURSUIT
+	dw RAGE
+	dw REFRESH
+	dw ROOST
+	dw SKY_ATTACK
+	dw SUPERSONIC
+	dw WHIRLWIND
+	dw -1 ; end
+
 WingullEggMoves:
 	dw AIR_CUTTER
 	dw AQUA_RING
@@ -254,6 +273,20 @@ ShroomishEggMoves:
 	dw FOCUS_PUNCH
 	dw SEED_BOMB
 	dw WAKE_UP_SLAP
+	dw -1 ; end
+
+WhismurEggMoves:
+	dw CIRCLE_THROW
+	dw DISARMING_VOICE
+	dw ENDEAVOR
+	dw EXTRASENSORY
+	dw FAKE_TEARS
+	dw HAMMER_ARM
+	dw SMELLINGSALT
+	dw SMOKESCREEN
+	dw SNORE
+	dw TAKE_DOWN
+	dw WHIRLWIND
 	dw -1 ; end
 
 MakuhitaEggMoves:

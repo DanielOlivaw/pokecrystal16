@@ -240,6 +240,7 @@
 	const ICON_MORELULL
 	const ICON_AIPOM
 	const ICON_SANDYGAST
+	const ICON_PYUKUMUKU
 	const ICON_TYPE_NULL
 	const ICON_SILVALLY
 	const ICON_TOGEDEMARU
@@ -259,7 +260,6 @@
 	const ICON_SIZZLIPEDE
 	const ICON_CLOBBOPUS
 	const ICON_POLTEAGEIST
-	const ICON_PINCURCHIN
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def

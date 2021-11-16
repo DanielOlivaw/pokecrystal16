@@ -46,9 +46,13 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; CARRACOSTA
 	dw NoEvolutionMoves5         ; ARCHEN
 	dw NoEvolutionMoves5         ; ARCHEOPS
+	dw NoEvolutionMoves5         ; ZORUA
+	dw ZoroarkEvolutionMoves     ; ZOROARK
 	dw NoEvolutionMoves5         ; SOLOSIS
 	dw NoEvolutionMoves5         ; DUOSION
 	dw ReuniclusEvolutionMoves   ; REUNICLUS
+	dw NoEvolutionMoves5         ; DEERLING
+	dw SawsbuckEvolutionMoves    ; SAWSBUCK
 	dw NoEvolutionMoves5         ; FRILLISH
 	dw NoEvolutionMoves5         ; JELLICENT
 	dw NoEvolutionMoves5         ; JOLTIK
@@ -125,8 +129,16 @@ DarmanitanGEvolutionMoves:
 	dw ICICLE_CRASH
 	db 0 ; no more evolution moves
 
+ZoroarkEvolutionMoves:
+	dw NIGHT_SLASH
+	db 0 ; no more evolution moves
+
 ReuniclusEvolutionMoves:
 	dw HAMMER_ARM
+	db 0 ; no more evolution moves
+
+SawsbuckEvolutionMoves:
+	dw HORN_LEECH
 	db 0 ; no more evolution moves
 
 GalvantulaEvolutionMoves:

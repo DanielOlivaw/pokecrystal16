@@ -35,6 +35,7 @@ EvosAttacksPointers7::
 	dw GolisopodEvosAttacks
 	dw SandygastEvosAttacks
 	dw PalossandEvosAttacks
+	dw PyukumukuEvosAttacks
 	dw TypeNullEvosAttacks
 	dw SilvallyEvosAttacks
 	dw KomalaEvosAttacks
@@ -698,6 +699,22 @@ PalossandEvosAttacks:
 	dbw 46, EARTH_POWER
 	dbw 52, SHORE_UP
 	dbw 58, SANDSTORM
+	db 0 ; no more level-up moves
+
+PyukumukuEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, BATON_PASS
+	dbw 1, HARDEN
+	dbw 5, BIDE
+	dbw 10, SAFEGUARD
+	dbw 15, COUNTER
+	; dbw 20, PURIFY
+	dbw 25, CURSE
+	dbw 30, PAIN_SPLIT
+	dbw 35, RECOVER
+	dbw 40, SOAK
+	dbw 45, TOXIC
+	dbw 50, MEMENTO
 	db 0 ; no more level-up moves
 
 TypeNullEvosAttacks:

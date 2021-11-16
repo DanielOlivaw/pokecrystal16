@@ -45,6 +45,8 @@ EvosAttacksPointers8::
 	dw PincurchinEvosAttacks
 	dw SnomEvosAttacks
 	dw FrosmothEvosAttacks
+	dw StonjournrEvosAttacks
+	dw EiscueEvosAttacks
 	dw CufantEvosAttacks
 	dw CopperajahEvosAttacks
 	dw DracozoltEvosAttacks
@@ -807,6 +809,38 @@ FrosmothEvosAttacks:
 	dbw 45, AURORA_VEIL
 	dbw 50, BLIZZARD
 	dbw 55, QUIVER_DANCE
+	db 0 ; no more level-up moves
+
+StonjournrEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ROCK_THROW
+	dbw 1, BLOCK
+	dbw 5, ROCK_POLISH
+	dbw 10, ROCK_TOMB
+	dbw 15, STOMP
+	dbw 20, STEALTH_ROCK
+	dbw 25, BULLDOZE
+	dbw 30, ROCK_SLIDE
+	dbw 35, BODY_SLAM
+	dbw 40, HEAVY_SLAM
+	dbw 45, STONE_EDGE
+	dbw 50, MEGA_KICK
+	db 0 ; no more level-up moves
+
+EiscueEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POWDER_SNOW
+	dbw 1, TACKLE
+	dbw 5, MIST
+	dbw 10, WEATHER_BALL
+	dbw 15, ICY_WIND
+	dbw 20, HEADBUTT
+	dbw 25, AMNESIA
+	dbw 30, BRINE
+	dbw 35, FREEZE_DRY
+	dbw 40, HAIL
+	dbw 45, AURORA_VEIL
+	dbw 50, BLIZZARD
 	db 0 ; no more level-up moves
 
 CufantEvosAttacks:

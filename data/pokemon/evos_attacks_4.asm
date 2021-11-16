@@ -69,6 +69,7 @@ EvosAttacksPointers4::
 	dw AbomasnowEvosAttacks
 	dw WeavileEvosAttacks
 	dw MagnezoneEvosAttacks
+	dw LickilickyEvosAttacks
 	dw TangrowthEvosAttacks
 	dw ElectivireEvosAttacks
 	dw TogekissEvosAttacks
@@ -1449,6 +1450,27 @@ MagnezoneEvosAttacks:
 	dbw 51, LIGHT_SCREEN
 	dbw 56, LOCK_ON
 	dbw 61, ZAP_CANNON
+	db 0 ; no more level-up moves
+
+LickilickyEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, LICK
+	dbw 1, DEFENSE_CURL
+	dbw 4, SUPERSONIC
+	dbw 8, WRAP
+	dbw 12, DISABLE
+	dbw 16, STOMP
+	dbw 20, KNOCK_OFF
+	dbw 24, REFRESH
+	dbw 28, SLAM
+	dbw 32, ROLLOUT
+	dbw 36, SCREECH
+	dbw 40, CHIP_AWAY
+	dbw 44, ME_FIRST
+	dbw 48, POWER_WHIP
+	dbw 52, WRING_OUT
+	dbw 56, BELLY_DRUM
+	dbw 60, GYRO_BALL
 	db 0 ; no more level-up moves
 
 TangrowthEvosAttacks:

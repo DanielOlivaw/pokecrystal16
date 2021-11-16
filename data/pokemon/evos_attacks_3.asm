@@ -20,6 +20,8 @@ EvosAttacksPointers3::
 	dw SeedotEvosAttacks
 	dw NuzleafEvosAttacks
 	dw ShiftryEvosAttacks
+	dw TaillowEvosAttacks
+	dw SwellowEvosAttacks
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
 	dw RaltsEvosAttacks
@@ -29,6 +31,9 @@ EvosAttacksPointers3::
 	dw MasquerainEvosAttacks
 	dw ShroomishEvosAttacks
 	dw BreloomEvosAttacks
+	dw WhismurEvosAttacks
+	dw LoudredEvosAttacks
+	dw ExploudEvosAttacks
 	dw MakuhitaEvosAttacks
 	dw HariyamaEvosAttacks
 	dw AzurillEvosAttacks
@@ -86,6 +91,7 @@ EvosAttacksPointers3::
 	dw TropiusEvosAttacks
 	dw ChimechoEvosAttacks
 	dw AbsolEvosAttacks
+	dw WynautEvosAttacks
 	dw SnoruntEvosAttacks
 	dw GlalieEvosAttacks
 	dw SphealEvosAttacks
@@ -534,6 +540,40 @@ ShiftryEvosAttacks:
 	dbw 52, LEAF_BLADE
 	db 0 ; no more level-up moves
 
+TaillowEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 22, TR_ANYTIME, SWELLOW
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, GROWL
+	dbw 4, FOCUS_ENERGY
+	dbw 9, QUICK_ATTACK
+	dbw 13, WING_ATTACK
+	dbw 18, DOUBLE_TEAM
+	dbw 22, AERIAL_ACE
+	dbw 27, AGILITY
+	dbw 31, AIR_SLASH
+	dbw 36, ENDEAVOR
+	dbw 40, BRAVE_BIRD
+	dbw 45, REVERSAL
+	db 0 ; no more level-up moves
+
+SwellowEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, GROWL
+	dbw 4, FOCUS_ENERGY
+	dbw 9, QUICK_ATTACK
+	dbw 13, WING_ATTACK
+	dbw 18, DOUBLE_TEAM
+	dbw 21, PLUCK
+	dbw 23, AERIAL_ACE
+	dbw 29, AGILITY
+	dbw 34, AIR_SLASH
+	dbw 40, ENDEAVOR
+	dbw 45, BRAVE_BIRD
+	dbw 51, REVERSAL
+	db 0 ; no more level-up moves
+
 WingullEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 25, TR_ANYTIME, PELIPPER
 	db 0 ; no more evolutions
@@ -720,6 +760,67 @@ BreloomEvosAttacks:
 	dbw 44, SEED_BOMB
 	dbw 50, SPORE
 	dbw 56, DYNAMICPUNCH
+	db 0 ; no more level-up moves
+
+WhismurEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, LOUDRED
+	db 0 ; no more evolutions
+	dbw 1, ASTONISH
+	dbw 1, POUND
+	dbw 4, ECHOED_VOICE
+	dbw 8, HOWL
+	dbw 12, SUPERSONIC
+	dbw 16, REST
+	dbw 16, SLEEP_TALK
+	dbw 20, STOMP
+	dbw 24, ROAR
+	dbw 28, UPROAR
+	dbw 32, SCREECH
+	dbw 36, HYPER_VOICE
+	dbw 40, SYNCHRONOISE
+	db 0 ; no more level-up moves
+
+LoudredEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 40, TR_ANYTIME, EXPLOUD
+	db 0 ; no more evolutions
+	dbw 1, ASTONISH
+	dbw 1, POUND
+	dbw 4, ECHOED_VOICE
+	dbw 8, HOWL
+	dbw 12, SUPERSONIC
+	dbw 16, REST
+	dbw 16, SLEEP_TALK
+	dbw 19, BITE
+	dbw 21, STOMP
+	dbw 26, ROAR
+	dbw 31, UPROAR
+	dbw 36, SCREECH
+	dbw 41, HYPER_VOICE
+	dbw 46, SYNCHRONOISE
+	db 0 ; no more level-up moves
+
+ExploudEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ICE_FANG
+	dbw 1, FIRE_FANG
+	dbw 1, THUNDER_FANG
+	dbw 1, ASTONISH
+	dbw 1, POUND
+	dbw 4, ECHOED_VOICE
+	dbw 8, HOWL
+	dbw 12, SUPERSONIC
+	dbw 16, REST
+	dbw 16, SLEEP_TALK
+	dbw 19, BITE
+	dbw 21, STOMP
+	dbw 26, ROAR
+	dbw 31, UPROAR
+	dbw 36, SCREECH
+	dbw 39, CRUNCH
+	dbw 42, HYPER_VOICE
+	dbw 48, SYNCHRONOISE
+	dbw 54, BOOMBURST
+	dbw 60, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 MakuhitaEvosAttacks:
@@ -1933,6 +2034,19 @@ AbsolEvosAttacks:
 	dbw 50, RAZOR_WIND
 	dbw 53, FUTURE_SIGHT
 	dbw 57, PERISH_SONG
+	db 0 ; no more level-up moves
+
+WynautEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, WOBBUFFET
+	db 0 ; no more evolutions
+	dbw 1, SPLASH
+	dbw 1, CHARM
+	dbw 1, ENCORE
+	dbw 1, AMNESIA
+	dbw 15, COUNTER
+	dbw 15, MIRROR_COAT
+	dbw 15, SAFEGUARD
+	dbw 15, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 SnoruntEvosAttacks:

@@ -51,6 +51,8 @@ EggMovePointers2::
 	dw HoppipEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2
+	dw SunkernEggMoves
+	dw NoEggMoves2
 	dw YanmaEggMoves
 	dw WooperEggMoves
 	dw NoEggMoves2
@@ -59,6 +61,7 @@ EggMovePointers2::
 	dw MurkrowEggMoves
 	dw NoEggMoves2
 	dw MisdreavusEggMoves
+	dw NoEggMoves2
 	dw NoEggMoves2
 	dw GirafarigEggMoves
 	dw PinecoEggMoves
@@ -81,6 +84,7 @@ EggMovePointers2::
 	dw CorsolaGEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves2
+	dw DelibirdEggMoves
 	dw NoEggMoves2
 	dw SkarmoryEggMoves
 	dw HoundourEggMoves
@@ -386,6 +390,16 @@ HoppipEggMoves:
 	dw WEATHERVANE
 	dw -1 ; end
 
+SunkernEggMoves:
+	dw BIDE
+	dw ENCORE
+	dw GRASSWHISTLE
+	dw INGRAIN
+	dw LEECH_SEED
+	dw MORNING_SUN
+	dw SWEET_SCENT
+	dw -1 ; end
+
 YanmaEggMoves:
 	dw WHIRLWIND
 	dw REVERSAL
@@ -630,6 +644,23 @@ RemoraidEggMoves:
 	dw ROCK_BLAST
 	dw SNORE
 	dw SWIFT
+	dw -1 ; end
+
+DelibirdEggMoves:
+	dw AURORA_BEAM
+	dw AURORA_VEIL
+	dw COUNTER
+	dw DESTINY_BOND
+	dw FAKE_OUT
+	dw FREEZE_DRY
+	dw FUTURE_SIGHT
+	dw ICE_BALL
+	dw ICE_SHARD
+	dw MEMENTO
+	dw QUICK_ATTACK
+	dw RAPID_SPIN
+	dw SPIKES
+	dw SPLASH
 	dw -1 ; end
 
 SkarmoryEggMoves:

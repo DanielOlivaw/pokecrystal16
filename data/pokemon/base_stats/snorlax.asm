@@ -8,7 +8,7 @@
 	db 25 ; catch rate
 	db 189 ; base exp
 	db LEFTOVERS, LEFTOVERS ; items
-	db GENDER_F12_5 ; gender ratio
+	db GENDER_F50 ; gender ratio
 	db 40 ; step cycles to hatch
 	INCBIN "gfx/pokemon/snorlax/front.dimensions"
 	db 0, 0, 0, 0 ; padding

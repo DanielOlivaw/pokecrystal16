@@ -16,6 +16,9 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
+	dw PidgeyEggMoves
+	dw NoEggMoves1
+	dw NoEggMoves1
 	dw RattataAEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -89,12 +92,15 @@ EggMovePointers1:
 	dw NoEggMoves1
 	dw CuboneEggMoves
 	dw NoEggMoves1
+	dw LickitungEggMoves
 	dw KoffingEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw KangaskhanEggMoves
 	dw HorseaEggMoves
+	dw NoEggMoves1
+	dw GoldeenEggMoves
 	dw NoEggMoves1
 	dw NoEggMoves1
 	dw NoEggMoves1
@@ -176,6 +182,16 @@ SquirtleEggMoves:
 	dw MUDDY_WATER
 	dw REFRESH
 	dw FLIP_TURN
+	dw -1 ; end
+
+PidgeyEggMoves:
+	dw AIR_CUTTER
+	dw AIR_SLASH
+	dw BRAVE_BIRD
+	dw FAINT_ATTACK
+	dw FORESIGHT
+	dw PURSUIT
+	dw HEAT_WAVE
 	dw -1 ; end
 
 RattataAEggMoves:
@@ -579,6 +595,19 @@ CuboneEggMoves:
 	dw IRON_HEAD
 	dw -1 ; end
 
+LickitungEggMoves:
+	dw BELCH
+	dw HAMMER_ARM
+	dw THRASH
+	dw AMNESIA
+	dw BELLY_DRUM
+	dw BODY_SLAM
+	dw MAGNITUDE
+	dw MUDDY_WATER
+	dw SMELLINGSALT
+	dw SNORE
+	dw -1 ; end
+
 KoffingEggMoves:
 	dw SCREECH
 	dw PSYWAVE
@@ -631,6 +660,19 @@ HorseaEggMoves:
 	dw RAZOR_WIND
 	dw SCALE_SHOT
 	dw FLIP_TURN
+	dw -1 ; end
+
+GoldeenEggMoves:
+	dw ACUPRESSURE
+	dw AQUA_TAIL
+	dw HAZE
+	dw MUD_SLAP
+	dw PSYBEAM
+	dw BODY_SLAM
+	dw HYDRO_PUMP
+	dw SKULL_BASH
+	dw FLIP_TURN
+	dw SCALE_SHOT
 	dw -1 ; end
 
 ScytherEggMoves:

@@ -35,6 +35,7 @@ EggMovePointers7::
 	dw NoEggMoves7
 	dw SandygastEggMoves
 	dw NoEggMoves7
+	dw PyukumukuEggMoves
 	dw NoEggMoves7
 	dw NoEggMoves7
 	dw KomalaEggMoves
@@ -191,6 +192,14 @@ SandygastEggMoves:
 	dw STOCKPILE
 	dw SWALLOW
 	dw POLTERGEIST
+	dw -1 ; end
+
+PyukumukuEggMoves:
+	dw MIRROR_COAT
+	dw SPITE
+	dw SWAGGER
+	dw TICKLE
+	dw VENOM_DRENCH
 	dw -1 ; end
 
 KomalaEggMoves:

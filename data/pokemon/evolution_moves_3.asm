@@ -20,6 +20,8 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; SEEDOT
 	dw NuzleafEvolutionMoves    ; NUZLEAF
 	dw ShiftryEvolutionMoves    ; SHIFTRY
+	dw NoEvolutionMoves3        ; TAILLOW
+	dw SwellowEvolutionMoves    ; SWELLOW
 	dw NoEvolutionMoves3        ; WINGULL
 	dw PelipperEvolutionMoves   ; PELIPPER
 	dw NoEvolutionMoves3        ; RALTS
@@ -29,6 +31,9 @@ EvolutionMovePointers3::
 	dw MasquerainEvolutionMoves ; MASQUERAIN
 	dw NoEvolutionMoves3        ; SHROOMISH
 	dw BreloomEvolutionMoves    ; BRELOOM
+	dw NoEvolutionMoves3        ; WHISMUR
+	dw LoudredEvolutionMoves    ; LOUDRED
+	dw ExploudEvolutionMoves    ; EXPLOUD
 	dw NoEvolutionMoves3        ; MAKUHITA
 	dw NoEvolutionMoves3        ; HARIYAMA
 	dw NoEvolutionMoves3        ; AZURILL
@@ -86,6 +91,7 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; TROPIUS
 	dw NoEvolutionMoves3        ; CHIMECHO
 	dw NoEvolutionMoves3        ; ABSOL
+	dw NoEvolutionMoves3        ; WYNAUT
 	dw NoEvolutionMoves3        ; SNORUNT
 	dw GlalieEvolutionMoves     ; GLALIE
 	dw NoEvolutionMoves3        ; SPHEAL
@@ -164,6 +170,10 @@ ShiftryEvolutionMoves:
 	dw LEAF_TORNADO
 	db 0 ; no more evolution moves
 
+SwellowEvolutionMoves:
+	dw PLUCK
+	db 0 ; no more evolution moves
+
 PelipperEvolutionMoves:
 	dw PROTECT
 	db 0 ; no more evolution moves
@@ -179,6 +189,14 @@ MasquerainEvolutionMoves:
 
 BreloomEvolutionMoves:
 	dw MACH_PUNCH
+	db 0 ; no more evolution moves
+
+LoudredEvolutionMoves:
+	dw BITE
+	db 0 ; no more evolution moves
+
+ExploudEvolutionMoves:
+	dw CRUNCH
 	db 0 ; no more evolution moves
 
 MedichamEvolutionMoves:

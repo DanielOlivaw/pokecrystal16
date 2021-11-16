@@ -1,10 +1,11 @@
 	db "DELIVERY@" ; species name
-	dw 211, 350 ; height, weight
+	dw 211, 353 ; height, weight
 
-	db   "It always carries"
-	next "its food with it,"
-	next "wherever it goes."
+		;"123456789123456789"
+	db   "It carries its"
+	next "food bundled up in"
+	next "its tail."
 
 	page "If attacked, it"
 	next "throws its food at"
-	next "the opponent.@"
+	next "its opponent.@"

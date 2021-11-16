@@ -15,6 +15,9 @@ FirstEvoStages::
 	dw WEEDLE      ; WEEDLE
 	dw WEEDLE      ; KAKUNA
 	dw WEEDLE      ; BEEDRILL
+	dw PIDGEY      ; PIDGEY
+	dw PIDGEY      ; PIDGEOTTO
+	dw PIDGEY      ; PIDGEOT
 	dw RATTATA_A   ; RATTATA_A
 	dw RATTATA_A   ; RATICATE_A
 	dw PICHU       ; PIKACHU
@@ -88,6 +91,7 @@ FirstEvoStages::
 	dw EXEGGCUTE   ; EXEGGUTOR_A
 	dw CUBONE      ; CUBONE
 	dw CUBONE      ; MAROWAK
+	dw LICKITUNG   ; LICKITUNG
 	dw KOFFING     ; KOFFING
 	dw KOFFING     ; WEEZING_G
 	dw HAPPINY     ; CHANSEY
@@ -95,6 +99,8 @@ FirstEvoStages::
 	dw KANGASKHAN  ; KANGASKHAN
 	dw HORSEA      ; HORSEA
 	dw HORSEA      ; SEADRA
+	dw GOLDEEN     ; GOLDEEN
+	dw GOLDEEN     ; SEAKING
 	dw STARYU      ; STARYU
 	dw STARYU      ; STARMIE
 	dw MIME_JR     ; MR__MIME_G
@@ -175,6 +181,8 @@ FirstEvoStages::
 	dw HOPPIP      ; HOPPIP
 	dw HOPPIP      ; SKIPLOOM
 	dw HOPPIP      ; JUMPLUFF
+	dw SUNKERN     ; SUNKERN
+	dw SUNKERN     ; SUNFLORA
 	dw YANMA       ; YANMA
 	dw WOOPER      ; WOOPER
 	dw WOOPER      ; QUAGSIRE
@@ -184,6 +192,7 @@ FirstEvoStages::
 	dw SLOWPOKE    ; SLOWKING
 	dw MISDREAVUS  ; MISDREAVUS
 	dw UNOWN       ; UNOWN
+	dw WYNAUT      ; WOBBUFFET
 	dw GIRAFARIG   ; GIRAFARIG
 	dw PINECO      ; PINECO
 	dw PINECO      ; FORRETRESS
@@ -205,6 +214,7 @@ FirstEvoStages::
 	dw CORSOLA_G   ; CORSOLA_G
 	dw REMORAID    ; REMORAID
 	dw REMORAID    ; OCTILLERY
+	dw DELIBIRD    ; DELIBIRD
 	dw MANTYKE     ; MANTINE
 	dw SKARMORY    ; SKARMORY
 	dw HOUNDOUR    ; HOUNDOUR
@@ -245,6 +255,8 @@ FirstEvoStages::
 	dw SEEDOT      ; SEEDOT
 	dw SEEDOT      ; NUZLEAF
 	dw SEEDOT      ; SHIFTRY
+	dw TAILLOW     ; TAILLOW
+	dw TAILLOW     ; SWELLOW
 	dw WINGULL     ; WINGULL
 	dw WINGULL     ; PELIPPER
 	dw RALTS       ; RALTS
@@ -254,6 +266,9 @@ FirstEvoStages::
 	dw SURSKIT     ; MASQUERAIN
 	dw SHROOMISH   ; SHROOMISH
 	dw SHROOMISH   ; BRELOOM
+	dw WHISMUR     ; WHISMUR
+	dw WHISMUR     ; LOUDRED
+	dw WHISMUR     ; EXPLOUD
 	dw MAKUHITA    ; MAKUHITA
 	dw MAKUHITA    ; HARIYAMA
 	dw AZURILL     ; AZURILL
@@ -311,6 +326,7 @@ FirstEvoStages::
 	dw TROPIUS     ; TROPIUS
 	dw CHINGLING   ; CHIMECHO
 	dw ABSOL       ; ABSOL
+	dw WYNAUT      ; WYNAUT
 	dw SNORUNT     ; SNORUNT
 	dw SNORUNT     ; GLALIE
 	dw SPHEAL      ; SPHEAL
@@ -405,6 +421,7 @@ FirstEvoStages::
 	dw SNOVER      ; ABOMASNOW
 	dw SNEASEL     ; WEAVILE
 	dw MAGNEMITE   ; MAGNEZONE
+	dw LICKITUNG   ; LICKILICKY
 	dw TANGEL      ; TANGROWTH
 	dw ELEKID      ; ELECTIVIRE
 	dw TOGEPI      ; TOGEKISS
@@ -475,9 +492,13 @@ FirstEvoStages::
 	dw TIRTOUGA    ; CARRACOSTA
 	dw ARCHEN      ; ARCHEN
 	dw ARCHEN      ; ARCHEOPS
+	dw ZORUA       ; ZORUA
+	dw ZORUA       ; ZOROARK
 	dw SOLOSIS     ; SOLOSIS
 	dw SOLOSIS     ; DUOSION
 	dw SOLOSIS     ; REUNICLUS
+	dw DEERLING    ; DEERLING
+	dw DEERLING    ; SAWSBUCK
 	dw FRILLISH    ; FRILLISH
 	dw FRILLISH    ; JELLICENT
 	dw JOLTIK      ; JOLTIK
@@ -606,6 +627,7 @@ FirstEvoStages::
 	dw WIMPOD      ; GOLISOPOD
 	dw SANDYGAST   ; SANDYGAST
 	dw SANDYGAST   ; PALOSSAND
+	dw PYUKUMUKU   ; PYUKUMUKU
 	dw TYPE__NULL  ; TYPE__NULL
 	dw TYPE__NULL  ; SILVALLY
 	dw KOMALA      ; KOMALA
@@ -671,6 +693,8 @@ FirstEvoStages::
 	dw PINCURCHIN  ; PINCURCHIN
 	dw SNOM        ; SNOM
 	dw SNOM        ; FROSMOTH
+	dw STONJOURNR  ; STONJOURNR
+	dw EISCUE      ; EISCUE
 	dw CUFANT      ; CUFANT
 	dw CUFANT      ; COPPERAJAH
 	dw DRACOZOLT   ; DRACOZOLT

@@ -35,6 +35,7 @@ EvolutionMovePointers7::
 	dw GolisopodEvolutionMoves  ; GOLISOPOD
 	dw NoEvolutionMoves7        ; SANDYGAST
 	dw PalossandEvolutionMoves  ; PALOSSAND
+	dw NoEvolutionMoves7        ; PYUKUMUKU
 	dw NoEvolutionMoves7        ; TYPE__NULL
 	dw SilvallyEvolutionMoves   ; SILVALLY
 	dw NoEvolutionMoves7        ; KOMALA

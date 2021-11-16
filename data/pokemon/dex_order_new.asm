@@ -16,6 +16,9 @@ NewPokedexOrder:
 	dw WEEDLE
 	dw KAKUNA
 	dw BEEDRILL
+	dw PIDGEY
+	dw PIDGEOTTO
+	dw PIDGEOT
 	dw RATTATA_A
 	dw RATICATE_A
 	dw PICHU
@@ -100,6 +103,8 @@ NewPokedexOrder:
 	dw EXEGGUTOR_A
 	dw CUBONE
 	dw MAROWAK
+	dw LICKITUNG
+	dw LICKILICKY
 	dw KOFFING
 	dw WEEZING_G
 	dw HAPPINY
@@ -111,6 +116,8 @@ NewPokedexOrder:
 	dw KANGASKHAN
 	dw HORSEA
 	dw SEADRA
+	dw GOLDEEN
+	dw SEAKING
 	dw KINGDRA
 	dw STARYU
 	dw STARMIE
@@ -200,6 +207,8 @@ NewPokedexOrder:
 	dw HOPPIP
 	dw SKIPLOOM
 	dw JUMPLUFF
+	dw SUNKERN
+	dw SUNFLORA
 	dw YANMA
 	dw YANMEGA
 	dw WOOPER
@@ -209,6 +218,8 @@ NewPokedexOrder:
 	dw MISDREAVUS
 	dw MISMAGIUS
 	dw UNOWN
+	dw WYNAUT
+	dw WOBBUFFET
 	dw GIRAFARIG
 	dw PINECO
 	dw FORRETRESS
@@ -232,6 +243,7 @@ NewPokedexOrder:
 	dw CURSOLA
 	dw REMORAID
 	dw OCTILLERY
+	dw DELIBIRD
 	dw MANTYKE
 	dw MANTINE
 	dw SKARMORY
@@ -270,6 +282,8 @@ NewPokedexOrder:
 	dw SEEDOT
 	dw NUZLEAF
 	dw SHIFTRY
+	dw TAILLOW
+	dw SWELLOW
 	dw WINGULL
 	dw PELIPPER
 	dw RALTS
@@ -280,6 +294,9 @@ NewPokedexOrder:
 	dw MASQUERAIN
 	dw SHROOMISH
 	dw BRELOOM
+	dw WHISMUR
+	dw LOUDRED
+	dw EXPLOUD
 	dw MAKUHITA
 	dw HARIYAMA
 	dw NOSEPASS
@@ -484,9 +501,13 @@ NewPokedexOrder:
 	dw CARRACOSTA
 	dw ARCHEN
 	dw ARCHEOPS
+	dw ZORUA
+	dw ZOROARK
 	dw SOLOSIS
 	dw DUOSION
 	dw REUNICLUS
+	dw DEERLING
+	dw SAWSBUCK
 	dw FRILLISH
 	dw JELLICENT
 	dw JOLTIK
@@ -614,6 +635,7 @@ NewPokedexOrder:
 	dw GOLISOPOD
 	dw SANDYGAST
 	dw PALOSSAND
+	dw PYUKUMUKU
 	dw TYPE__NULL
 	dw SILVALLY
 	dw KOMALA
@@ -674,6 +696,8 @@ NewPokedexOrder:
 	dw PINCURCHIN
 	dw SNOM
 	dw FROSMOTH
+	dw STONJOURNR
+	dw EISCUE
 	dw CUFANT
 	dw COPPERAJAH
 	dw DRACOZOLT

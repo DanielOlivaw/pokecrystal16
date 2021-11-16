@@ -30,6 +30,9 @@
 	const WEEDLE     ; 0d
 	const KAKUNA     ; 0e
 	const BEEDRILL   ; 0f
+	const PIDGEY     ; 10
+	const PIDGEOTTO  ; 11
+	const PIDGEOT    ; 12
 	const RATTATA_A
 	const RATICATE_A
 	const PIKACHU    ; 19
@@ -103,6 +106,7 @@
 	const EXEGGUTOR_A
 	const CUBONE     ; 68
 	const MAROWAK    ; 69
+	const LICKITUNG  ; 6c
 	const KOFFING    ; 6d
 	const WEEZING_G
 	const CHANSEY    ; 71
@@ -110,6 +114,8 @@
 	const KANGASKHAN ; 73
 	const HORSEA     ; 74
 	const SEADRA     ; 75
+	const GOLDEEN    ; 76
+	const SEAKING    ; 77
 	const STARYU     ; 78
 	const STARMIE    ; 79
 	const MR__MIME_G
@@ -192,6 +198,8 @@ JOHTO_BETA_POKEMON EQU const_value
 	const HOPPIP     ; bb
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd
+	const SUNKERN    ; bf
+	const SUNFLORA   ; c0
 	const YANMA      ; c1
 	const WOOPER     ; c2
 	const QUAGSIRE   ; c3
@@ -201,6 +209,7 @@ JOHTO_BETA_POKEMON EQU const_value
 	const SLOWKING   ; c7
 	const MISDREAVUS ; c8
 	const UNOWN      ; c9
+	const WOBBUFFET  ; ca
 	const GIRAFARIG  ; cb
 	const PINECO     ; cc
 	const FORRETRESS ; cd
@@ -222,6 +231,7 @@ JOHTO_BETA_POKEMON EQU const_value
 	const CORSOLA_G
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
+	const DELIBIRD   ; e1
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
@@ -263,6 +273,8 @@ JOHTO_POKEMON EQU const_value
 	const SEEDOT
 	const NUZLEAF
 	const SHIFTRY
+	const TAILLOW
+	const SWELLOW
 	const WINGULL
 	const PELIPPER
 	const RALTS
@@ -272,6 +284,9 @@ JOHTO_POKEMON EQU const_value
 	const MASQUERAIN
 	const SHROOMISH
 	const BRELOOM
+	const WHISMUR
+	const LOUDRED
+	const EXPLOUD
 	const MAKUHITA
 	const HARIYAMA
 	const AZURILL
@@ -329,6 +344,7 @@ JOHTO_POKEMON EQU const_value
 	const TROPIUS
 	const CHIMECHO
 	const ABSOL
+	const WYNAUT
 	const SNORUNT
 	const GLALIE
 	const SPHEAL
@@ -424,6 +440,7 @@ HOENN_POKEMON EQU const_value
 	const ABOMASNOW
 	const WEAVILE
 	const MAGNEZONE
+	const LICKILICKY
 	const TANGROWTH
 	const ELECTIVIRE
 	const TOGEKISS
@@ -495,9 +512,13 @@ SINNOH_POKEMON EQU const_value
 	const CARRACOSTA
 	const ARCHEN
 	const ARCHEOPS
+	const ZORUA
+	const ZOROARK
 	const SOLOSIS
 	const DUOSION
 	const REUNICLUS
+	const DEERLING
+	const SAWSBUCK
 	const FRILLISH
 	const JELLICENT
 	const JOLTIK
@@ -628,6 +649,7 @@ KALOS_POKEMON EQU const_value
 	const GOLISOPOD
 	const SANDYGAST
 	const PALOSSAND
+	const PYUKUMUKU
 	const TYPE__NULL
 	const SILVALLY
 	const KOMALA
@@ -694,6 +716,8 @@ ALOLA_POKEMON EQU const_value
 	const PINCURCHIN
 	const SNOM
 	const FROSMOTH
+	const STONJOURNR
+	const EISCUE
 	const CUFANT
 	const COPPERAJAH
 	const DRACOZOLT
