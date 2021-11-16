@@ -639,6 +639,7 @@ MoveDescriptions1:
 	dw FlipTurnDescription
 	dw PartingShotDescription
 	dw NightDazeDescription
+	dw PurifyDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -2643,5 +2644,9 @@ CottonGuardDescription:
 ; FlyingPressDescription:
 	; db   "A FIGHTING- and"
 	; next "FLYING-type move.@"
+
+PurifyDescription:
+	db   "Uses foe's status"
+	next "to heal user's HP.@"
 
 		;"123456789123456789"

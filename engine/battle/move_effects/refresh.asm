@@ -20,7 +20,7 @@ BattleCommand_Refresh:
 	ld [hl], a
 
 	farcall AnimateCurrentMove
-	ld hl, StatusReturnedToNormalText
+	ld hl, UserStatusReturnedToNormalText
 	call StdBattleTextbox
 
 	ldh a, [hBattleTurn]

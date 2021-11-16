@@ -632,4 +632,5 @@ MoveNames::
 	db "FLIP TURN@"
 	db "PARTING SHOT@"
 	db "NIGHT DAZE@"
+	db "PURIFY@"
 	  ;"123456123456@"

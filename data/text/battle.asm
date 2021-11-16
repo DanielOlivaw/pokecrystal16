@@ -852,8 +852,14 @@ SoothingAromaText:
 	line "wafted through!"
 	prompt
 
-StatusReturnedToNormalText:
+UserStatusReturnedToNormalText:
 	text "<USER>'s"
+	line "status returned to"
+	cont "normal!"
+	prompt
+
+TargetStatusReturnedToNormalText:
+	text "<TARGET>'s"
 	line "status returned to"
 	cont "normal!"
 	prompt

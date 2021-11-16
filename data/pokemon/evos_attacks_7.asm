@@ -708,7 +708,7 @@ PyukumukuEvosAttacks:
 	dbw 5, BIDE
 	dbw 10, SAFEGUARD
 	dbw 15, COUNTER
-	; dbw 20, PURIFY
+	dbw 20, PURIFY
 	dbw 25, CURSE
 	dbw 30, PAIN_SPLIT
 	dbw 35, RECOVER

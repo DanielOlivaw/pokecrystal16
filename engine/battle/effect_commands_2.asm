@@ -119,6 +119,7 @@ INCLUDE "engine/battle/move_effects/trump_card.asm"
 INCLUDE "engine/battle/move_effects/stat_up_3.asm"
 INCLUDE "engine/battle/move_effects/electro_ball.asm"
 INCLUDE "engine/battle/move_effects/gyro_ball.asm"
+INCLUDE "engine/battle/move_effects/purify.asm"
 
 CheckSafeguardEffect:
 ; checksafeguard

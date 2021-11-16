@@ -660,6 +660,7 @@ BattleAnimations::
 	dw BattleAnim_FlipTurn
 	dw BattleAnim_PartingShot
 	dw BattleAnim_NightDaze
+	dw BattleAnim_Purify
 
 	dw BattleAnim_SweetScent2
 
@@ -4101,12 +4102,17 @@ BattleAnim_BellyDrum:
 
 BattleAnim_SludgeBomb:
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_POISON
+	anim_call BattleAnim_Purify
+	anim_call BattleAnim_SludgeBomb_branch_cbc15
+	anim_wait 64
+	anim_ret
+
+BattleAnim_Purify:
+	anim_1gfx ANIM_GFX_EGG
 	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
 	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
 	anim_wait 36
-	anim_call BattleAnim_SludgeBomb_branch_cbc15
-	anim_wait 64
 	anim_ret
 
 BattleAnim_MudSlap:
