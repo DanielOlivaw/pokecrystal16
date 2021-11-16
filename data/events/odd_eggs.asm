@@ -6,33 +6,35 @@ ENDM
 OddEggProbabilities:
 prob_total = 0
 ; Pichu
-	prob 7
+	prob 6
 ; Cleffa
-	prob 8
+	prob 7
 ; Igglybuff
-	prob 8
+	prob 7
 ; Elekid
 	prob 7
 ; Azurill
+	prob 7
+; Wynaut
 	prob 7
 ; Budew
 	prob 7
 ; Chingling
 	prob 7
 ; Bonsly
-	prob 7
+	prob 6
 ; Mime Jr.
 	prob 7
 ; Happiny
 	prob 7
 ; Munchlax
-	prob 7
+	prob 6
 ; Riolu
-	prob 7
+	prob 6
 ; Mantyke
 	prob 7
 ; Toxel
-	prob 7
+	prob 6
 
 OddEggSpecies:
 	dw PICHU
@@ -40,6 +42,7 @@ OddEggSpecies:
 	dw IGGLYBUFF
 	dw ELEKID
 	dw AZURILL
+	dw WYNAUT
 	dw BUDEW
 	dw CHINGLING
 	dw BONSLY
@@ -56,6 +59,7 @@ OddEggMoves:
 	dw SING, POUND, DEFENSE_CURL, METRONOME          ; IGGLYBUFF
 	dw QUICK_ATTACK, LEER, THUNDERSHOCK, METRONOME   ; ELEKID
 	dw SPLASH, WATER_GUN, TAIL_WHIP, METRONOME       ; AZURILL
+	dw CHARM, ENCORE, AMNESIA, METRONOME             ; WYNAUT
 	dw ABSORB, GROWTH, METRONOME, NO_MOVE            ; BUDEW
 	dw WRAP, GROWL, ASTONISH, METRONOME              ; CHINGLING
 	dw FAKE_TEARS, FLAIL, ROCK_THROW, METRONOME      ; BONSLY
@@ -211,6 +215,35 @@ OddEggs:
 	bigdw 7 ; Spd
 	bigdw 7 ; SAtk
 	bigdw 9 ; SDef
+	db "EGG@@@@@@@@"
+
+	; WYNAUT
+	db 0 ; Species, will be filled on load
+	db NO_ITEM
+	db 0, 0, 0, 0 ; Moves, will be filled on load
+	dw 00360 ; OT ID
+	dt 125 ; Exp
+	;; Stat exp
+	; bigdw 0
+	; bigdw 0
+	; bigdw 0
+	; bigdw 0
+	; bigdw 0
+	db 0, 0, 0, 0, 0, 0 ; EVs
+	db 0, 0, 0, 0 ; padding
+	dn 2, 10, 10, 10 ; DVs
+	db 20, 5, 20, 10 ; PP
+	db 20 ; Step cycles to hatch
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 5 ; Level
+	db 0, 0 ; Status
+	bigdw 0 ; HP
+	bigdw 25 ; Max HP
+	bigdw 8 ; Atk
+	bigdw 11 ; Def
+	bigdw 7 ; Spd
+	bigdw 8 ; SAtk
+	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
 	; BUDEW
