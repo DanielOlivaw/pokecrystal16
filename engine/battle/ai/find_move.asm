@@ -99,6 +99,7 @@ FindMove_AI_Smart_Scoring:
 	dww HIDDEN_POWER,    AI_Smart_HiddenPower
 	dww JUDGEMENT,       AI_Smart_Judgement
 	dww MULTI_ATTACK,    AI_Smart_Judgement
+	dww PURIFY,          AI_Smart_Purify
 	db -1 ; end
 
 AI_Smart_Cut:
@@ -1182,6 +1183,7 @@ AI_Smart_Refresh:
 
 AI_Smart_Swallow:
 AI_Smart_Wish:
+AI_Smart_Purify:
 	pop hl
 	callfar AI_Smart_Heal
 	ret
@@ -1979,6 +1981,7 @@ FindMove_AI_Redundant:
 	dww SAFEGUARD,     .Safeguard
 	dww FOCUS_ENERGY,  .FocusEnergy
 	dww MIST,          .Mist
+	dww PURIFY,        .Purify
 	db -1 ; end
 
 .MagicPowder:
@@ -2265,6 +2268,14 @@ FindMove_AI_Redundant:
 	cp 3
 	jr z, .Redundant
 	jr .NotRedundant
+
+.Purify:
+	ld a, [wBattleMonStatus]
+	and a
+	jr z, .Redundant
+	farcall AICheckEnemyMaxHP
+	jr nc, .NotRedundant
+	jr .Redundant
 
 .Swallow:
 	ld a, [wEnemyStockpileCount]
