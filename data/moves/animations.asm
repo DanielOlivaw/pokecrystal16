@@ -659,6 +659,7 @@ BattleAnimations::
 	dw BattleAnim_VoltSwitch
 	dw BattleAnim_FlipTurn
 	dw BattleAnim_PartingShot
+	dw BattleAnim_NightDaze
 
 	dw BattleAnim_SweetScent2
 
@@ -3203,6 +3204,7 @@ BattleAnim_BraveBird:
 	anim_ret
 
 BattleAnim_NightShade:
+BattleAnim_NightDaze:
 	anim_1gfx ANIM_GFX_HIT
 	anim_bgp $1b
 	anim_obp1 $1b

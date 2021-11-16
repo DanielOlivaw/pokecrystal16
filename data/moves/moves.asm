@@ -649,4 +649,5 @@ Moves1:
 	move EFFECT_U_TURN,             70, ELECTRIC, SPECIAL,  100, 20,   0 ; VOLT_SWITCH
 	move EFFECT_U_TURN,             60, WATER,    PHYSICAL, 100, 20,   0 ; FLIP_TURN
 	move EFFECT_PARTING_SHOT,        0, DARK,     STATUS,   100, 20,   0 ; PARTING_SHOT
+	move EFFECT_ACCURACY_DOWN_HIT,  85, DARK,     SPECIAL,   95, 10,  40 ; NIGHT_DAZE
 	;    Effect                   Power Type      Category  Acc  PP   EC   Name

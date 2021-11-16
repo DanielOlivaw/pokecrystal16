@@ -638,6 +638,7 @@ MoveDescriptions1:
 	dw VoltSwitchDescription
 	dw FlipTurnDescription
 	dw PartingShotDescription
+	dw NightDazeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1820,6 +1821,8 @@ FoulPlayDescription:
 	next "power against it.@"
 
 LeafTornadoDescription:
+MudBombDescription:
+NightDazeDescription:
 	db   "An attack that may"
 	next "reduce accuracy.@"
 
@@ -1866,10 +1869,6 @@ BraveBirdDescription:
 BrineDescription:
 	db   "Stronger if foe"
 	next "is below 1/2 HP.@"
-
-MudBombDescription:
-	db   "An attack that may"
-	next "reduce accuracy.@"
 
 VenomDrenchDescription:
 	db   "Lowers the stats"

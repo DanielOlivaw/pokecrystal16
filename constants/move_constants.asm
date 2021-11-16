@@ -638,6 +638,7 @@
 	const VOLT_SWITCH
 	const FLIP_TURN
 	const PARTING_SHOT
+	const NIGHT_DAZE
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

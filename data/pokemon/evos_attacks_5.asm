@@ -1000,7 +1000,7 @@ ZoruaEvosAttacks:
 	dbw 28, FAKE_TEARS
 	dbw 32, PUNISHMENT
 	dbw 36, AGILITY
-	; dbw 40, NIGHT_DAZE
+	dbw 40, NIGHT_DAZE
 	dbw 44, NASTY_PLOT
 	dbw 48, FOUL_PLAY
 	db 0 ; no more level-up moves
@@ -1021,7 +1021,7 @@ ZoroarkEvosAttacks:
 	dbw 29, NIGHT_SLASH
 	dbw 34, PUNISHMENT
 	dbw 40, AGILITY
-	; dbw 46, NIGHT_DAZE
+	dbw 46, NIGHT_DAZE
 	dbw 52, NASTY_PLOT
 	dbw 58, FOUL_PLAY
 	db 0 ; no more level-up moves

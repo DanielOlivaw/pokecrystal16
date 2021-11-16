@@ -631,4 +631,5 @@ MoveNames::
 	db "VOLT SWITCH@"
 	db "FLIP TURN@"
 	db "PARTING SHOT@"
+	db "NIGHT DAZE@"
 	  ;"123456123456@"
