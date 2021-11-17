@@ -13,8 +13,8 @@ FalknerGroup:
 	next_list_item ; FALKNER (1)
 	db "FALKNER@", TRAINERTYPE_MOVES
 	db 7
-	dw STARLY
-	dw QUICK_ATTACK, GROWL, TACKLE, DEFOG
+	dw PIDGEY
+	dw GUST, SAND_ATTACK, TACKLE, DEFOG
 	db 7
 	dw WINGULL
 	dw QUICK_ATTACK, WATER_GUN, GROWL, DEFOG
@@ -1098,7 +1098,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
 	db 48
-	dw STARAPTOR
+	dw SWELLOW
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (12)
@@ -1110,9 +1110,9 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (13)
 	db "PETER@", TRAINERTYPE_NORMAL
 	db 6
-	dw STARLY
+	dw TAILLOW
 	db 6
-	dw STARLY
+	dw TAILLOW
 	db 8
 	dw ROWLET
 	db -1 ; end
@@ -1225,7 +1225,7 @@ LassGroup:
 	db 38
 	dw COTTONEE
 	db 41
-	dw RIBOMBEE
+	dw PIDGEOTTO
 	db 41
 	dw MARACTUS
 	db -1 ; end
@@ -1919,7 +1919,7 @@ PokemaniacGroup:
 	next_list_item ; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL
 	db 24
-	dw GABITE
+	dw LICKITUNG
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
@@ -2304,7 +2304,7 @@ TeacherGroup:
 	db 45
 	dw CLEFABLE
 	db 45
-	dw LEAVANNY
+	dw SUNFLORA
 	db 42
 	dw VIVILLON
 	db -1 ; end
@@ -2697,19 +2697,19 @@ FisherGroup:
 	db 42
 	dw BASCULIN
 	db 42
-	dw WHISCASH
+	dw GOLDEEN
 	db 42
-	dw WHISCASH
+	dw GOLDEEN
 	db -1 ; end
 
 	next_list_item ; FISHER (20)
 	db "WILTON@", TRAINERTYPE_NORMAL
 	db 40
-	dw BASCULIN
+	dw BARBOACH
 	db 40
-	dw BASCULIN
+	dw BARBOACH
 	db 43
-	dw BASCULIN
+	dw WHISCASH
 	db -1 ; end
 
 	next_list_item ; FISHER (21)
@@ -2719,17 +2719,17 @@ FisherGroup:
 	db 33
 	dw FINNEON
 	db 37
-	dw LUMINEON
+	dw SEAKING
 	db -1 ; end
 
 	next_list_item ; FISHER (22)
 	db "WILTON@", TRAINERTYPE_MOVES
 	db 44
-	dw BASCULIN
-	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
+	dw WHISCASH
+	dw REST, EARTHQUAKE, SNORE, MUDDY_WATER
 	db 44
-	dw BASCULIN
-	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
+	dw WHISCASH
+	dw TICKLE, EARTHQUAKE, ZEN_HEADBUTT, AQUA_TAIL
 	db 48
 	dw BASCULIN
 	dw CRUNCH, CHIP_AWAY, SCARY_FACE, AQUA_JET
@@ -2759,11 +2759,11 @@ FisherGroup:
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
 	db 46
-	dw WHISCASH
-	dw AQUA_TAIL, MAGNITUDE, REST, SNORE
+	dw SEAKING
+	dw WATERFALL, AQUA_RING, AGILITY, SUPERSONIC
 	db 46
-	dw WHISCASH
-	dw AQUA_TAIL, MUD_BOMB, ZEN_HEADBUTT, AMNESIA
+	dw SEAKING
+	dw WATER_PULSE, FLAIL, AGILITY, POISON_JAB
 	db -1 ; end
 
 	end_list_items
@@ -2968,8 +2968,8 @@ SwimmerFGroup:
 	dw PSYDUCK
 	dw FURY_SWIPES, WATER_PULSE, DISABLE, CONFUSION
 	db 24
-	dw BASCULIN
-	dw UPROAR, BITE, AQUA_JET, SCARY_FACE
+	dw GOLDEEN
+	dw HORN_ATTACK, SUPERSONIC, WATER_PULSE, AGILITY
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (5)
@@ -3452,6 +3452,8 @@ GuitaristGroup:
 	db "CLYDE@", TRAINERTYPE_NORMAL
 	db 44
 	dw ELECTABUZZ
+	db 42
+	dw LOUDRED
 	db -1 ; end
 
 	next_list_item ; GUITARIST (2)
@@ -4957,8 +4959,17 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (9)
 	db "COLIN@", TRAINERTYPE_ITEM
+	db 37
+	dw SAWSBUCK
+	db BERRY
 	db 42
+	dw DELIBIRD
+	db BERRY
+	db 37
 	dw ABOMASNOW
+	db BERRY
+	db 34
+	dw STARYU
 	db BERRY
 	db -1 ; end
 
@@ -4977,16 +4988,13 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (12)
 	db "ALEX@", TRAINERTYPE_ITEM
 	db 39
-	dw KINGLER
-	db BERRY
-	db 39
 	dw NIDOKING
 	db BERRY
 	db 39
 	dw SLOWKING
 	db BERRY
 	db 39
-	dw KINGDRA
+	dw SEAKING
 	db BERRY
 	db -1 ; end
 
@@ -5226,6 +5234,9 @@ RedGroup:
 BlueGroup:
 	next_list_item ; BLUE (1)
 	db "BLUE@", TRAINERTYPE_MOVES
+	db 56
+	dw PIDGEOT
+	dw HURRICANE, ROOST, U_TURN, STEEL_WING
 	db 55
 	dw EXEGGUTOR_A
 	dw TRICK_ROOM, DRAGONHAMMER, PSYCHIC_M, WOOD_HAMMER
@@ -5235,9 +5246,6 @@ BlueGroup:
 	db 52
 	dw GYARADOS
 	dw ICE_FANG, AQUA_TAIL, DRAGON_DANCE, CRUNCH
-	db 56
-	dw MACHAMP
-	dw ROCK_SLIDE, BULK_UP, DYNAMICPUNCH, BULLET_PUNCH
 	db 58
 	dw ALAKAZAM
 	dw SHADOW_BALL, RECOVER, PSYCHIC_M, DAZZLING_GLEAM
