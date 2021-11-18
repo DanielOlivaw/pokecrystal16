@@ -10,7 +10,7 @@ TreeMonMaps:
 	treemon_map ROUTE_29,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_30,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_31,                  TREEMON_SET_ROUTE
-	treemon_map ROUTE_32,                  TREEMON_SET_KANTO
+	treemon_map ROUTE_32,                  TREEMON_SET_SEASIDE
 	treemon_map ROUTE_33,                  TREEMON_SET_TOWN
 	treemon_map ROUTE_34,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_35,                  TREEMON_SET_ROUTE
@@ -41,8 +41,8 @@ TreeMonMaps:
 	db -1
 
 RockMonMaps:
-	treemon_map CIANWOOD_CITY,             TREEMON_SET_ROCK
-	treemon_map ROUTE_40,                  TREEMON_SET_ROCK
-	treemon_map DARK_CAVE_VIOLET_ENTRANCE, TREEMON_SET_ROCK
-	treemon_map SLOWPOKE_WELL_B1F,         TREEMON_SET_ROCK
+	treemon_map CIANWOOD_CITY,             TREEMON_SET_BEACH_ROCK
+	treemon_map ROUTE_40,                  TREEMON_SET_BEACH_ROCK
+	treemon_map DARK_CAVE_VIOLET_ENTRANCE, TREEMON_SET_CAVE_ROCK
+	treemon_map SLOWPOKE_WELL_B1F,         TREEMON_SET_CAVE_ROCK
 	db -1

@@ -8,10 +8,18 @@ AsleepTreeMonsNite:
 	dw KAKUNA
 	dw BEEDRILL
 	dw STARLY
-	dw SEVIPER
 	dw EXEGGCUTE
 	dw LEDYBA
+	dw NATU
+	dw SEEDOT
+	dw TAILLOW
+	dw STARLY
+	dw COMBEE
 	dw CRABRAWLER
+	dw ORANGURU
+	dw PASSIMIAN
+	dw APPLIN
+	dw MUNCHLAX
 	dw -1 ; end
 
 AsleepTreeMonsDay:
@@ -20,6 +28,9 @@ AsleepTreeMonsDay:
 	dw NOCTOWL
 	dw SPINARAK
 	dw HERACROSS
+	dw ORANGURU
+	dw APPLIN
+	dw MUNCHLAX
 	dw -1 ; end
 
 AsleepTreeMonsMorn:
@@ -28,4 +39,7 @@ AsleepTreeMonsMorn:
 	dw NOCTOWL
 	dw SPINARAK
 	dw HERACROSS
+	dw ORANGURU
+	dw APPLIN
+	dw MUNCHLAX
 	dw -1 ; end
