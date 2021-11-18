@@ -19,22 +19,24 @@ TreeMons:
 TreeMonSet_City:
 TreeMonSet_Canyon:
 ; common
-	dbbw 44, 23, NATU
-	dbbw 30, 23, HERACROSS
-	dbbw 15, 23, TANGELA
+	dbbw 34, 23, NATU
+	dbbw 25, 23, PINECO
+	dbbw 20, 23, HERACROSS
+	dbbw 10, 23, TANGELA
 	dbbw  5, 23, ORANGURU
 	dbbw  5, 23, PASSIMIAN
 	dbbw  1, 23, MUNCHLAX
 	db -1        
 ; rare
-	dbbw 44, 23, NATU
-	dbbw 30, 23, HERACROSS
-	dbbw 15, 23, TANGELA
-	dbbw  5, 23, ORANGURU
-	dbbw  5, 23, PASSIMIAN
+	dbbw 29, 23, NATU
+	dbbw 20, 23, PINECO
+	dbbw 15, 23, HERACROSS
+	dbbw  5, 23, TANGELA
+	dbbw 15, 23, ORANGURU
+	dbbw 15, 23, PASSIMIAN
 	dbbw  1, 23, MUNCHLAX
 	db -1        
-                 
+
 TreeMonSet_Town:
 ; common
 	dbbw 34, 10, STARLY
@@ -53,17 +55,17 @@ TreeMonSet_Town:
                  
 TreeMonSet_Route:
 ; common
-	dbbw 29, 10, HOOTHOOT
-	dbbw 25, 10, EXEGGCUTE
-	dbbw 25, 10, PINECO
+	dbbw 34, 10, HOOTHOOT
+	dbbw 25, 10, APPLIN
+	dbbw 20, 10, EXEGGCUTE
 	dbbw 10, 10, SPINARAK
 	dbbw 10, 10, LEDYBA
 	dbbw  1, 10, MUNCHLAX
 	db -1        
 ; rare
-	dbbw 29, 10, HOOTHOOT
-	dbbw 25, 10, EXEGGCUTE
-	dbbw 25, 10, PINECO
+	dbbw 34, 10, HOOTHOOT
+	dbbw 25, 10, APPLIN
+	dbbw 20, 10, EXEGGCUTE
 	dbbw 10, 10, SPINARAK
 	dbbw 10, 10, LEDYBA
 	dbbw  1, 10, MUNCHLAX
@@ -103,25 +105,23 @@ TreeMonSet_Lake:
                  
 TreeMonSet_Forest:
 ; common
-	dbbw 19, 10, HOOTHOOT
-	dbbw 20, 10, SHROOMISH
-	dbbw 20, 10, SEEDOT
-	dbbw 20, 10, APPLIN
+	dbbw 29, 10, HOOTHOOT
+	dbbw 25, 10, SHROOMISH
+	dbbw 25, 10, SEEDOT
 	dbbw  5, 10, METAPOD
 	dbbw  5, 10, KAKUNA
 	dbbw  5, 10, BUTTERFREE
 	dbbw  5, 10, BEEDRILL
 	dbbw  1, 10, MUNCHLAX
-	db -1        
+	db -1
 ; rare
-	dbbw 19, 10, HOOTHOOT
+	dbbw 24, 10, HOOTHOOT
 	dbbw 20, 10, SHROOMISH
-	dbbw 20, 10, SEEDOT
-	dbbw 20, 10, APPLIN
-	dbbw  5, 10, METAPOD
-	dbbw  5, 10, KAKUNA
-	dbbw  5, 10, BUTTERFREE
-	dbbw  5, 10, BEEDRILL
+	dbbw 15, 10, SEEDOT
+	dbbw 10, 10, METAPOD
+	dbbw 10, 10, KAKUNA
+	dbbw 10, 10, BUTTERFREE
+	dbbw 10, 10, BEEDRILL
 	dbbw  1, 10, MUNCHLAX
 	db -1      
                  
@@ -147,8 +147,8 @@ TreeMonSet_CaveRock:
 	db -1
 
 TreeMonSet_BeachRock:
-	dbbw 30, 15, KRABBY
-	dbbw 30, 15, DWEBBLE
-	dbbw 30, 15, BINACLE
-	dbbw 10, 15, SHUCKLE
+	dbbw 30, 18, KRABBY
+	dbbw 30, 18, DWEBBLE
+	dbbw 30, 18, BINACLE
+	dbbw 10, 18, SHUCKLE
 	db -1
