@@ -127,18 +127,18 @@ TreeMonSet_Forest:
                  
 TreeMonSet_Seaside:
 ; common
-	dbbw 34, 16, TAILLOW
-	dbbw 25, 30, EXEGGCUTE
-	dbbw 20, 30, CRABRAWLER
+	dbbw 34, 10, TAILLOW
+	dbbw 25, 10, EXEGGCUTE
+	dbbw 20, 10, CRABRAWLER
 	dbbw 20, 10, COMBEE
-	dbbw  1, 30, MUNCHLAX
+	dbbw  1, 10, MUNCHLAX
 	db -1        
 ; rare
-	dbbw 34, 16, TAILLOW
-	dbbw 25, 30, EXEGGCUTE
-	dbbw 20, 30, CRABRAWLER
+	dbbw 34, 10, TAILLOW
+	dbbw 25, 10, EXEGGCUTE
+	dbbw 20, 10, CRABRAWLER
 	dbbw 20, 10, COMBEE
-	dbbw  1, 30, MUNCHLAX
+	dbbw  1, 10, MUNCHLAX
 	db -1   
 
 TreeMonSet_CaveRock:
