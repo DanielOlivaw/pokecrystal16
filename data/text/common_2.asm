@@ -1331,6 +1331,18 @@ _OakRating16::
 	done
 
 _OakRating17::
+	text "I can't belive it!"
+	line "You've found 300"
+	cont "#MON already!"
+	done
+
+_OakRating18::
+	text "Wow! You've hit"
+	line "400! Your #DEX"
+	cont "is incredible!"
+	done
+
+_OakRating19::
 	text "Magnificent! You"
 	line "could become a"
 
@@ -1338,7 +1350,7 @@ _OakRating17::
 	line "right now!"
 	done
 
-_OakRating18::
+_OakRating20::
 	text "Your #DEX is"
 	line "amazing! You're"
 
@@ -1346,7 +1358,7 @@ _OakRating18::
 	line "professional!"
 	done
 
-_OakRating19::
+_OakRating21::
 	text "Whoa! A perfect"
 	line "#DEX! I've"
 

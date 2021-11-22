@@ -195,6 +195,14 @@ OakRating19:
 	text_far _OakRating19
 	text_end
 
+OakRating20:
+	text_far _OakRating20
+	text_end
+
+OakRating21:
+	text_far _OakRating21
+	text_end
+
 OakPCText4:
 	text_far _OakPCText4
 	text_end
