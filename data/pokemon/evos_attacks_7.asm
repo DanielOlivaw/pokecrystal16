@@ -321,8 +321,8 @@ RockruffEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 4, SAND_ATTACK
-	dbw 8, DOUBLE_TEAM
-	dbw 12, ROCK_THROW
+	dbw 8, ROCK_THROW
+	dbw 12, DOUBLE_TEAM
 	dbw 16, HOWL
 	dbw 20, BITE
 	dbw 24, ROCK_TOMB
@@ -342,8 +342,8 @@ LycanrocMDEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 4, SAND_ATTACK
-	dbw 8, DOUBLE_TEAM
-	dbw 12, ROCK_THROW
+	dbw 8, ROCK_THROW
+	dbw 12, DOUBLE_TEAM
 	dbw 16, HOWL
 	dbw 20, BITE
 	dbw 24, ROCK_TOMB
@@ -364,8 +364,8 @@ LycanrocMNEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, LEER
 	dbw 4, SAND_ATTACK
-	dbw 8, DOUBLE_TEAM
-	dbw 12, ROCK_THROW
+	dbw 8, ROCK_THROW
+	dbw 12, DOUBLE_TEAM
 	dbw 16, HOWL
 	dbw 20, BITE
 	dbw 24, ROCK_TOMB

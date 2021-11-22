@@ -187,7 +187,7 @@ JohtoWaterWildMons:
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
 	dbw 20, MOLANCORA
-	dbw 20, QUAGSIRE
+	dbw 15, WOOPER
 	dbw 20, QUAGSIRE
 	dbw 20, QUAGSIRE
 
