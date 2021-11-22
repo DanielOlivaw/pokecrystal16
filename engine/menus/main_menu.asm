@@ -43,7 +43,7 @@ MainMenu:
 .Strings:
 	db "CONTINUE@"
 	db "NEW GAME@"
-	db "OPTION@"
+	db "OPTIONS@"
 	db "MYSTERY GIFT@"
 	db "MOBILE@"
 	db "MOBILE STUDIUM@"
@@ -58,7 +58,7 @@ MainMenu:
 
 CONTINUE       EQU 0
 NEW_GAME       EQU 1
-OPTION         EQU 2
+OPTIONS        EQU 2
 MYSTERY_GIFT   EQU 3
 MOBILE         EQU 4
 MOBILE_STUDIUM EQU 5
@@ -68,21 +68,21 @@ MainMenuItems:
 NewGameMenu:
 	db 2
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db -1
 
 ContinueMenu:
 	db 3
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db -1
 
 MobileMysteryMenu:
 	db 5
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MYSTERY_GIFT
 	db MOBILE
 	db -1
@@ -91,7 +91,7 @@ MobileMenu:
 	db 4
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MOBILE
 	db -1
 
@@ -99,7 +99,7 @@ MobileStudiumMenu:
 	db 5
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MOBILE
 	db MOBILE_STUDIUM
 	db -1
@@ -108,7 +108,7 @@ MysteryMobileStudiumMenu:
 	db 6
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MYSTERY_GIFT
 	db MOBILE
 	db MOBILE_STUDIUM
@@ -118,7 +118,7 @@ MysteryMenu:
 	db 4
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MYSTERY_GIFT
 	db -1
 
@@ -126,7 +126,7 @@ MysteryStudiumMenu:
 	db 5
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MYSTERY_GIFT
 	db MOBILE_STUDIUM
 	db -1
@@ -135,7 +135,7 @@ StudiumMenu:
 	db 4
 	db CONTINUE
 	db NEW_GAME
-	db OPTION
+	db OPTIONS
 	db MOBILE_STUDIUM
 	db -1
 
