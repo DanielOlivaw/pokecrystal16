@@ -63,7 +63,7 @@ _OptionsMenu:
 StringOptions:
 	db "TEXT SPEED<LF>"
 	db "        :<LF>"
-	db "BATTLE SCENE<LF>"
+	db "BATTLE EFFECTS<LF>"
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
@@ -259,8 +259,8 @@ Options_BattleStyle:
 	and a
 	ret
 
-.Shift: db "SHIFT@"
-.Set:   db "SET  @"
+.Shift: db "SWITCH@"
+.Set:   db "SET   @"
 
 Options_Sound:
 	ld hl, wOptions
