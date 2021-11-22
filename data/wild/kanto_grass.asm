@@ -38,7 +38,7 @@ KantoGrassWildMons:
 	dbw 46, PARASECT
 	dbw 42, CLEFAIRY
 	dbw 44, BOLDORE
-	dbw 16, BELDUM
+	dbw 44, BOLDORE
 	; day
 	dbw 40, GOLBAT
 	dbw 42, BOLDORE
@@ -46,7 +46,7 @@ KantoGrassWildMons:
 	dbw 46, PARASECT
 	dbw 42, CLEFAIRY
 	dbw 44, BOLDORE
-	dbw 16, BELDUM
+	dbw 44, BOLDORE
 	; nite
 	dbw 40, GOLBAT
 	dbw 42, BOLDORE
@@ -54,7 +54,7 @@ KantoGrassWildMons:
 	dbw 46, SHIINOTIC
 	dbw 42, CLEFAIRY
 	dbw 44, BOLDORE
-	dbw 16, BELDUM
+	dbw 44, BOLDORE
 
 	map_id ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
