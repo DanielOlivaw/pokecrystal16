@@ -317,7 +317,7 @@ HandleBetweenTurnEffects:
 	jr z, .CheckEnemyFirst
 	call CheckFaint_PlayerThenEnemy
 	ret c
-	call HandleFutureSight
+	farcall HandleFutureSight
 	call CheckFaint_PlayerThenEnemy
 	ret c
 	call HandleResidualDamage
@@ -337,7 +337,7 @@ HandleBetweenTurnEffects:
 .CheckEnemyFirst:
 	call CheckFaint_EnemyThenPlayer
 	ret c
-	call HandleFutureSight
+	farcall HandleFutureSight
 	call CheckFaint_EnemyThenPlayer
 	ret c
 	call HandleResidualDamage
@@ -354,7 +354,7 @@ HandleBetweenTurnEffects:
 	ret c
 
 .NoMoreFaintingConditions:
-	farcall Core2_NewTurnEndEffects
+	farcall Core2_TurnEndEffects
 	call HandleMysteryberry
 	call HandleStatBoostingHeldItems
 	call HandleHealingItems
@@ -1696,67 +1696,6 @@ SetOpponentAteBerry:
 	pop hl
 	ret
 
-HandleFutureSight:
-	ldh a, [hSerialConnectionStatus]
-	cp USING_EXTERNAL_CLOCK
-	jr z, .enemy_first
-	call SetPlayerTurn
-	call .do_it
-	call SetEnemyTurn
-	jp .do_it
-
-.enemy_first
-	call SetEnemyTurn
-	call .do_it
-	call SetPlayerTurn
-
-.do_it
-	ld hl, wPlayerFutureSightCount
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .okay
-	ld hl, wEnemyFutureSightCount
-
-.okay
-	ld a, [hl]
-	and a
-	ret z
-	dec a
-	ld [hl], a
-	cp $1
-	ret nz
-
-	ld hl, BattleText_TargetWasHitByFutureSight
-	call StdBattleTextbox
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVarAddr
-	push af
-	push hl
-	ld hl, FUTURE_SIGHT
-	call GetMoveIDFromIndex
-	pop hl
-	ld [hl], a
-
-	callfar UpdateMoveData
-	xor a
-	ld [wAttackMissed], a
-	ld [wAlreadyDisobeyed], a
-	ld a, EFFECTIVE
-	ld [wTypeModifier], a
-	callfar DoMove
-	xor a
-	ld [wCurDamage], a
-	ld [wCurDamage + 1], a
-
-	ld a, BATTLE_VARS_MOVE
-	call GetBattleVarAddr
-	pop af
-	ld [hl], a
-
-	call UpdateBattleMonInParty
-	jp UpdateEnemyMonInParty
-
 HandleWeather:
 	ld a, [wBattleWeather]
 	cp WEATHER_NONE
@@ -2345,6 +2284,43 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
+	call IsAnyMonHoldingExpShare
+	jr z, .skip_exp
+	ld hl, wEnemyMonBaseStats
+	ld b, wEnemyMonEnd - wEnemyMonBaseStats
+.loop
+	srl [hl]
+	inc hl
+	dec b
+	jr nz, .loop
+
+.skip_exp
+	ld hl, wEnemyMonBaseStats
+	ld de, wBackupEnemyMonBaseStats
+	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+	call CopyBytes
+	xor a
+	ld [wGivingExperienceToExpShareHolders], a
+	call GiveExperiencePoints
+	call IsAnyMonHoldingExpShare
+	ret z
+
+	ld a, [wBattleParticipantsNotFainted]
+	push af
+	ld a, d
+	ld [wBattleParticipantsNotFainted], a
+	ld hl, wBackupEnemyMonBaseStats
+	ld de, wEnemyMonBaseStats
+	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+	call CopyBytes
+	ld a, $1
+	ld [wGivingExperienceToExpShareHolders], a
+	call GiveExperiencePoints
+	pop af
+	ld [wBattleParticipantsNotFainted], a
+	ret
+
+ApplyExperienceAfterEnemyCaught:
 	call IsAnyMonHoldingExpShare
 	jr z, .skip_exp
 	ld hl, wEnemyMonBaseStats
