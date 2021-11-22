@@ -432,7 +432,7 @@ KantoGrassWildMons:
 	dbw 37, MURKROW
 	dbw 36, GALVANTULA
 	dbw 38, ELECTABUZZ
-	dbw 40, ROTOM
+	dbw 38, ELECTABUZZ
 
 	map_id ROUTE_11
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
