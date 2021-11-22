@@ -3,6 +3,8 @@ mon_cry: MACRO
 	dw \1, \2, \3
 ENDM
 
+; evolution: pitch goes down, length goes up
+
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm
 	mon_cry CRY_BULBASAUR,   128,  129 ; BULBASAUR
@@ -136,19 +138,19 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,    60,  320 ; DRAGONITE
 	mon_cry CRY_PARAS,       153,  383 ; MEWTWO
 	mon_cry CRY_PARAS,       238,  383 ; MEW
-	mon_cry CRY_BULBASAUR,   128,  129 ; TANGEL
-	mon_cry CRY_BULBASAUR,   128,  129 ; MOLANCORA
-	mon_cry CRY_BULBASAUR,   128,  129 ; ANCHORRAGE
-	mon_cry CRY_BULBASAUR,   128,  129 ; MEOWSY
-	mon_cry CRY_BULBASAUR,   128,  129 ; MOIBELLE
-	mon_cry CRY_BULBASAUR,   128,  129 ; CHIMEOW
-	mon_cry CRY_BULBASAUR,   128,  129 ; TYKER
-	mon_cry CRY_BULBASAUR,   128,  129 ; STRAIGAR
-	mon_cry CRY_BULBASAUR,   128,  129 ; SWANDAME
-	mon_cry CRY_BULBASAUR,   128,  129 ; KURSTRAW
-	mon_cry CRY_BULBASAUR,   128,  129 ; PHANDARIN
-	mon_cry CRY_BULBASAUR,   128,  129 ; WOLFROST
-	mon_cry CRY_BULBASAUR,   128,  129 ; WARWOLF
+	mon_cry CRY_VULPIX,      -96,  145 ; TANGEL
+	mon_cry CRY_SQUIRTLE,     96,  192 ; MOLANCORA
+	mon_cry CRY_SQUIRTLE,    -32,  258 ; ANCHORRAGE
+	mon_cry CRY_CLEFAIRY,     59,   94 ; MEOWSY
+	mon_cry CRY_CLEFAIRY,    238,  112 ; MOIBELLE
+	mon_cry CRY_CLEFAIRY,    153,  416 ; CHIMEOW
+	mon_cry CRY_CLEFAIRY,     32,  192 ; TYKER
+	mon_cry CRY_RAIKOU,      354,  216 ; STRAIGAR
+	mon_cry CRY_RAICHU,      128,  192 ; SWANDAME
+	mon_cry CRY_HOOTHOOT,    232,  320 ; KURSTRAW
+	mon_cry CRY_METAPOD,       0,  128 ; PHANDARIN
+	mon_cry CRY_CYNDAQUIL,    57,  256 ; WOLFROST
+	mon_cry CRY_TOTODILE,   -266,  192 ; WARWOLF
 	mon_cry CRY_CHIKORITA,   -16,  176 ; CHIKORITA
 	mon_cry CRY_CHIKORITA,   -34,  288 ; BAYLEEF
 	mon_cry CRY_CHIKORITA,  -183,  512 ; MEGANIUM
@@ -241,22 +243,22 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,    0,  256 ; LUGIA
 	mon_cry CRY_AIPOM,         0,  384 ; HO_OH
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
-	mon_cry CRY_WOOPER,      147,  175 ; TREECKO
-	mon_cry CRY_BULBASAUR,   128,  129 ; GROVYLE
-	mon_cry CRY_BULBASAUR,   128,  129 ; SCEPTILE
-	mon_cry CRY_BULBASAUR,   128,  129 ; TORCHIC
-	mon_cry CRY_BULBASAUR,   128,  129 ; COMBUSKEN
-	mon_cry CRY_BULBASAUR,   128,  129 ; BLAZIKEN
-	mon_cry CRY_BULBASAUR,   128,  129 ; MUDKIP
-	mon_cry CRY_BULBASAUR,   128,  129 ; MARSHTOMP
-	mon_cry CRY_BULBASAUR,   128,  129 ; SWAMPERT
-	mon_cry CRY_BULBASAUR,   128,  129 ; POOCHYENA
-	mon_cry CRY_BULBASAUR,   128,  129 ; MIGHTYENA
-	mon_cry CRY_BULBASAUR,   128,  129 ; ZIGZAGOON_G
-	mon_cry CRY_BULBASAUR,   128,  129 ; LINOONE_G
-	mon_cry CRY_BULBASAUR,   128,  129 ; LOTAD
-	mon_cry CRY_BULBASAUR,   128,  129 ; LOMBRE
-	mon_cry CRY_BULBASAUR,   128,  129 ; LUDICOLO
+	mon_cry CRY_CHARMANDER,  -16,  176 ; TREECKO
+	mon_cry CRY_CHARMANDER,  -34,  288 ; GROVYLE
+	mon_cry CRY_CHARMANDER, -183,  512 ; SCEPTILE
+	mon_cry CRY_NATU,       -103,  256 ; TORCHIC
+	mon_cry CRY_NATU,       -167,  360 ; COMBUSKEN
+	mon_cry CRY_NATU,       -256,  176 ; BLAZIKEN
+	mon_cry CRY_WOOPER,      147,  175 ; MUDKIP
+	mon_cry CRY_WOOPER,     -198,  320 ; MARSHTOMP
+	mon_cry CRY_BLASTOISE,     0,  256 ; SWAMPERT
+	mon_cry CRY_GROWLITHE,    32,  192 ; POOCHYENA
+	mon_cry CRY_GROWLITHE,   -34,  256 ; MIGHTYENA
+	mon_cry CRY_BLASTOISE,   461,  175 ; ZIGZAGOON_G
+	mon_cry CRY_BLASTOISE,   355,  272 ; LINOONE_G
+	mon_cry CRY_SLOWPOKE,      0,  256 ; LOTAD
+	mon_cry CRY_GROWLITHE,     0,  256 ; LOMBRE
+	mon_cry CRY_SLOWKING,    260,  512 ; LUDICOLO
 	mon_cry CRY_BULBASAUR,   128,  129 ; SEEDOT
 	mon_cry CRY_BULBASAUR,   128,  129 ; NUZLEAF
 	mon_cry CRY_BULBASAUR,   128,  129 ; SHIFTRY

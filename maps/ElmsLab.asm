@@ -882,7 +882,7 @@ AideScript_GiveYouBalls:
 	buttonsound
 	getitemname STRING_BUFFER_4, POKE_BALL
 	scall AideScript_ReceiveTheBalls
-	giveitem POKE_BALL, 5
+	giveitem POKE_BALL, 10
 	writetext AideText_ExplainBalls
 	buttonsound
 	itemnotify
@@ -1685,6 +1685,7 @@ ElmsLabOfficerText1:
 ElmsLabOfficerTextConfirmName:
 	text "Are you sure his"
 	line "name was <RIVAL>?"
+	done
 
 ElmsLabOfficerText2:
 	text "OK! So <RIVAL>"
