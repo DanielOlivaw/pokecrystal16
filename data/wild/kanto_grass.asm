@@ -683,7 +683,7 @@ KantoGrassWildMons:
 	dbw 34, BIBAREL
 	dbw 36, PETILIL
 	dbw 38, FLOETTE
-	dbw 36, KADABRA
+	dbw 36, MEOWSTIC
 	dbw 38, WEEPINBELL
 	dbw 40, ALTARIA
 	dbw 40, ALTARIA
@@ -691,7 +691,7 @@ KantoGrassWildMons:
 	dbw 34, BIBAREL
 	dbw 36, SUNKERN
 	dbw 38, FLOETTE
-	dbw 36, KADABRA
+	dbw 36, MEOWSTIC
 	dbw 38, WEEPINBELL
 	dbw 40, ALTARIA
 	dbw 40, ALTARIA
@@ -699,7 +699,7 @@ KantoGrassWildMons:
 	dbw 34, LIEPARD
 	dbw 36, GLOOM
 	dbw 38, GLOOM
-	dbw 36, KADABRA
+	dbw 36, MEOWSTIC
 	dbw 38, WEEPINBELL
 	dbw 40, NOCTOWL
 	dbw 40, NOCTOWL
@@ -711,7 +711,7 @@ KantoGrassWildMons:
 	dbw 36, MEOWSTIC
 	dbw 38, FLOETTE
 	dbw 38, AMPHAROS
-	dbw 38, BELLSPROUT
+	dbw 38, WEEPINBELL
 	dbw 40, ALTARIA
 	dbw 40, ALTARIA
 	; day
@@ -719,15 +719,15 @@ KantoGrassWildMons:
 	dbw 36, MEOWSTIC
 	dbw 38, FLOETTE
 	dbw 38, AMPHAROS
-	dbw 38, BELLSPROUT
+	dbw 38, WEEPINBELL
 	dbw 40, ALTARIA
 	dbw 40, ALTARIA
 	; nite
 	dbw 36, LIEPARD
 	dbw 36, MEOWSTIC
-	dbw 38, ODDISH
-	dbw 38, ODDISH
-	dbw 38, BELLSPROUT
+	dbw 38, GLOOM
+	dbw 38, GLOOM
+	dbw 38, WEEPINBELL
 	dbw 40, NOCTOWL
 	dbw 40, NOCTOWL
 

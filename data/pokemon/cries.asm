@@ -259,7 +259,7 @@ PokemonCries::
 	mon_cry CRY_SLOWPOKE,      0,  256 ; LOTAD
 	mon_cry CRY_GROWLITHE,     0,  256 ; LOMBRE
 	mon_cry CRY_SLOWKING,    260,  512 ; LUDICOLO
-	mon_cry CRY_BULBASAUR,   128,  129  ; SEEDOT
+	mon_cry CRY_MARILL,      189,  134 ; SEEDOT
 	mon_cry CRY_BULBASAUR,   128,  129  ; NUZLEAF
 	mon_cry CRY_BULBASAUR,   128,  129  ; SHIFTRY
 	mon_cry CRY_BULBASAUR,   128,  129  ; TAILLOW

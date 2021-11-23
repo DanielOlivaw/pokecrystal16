@@ -105,9 +105,9 @@ TMHMMoves:
 	dw FLY            ; HM02
 	dw SURF           ; HM03
 	dw STRENGTH       ; HM04
-	dw FLASH          ; HM05
-	dw WHIRLPOOL      ; HM06
-	dw WATERFALL      ; HM07
+	dw WHIRLPOOL      ; HM05
+	dw ROCK_CLIMB     ; HM06
+	dw DIVE           ; HM07
 ; Move tutor
 	dw FRENZY_PLANT
 	dw BLAST_BURN
