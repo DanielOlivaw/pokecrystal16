@@ -1,4 +1,4 @@
-	db "DREAMEATER@" ; species name
+	db "DREAM EATER@" ; species name
 	dw 200, 513 ; height, weight
 
 	db   "This #MON"

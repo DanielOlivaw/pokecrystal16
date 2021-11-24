@@ -1,5 +1,5 @@
 	db "LAZY CAT@" ; species name
-	dw 101, 52 ; height, weight
+	dw 101, 82 ; height, weight
 
 	db   "It sleeps 20 hours"
 	next "a day. However, it"

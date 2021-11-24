@@ -464,7 +464,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   128,  129  ; LIEPARD
 	mon_cry CRY_CLEFFA,       39,  312 ; MUNNA
 	mon_cry CRY_CLEFFA,        0,  384 ; MUSHARNA
-	mon_cry CRY_VULPIX,      240,   56 ; ROGGENROLA
+	mon_cry CRY_PARAS,      -266,  232 ; ROGGENROLA
 	mon_cry CRY_VULPIX,        0,  256 ; BOLDORE
 	mon_cry CRY_GOLEM,      -167,  192 ; GIGALITH
 	mon_cry CRY_BULBASAUR,   128,  129  ; WOOBAT

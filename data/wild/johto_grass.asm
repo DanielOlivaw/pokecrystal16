@@ -442,7 +442,7 @@ JohtoGrassWildMons:
 	dbw 9, ZUBAT
 	dbw 9, MAKUHITA
 	dbw 10, ONIX
-	dbw 11, ZUBAT
+	dbw 11, MAWILE
 	dbw 10, MAWILE
 	; day
 	dbw 10, ROGGENROLA
@@ -450,7 +450,7 @@ JohtoGrassWildMons:
 	dbw 9, ZUBAT
 	dbw 9, MAKUHITA
 	dbw 10, ONIX
-	dbw 11, ZUBAT
+	dbw 11, MAWILE
 	dbw 10, MAWILE
 	; nite
 	dbw 10, ROGGENROLA
@@ -458,7 +458,7 @@ JohtoGrassWildMons:
 	dbw 9, ZUBAT
 	dbw 9, SHELLOS
 	dbw 10, ONIX
-	dbw 11, ZUBAT
+	dbw 11, MAWILE
 	dbw 10, MAWILE
 
 	map_id UNION_CAVE_B2F
@@ -466,24 +466,24 @@ JohtoGrassWildMons:
 	; morn
 	dbw 21, ZUBAT
 	dbw 22, GOLBAT
-	dbw 23, GOLBAT
 	dbw 21, SHELLOS
+	dbw 23, GOLBAT
 	dbw 20, ROGGENROLA
 	dbw 23, ONIX
 	dbw 23, MAWILE
 	; day
 	dbw 21, ZUBAT
 	dbw 22, GOLBAT
-	dbw 23, GOLBAT
 	dbw 21, SHELLOS
+	dbw 23, GOLBAT
 	dbw 20, ROGGENROLA
 	dbw 23, ONIX
 	dbw 23, MAWILE
 	; nite
 	dbw 21, ZUBAT
 	dbw 22, GOLBAT
-	dbw 23, GOLBAT
 	dbw 21, SHELLOS
+	dbw 23, GOLBAT
 	dbw 20, ROGGENROLA
 	dbw 23, ONIX
 	dbw 23, MAWILE
