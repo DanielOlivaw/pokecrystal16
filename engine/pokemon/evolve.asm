@@ -998,6 +998,16 @@ DetermineEvolutionItemResults::
 	inc hl
 	jr .loop
 
+FindEvolution:
+	ld h, d
+	ld l, e
+	ld de, 0
+	ld a, b
+	ldh [hTemp], a
+	call GetNextEvoAttackByte
+	and a
+	ret
+
 GetNextEvoAttackByte:
 	ldh a, [hTemp]
 	call GetFarByte

@@ -3201,6 +3201,7 @@ DittoMetalPowder:
 	pop bc
 	ret nz
 
+; boost the relevant defense stat in bc by 50%
 	ld a, c
 	srl a
 	add c
@@ -3215,17 +3216,66 @@ DittoMetalPowder:
 .done
 	scf
 	rr c
+	ret
 
-	ld a, HIGH(MAX_STAT_VALUE)
-	cp b
-	jr c, .cap
+UnevolvedEviolite:
+; get the defender's species
+	ld a, MON_SPECIES
+	call BattlePartyAttr
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [hl]
+	jr nz, .got_species
+	ld a, [wTempEnemyMonSpecies]
+
+.got_species
+; check if the defender has any evolutions
+; hl := EvosAttacksPointers + (species - 1) * 2
+	; dec a
+	push hl
+	push bc
+	push de
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, EvosAttacksPointers
+; hl := the species' entry from EvosAttacksPointers
+	ld a, BANK(EvosAttacksPointers)
+	call LoadDoubleIndirectPointer
+; Check for evolutions (in engine/pokemon/evolve.asm)
+	ld d, h
+	ld e, l
+	farcall FindEvolution
+; if FindEvolution returns 0, there are no evolutions,
+; so don't boost stats
+	pop de
+	pop bc
+	pop hl
+	ret z
+
+; check if the defender's item is Eviolite
+	push bc
+	call GetOpponentItem
+	ld a, [hl]
+	cp EVIOLITE
+	pop bc
 	ret nz
-	ld a, LOW(MAX_STAT_VALUE)
-	cp c
+
+; boost the relevant defense stat in bc by 50%
+	ld a, c
+	srl a
+	add c
+	ld c, a
 	ret nc
 
-.cap
-	ld bc, MAX_STAT_VALUE
+	srl b
+	ld a, b
+	and a
+	jr nz, .done
+	inc b
+.done
+	scf
+	rr c
 	ret
 
 BattleCommand_DamageStats:
@@ -3359,6 +3409,7 @@ PlayerAttackDamage:
 	ld a, [wBattleMonLevel]
 	ld e, a
 	call DittoMetalPowder
+	call UnevolvedEviolite
 
 	ld a, 1
 	and a
@@ -3694,6 +3745,7 @@ EnemyAttackDamage:
 	ld a, [wEnemyMonLevel]
 	ld e, a
 	call DittoMetalPowder
+	call UnevolvedEviolite
 
 	ld a, 1
 	and a

@@ -24,6 +24,7 @@ ItemEffects:
 	dw PokeBallEffect      ; FRIEND_BALL
 	dw PokeBallEffect      ; MOON_BALL
 	dw PokeBallEffect      ; LOVE_BALL
+	dw PokeBallEffect      ; DUSK_BALL
 	dw PokeBallEffect      ; PARK_BALL
 	dw TownMapEffect       ; TOWN_MAP
 	dw BicycleEffect       ; BICYCLE
@@ -94,6 +95,7 @@ ItemEffects:
 	dw RestoreHPEffect     ; MOOMOO_MILK
 	dw RestoreHPEffect     ; RAGECANDYBAR
 	dw RestoreHPEffect     ; BERRY_JUICE
+	dw StatusHealingEffect ; LAVA_COOKIE
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
@@ -106,11 +108,13 @@ ItemEffects:
 	dw XItemEffect         ; X_ATTACK
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
-	dw XItemEffect         ; X_SPECIAL
+	dw XItemEffect         ; X_SP_ATK
+	dw XItemEffect         ; X_SP_DEF
 	dw PokeDollEffect      ; POKE_DOLL
 	dw GuardSpecEffect     ; GUARD_SPEC
 	dw DireHitEffect       ; DIRE_HIT
 	dw NoEffect            ; NUGGET
+	dw NoEffect            ; BIG_NUGGET
 	dw NoEffect            ; SILVER_LEAF
 	dw NoEffect            ; GOLD_LEAF
 	dw NoEffect            ; TINYMUSHROOM
@@ -150,6 +154,7 @@ ItemEffects:
 	dw NoEffect            ; SEA_SCALE
 	dw NoEffect            ; BERSERK_GENE
 	dw NoEffect            ; LIGHT_BALL
+	dw NoEffect            ; EVIOLITE
 	dw NoEffect            ; UP_GRADE
 	dw NoEffect            ; OVAL_STONE
 	dw NoEffect            ; RAZOR_FANG  
@@ -724,6 +729,7 @@ BallMultiplierFunctionTable:
 	dbw FAST_BALL,   FastBallMultiplier
 	dbw MOON_BALL,   MoonBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
+	dbw DUSK_BALL,   DuskBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
 	db -1 ; end
 
@@ -968,6 +974,34 @@ LoveBallMultiplier:
 .done1
 	pop bc
 	ret
+	
+DuskBallMultiplier:
+; is it night?
+	ld a, [wTimeOfDay]
+	cp NITE
+	jr z, .night_or_cave
+; or are we in a cave?
+	ld a, [wEnvironment]
+	cp CAVE
+; neither night nor cave
+	ret nz
+
+.night_or_cave
+; b is the catch rate
+; a := b + b + b == b × 3
+	ld a, b
+	add a
+	jr c, .max
+
+	add b
+	jr c, .max
+
+	ld b, a
+	ret
+
+.max
+	ld b, $ff
+	ret
 
 FastBallMultiplier:
 ; multiply catch rate by 4 if the enemy mon is in the FleeMons tables
@@ -1113,8 +1147,15 @@ ReturnToBattle_UseBall:
 	ret
 
 TownMapEffect:
-	farcall PokegearMap
-	ret
+	call FadeToMenu
+	farcall _TownMap
+	call ExitMenu
+	xor a
+	ldh [hBGMapMode], a
+	farcall Pack_InitGFX
+	farcall WaitBGMap_DrawPackGFX
+	farcall Pack_InitColors
+ 	ret
 
 BicycleEffect:
 	farcall BikeFunction

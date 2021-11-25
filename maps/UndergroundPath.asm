@@ -7,7 +7,7 @@ UndergroundPathHiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_UNDERGROUND_PATH_HIDDEN_FULL_RESTORE
 
 UndergroundPathHiddenXSpecial:
-	hiddenitem X_SPECIAL, EVENT_UNDERGROUND_PATH_HIDDEN_X_SPECIAL
+	hiddenitem X_SP_ATK, EVENT_UNDERGROUND_PATH_HIDDEN_X_SPECIAL
 
 UndergroundPath_MapEvents:
 	db 0, 0 ; filler

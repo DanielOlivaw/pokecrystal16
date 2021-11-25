@@ -203,9 +203,10 @@ MartGoldenrod2F2:
 	db -1 ; end
 
 MartGoldenrod3F:
-	db 7 ; # items
+	db 8 ; # items
 	db X_SPEED
-	db X_SPECIAL
+	db X_SP_ATK
+	db X_SP_DEF
 	db X_DEFEND
 	db X_ATTACK
 	db DIRE_HIT
@@ -404,14 +405,15 @@ MartCeladon5F1:
 	db -1 ; end
 
 MartCeladon5F2:
-	db 7 ; # items
+	db 8 ; # items
 	db X_ACCURACY
 	db GUARD_SPEC
 	db DIRE_HIT
 	db X_ATTACK
 	db X_DEFEND
 	db X_SPEED
-	db X_SPECIAL
+	db X_SP_ATK
+	db X_SP_DEF
 	db -1 ; end
 
 MartFuchsia:

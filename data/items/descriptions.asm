@@ -11,8 +11,9 @@ ItemDescriptions:
 	dw FriendBallDesc
 	dw MoonBallDesc
 	dw LoveBallDesc
+	dw DuskBallDesc
 	dw ParkBallDesc
-	dw QuestionMarkDesc
+	dw TownMapDesc
 	dw BicycleDesc
 	dw EscapeRopeDesc
 	dw CoinCaseDesc
@@ -81,6 +82,7 @@ ItemDescriptions:
 	dw MoomooMilkDesc
 	dw RageCandyBarDesc
 	dw BerryJuiceDesc
+	dw LavaCookieDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -93,11 +95,13 @@ ItemDescriptions:
 	dw XAttackDesc
 	dw XDefendDesc
 	dw XSpeedDesc
-	dw XSpecialDesc
+	dw XSpAtkDesc
+	dw XSpDefDesc
 	dw PokeDollDesc
 	dw GuardSpecDesc
 	dw DireHitDesc
 	dw NuggetDesc
+	dw BigNuggetDesc
 	dw SilverLeafDesc
 	dw GoldLeafDesc
 	dw TinyMushroomDesc
@@ -137,6 +141,7 @@ ItemDescriptions:
 	dw SeaScaleDesc
 	dw BerserkGeneDesc
 	dw LightBallDesc
+	dw EvioliteDesc
 	dw UpGradeDesc
 	dw OvalStoneDesc
 	dw RazorFangDesc
@@ -250,11 +255,6 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 
 MasterBallDesc:
 	db   "The best BALL. It"
@@ -275,6 +275,10 @@ GreatBallDesc:
 PokeBallDesc:
 	db   "An item for catch-"
 	next "ing #MON.@"
+
+TownMapDesc:
+	db   "A map that shows"
+	next "your location.@"
 
 BicycleDesc:
 	db   "A collapsible bike"
@@ -394,6 +398,10 @@ NuggetDesc:
 	db   "Made of pure gold."
 	next "Sell high.@"
 
+BigNuggetDesc:
+	db   "Made of pure gold."
+	next "Sell very high.@"
+
 PokeDollDesc:
 	db   "Use to escape from"
 	next "a wild #MON.@"
@@ -450,9 +458,13 @@ XSpeedDesc:
 	db   "Raises SPEED."
 	next "(1 BTL)@"
 
-XSpecialDesc:
+XSpAtkDesc:
 	db   "Raises SPECIAL"
 	next "ATTACK. (1 BTL)@"
+
+XSpDefDesc:
+	db   "Raises SPECIAL"
+	next "DEFENSE. (1 BTL)@"
 
 CoinCaseDesc:
 	db   "Holds up to 9,999"
@@ -767,6 +779,10 @@ BerryJuiceDesc:
 	db   "Restores #MON"
 	next "HP by 20.@"
 
+LavaCookieDesc:
+	db   "Eliminates all"
+	next "status problems.@"
+
 ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
@@ -823,6 +839,10 @@ LightBallDesc:
 	db   "An orb loved by"
 	next "PIKACHU. (HOLD)@"
 
+EvioliteDesc:
+	db   "Protects #MON"
+	next "that can evolve.@"
+
 FriendBallDesc:
 	db   "A BALL that makes"
 	next "#MON friendly.@"
@@ -834,6 +854,10 @@ MoonBallDesc:
 LoveBallDesc:
 	db   "For catching the"
 	next "opposite gender.@"
+
+DuskBallDesc:
+	db   "A BALL for catch-"
+	next "ing in the dark.@"
 
 NormalBoxDesc:
 	db   "Open it and see"

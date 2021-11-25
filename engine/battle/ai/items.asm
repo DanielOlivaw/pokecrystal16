@@ -296,13 +296,21 @@ AI_Items:
 	dbw X_ATTACK,     .XAttack
 	dbw X_DEFEND,     .XDefend
 	dbw X_SPEED,      .XSpeed
-	dbw X_SPECIAL,    .XSpecial
+	dbw X_SP_ATK,     .XSpAtk
+	dbw X_SP_DEF,     .XSpDef
+	dbw LAVA_COOKIE,  .LavaCookie
 	db -1 ; end
 
 .FullHeal:
 	call .Status
 	jp c, .DontUse
 	call EnemyUsedFullHeal
+	jp .Use
+
+.LavaCookie:
+	call .Status
+	jp c, .DontUse
+	call EnemyUsedLavaCookie
 	jp .Use
 
 .Status:
@@ -492,10 +500,16 @@ AI_Items:
 	call EnemyUsedXSpeed
 	jp .Use
 
-.XSpecial:
+.XSpAtk:
 	call .XItem
 	jp c, .DontUse
-	call EnemyUsedXSpecial
+	call EnemyUsedXSpAtk
+	jp .Use
+
+.XSpDef:
+	call .XItem
+	jp c, .DontUse
+	call EnemyUsedXSpDef
 	jp .Use
 
 .XItem:
@@ -553,6 +567,15 @@ EnemyUsedFullHeal:
 	call AIUsedItemSound
 	call AI_HealStatus
 	ld a, FULL_HEAL
+	ld [wCurEnemyItem], a
+	xor a
+	ld [wEnemyConfuseCount], a
+	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+
+EnemyUsedLavaCookie:
+	call AIUsedItemSound
+	call AI_HealStatus
+	ld a, LAVA_COOKIE
 	ld [wCurEnemyItem], a
 	xor a
 	ld [wEnemyConfuseCount], a
@@ -813,9 +836,14 @@ EnemyUsedXSpeed:
 	ld a, X_SPEED
 	jr EnemyUsedXItem
 
-EnemyUsedXSpecial:
+EnemyUsedXSpAtk:
 	ld b, SP_ATTACK
-	ld a, X_SPECIAL
+	ld a, X_SP_ATK
+	jr EnemyUsedXItem
+
+EnemyUsedXSpDef:
+	ld b, SP_DEFENSE
+	ld a, X_SP_DEF
 
 ; Parameter
 ; a = ITEM_CONSTANT
