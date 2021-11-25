@@ -2,184 +2,113 @@ ItemDescriptions:
 ; entries correspond to item ids
 	dw MasterBallDesc
 	dw UltraBallDesc
-	dw BrightpowderDesc
 	dw GreatBallDesc
 	dw PokeBallDesc
+	dw HeavyBallDesc
+	dw LevelBallDesc
+	dw LureBallDesc
+	dw FastBallDesc
+	dw FriendBallDesc
+	dw MoonBallDesc
+	dw LoveBallDesc
+	dw ParkBallDesc
 	dw QuestionMarkDesc
 	dw BicycleDesc
-	dw MoonStoneDesc
-	dw AntidoteDesc
-	dw BurnHealDesc
-	dw IceHealDesc
-	dw AwakeningDesc
-	dw ParlyzHealDesc
-	dw FullRestoreDesc
-	dw MaxPotionDesc
-	dw HyperPotionDesc
-	dw SuperPotionDesc
-	dw PotionDesc
 	dw EscapeRopeDesc
-	dw RepelDesc
-	dw MaxElixerDesc
-	dw FireStoneDesc
-	dw ThunderStoneDesc
-	dw WaterStoneDesc
-	dw QuestionMarkDesc
-	dw HPUpDesc
-	dw ProteinDesc
-	dw IronDesc
-	dw CarbosDesc
-	dw LuckyPunchDesc
-	dw CalciumDesc
-	dw RareCandyDesc
-	dw XAccuracyDesc
-	dw LeafStoneDesc
-	dw MetalPowderDesc
-	dw NuggetDesc
-	dw PokeDollDesc
-	dw FullHealDesc
-	dw ReviveDesc
-	dw MaxReviveDesc
-	dw GuardSpecDesc
-	dw SuperRepelDesc
-	dw MaxRepelDesc
-	dw DireHitDesc
-	dw QuestionMarkDesc
-	dw FreshWaterDesc
-	dw SodaPopDesc
-	dw LemonadeDesc
-	dw XAttackDesc
-	dw QuestionMarkDesc
-	dw XDefendDesc
-	dw XSpeedDesc
-	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
 	dw QuestionMarkDesc
-	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
-	dw SilverLeafDesc
 	dw SuperRodDesc
-	dw PPUpDesc
-	dw EtherDesc
-	dw MaxEtherDesc
-	dw ElixerDesc
 	dw RedScaleDesc
 	dw SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
 	dw ClearBellDesc
 	dw SilverWingDesc
-	dw MoomooMilkDesc
-	dw QuickClawDesc
-	dw PsnCureBerryDesc
-	dw GoldLeafDesc
-	dw SoftSandDesc
-	dw SharpBeakDesc
-	dw PrzCureBerryDesc
-	dw BurntBerryDesc
-	dw IceBerryDesc
-	dw PoisonBarbDesc
-	dw KingsRockDesc
-	dw BitterBerryDesc
-	dw MintBerryDesc
-	dw RedApricornDesc
-	dw TinyMushroomDesc
-	dw BigMushroomDesc
-	dw SilverPowderDesc
-	dw BluApricornDesc
-	dw QuestionMarkDesc
-	dw AmuletCoinDesc
-	dw YlwApricornDesc
-	dw GrnApricornDesc
-	dw CleanseTagDesc
-	dw MysticWaterDesc
-	dw TwistedSpoonDesc
-	dw WhtApricornDesc
-	dw BlackbeltDesc
-	dw BlkApricornDesc
-	dw QuestionMarkDesc
-	dw PnkApricornDesc
-	dw BlackGlassesDesc
-	dw SlowpokeTailDesc
-	dw PinkBowDesc
-	dw StickDesc
-	dw SmokeBallDesc
-	dw NeverMeltIceDesc
-	dw MagnetDesc
-	dw MiracleBerryDesc
-	dw PearlDesc
-	dw BigPearlDesc
-	dw EverStoneDesc
-	dw SpellTagDesc
-	dw RageCandyBarDesc
 	dw GSBallDesc
 	dw BlueCardDesc
-	dw MiracleSeedDesc
-	dw ThickClubDesc
-	dw FocusBandDesc
-	dw QuestionMarkDesc
-	dw EnergyPowderDesc
-	dw EnergyRootDesc
-	dw HealPowderDesc
-	dw RevivalHerbDesc
-	dw HardStoneDesc
-	dw LuckyEggDesc
 	dw CardKeyDesc
 	dw MachinePartDesc
 	dw EggTicketDesc
 	dw LostItemDesc
-	dw StardustDesc
-	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw CharcoalDesc
-	dw BerryJuiceDesc
-	dw ScopeLensDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw MetalCoatDesc
-	dw DragonFangDesc
-	dw QuestionMarkDesc
-	dw LeftoversDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw MysteryBerryDesc
-	dw SeaScaleDesc
-	dw BerserkGeneDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw SacredAshDesc
-	dw HeavyBallDesc
-	dw FlowerMailDesc
-	dw LevelBallDesc
-	dw LureBallDesc
-	dw FastBallDesc
-	dw QuestionMarkDesc
-	dw LightBallDesc
-	dw FriendBallDesc
-	dw MoonBallDesc
-	dw LoveBallDesc
-	dw NormalBoxDesc
-	dw GorgeousBoxDesc
-	dw SunStoneDesc
-	dw PolkadotBowDesc
-	dw QuestionMarkDesc
-	dw UpGradeDesc
-	dw BerryDesc
-	dw GoldBerryDesc
 	dw SquirtBottleDesc
-	dw QuestionMarkDesc
-	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw QuestionMarkDesc
+	dw MoonStoneDesc
+	dw FireStoneDesc
+	dw ThunderStoneDesc
+	dw WaterStoneDesc
+	dw LeafStoneDesc
+	dw SunStoneDesc
+	dw HeartStoneDesc
+	dw IceStoneDesc
+	dw DawnStoneDesc
+	dw DuskStoneDesc
+	dw ShinyStoneDesc
+	dw TartAppleDesc
+	dw SweetAppleDesc
+	dw CrackedPotDesc
+	dw AntidoteDesc
+	dw BurnHealDesc
+	dw IceHealDesc
+	dw AwakeningDesc
+	dw ParlyzHealDesc
+	dw FullHealDesc
+	dw FullRestoreDesc
+	dw MaxPotionDesc
+	dw HyperPotionDesc
+	dw SuperPotionDesc
+	dw PotionDesc
+	dw EtherDesc
+	dw MaxEtherDesc
+	dw ElixerDesc
+	dw MaxElixerDesc
+	dw HPUpDesc
+	dw ProteinDesc
+	dw IronDesc
+	dw CarbosDesc
+	dw CalciumDesc
+	dw PPUpDesc
+	dw RareCandyDesc
+	dw ReviveDesc
+	dw MaxReviveDesc
+	dw FreshWaterDesc
+	dw SodaPopDesc
+	dw LemonadeDesc
+	dw MoomooMilkDesc
+	dw RageCandyBarDesc
+	dw BerryJuiceDesc
+	dw EnergyPowderDesc
+	dw EnergyRootDesc
+	dw HealPowderDesc
+	dw RevivalHerbDesc
+	dw SacredAshDesc
+	dw RepelDesc
+	dw SuperRepelDesc
+	dw MaxRepelDesc
+	dw XAccuracyDesc
+	dw XAttackDesc
+	dw XDefendDesc
+	dw XSpeedDesc
+	dw XSpecialDesc
+	dw PokeDollDesc
+	dw GuardSpecDesc
+	dw DireHitDesc
+	dw NuggetDesc
+	dw SilverLeafDesc
+	dw GoldLeafDesc
+	dw TinyMushroomDesc
+	dw BigMushroomDesc
+	dw SlowpokeTailDesc
+	dw PearlDesc
+	dw BigPearlDesc
+	dw StardustDesc
+	dw StarPieceDesc
 	dw BrickPieceDesc
+	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
 	dw PortraitMailDesc
@@ -189,13 +118,27 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MewMailDesc
-	dw HeartStoneDesc
-	dw IceStoneDesc
-	dw DawnStoneDesc
-	dw DuskStoneDesc
-	dw ShinyStoneDesc
+	dw BrightpowderDesc
+	dw LuckyPunchDesc
+	dw MetalPowderDesc
+	dw ExpShareDesc
+	dw QuickClawDesc
+	dw KingsRockDesc
+	dw AmuletCoinDesc
+	dw CleanseTagDesc
+	dw StickDesc
+	dw SmokeBallDesc
+	dw EverStoneDesc
+	dw ThickClubDesc
+	dw FocusBandDesc
+	dw LuckyEggDesc
+	dw ScopeLensDesc
+	dw LeftoversDesc
+	dw SeaScaleDesc
+	dw BerserkGeneDesc
+	dw LightBallDesc
+	dw UpGradeDesc
 	dw OvalStoneDesc
-	dw QuestionMarkDesc
 	dw RazorFangDesc
 	dw RazorClawDesc
 	dw ElectirizerDesc
@@ -203,10 +146,67 @@ ItemDescriptions:
 	dw ReaperClothDesc
 	dw WhippedDreamDesc
 	dw SachetDesc
-	dw TartAppleDesc
-	dw SweetAppleDesc
-	dw CrackedPotDesc
 	dw BerrySweetDesc
+	dw SoftSandDesc
+	dw SharpBeakDesc
+	dw PoisonBarbDesc
+	dw SilverPowderDesc
+	dw MysticWaterDesc
+	dw TwistedSpoonDesc
+	dw BlackbeltDesc
+	dw BlackGlassesDesc
+	dw PinkBowDesc
+	dw NeverMeltIceDesc
+	dw MagnetDesc
+	dw SpellTagDesc
+	dw MiracleSeedDesc
+	dw HardStoneDesc
+	dw CharcoalDesc
+	dw MetalCoatDesc
+	dw DragonFangDesc
+	dw PolkadotBowDesc
+	dw PsnCureBerryDesc
+	dw PrzCureBerryDesc
+	dw BurntBerryDesc
+	dw IceBerryDesc
+	dw BitterBerryDesc
+	dw MintBerryDesc
+	dw MiracleBerryDesc
+	dw MysteryBerryDesc
+	dw BerryDesc
+	dw GoldBerryDesc
+	dw RedApricornDesc
+	dw BluApricornDesc
+	dw YlwApricornDesc
+	dw GrnApricornDesc
+	dw WhtApricornDesc
+	dw BlkApricornDesc
+	dw PnkApricornDesc
+	dw NormalBoxDesc
+	dw GorgeousBoxDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
+	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc

@@ -549,7 +549,7 @@ UnknownText_0x1c0a4e::
 
 UnknownText_0x1c0a77::
 	text "Yes! The DOWSING"
-	line "MCHN indicates"
+	line "MACHINE indicates"
 
 	para "there's an item"
 	line "nearby."
@@ -557,7 +557,7 @@ UnknownText_0x1c0a77::
 
 UnknownText_0x1c0aa9::
 	text "Nope! The DOWSING"
-	line "MCHN isn't"
+	line "MACHINE isn't"
 	cont "responding."
 	prompt
 
