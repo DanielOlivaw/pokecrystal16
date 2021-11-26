@@ -305,18 +305,18 @@ UnknownText_0x1c05c8::
 	line "here."
 	prompt
 
-UnknownText_0x1c05dd::
+_UsedCutText::
 	text_ram wStringBuffer2
 	text " used"
 	line "CUT!"
 	prompt
 
-UnknownText_0x1c05ec::
+_NothingToCutText::
 	text "There's nothing to"
 	line "CUT here."
 	prompt
 
-UnknownText_0x1c0609::
+_UsedFlashText::
 	text "A blinding FLASH"
 	line "lights the area!@"
 	text_waitbutton
@@ -387,24 +387,24 @@ UnknownText_0x1c073b::
 	para ""
 	done
 
-UnknownText_0x1c0751::
+_AlreadyUsingStrengthText::
 	text "A #MON is using"
 	line "STRENGTH already."
 	prompt
 
-UnknownText_0x1c0774::
+_UsedStrengthText::
 	text_ram wStringBuffer2
 	text " used"
 	line "STRENGTH!"
 	done
 
-UnknownText_0x1c0788::
+_CanMoveBouldersText::
 	text_ram wStringBuffer1
 	text " can"
 	line "move boulders."
 	prompt
 
-UnknownText_0x1c07a0::
+_AskUseStrengthText::
 	text "A #MON may be"
 	line "able to move this."
 
@@ -412,23 +412,23 @@ UnknownText_0x1c07a0::
 	line "STRENGTH?"
 	done
 
-UnknownText_0x1c07d8::
+_BouldersMayNowBeMovedText::
 	text "Boulders may now"
 	line "be moved!"
 	done
 
-UnknownText_0x1c07f4::
+_MayBeAbleToMoveText::
 	text "A #MON may be"
 	line "able to move this."
 	done
 
-UnknownText_0x1c0816::
+_UsedWhirlpoolText::
 	text_ram wStringBuffer2
 	text " used"
 	line "WHIRLPOOL!"
 	prompt
 
-UnknownText_0x1c082b::
+_ViciousWhirlpoolText::
 	text "It's a vicious"
 	line "whirlpool!"
 
@@ -436,7 +436,7 @@ UnknownText_0x1c082b::
 	line "able to pass it."
 	done
 
-UnknownText_0x1c0864::
+_AskUseWhirlpoolText::
 	text "A whirlpool is in"
 	line "the way."
 
@@ -444,17 +444,17 @@ UnknownText_0x1c0864::
 	line "WHIRLPOOL?"
 	done
 
-UnknownText_0x1c0897::
+_UsedHeadbuttText::
 	text_ram wStringBuffer2
 	text " did a"
 	line "HEADBUTT!"
 	prompt
 
-UnknownText_0x1c08ac::
+_HeadbuttNoPokemonText::
 	text "Nope. Nothing…"
 	done
 
-UnknownText_0x1c08bc::
+_AskUseHeadbuttText::
 	text "A #MON could be"
 	line "in this tree."
 
@@ -462,18 +462,18 @@ UnknownText_0x1c08bc::
 	line "it?"
 	done
 
-UnknownText_0x1c08f0::
+_UsedRockSmashText::
 	text_ram wStringBuffer2
 	text " used"
 	line "ROCK SMASH!"
 	prompt
 
-UnknownText_0x1c0906::
+_MaybeCanBreakText::
 	text "Maybe a #MON"
 	line "can break this."
 	done
 
-UnknownText_0x1c0924::
+_AskUseRockSmashText::
 	text "This rock looks"
 	line "breakable."
 
@@ -575,13 +575,15 @@ UnknownText_0x1c0ada::
 	line "out!"
 	prompt
 
-UnknownText_0x1c0b03::
-	text_ram wStringBuffer3
-	text " used"
-	line "SWEET SCENT!"
+_SweetAromaText::
+	; text_ram wStringBuffer3
+	; text " used"
+	; line "SWEET SCENT!"
+	text "A sweet aroma"
+	line "filled the area!"
 	done
 
-UnknownText_0x1c0b1a::
+_SweetScentNoPokemonText::
 	text "Looks like there's"
 	line "nothing here…"
 	done

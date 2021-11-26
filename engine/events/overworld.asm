@@ -167,12 +167,12 @@ CutFunction:
 
 Text_UsedCut:
 	; used CUT!
-	text_far UnknownText_0x1c05dd
+	text_far _UsedCutText
 	text_end
 
 Text_NothingToCut:
 	; There's nothing to CUT here.
-	text_far UnknownText_0x1c05ec
+	text_far _NothingToCutText
 	text_end
 
 CheckMapForSomethingToCut:
@@ -327,7 +327,7 @@ Script_UseFlash:
 	end
 
 UnknownText_0xc8f3:
-	text_far UnknownText_0x1c0609
+	text_far _UsedFlashText
 	text_asm
 	call WaitSFX
 	ld de, SFX_FLASH
@@ -995,7 +995,7 @@ StrengthFunction:
 	ret
 
 .JumpText:
-	text_far UnknownText_0x1c0751
+	text_far _AlreadyUsingStrengthText
 	text_end
 
 .Failed:
@@ -1036,11 +1036,11 @@ Script_UsedStrength:
 	end
 
 .UsedStrength:
-	text_far UnknownText_0x1c0774
+	text_far _UsedStrengthText
 	text_end
 
 .StrengthAllowedItToMoveBoulders:
-	text_far UnknownText_0x1c0788
+	text_far _CanMoveBouldersText
 	text_end
 
 AskStrengthScript:
@@ -1065,17 +1065,17 @@ AskStrengthScript:
 
 UnknownText_0xcd69:
 	; A #MON may be able to move this. Want to use STRENGTH?
-	text_far UnknownText_0x1c07a0
+	text_far _AskUseStrengthText
 	text_end
 
 UnknownText_0xcd6e:
 	; Boulders may now be moved!
-	text_far UnknownText_0x1c07d8
+	text_far _BouldersMayNowBeMovedText
 	text_end
 
 UnknownText_0xcd73:
 	; A #MON may be able to move this.
-	text_far UnknownText_0x1c07f4
+	text_far _MayBeAbleToMoveText
 	text_end
 
 TryStrengthOW:
@@ -1151,7 +1151,7 @@ Jumptable_cdae:
 
 Text_UsedWhirlpool:
 	; used WHIRLPOOL!
-	text_far UnknownText_0x1c0816
+	text_far _UsedWhirlpoolText
 	text_end
 
 TryWhirlpoolMenu:
@@ -1238,7 +1238,7 @@ Script_MightyWhirlpool:
 	jumptext .MightyWhirlpoolText
 
 .MightyWhirlpoolText:
-	text_far UnknownText_0x1c082b
+	text_far _ViciousWhirlpoolText
 	text_end
 
 Script_AskWhirlpoolOW:
@@ -1250,7 +1250,7 @@ Script_AskWhirlpoolOW:
 	end
 
 UnknownText_0xce78:
-	text_far UnknownText_0x1c0864
+	text_far _AskUseWhirlpoolText
 	text_end
 
 HeadbuttFunction:
@@ -1276,12 +1276,12 @@ TryHeadbuttFromMenu:
 
 UnknownText_0xce9d:
 	; did a HEADBUTT!
-	text_far UnknownText_0x1c0897
+	text_far _UsedHeadbuttText
 	text_end
 
 UnknownText_0xcea2:
 	; Nope. Nothing…
-	text_far UnknownText_0x1c08ac
+	text_far _HeadbuttNoPokemonText
 	text_end
 
 HeadbuttFromMenuScript:
@@ -1334,7 +1334,7 @@ AskHeadbuttScript:
 
 UnknownText_0xcee6:
 	; A #MON could be in this tree. Want to HEADBUTT it?
-	text_far UnknownText_0x1c08bc
+	text_far _AskUseHeadbuttText
 	text_end
 
 RockSmashFunction:
@@ -1410,7 +1410,7 @@ MovementData_0xcf55:
 	step_end
 
 UnknownText_0xcf58:
-	text_far UnknownText_0x1c08f0
+	text_far _UsedRockSmashText
 	text_end
 
 AskRockSmashScript:
@@ -1428,12 +1428,12 @@ AskRockSmashScript:
 
 UnknownText_0xcf72:
 	; Maybe a #MON can break this.
-	text_far UnknownText_0x1c0906
+	text_far _MaybeCanBreakText
 	text_end
 
 UnknownText_0xcf77:
 	; This rock looks breakable. Want to use ROCK SMASH?
-	text_far UnknownText_0x1c0924
+	text_far _AskUseRockSmashText
 	text_end
 
 HasRockSmash:

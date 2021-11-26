@@ -105,6 +105,7 @@ ItemEffects:
 	dw RepelEffect         ; REPEL
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
+	dw HoneyEffect         ; HONEY
 	dw XAccuracyEffect     ; X_ACCURACY
 	dw XItemEffect         ; X_ATTACK
 	dw XItemEffect         ; X_DEFEND
@@ -2642,6 +2643,10 @@ OpenBox:
 	; There was a trophy inside!
 	text_far UnknownText_0x1c5d03
 	text_end
+
+HoneyEffect:
+	farcall SweetScentFromMenu
+	jp UseDisposableItem
 
 NoEffect:
 	jp IsntTheTimeMessage

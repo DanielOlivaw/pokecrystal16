@@ -92,6 +92,7 @@ ItemDescriptions:
 	dw RepelDesc
 	dw SuperRepelDesc
 	dw MaxRepelDesc
+	dw HoneyDesc
 	dw XAccuracyDesc
 	dw XAttackDesc
 	dw XDefendDesc
@@ -190,7 +191,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -434,6 +434,10 @@ SuperRepelDesc:
 MaxRepelDesc:
 	db   "Repels weak #-"
 	next "MON for 250 steps.@"
+
+HoneyDesc:
+	db   "A honey that attr-"
+	next "acts wild #MON.@"
 
 DireHitDesc:
 	db   "Ups critical hit"

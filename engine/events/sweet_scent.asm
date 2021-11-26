@@ -8,7 +8,7 @@ SweetScentFromMenu:
 .SweetScent:
 	reloadmappart
 	special UpdateTimePals
-	callasm GetPartyNick
+	; callasm GetPartyNick
 	writetext UnknownText_0x50726
 	waitbutton
 	callasm SweetScentEncounter
@@ -59,10 +59,10 @@ SweetScentEncounter:
 
 UnknownText_0x50726:
 	; used SWEET SCENT!
-	text_far UnknownText_0x1c0b03
+	text_far _SweetAromaText
 	text_end
 
 UnknownText_0x5072b:
 	; Looks like there's nothing here…
-	text_far UnknownText_0x1c0b1a
+	text_far _SweetScentNoPokemonText
 	text_end

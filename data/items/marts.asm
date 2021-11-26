@@ -272,11 +272,11 @@ MartMahogany1:
 MartMahogany2:
 	db 9 ; # items
 	db RAGECANDYBAR
+	db LAVA_COOKIE
+	db HONEY
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
 	db SUPER_REPEL
 	db REVIVE
 	db FLOWER_MAIL
