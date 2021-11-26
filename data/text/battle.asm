@@ -942,7 +942,7 @@ AccuracyWontRiseAnymoreText:
 
 SpDefWontRiseAnymoreText:
 	text "<USER>'s"
-	line "SPCL.DEF won't"
+	line "SP.DEF won't"
 	cont "go any higher!"
 	prompt
 
@@ -1200,7 +1200,7 @@ TransformedText:
 LightScreenEffectText:
 	text "LIGHT SCREEN"
 	line "raised the team's"
-	cont "SPCL.DEF!"
+	cont "SP.DEF!"
 	prompt
 
 ReflectEffectText:
@@ -1814,7 +1814,7 @@ SwitchedPowerChangesText:
 	line "switched all"
 	para "changes to its"
 	line "ATTACK and"
-	para "SPCL.ATK with"
+	para "SP.ATK with"
 	line "<TARGET>!"
 	prompt
 
@@ -1823,7 +1823,7 @@ SwitchedGuardChangesText:
 	line "switched all"
 	para "changes to its"
 	line "DEFENSE and"
-	para "SPCL.DEF with"
+	para "SP.DEF with"
 	line "<TARGET>!"
 	prompt
 

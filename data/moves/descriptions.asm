@@ -895,7 +895,7 @@ EnergyBallDescription:
 LusterPurgeDescription:
 FocusBlastDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower SP.DEF.@"
 
 EmberDescription:
 FlamethrowerDescription:
@@ -1004,7 +1004,7 @@ LeechSeedDescription:
 
 GrowthDescription:
 	db   "Grows to boost"
-	next "ATTACK & SPCL.ATK.@"
+	next "ATTACK & SP.ATK.@"
 
 PoisonpowderDescription:
 PoisonGasDescription:
@@ -1130,8 +1130,8 @@ BarrierDescription:
 	next "user's DEFENSE.@"
 
 LightScreenDescription:
-	db   "Ups SPCL.DEF with"
-	next "a wall of light.@"
+	db   "Ups SP.DEF with a"
+	next "wall of light.@"
 
 HazeDescription:
 SereneBellDescription:
@@ -1203,7 +1203,7 @@ SpikeCannonDescription:
 
 AmnesiaDescription:
 	db   "Sharply raises the"
-	next "user's SPCL.DEF.@"
+	next "user's SP.DEF.@"
 
 KinesisDescription:
 MudSlapDescription:
@@ -1564,8 +1564,8 @@ CrushClawDescription:
 	next "lower DEFENSE.@"
 
 MirrorCoatDescription:
-	db   "Counters a SPCL."
-	next "ATK move double.@"
+	db   "Counters a SP.ATK"
+	next "move double.@"
 
 PsychUpDescription:
 	db   "Copies the foe's"
@@ -1658,7 +1658,7 @@ NastyPlotDescription:
 FlareUpDescription:
 TailGlowDescription:
 	db   "Sharply increases"
-	next "user's SPCL.ATK.@"
+	next "user's SP.ATK.@"
 
 HailDescription:
 	db   "Hail inflicts"
@@ -1674,7 +1674,7 @@ MetalBurstDescription:
 
 FlatterDescription:
 	db   "Confuses and"
-	next "raises SPCL.ATK.@"
+	next "raises SP.ATK.@"
 
 SuperpowerDescription:
 	db   "Lowers the user's"
@@ -1687,12 +1687,12 @@ CharmVoiceDescription:
 CosmicPowerDescription:
 DefendOrderDescription:
 	db   "Heightens DEFENSE"
-	next "and SPCL.DEF.@"
+	next "and SP.DEF.@"
 
 MoonblastDescription:
 MistBallDescription:
 	db   "An attack that may"
-	next "lower SPCL.ATK.@"
+	next "lower SP.ATK.@"
 
 IceShardDescription:
 	db   "Chunks of ice that"
@@ -1742,7 +1742,7 @@ HoneClawsDescription:
 MetalSoundDescription:
 FakeTearsDescription:
 	db   "Sharply lowers the"
-	next "foe's SPCL.DEF.@"
+	next "foe's SP.DEF.@"
 
 AquaJetDescription:
 	db   "A quick lunge that"
@@ -1750,7 +1750,7 @@ AquaJetDescription:
 
 CloseCombatDescription:
 	db   "Sacrifices DEFENSE"
-	next "and SPCL.DEF.@"
+	next "and SP.DEF.@"
 
 HowlDescription:
 	db   "Howls to raise the"
@@ -1761,8 +1761,8 @@ BurnUpDescription:
 	next "to inflict damage.@"
 
 CalmMindDescription:
-	db   "Increases SPCL.ATK"
-	next "and SPCL.DEF.@"
+	db   "Increases SP.ATK"
+	next "and SP.DEF.@"
 
 LowSweepDescription:
 	db   "A leg attack that"
@@ -1833,7 +1833,7 @@ FleurCannonDescription:
 DracoMeteorDescription:
 OverheatDescription:
 	db   "Sharply reduces"
-	next "user's SPCL.ATK.@"
+	next "user's SP.ATK.@"
 
 HexDescription:
 	db   "Stronger against"
@@ -1974,7 +1974,7 @@ StormThrowDescription:
 
 WorkUpDescription:
 	db   "Increases ATTACK"
-	next "and SPCL.ATK.@"
+	next "and SP.ATK.@"
 
 BabyDollEyesDescription:
 	db   "Lowers ATTACK."
@@ -2100,7 +2100,7 @@ FellStingerDescription:
 
 EerieImpulseDescription:
 	db   "Sharply lowers the"
-	next "foe's SPCL.ATK.@"
+	next "foe's SP.ATK.@"
 
 BounceDescription:
 	db   "1st turn: Bounce"
@@ -2112,7 +2112,7 @@ RockTombDescription:
 
 TearfulLookDescription:
 	db   "Lowers ATTACK and"
-	next "SPCL.ATK.@"
+	next "SP.ATK.@"
 
 AcrobaticsDescription:
 	db   "Stronger if not"
@@ -2120,7 +2120,7 @@ AcrobaticsDescription:
 
 SnarlDescription:
 	db   "A loud rant that"
-	next "lowers SPCL.ATK.@"
+	next "lowers SP.ATK.@"
 
 OdorSleuthDescription:
 	db   "Negates accuracy"
@@ -2145,7 +2145,7 @@ BulletPunchDescription:
 StruggleBugDescription:
 SkitterSmackDescription:
 	db   "An attack that"
-	next "lowers SPCL.ATK.@"
+	next "lowers SP.ATK.@"
 
 IncinerateDescription:
 	db   "Burns up the foe's"
@@ -2181,7 +2181,7 @@ SmellingSaltDescription:
 
 CaptivateDescription:
 	db   "Drops the opposite"
-	next "gender's SPCL.ATK.@"
+	next "gender's SP.ATK.@"
 
 AcupressureDescription:
 	db   "Sharply boosts a"
@@ -2189,7 +2189,7 @@ AcupressureDescription:
 
 AcidSprayDescription:
 	db   "Harshly reduces"
-	next "foe's SPCL.DEF.@"
+	next "foe's SP.DEF.@"
 
 ChargeDescription:
 	db   "Boosts the next"
@@ -2215,7 +2215,7 @@ TimeTravelDescription:
 
 NobleRoarDescription:
 	db   "Reduces ATTACK"
-	next "and SPCL.ATK.@"
+	next "and SP.ATK.@"
 
 BoomburstDescription:
 	db   "Attacks with an"
@@ -2273,7 +2273,7 @@ SynchronoiseDescription:
 ChargeBeamDescription:
 FieryDanceDescription:
 	db   "An attack that may"
-	next "raise SPCL.ATK.@"
+	next "raise SP.ATK.@"
 
 OriginPulseDescription:
 	db   "Attacks with blue"
@@ -2285,7 +2285,7 @@ PrecipiceBladesDescription:
 
 DragonAscentDescription:
 	db   "Sacrifices DEFENSE"
-	next "and SPCL.DEF.@"
+	next "and SP.DEF.@"
 
 TrickRoomDescription:
 	db   "Reverses the move"
@@ -2305,11 +2305,11 @@ FinalGambitDescription:
 
 MysticalFireDescription:
 	db   "Special fire that"
-	next "lowers SPCL.ATK.@"
+	next "lowers SP.ATK.@"
 
 ConfideDescription:
 	db   "Reduces the foe's"
-	next "SPCL.ATK.@"
+	next "SP.ATK.@"
 
 PowerUpPunchDescription:
 	db   "A punch that"
@@ -2343,7 +2343,7 @@ LunarDanceDescription:
 
 SeedFlareDescription:
 	db   "May harshly reduce"
-	next "foe's SPCL.DEF.@"
+	next "foe's SP.DEF.@"
 
 HeavySlamDescription:
 HeatCrashDescription:
@@ -2389,7 +2389,7 @@ GuileFangDescription:
 
 DataPulseDescription:
 	db   "Confuses if user"
-	next "raised SPCL.ATK.@"
+	next "raised SP.ATK.@"
 
 DrowsyWrathDescription:
 	db   "Usable even if the"
@@ -2552,7 +2552,7 @@ TarShotDescription:
 
 AppleAcidDescription:
 	db   "An attack that"
-	next "lowers SPCL.DEF.@"
+	next "lowers SP.DEF.@"
 
 OctolockDescription:
 	db   "Traps the foe and"

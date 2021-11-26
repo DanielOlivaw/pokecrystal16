@@ -8,5 +8,6 @@ BuenaPrizeItems:
 	db IRON,         5
 	db CARBOS,       5
 	db CALCIUM,      5
+	db ZINC,         5
 	db HP_UP,        5
 .End

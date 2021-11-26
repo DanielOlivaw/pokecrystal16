@@ -168,7 +168,7 @@ ErikaExplainTMText:
 	line "move that may"
 
 	para "lower your foe's"
-	line "SPCL.DEF."
+	line "SP.DEF."
 
 	para "Please use it if"
 	line "it pleases you…"

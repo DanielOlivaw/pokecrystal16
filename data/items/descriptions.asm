@@ -72,6 +72,7 @@ ItemDescriptions:
 	dw IronDesc
 	dw CarbosDesc
 	dw CalciumDesc
+	dw ZincDesc
 	dw PPUpDesc
 	dw RareCandyDesc
 	dw ReviveDesc
@@ -189,7 +190,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -375,7 +375,11 @@ LuckyPunchDesc:
 	next "ratio of CHANSEY.@"
 
 CalciumDesc:
-	db   "Raises SPCL.ATK"
+	db   "Raises SP.ATK"
+	next "of one #MON.@"
+
+ZincDesc:
+	db   "Raises SP.DEF"
 	next "of one #MON.@"
 
 RareCandyDesc:

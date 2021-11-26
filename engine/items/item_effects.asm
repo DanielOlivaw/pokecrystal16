@@ -85,6 +85,7 @@ ItemEffects:
 	dw VitaminEffect       ; IRON
 	dw VitaminEffect       ; CARBOS
 	dw VitaminEffect       ; CALCIUM
+	dw VitaminEffect       ; ZINC
 	dw RestorePPEffect     ; PP_UP
 	dw RareCandyEffect     ; RARE_CANDY
 	dw ReviveEffect        ; REVIVE
@@ -1269,15 +1270,15 @@ StatStrings:
 	dw .attack
 	dw .defense
 	dw .speed
-	; dw .special
 	dw .sp_atk
+	dw .sp_def
 
 .health  db "HEALTH@"
 .attack  db "ATTACK@"
 .defense db "DEFENSE@"
 .speed   db "SPEED@"
-; .special db "SPECIAL@"
-.sp_atk  db "SPCL.ATK@"
+.sp_atk  db "SP.ATK@"
+.sp_def  db "SP.DEF@"
 
 ; GetStatExpRelativePointer:
 GetEVRelativePointer:
@@ -1307,6 +1308,7 @@ Table_eeeb:
 	db IRON,    MON_DEF_EV - MON_EVS
 	db CARBOS,  MON_SPD_EV - MON_EVS
 	db CALCIUM, MON_SAT_EV - MON_EVS
+	db ZINC,    MON_SDF_EV - MON_EVS
 
 RareCandy_StatBooster_GetParameters:
 	ld a, [wCurPartySpecies]
