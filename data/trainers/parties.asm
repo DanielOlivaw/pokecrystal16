@@ -1991,7 +1991,7 @@ GruntMGroup:
 	db 8
 	dw POOCHYENA
 	db 12
-	dw SANDILE
+	dw SCRAGGY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (2)
@@ -2083,7 +2083,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 25
-	dw THIEVUL
+	dw GRIMER
 	db 25
 	dw MURKROW
 	db 27
@@ -2099,7 +2099,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (13)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 27
-	dw STUNKY
+	dw MIGHTYENA
 	db -1 ; end
 
 	next_list_item ; GRUNTM (14)
@@ -2195,7 +2195,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 26
-	dw POOCHYENA
+	dw STUNKY
 	db 26
 	dw ARIADOS
 	db -1 ; end
@@ -4059,8 +4059,8 @@ ExecutiveMGroup:
 	next_list_item ; EXECUTIVEM (2)
 	db "PROTON@", TRAINERTYPE_MOVES
 	db 31
-	dw KROKOROK
-	dw POWER_TRIP, DIG, HONE_CLAWS, SAND_TOMB
+	dw SCRAGGY
+	dw LEER, FACADE, PAYBACK, LOW_KICK
 	db 36
 	dw MIGHTYENA
 	dw CRUNCH, FIRE_FANG, SWAGGER, ROAR
@@ -5277,9 +5277,9 @@ GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 9
-	dw GLAMEOW
+	dw SANDILE
 	db 11
-	dw SCRAGGY
+	dw GLAMEOW
 	db -1 ; end
 
 	next_list_item ; GRUNTF (2)
