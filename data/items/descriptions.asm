@@ -407,6 +407,7 @@ PokeDollDesc:
 	next "a wild #MON.@"
 
 FullHealDesc:
+LavaCookieDesc:
 	db   "Eliminates all"
 	next "status problems.@"
 
@@ -778,10 +779,6 @@ CharcoalDesc:
 BerryJuiceDesc:
 	db   "Restores #MON"
 	next "HP by 20.@"
-
-LavaCookieDesc:
-	db   "Eliminates all"
-	next "status problems.@"
 
 ScopeLensDesc:
 	db   "Raises critical"

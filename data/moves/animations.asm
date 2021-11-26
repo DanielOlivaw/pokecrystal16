@@ -2014,6 +2014,7 @@ BattleAnim_Poisonpowder:
 BattleAnim_SleepPowder:
 BattleAnim_Spore:
 BattleAnim_StunSpore:
+BattleAnim_Infestation:
 BattleAnim_AttackOrder:
 	anim_1gfx ANIM_GFX_POWDER
 .loop
@@ -6986,28 +6987,6 @@ BattleAnim_MagicalLeaf:
 	anim_incbgeffect ANIM_BG_1A
 	anim_call BattleAnim_ShowMon_0
     anim_call BattleAnim_RazorLeaf
-	anim_ret
-
-BattleAnim_Infestation:
-	anim_1gfx ANIM_GFX_POWDER
-.loop
-	anim_sound 6, 2, SFX_MENU
-	anim_obj ANIM_OBJ_POWDER, 104, 36, $0
-	anim_wait 4
-	anim_sound 6, 2, SFX_MENU
-	anim_obj ANIM_OBJ_POWDER, 136, 36, $0
-	anim_wait 4
-	anim_sound 6, 2, SFX_MENU
-	anim_obj ANIM_OBJ_POWDER, 112, 36, $0
-	anim_wait 4
-	anim_sound 6, 2, SFX_MENU
-	anim_obj ANIM_OBJ_POWDER, 128, 36, $0
-	anim_wait 4
-	anim_sound 6, 2, SFX_MENU
-	anim_obj ANIM_OBJ_POWDER, 120, 36, $0
-	anim_wait 4
-	anim_loop 2, .loop
-	anim_wait 16
 	anim_ret
 
 BattleAnim_ToxicThread:

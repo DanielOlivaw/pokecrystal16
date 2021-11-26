@@ -65,7 +65,7 @@ BattleCommand_HealSun:
 
 .Sun:
 	call GetThirdMaxHP
-	sla c
+	sla c ; Multiply by 2
 	rl b
 .Heal:
 	farcall AnimateCurrentMove

@@ -999,6 +999,8 @@ DetermineEvolutionItemResults::
 	jr .loop
 
 FindEvolution:
+; For eviolite (see UnevolvedEviolite in engine/battle/effect_commands.asm)
+; ret z = no evolutions; ret nz = evolution found
 	ld h, d
 	ld l, e
 	ld de, 0

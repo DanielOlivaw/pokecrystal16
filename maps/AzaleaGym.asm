@@ -211,8 +211,8 @@ BugsyText_FuryCutterSpeech:
 	line "#MON attack,"
 
 	para "then switch with"
-	line "the next #MON in"
-	cont "your party."
+	line "the next #MON"
+	cont "in your party."
 
 	para "Isn't that great?"
 	done

@@ -4324,11 +4324,11 @@ CheckForStatusIfAlreadyHasAny:
 	call GetBattleVarAddr
 	ld d, h
 	ld e, l
+	ld a, [de]
 	and SLP
 	ld hl, AlreadyAsleepText
 	ret nz
-	
-	ld a, [de]
+
 	bit FRZ, a
 	ld hl, AlreadyFrozenText
 	ret nz
