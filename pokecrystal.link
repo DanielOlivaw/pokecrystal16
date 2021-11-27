@@ -138,10 +138,10 @@ ROMX $32
 	"bank32"
 ROMX $33
 	"Move Animations"
-	"Extra Songs 2"
 ROMX $34
 	"Enemy Trainer Parties 2"
 ROMX $35
+	"Extra Songs 2"
 ROMX $36
 	"Font Inversed"
 ROMX $37
