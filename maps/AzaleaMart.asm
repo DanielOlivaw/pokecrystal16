@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
-	const AZALEAMART_CLERK
+	const AZALEAMART_CLERK1
+	const AZALEAMART_CLERK2
 	const AZALEAMART_COOLTRAINER_M
 	const AZALEAMART_BUG_CATCHER
 
@@ -8,7 +9,10 @@ AzaleaMart_MapScripts:
 
 	db 0 ; callbacks
 
-AzaleaMartClerkScript:
+AzaleaMartClerk1Script:
+	jumpstd standardmart
+
+AzaleaMartClerk2Script:
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_AZALEA
 	closetext
@@ -21,11 +25,20 @@ AzaleaMartBugCatcherScript:
 	jumptextfaceplayer AzaleaMartBugCatcherText
 
 AzaleaMartCooltrainerMText:
-	text "There's no GREAT"
-	line "BALL here. #"
+	text "I don't have"
+	line "enough badges to"
 
-	para "BALLS will have"
-	line "to do."
+	para "buy GREAT BALLS"
+	line "yet."
+
+	para "# BALLS will"
+	line "have to do."
+
+	; text "There's no GREAT"
+	; line "BALL here. #"
+
+	; para "BALLS will have"
+	; line "to do."
 
 	para "I wish KURT would"
 	line "make me some of"
@@ -54,7 +67,8 @@ AzaleaMart_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
-	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartClerkScript, -1
+	db 4 ; object events
+	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartClerk1Script, -1
+	object_event  1,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartClerk2Script, -1
 	object_event  2,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaMartCooltrainerMScript, -1
 	object_event  7,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AzaleaMartBugCatcherScript, -1

@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
-	const VERMILIONMART_CLERK
+	const VERMILIONMART_CLERK1
+	const VERMILIONMART_CLERK2
 	const VERMILIONMART_SUPER_NERD
 	const VERMILIONMART_BUENA
 
@@ -8,7 +9,10 @@ VermilionMart_MapScripts:
 
 	db 0 ; callbacks
 
-VermilionMartClerkScript:
+VermilionMartClerk1Script:
+	jumpstd standardmart
+
+VermilionMartClerk2Script:
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_VERMILION
 	closetext
@@ -45,7 +49,8 @@ VermilionMart_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
-	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMartClerkScript, -1
+	db 4 ; object events
+	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMartClerk1Script, -1
+	object_event  1,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMartClerk2Script, -1
 	object_event  5,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionMartSuperNerdScript, -1
 	object_event  8,  6, SPRITE_BUENA, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionMartBuenaScript, -1

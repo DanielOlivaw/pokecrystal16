@@ -138,10 +138,7 @@ IndigoPlateauPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 IndigoPlateauPokecenter1FClerkScript:
-	opentext
-	pokemart MARTTYPE_STANDARD, MART_INDIGO_PLATEAU
-	closetext
-	end
+	jumpstd standardmart
 
 IndigoPlateauPokecenter1FCooltrainerMScript:
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
