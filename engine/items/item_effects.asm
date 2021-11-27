@@ -127,6 +127,8 @@ ItemEffects:
 	dw NoEffect            ; STARDUST
 	dw NoEffect            ; STAR_PIECE
 	dw NoEffect            ; BRICK_PIECE
+	dw NoEffect            ; PRETTY_WING
+	dw NoEffect            ; COMET_SHARD
 	dw NoEffect            ; FLOWER_MAIL
 	dw NoEffect            ; SURF_MAIL   
 	dw NoEffect            ; LITEBLUEMAIL
@@ -157,6 +159,7 @@ ItemEffects:
 	dw NoEffect            ; BERSERK_GENE
 	dw NoEffect            ; LIGHT_BALL
 	dw NoEffect            ; EVIOLITE
+	dw NoEffect            ; BLACK_SLUDGE
 	dw NoEffect            ; UP_GRADE
 	dw NoEffect            ; OVAL_STONE
 	dw NoEffect            ; RAZOR_FANG  

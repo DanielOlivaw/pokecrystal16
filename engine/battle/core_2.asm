@@ -56,8 +56,12 @@ HandleLeftovers:
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld a, b
+	cp HELD_BLACK_SLUDGE
+	jr z, .black_sludge
 	cp HELD_LEFTOVERS
 	ret nz
+
+.heal
 	call CheckMaxHP
 	ret z
 	xor a
@@ -71,6 +75,40 @@ HandleLeftovers:
 	predef PlayBattleAnim
 	farcall RestoreSixteenthMaxHP
 	ld hl, BattleText_TargetRecoveredWithItem
+	jp StdBattleTextbox
+
+.black_sludge
+; Check if holder is Poison-type
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .player_type
+	ld hl, wEnemyMonHP
+	ld de, wEnemyMonType1
+	ld a, [de]
+	cp POISON
+	jr z, .heal ; Heal if Poison-type
+	inc de
+	ld a, [de]
+	cp POISON
+	jr z, .heal ; Heal if Poison-type
+	jr .sludge_damage
+
+.player_type
+	ld hl, wBattleMonHP
+	ld de, wBattleMonType1
+	ld a, [de]
+	cp POISON
+	jr z, .heal ; Heal if Poison-type
+	inc de
+	ld a, [de]
+	cp POISON
+	jr z, .heal ; Heal if Poison-type
+
+.sludge_damage
+; Damage non-Poison_types
+	callfar GetEighthMaxHP
+	callfar SubtractHPFromUser
+	ld hl, BattleText_UsersHurtByStringBuffer1
 	jp StdBattleTextbox
 
 HandleDefrost:

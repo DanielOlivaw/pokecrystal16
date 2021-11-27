@@ -114,6 +114,8 @@ ItemDescriptions:
 	dw StardustDesc
 	dw StarPieceDesc
 	dw BrickPieceDesc
+	dw PrettyWingDesc
+	dw CometShardDesc
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -144,6 +146,7 @@ ItemDescriptions:
 	dw BerserkGeneDesc
 	dw LightBallDesc
 	dw EvioliteDesc
+	dw BlackSludgeDesc
 	dw UpGradeDesc
 	dw OvalStoneDesc
 	dw RazorFangDesc
@@ -191,9 +194,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -848,6 +848,10 @@ EvioliteDesc:
 	db   "Protects #MON"
 	next "that can evolve.@"
 
+BlackSludgeDesc:
+	db   "Heals POISON-type"
+	next "#MON. (HOLD)@"
+
 FriendBallDesc:
 	db   "A BALL that makes"
 	next "#MON friendly.@"
@@ -911,6 +915,14 @@ QuestionMarkDesc:
 BrickPieceDesc:
 	db   "A rare chunk of"
 	next "tile.@"
+
+PrettyWingDesc:
+	db   "A beautiful"
+	next "feather. Sell low.@"
+
+CometShardDesc:
+	db   "A blue gem shard."
+	next "Sell very high.@"
 
 SurfMailDesc:
 	db   "LAPRAS-print MAIL."

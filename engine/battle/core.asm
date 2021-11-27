@@ -900,7 +900,7 @@ TryEnemyFlee:
 	ld a, [wEnemyMonType1]
 	cp GHOST
 	jp z, .CheckFlee
-	inc a
+	ld a, [wEnemyMonType2]
 	cp GHOST
 	jp z, .CheckFlee
 
@@ -3870,7 +3870,7 @@ TryToRunAwayFromBattle:
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jp z, .can_escape
-	inc a
+	ld a, [wBattleMonType2]
 	cp GHOST
 	jp z, .can_escape
 
@@ -5559,7 +5559,7 @@ TryPlayerSwitch:
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jr z, .try_switch
-	inc a
+	ld a, [wBattleMonType2]
 	cp GHOST
 	jr z, .try_switch
 
