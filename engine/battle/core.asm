@@ -6440,21 +6440,28 @@ LoadEnemyMon:
 	ld a, [wBaseItem1]
 	jr z, .UpdateItem
 
+; If the common item and the rare item are the same,
+; it will appear 100% of the time.
+	ld b, a
+	ld a, [wBaseItem2]
+	cp b
+	jr z, .UpdateItem
+
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    75% None
-;    23% Item1
-;     2% Item2
+;    45% None
+;    50% Item1
+;     5% Item2
 
-; 25% chance of getting an item
+; 55% chance of getting an item
 	call BattleRandom
-	cp 75 percent + 1
+	cp 45 percent + 1 ; 45% chance of no item
 	ld a, NO_ITEM
 	jr c, .UpdateItem
 
-; From there, an 8% chance for Item2
+; From there, a 9% of 55% chance for Item2
 	call BattleRandom
-	cp 8 percent ; 8% of 25% = 2% Item2
+	cp 9 percent ; 9% of 55% = 4.95% Item2
 	ld a, [wBaseItem1]
 	jr nc, .UpdateItem
 	ld a, [wBaseItem2]

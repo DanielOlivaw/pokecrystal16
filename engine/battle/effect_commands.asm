@@ -1352,7 +1352,7 @@ BattleCommand_Critical:
 	push bc
 	call GetUserItem
 	ld a, b
-	cp HELD_CRITICAL_UP ; Increased critical chance. Only Scope Lens has this.
+	cp HELD_CRITICAL_UP ; Increased critical chance.
 	pop bc
 	jr nz, .Tally
 

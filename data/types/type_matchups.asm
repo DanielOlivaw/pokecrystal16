@@ -120,8 +120,8 @@ TypeMatchups:
 	db FAIRY,     DRAGON,    SUPER_EFFECTIVE ; new
 	db FAIRY,     DARK,      SUPER_EFFECTIVE ; new
 	db FAIRY,     STEEL,     NOT_VERY_EFFECTIVE ; new
-	db GRASS,     ICE,       NOT_VERY_EFFECTIVE ; new
-	db FLYING,    ICE,       NOT_VERY_EFFECTIVE ; new
+	; db GRASS,     ICE,       NOT_VERY_EFFECTIVE ; new
+	; db FLYING,    ICE,       NOT_VERY_EFFECTIVE ; new
 
 	db -2 ; end (with Foresight)
 
