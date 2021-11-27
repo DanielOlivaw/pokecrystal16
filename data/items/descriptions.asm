@@ -12,6 +12,11 @@ ItemDescriptions:
 	dw MoonBallDesc
 	dw LoveBallDesc
 	dw DuskBallDesc
+	dw DreamBallDesc
+	dw RepeatBallDesc
+	dw TimerBallDesc
+	dw QuickBallDesc
+	dw NetBallDesc
 	dw ParkBallDesc
 	dw TownMapDesc
 	dw BicycleDesc
@@ -195,11 +200,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -867,6 +867,26 @@ LoveBallDesc:
 DuskBallDesc:
 	db   "A BALL for catch-"
 	next "ing in the dark.@"
+
+DreamBallDesc:
+	db   "A BALL for sleep-"
+	next "ing #MON.@"
+
+RepeatBallDesc:
+	db   "A BALL for #-"
+	next "MON caught before.@"
+
+TimerBallDesc:
+	db   "More effective as"
+	next "more turns pass.@"
+
+QuickBallDesc:
+	db   "A BALL used at the"
+	next "start of battle.@"
+
+NetBallDesc:
+	db   "A BALL for WATER"
+	next "and BUG #MON.@"
 
 NormalBoxDesc:
 	db   "Open it and see"

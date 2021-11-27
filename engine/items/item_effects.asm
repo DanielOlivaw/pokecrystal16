@@ -25,6 +25,11 @@ ItemEffects:
 	dw PokeBallEffect      ; MOON_BALL
 	dw PokeBallEffect      ; LOVE_BALL
 	dw PokeBallEffect      ; DUSK_BALL
+	dw PokeBallEffect      ; DREAM_BALL
+	dw PokeBallEffect      ; REPEAT_BALL
+	dw PokeBallEffect      ; TIMER_BALL
+	dw PokeBallEffect      ; QUICK_BALL
+	dw PokeBallEffect      ; NET_BALL
 	dw PokeBallEffect      ; PARK_BALL
 	dw TownMapEffect       ; TOWN_MAP
 	dw BicycleEffect       ; BICYCLE
@@ -728,7 +733,6 @@ BallMultiplierFunctionTable:
 ; which ball is used in a certain situation.
 	dbw ULTRA_BALL,  UltraBallMultiplier
 	dbw GREAT_BALL,  GreatBallMultiplier
-	dbw SAFARI_BALL, SafariBallMultiplier ; Safari Ball, leftover from RBY
 	dbw HEAVY_BALL,  HeavyBallMultiplier
 	dbw LEVEL_BALL,  LevelBallMultiplier
 	dbw LURE_BALL,   LureBallMultiplier
@@ -736,6 +740,11 @@ BallMultiplierFunctionTable:
 	dbw MOON_BALL,   MoonBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw DUSK_BALL,   DuskBallMultiplier
+	dbw DREAM_BALL,  DreamBallMultiplier
+	dbw REPEAT_BALL, RepeatBallMultiplier
+	dbw TIMER_BALL,  TimerBallMultiplier
+	dbw QUICK_BALL,  QuickBallMultiplier
+	dbw NET_BALL,    NetBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
 	db -1 ; end
 
@@ -746,7 +755,6 @@ UltraBallMultiplier:
 	ld b, $ff
 	ret
 
-SafariBallMultiplier:
 GreatBallMultiplier:
 ParkBallMultiplier:
 ; multiply catch rate by 1.5
@@ -1003,6 +1011,143 @@ DuskBallMultiplier:
 	jr c, .max
 
 	ld b, a
+	ret
+
+.max
+	ld b, $ff
+	ret
+
+DreamBallMultiplier:
+; multiply catch rate by 4 if mon is asleep
+	ld a, [wEnemyMonStatus]
+	and SLP
+	ret z
+
+	sla b
+	jr c, .max
+
+	sla b
+	ret nc
+
+.max
+	ld b, $ff
+	ret
+
+RepeatBallMultiplier:
+; multiply catch rate by 3 if enemy mon is already in Pokédex
+	ld a, [wTempEnemyMonSpecies]
+	dec a
+	push bc
+	call CheckCaughtMon
+	pop bc
+	ret z
+
+	ld a, b
+	add a
+	jr c, .max
+
+	add b
+	jr nc, .done
+.max
+	ld a, $ff
+.done
+	ld b, a
+	ret
+
+TimerBallMultiplier:
+; multiply catch rate by 1 + (turns passed * 3) / 10, capped at 4
+	ld a, [wPlayerTurnsTaken]
+	cp 10
+	jr nc, .nocap
+	ld a, 10
+.nocap
+	ld c, a
+	add c
+	add c
+
+	; hMultiplier = turns passed * 3
+	ld [hMultiplier], a
+
+	; hMultiplicand = catch rate
+	xor a
+	ld [hMultiplicand + 0], a
+	ld [hMultiplicand + 1], a
+	ld a, b
+	ld [hMultiplicand + 2], a
+
+	; hProduct = catch rate * (turns passed * 3)
+	call Multiply
+
+	; hDividend = hProduct = catch rate * (turns passed * 3)
+	ld hl, hDividend
+	ld a, [hProduct + 0]
+	ld [hli], a
+	ld a, [hProduct + 1]
+	ld [hli], a
+	ld a, [hProduct + 2]
+	ld [hli], a
+	ld a, [hProduct + 3]
+	ld [hl], a
+
+	; hDivisor = 10
+	ld a, 10
+	ld [hDivisor], a
+
+	; hQuotient = catch rate * (turns passed * 3) / 10
+	ld b, 4
+	call Divide
+
+	; b = hQuotient = catch rate * (turns passed * 3) / 10
+	ld a, [hQuotient + 2]
+	ld b, a
+
+	ret
+
+QuickBallMultiplier:
+; multiply catch rate by 5 on first turn
+	ld a, [wPlayerTurnsTaken]
+	and a
+	ret nz
+
+	ld a, b
+
+	sla b
+	jr c, .max
+
+	sla b
+	jr c, .max
+
+	add a
+	ret nc
+
+.max
+	ld b, $ff
+	ret
+	
+NetBallMultiplier:
+; Check whether foe's 1st type is bug or water
+	ld a, [wEnemyMonType1]
+	cp WATER
+	jr z, .bug_or_water
+	cp BUG
+	jr z, .bug_or_water
+; Check whether foe's 2nd type is bug or water
+	ld a, [wEnemyMonType2]
+	cp WATER
+	jr z, .bug_or_water
+	cp BUG
+; If not bug or water, don't change catch rate
+	ret nz
+
+.bug_or_water
+; b is the catch rate
+; a := b / 2 + b + b + b == b × 3.5
+	ld a, b
+	srl a
+rept 3
+	add b
+	jr c, .max
+endr
 	ret
 
 .max
