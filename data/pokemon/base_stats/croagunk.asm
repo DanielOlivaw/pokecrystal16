@@ -7,7 +7,7 @@
 	db POISON, FIGHTING ; type
 	db 140 ; catch rate
 	db 60 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, BLACK_SLUDGE ; items
+	db NO_ITEM, BLACK_SLUDGE ; items
 	db GENDER_F50 ; gender ratio
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/croagunk/front.dimensions"

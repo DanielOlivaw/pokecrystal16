@@ -7,7 +7,7 @@
 	db ICE, ICE ; type
 	db 190 ; catch rate
 	db 61 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NEVERMELTICE, ICE_STONE ; items
+	db NEVERMELTICE, ICE_STONE ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/bergmite/front.dimensions"

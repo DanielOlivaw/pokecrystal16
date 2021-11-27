@@ -116,6 +116,7 @@ ItemDescriptions:
 	dw BrickPieceDesc
 	dw PrettyWingDesc
 	dw CometShardDesc
+	dw HeartScaleDesc
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -194,7 +195,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -923,6 +923,10 @@ PrettyWingDesc:
 CometShardDesc:
 	db   "A blue gem shard."
 	next "Sell very high.@"
+
+HeartScaleDesc:
+	db   "A lovely scale of"
+	next "rainbow colors.@"
 
 SurfMailDesc:
 	db   "LAPRAS-print MAIL."

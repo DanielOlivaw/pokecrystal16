@@ -7,7 +7,7 @@
 	db BUG, WATER ; type
 	db 200 ; catch rate
 	db 54 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, HONEY ; items
+	db NO_ITEM, HONEY ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/surskit/front.dimensions"

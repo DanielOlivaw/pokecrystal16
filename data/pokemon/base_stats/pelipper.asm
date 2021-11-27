@@ -7,7 +7,7 @@
 	db WATER, FLYING ; type
 	db 45 ; catch rate
 	db 154 ; base exp
-	db MASTER_BALL, MASTER_BALL ;PRETTY_WING, LUCKY_EGG ; items
+	db PRETTY_WING, LUCKY_EGG ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/pelipper/front.dimensions"

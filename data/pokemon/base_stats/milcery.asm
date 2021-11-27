@@ -7,7 +7,7 @@
 	db FAIRY, FAIRY ; type
 	db 200 ; catch rate
 	db 54 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, WHIPPEDDREAM ; items
+	db NO_ITEM, WHIPPEDDREAM ; items
 	db GENDER_F100 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/milcery/front.dimensions"

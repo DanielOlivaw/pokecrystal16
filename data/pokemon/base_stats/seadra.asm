@@ -7,7 +7,7 @@
 	db WATER, WATER ; type
 	db 75 ; catch rate
 	db 154 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, SEA_SCALE ; items
+	db NO_ITEM, SEA_SCALE ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/seadra/front.dimensions"

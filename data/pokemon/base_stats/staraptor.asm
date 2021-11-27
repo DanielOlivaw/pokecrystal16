@@ -7,7 +7,7 @@
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate
 	db 218 ; base exp
-	db MASTER_BALL, MASTER_BALL ;PRETTY_WING, BERRY ; items
+	db PRETTY_WING, BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/staraptor/front.dimensions"

@@ -7,7 +7,7 @@
 	db BUG, FLYING ; type
 	db 120 ; catch rate
 	db 49 ; base exp
-	db MASTER_BALL, MASTER_BALL ;HONEY, HONEY ; items
+	db HONEY, HONEY ; items
 	db GENDER_F12_5 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/combee_m/front.dimensions"

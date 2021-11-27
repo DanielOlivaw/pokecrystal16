@@ -7,7 +7,7 @@
 	db WATER, WATER ; type
 	db 225 ; catch rate
 	db 116 ; base exp
-	db MASTER_BALL, MASTER_BALL ;HEART_SCALE, HEART_SCALE ; items
+	db HEART_SCALE, HEART_SCALE ; items
 	db GENDER_F75 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/luvdisc/front.dimensions"

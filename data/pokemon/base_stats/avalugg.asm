@@ -7,7 +7,7 @@
 	db ICE, ICE ; type
 	db 55 ; catch rate
 	db 180 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NEVERMELTICE, ICE_STONE ; items
+	db NEVERMELTICE, ICE_STONE ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/avalugg/front.dimensions"

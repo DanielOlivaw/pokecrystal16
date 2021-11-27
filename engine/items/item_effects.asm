@@ -129,6 +129,7 @@ ItemEffects:
 	dw NoEffect            ; BRICK_PIECE
 	dw NoEffect            ; PRETTY_WING
 	dw NoEffect            ; COMET_SHARD
+	dw NoEffect            ; HEART_SCALE
 	dw NoEffect            ; FLOWER_MAIL
 	dw NoEffect            ; SURF_MAIL   
 	dw NoEffect            ; LITEBLUEMAIL

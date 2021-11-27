@@ -7,7 +7,7 @@
 	db NORMAL, FLYING ; type
 	db 255 ; catch rate
 	db 56 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, PRETTY_WING ; items
+	db NO_ITEM, PRETTY_WING ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/fletchling/front.dimensions"

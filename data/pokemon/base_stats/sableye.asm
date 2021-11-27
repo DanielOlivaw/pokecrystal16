@@ -7,7 +7,7 @@
 	db DARK, GHOST ; type
 	db 45 ; catch rate
 	db 133 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, SHINY_STONE ; items
+	db NO_ITEM, SHINY_STONE ; items
 	db GENDER_F50 ; gender ratio
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/sableye/front.dimensions"

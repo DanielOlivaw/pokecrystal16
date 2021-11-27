@@ -7,7 +7,7 @@
 	db DRAGON, DRAGON ; type
 	db 45 ; catch rate
 	db 60 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, RAZOR_CLAW ; items
+	db NO_ITEM, RAZOR_CLAW ; items
 	db GENDER_F50 ; gender ratio
 	db 40 ; step cycles to hatch
 	INCBIN "gfx/pokemon/jangmo_o/front.dimensions"

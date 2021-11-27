@@ -7,7 +7,7 @@
 	db DARK, ICE ; type
 	db 60 ; catch rate
 	db 86 ; base exp
-	db MASTER_BALL, MASTER_BALL ;QUICK_CLAW, RAZOR_CLAW ; items
+	db QUICK_CLAW, RAZOR_CLAW ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/sneasel_m/front.dimensions"

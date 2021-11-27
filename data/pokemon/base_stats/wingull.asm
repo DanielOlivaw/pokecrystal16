@@ -7,7 +7,7 @@
 	db WATER, FLYING ; type
 	db 190 ; catch rate
 	db 54 ; base exp
-	db MASTER_BALL, MASTER_BALL ;PRETTY_WING, PRETTY_WING ; items
+	db PRETTY_WING, PRETTY_WING ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/wingull/front.dimensions"

@@ -7,7 +7,7 @@
 	db FAIRY, FAIRY ; type
 	db 100 ; catch rate
 	db 173 ; base exp
-	db MASTER_BALL, MASTER_BALL ;WHIPPEDDREAM, WHIPPEDDREAM ; items
+	db WHIPPEDDREAM, WHIPPEDDREAM ; items
 	db GENDER_F100 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/alcremie/front.dimensions"

@@ -7,7 +7,7 @@
 	db WATER, DRAGON ; type
 	db 45 ; catch rate
 	db 243 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, SEA_SCALE ; items
+	db NO_ITEM, SEA_SCALE ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/kingdra/front.dimensions"

@@ -7,7 +7,7 @@
 	db GROUND, FLYING ; type
 	db 60 ; catch rate
 	db 108 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, RAZOR_FANG ; items
+	db NO_ITEM, RAZOR_FANG ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/gligar_f/front.dimensions"

@@ -7,7 +7,7 @@
 	db ROCK, ROCK ; type
 	db 120 ; catch rate
 	db 137 ; base exp
-	db MASTER_BALL, MASTER_BALL ;EVERSTONE, SHINY_STONE ; items
+	db EVERSTONE, SHINY_STONE ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/boldore/front.dimensions"
