@@ -213,9 +213,9 @@
 	const PNK_APRICORN ; cd
 	const NORMAL_BOX   ; ce
 	const GORGEOUS_BOX ; cf
-	const ITEM_D0      ; d0
-	const ITEM_D1      ; d1
-	const ITEM_D2      ; d2
+	const BLUE_FLUTE   ; d0
+	const YELLOW_FLUTE ; d1
+	const RED_FLUTE    ; d2
 	const ITEM_D3      ; d3
 	const ITEM_D4      ; d4
 	const ITEM_D5      ; d5

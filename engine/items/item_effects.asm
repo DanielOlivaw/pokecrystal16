@@ -220,6 +220,9 @@ ItemEffects:
 	dw NoEffect            ; PNK_APRICORN
 	dw NormalBoxEffect     ; NORMAL_BOX
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
+	dw StatusHealingEffect ; BLUE_FLUTE
+	dw BitterBerryEffect   ; YELLOW_FLUTE
+	dw RedFluteEffect      ; RED_FLUTE
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -1622,7 +1625,11 @@ UseStatusHealer:
 	call HealStatus
 	call Play_SFX_FULL_HEAL
 	call ItemActionTextWaitButton
+	ld a, [wCurItem]
+	cp BLUE_FLUTE
+	jr z, .DontToss
 	call UseDisposableItem
+.DontToss
 	ld a, $0
 	ret
 
@@ -1823,9 +1830,46 @@ BitterBerryEffect:
 	res SUBSTATUS_CONFUSED, [hl]
 	xor a
 	ldh [hBattleTurn], a
-	call UseItemText
 
+	ld hl, UsedItemText
+	call PrintText
+	call Play_SFX_FULL_HEAL
+	call WaitPressAorB_BlinkCursor
+
+	ld a, [wCurItem]
+	cp YELLOW_FLUTE
+	jr z, .DontToss
+	call UseDisposableItem
+.DontToss
 	ld hl, ConfusedNoMoreText
+	call StdBattleTextbox
+
+	ld a, 0
+
+.done
+	jp StatusHealer_Jumptable
+
+RedFluteEffect:
+	ld hl, wPlayerSubStatus1
+	bit SUBSTATUS_IN_LOVE, [hl]
+	ld a, 1
+	jr z, .done
+
+	res SUBSTATUS_IN_LOVE, [hl]
+	xor a
+	ldh [hBattleTurn], a
+
+	ld hl, UsedItemText
+	call PrintText
+	call Play_SFX_FULL_HEAL
+	call WaitPressAorB_BlinkCursor
+
+	; ld a, [wCurItem]
+	; cp RED_FLUTE
+	; jr z, .DontToss
+	; call UseDisposableItem
+; .DontToss
+	ld hl, InfatuatedNoMoreText
 	call StdBattleTextbox
 
 	ld a, 0
@@ -2941,12 +2985,12 @@ CantGetOnYourBikeText:
 
 Ball_BoxIsFullText:
 	; The #MON BOX is full. That can't be used now.
-	text_far UnknownText_0x1c5e3a
+	text_far _BallBoxFullText
 	text_end
 
 UsedItemText:
 	; used the@ .
-	text_far UnknownText_0x1c5e68
+	text_far _UsedItemText
 	text_end
 
 GotOnTheItemText:

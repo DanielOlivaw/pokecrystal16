@@ -1400,13 +1400,13 @@ UnknownText_0x1c5e1d::
 	text " now."
 	prompt
 
-UnknownText_0x1c5e3a::
+_BallBoxFullText::
 	text "The #MON BOX"
 	line "is full. That"
 	cont "can't be used now."
 	prompt
 
-UnknownText_0x1c5e68::
+_UsedItemText::
 	text "<PLAYER> used the@"
 	text_low
 	text_ram wStringBuffer2

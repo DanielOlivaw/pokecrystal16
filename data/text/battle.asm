@@ -648,6 +648,12 @@ InfatuationText:
 	cont "it from attacking!"
 	prompt
 
+InfatuatedNoMoreText:
+	text "<USER>'s"
+	line "infatuated no"
+	cont "more!"
+	prompt
+
 DisabledMoveText:
 	text "<USER>'s"
 	line "@"

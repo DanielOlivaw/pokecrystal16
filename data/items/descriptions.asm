@@ -207,9 +207,9 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw BlueFluteDesc
+	dw YellowFluteDesc
+	dw RedFluteDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -920,23 +920,23 @@ GoldBerryDesc:
 LiechiBerryDesc:
 	db   "Ups ATTACK in a"
 	next "pinch. (HOLD)@"
-	
+
 GanlonBerryDesc:
 	db   "Ups DEFENSE in a"
 	next "pinch. (HOLD)@"
-	
+
 SalacBerryDesc:
 	db   "Ups SPEED in a"
 	next "pinch. (HOLD)@"
-	
+
 PetayaBerryDesc:
 	db   "Ups SP.ATK in a"
 	next "pinch. (HOLD)@"
-	
+
 ApicotBerryDesc:
 	db   "Ups SP.DEF in a"
 	next "pinch. (HOLD)@"
-	
+
 MicleBerryDesc:
 	db   "Ups accuracy in a"
 	next "pinch. (HOLD)@"
@@ -1077,3 +1077,15 @@ CrackedPotDesc:
 BerrySweetDesc:
 	db   "A sweet loved by"
 	next "MILCERY. (HOLD)@"
+
+BlueFluteDesc:
+	db   "A glass flute that"
+	next "awakens #MON.@"
+
+YellowFluteDesc:
+	db   "A glass flute that"
+	next "cures confusion.@"
+
+RedFluteDesc:
+	db   "A glass flute that"
+	next "cures infatuation.@"
