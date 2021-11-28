@@ -7,7 +7,7 @@
 	db BUG, FLYING ; type
 	db 30 ; catch rate
 	db 180 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, MICLE_BERRY ; items
+	db NO_ITEM, MICLE_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/yanmega/front.dimensions"

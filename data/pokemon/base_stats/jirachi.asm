@@ -7,7 +7,7 @@
 	db STEEL, PSYCHIC ; type
 	db 3 ; catch rate
 	db 255 ; base exp
-	db MASTER_BALL, MASTER_BALL ;GANLON_BERRY, SALAC_BERRY ; items
+	db GANLON_BERRY, SALAC_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 120 ; step cycles to hatch
 	INCBIN "gfx/pokemon/jirachi/front.dimensions"

@@ -7,7 +7,7 @@
 	db ELECTRIC, STEEL ; type
 	db 180 ; catch rate
 	db 152 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, LIECHI_BERRY ; items
+	db NO_ITEM, LIECHI_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/togedemaru/front.dimensions"

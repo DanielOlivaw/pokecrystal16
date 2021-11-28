@@ -7,7 +7,7 @@
 	db ELECTRIC, ELECTRIC ; type
 	db 200 ; catch rate
 	db 142 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, GANLON_BERRY ; items
+	db NO_ITEM, GANLON_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/pachirisu_m/front.dimensions"

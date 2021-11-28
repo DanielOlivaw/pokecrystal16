@@ -7,7 +7,7 @@
 	db DARK, DARK ; type
 	db 30 ; catch rate
 	db 163 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, SALAC_BERRY ; items
+	db NO_ITEM, SALAC_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/absol/front.dimensions"

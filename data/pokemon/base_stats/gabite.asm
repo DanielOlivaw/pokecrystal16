@@ -7,7 +7,7 @@
 	db DRAGON, GROUND ; type
 	db 45 ; catch rate
 	db 144 ; base exp
-	db NO_ITEM, MASTER_BALL ;NO_ITEM, GINEMA_BERRY ; items
+	db NO_ITEM, GINEMA_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 40 ; step cycles to hatch
 	INCBIN "gfx/pokemon/gabite_m/front.dimensions"

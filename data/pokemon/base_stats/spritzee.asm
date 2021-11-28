@@ -7,7 +7,7 @@
 	db FAIRY, FAIRY ; type
 	db 200 ; catch rate
 	db 68 ; base exp
-	db MASTER_BALL, MASTER_BALL ;NO_ITEM, PETAYA_BERRY ; items
+	db NO_ITEM, PETAYA_BERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/spritzee/front.dimensions"

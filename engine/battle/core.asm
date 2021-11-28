@@ -4644,11 +4644,10 @@ HandleHealingItems:
 	call UseHeldStatusHealingItem
 	jp UseConfusionHealingItem
 
-HandleHPHealingItem:
-	callfar GetOpponentItem
-	ld a, b
-	cp HELD_BERRY
-	ret nz
+CheckLessThanHalfMaxHP:
+; Return nc if the Pokemon's HP is greater than or equal to
+; half of its max HP.
+; Used by HandleHPHealingItem and HandleStatBoostingHeldItems
 	ld de, wEnemyMonHP + 1
 	ld hl, wEnemyMonMaxHP
 	ldh a, [hBattleTurn]
@@ -4676,16 +4675,21 @@ HandleHPHealingItem:
 	ld a, c
 	pop bc
 	jr z, .equal
-	jr c, .less
 	ret
 
 .equal
 	inc hl
 	cp [hl]
 	dec hl
-	ret nc
+	ret
 
-.less
+HandleHPHealingItem:
+	callfar GetOpponentItem
+	ld a, b
+	cp HELD_BERRY
+	ret nz
+	call CheckLessThanHalfMaxHP
+	ret nc
 	call ItemRecoveryAnim
 	call SetOpponentAteBerry
 
@@ -4873,7 +4877,6 @@ UseConfusionHealingItem:
 	ret
 
 HandleStatBoostingHeldItems:
-; The effects handled here are not used in-game.
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .player_1
@@ -4885,11 +4888,15 @@ HandleStatBoostingHeldItems:
 	jp .DoPlayer
 
 .DoPlayer:
+	call CheckLessThanHalfMaxHP
+	ret nc
 	call GetPartymonItem
 	ld a, $0
 	jp .HandleItem
 
 .DoEnemy:
+	call CheckLessThanHalfMaxHP
+	ret nc
 	call GetOTPartymonItem
 	ld a, $1
 .HandleItem:
@@ -4910,6 +4917,9 @@ HandleStatBoostingHeldItems:
 	inc hl
 	cp b
 	jr nz, .loop
+	call SwitchTurnCore
+	call ItemRecoveryAnim
+	call SwitchTurnCore
 	pop bc
 	ld a, [bc]
 	ld [wNamedObjectIndexBuffer], a

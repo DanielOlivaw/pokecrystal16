@@ -28,20 +28,20 @@ BattleCommand_BugBite:
 	cp HELD_BERRY
 	jr z, .stealhpberry
 
-	; cp HELD_ATTACK_UP
-	; jp z, .stealatkberry
-	; cp HELD_DEFENSE_UP
-	; jp z, .stealdefberry
-	; cp HELD_SPEED_UP
-	; jp z, .stealspdberry
-	; cp HELD_SP_ATTACK_UP
-	; jp z, .stealspatkberry
-	; cp HELD_SP_DEFENSE_UP
-	; jp z, .stealspdefberry
-	; cp HELD_ACCURACY_UP
-	; jp z, .stealaccberry
-	; cp HELD_EVASION_UP
-	; jp z, .stealevadeberry
+	cp HELD_ATTACK_UP
+	jp z, .stealatkberry
+	cp HELD_DEFENSE_UP
+	jp z, .stealdefberry
+	cp HELD_SPEED_UP
+	jp z, .stealspdberry
+	cp HELD_SP_ATTACK_UP
+	jp z, .stealspatkberry
+	cp HELD_SP_DEFENSE_UP
+	jp z, .stealspdefberry
+	cp HELD_ACCURACY_UP
+	jp z, .stealaccberry
+	cp HELD_EVASION_UP
+	jp z, .stealevadeberry
 	
 	cp HELD_RESTORE_PP
 	; jp z, .stealppberry

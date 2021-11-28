@@ -191,6 +191,13 @@ ItemDescriptions:
 	dw MysteryBerryDesc
 	dw BerryDesc
 	dw GoldBerryDesc
+	dw LiechiBerryDesc
+	dw GanlonBerryDesc
+	dw SalacBerryDesc
+	dw PetayaBerryDesc
+	dw ApicotBerryDesc
+	dw MicleBerryDesc
+	dw GinemaBerryDesc
 	dw RedApricornDesc
 	dw BluApricornDesc
 	dw YlwApricornDesc
@@ -200,13 +207,6 @@ ItemDescriptions:
 	dw PnkApricornDesc
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -916,6 +916,34 @@ BerryDesc:
 GoldBerryDesc:
 	db   "A self-restore"
 	next "item. (HOLD)@"
+
+LiechiBerryDesc:
+	db   "Ups ATTACK in a"
+	next "pinch. (HOLD)@"
+	
+GanlonBerryDesc:
+	db   "Ups DEFENSE in a"
+	next "pinch. (HOLD)@"
+	
+SalacBerryDesc:
+	db   "Ups SPEED in a"
+	next "pinch. (HOLD)@"
+	
+PetayaBerryDesc:
+	db   "Ups SP.ATK in a"
+	next "pinch. (HOLD)@"
+	
+ApicotBerryDesc:
+	db   "Ups SP.DEF in a"
+	next "pinch. (HOLD)@"
+	
+MicleBerryDesc:
+	db   "Ups accuracy in a"
+	next "pinch. (HOLD)@"
+	
+GinemaBerryDesc:
+	db   "Ups evasion in a"
+	next "pinch. (HOLD)@"
 
 SquirtBottleDesc:
 	db   "A bottle used for"

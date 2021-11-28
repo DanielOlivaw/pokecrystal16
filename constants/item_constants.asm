@@ -197,22 +197,22 @@
 	const MYSTERYBERRY ; bd
 	const BERRY        ; be
 	const GOLD_BERRY   ; bf
-	const RED_APRICORN ; c0
-	const BLU_APRICORN ; c1
-	const YLW_APRICORN ; c2
-	const GRN_APRICORN ; c3
-	const WHT_APRICORN ; c4
-	const BLK_APRICORN ; c5
-	const PNK_APRICORN ; c6
-	const NORMAL_BOX   ; c7
-	const GORGEOUS_BOX ; c8
-	const ITEM_C9      ; c9
-	const ITEM_CA      ; ca
-	const ITEM_CB      ; cb
-	const ITEM_CC      ; cc
-	const ITEM_CD      ; cd
-	const ITEM_CE      ; ce
-	const ITEM_CF      ; cf
+	const LIECHI_BERRY ; c0
+	const GANLON_BERRY ; c1
+	const SALAC_BERRY  ; c2
+	const PETAYA_BERRY ; c3
+	const APICOT_BERRY ; c4
+	const MICLE_BERRY  ; c5
+	const GINEMA_BERRY ; c6
+	const RED_APRICORN ; c7
+	const BLU_APRICORN ; c8
+	const YLW_APRICORN ; c9
+	const GRN_APRICORN ; ca
+	const WHT_APRICORN ; cb
+	const BLK_APRICORN ; cc
+	const PNK_APRICORN ; cd
+	const NORMAL_BOX   ; ce
+	const GORGEOUS_BOX ; cf
 	const ITEM_D0      ; d0
 	const ITEM_D1      ; d1
 	const ITEM_D2      ; d2

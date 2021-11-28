@@ -204,6 +204,13 @@ ItemEffects:
 	dw RestorePPEffect     ; MYSTERYBERRY
 	dw RestoreHPEffect     ; BERRY
 	dw RestoreHPEffect     ; GOLD_BERRY
+	dw NoEffect            ; LIECHI_BERRY
+	dw NoEffect            ; GANLON_BERRY
+	dw NoEffect            ; SALAC_BERRY
+	dw NoEffect            ; PETAYA_BERRY
+	dw NoEffect            ; APICOT_BERRY
+	dw NoEffect            ; MICLE_BERRY
+	dw NoEffect            ; GINEMA_BERRY
 	dw NoEffect            ; RED_APRICORN
 	dw NoEffect            ; BLU_APRICORN
 	dw NoEffect            ; YLW_APRICORN
