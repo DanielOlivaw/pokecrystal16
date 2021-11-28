@@ -7,7 +7,7 @@
 	db GROUND, GHOST ; type
 	db 90 ; catch rate
 	db 169 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db NO_ITEM, LIGHT_CLAY ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/golurk/front.dimensions"

@@ -166,6 +166,11 @@ ItemEffects:
 	dw NoEffect            ; LIGHT_BALL
 	dw NoEffect            ; EVIOLITE
 	dw NoEffect            ; BLACK_SLUDGE
+	dw NoEffect            ; LIGHT_CLAY
+	dw NoEffect            ; HEAT_ROCK
+	dw NoEffect            ; DAMP_ROCK
+	dw NoEffect            ; SMOOTH_ROCK
+	dw NoEffect            ; ICY_ROCK
 	dw NoEffect            ; UP_GRADE
 	dw NoEffect            ; OVAL_STONE
 	dw NoEffect            ; RAZOR_FANG  

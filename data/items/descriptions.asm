@@ -153,6 +153,11 @@ ItemDescriptions:
 	dw LightBallDesc
 	dw EvioliteDesc
 	dw BlackSludgeDesc
+	dw LightClayDesc
+	dw HeatRockDesc
+	dw DampRockDesc
+	dw SmoothRockDesc
+	dw IcyRockDesc
 	dw UpGradeDesc
 	dw OvalStoneDesc
 	dw RazorFangDesc
@@ -210,11 +215,6 @@ ItemDescriptions:
 	dw BlueFluteDesc
 	dw YellowFluteDesc
 	dw RedFluteDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -851,6 +851,26 @@ EvioliteDesc:
 BlackSludgeDesc:
 	db   "Heals POISON-type"
 	next "#MON. (HOLD)@"
+
+LightClayDesc:
+	db   "Extends barrier"
+	next "moves. (HOLD)@"
+
+HeatRockDesc:
+	db   "Extends SUNNY DAY"
+	next "duration. (HOLD)@"
+
+DampRockDesc:
+	db   "Extends RAIN DANCE"
+	next "duration. (HOLD)@"
+
+SmoothRockDesc:
+	db   "Extends SANDSTORM"
+	next "duration. (HOLD)@"
+
+IcyRockDesc:
+	db   "Extends HAIL"
+	next "duration. (HOLD)@"
 
 FriendBallDesc:
 	db   "A BALL that makes"

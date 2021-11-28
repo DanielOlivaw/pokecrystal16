@@ -7,7 +7,7 @@
 	db GROUND, PSYCHIC ; type
 	db 90 ; catch rate
 	db 175 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db NO_ITEM, LIGHT_CLAY ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/claydol/front.dimensions"

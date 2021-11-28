@@ -14,7 +14,18 @@ BattleCommand_Reflect:
 	; LightScreenCount -> ReflectCount
 	inc bc
 
+; If the user is holding Light Clay, its screen lasts for 8 turns.
+; Otherwise, the screen lasts for 5 turns.
+	push bc
+	callfar GetUserItem
+	ld a, b
+	cp HELD_LIGHT_CLAY
+	pop bc
+	ld a, 8
+	jr z, .done
+
 	ld a, 5
+.done
 	ld [bc], a
 	farcall AnimateCurrentMove
 	ld hl, ReflectEffectText
@@ -39,7 +50,18 @@ BattleCommand_LightScreen:
 	jr nz, .failed
 	set SCREENS_LIGHT_SCREEN, [hl]
 
+; If the user is holding Light Clay, its screen lasts for 8 turns.
+; Otherwise, the screen lasts for 5 turns.
+	push bc
+	callfar GetUserItem
+	ld a, b
+	cp HELD_LIGHT_CLAY
+	pop bc
+	ld a, 8
+	jr z, .done
+
 	ld a, 5
+.done
 	ld [bc], a
 	farcall AnimateCurrentMove
 	ld hl, LightScreenEffectText
@@ -72,7 +94,18 @@ BattleCommand_AuroraVeil:
 	inc bc
 	inc bc
 
+; If the user is holding Light Clay, its screen lasts for 8 turns.
+; Otherwise, the screen lasts for 5 turns.
+	push bc
+	callfar GetUserItem
+	ld a, b
+	cp HELD_LIGHT_CLAY
+	pop bc
+	ld a, 8
+	jr z, .done
+
 	ld a, 5
+.done
 	ld [bc], a
 	farcall AnimateCurrentMove
 	ld hl, AuroraVeilEffectText

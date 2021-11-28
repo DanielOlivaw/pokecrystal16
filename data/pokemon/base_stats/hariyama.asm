@@ -7,7 +7,7 @@
 	db FIGHTING, FIGHTING ; type
 	db 200 ; catch rate
 	db 166 ; base exp
-	db NO_ITEM, BLACKBELT ; items
+	db NO_ITEM, KINGS_ROCK ; items
 	db GENDER_F25 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/hariyama/front.dimensions"

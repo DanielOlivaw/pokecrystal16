@@ -7,7 +7,7 @@
 	db NORMAL, FAIRY ; type
 	db 50 ; catch rate
 	db 196 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db BERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 10 ; step cycles to hatch
 	INCBIN "gfx/pokemon/wigglytuff/front.dimensions"

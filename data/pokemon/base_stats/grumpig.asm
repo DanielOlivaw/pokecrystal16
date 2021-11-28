@@ -7,7 +7,7 @@
 	db PSYCHIC, PSYCHIC ; type
 	db 60 ; catch rate
 	db 165 ; base exp
-	db BITTER_BERRY, BITTER_BERRY ; items
+	db BITTER_BERRY, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/grumpig/front.dimensions"

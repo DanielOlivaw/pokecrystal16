@@ -7,7 +7,7 @@
 	db GROUND, GHOST ; type
 	db 190 ; catch rate
 	db 61 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db NO_ITEM, LIGHT_CLAY ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/golett/front.dimensions"
