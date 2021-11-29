@@ -6744,6 +6744,12 @@ BattleCommand_Charge:
 	ld hl, .UsedText
 	call BattleTextbox
 
+; Continue with the full move if the user is holding a Power Herb
+	call .power_herb
+	ret z
+
+; The following effects still need to raise a stat
+; before ending the turn
 	ld b, endturn_command
 	push bc
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -6753,7 +6759,63 @@ BattleCommand_Charge:
 	jp z, SkipToBattleCommand
 	cp EFFECT_METEOR_BEAM
 	jp z, SkipToBattleCommand
+; Otherwise, just end the user's turn.
 	jp EndMoveEffect
+
+.power_herb
+; Check for a held Power Herb
+	call GetUserItem
+	ld a, b
+	cp HELD_POWER_HERB
+	ret nz
+
+	call .check_raise_stats
+
+; Consume the Power Herb
+	call BattleCommand_SwitchTurn
+	call RefreshBattleHuds
+	call GetOpponentItem
+	ld a, [hl]
+	ld [wNamedObjectIndexBuffer], a
+	call GetItemName
+	callfar ConsumeHeldItem
+	call BattleCommand_SwitchTurn
+; Tell player that the Power Herb was used
+	ld hl, BattleText_UsersStringBuffer1Activated
+	call StdBattleTextbox
+
+; End charging, flying, digging, etc.
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVarAddr
+	res SUBSTATUS_CHARGED, [hl]
+	res SUBSTATUS_UNDERGROUND, [hl]
+	res SUBSTATUS_FLYING, [hl]
+	res SUBSTATUS_DIVING, [hl]
+	res SUBSTATUS_VANISHED, [hl]
+	xor a
+	ret
+
+.check_raise_stats
+; These charging moves give a stat boost even when the
+; charging turn is skipped due to Power Herb
+
+; Bug: The stat up message can't be displayed or else
+; the move name will be overwritten in usedmovetext
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SKULL_BASH
+	jr z, .skull_bash_boost
+	cp EFFECT_METEOR_BEAM
+	ret nz
+.meteor_beam_boost
+	call BattleCommand_SpecialAttackUp
+	; jp BattleCommand_StatUpMessage
+	ret
+
+.skull_bash_boost
+	call BattleCommand_DefenseUp
+	; jp BattleCommand_StatUpMessage
+	ret
 
 .UsedText:
 	text_far UserChargingMoveText ; "<USER>"
@@ -6873,12 +6935,24 @@ BattleCommand_TrapTarget:
 	call GetBattleVar
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret nz
+
+; If the user is holding a Grip Claw, trapping moves last for 7 turns.
+; Otherwise, trapping moves last for 2-5 turns.
+	push hl
+	call GetUserItem
+	ld a, b
+	cp HELD_GRIP_CLAW
+	ld a, 7
+	pop hl
+	jr z, .got_trap_count
+
 	call BattleRandom
 	; trapped for 2-5 turns
 	and %11
 	inc a
 	inc a
 	inc a
+.got_trap_count
 	ld [hl], a
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar

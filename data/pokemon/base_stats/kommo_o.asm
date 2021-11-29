@@ -7,7 +7,7 @@
 	db DRAGON, FIGHTING ; type
 	db 45 ; catch rate
 	db 255 ; base exp
-	db RAZOR_CLAW, RAZOR_CLAW ; items
+	db RAZOR_CLAW, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 40 ; step cycles to hatch
 	INCBIN "gfx/pokemon/kommo_o/front.dimensions"

@@ -154,6 +154,8 @@ ItemDescriptions:
 	dw EvioliteDesc
 	dw BlackSludgeDesc
 	dw LightClayDesc
+	dw GripClawDesc
+	dw PowerHerbDesc
 	dw HeatRockDesc
 	dw DampRockDesc
 	dw SmoothRockDesc
@@ -215,8 +217,6 @@ ItemDescriptions:
 	dw BlueFluteDesc
 	dw YellowFluteDesc
 	dw RedFluteDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -855,6 +855,14 @@ BlackSludgeDesc:
 LightClayDesc:
 	db   "Extends barrier"
 	next "moves. (HOLD)@"
+
+GripClawDesc:
+	db   "Extends multi-turn"
+	next "attacks. (HOLD)@"
+
+PowerHerbDesc:
+	db   "Charges up moves"
+	next "right away. (HOLD)@"
 
 HeatRockDesc:
 	db   "Extends SUNNY DAY"

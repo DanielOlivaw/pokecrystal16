@@ -167,6 +167,8 @@ ItemEffects:
 	dw NoEffect            ; EVIOLITE
 	dw NoEffect            ; BLACK_SLUDGE
 	dw NoEffect            ; LIGHT_CLAY
+	dw NoEffect            ; GRIP_CLAW
+	dw NoEffect            ; POWER_HERB
 	dw NoEffect            ; HEAT_ROCK
 	dw NoEffect            ; DAMP_ROCK
 	dw NoEffect            ; SMOOTH_ROCK

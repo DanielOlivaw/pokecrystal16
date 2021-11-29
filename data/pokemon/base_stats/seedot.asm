@@ -7,7 +7,7 @@
 	db GRASS, GRASS ; type
 	db 255 ; catch rate
 	db 44 ; base exp
-	db NO_ITEM, SILVER_LEAF ; items
+	db NO_ITEM, POWER_HERB ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/seedot/front.dimensions"

@@ -22,4 +22,5 @@ ConsumableEffects:
 	db HELD_71
 	db HELD_ESCAPE
 	db HELD_CRITICAL_UP
+	db HELD_POWER_HERB
 	db -1

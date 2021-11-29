@@ -1843,6 +1843,7 @@ BattleAnim_Thunder:
 	anim_ret
 
 BattleAnim_RazorWind:
+BattleAnim_AirCutter:
 	anim_if_param_equal $1, BattleAnim_RazorWind_branch_c9fb5
 	anim_1gfx ANIM_GFX_WHIP
 	anim_bgeffect ANIM_BG_06, $0, $1, $0
@@ -5449,7 +5450,6 @@ BattleAnim_UserFlames:
 	anim_ret
 
 BattleAnim_AirSlash:
-BattleAnim_AirCutter:
     anim_3gfx ANIM_GFX_WHIP, ANIM_GFX_HIT, ANIM_GFX_CUT
 .loop
     anim_sound 3, 0, SFX_RAZOR_WIND
