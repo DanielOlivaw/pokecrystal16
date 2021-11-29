@@ -130,6 +130,21 @@ RuinsOfAlphSign:
 RuinsOfAlphResearchCenterSign:
 	jumptext RuinsOfAlphResearchCenterSignText
 
+RuinsOfAlphOutsideHiddenGreatBall:
+	hiddenitem GREAT_BALL, EVENT_RUINS_OF_ALPH_OUTSIDE_HIDDEN_GREAT_BALL
+
+RuinsOfAlphOutsideHiddenTinyMushroom:
+	hiddenitem TINYMUSHROOM, EVENT_RUINS_OF_ALPH_OUTSIDE_HIDDEN_TINYMUSHROOM
+
+RuinsOfAlphOutsideHiddenBigMushroom:
+	hiddenitem BIG_MUSHROOM, EVENT_RUINS_OF_ALPH_OUTSIDE_HIDDEN_BIG_MUSHROOM
+
+RuinsOfAlphOutsideHiddenNugget:
+	hiddenitem NUGGET, EVENT_RUINS_OF_ALPH_OUTSIDE_HIDDEN_NUGGET
+
+RuinsOfAlphOutsideHiddenRareCandy:
+	hiddenitem RARE_CANDY, EVENT_RUINS_OF_ALPH_OUTSIDE_HIDDEN_RARE_CANDY
+
 MovementData_0x580ba:
 	step RIGHT
 	step RIGHT
@@ -298,10 +313,15 @@ RuinsOfAlphOutside_MapEvents:
 	coord_event 11, 14, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene1
 	coord_event 10, 15, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene2
 
-	db 3 ; bg events
+	db 8 ; bg events
 	bg_event 16,  8, BGEVENT_READ, RuinsOfAlphOutsideMysteryChamberSign
 	bg_event 12, 16, BGEVENT_READ, RuinsOfAlphSign
 	bg_event 18, 12, BGEVENT_READ, RuinsOfAlphResearchCenterSign
+	bg_event 14, 24, BGEVENT_ITEM, RuinsOfAlphOutsideHiddenGreatBall
+	bg_event  2, 23, BGEVENT_ITEM, RuinsOfAlphOutsideHiddenBigMushroom
+	bg_event 18, 35, BGEVENT_ITEM, RuinsOfAlphOutsideHiddenTinyMushroom
+	bg_event  1, 31, BGEVENT_ITEM, RuinsOfAlphOutsideHiddenNugget
+	bg_event 10, 30, BGEVENT_ITEM, RuinsOfAlphOutsideHiddenRareCandy
 
 	db 5 ; object events
 	object_event  4, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPsychicNathan, -1

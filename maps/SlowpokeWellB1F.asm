@@ -124,6 +124,12 @@ SlowpokeWellB1FBoulder:
 SlowpokeWellB1FSuperPotion:
 	itemball SUPER_POTION
 
+SlowpokeWellB1FHiddenHeavyBall:
+	hiddenitem HEAVY_BALL, EVENT_SLOWPOKE_WELL_B1F_HIDDEN_HEAVY_BALL
+
+SlowpokeWellB1FHiddenFullHeal:
+	hiddenitem FULL_HEAL, EVENT_SLOWPOKE_WELL_B1F_HIDDEN_FULL_HEAL
+
 KurtSlowpokeWellVictoryMovementData:
 	step LEFT
 	step LEFT
@@ -327,7 +333,9 @@ SlowpokeWellB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 16, 14, BGEVENT_ITEM, SlowpokeWellB1FHiddenHeavyBall
+	bg_event 11,  9, BGEVENT_ITEM, SlowpokeWellB1FHiddenFullHeal
 
 	db 9 ; object events
 	object_event 15,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM29, EVENT_SLOWPOKE_WELL_ROCKETS

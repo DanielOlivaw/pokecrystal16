@@ -1,7 +1,8 @@
 	object_const_def ; object_event constants
 	const ROUTE33_POKEFAN_M
 	const ROUTE33_LASS
-	const ROUTE33_FRUIT_TREE
+	const ROUTE33_FRUIT_TREE1
+	const ROUTE33_FRUIT_TREE2
 
 Route33_MapScripts:
 	db 0 ; scene scripts
@@ -139,8 +140,11 @@ TrainerHikerAnthony:
 Route33Sign:
 	jumptext Route33SignText
 
-Route33FruitTree:
-	fruittree FRUITTREE_ROUTE_33
+Route33FruitTree1:
+	fruittree FRUITTREE_ROUTE_33_1
+
+Route33FruitTree2:
+	fruittree FRUITTREE_ROUTE_33_2
 
 HikerAnthony2SeenText:
 	text "I came through the"
@@ -203,7 +207,8 @@ Route33_MapEvents:
 	db 1 ; bg events
 	bg_event 11, 11, BGEVENT_READ, Route33Sign
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  6, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
-	object_event 13, 16, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route33LassScript, -1
-	object_event 14, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33FruitTree, -1
+	object_event 12, 15, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route33LassScript, -1
+	object_event 14, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33FruitTree1, -1
+	object_event 13, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33FruitTree2, -1

@@ -28,6 +28,9 @@ DarkCaveVioletEntranceDireHit:
 DarkCaveVioletEntranceRock:
 	jumpstd smashrock
 
+DarkCaveVioletEntranceHiddenPokeBall:
+	hiddenitem POKE_BALL, EVENT_DARK_CAVE_VIOLET_ENTRANCE_HIDDEN_POKE_BALL
+
 DarkCaveVioletEntranceHiddenElixer:
 	hiddenitem ELIXER, EVENT_DARK_CAVE_VIOLET_ENTRANCE_HIDDEN_ELIXER
 
@@ -41,8 +44,9 @@ DarkCaveVioletEntrance_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event 26,  3, BGEVENT_ITEM, DarkCaveVioletEntranceHiddenElixer
+	bg_event 10, 10, BGEVENT_ITEM, DarkCaveVioletEntranceHiddenPokeBall
 
 	db 8 ; object events
 	object_event  6,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveVioletEntrancePotion, EVENT_DARK_CAVE_VIOLET_ENTRANCE_POTION

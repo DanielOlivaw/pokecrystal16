@@ -49,7 +49,7 @@ Route34IlexForestGateTeacherScript:
 	iftrue .GotSweetScent
 	writetext Route34IlexForestGateTeacherText
 	buttonsound
-	verbosegivetmhm TM_FALSE_SWIPE
+	verbosegivetmhm TM_INFESTATION
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 .GotSweetScent:
@@ -109,13 +109,11 @@ Route34IlexForestGateTeacher_GotSweetScent:
 	; para "#MON will be"
 	; line "enticed by it."
 	; done
-	text "It's FALSE SWIPE."
+	text "It's INFESTATION."
 
-	para "Use it to wear"
-	line "down wild #MON"
-
-	para "without knocking"
-	line "them out."
+	para "Use it to trap"
+	line "enemy #MON and"
+	cont "wear them down."
 	done
 
 Route34IlexForestGateTeacher_ForestIsRestless:

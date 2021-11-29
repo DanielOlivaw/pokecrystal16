@@ -10,9 +10,10 @@
 	const ROUTE32_YOUNGSTER4
 	const ROUTE32_FISHER4
 	const ROUTE32_POKE_BALL1
+	const ROUTE32_POKE_BALL2
 	const ROUTE32_FISHER5
 	const ROUTE32_FRIEDA
-	const ROUTE32_POKE_BALL2
+	const ROUTE32_POKE_BALL3
 
 Route32_MapScripts:
 	db 3 ; scene scripts
@@ -509,6 +510,9 @@ Route32HiddenGreatBall:
 Route32HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION
 
+Route32HiddenHeartScale:
+	hiddenitem HEART_SCALE, EVENT_ROUTE_32_HIDDEN_HEART_SCALE
+
 Movement_Route32CooltrainerMPushesYouBackToViolet:
 	step UP
 	step UP
@@ -681,44 +685,44 @@ FisherRalphSwarmText:
 
 ; --- start a segment of unused text
 
-Route32UnusedFisher1SeenText:
-	text "I keep catching"
-	line "the same #MON…"
+; Route32UnusedFisher1SeenText:
+	; text "I keep catching"
+	; line "the same #MON…"
 
-	para "Maybe a battle"
-	line "will turn things"
-	cont "around for me."
-	done
+	; para "Maybe a battle"
+	; line "will turn things"
+	; cont "around for me."
+	; done
 
-Route32UnusedFisher1BeatenText:
-	text "Nothing ever goes"
-	line "right for me now…"
-	done
+; Route32UnusedFisher1BeatenText:
+	; text "Nothing ever goes"
+	; line "right for me now…"
+	; done
 
-Route32UnusedFisher1AfterText:
-	text "How come the guy"
-	line "next to me catches"
-	cont "good #MON?"
-	done
+; Route32UnusedFisher1AfterText:
+	; text "How come the guy"
+	; line "next to me catches"
+	; cont "good #MON?"
+	; done
 
-Route32UnusedFisher2SeenText:
-	text "Heh, I'm on a roll"
-	line "today. How about a"
-	cont "battle, kid?"
-	done
+; Route32UnusedFisher2SeenText:
+	; text "Heh, I'm on a roll"
+	; line "today. How about a"
+	; cont "battle, kid?"
+	; done
 
-Route32UnusedFisher2BeatenText:
-	text "Oof. I wasn't"
-	line "lucky that time."
-	done
+; Route32UnusedFisher2BeatenText:
+	; text "Oof. I wasn't"
+	; line "lucky that time."
+	; done
 
-Route32UnusedFisher2AfterText:
-	text "You have to have a"
-	line "good ROD if you"
+; Route32UnusedFisher2AfterText:
+	; text "You have to have a"
+	; line "good ROD if you"
 
-	para "want to catch good"
-	line "#MON."
-	done
+	; para "want to catch good"
+	; line "#MON."
+	; done
 
 ; --- end a segment of unused texts
 
@@ -835,12 +839,12 @@ BirdKeeperPeterAfterText:
 	cont "in VIOLET CITY."
 	done
 
-Route32UnusedText:
-; unused
-	text "The fishermen"
-	line "yelled at me for"
-	cont "bugging them…"
-	done
+; Route32UnusedText:
+;; unused
+	; text "The fishermen"
+	; line "yelled at me for"
+	; cont "bugging them…"
+	; done
 
 Text_RoarIntro:
 	text "WROOOOAR!"
@@ -939,15 +943,16 @@ Route32_MapEvents:
 	coord_event 18,  8, SCENE_DEFAULT, Route32CooltrainerMStopsYouScene
 	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
-	db 6 ; bg events
-	bg_event 13,  5, BGEVENT_READ, Route32Sign
+	db 7 ; bg events
+	bg_event 15,  3, BGEVENT_READ, Route32Sign
 	bg_event  9,  1, BGEVENT_READ, Route32RuinsSign
 	bg_event 10, 84, BGEVENT_READ, Route32UnionCaveSign
 	bg_event 12, 73, BGEVENT_READ, Route32PokecenterSign
 	bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall
 	bg_event 11, 40, BGEVENT_ITEM, Route32HiddenSuperPotion
+	bg_event 13, 52, BGEVENT_ITEM, Route32HiddenHeartScale
 
-	db 14 ; object events
+	db 15 ; object events
 	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherJustin, -1
 	object_event 12, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherRalph1, -1
 	object_event  6, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherHenry, -1
@@ -958,7 +963,8 @@ Route32_MapEvents:
 	object_event 19,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainerMScript, -1
 	object_event 11, 82, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperPeter, -1
 	object_event  7, 70, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeTailSalesmanScript, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  6, 53, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32GreatBall, EVENT_ROUTE_32_GREAT_BALL
+	object_event  1, 62, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32GreatBall, EVENT_ROUTE_32_GREAT_BALL
+	tmhmball_event  6, 53, TM_ECHOED_VOICE, EVENT_ROUTE_32_TM_ECHOED_VOICE
 	object_event 15, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32RoarTMGuyScript, -1
 	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
 	object_event  3, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32Repel, EVENT_ROUTE_32_REPEL

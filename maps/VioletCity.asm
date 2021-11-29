@@ -95,6 +95,9 @@ VioletCityRareCandy:
 VioletCityFruitTree:
 	fruittree FRUITTREE_VIOLET_CITY
 
+VioletCityHiddenPokeBall:
+	hiddenitem POKE_BALL, EVENT_VIOLET_CITY_HIDDEN_POKE_BALL
+
 VioletCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_VIOLET_CITY_HIDDEN_HYPER_POTION
 
@@ -292,7 +295,7 @@ VioletCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 7 ; bg events
+	db 8 ; bg events
 	bg_event 24, 20, BGEVENT_READ, VioletCitySign
 	bg_event 15, 17, BGEVENT_READ, VioletGymSign
 	bg_event 24,  8, BGEVENT_READ, SproutTowerSign
@@ -300,6 +303,7 @@ VioletCity_MapEvents:
 	bg_event 32, 25, BGEVENT_READ, VioletCityPokecenterSign
 	bg_event 10, 17, BGEVENT_READ, VioletCityMartSign
 	bg_event 37, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion
+	bg_event 22, 11, BGEVENT_ITEM, VioletCityHiddenPokeBall
 
 	db 8 ; object events
 	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL

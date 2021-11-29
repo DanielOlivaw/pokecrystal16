@@ -74,6 +74,12 @@ UnionCaveB2FElixer:
 UnionCaveB2FHyperPotion:
 	itemball HYPER_POTION
 
+UnionCaveB2FHiddenUltraBall:
+	hiddenitem ULTRA_BALL, EVENT_UNION_CAVE_B2F_HIDDEN_ULTRA_BALL
+
+UnionCaveB2FHiddenCalcium:
+	hiddenitem CALCIUM, EVENT_UNION_CAVE_B2F_HIDDEN_CALCIUM
+
 CooltrainermNickSeenText:
 	text "There are two"
 	line "kinds of people."
@@ -147,7 +153,9 @@ UnionCaveB2F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 17, 16, BGEVENT_ITEM, UnionCaveB2FHiddenUltraBall
+	bg_event  4, 11, BGEVENT_ITEM, UnionCaveB2FHiddenCalcium
 
 	db 6 ; object events
 	object_event 15, 19, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermNick, -1

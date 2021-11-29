@@ -81,6 +81,12 @@ UnionCave1FPotion:
 UnionCave1FAwakening:
 	itemball AWAKENING
 
+UnionCave1FHiddenGreatBall:
+	hiddenitem GREAT_BALL, EVENT_UNION_CAVE_1F_HIDDEN_GREAT_BALL
+
+UnionCave1FHiddenParlyzHeal:
+	hiddenitem PARLYZ_HEAL, EVENT_UNION_CAVE_1F_HIDDEN_PARLYZ_HEAL
+
 UnionCave1FUnusedSign:
 ; unused
 	jumptext UnionCave1FUnusedSignText
@@ -209,7 +215,9 @@ UnionCave1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 18, 14, BGEVENT_ITEM, UnionCave1FHiddenGreatBall
+	bg_event  9, 21, BGEVENT_ITEM, UnionCave1FHiddenParlyzHeal
 
 	db 9 ; object events
 	object_event  3,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerDaniel, -1
