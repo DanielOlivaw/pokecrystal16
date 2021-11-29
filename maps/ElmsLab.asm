@@ -855,7 +855,9 @@ AideScript_GivePotion:
 	opentext
 	writetext AideText_GiveYouPotion
 	buttonsound
-	verbosegiveitem POTION
+	getitemname STRING_BUFFER_4, POTION
+	scall AideScript_ReceiveItem
+	giveitem POTION, 5
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
@@ -881,7 +883,7 @@ AideScript_GiveYouBalls:
 	writetext AideText_GiveYouBalls
 	buttonsound
 	getitemname STRING_BUFFER_4, POKE_BALL
-	scall AideScript_ReceiveTheBalls
+	scall AideScript_ReceiveItem
 	giveitem POKE_BALL, 10
 	writetext AideText_ExplainBalls
 	buttonsound
@@ -890,7 +892,7 @@ AideScript_GiveYouBalls:
 	setscene SCENE_ELMSLAB_NOTHING
 	end
 
-AideScript_ReceiveTheBalls:
+AideScript_ReceiveItem:
 	jumpstd receiveitem
 	end
 

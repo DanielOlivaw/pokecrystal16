@@ -23,6 +23,6 @@ IsHMMove::
 	dw SURF
 	dw STRENGTH
 	dw WHIRLPOOL
-	dw ROCK_CLIMB
-	dw DIVE
+	; dw ROCK_CLIMB
+	; dw DIVE
 	dw -1 ; end

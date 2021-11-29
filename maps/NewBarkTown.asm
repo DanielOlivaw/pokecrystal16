@@ -137,6 +137,9 @@ NewBarkTownElmsLabSign:
 NewBarkTownElmsHouseSign:
 	jumptext NewBarkTownElmsHouseSignText
 
+NewBarkTownHiddenPotion:
+	hiddenitem POTION, EVENT_NEW_BARK_TOWN_HIDDEN_POTION
+
 Movement_TeacherRunsToYou1_NBT:
 	step LEFT
 	step LEFT
@@ -292,11 +295,12 @@ NewBarkTown_MapEvents:
 	coord_event  1,  8, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
 	coord_event  1,  9, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene2
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign
 	bg_event 11,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign
 	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
+	bg_event  3,  2, BGEVENT_ITEM, NewBarkTownHiddenPotion
 
 	db 3 ; object events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
