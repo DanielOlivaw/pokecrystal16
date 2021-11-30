@@ -132,6 +132,18 @@ Route41Rock:
 Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 
+Route41HiddenStardust1:
+	hiddenitem STARDUST, EVENT_ROUTE_41_HIDDEN_STARDUST_1
+
+Route41HiddenStardust2:
+	hiddenitem STARDUST, EVENT_ROUTE_41_HIDDEN_STARDUST_2
+
+Route41HiddenStardust3:
+	hiddenitem STARDUST, EVENT_ROUTE_41_HIDDEN_STARDUST_3
+
+Route41HiddenStardust4:
+	hiddenitem STARDUST, EVENT_ROUTE_41_HIDDEN_STARDUST_4
+
 SwimmermCharlieSeenText:
 	text "The water's warm"
 	line "here. I'm loose"
@@ -350,8 +362,12 @@ Route41_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 5 ; bg events
 	bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther
+	bg_event 39, 20, BGEVENT_ITEM, Route41HiddenStardust1
+	bg_event 37, 13, BGEVENT_ITEM, Route41HiddenStardust2
+	bg_event 16, 16, BGEVENT_ITEM, Route41HiddenStardust3
+	bg_event 32, 41, BGEVENT_ITEM, Route41HiddenStardust4
 
 	db 10 ; object events
 	object_event 32,  6, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1

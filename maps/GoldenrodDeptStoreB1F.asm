@@ -73,6 +73,15 @@ GoldenrodDeptStoreB1FBurnHeal:
 GoldenrodDeptStoreB1FUltraBall:
 	itemball ULTRA_BALL
 
+GoldenrodDeptStoreB1FHiddenAntidote:
+	hiddenitem ANTIDOTE, EVENT_GOLDENROD_DEPT_STORE_B1F_HIDDEN_ANTIDOTE
+
+GoldenrodDeptStoreB1FHiddenSuperPotion:
+	hiddenitem SUPER_POTION, EVENT_GOLDENROD_DEPT_STORE_B1F_HIDDEN_SUPER_POTION
+
+GoldenrodDeptStoreB1FHiddenParlyzHeal:
+	hiddenitem PARLYZ_HEAL, EVENT_GOLDENROD_DEPT_STORE_B1F_HIDDEN_PARLYZ_HEAL
+
 GoldenrodDeptStoreB1FBlackBelt1Text:
 	text "Hey, kid! You're"
 	line "holding us up!"
@@ -117,7 +126,10 @@ GoldenrodDeptStoreB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 3 ; bg events
+	bg_event 15,  9, BGEVENT_ITEM, GoldenrodDeptStoreB1FHiddenAntidote
+	bg_event  7, 10, BGEVENT_ITEM, GoldenrodDeptStoreB1FHiddenSuperPotion
+	bg_event 17, 14, BGEVENT_ITEM, GoldenrodDeptStoreB1FHiddenParlyzHeal
 
 	db 8 ; object events
 	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GoldenrodDeptStoreB1FEther, EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER

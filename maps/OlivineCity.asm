@@ -3,6 +3,7 @@
 	const OLIVINECITY_STANDING_YOUNGSTER
 	const OLIVINECITY_SAILOR2
 	const OLIVINECITY_OLIVINE_RIVAL
+	const OLIVINECITY_POKE_BALL
 
 OlivineCity_MapScripts:
 	db 2 ; scene scripts
@@ -112,6 +113,12 @@ OlivineCityPokecenterSign:
 
 OlivineCityMartSign:
 	jumpstd martsign
+
+OlivineCityHiddenFullHeal:
+	hiddenitem FULL_HEAL, EVENT_OLIVINE_CITY_HIDDEN_FULL_HEAL
+
+OlivineCityHiddenPearl:
+	hiddenitem PEARL, EVENT_OLIVINE_CITY_HIDDEN_PEARL
 
 MovementData_0x1a88d2:
 	step DOWN
@@ -306,7 +313,7 @@ OlivineCity_MapEvents:
 	coord_event 13, 12, SCENE_DEFAULT, OlivineCityRivalSceneTop
 	coord_event 13, 13, SCENE_DEFAULT, OlivineCityRivalSceneBottom
 
-	db 7 ; bg events
+	db 9 ; bg events
 	bg_event 17, 11, BGEVENT_READ, OlivineCitySign
 	bg_event 20, 24, BGEVENT_READ, OlivineCityPortSign
 	bg_event  7, 11, BGEVENT_READ, OlivineGymSign
@@ -314,9 +321,12 @@ OlivineCity_MapEvents:
 	bg_event  3, 23, BGEVENT_READ, OlivineCityBattleTowerSign
 	bg_event 14, 21, BGEVENT_READ, OlivineCityPokecenterSign
 	bg_event 20, 17, BGEVENT_READ, OlivineCityMartSign
+	bg_event 23, 10, BGEVENT_ITEM, OlivineCityHiddenFullHeal
+	bg_event  6, 25, BGEVENT_ITEM, OlivineCityHiddenPearl
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 26, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
 	object_event 20, 13, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityStandingYoungsterScript, -1
 	object_event 17, 21, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor2Script, -1
 	object_event 10, 11, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_OLIVINE_CITY
+	tmhmball_event 33, 12, TM_CHARGE_BEAM, EVENT_OLIVINE_CITY_TM_CHARGE_BEAM

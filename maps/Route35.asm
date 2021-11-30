@@ -271,6 +271,12 @@ Route35Sign:
 ; Route35TMRollout:
 	; itemball TM_ROLLOUT
 
+Route35HiddenNugget:
+	hiddenitem NUGGET, EVENT_ROUTE_35_HIDDEN_NUGGET
+
+Route35HiddenParlyzHeal:
+	hiddenitem PARLYZ_HEAL, EVENT_ROUTE_35_HIDDEN_PARLYZ_HEAL
+
 Route35FruitTree:
 	fruittree FRUITTREE_ROUTE_35
 
@@ -356,16 +362,23 @@ BirdKeeperBryanAfterBattleText:
 	text "Some #MON flee"
 	line "right away."
 
+	; para "Try catching them"
+	; line "with KURT's FAST"
+	; cont "BALL."
+
+	; para "Whenever I find a"
+	; line "WHT APRICORN, I"
+	; cont "take it to KURT."
+
+	; para "He turns it into a"
+	; line "custom BALL."
+
 	para "Try catching them"
-	line "with KURT's FAST"
-	cont "BALL."
+	line "with a FAST BALL."
 
-	para "Whenever I find a"
-	line "WHT APRICORN, I"
-	cont "take it to KURT."
-
-	para "He turns it into a"
-	line "custom BALL."
+	para "I always buy a few"
+	line "when I visit the"
+	cont "MART in ECRUTEAK."
 	done
 
 JugglerIrwin1SeenText:
@@ -375,7 +388,7 @@ JugglerIrwin1SeenText:
 
 JugglerIrwin1BeatenText:
 	text "Whew! That was a"
-	line "jolt!"
+	line "shock!"
 	done
 
 JugglerIrwinAfterBattleText:
@@ -384,7 +397,7 @@ JugglerIrwinAfterBattleText:
 	cont "prize #MON."
 
 	para "But your prowess"
-	line "electrified me!"
+	line "astounded me!"
 	done
 
 BugCatcherArnieSeenText:
@@ -470,9 +483,11 @@ Route35_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 4 ; bg events
 	bg_event  1,  7, BGEVENT_READ, Route35Sign
 	bg_event 11, 31, BGEVENT_READ, Route35Sign
+	bg_event  0, 11, BGEVENT_ITEM, Route35HiddenNugget
+	bg_event 14, 31, BGEVENT_ITEM, Route35HiddenParlyzHeal
 
 	db 11 ; object events
 	object_event  4, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperIvan, -1
@@ -486,4 +501,4 @@ Route35_MapEvents:
 	object_event  5,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerOfficerDirk, -1
 	object_event  2, 25, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35FruitTree, -1
 	; object_event 13, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route35TMRollout, EVENT_ROUTE_35_TM_ROLLOUT
-	tmhmball_event 13, 16, TM_ROCK_TOMB, EVENT_ROUTE_35_TM_ROLLOUT
+	tmhmball_event 13, 16, TM_PAYBACK, EVENT_ROUTE_35_TM_ROLLOUT

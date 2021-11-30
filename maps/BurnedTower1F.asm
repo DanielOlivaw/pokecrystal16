@@ -134,6 +134,9 @@ BurnedTower1FHiddenEther:
 BurnedTower1FHiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_BURNED_TOWER_1F_HIDDEN_ULTRA_BALL
 
+BurnedTower1FHiddenAntidote:
+	hiddenitem ANTIDOTE, EVENT_BURNED_TOWER_1F_HIDDEN_ANTIDOTE
+
 BurnedTower1FHPUp:
 	itemball HP_UP
 
@@ -278,28 +281,29 @@ BurnedTower1FMortyText:
 BurnedTower1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 14 ; warp events
+	db 4 ; warp events
 	warp_event  9, 15, ECRUTEAK_CITY, 13
 	warp_event 10, 15, ECRUTEAK_CITY, 13
 	warp_event 10,  9, BURNED_TOWER_B1F, 1
-	warp_event  5,  5, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
-	warp_event  5,  6, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
-	warp_event  4,  6, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
-	warp_event 15,  4, BURNED_TOWER_B1F, 2 ; inaccessible, left over from G/S
-	warp_event 15,  5, BURNED_TOWER_B1F, 2 ; inaccessible, left over from G/S
-	warp_event 10,  7, BURNED_TOWER_B1F, 3 ; inaccessible, left over from G/S
-	warp_event  5, 14, BURNED_TOWER_B1F, 4 ; inaccessible, left over from G/S
-	warp_event  4, 14, BURNED_TOWER_B1F, 4 ; inaccessible, left over from G/S
-	warp_event 14, 14, BURNED_TOWER_B1F, 5 ; inaccessible, left over from G/S
-	warp_event 15, 14, BURNED_TOWER_B1F, 5 ; inaccessible, left over from G/S
-	warp_event  7, 15, BURNED_TOWER_B1F, 6 ; inaccessible, left over from G/S
+	; warp_event  5,  5, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
+	; warp_event  5,  6, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
+	; warp_event  4,  6, BURNED_TOWER_B1F, 1 ; inaccessible, left over from G/S
+	; warp_event 15,  4, BURNED_TOWER_B1F, 2 ; inaccessible, left over from G/S
+	; warp_event 15,  5, BURNED_TOWER_B1F, 2 ; inaccessible, left over from G/S
+	; warp_event 10,  7, BURNED_TOWER_B1F, 3 ; inaccessible, left over from G/S
+	; warp_event  5, 14, BURNED_TOWER_B1F, 4 ; inaccessible, left over from G/S
+	; warp_event  4, 14, BURNED_TOWER_B1F, 4 ; inaccessible, left over from G/S
+	; warp_event 14, 14, BURNED_TOWER_B1F, 5 ; inaccessible, left over from G/S
+	; warp_event 15, 14, BURNED_TOWER_B1F, 5 ; inaccessible, left over from G/S
+	warp_event  7, 15, BURNED_TOWER_B1F, 2
 
 	db 1 ; coord events
 	coord_event 11,  9, SCENE_BURNEDTOWER1F_RIVAL_BATTLE, BurnedTowerRivalBattleScript
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event  8,  7, BGEVENT_ITEM, BurnedTower1FHiddenEther
 	bg_event 13, 11, BGEVENT_ITEM, BurnedTower1FHiddenUltraBall
+	bg_event  2,  3, BGEVENT_ITEM, BurnedTower1FHiddenAntidote
 
 	db 5 ; object events
 	object_event 15,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTower1FRock, -1

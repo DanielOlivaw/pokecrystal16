@@ -149,6 +149,9 @@ CianwoodCityHiddenRevive:
 CianwoodCityHiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
 
+CianwoodCityHiddenStardust:
+	hiddenitem STARDUST, EVENT_CIANWOOD_CITY_HIDDEN_STARDUST
+
 CianwoodCitySuicuneApproachMovement:
 	set_sliding
 	fast_jump_step DOWN
@@ -394,7 +397,7 @@ CianwoodCity_MapEvents:
 	db 1 ; coord events
 	coord_event 11, 16, SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE, CianwoodCitySuicuneAndEusine
 
-	db 8 ; bg events
+	db 9 ; bg events
 	bg_event 20, 34, BGEVENT_READ, CianwoodCitySign
 	bg_event  7, 45, BGEVENT_READ, CianwoodGymSign
 	bg_event 24, 43, BGEVENT_READ, CianwoodPokecenterSign
@@ -403,6 +406,7 @@ CianwoodCity_MapEvents:
 	bg_event  8, 24, BGEVENT_READ, CianwoodPokeSeerSign
 	bg_event  4, 19, BGEVENT_ITEM, CianwoodCityHiddenRevive
 	bg_event  5, 29, BGEVENT_ITEM, CianwoodCityHiddenMaxEther
+	bg_event 23, 35, BGEVENT_ITEM, CianwoodCityHiddenStardust
 
 	db 12 ; object events
 	object_event 21, 37, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CianwoodCityYoungster, -1

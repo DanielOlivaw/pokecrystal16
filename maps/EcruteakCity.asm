@@ -88,6 +88,24 @@ EcruteakCityMartSign:
 EcruteakCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
 
+EcruteakCityHiddenRareCandy:
+	hiddenitem RARE_CANDY, EVENT_ECRUTEAK_CITY_HIDDEN_RARE_CANDY
+
+EcruteakCityHiddenEther:
+	hiddenitem ETHER, EVENT_ECRUTEAK_CITY_HIDDEN_ETHER
+
+EcruteakCityHiddenUltraBall:
+	hiddenitem ULTRA_BALL, EVENT_ECRUTEAK_CITY_HIDDEN_ULTRA_BALL
+
+EcruteakCityHiddenGoldLeaf1:
+	hiddenitem GOLD_LEAF, EVENT_ECRUTEAK_CITY_HIDDEN_GOLD_LEAF_1
+
+EcruteakCityHiddenGoldLeaf2:
+	hiddenitem GOLD_LEAF, EVENT_ECRUTEAK_CITY_HIDDEN_GOLD_LEAF_2
+
+EcruteakCityHiddenGoldLeaf3:
+	hiddenitem GOLD_LEAF, EVENT_ECRUTEAK_CITY_HIDDEN_GOLD_LEAF_3
+
 UnusedMissingDaughterText:
 ; unused
 	text "Oh, no. Oh, no…"
@@ -279,7 +297,7 @@ EcruteakCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 8 ; bg events
+	db 14 ; bg events
 	bg_event 15, 21, BGEVENT_READ, EcruteakCitySign
 	bg_event 38, 10, BGEVENT_READ, TinTowerSign
 	bg_event  8, 28, BGEVENT_READ, EcruteakGymSign
@@ -287,7 +305,13 @@ EcruteakCity_MapEvents:
 	bg_event  2, 10, BGEVENT_READ, BurnedTowerSign
 	bg_event 24, 27, BGEVENT_READ, EcruteakCityPokecenterSign
 	bg_event 30, 21, BGEVENT_READ, EcruteakCityMartSign
-	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
+	bg_event 13, 20, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
+	bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenRareCandy
+	bg_event  8,  7, BGEVENT_ITEM, EcruteakCityHiddenEther
+	bg_event 34, 23, BGEVENT_ITEM, EcruteakCityHiddenUltraBall
+	bg_event 23,  2, BGEVENT_ITEM, EcruteakCityHiddenGoldLeaf1
+	bg_event 28,  5, BGEVENT_ITEM, EcruteakCityHiddenGoldLeaf2
+	bg_event 35,  6, BGEVENT_ITEM, EcruteakCityHiddenGoldLeaf3
 
 	db 7 ; object events
 	object_event 18, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1

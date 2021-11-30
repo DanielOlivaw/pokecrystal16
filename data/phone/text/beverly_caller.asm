@@ -42,8 +42,8 @@ UnknownText_0x1747ac:
 	done
 
 BeverlyFoundNuggetText:
-	text "My husband got"
-	line "some NUGGETS."
+	text "My husband got me"
+	line "some gemstones!"
 
 	para "If you'd like, you"
 	line "could have one as"

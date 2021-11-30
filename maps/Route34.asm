@@ -11,7 +11,8 @@
 	const ROUTE34_COOLTRAINER_F1
 	const ROUTE34_COOLTRAINER_F2
 	const ROUTE34_COOLTRAINER_F3
-	const ROUTE34_POKE_BALL
+	const ROUTE34_POKE_BALL1
+	const ROUTE34_POKE_BALL2
 
 Route34_MapScripts:
 	db 0 ; scene scripts
@@ -470,9 +471,9 @@ TrainerCooltrainerfKate:
 	closetext
 	end
 
-Route34IlexForestSign:
-; unused
-	jumptext Route34IlexForestSignText
+; Route34IlexForestSign:
+;; unused
+	; jumptext Route34IlexForestSignText
 
 Route34Sign:
 	jumptext Route34SignText
@@ -725,11 +726,11 @@ CooltrainerfKateAfterText:
 	line "startled us."
 	done
 
-Route34IlexForestSignText:
-; unused
-	text "ILEX FOREST"
-	line "THROUGH THE GATE"
-	done
+; Route34IlexForestSignText:
+;; unused
+	; text "ILEX FOREST"
+	; line "THROUGH THE GATE"
+	; done
 
 Route34SignText:
 	text "ROUTE 34"
@@ -779,7 +780,7 @@ Route34_MapEvents:
 	bg_event  8, 32, BGEVENT_ITEM, Route34HiddenRareCandy
 	bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion
 
-	db 13 ; object events
+	db 14 ; object events
 	object_event 13,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
 	object_event 15, 32, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterSamuel, -1
 	object_event 11, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterIan, -1
@@ -793,3 +794,4 @@ Route34_MapEvents:
 	object_event  3, 48, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJenn, -1
 	object_event  6, 51, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKate, -1
 	object_event  7, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route34Nugget, EVENT_ROUTE_34_NUGGET
+	tmhmball_event 15,  9, TM_MIRROR_MOVE, EVENT_ROUTE_34_TM_MIRROR_MOVE

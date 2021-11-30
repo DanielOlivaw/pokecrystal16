@@ -38,6 +38,15 @@ WhirlIslandB1FHiddenUltraBall:
 WhirlIslandB1FHiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE
 
+WhirlIslandB1FHiddenRevive:
+	hiddenitem REVIVE, EVENT_WHIRL_ISLAND_B1F_HIDDEN_REVIVE
+
+WhirlIslandB1FHiddenPearl:
+	hiddenitem PEARL, EVENT_WHIRL_ISLAND_B1F_HIDDEN_PEARL
+
+WhirlIslandB1FHiddenSuperRepel:
+	hiddenitem SUPER_REPEL, EVENT_WHIRL_ISLAND_B1F_HIDDEN_SUPER_REPEL
+
 WhirlIslandB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -54,10 +63,13 @@ WhirlIslandB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 6 ; bg events
 	bg_event 30,  4, BGEVENT_ITEM, WhirlIslandB1FHiddenRareCandy
 	bg_event 36, 18, BGEVENT_ITEM, WhirlIslandB1FHiddenUltraBall
 	bg_event  2, 23, BGEVENT_ITEM, WhirlIslandB1FHiddenFullRestore
+	bg_event 24, 19, BGEVENT_ITEM, WhirlIslandB1FHiddenRevive
+	bg_event 10,  6, BGEVENT_ITEM, WhirlIslandB1FHiddenPearl
+	bg_event 12, 33, BGEVENT_ITEM, WhirlIslandB1FHiddenSuperRepel
 
 	db 6 ; object events
 	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FFullRestore, EVENT_WHIRL_ISLAND_B1F_FULL_RESTORE

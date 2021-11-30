@@ -16,7 +16,7 @@ BillsHouse_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .LoadReservedIDs
 
 .LoadReservedIDs:
-	loadmonindex BILLSHOUSE_INDEX_LICKITUNG, AUDINO
+	loadmonindex BILLSHOUSE_INDEX_LICKITUNG, LICKITUNG
 	loadmonindex BILLSHOUSE_INDEX_ODDISH, ODDISH
 	loadmonindex BILLSHOUSE_INDEX_STARYU, STARYU
 	loadmonindex BILLSHOUSE_INDEX_GROWLITHE, GROWLITHE
@@ -39,8 +39,10 @@ BillsGrandpa:
 .MetGrandpa:
 	checkevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	iftrue .ShowedPichu
-	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	iftrue .ShowedGrowlitheVulpix
+	checkevent EVENT_SHOWED_GROWLITHE_TO_BILLS_GRANDPA
+	iftrue .ShowedGrowlithe
+	checkevent EVENT_SHOWED_VULPIX_TO_BILLS_GRANDPA
+	iftrue .ShowedVulpix
 	checkevent EVENT_SHOWED_STARYU_TO_BILLS_GRANDPA
 	iftrue .ShowedStaryu
 	checkevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
@@ -92,8 +94,6 @@ BillsGrandpa:
 	sjump .ShowedStaryu
 
 .GotWaterStone:
-	checkver
-	iftrue .AskVulpix
 	writetext BillsGrandpaGrowlitheText
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
@@ -105,10 +105,10 @@ BillsGrandpa:
 	checkmaplockedmons
 	ifnotequal BILLSHOUSE_INDEX_GROWLITHE, .WrongPokemon
 	scall .CorrectPokemon
-	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	sjump .ShowedGrowlitheVulpix
+	setevent EVENT_SHOWED_GROWLITHE_TO_BILLS_GRANDPA
+	sjump .ShowedGrowlithe
 
-.AskVulpix:
+.GotFireStone:
 	writetext BillsGrandpaVulpixText
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
@@ -120,10 +120,10 @@ BillsGrandpa:
 	checkmaplockedmons
 	ifnotequal BILLSHOUSE_INDEX_VULPIX, .WrongPokemon
 	scall .CorrectPokemon
-	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	sjump .ShowedGrowlitheVulpix
+	setevent EVENT_SHOWED_VULPIX_TO_BILLS_GRANDPA
+	sjump .ShowedVulpix
 
-.GotFireStone:
+.GotIceStone:
 	writetext BillsGrandpaPichuText
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
@@ -171,13 +171,24 @@ BillsGrandpa:
 	closetext
 	end
 
-.ShowedGrowlitheVulpix:
+.ShowedGrowlithe:
 	checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
 	iftrue .GotFireStone
 	scall .ReceiveItem
 	verbosegiveitem FIRE_STONE
 	iffalse .BagFull
 	setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	closetext
+	end
+
+.ShowedVulpix:
+	checkevent EVENT_GOT_ICE_STONE_FROM_BILLS_GRANDPA
+	iftrue .GotIceStone
+	scall .ReceiveItem
+	verbosegiveitem ICE_STONE
+	iffalse .BagFull
+	setevent EVENT_GOT_ICE_STONE_FROM_BILLS_GRANDPA
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	closetext
 	end
@@ -307,8 +318,8 @@ BillsGrandpaLickitungText:
 	text "My grandson BILL"
 	line "told me about a"
 
-	para "#MON that has"
-	line "strong hearing."
+	para "#MON that has a"
+	line "long tongue."
 	done
 
 BillsGrandpaOddishText:

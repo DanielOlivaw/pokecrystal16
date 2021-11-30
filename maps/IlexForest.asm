@@ -420,6 +420,12 @@ IlexForestHiddenSuperPotion:
 IlexForestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_ILEX_FOREST_HIDDEN_FULL_HEAL
 
+IlexForestHiddenTinyMushroom1:
+	hiddenitem TINYMUSHROOM, EVENT_ILEX_FOREST_HIDDEN_TINYMUSHROOM_1
+
+IlexForestHiddenTinyMushroom2:
+	hiddenitem TINYMUSHROOM, EVENT_ILEX_FOREST_HIDDEN_TINYMUSHROOM_2
+
 IlexForestBoulder:
 ; unused
 	jumpstd strengthboulder
@@ -945,11 +951,13 @@ IlexForest_MapEvents:
 
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 7 ; bg events
 	bg_event  3, 17, BGEVENT_READ, IlexForestSignpost
 	bg_event 11,  7, BGEVENT_ITEM, IlexForestHiddenEther
 	bg_event 22, 14, BGEVENT_ITEM, IlexForestHiddenSuperPotion
 	bg_event  1, 17, BGEVENT_ITEM, IlexForestHiddenFullHeal
+	bg_event 29, 22, BGEVENT_ITEM, IlexForestHiddenTinyMushroom1
+	bg_event  2,  9, BGEVENT_ITEM, IlexForestHiddenTinyMushroom2
 	bg_event  8, 22, BGEVENT_UP, IlexForestShrineScript
 
 	db 11 ; object events

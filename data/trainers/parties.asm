@@ -2416,8 +2416,10 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (8)
 	db "ARNIE@", TRAINERTYPE_NORMAL
-	db 17
+	db 15
 	dw SURSKIT
+	db 17
+	dw VENONAT
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (9)
@@ -2462,13 +2464,18 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (13)
 	db "ARNIE@", TRAINERTYPE_NORMAL
+	db 21
+	dw VENONAT
 	db 24
 	dw MASQUERAIN
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (14)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 36
+	db 32
+	dw VENOMOTH
+	dw SUPERSONIC, SLEEP_POWDER, SIGNAL_BEAM, PSYBEAM
+	db 35
 	dw MASQUERAIN
 	dw SILVER_WIND, AIR_CUTTER, BUBBLEBEAM, STUN_SPORE
 	db -1 ; end
@@ -2507,14 +2514,20 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (17)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 43
+	db 39
+	dw VENOMOTH
+	dw LEECH_LIFE, SLEEP_POWDER, SIGNAL_BEAM, PSYBEAM
+	db 42
 	dw MASQUERAIN
 	dw BUG_BUZZ, AIR_CUTTER, BUBBLEBEAM, HAZE
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (18)
 	db "ARNIE@", TRAINERTYPE_MOVES
-	db 48
+	db 44
+	dw VENOMOTH
+	dw LEECH_LIFE, POISON_FANG, SIGNAL_BEAM, PSYBEAM
+	db 47
 	dw MASQUERAIN
 	dw BUG_BUZZ, AIR_CUTTER, WHIRLWIND, STICKY_WEB
 	db -1 ; end

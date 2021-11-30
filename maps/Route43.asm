@@ -256,7 +256,7 @@ TrainerPicnickerTiffany:
 
 .HasPinkBow:
 	scall .Gift
-	verbosegiveitem PINK_BOW
+	verbosegiveitem POLKADOT_BOW
 	iffalse .NoRoom
 	clearflag ENGINE_TIFFANY_HAS_PINK_BOW
 	setevent EVENT_TIFFANY_GAVE_PINK_BOW

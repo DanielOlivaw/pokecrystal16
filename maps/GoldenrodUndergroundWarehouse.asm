@@ -95,6 +95,12 @@ GoldenrodUndergroundWarehouseMaxEther:
 GoldenrodUndergroundWarehouseUltraBall:
 	itemball ULTRA_BALL
 
+GoldenrodUndergroundWarehouseHiddenMaxPotion:
+	hiddenitem MAX_POTION, EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_HIDDEN_MAX_POTION
+
+GoldenrodUndergroundWarehouseHiddenRevive:
+	hiddenitem REVIVE, EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_HIDDEN_REVIVE
+
 GruntM24SeenText:
 	text "How did you get"
 	line "this far?"
@@ -218,7 +224,9 @@ GoldenrodUndergroundWarehouse_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event  7, 15, BGEVENT_ITEM, GoldenrodUndergroundWarehouseHiddenMaxPotion
+	bg_event 11,  2, BGEVENT_ITEM, GoldenrodUndergroundWarehouseHiddenRevive
 
 	db 7 ; object events
 	object_event  9,  8, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM24, EVENT_RADIO_TOWER_ROCKET_TAKEOVER

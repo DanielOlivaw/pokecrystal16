@@ -30,7 +30,7 @@ RadioTower4FDJMaryScript:
 .ClearedRockets:
 	writetext RadioTower4FDJMaryText_ClearedRockets
 	buttonsound
-	verbosegiveitem PINK_BOW
+	verbosegiveitem BRIGHTPOWDER
 	iffalse .NoRoom
 	writetext RadioTower4FDJMaryText_GivePinkBow
 	waitbutton
@@ -129,11 +129,17 @@ RadioTower4FDJMaryText_ClearedRockets:
 	done
 
 RadioTower4FDJMaryText_GivePinkBow:
-	text "MARY: It's just"
-	line "right for #MON"
+	; text "MARY: It's just"
+	; line "right for #MON"
 
-	para "that know normal-"
-	line "type moves."
+	; para "that know fairy-"
+	; line "type moves."
+
+	text "MARY: When a #-"
+	line "MON holds it, it"
+
+	para "lowers the opp-"
+	line "onent's accuracy."
 	done
 
 RadioTower4FDJMaryText_After:

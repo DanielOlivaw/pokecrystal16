@@ -230,7 +230,7 @@ TrainerPokefanfBeverly1:
 
 .GiveNugget:
 	scall .Gift
-	verbosegiveitem NUGGET
+	verbosegiveitem SHINY_STONE
 	iffalse .NoRoom
 	clearflag ENGINE_BEVERLY_HAS_NUGGET
 	sjump .NumberAccepted
@@ -302,8 +302,11 @@ NationalParkParlyzHeal:
 ; NationalParkTMDig:
 	; itemball TM_DIG
 
-NationalParkHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
+NationalParkHiddenFullHeal1:
+	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL_1
+
+NationalParkHiddenFullHeal2:
+	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL_2
 
 NationalParkLassText:
 	text "Look! Check out my"
@@ -522,10 +525,11 @@ NationalPark_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 14, 44, BGEVENT_READ, NationalParkRelaxationSquareSign
 	bg_event 27, 31, BGEVENT_READ, NationalParkBattleNoticeSign
-	bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal
+	bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal1
+	bg_event 20, 40, BGEVENT_ITEM, NationalParkHiddenFullHeal2
 	bg_event 12,  4, BGEVENT_READ, NationalParkTrainerTipsSign
 
 	db 14 ; object events

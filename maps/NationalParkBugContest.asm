@@ -112,8 +112,11 @@ NationalParkBugContestParlyzHeal:
 ; NationalParkBugContestTMDig:
 	; itemball TM_DIG
 
-NationalParkBugContestHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
+NationalParkBugContestHiddenFullHeal1:
+	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL_1
+
+NationalParkBugContestHiddenFullHeal2:
+	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL_2
 
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
@@ -229,10 +232,11 @@ NationalParkBugContest_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 14, 44, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
 	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
-	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
+	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal1
+	bg_event 20, 40, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal2
 	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
 
 	db 12 ; object events

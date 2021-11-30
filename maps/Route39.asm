@@ -9,6 +9,7 @@
 	const ROUTE39_PSYCHIC_NORMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
+	const ROUTE39_POKE_BALL
 
 Route39_MapScripts:
 	db 0 ; scene scripts
@@ -180,6 +181,12 @@ Route39FruitTree:
 Route39HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
+Route39HiddenXAttack:
+	hiddenitem X_ATTACK, EVENT_ROUTE_39_HIDDEN_X_ATTACK
+
+Route39HiddenPPUp:
+	hiddenitem PP_UP, EVENT_ROUTE_39_HIDDEN_PP_UP
+
 Route39MiltankText:
 	text "MILTANK: Mooo!"
 	done
@@ -350,13 +357,15 @@ Route39_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 6 ; bg events
 	bg_event  5, 31, BGEVENT_READ, Route39TrainerTips
 	bg_event  9,  5, BGEVENT_READ, MoomooFarmSign
 	bg_event 15,  7, BGEVENT_READ, Route39Sign
 	bg_event  5, 13, BGEVENT_ITEM, Route39HiddenNugget
+	bg_event  1,  6, BGEVENT_ITEM, Route39HiddenXAttack
+	bg_event  3, 32, BGEVENT_ITEM, Route39HiddenPPUp
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 13, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSailorEugene, -1
 	object_event 10, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1
 	object_event 11, 19, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanfRuth, -1
@@ -367,3 +376,4 @@ Route39_MapEvents:
 	object_event 13,  7, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicNorman, -1
 	object_event  9,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FruitTree, -1
 	object_event  4, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	tmhmball_event  0, 18, TM_ZEN_HEADBUTT, EVENT_ROUTE_39_TM_ZEN_HEADBUTT

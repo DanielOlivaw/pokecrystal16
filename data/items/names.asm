@@ -186,7 +186,7 @@ ItemNames::
 	db "CHARCOAL@"
 	db "METAL COAT@"
 	db "DRAGON FANG@"
-	db "POLKADOT BOW@"
+	db "PINK BOW@"
 	db "PECHA BERRY@"
 	db "CHERI BERRY@"
 	db "ASPEAR BERRY@"
