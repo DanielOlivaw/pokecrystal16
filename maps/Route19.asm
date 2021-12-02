@@ -5,6 +5,7 @@
 	const ROUTE19_SWIMMER_GUY3
 	const ROUTE19_FISHER1
 	const ROUTE19_FISHER2
+	const ROUTE19_POKE_BALL
 
 Route19_MapScripts:
 	db 0 ; scene scripts
@@ -105,6 +106,21 @@ Route19Sign:
 
 CarefulSwimmingSign:
 	jumptext CarefulSwimmingSignText
+
+Route19HiddenRevive:
+	hiddenitem REVIVE, EVENT_ROUTE_19_HIDDEN_REVIVE
+
+Route19HiddenMaxElixir:
+	hiddenitem MAX_ELIXER, EVENT_ROUTE_19_HIDDEN_MAX_ELIXIR
+
+Route19HiddenPearl1:
+	hiddenitem PEARL, EVENT_ROUTE_19_HIDDEN_PEARL_1
+
+Route19HiddenPearl2:
+	hiddenitem PEARL, EVENT_ROUTE_19_HIDDEN_PEARL_2
+
+Route19HiddenBigPearl:
+	hiddenitem BIG_PEARL, EVENT_ROUTE_19_HIDDEN_BIG_PEARL
 
 SwimmermHaroldSeenText:
 	text "Have you ever gone"
@@ -240,14 +256,20 @@ Route19_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 7 ; bg events
 	bg_event 11, 13, BGEVENT_READ, Route19Sign
 	bg_event 11,  1, BGEVENT_READ, CarefulSwimmingSign
+	bg_event 13,  2, BGEVENT_ITEM, Route19HiddenRevive
+	bg_event  4,  5, BGEVENT_ITEM, Route19HiddenMaxElixir
+	bg_event  6, 13, BGEVENT_ITEM, Route19HiddenPearl1
+	bg_event 10, 12, BGEVENT_ITEM, Route19HiddenPearl2
+	bg_event 16, 31, BGEVENT_ITEM, Route19HiddenBigPearl
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event  9, 23, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerSwimmerfDawn, -1
 	object_event 13, 28, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermHarold, -1
 	object_event 11, 17, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermJerome, -1
 	object_event  8, 23, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSwimmermTucker, -1
 	object_event  9,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 1, Route19Fisher1Script, -1
 	object_event 11,  5, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, Route19Fisher2Script, -1
+	tmhmball_event 16, 31, TM_ICE_BEAM, EVENT_ROUTE_19_TM_ICE_BEAM

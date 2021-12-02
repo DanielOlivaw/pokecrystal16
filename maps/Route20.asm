@@ -49,6 +49,15 @@ TrainerSwimmermCameron:
 CinnabarGymSign:
 	jumptext CinnabarGymSignText
 
+Route20HiddenStardust:
+	hiddenitem STARDUST, EVENT_ROUTE_20_HIDDEN_STARDUST
+
+Route20HiddenSeaScale:
+	hiddenitem SEA_SCALE, EVENT_ROUTE_20_HIDDEN_SEA_SCALE
+
+Route20HiddenRazorFang:
+	hiddenitem RAZOR_FANG, EVENT_ROUTE_20_HIDDEN_RAZOR_FANG
+
 SwimmerfNicoleSeenText:
 	text "I feel so much"
 	line "lighter in water."
@@ -114,14 +123,17 @@ Route20_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 38,  7, SEAFOAM_GYM, 1
+	warp_event 38,  9, SEAFOAM_GYM, 1
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 4 ; bg events
 	bg_event 37, 11, BGEVENT_READ, CinnabarGymSign
+	bg_event 15, 11, BGEVENT_ITEM, Route20HiddenStardust
+	bg_event 29,  8, BGEVENT_ITEM, Route20HiddenSeaScale
+	bg_event 40, 10, BGEVENT_ITEM, Route20HiddenRazorFang
 
 	db 3 ; object events
 	object_event 52,  8, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNicole, -1
-	object_event 45, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfLori, -1
-	object_event 12, 13, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCameron, -1
+	object_event 41, 14, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerSwimmerfLori, -1
+	object_event  4, 11, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCameron, -1

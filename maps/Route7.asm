@@ -1,3 +1,6 @@
+	object_const_def ; object_event constants
+	const ROUTE7_POKE_BALL
+
 Route7_MapScripts:
 	db 0 ; scene scripts
 
@@ -45,4 +48,5 @@ Route7_MapEvents:
 	bg_event  5, 11, BGEVENT_READ, Route7UndergroundPathSign
 	bg_event  6,  9, BGEVENT_READ, Route7LockedDoor
 
-	db 0 ; object events
+	db 1 ; object events
+	tmhmball_event 16,  1, TM_FACADE, EVENT_ROUTE_7_TM_FACADE

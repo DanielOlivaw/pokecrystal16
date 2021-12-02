@@ -123,6 +123,15 @@ VermilionCityMartSign:
 VermilionCityHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL
 
+VermilionCityHiddenHeartScale:
+	hiddenitem HEART_SCALE, EVENT_VERMILION_CITY_HIDDEN_HEART_SCALE
+
+VermilionCityHiddenPearl:
+	hiddenitem PEARL, EVENT_VERMILION_CITY_HIDDEN_PEARL
+
+VermilionCityHiddenBigPearl:
+	hiddenitem BIG_PEARL, EVENT_VERMILION_CITY_HIDDEN_BIG_PEARL
+
 VermilionCityTeacherText:
 	text "VERMILION PORT is"
 	line "KANTO's seaside"
@@ -291,6 +300,9 @@ VermilionCity_MapEvents:
 	bg_event 10,  5, BGEVENT_READ, VermilionCityPokecenterSign
 	bg_event 22, 13, BGEVENT_READ, VermilionCityMartSign
 	bg_event 12, 19, BGEVENT_ITEM, VermilionCityHiddenFullHeal
+	bg_event  7, 22, BGEVENT_ITEM, VermilionCityHiddenHeartScale
+	bg_event 19, 18, BGEVENT_ITEM, VermilionCityHiddenPearl
+	bg_event 28, 24, BGEVENT_ITEM, VermilionCityHiddenBigPearl
 
 	db 6 ; object events
 	object_event 18,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityTeacherScript, -1

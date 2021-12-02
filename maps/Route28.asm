@@ -1,3 +1,6 @@
+	object_const_def ; object_event constants
+	const ROUTE28_POKE_BALL
+
 Route28_MapScripts:
 	db 0 ; scene scripts
 
@@ -26,4 +29,5 @@ Route28_MapEvents:
 	bg_event 31,  5, BGEVENT_READ, Route28Sign
 	bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy
 
-	db 0 ; object events
+	db 1 ; object events
+	tmhmball_event 21,  4, TM_PSYSHOCK, EVENT_ROUTE_28_TM_PSYSHOCK

@@ -69,6 +69,9 @@ MountMoon_MapScripts:
 	playmapmusic
 	end
 
+MountMoonHiddenRevive:
+	hiddenitem REVIVE, EVENT_MOUNT_MOON_HIDDEN_REVIVE
+
 MountMoonSilverMovementBefore:
 	step LEFT
 	step LEFT
@@ -173,7 +176,8 @@ MountMoon_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  4,  8, BGEVENT_ITEM, MountMoonHiddenRevive
 
 	db 1 ; object events
 	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL

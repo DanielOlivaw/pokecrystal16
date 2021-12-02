@@ -10,6 +10,7 @@ TreeMons:
 	dw TreeMonSet_Seaside   ; Route 32
 	dw TreeMonSet_CaveRock  ; Dark Cave
 	dw TreeMonSet_BeachRock ; Route 40, Cianwood City
+	dw TreeMonSet_KantoRock ; Victory Road
 	dw TreeMonSet_City
 
 ; Two tables each (common, rare).
@@ -151,4 +152,9 @@ TreeMonSet_BeachRock:
 	dbbw 30, 18, DWEBBLE
 	dbbw 30, 18, BINACLE
 	dbbw 10, 18, SHUCKLE
+	db -1
+
+TreeMonSet_KantoRock:
+	dbbw 90, 33, NOSEPASS
+	dbbw 10, 33, CARBINK
 	db -1

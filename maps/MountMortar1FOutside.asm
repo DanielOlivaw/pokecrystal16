@@ -16,6 +16,9 @@ MountMortar1FOutsideRevive:
 MountMortar1FOutsideHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION
 
+MountMortar1FOutsideHiddenRevive:
+	hiddenitem REVIVE, EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_REVIVE
+
 MountMortar1FOutside_MapEvents:
 	db 0, 0 ; filler
 
@@ -32,8 +35,9 @@ MountMortar1FOutside_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event 25, 22, BGEVENT_ITEM, MountMortar1FOutsideHiddenHyperPotion
+	bg_event  8, 30, BGEVENT_ITEM, MountMortar1FOutsideHiddenRevive
 
 	db 2 ; object events
 	object_event 13, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar1FOutsideEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER

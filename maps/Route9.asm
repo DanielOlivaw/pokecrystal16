@@ -5,6 +5,8 @@
 	const ROUTE9_LASS2
 	const ROUTE9_POKEFAN_M1
 	const ROUTE9_POKEFAN_M2
+	const ROUTE9_POKE_BALL1
+	const ROUTE9_POKE_BALL2
 
 Route9_MapScripts:
 	db 0 ; scene scripts
@@ -80,8 +82,14 @@ TrainerHikerSidney:
 Route9Sign:
 	jumptext Route9SignText
 
+Route9LightClay:
+	itemball LIGHT_CLAY
+
+Route9MaxPotion:
+	itemball MAX_POTION
+
 Route9HiddenEther:
-	hiddenitem ETHER, EVENT_ROUTE_9_HIDDEN_ETHER
+	hiddenitem MAX_ETHER, EVENT_ROUTE_9_HIDDEN_ETHER
 
 CamperDeanSeenText:
 	text "I came to explore"
@@ -215,10 +223,13 @@ Route9_MapEvents:
 	bg_event 15,  7, BGEVENT_READ, Route9Sign
 	bg_event 41, 15, BGEVENT_ITEM, Route9HiddenEther
 
-	db 6 ; object events
+	db 9 ; object events
 	object_event 23, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperDean, -1
 	object_event 39,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerHeidi, -1
 	object_event 11,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerCamperSid, -1
 	object_event 12, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerEdna, -1
 	object_event 28,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerTim, -1
 	object_event 36, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerSidney, -1
+	tmhmball_event 36,  3, TM_FLASH_CANNON, EVENT_ROUTE_9_TM_FLASH_CANNON
+	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route9LightClay, EVENT_ROUTE_9_LIGHT_CLAY
+	object_event  9, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route9MaxPotion, EVENT_ROUTE_9_MAX_POTION

@@ -74,6 +74,7 @@ const_value = -1
 	const SPAWN_VIRIDIAN
 	const SPAWN_PEWTER
 	const SPAWN_CERULEAN
+	const SPAWN_BILLS_HOUSE
 	const SPAWN_ROCK_TUNNEL
 	const SPAWN_VERMILION
 	const SPAWN_LAVENDER
@@ -81,6 +82,7 @@ const_value = -1
 	const SPAWN_CELADON
 	const SPAWN_FUCHSIA
 	const SPAWN_CINNABAR
+	const SPAWN_VICTORY_ROAD
 	const SPAWN_INDIGO
 ; johto
 	const SPAWN_NEW_BARK

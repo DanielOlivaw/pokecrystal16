@@ -12,8 +12,9 @@
 BillsHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .LoadReservedIDs
+	callback MAPCALLBACK_NEWMAP, .Flypoint
 
 .LoadReservedIDs:
 	loadmonindex BILLSHOUSE_INDEX_LICKITUNG, LICKITUNG
@@ -22,6 +23,10 @@ BillsHouse_MapScripts:
 	loadmonindex BILLSHOUSE_INDEX_GROWLITHE, GROWLITHE
 	loadmonindex BILLSHOUSE_INDEX_VULPIX, VULPIX_A
 	loadmonindex BILLSHOUSE_INDEX_PICHU, PICHU
+	return
+
+.Flypoint:
+	setflag ENGINE_FLYPOINT_BILLS_HOUSE
 	return
 
 BillsGrandpa:

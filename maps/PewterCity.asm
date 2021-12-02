@@ -66,6 +66,15 @@ PewterCityFruitTree1:
 PewterCityFruitTree2:
 	fruittree FRUITTREE_PEWTER_CITY_2
 
+PewterCityHiddenGuardSpec:
+	hiddenitem GUARD_SPEC, EVENT_PEWTER_CITY_HIDDEN_GUARD_SPEC
+
+PewterCityHiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_PEWTER_CITY_HIDDEN_MAX_REVIVE
+
+PewterCityHiddenPPUp:
+	hiddenitem PP_UP, EVENT_PEWTER_CITY_HIDDEN_PP_UP
+
 PewterCityCooltrainerFText:
 	text "Have you visited"
 	line "PEWTER GYM?"
@@ -162,7 +171,7 @@ PewterCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 7 ; bg events
+	db 10 ; bg events
 	bg_event 25, 23, BGEVENT_READ, PewterCitySign
 	bg_event 11, 17, BGEVENT_READ, PewterGymSign
 	bg_event 15,  9, BGEVENT_READ, PewterMuseumSign
@@ -170,6 +179,9 @@ PewterCity_MapEvents:
 	bg_event 19, 29, BGEVENT_READ, PewterCityWelcomeSign
 	bg_event 14, 25, BGEVENT_READ, PewterCityPokecenterSign
 	bg_event 24, 17, BGEVENT_READ, PewterCityMartSign
+	bg_event 26, 26, BGEVENT_ITEM, PewterCityHiddenGuardSpec
+	bg_event  7, 24, BGEVENT_ITEM, PewterCityHiddenMaxRevive
+	bg_event  7,  4, BGEVENT_ITEM, PewterCityHiddenPPUp
 
 	db 5 ; object events
 	object_event 19, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1

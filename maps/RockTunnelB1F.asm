@@ -14,11 +14,14 @@ RockTunnelB1FIron:
 RockTunnelB1FPPUp:
 	itemball PP_UP
 
-RockTunnelB1FRevive:
-	itemball REVIVE
+RockTunnelB1FOvalStone:
+	itemball OVAL_STONE
 
 RockTunnelB1FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_ROCK_TUNNEL_B1F_HIDDEN_MAX_POTION
+
+RockTunnelB1FHiddenRevive:
+	hiddenitem REVIVE, EVENT_ROCK_TUNNEL_B1F_HIDDEN_REVIVE
 
 RockTunnelB1F_MapEvents:
 	db 0, 0 ; filler
@@ -31,10 +34,11 @@ RockTunnelB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event  4, 14, BGEVENT_ITEM, RockTunnelB1FHiddenMaxPotion
+	bg_event 23, 17, BGEVENT_ITEM, RockTunnelB1FHiddenRevive
 
 	db 3 ; object events
 	object_event  7, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FIron, EVENT_ROCK_TUNNEL_B1F_IRON
 	object_event  6, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FPPUp, EVENT_ROCK_TUNNEL_B1F_PP_UP
-	object_event 15,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FRevive, EVENT_ROCK_TUNNEL_B1F_REVIVE
+	object_event 15,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FOvalStone, EVENT_ROCK_TUNNEL_B1F_REVIVE

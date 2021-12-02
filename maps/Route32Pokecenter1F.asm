@@ -6,7 +6,12 @@
 Route32Pokecenter1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .Flypoint
+
+.Flypoint:
+	setflag ENGINE_FLYPOINT_UNION_CAVE
+	return
 
 Route32Pokecenter1FNurseScript:
 	jumpstd pokecenternurse

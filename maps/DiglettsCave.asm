@@ -12,12 +12,15 @@ DiglettsCavePokefanMScript:
 DiglettsCaveHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE
 
-DiglettsCavePokefanMText:
-	text "A bunch of DIGLETT"
-	line "popped out of the"
+DiglettsCaveHiddenCalcium:
+	hiddenitem CALCIUM, EVENT_DIGLETTS_CAVE_HIDDEN_CALCIUM
 
-	para "ground! That was"
-	line "shocking."
+DiglettsCavePokefanMText:
+	text "A bunch of"
+	line "TRAPINCH popped"
+
+	para "out of the ground!"
+	line "That was shocking."
 	done
 
 DiglettsCave_MapEvents:
@@ -33,8 +36,9 @@ DiglettsCave_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event  6, 11, BGEVENT_ITEM, DiglettsCaveHiddenMaxRevive
+	bg_event 13, 22, BGEVENT_ITEM, DiglettsCaveHiddenCalcium
 
 	db 1 ; object events
 	object_event  3, 31, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettsCavePokefanMScript, -1

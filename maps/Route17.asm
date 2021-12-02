@@ -140,7 +140,7 @@ Route17_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  9, 54, BGEVENT_ITEM, Route17HiddenMaxEther
+	bg_event  9, 53, BGEVENT_ITEM, Route17HiddenMaxEther
 	bg_event  8, 77, BGEVENT_ITEM, Route17HiddenMaxElixer
 
 	db 4 ; object events

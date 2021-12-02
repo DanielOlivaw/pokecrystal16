@@ -162,7 +162,7 @@ TrainerCooltrainermKevin:
 	iftrue .AfterNuggetBridge
 	writetext CooltrainermKevinNuggetText
 	buttonsound
-	verbosegiveitem NUGGET
+	verbosegiveitem BIG_NUGGET
 	iffalse .NoRoomForNugget
 	setevent EVENT_CLEARED_NUGGET_BRIDGE
 .AfterNuggetBridge:
@@ -188,8 +188,8 @@ BillsHouseSign:
 Route25Protein:
 	itemball PROTEIN
 
-Route25HiddenPotion:
-	hiddenitem POTION, EVENT_ROUTE_25_HIDDEN_POTION
+Route25HiddenRevive:
+	hiddenitem REVIVE, EVENT_ROUTE_25_HIDDEN_REVIVE
 
 MovementData_0x19efe8:
 	big_step DOWN
@@ -439,7 +439,7 @@ Route25_MapEvents:
 
 	db 2 ; bg events
 	bg_event 45,  5, BGEVENT_READ, BillsHouseSign
-	bg_event  4,  5, BGEVENT_ITEM, Route25HiddenPotion
+	bg_event  4,  5, BGEVENT_ITEM, Route25HiddenRevive
 
 	db 11 ; object events
 	object_event 46,  9, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_25_MISTY_BOYFRIEND

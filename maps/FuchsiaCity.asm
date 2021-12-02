@@ -3,6 +3,7 @@
 	const FUCHSIACITY_POKEFAN_M
 	const FUCHSIACITY_TEACHER
 	const FUCHSIACITY_FRUIT_TREE
+	const FUCHSIACITY_POKE_BALL
 
 FuchsiaCity_MapScripts:
 	db 0 ; scene scripts
@@ -49,6 +50,15 @@ FuchsiaCityMartSign:
 
 FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
+
+FuchsiaCityHiddenNugget:
+	hiddenitem NUGGET, EVENT_FUCHSIA_CITY_HIDDEN_NUGGET
+
+FuchsiaCityHiddenBigMushroom:
+	hiddenitem BIG_MUSHROOM, EVENT_FUCHSIA_CITY_HIDDEN_BIG_MUSHROOM
+
+FuchsiaCityHiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_FUCHSIA_CITY_HIDDEN_MAX_REVIVE
 
 FuchsiaCityYoungsterText:
 	text "One of the ELITE"
@@ -140,7 +150,7 @@ FuchsiaCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 8 ; bg events
+	db 11 ; bg events
 	bg_event 21, 15, BGEVENT_READ, FuchsiaCitySign
 	bg_event  5, 29, BGEVENT_READ, FuchsiaGymSign
 	bg_event 25, 15, BGEVENT_READ, SafariZoneOfficeSign
@@ -149,9 +159,13 @@ FuchsiaCity_MapEvents:
 	bg_event 13, 15, BGEVENT_READ, NoLitteringSign
 	bg_event 20, 27, BGEVENT_READ, FuchsiaCityPokecenterSign
 	bg_event  6, 13, BGEVENT_READ, FuchsiaCityMartSign
+	bg_event 33, 11, BGEVENT_ITEM, FuchsiaCityHiddenNugget
+	bg_event 12,  4, BGEVENT_ITEM, FuchsiaCityHiddenBigMushroom
+	bg_event 36, 33, BGEVENT_ITEM, FuchsiaCityHiddenMaxRevive
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 23, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityYoungster, -1
 	object_event 13,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokefanM, -1
 	object_event 16, 14, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityTeacher, -1
 	object_event  8,  1, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityFruitTree, -1
+	tmhmball_event 31,  4, TM_EARTH_POWER, EVENT_FUCHSIA_CITY_TM_EARTH_POWER

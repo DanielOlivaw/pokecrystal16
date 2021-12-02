@@ -41,7 +41,7 @@ MountMortar1FBoulder:
 	jumpstd strengthboulder
 
 MountMortar1FInsideEscapeRope:
-	itemball SHINY_STONE
+	itemball PRETTY_WING
 
 MountMortar1FInsideMaxRevive:
 	itemball MAX_REVIVE
@@ -63,6 +63,15 @@ MountMortar1FInsideUltraBall:
 
 MountMortar1FInsideHiddenMaxRepel:
 	hiddenitem MAX_REPEL, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_MAX_REPEL
+
+MountMortar1FInsideHiddenEther:
+	hiddenitem ETHER, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_ETHER
+
+MountMortar1FInsideHiddenNugget:
+	hiddenitem NUGGET, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_NUGGET
+
+MountMortar1FInsideHiddenRareCandy:
+	hiddenitem RARE_CANDY, EVENT_MOUNT_MORTAR_1F_INSIDE_HIDDEN_RARE_CANDY
 
 PokemaniacMillerSeenText:
 	text "I'm not losing"
@@ -127,8 +136,11 @@ MountMortar1FInside_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 4 ; bg events
 	bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel
+	bg_event  9, 23, BGEVENT_ITEM, MountMortar1FInsideHiddenEther
+	bg_event  2,  4, BGEVENT_ITEM, MountMortar1FInsideHiddenNugget
+	bg_event 18, 27, BGEVENT_ITEM, MountMortar1FInsideHiddenRareCandy
 
 	db 10 ; object events
 	object_event 21, 43, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortar1FBoulder, -1

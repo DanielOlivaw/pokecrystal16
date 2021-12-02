@@ -41,6 +41,12 @@ TrainerFisherArnold:
 	closetext
 	end
 
+Route21HiddenStardust1:
+	hiddenitem STARDUST, EVENT_ROUTE_21_HIDDEN_STARDUST_1
+
+Route21HiddenStardust2:
+	hiddenitem STARDUST, EVENT_ROUTE_21_HIDDEN_STARDUST_2
+
 SwimmermSethSeenText:
 	text "Land ho! Gotta"
 	line "keep going!"
@@ -94,9 +100,11 @@ Route21_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event  5, 15, BGEVENT_ITEM, Route21HiddenStardust1
+	bg_event  8, 30, BGEVENT_ITEM, Route21HiddenStardust2
 
 	db 3 ; object events
-	object_event 11, 16, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNikki, -1
-	object_event  2, 30, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSeth, -1
+	object_event 12, 16, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNikki, -1
+	object_event  2, 33, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSeth, -1
 	object_event 14, 22, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherArnold, -1

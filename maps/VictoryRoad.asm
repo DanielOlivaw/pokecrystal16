@@ -5,6 +5,9 @@
 	const VICTORYROAD_POKE_BALL3
 	const VICTORYROAD_POKE_BALL4
 	const VICTORYROAD_POKE_BALL5
+	const VICTORYROAD_POKE_BALL6
+	const VICTORYROAD_ROCK1
+	const VICTORYROAD_ROCK2
 
 VictoryRoad_MapScripts:
 	db 2 ; scene scripts
@@ -114,6 +117,24 @@ VictoryRoadHiddenMaxPotion:
 
 VictoryRoadHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL
+
+VictoryRoadHiddenPPUp:
+	hiddenitem PP_UP, EVENT_VICTORY_ROAD_HIDDEN_PP_UP
+
+VictoryRoadHiddenUltraBall:
+	hiddenitem ULTRA_BALL, EVENT_VICTORY_ROAD_HIDDEN_ULTRA_BALL
+
+VictoryRoadHiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_VICTORY_ROAD_HIDDEN_MAX_REVIVE
+
+VictoryRoadHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_VICTORY_ROAD_HIDDEN_HYPER_POTION
+
+VictoryRoadHiddenZinc:
+	hiddenitem ZINC, EVENT_VICTORY_ROAD_HIDDEN_ZINC
+
+VictoryRoadRock:
+	jumpstd smashrock
 
 MovementData_0x74539:
 	step LEFT
@@ -255,11 +276,16 @@ VictoryRoad_MapEvents:
 	coord_event 12,  8, SCENE_DEFAULT, VictoryRoadRivalLeft
 	coord_event 13,  8, SCENE_DEFAULT, VictoryRoadRivalRight
 
-	db 2 ; bg events
+	db 7 ; bg events
 	bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
 	bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
+	bg_event 10, 50, BGEVENT_ITEM, VictoryRoadHiddenPPUp
+	bg_event  3, 39, BGEVENT_ITEM, VictoryRoadHiddenUltraBall
+	bg_event 12, 37, BGEVENT_ITEM, VictoryRoadHiddenMaxRevive
+	bg_event  2, 19, BGEVENT_ITEM, VictoryRoadHiddenHyperPotion
+	bg_event 14, 13, BGEVENT_ITEM, VictoryRoadHiddenZinc
 
-	db 6 ; object events
+	db 9 ; object events
 	object_event 18, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
 	; object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	tmhmball_event  3, 28, TM_EARTHQUAKE, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
@@ -267,3 +293,6 @@ VictoryRoad_MapEvents:
 	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
 	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
 	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP
+	tmhmball_event 18,  8, TM_DARK_PULSE, EVENT_VICTORY_ROAD_TM_DARK_PULSE
+	object_event 18,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1
+	object_event 18, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1

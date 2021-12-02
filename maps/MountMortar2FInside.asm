@@ -44,6 +44,15 @@ MountMortar2FInsideEscapeRope:
 MountMortar2FInsideHiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_FULL_RESTORE
 
+MountMortar2FInsideHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_HYPER_POTION
+
+MountMortar2FInsideHiddenHPUp:
+	hiddenitem HP_UP, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_HP_UP
+
+MountMortar2FInsideHiddenFullHeal:
+	hiddenitem FULL_HEAL, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_FULL_HEAL
+
 SupernerdHughSeenText:
 	text "Yo! MARKUS!"
 	done
@@ -73,8 +82,11 @@ MountMortar2FInside_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 4 ; bg events
 	bg_event 24,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenFullRestore
+	bg_event 24, 25, BGEVENT_ITEM, MountMortar2FInsideHiddenHyperPotion
+	bg_event 16, 13, BGEVENT_ITEM, MountMortar2FInsideHiddenHPUp
+	bg_event  5,  4, BGEVENT_ITEM, MountMortar2FInsideHiddenFullHeal
 
 	db 7 ; object events
 	object_event 28, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar2FInsideMaxPotion, EVENT_MOUNT_MORTAR_2F_INSIDE_MAX_POTION

@@ -64,6 +64,9 @@ ViridianCityDreamEaterFisher:
 	closetext
 	end
 
+ViridianCityHiddenNugget:
+	hiddenitem NUGGET, EVENT_VIRIDIAN_CITY_HIDDEN_NUGGET
+
 ViridianCityYoungsterScript:
 	jumptextfaceplayer ViridianCityYoungsterText
 
@@ -225,13 +228,14 @@ ViridianCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 6 ; bg events
+	db 7 ; bg events
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
 	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 19,  1, BGEVENT_READ, ViridianCityWelcomeSign
 	bg_event 21, 15, BGEVENT_READ, TrainerHouseSign
 	bg_event 24, 25, BGEVENT_READ, ViridianCityPokecenterSign
 	bg_event 30, 19, BGEVENT_READ, ViridianCityMartSign
+	bg_event  6,  4, BGEVENT_ITEM, ViridianCityHiddenNugget
 
 	db 4 ; object events
 	object_event 18,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1

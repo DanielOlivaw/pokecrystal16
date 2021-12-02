@@ -72,6 +72,9 @@ MountMortarB1FPPUp:
 MountMortarB1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
 
+MountMortarB1FHiddenUltraBall:
+	hiddenitem ULTRA_BALL, EVENT_MOUNT_MORTAR_B1F_HIDDEN_ULTRA_BALL
+
 UnknownText_0x7e24d:
 	text "Hey!"
 
@@ -141,8 +144,9 @@ MountMortarB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event  4,  6, BGEVENT_ITEM, MountMortarB1FHiddenMaxRevive
+	bg_event  4, 33, BGEVENT_ITEM, MountMortarB1FHiddenUltraBall
 
 	db 7 ; object events
 	object_event 29, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortarB1FHyperPotion, EVENT_MOUNT_MORTAR_B1F_HYPER_POTION

@@ -11,6 +11,7 @@
 	const LAKEOFRAGE_WESLEY
 	const LAKEOFRAGE_POKE_BALL1
 	const LAKEOFRAGE_POKE_BALL2
+	const LAKEOFRAGE_POKE_BALL3
 
 LakeOfRage_MapScripts:
 	db 2 ; scene scripts
@@ -226,6 +227,9 @@ WesleyNotWednesdayScript:
 LakeOfRageElixer:
 	itemball ELIXER
 
+LakeOfRageRedFlute:
+	itemball RED_FLUTE
+
 ; LakeOfRageTMDetect:
 	; itemball TM_DETECT
 
@@ -237,6 +241,9 @@ LakeOfRageHiddenRareCandy:
 
 LakeOfRageHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
+
+LakeOfRageHiddenMaxRevive:
+	hiddenitem MAX_REVIVE, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_REVIVE
 
 MovementData_0x70155:
 	teleport_from
@@ -500,14 +507,15 @@ LakeOfRage_MapEvents:
 
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 6 ; bg events
 	bg_event 21, 27, BGEVENT_READ, LakeOfRageSign
 	bg_event 25, 31, BGEVENT_READ, MagikarpHouseSignScript
-	bg_event 11, 28, BGEVENT_ITEM, LakeOfRageHiddenFullRestore
+	bg_event  3, 27, BGEVENT_ITEM, LakeOfRageHiddenFullRestore
 	bg_event  4,  4, BGEVENT_ITEM, LakeOfRageHiddenRareCandy
 	bg_event 35,  5, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion
+	bg_event 16,  3, BGEVENT_ITEM, LakeOfRageHiddenMaxRevive
 
-	db 12 ; object events
+	db 13 ; object events
 	object_event 21, 28, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageLanceScript, EVENT_LAKE_OF_RAGE_LANCE
 	object_event 20, 26, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageGrampsScript, -1
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageSuperNerdScript, -1
@@ -520,4 +528,5 @@ LakeOfRage_MapEvents:
 	object_event  4,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
 	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
 	; object_event 35,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
-	tmhmball_event 35,  2, TM_GRASS_KNOT, EVENT_LAKE_OF_RAGE_TM_DETECT
+	tmhmball_event 35,  2, TM_BULLET_SEED, EVENT_LAKE_OF_RAGE_TM_DETECT
+	object_event 11, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageRedFlute, EVENT_LAKE_OF_RAGE_RED_FLUTE

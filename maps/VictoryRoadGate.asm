@@ -8,13 +8,18 @@ VictoryRoadGate_MapScripts:
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .Flypoint
 
 .DummyScene0:
 	end
 
 .DummyScene1:
 	end
+
+.Flypoint:
+	setflag ENGINE_FLYPOINT_VICTORY_ROAD
+	return
 
 VictoryRoadGateBadgeCheckScene:
 	turnobject PLAYER, LEFT

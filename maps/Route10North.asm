@@ -9,6 +9,9 @@ PowerPlantSign:
 Route10PokecenterSign:
 	jumpstd pokecentersign
 
+Route10HiddenCarbos:
+	hiddenitem CARBOS, EVENT_ROUTE_10_HIDDEN_CARBOS
+
 PowerPlantSignText:
 	text "KANTO POWER PLANT"
 	done
@@ -22,8 +25,9 @@ Route10North_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event  5, 11, BGEVENT_READ, PowerPlantSign
 	bg_event 12,  1, BGEVENT_READ, Route10PokecenterSign
+	bg_event  2, 10, BGEVENT_ITEM, Route10HiddenCarbos
 
 	db 0 ; object events

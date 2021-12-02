@@ -68,6 +68,9 @@ IcePathB1FIron:
 IcePathB1FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_ICE_PATH_B1F_HIDDEN_MAX_POTION
 
+IcePathB1FHiddenRevive:
+	hiddenitem REVIVE, EVENT_ICE_PATH_B1F_HIDDEN_REVIVE
+
 IcePathBoulderFellThroughText:
 	text "The boulder fell"
 	line "through."
@@ -88,8 +91,9 @@ IcePathB1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event 17, 30, BGEVENT_ITEM, IcePathB1FHiddenMaxPotion
+	bg_event  7, 28, BGEVENT_ITEM, IcePathB1FHiddenRevive
 
 	db 5 ; object events
 	object_event 11,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IcePathB1FBoulder, EVENT_BOULDER_IN_ICE_PATH_1

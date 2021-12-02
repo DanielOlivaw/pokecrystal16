@@ -115,23 +115,23 @@ KantoGrassWildMons:
 	; morn
 	dbw 34, GRAVELER
 	dbw 32, NUMEL
-	dbw 33, MEDICHAM
+	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
 	dbw 35, DRUDDIGON
 	dbw 35, CAMERUPT
-	dbw 30, AXEW
+	dbw 32, AXEW
 	; day
 	dbw 34, GRAVELER
 	dbw 32, NUMEL
-	dbw 33, MEDICHAM
+	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
 	dbw 35, DRUDDIGON
 	dbw 35, CAMERUPT
-	dbw 30, AXEW
+	dbw 32, AXEW
 	; nite
 	dbw 34, GRAVELER
 	dbw 32, NUMEL
-	dbw 33, MEDICHAM
+	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
 	dbw 35, GRAVELER
 	dbw 35, CAMERUPT

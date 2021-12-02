@@ -230,7 +230,7 @@ TrainerPokefanfBeverly1:
 
 .GiveNugget:
 	scall .Gift
-	verbosegiveitem SHINY_STONE
+	verbosegiveitem HEART_STONE
 	iffalse .NoRoom
 	clearflag ENGINE_BEVERLY_HAS_NUGGET
 	sjump .NumberAccepted

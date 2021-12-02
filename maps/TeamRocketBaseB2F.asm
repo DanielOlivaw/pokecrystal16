@@ -356,6 +356,9 @@ TeamRocketBaseB2FTransmitterScript:
 TeamRocketBaseB2FHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL
 
+TeamRocketBaseB2FHiddenXSpDef:
+	hiddenitem X_SP_DEF, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_X_SP_DEF
+
 MovementData_0x6d212:
 	step RIGHT
 	step RIGHT
@@ -950,7 +953,8 @@ TeamRocketBaseB2F_MapEvents:
 	bg_event 17,  6, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
 	bg_event 17,  7, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
 	bg_event 17,  8, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
-	bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal
+	bg_event  7, 16, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal
+	bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenXSpDef
 
 	db 14 ; object events
 	object_event 20, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_GRUNT_WITH_EXECUTIVE

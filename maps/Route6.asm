@@ -2,6 +2,7 @@
 	const ROUTE6_POKEFAN_M1
 	const ROUTE6_POKEFAN_M2
 	const ROUTE6_POKEFAN_M3
+	const ROUTE6_POKE_BALL
 
 Route6_MapScripts:
 	db 0 ; scene scripts
@@ -101,7 +102,8 @@ Route6_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  5, BGEVENT_READ, Route6UndergroundPathSign
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 17,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 2, Route6PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event  9, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmRex, -1
 	object_event 10, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmAllan, -1
+	tmhmball_event  1,  0, TM_X_SCISSOR, EVENT_ROUTE_6_TM_X_SCISSOR

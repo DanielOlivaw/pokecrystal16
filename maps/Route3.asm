@@ -56,6 +56,12 @@ TrainerFirebreatherBurt:
 Route3MtMoonSquareSign:
 	jumptext Route3MtMoonSquareSignText
 
+Route3FHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_ROUTE_3_HIDDEN_HYPER_POTION
+
+Route3FHiddenStarPiece:
+	hiddenitem STAR_PIECE, EVENT_ROUTE_3_HIDDEN_STAR_PIECE
+
 FirebreatherOtisSeenText:
 	text "Ah! The weather's"
 	line "as fine as ever."
@@ -138,8 +144,10 @@ Route3_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 3 ; bg events
 	bg_event 49, 13, BGEVENT_READ, Route3MtMoonSquareSign
+	bg_event 17,  7, BGEVENT_ITEM, Route3FHiddenHyperPotion
+	bg_event 52,  6, BGEVENT_ITEM, Route3FHiddenStarPiece
 
 	db 4 ; object events
 	object_event 26, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerFirebreatherOtis, -1

@@ -252,6 +252,9 @@ Route26FruitTree:
 Route26MaxElixer:
 	itemball MAX_ELIXER
 
+Route26HiddenTinyMushroom:
+	hiddenitem TINYMUSHROOM, EVENT_ROUTE_26_HIDDEN_TINYMUSHROOM
+
 CooltrainermJakeSeenText:
 	text "I'm making my"
 	line "final preparations"
@@ -420,8 +423,9 @@ Route26_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event  8,  6, BGEVENT_READ, Route26Sign
+	bg_event  5, 21, BGEVENT_ITEM, Route26HiddenTinyMushroom
 
 	db 8 ; object events
 	object_event 14, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermJake, -1

@@ -17,6 +17,9 @@ IcePath1FPPUp:
 IcePath1FProtein:
 	itemball PROTEIN
 
+IcePath1FHiddenIceHeal:
+	hiddenitem ICE_HEAL, EVENT_ICE_PATH_1F_HIDDEN_ICE_HEAL
+
 IcePath1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -28,7 +31,8 @@ IcePath1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 28,  3, BGEVENT_ITEM, IcePath1FHiddenIceHeal
 
 	db 3 ; object events
 	; object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL

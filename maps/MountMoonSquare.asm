@@ -2,6 +2,7 @@
 	const MOUNTMOONSQUARE_FAIRY1
 	const MOUNTMOONSQUARE_FAIRY2
 	const MOUNTMOONSQUARE_ROCK
+	const MOUNTMOONSQUARE_POKE_BALL
 
 MountMoonSquare_MapScripts:
 	db 1 ; scene scripts
@@ -145,7 +146,8 @@ MountMoonSquare_MapEvents:
 	bg_event  7,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone
 	bg_event 17,  7, BGEVENT_READ, DontLitterSign
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  6,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  6, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_SQUARE_CLEFAIRY
 	object_event  7,  7, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonSquareRock, EVENT_MT_MOON_SQUARE_ROCK
+	tmhmball_event 24,  4, TM_DAZZLING_GLEAM, EVENT_MT_MOON_SQUARE_TM_DAZZLING_GLEAM

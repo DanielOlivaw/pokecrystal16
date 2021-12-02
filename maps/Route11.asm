@@ -4,6 +4,7 @@
 	const ROUTE11_YOUNGSTER3
 	const ROUTE11_YOUNGSTER4
 	const ROUTE11_FRUIT_TREE
+	const ROUTE11_POKE_BALL
 
 Route11_MapScripts:
 	db 0 ; scene scripts
@@ -154,9 +155,10 @@ Route11_MapEvents:
 	bg_event  3,  7, BGEVENT_READ, Route11Sign
 	bg_event 32,  5, BGEVENT_ITEM, Route11HiddenRevive
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 22, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterOwen, -1
 	object_event 20,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJason, -1
 	object_event 28,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerPsychicHerman, -1
 	object_event  8,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicFidel, -1
 	object_event 32,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1
+	tmhmball_event 32, 16, TM_GRASS_KNOT, EVENT_ROUTE_11_TM_GRASS_KNOT
