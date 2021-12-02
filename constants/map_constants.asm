@@ -146,6 +146,7 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
+	map_const VIRIDIAN_FOREST,                             20, 27 ; 92
 
 	newgroup                                                      ;  4
 
@@ -443,6 +444,8 @@ ENDM
 	map_const ROUTE_2_NUGGET_HOUSE,                         4,  4 ; 11
 	map_const ROUTE_2_GATE,                                 5,  4 ; 12
 	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
+	map_const VIRIDIAN_FOREST_GATE_NORTH,                   5,  4 ; 14
+	map_const VIRIDIAN_FOREST_GATE_SOUTH,                   5,  4 ; 15
 
 	newgroup                                                      ; 24
 

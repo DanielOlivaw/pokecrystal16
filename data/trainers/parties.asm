@@ -5348,3 +5348,40 @@ MysticalmanGroup:
 	db -1 ; end
 
 	end_list_items
+
+BugManiacGroup:
+	next_list_item ; BUG_MANIAC (1)
+	db "ABNER@", TRAINERTYPE_NORMAL
+	db 10
+	dw SLOWPOKE
+	db -1 ; end
+
+	next_list_item ; BUG_MANIAC (2)
+	db "ELLIS@", TRAINERTYPE_NORMAL
+	db 24
+	dw DREDNAW
+	db 24
+	dw DREDNAW
+	db -1 ; end
+
+	next_list_item ; BUG_MANIAC (3)
+	db "STACEY@", TRAINERTYPE_NORMAL
+	db 26
+	dw KANGASKHAN
+	db -1 ; end
+
+	next_list_item ; BUG_MANIAC (4)
+	db "DION@", TRAINERTYPE_NORMAL
+	db 19
+	dw NIDORINA
+	db 19
+	dw NIDORINO
+	db -1 ; end
+
+	next_list_item ; BUG_MANIAC (5)
+	db "DANE@", TRAINERTYPE_NORMAL
+	db 24
+	dw CROCONAW
+	db -1 ; end
+
+	end_list_items

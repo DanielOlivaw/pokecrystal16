@@ -1,16 +1,17 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	dw TreeMonSet_City
-	dw TreeMonSet_Canyon    ; Route 44
-	dw TreeMonSet_Town      ; Azalea Town, Route 33, 42
-	dw TreeMonSet_Route     ; Route 29, 30, 31, 34, 35, 36, 37, 38, 39
-	dw TreeMonSet_Kanto     ; Route 26, 27
-	dw TreeMonSet_Lake      ; Lake of Rage, Route 43
-	dw TreeMonSet_Forest    ; Ilex Forest
-	dw TreeMonSet_Seaside   ; Route 32
-	dw TreeMonSet_CaveRock  ; Dark Cave
-	dw TreeMonSet_BeachRock ; Route 40, Cianwood City
-	dw TreeMonSet_KantoRock ; Victory Road
+	dw TreeMonSet_Canyon       ; Route 44
+	dw TreeMonSet_Town         ; Azalea Town, Route 33, 42
+	dw TreeMonSet_Route        ; Route 29, 30, 31, 34, 35, 36, 37, 38, 39
+	dw TreeMonSet_Kanto        ; Route 26, 27
+	dw TreeMonSet_Lake         ; Lake of Rage, Route 43
+	dw TreeMonSet_Forest       ; Ilex Forest
+	dw TreeMonSet_KantoForest  ; Viridian Forest
+	dw TreeMonSet_Seaside      ; Route 32
+	dw TreeMonSet_CaveRock     ; Dark Cave
+	dw TreeMonSet_BeachRock    ; Route 40, Cianwood City
+	dw TreeMonSet_KantoRock    ; Victory Road
 	dw TreeMonSet_City
 
 ; Two tables each (common, rare).
@@ -102,8 +103,8 @@ TreeMonSet_Lake:
 	dbbw 25, 16, PINECO
 	dbbw 15, 16, VENONAT
 	dbbw  1, 16, MUNCHLAX
-	db -1        
-                 
+	db -1
+
 TreeMonSet_Forest:
 ; common
 	dbbw 29, 10, HOOTHOOT
@@ -124,7 +125,25 @@ TreeMonSet_Forest:
 	dbbw 10, 10, BUTTERFREE
 	dbbw 10, 10, BEEDRILL
 	dbbw  1, 10, MUNCHLAX
-	db -1      
+	db -1
+
+TreeMonSet_KantoForest:
+; common
+	dbbw 29, 40, NOCTOWL
+	dbbw 25, 40, EXEGGCUTE
+	dbbw 25, 40, SPEWPA
+	dbbw 10, 40, NUZLEAF
+	dbbw 10, 40, VIVILLON
+	dbbw  1, 40, MUNCHLAX
+	db -1
+; rare
+	dbbw 29, 40, NOCTOWL
+	dbbw 25, 40, EXEGGCUTE
+	dbbw 25, 40, SPEWPA
+	dbbw 10, 40, NUZLEAF
+	dbbw 10, 40, VIVILLON
+	dbbw  1, 40, MUNCHLAX
+	db -1
                  
 TreeMonSet_Seaside:
 ; common

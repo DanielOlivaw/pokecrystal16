@@ -699,5 +699,12 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+	
+	trainerclass BUG_MANIAC
+	const ABNER
+	const ELLIS
+	const STACEY
+	const DION
+	const DANE
 
 NUM_TRAINER_CLASSES EQU __enum__

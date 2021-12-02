@@ -2,6 +2,33 @@
 
 KantoGrassWildMons:
 
+	map_id VIRIDIAN_FOREST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 41, VIVILLON
+	dbw 41, CARNIVINE
+	dbw 43, PIDGEOT
+	dbw 45, VIVILLON
+	dbw 45, KOMALA
+	dbw 42, PIKACHU
+	dbw 42, PIKACHU
+	; day
+	dbw 41, VIVILLON
+	dbw 41, CARNIVINE
+	dbw 43, PIDGEOT
+	dbw 45, VIVILLON
+	dbw 45, KOMALA
+	dbw 42, PIKACHU
+	dbw 42, PIKACHU
+	; nite
+	dbw 41, VENOMOTH
+	dbw 41, CARNIVINE
+	dbw 43, NOCTOWL
+	dbw 45, VENOMOTH
+	dbw 45, KOMALA
+	dbw 42, PHANTUMP
+	dbw 42, TREVENANT
+
 	map_id DIGLETTS_CAVE
 	db 4 percent, 2 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
@@ -198,25 +225,25 @@ KantoGrassWildMons:
 	dbw 41, LEDIAN
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
-	dbw 45, KOMALA
-	dbw 42, PIKACHU
-	dbw 42, PIKACHU
+	dbw 45, LUXRAY
+	dbw 42, BEWEAR
+	dbw 42, BEWEAR
 	; day
 	dbw 41, VIVILLON
-	dbw 41, PIDGEOT
+	dbw 41, RIBOMBEE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
-	dbw 45, KOMALA
-	dbw 42, PIKACHU
-	dbw 42, PIKACHU
+	dbw 45, LUXRAY
+	dbw 42, BEWEAR
+	dbw 42, BEWEAR
 	; nite
 	dbw 41, VENOMOTH
 	dbw 41, ARIADOS
 	dbw 43, NOCTOWL
 	dbw 45, VENOMOTH
-	dbw 45, KOMALA
-	dbw 42, PHANTUMP
-	dbw 42, TREVENANT
+	dbw 45, LUXRAY
+	dbw 42, NOCTOWL
+	dbw 42, NOCTOWL
 
 	map_id ROUTE_3
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

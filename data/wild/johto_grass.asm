@@ -1059,7 +1059,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 58, GOLBAT
-	dbw 58, HARIYAMA
+	dbw 58, MEDICHAM
 	dbw 57, URSARING
 	dbw 56, PARASECT
 	dbw 58, PARASECT
@@ -1067,7 +1067,7 @@ JohtoGrassWildMons:
 	dbw 20, LARVITAR
 	; day
 	dbw 58, GOLBAT
-	dbw 58, HARIYAMA
+	dbw 58, MEDICHAM
 	dbw 57, URSARING
 	dbw 56, PARASECT
 	dbw 58, PARASECT

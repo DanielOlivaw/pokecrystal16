@@ -55,6 +55,7 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_1           ; 30
 	const VIRIDIAN_CITY     ; 31
 	const ROUTE_2           ; 32
+	const VIRIDIAN_FOREST
 	const PEWTER_CITY       ; 33
 	const ROUTE_3           ; 34
 	const MT_MOON           ; 35

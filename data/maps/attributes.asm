@@ -694,3 +694,6 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $05, 0
+	map_attributes ViridianForestGateNorth, VIRIDIAN_FOREST_GATE_NORTH, $00, 0
+	map_attributes ViridianForestGateSouth, VIRIDIAN_FOREST_GATE_SOUTH, $00, 0
