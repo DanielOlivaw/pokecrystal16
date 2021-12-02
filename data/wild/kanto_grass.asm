@@ -9,24 +9,24 @@ KantoGrassWildMons:
 	dbw 41, CARNIVINE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
+	dbw 44, KOMALA
 	dbw 45, KOMALA
-	dbw 42, PIKACHU
 	dbw 42, PIKACHU
 	; day
 	dbw 41, VIVILLON
 	dbw 41, CARNIVINE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
+	dbw 44, KOMALA
 	dbw 45, KOMALA
-	dbw 42, PIKACHU
 	dbw 42, PIKACHU
 	; nite
 	dbw 41, VENOMOTH
 	dbw 41, CARNIVINE
 	dbw 43, NOCTOWL
 	dbw 45, VENOMOTH
+	dbw 44, KOMALA
 	dbw 45, KOMALA
-	dbw 42, PHANTUMP
 	dbw 42, TREVENANT
 
 	map_id DIGLETTS_CAVE

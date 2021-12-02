@@ -219,7 +219,8 @@ MartGoldenrod4F:
 	db -1 ; end
 
 MartGoldenrod5F:
-	db 6 ; # items
+	db 7 ; # items
+	dbw TM_MUD_SHOT,     1500
 	dbw TM_PROTECT,      2000
 	dbw TM_LIGHT_SCREEN, 2000
 	dbw TM_REFLECT,      2000
@@ -337,20 +338,20 @@ MartCeladon2F2:
 	db -1 ; end
 
 MartCeladon3F:
-	db 4 ; # items
+	db 8 ; # items
 	dbw TM_SAFEGUARD,    2000
+	dbw TM_VENOSHOCK,    4000
+	dbw TM_SIGNAL_BEAM,  4000
 	dbw TM_WEATHER_BALL, 3000
 	dbw TM_FOCUS_BLAST,  5500
+	dbw TM_RETALIATE,    3000
 	dbw TM_STEALTH_ROCK, 2000
+	dbw TM_OMINOUS_WIND, 3000
 	db -1 ; end
 
 MartCeladon4F:
-	db 9 ; # items
+	db 5 ; # items
 	db HEART_STONE
-	db FIRE_STONE
-	db THUNDERSTONE
-	db WATER_STONE
-	db LEAF_STONE
 	db ICE_STONE
 	db DAWN_STONE
 	db DUSK_STONE
