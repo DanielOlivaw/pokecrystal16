@@ -13,13 +13,13 @@ JoseAromaText:
 
 UnknownText_0x174f90:
 	text "A while ago, my"
-	line "FARFETCH'D KO'd"
+	line "SWANDAME KO'd"
 	cont "this @"
 	text_ram wStringBuffer4
 	text "."
 
 	para "You should have"
-	line "seen FARFETCH'D"
+	line "seen SWANDAME"
 
 	para "wield that leek."
 	line "Amazing stuff!"
@@ -46,9 +46,9 @@ UnknownText_0x17507d:
 	line "again?"
 
 	para "For some reason,"
-	line "my FARFETCH'D is"
+	line "my SWANDAME is all"
 
-	para "all worked up and"
+	para "worked up and"
 	line "raring to go."
 
 	para "@"
@@ -65,7 +65,7 @@ UnknownText_0x175106:
 	done
 
 JoseFoundSomethingText:
-	text "My FARFETCH'D had"
+	text "My SWANDAME had"
 	line "something pretty"
 	cont "in its beak."
 
@@ -97,7 +97,7 @@ UnknownText_0x17520a:
 	text "<PLAY_G>, could you"
 	line "hurry over?"
 
-	para "FARFETCH'D is"
+	para "SWANDAME is"
 	line "agitated."
 
 	para "If you don't come"

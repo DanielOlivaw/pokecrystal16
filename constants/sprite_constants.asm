@@ -104,6 +104,10 @@
 	const SPRITE_ENTEI ; 64
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
+	const SPRITE_ARCHER ; 67
+	const SPRITE_PROTON ; 68
+	const SPRITE_PETREL ; 69
+	const SPRITE_ARIANA ; 70
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

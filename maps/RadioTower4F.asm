@@ -2,8 +2,8 @@
 	const RADIOTOWER4F_FISHER
 	const RADIOTOWER4F_TEACHER
 	const RADIOTOWER4F_GROWLITHE
-	const RADIOTOWER4F_ROCKET1
-	const RADIOTOWER4F_ROCKET2
+	const RADIOTOWER4F_ROCKET
+	const RADIOTOWER4F_PROTON
 	const RADIOTOWER4F_ROCKET_GIRL
 	const RADIOTOWER4F_SCIENTIST
 
@@ -64,13 +64,13 @@ TrainerGruntM10:
 	closetext
 	end
 
-TrainerExecutivem2:
-	trainer EXECUTIVEM, EXECUTIVEM_2, EVENT_BEAT_ROCKET_EXECUTIVEM_2, Executivem2SeenText, Executivem2BeatenText, 0, .Script
+ProtonRadioTower:
+	trainer PROTON, PROTON_2, EVENT_BEAT_ROCKET_EXECUTIVEM_2, ProtonRadioTowerSeenText, ProtonRadioTowerBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Executivem2AfterBattleText
+	writetext ProtonRadioTowerAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -172,29 +172,69 @@ GruntM10AfterBattleText:
 	line "it! I was beaten!"
 	done
 
-Executivem2SeenText:
-	text "Stop! I'm known as"
-	line "the TEAM ROCKET"
-	cont "fortress!"
+ProtonRadioTowerSeenText:
+	text "Now, wait just one"
+	line "second!"
+	
+	para "Aren't you the one"
+	line "who got in our way"
 
-	para "You're not taking"
-	line "another step!"
+	para "at the SLOWPOKE"
+	line "WELL?"
+
+	para "I see… You're"
+	line "doing all this"
+
+	para "because you want"
+	line "to make me angry."
+
+	para "Be careful!"
+
+	para "But since you seem"
+	line "to want it, I'll"
+
+	para "show you the full"
+	line "extent of a TEAM"
+
+	para "ROCKET EXECUTIVE's"
+	line "wrath!"
 	done
 
-Executivem2BeatenText:
-	text "The fortress came"
-	line "down!"
+	; text "Stop! I'm known as"
+	; line "the TEAM ROCKET"
+	; cont "fortress!"
+
+	; para "You're not taking"
+	; line "another step!"
+	; done
+
+ProtonRadioTowerBeatenText:
+	text "Phew…"
 	done
 
-Executivem2AfterBattleText:
-	text "You've earned my"
-	line "respect, so here's"
-	cont "some advice."
+	; text "The fortress came"
+	; line "down!"
+	; done
 
-	para "It's not too late."
-	line "You can still turn"
-	cont "back."
+ProtonRadioTowerAfterBattleText:
+	text "You may have won"
+	line "this time…"
+
+	para "But all you did"
+	line "was make TEAM"
+
+	para "ROCKET's wrath"
+	line "grow…"
 	done
+
+	; text "You've earned my"
+	; line "respect, so here's"
+	; cont "some advice."
+
+	; para "It's not too late."
+	; line "You can still turn"
+	; cont "back."
+	; done
 
 GruntF4SeenText:
 	text "Don't I think"
@@ -269,6 +309,6 @@ RadioTower4F_MapEvents:
 	object_event 14,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower4FDJMaryScript, -1
 	object_event 12,  7, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTowerMeowth, -1
 	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM10, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 14,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerExecutivem2, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event 14,  1, SPRITE_PROTON, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, ProtonRadioTower, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 12,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerGruntF4, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerScientistRich, EVENT_RADIO_TOWER_ROCKET_TAKEOVER

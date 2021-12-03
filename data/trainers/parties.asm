@@ -1098,13 +1098,13 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
 	db 48
-	dw SWELLOW
+	dw HAWLUCHA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (12)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 46
-	dw FARFETCH_D
+	dw SWANDAME
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (13)
@@ -1120,17 +1120,17 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 38
-	dw FARFETCH_D
+	dw SWANDAME
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
 	db 40
-	dw FARFETCH_D
+	dw TAILLOW
 	db 40
-	dw FARFETCH_D
+	dw TAILLOW
 	db 42
-	dw SWANDAME
+	dw SWELLOW
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (16)
@@ -1144,8 +1144,8 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (17)
 	db "JOSE@", TRAINERTYPE_MOVES
 	db 50
-	dw FARFETCH_D
-	dw LEAF_BLADE, ACROBATICS, SWORDS_DANCE, NIGHT_SLASH
+	dw SWANDAME
+	dw LEAF_BLADE, ACROBATICS, SWORDS_DANCE, SACRED_SWORD
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (18)
@@ -4052,8 +4052,8 @@ BlackbeltGroup:
 
 	end_list_items
 
-ExecutiveMGroup:
-	next_list_item ; EXECUTIVEM (1)
+ArcherGroup:
+	next_list_item ; ARCHER (1)
 	db "ARCHER@", TRAINERTYPE_MOVES
 	db 33
 	dw LYCANROC_MN
@@ -4069,7 +4069,18 @@ ExecutiveMGroup:
 	dw FIRE_FANG, THUNDER_FANG, ROAR, FAINT_ATTACK
 	db -1 ; end
 
-	next_list_item ; EXECUTIVEM (2)
+	end_list_items
+
+ProtonGroup:
+	next_list_item ; PROTON (1)
+	db "PROTON@", TRAINERTYPE_NORMAL
+	db 8
+	dw POOCHYENA
+	db 12
+	dw SCRAGGY
+	db -1 ; end
+
+	next_list_item ; PROTON (2)
 	db "PROTON@", TRAINERTYPE_MOVES
 	db 31
 	dw SCRAGGY
@@ -4079,7 +4090,10 @@ ExecutiveMGroup:
 	dw CRUNCH, FIRE_FANG, SWAGGER, ROAR
 	db -1 ; end
 
-	next_list_item ; EXECUTIVEM (3)
+	end_list_items
+
+PetrelGroup:
+	next_list_item ; PETREL (1)
 	db "PETREL@", TRAINERTYPE_MOVES
 	db 30
 	dw KOFFING
@@ -4101,7 +4115,7 @@ ExecutiveMGroup:
 	dw TACKLE, SMOG, SLUDGE, SMOKESCREEN
 	db -1 ; end
 
-	next_list_item ; EXECUTIVEM (4)
+	next_list_item ; PETREL (2)
 	db "PETREL@", TRAINERTYPE_NORMAL
 	db 25
 	dw DEINO
@@ -4654,8 +4668,8 @@ CamperGroup:
 
 	end_list_items
 
-ExecutiveFGroup:
-	next_list_item ; EXECUTIVEF (1)
+ArianaGroup:
+	next_list_item ; ARIANA (1)
 	db "ARIANA@", TRAINERTYPE_MOVES
 	db 32
 	dw SEVIPER
@@ -4668,7 +4682,7 @@ ExecutiveFGroup:
 	dw WING_ATTACK, FAINT_ATTACK, HAZE, MEAN_LOOK
 	db -1 ; end
 
-	next_list_item ; EXECUTIVEF (2)
+	next_list_item ; ARIANA (2)
 	db "ARIANA@", TRAINERTYPE_MOVES
 	db 26
 	dw SEVIPER

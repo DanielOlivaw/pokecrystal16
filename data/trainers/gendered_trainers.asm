@@ -27,6 +27,9 @@ MaleTrainers:
 	db BIKER
 	db SCIENTIST
 	db BUG_MANIAC
+	db ARCHER
+	db PROTON
+	db PETREL
 .End
 
 FemaleTrainers:
@@ -40,4 +43,5 @@ FemaleTrainers:
 	db KIMONO_GIRL
 	db POKEFANF
 	db COOLTRAINERF
+	db ARIANA
 .End

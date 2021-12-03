@@ -252,9 +252,8 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 11 ; # items
+	db 10 ; # items
 	db RAGECANDYBAR
-	db HONEY
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
@@ -397,10 +396,11 @@ MartSaffron:
 	db -1 ; end
 
 MartMtMoon:
-	db 8 ; # items
+	db 9 ; # items
 	db MOON_BALL
 	db LAVA_COOKIE
 	db POKE_DOLL
+	db HONEY
 	db FRESH_WATER
 	db SODA_POP
 	db LEMONADE

@@ -532,11 +532,16 @@ KRIS EQU __enum__
 	const KENJI3
 	const WAI
 
-	trainerclass EXECUTIVEM ; 33
-	const EXECUTIVEM_1
-	const EXECUTIVEM_2
-	const EXECUTIVEM_3
-	const EXECUTIVEM_4
+	trainerclass ARCHER
+	const ARCHER_1
+
+	trainerclass PROTON
+	const PROTON_1
+	const PROTON_2
+
+	trainerclass PETREL
+	const PETREL_1
+	const PETREL_2
 
 	trainerclass PSYCHIC_T ; 34
 	const NATHAN
@@ -604,9 +609,9 @@ KRIS EQU __enum__
 	const TODD5
 	const QUENTIN
 
-	trainerclass EXECUTIVEF ; 37
-	const EXECUTIVEF_1
-	const EXECUTIVEF_2
+	trainerclass ARIANA ; 37
+	const ARIANA_1
+	const ARIANA_2
 
 	trainerclass SAGE ; 38
 	const CHOW

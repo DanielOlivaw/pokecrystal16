@@ -51,6 +51,8 @@ TrainerClassNames::
 	db "JUGGLER@"
 	db "BLACKBELT@"
 	db "EXECUTIVE@"
+	db "EXECUTIVE@"
+	db "EXECUTIVE@"
 	db "PSYCHIC@"
 	db "PICNICKER@"
 	db "CAMPER@"

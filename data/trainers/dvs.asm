@@ -51,11 +51,13 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; FIREBREATHER
 	dn  9,  8,  8,  8 ; JUGGLER
 	dn  9,  8,  8,  8 ; BLACKBELT_T
-	dn 13,  8, 10,  8 ; EXECUTIVEM
+	dn 13,  8, 10,  8 ; ARCHER
+	dn 13,  8, 10,  8 ; PROTON
+	dn 13,  8, 10,  8 ; PETREL
 	dn  9,  8,  8,  8 ; PSYCHIC_T
 	dn  6, 10, 10,  9 ; PICNICKER
 	dn  9,  8,  8,  8 ; CAMPER
-	dn  7, 14, 10,  9 ; EXECUTIVEF
+	dn  7, 14, 10,  9 ; ARIANA
 	dn  9,  8,  8,  8 ; SAGE
 	dn  7,  8,  8,  9 ; MEDIUM
 	dn  9,  8,  8,  8 ; BOARDER

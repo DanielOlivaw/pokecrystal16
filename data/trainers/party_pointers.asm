@@ -52,11 +52,13 @@ TrainerGroups:
 	dba FirebreatherGroup
 	dba JugglerGroup
 	dba BlackbeltGroup
-	dba ExecutiveMGroup
+	dba ArcherGroup
+	dba ProtonGroup
+	dba PetrelGroup
 	dba PsychicGroup
 	dba PicnickerGroup
 	dba CamperGroup
-	dba ExecutiveFGroup
+	dba ArianaGroup
 	dba SageGroup
 	dba MediumGroup
 	dba BoarderGroup

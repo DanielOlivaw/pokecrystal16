@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
 	const TEAMROCKETBASEB3F_LANCE
-	const TEAMROCKETBASEB3F_ROCKET1
+	const TEAMROCKETBASEB3F_PETREL
 	const TEAMROCKETBASEB3F_MOLTRES
 	const TEAMROCKETBASEB3F_ROCKET_GIRL
 	const TEAMROCKETBASEB3F_ROCKET2
@@ -84,36 +84,36 @@ RocketBaseRival:
 TeamRocketBaseB3FRocketScript:
 	jumptextfaceplayer TeamRocketBaseB3FRocketText
 
-RocketBaseBossLeft:
+PetrelRocketBaseLeft:
 	applymovement PLAYER, MovementData_0x6e133
-	sjump RocketBaseBoss
+	sjump PetrelRocketBase
 
-RocketBaseBossRight:
+PetrelRocketBaseRight:
 	applymovement PLAYER, MovementData_0x6e13a
-RocketBaseBoss:
+PetrelRocketBase:
 	pause 30
-	showemote EMOTE_SHOCK, TEAMROCKETBASEB3F_ROCKET1, 15
+	showemote EMOTE_SHOCK, TEAMROCKETBASEB3F_PETREL, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
-	turnobject TEAMROCKETBASEB3F_ROCKET1, DOWN
+	turnobject TEAMROCKETBASEB3F_PETREL, DOWN
 	opentext
-	writetext ExecutiveM4BeforeText
+	writetext PetrelRocketBaseBeforeText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e142
-	winlosstext ExecutiveM4BeatenText, 0
-	setlasttalked TEAMROCKETBASEB3F_ROCKET1
-	loadtrainer EXECUTIVEM, EXECUTIVEM_4
+	applymovement TEAMROCKETBASEB3F_PETREL, MovementData_0x6e142
+	winlosstext PetrelRocketBaseBeatenText, 0
+	setlasttalked TEAMROCKETBASEB3F_PETREL
+	loadtrainer PETREL, PETREL_2
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ROCKET_EXECUTIVEM_4
 	opentext
-	writetext ExecutiveM4AfterText
+	writetext PetrelRocketBaseAfterText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e144
+	applymovement TEAMROCKETBASEB3F_PETREL, MovementData_0x6e144
 	playsound SFX_TACKLE
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e147
-	disappear TEAMROCKETBASEB3F_ROCKET1
+	applymovement TEAMROCKETBASEB3F_PETREL, MovementData_0x6e147
+	disappear TEAMROCKETBASEB3F_PETREL
 	setscene SCENE_TEAMROCKETBASEB3F_NOTHING
 	end
 
@@ -383,7 +383,7 @@ RocketBaseRivalText:
 	cont "the likes of you!"
 	done
 
-ExecutiveM4BeforeText:
+PetrelRocketBaseBeforeText:
 	text "What? Who are you?"
 	line "This is the office"
 
@@ -394,13 +394,13 @@ ExecutiveM4BeforeText:
 	line "TEAM ROCKET three"
 
 	para "years ago, he has"
-	line "been in training."
+	line "been missing."
 
 	para "But we're certain"
-	line "he will be back"
+	line "he's been waiting"
 
-	para "some day to assume"
-	line "command again."
+	para "for the right time"
+	line "for our revival."
 
 	para "That's why we're"
 	line "standing guard."
@@ -410,7 +410,7 @@ ExecutiveM4BeforeText:
 	cont "place!"
 	done
 
-ExecutiveM4BeatenText:
+PetrelRocketBaseBeatenText:
 	text "I… I couldn't do a"
 	line "thing…"
 
@@ -418,7 +418,7 @@ ExecutiveM4BeatenText:
 	line "forgive me…"
 	done
 
-ExecutiveM4AfterText:
+PetrelRocketBaseAfterText:
 	text "No, I can't let"
 	line "this affect me."
 
@@ -573,8 +573,8 @@ TeamRocketBaseB3F_MapEvents:
 	warp_event 27, 14, TEAM_ROCKET_BASE_B2F, 5
 
 	db 3 ; coord events
-	coord_event 10,  8, SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS, RocketBaseBossLeft
-	coord_event 11,  8, SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS, RocketBaseBossRight
+	coord_event 10,  8, SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS, PetrelRocketBaseLeft
+	coord_event 11,  8, SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS, PetrelRocketBaseRight
 	coord_event  8, 10, SCENE_TEAMROCKETBASEB3F_RIVAL_ENCOUNTER, RocketBaseRival
 
 	db 10 ; bg events
@@ -591,7 +591,7 @@ TeamRocketBaseB3F_MapEvents:
 
 	db 14 ; object events
 	object_event 25, 14, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LanceGetPasswordScript, EVENT_TEAM_ROCKET_BASE_B3F_LANCE_PASSWORDS
-	object_event  8,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B3F_EXECUTIVE
+	object_event  8,  3, SPRITE_PETREL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B3F_EXECUTIVE
 	object_event  7,  2, SPRITE_MURKROW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RocketBaseMurkrow, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 21,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, SlowpokeTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event  5, 14, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RaticateTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION

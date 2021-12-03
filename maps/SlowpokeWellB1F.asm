@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const SLOWPOKEWELLB1F_ROCKET1
+	const SLOWPOKEWELLB1F_PROTON
 	const SLOWPOKEWELLB1F_ROCKET2
-	const SLOWPOKEWELLB1F_ROCKET3
 	const SLOWPOKEWELLB1F_ROCKET_GIRL
 	const SLOWPOKEWELLB1F_SLOWPOKE1
 	const SLOWPOKEWELLB1F_SLOWPOKE2
@@ -28,19 +28,19 @@ TrainerGruntM29:
 	closetext
 	end
 
-TrainerGruntM1:
-	trainer GRUNTM, GRUNTM_1, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
+TrainerProtonWell:
+	trainer PROTON, PROTON_1, EVENT_BEAT_ROCKET_GRUNTM_1, ProtonWellSeenText, ProtonWellBeatenText, 0, .Script
 
 .Script:
 	opentext
-	writetext TrainerGruntM1WhenTalkText
+	writetext TrainerProtonWellWhenTalkText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SLOWPOKEWELLB1F_ROCKET1
+	disappear SLOWPOKEWELLB1F_PROTON
 	disappear SLOWPOKEWELLB1F_ROCKET2
-	disappear SLOWPOKEWELLB1F_ROCKET3
 	disappear SLOWPOKEWELLB1F_ROCKET_GIRL
 	pause 15
 	special FadeInQuickly
@@ -228,7 +228,7 @@ GruntM29AfterBattleText:
 	line "thing for money!"
 	done
 
-GruntM1SeenText:
+ProtonWellSeenText:
 	text "What do you want?"
 
 	para "If you interrupt"
@@ -236,13 +236,19 @@ GruntM1SeenText:
 	cont "expect any mercy!"
 	done
 
-GruntM1BeatenText:
-	text "You did OK today,"
-	line "but wait till next"
-	cont "time!"
-	done
+ProtonWellBeatenText:
+	text "Grr… For a kid to"
+	line "be this good…"
 
-TrainerGruntM1WhenTalkText:
+	para "I didn't see it"
+	line "coming."
+	done
+	; text "You did OK today,"
+	; line "but wait till next"
+	; cont "time!"
+	; done
+
+TrainerProtonWellWhenTalkText:
 	text "Yeah, TEAM ROCKET"
 	line "was broken up"
 	cont "three years ago."
@@ -250,11 +256,16 @@ TrainerGruntM1WhenTalkText:
 	para "But we continued"
 	line "our activities"
 	cont "underground."
-
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	
+	para "I advise you to be"
+	line "very afraid of"
+	cont "what is to come!"
 	done
+
+	; para "Now you can have"
+	; line "fun watching us"
+	; cont "stir up trouble!"
+	; done
 
 GruntM2SeenText:
 	text "Quit taking SLOW-"
@@ -339,7 +350,7 @@ SlowpokeWellB1F_MapEvents:
 
 	db 9 ; object events
 	object_event 15,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM29, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  5,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerGruntM1, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event  5,  2, SPRITE_PROTON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerProtonWell, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGruntM2, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event 10,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGruntF1, EVENT_SLOWPOKE_WELL_ROCKETS
 	object_event  7,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSlowpokeWithMailScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
