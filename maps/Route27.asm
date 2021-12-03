@@ -67,7 +67,7 @@ TrainerBirdKeeperJose2:
 	opentext
 	checkflag ENGINE_JOSE
 	iftrue .WantsBattle
-	checkflag ENGINE_JOSE_HAS_STAR_PIECE
+	checkflag ENGINE_JOSE_HAS_ICE_STONE
 	iftrue .HasStarPiece
 	checkcellnum PHONE_BIRDKEEPER_JOSE
 	iftrue .NumberAccepted
@@ -127,9 +127,9 @@ TrainerBirdKeeperJose2:
 
 .HasStarPiece:
 	scall .Gift
-	verbosegiveitem STAR_PIECE
+	verbosegiveitem ICE_STONE
 	iffalse .NoRoom
-	clearflag ENGINE_JOSE_HAS_STAR_PIECE
+	clearflag ENGINE_JOSE_HAS_ICE_STONE
 	sjump .NumberAccepted
 
 .NoRoom:

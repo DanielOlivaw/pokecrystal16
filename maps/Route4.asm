@@ -46,11 +46,11 @@ TrainerPicnickerSharon:
 MtMoonSquareSign:
 	jumptext MtMoonSquareSignText
 
-Route4HPUp:
-	itemball HP_UP
+Route4Electirizer:
+	itemball ELECTIRIZER
 
-Route4HiddenUltraBall:
-	hiddenitem ULTRA_BALL, EVENT_ROUTE_4_HIDDEN_ULTRA_BALL
+Route4HiddenHPUp:
+	hiddenitem HP_UP, EVENT_ROUTE_4_HIDDEN_HP_UP
 
 Route4HiddenBigMushroom:
 	hiddenitem BIG_MUSHROOM, EVENT_ROUTE_4_HIDDEN_BIG_MUSHROOM
@@ -132,12 +132,12 @@ Route4_MapEvents:
 
 	db 3 ; bg events
 	bg_event  3,  7, BGEVENT_READ, MtMoonSquareSign
-	bg_event 13,  7, BGEVENT_ITEM, Route4HiddenUltraBall
+	bg_event 32,  3, BGEVENT_ITEM, Route4HiddenHPUp
 	bg_event 14, 15, BGEVENT_ITEM, Route4HiddenBigMushroom
 
 	db 5 ; object events
 	object_event 17,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event  9,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
 	object_event 21,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
-	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
+	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4Electirizer, EVENT_ROUTE_4_ELECTIRIZER
 	tmhmball_event 10,  3, TM_LASER_FOCUS, EVENT_ROUTE_4_TM_LASER_FOCUS

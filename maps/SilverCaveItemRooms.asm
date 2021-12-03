@@ -11,7 +11,7 @@ SilverCaveItemRoomsMaxRevive:
 	itemball MAX_REVIVE
 
 SilverCaveItemRoomsFullRestore:
-	itemball FULL_RESTORE
+	itemball DUBIOUS_DISC
 
 SilverCaveItemRooms_MapEvents:
 	db 0, 0 ; filler

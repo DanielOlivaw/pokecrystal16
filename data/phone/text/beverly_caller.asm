@@ -69,8 +69,8 @@ UnknownText_0x17485b:
 	done
 
 UnknownText_0x174895:
-	text "Pardon?"
-	line "Oh, the NUGGET?"
+	text "Pardon? Oh, the"
+	line "HEART STONE?"
 
 	para "There's no need to"
 	line "hurry. Come see me"

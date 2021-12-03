@@ -13,7 +13,7 @@ RuinsOfAlphAerodactylItemRoomGoldBerry:
 	itemball GOLD_BERRY
 
 RuinsOfAlphAerodactylItemRoomMoonStone:
-	itemball MOON_STONE
+	itemball SUN_STONE
 
 RuinsOfAlphAerodactylItemRoomHealPowder:
 	itemball HEAL_POWDER

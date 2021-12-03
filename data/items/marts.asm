@@ -252,7 +252,7 @@ MartMahogany1:
 	db -1 ; end
 
 MartMahogany2:
-	db 8 ; # items
+	db 11 ; # items
 	db RAGECANDYBAR
 	db HONEY
 	db GREAT_BALL
@@ -260,6 +260,9 @@ MartMahogany2:
 	db HYPER_POTION
 	db SUPER_REPEL
 	db REVIVE
+	db SACHET
+	db WHIPPEDDREAM
+	db BERRY_SWEET
 	db MUSIC_MAIL
 	db -1 ; end
 
@@ -350,9 +353,8 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 5 ; # items
+	db 4 ; # items
 	db HEART_STONE
-	db ICE_STONE
 	db DAWN_STONE
 	db DUSK_STONE
 	db SHINY_STONE

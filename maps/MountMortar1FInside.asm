@@ -41,7 +41,7 @@ MountMortar1FBoulder:
 	jumpstd strengthboulder
 
 MountMortar1FInsideEscapeRope:
-	itemball PRETTY_WING
+	itemball GRIP_CLAW
 
 MountMortar1FInsideMaxRevive:
 	itemball MAX_REVIVE

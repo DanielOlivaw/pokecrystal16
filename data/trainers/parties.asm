@@ -1104,7 +1104,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (12)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 46
-	dw HAWLUCHA
+	dw FARFETCH_D
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (13)
@@ -1120,7 +1120,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
 	db 38
-	dw HAWLUCHA
+	dw FARFETCH_D
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (15)
@@ -1144,8 +1144,8 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (17)
 	db "JOSE@", TRAINERTYPE_MOVES
 	db 50
-	dw HAWLUCHA
-	dw HI_JUMP_KICK, AERIAL_ACE, SWORDS_DANCE, ROOST
+	dw FARFETCH_D
+	dw LEAF_BLADE, ACROBATICS, SWORDS_DANCE, NIGHT_SLASH
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (18)

@@ -204,7 +204,7 @@ TrainerPokefanfBeverly1:
 	loadvar VAR_CALLERID, PHONE_POKEFAN_BEVERLY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_BEVERLY_HAS_NUGGET
+	checkflag ENGINE_BEVERLY_HAS_HEART_STONE
 	iftrue .GiveNugget
 	checkcellnum PHONE_POKEFAN_BEVERLY
 	iftrue .NumberAccepted
@@ -232,7 +232,7 @@ TrainerPokefanfBeverly1:
 	scall .Gift
 	verbosegiveitem HEART_STONE
 	iffalse .NoRoom
-	clearflag ENGINE_BEVERLY_HAS_NUGGET
+	clearflag ENGINE_BEVERLY_HAS_HEART_STONE
 	sjump .NumberAccepted
 
 .NoRoom:

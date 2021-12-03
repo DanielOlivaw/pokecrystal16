@@ -26,7 +26,7 @@ DarkCaveBlackthornEntrancePharmacistScript:
 	end
 
 DarkCaveBlackthornEntranceRevive:
-	itemball REVIVE
+	itemball DUSK_STONE
 
 ; DarkCaveBlackthornEntranceTMSnore:
 	; itemball AWAKENING

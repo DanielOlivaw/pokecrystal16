@@ -2,7 +2,7 @@ JoseAromaText:
 	text "Hey listen, my"
 	line "@"
 	text_ram wStringBuffer4
-	text "'s stick"
+	text "'s leek"
 
 	para "has this really"
 	line "delicious aroma."
@@ -21,7 +21,7 @@ UnknownText_0x174f90:
 	para "You should have"
 	line "seen FARFETCH'D"
 
-	para "wield that stick."
+	para "wield that leek."
 	line "Amazing stuff!"
 	done
 

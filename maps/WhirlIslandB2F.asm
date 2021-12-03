@@ -9,7 +9,7 @@ WhirlIslandB2F_MapScripts:
 	db 0 ; callbacks
 
 WhirlIslandB2FFullRestore:
-	itemball FULL_RESTORE
+	itemball DAWN_STONE
 
 WhirlIslandB2FMaxRevive:
 	itemball MAX_REVIVE
