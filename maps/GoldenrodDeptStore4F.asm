@@ -53,19 +53,25 @@ GoldenrodDeptStore4FBugCatcherText:
 
 GoldenrodDeptStore4FGameboyKidText:
 	text "Some #MON"
-	line "evolve only by"
+	line "evolve by being"
 
-	para "being traded via a"
-	line "Game Link cable."
+	para "traded via a Game"
+	line "Link cable."
 
-	para "I know of four:"
-	line "MACHOKE, KADABRA,"
+	; para "I know of four:"
+	; line "MACHOKE, KADABRA,"
 
-	para "HAUNTER and, um,"
-	line "GRAVELER."
+	; para "HAUNTER and, um,"
+	; line "GRAVELER."
 
-	para "I heard there are"
-	line "others too."
+	; para "I heard there are"
+	; line "others too."
+
+	para "But I heard you"
+	line "can also evolve"
+
+	para "them by using a"
+	line "HEART STONE."
 	done
 
 GoldenrodDeptStore4FDirectoryText:
