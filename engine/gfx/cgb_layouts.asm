@@ -651,7 +651,7 @@ _CGB_TrainerCard:
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld hl, .BadgePalettes
-	ld bc, 8 palettes
+	ld bc, 16 palettes
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
 
