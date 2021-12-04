@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
 	const RUINSOFALPHKABUTOCHAMBER_RECEPTIONIST
-	const RUINSOFALPHKABUTOCHAMBER_SCIENTIST
+	const RUINSOFALPHKABUTOCHAMBER_SCIENTIST_F
 
 RuinsOfAlphKabutoChamber_MapScripts:
 	db 2 ; scene scripts
@@ -95,7 +95,7 @@ RuinsOfAlphKabutoChamberScientistScript:
 	writetext UnknownText_0x588f5
 	waitbutton
 	closetext
-	turnobject RUINSOFALPHKABUTOCHAMBER_SCIENTIST, UP
+	turnobject RUINSOFALPHKABUTOCHAMBER_SCIENTIST_F, UP
 	end
 
 .WallOpen:
@@ -224,10 +224,10 @@ RuinsOfAlphKabutoChamberWallPatternLeftText:
 	line "on the walls…"
 	done
 
-RuinsOfAlphKabutoChamberUnownText:
-; unused
-	text "It's UNOWN text!"
-	done
+; RuinsOfAlphKabutoChamberUnownText:
+;; unused
+	; text "It's UNOWN text!"
+	; done
 
 RuinsOfAlphKabutoChamberWallPatternRightText:
 	text "Patterns appeared"
@@ -275,4 +275,4 @@ RuinsOfAlphKabutoChamber_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphKabutoChamberReceptionistScript, EVENT_RUINS_OF_ALPH_KABUTO_CHAMBER_RECEPTIONIST
-	object_event  3,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphKabutoChamberScientistScript, -1
+	object_event  3,  1, SPRITE_SCIENTIST_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphKabutoChamberScientistScript, -1

@@ -72,3 +72,4 @@ TrainerPicPointers::
 	dba GruntfPic
 	dba MysticalmanPic
 	dba BugManiacPic
+	dba ScientistfPic

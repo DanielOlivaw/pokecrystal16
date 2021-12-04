@@ -44,4 +44,5 @@ FemaleTrainers:
 	db POKEFANF
 	db COOLTRAINERF
 	db ARIANA
+	db SCIENTIST_F
 .End

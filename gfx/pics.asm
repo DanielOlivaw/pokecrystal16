@@ -341,6 +341,7 @@ SECTION "Pics 13", ROMX
 
 OmanyteBackpic:      INCBIN "gfx/pokemon/omanyte/back.2bpp.lz"
 ScientistPic:        INCBIN "gfx/trainers/scientist.2bpp.lz"
+ScientistfPic:       INCBIN "gfx/trainers/scientist_f.2bpp.lz"
 GligarBackpic:       INCBIN "gfx/pokemon/gligar/back.2bpp.lz"
 TyphlosionBackpic:   INCBIN "gfx/pokemon/typhlosion/back.2bpp.lz"
 CharmeleonBackpic:   INCBIN "gfx/pokemon/charmeleon/back.2bpp.lz"

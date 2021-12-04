@@ -814,7 +814,7 @@ SchoolboyGroup:
 	db 51
 	dw SHIFTRY
 	db 51
-	dw AVALUGG
+	dw ABOMASNOW
 	db 51
 	dw DUSCLOPS
 	db -1 ; end
@@ -1513,9 +1513,9 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (16)
 	db "SEAN@", TRAINERTYPE_NORMAL
 	db 44
-	dw AMPHAROS
+	dw FLAREON
 	db 44
-	dw CHANDELURE
+	dw AMPHAROS
 	db 44
 	dw TAUROS
 	db -1 ; end
@@ -2338,6 +2338,12 @@ SkierGroup:
 	dw FROSMOTH
 	db -1 ; end
 
+	next_list_item ; SKIER (3)
+	db "CADY@", TRAINERTYPE_NORMAL
+	db 53
+	dw EISCUE
+	db -1 ; end
+
 	end_list_items
 
 TeacherGroup:
@@ -2499,7 +2505,7 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (12)
 	db "DOUG@", TRAINERTYPE_NORMAL
 	db 52
-	dw BUTTERFREE
+	dw VIVILLON
 	db 50
 	dw DURANT
 	db -1 ; end
@@ -2955,7 +2961,7 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (17)
 	db "CAMERON@", TRAINERTYPE_NORMAL
 	db 54
-	dw EISCUE
+	dw AZUMARILL
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (18)
@@ -3346,7 +3352,7 @@ SuperNerdGroup:
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (12)
-	db "NORTON@", TRAINERTYPE_MOVES
+	db "NORTON@", TRAINERTYPE_NORMAL
 	db 1
 	dw MEW
 	db -1 ; end
@@ -3363,6 +3369,18 @@ SuperNerdGroup:
 	db 25
 	dw SLOWPOKE
 	dw CURSE, WATER_PULSE, YAWN, STRENGTH
+	db -1 ; end
+
+	next_list_item ; SUPER_NERD (15)
+	db "LOWELL@", TRAINERTYPE_NORMAL
+	db 50
+	dw ARCANINE
+	db -1 ; end
+
+	next_list_item ; SUPER_NERD (16)
+	db "WALDO@", TRAINERTYPE_NORMAL
+	db 53
+	dw LARVESTA
 	db -1 ; end
 
 	end_list_items
@@ -3685,7 +3703,7 @@ HikerGroup:
 	db 42
 	dw AGGRON
 	db 40
-	dw WARWOLF
+	dw LAIRON
 	db -1 ; end
 
 	next_list_item ; HIKER (17)
@@ -3946,6 +3964,12 @@ FirebreatherGroup:
 	dw KOFFING
 	db -1 ; end
 
+	next_list_item ; FIREBREATHER (9)
+	db "CARY@", TRAINERTYPE_NORMAL
+	db 53
+	dw TORKOAL
+	db -1 ; end
+
 	end_list_items
 
 JugglerGroup:
@@ -4036,7 +4060,7 @@ BlackbeltGroup:
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (3)
-	db "KENJI@", TRAINERTYPE_MOVES
+	db "KENJI@", TRAINERTYPE_NORMAL
 	db 1
 	dw MEW
 	db -1 ; end
@@ -4930,6 +4954,22 @@ BoarderGroup:
 	dw SANDSHREW_A
 	db -1 ; end
 
+	next_list_item ; BOARDER (4)
+	db "SHAUN@", TRAINERTYPE_NORMAL
+	db 55
+	dw AVALUGG
+	db 50
+	dw DEWGONG
+	db -1 ; end
+
+	next_list_item ; BOARDER (5)
+	db "BRYCE@", TRAINERTYPE_NORMAL
+	db 55
+	dw DEWGONG
+	db 50
+	dw WARWOLF
+	db -1 ; end
+
 	end_list_items
 
 PokefanMGroup:
@@ -5408,36 +5448,71 @@ MysticalmanGroup:
 BugManiacGroup:
 	next_list_item ; BUG_MANIAC (1)
 	db "ABNER@", TRAINERTYPE_NORMAL
-	db 10
-	dw SLOWPOKE
+	db 50
+	dw BUTTERFREE
+	db 50
+	dw BEEDRILL
+	db 50
+	dw PIKACHU
 	db -1 ; end
 
 	next_list_item ; BUG_MANIAC (2)
 	db "ELLIS@", TRAINERTYPE_NORMAL
-	db 24
-	dw DREDNAW
-	db 24
-	dw DREDNAW
+	db 34
+	dw VENIPEDE
+	db 44
+	dw WHIRLIPEDE
+	db 52
+	dw SCOLIPEDE
 	db -1 ; end
 
 	next_list_item ; BUG_MANIAC (3)
 	db "STACEY@", TRAINERTYPE_NORMAL
-	db 26
-	dw KANGASKHAN
+	db 58
+	dw METAPOD
+	db 62
+	dw METAPOD
+	db 66
+	dw METAPOD
 	db -1 ; end
 
 	next_list_item ; BUG_MANIAC (4)
 	db "DION@", TRAINERTYPE_NORMAL
-	db 19
-	dw NIDORINA
-	db 19
-	dw NIDORINO
+	db 50
+	dw ARIADOS
+	db 50
+	dw FORRETRESS
+	db 50
+	dw VIKAVOLT
 	db -1 ; end
 
 	next_list_item ; BUG_MANIAC (5)
 	db "DANE@", TRAINERTYPE_NORMAL
-	db 24
-	dw CROCONAW
+	db 48
+	dw PINSIR
+	db 52
+	dw HERACROSS
+	db -1 ; end
+
+	end_list_items
+
+ScientistFGroup:
+	next_list_item ; SCIENTIST_F (1)
+	db "DANIELLE@", TRAINERTYPE_NORMAL
+	db 50
+	dw CHANDELURE
+	db -1 ; end
+
+	next_list_item ; SCIENTIST_F (2)
+	db "LINDE@", TRAINERTYPE_NORMAL
+	db 50
+	dw TURTONATOR
+	db -1 ; end
+
+	next_list_item ; SCIENTIST_F (3)
+	db "MERLE@", TRAINERTYPE_NORMAL
+	db 53
+	dw MAGCARGO
 	db -1 ; end
 
 	end_list_items

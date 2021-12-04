@@ -72,3 +72,4 @@ TrainerGroups:
 	dba GruntFGroup
 	dba MysticalmanGroup
     dba BugManiacGroup
+    dba ScientistFGroup

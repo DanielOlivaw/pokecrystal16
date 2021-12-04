@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const RUINSOFALPHRESEARCHCENTER_SCIENTIST1
+	const RUINSOFALPHRESEARCHCENTER_SCIENTIST_F
 	const RUINSOFALPHRESEARCHCENTER_SCIENTIST2
-	const RUINSOFALPHRESEARCHCENTER_SCIENTIST3
 
 RuinsOfAlphResearchCenter_MapScripts:
 	db 2 ; scene scripts
@@ -24,12 +24,12 @@ RuinsOfAlphResearchCenter_MapScripts:
 	return
 
 .ShowScientist:
-	moveobject RUINSOFALPHRESEARCHCENTER_SCIENTIST3, 3, 7
-	appear RUINSOFALPHRESEARCHCENTER_SCIENTIST3
+	moveobject RUINSOFALPHRESEARCHCENTER_SCIENTIST2, 3, 7
+	appear RUINSOFALPHRESEARCHCENTER_SCIENTIST2
 	return
 
 .GetUnownDexScript:
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x5926f
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST2, MovementData_0x5926f
 	playsound SFX_BOOT_PC
 	pause 60
 	playsound SFX_SWITCH_POKEMON
@@ -38,12 +38,12 @@ RuinsOfAlphResearchCenter_MapScripts:
 	pause 30
 	playsound SFX_TRANSACTION
 	pause 30
-	turnobject RUINSOFALPHRESEARCHCENTER_SCIENTIST3, DOWN
+	turnobject RUINSOFALPHRESEARCHCENTER_SCIENTIST2, DOWN
 	opentext
 	writetext RuinsOfAlphResearchCenterModifiedDexText
 	waitbutton
 	closetext
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59274
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST2, MovementData_0x59274
 	opentext
 	writetext RuinsOfAlphResearchCenterDexUpgradedText
 	playsound SFX_ITEM
@@ -52,7 +52,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 	writetext RuinsOfAlphResearchCenterScientist3Text
 	waitbutton
 	closetext
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59276
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST2, MovementData_0x59276
 	setscene SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
 	special RestartMapMusic
 	end
@@ -307,35 +307,35 @@ RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
 	cont "kinds of them…"
 	done
 
-RuinsOfAlphResearchCenterUnusedText1:
-; unused
-	text "We think something"
-	line "caused the cryptic"
+; RuinsOfAlphResearchCenterUnusedText1:
+;; unused
+	; text "We think something"
+	; line "caused the cryptic"
 
-	para "patterns to appear"
-	line "in the RUINS."
+	; para "patterns to appear"
+	; line "in the RUINS."
 
-	para "We've focused our"
-	line "studies on that."
-	done
+	; para "We've focused our"
+	; line "studies on that."
+	; done
 
-RuinsOfAlphResearchCenterUnusedText2:
-; unused
-	text "According to my"
-	line "research…"
+; RuinsOfAlphResearchCenterUnusedText2:
+;; unused
+	; text "According to my"
+	; line "research…"
 
-	para "Those mysterious"
-	line "patterns appeared"
+	; para "Those mysterious"
+	; line "patterns appeared"
 
-	para "when the #COM"
-	line "CENTER was built."
+	; para "when the #COM"
+	; line "CENTER was built."
 
-	para "It must mean that"
-	line "radio waves have"
+	; para "It must mean that"
+	; line "radio waves have"
 
-	para "some sort of a"
-	line "link…"
-	done
+	; para "some sort of a"
+	; line "link…"
+	; done
 
 RuinsOfAlphResearchCenterScientist2Text_GotAllUnown:
 	text "Why did those"
@@ -407,5 +407,5 @@ RuinsOfAlphResearchCenter_MapEvents:
 
 	db 3 ; object events
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist1Script, -1
-	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist2Script, -1
+	object_event  5,  2, SPRITE_SCIENTIST_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist2Script, -1
 	object_event  2,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist3Script, EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST

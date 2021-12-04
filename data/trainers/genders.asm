@@ -71,3 +71,4 @@ BTTrainerClassGenders:
 	db MALE   ; OFFICER
 	db FEMALE ; GRUNTF
     db MALE   ; BUG_MANIAC
+	db FEMALE ; SCIENTISTF

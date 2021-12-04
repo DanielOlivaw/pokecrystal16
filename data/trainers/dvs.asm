@@ -71,3 +71,4 @@ TrainerClassDVs:
 	dn  7, 14, 10,  9 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; BUG_MANIAC
+	dn  7,  8,  8,  9 ; SCIENTIST_F

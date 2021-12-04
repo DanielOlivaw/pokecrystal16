@@ -70,3 +70,4 @@ TrainerClassNames::
 	db "TEAM ROCKET@"
 	db "MYSTERY MAN@"
 	db "BUG MANIAC@"
+	db "SCIENTIST@"

@@ -319,6 +319,7 @@ KRIS EQU __enum__
 	trainerclass SKIER ; 21
 	const ROXANNE
 	const CLARISSA
+	const CADY
 
 	trainerclass TEACHER ; 22
 	const COLETTE
@@ -450,6 +451,8 @@ KRIS EQU __enum__
 	const NORTON
 	const HUGH
 	const MARKUS
+	const LOWELL
+	const WALDO
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL2_1_CHIKORITA
@@ -515,6 +518,7 @@ KRIS EQU __enum__
 	const WALT
 	const RAY
 	const LYLE
+	const CARY
 
 	trainerclass JUGGLER ; 31
 	const IRWIN1
@@ -643,6 +647,8 @@ KRIS EQU __enum__
 	const RONALD
 	const BRAD
 	const DOUGLAS
+	const SHAUN
+	const BRYCE
 
 	trainerclass POKEFANM ; 3b
 	const WILLIAM
@@ -714,5 +720,10 @@ KRIS EQU __enum__
 	const STACEY
 	const DION
 	const DANE
+	
+	trainerclass SCIENTIST_F
+	const DANIELLE
+	const LINDE
+	const MERLE
 
 NUM_TRAINER_CLASSES EQU __enum__

@@ -7,6 +7,7 @@ Team Rocket Executive overworld & battle sprites: SirWhibbles
 Blaine, Blue, Bugsy, Chuck, Clair, Janine, Lt. Surge, Morty, & Whitney battle sprites: Solo993
 Karen & Pryce battle sprites: Bronzeswagger
 Twins battle sprite: MajinCubyan
+Female scientist battle sprite: Solo993
 Farfetch'd overworld sprite: Rangi
 
 Kanto badges: DarioEMeloD

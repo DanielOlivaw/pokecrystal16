@@ -112,4 +112,5 @@ OverworldSprites:
 	overworld_sprite ProtonSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite PetrelSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite ArianaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite ScientistFSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FarfetchDSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
