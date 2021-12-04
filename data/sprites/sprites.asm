@@ -109,6 +109,7 @@ OverworldSprites:
 	overworld_sprite RaikouSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite StandingYoungsterSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite ArcherSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite ArianaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite ProtonSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite PetrelSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite ArianaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite FarfetchDSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN

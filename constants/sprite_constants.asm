@@ -108,6 +108,7 @@
 	const SPRITE_PROTON ; 68
 	const SPRITE_PETREL ; 69
 	const SPRITE_ARIANA ; 70
+	const SPRITE_FARFETCHD ; 71
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
