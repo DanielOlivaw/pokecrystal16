@@ -32,6 +32,10 @@ SeafoamGymBlaineScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_VOLCANOBADGE
+	writetext BlaineVolcanoBadgeText
+	buttonsound
+	verbosegivetmhm TM_FLAMETHROWER
+	setevent EVENT_GOT_TM35_FLAMETHROWER
 	writetext BlaineAfterBattleText
 	waitbutton
 	closetext
@@ -61,28 +65,47 @@ SeafoamGymGuyScript:
 	end
 
 BlaineIntroText:
-	text "BLAINE: Waaah!"
+	text "BLAINE: Hey, you!"
 
-	para "My GYM in CINNABAR"
-	line "burned down."
+	para "My GYM on CINNABAR"
+	line "ISLAND was burned"
 
-	para "My fire-breathing"
-	line "#MON and I are"
+	para "down by the"
+	line "eruption!"
 
-	para "homeless because"
-	line "of the volcano."
+	para "But I will not"
+	line "give up! Take a"
+	cont "look at this cave."
 
-	para "Waaah!"
+	para "We have turned it"
+	line "into a GYM, and I"
 
-	para "But I'm back in"
-	line "business as a GYM"
+	para "am still acting as"
+	line "a GYM LEADER!"
 
-	para "LEADER here in"
-	line "this cave."
+	para "I will give you"
+	line "the GYM BADGE"
 
-	para "If you can beat"
-	line "me, I'll give you"
-	cont "a BADGE."
+	para "if you manage to"
+	line "defeat me!"
+
+	; para "My fire-breathing"
+	; line "#MON and I are"
+
+	; para "homeless because"
+	; line "of the volcano."
+
+	; para "Waaah!"
+
+	; para "But I'm back in"
+	; line "business as a GYM"
+
+	; para "LEADER here in"
+	; line "this cave."
+
+	; para "If you can beat"
+	; line "me, I'll give you"
+	; cont "a BADGE."
 
 	para "Ha! You'd better"
 	line "have BURN HEAL!"
@@ -92,14 +115,25 @@ BlaineWinLossText:
 	text "BLAINE: Awesome."
 	line "I've burned out…"
 
-	para "You've earned"
-	line "VOLCANOBADGE!"
+	para "Take this VOLCANO"
+	line "BADGE!"
 	done
 
 ReceivedVolcanoBadgeText:
 	text "<PLAYER> received"
-	line "VOLCANOBADGE."
+	line "the VOLCANO BADGE."
 	done
+
+BlaineVolcanoBadgeText:
+	text "BLAINE: Here, I"
+	line "will give you"
+	cont "this, too."
+
+	para "It's called"
+	line "FLAMETHROWER!"
+
+	para "It's a red-hot"
+	line "FIRE-type move!"
 
 BlaineAfterBattleText:
 	text "BLAINE: I did lose"

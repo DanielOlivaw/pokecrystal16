@@ -143,16 +143,16 @@ FalknerWinLossText:
 
 	para "It's the official"
 	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	cont "ZEPHYR BADGE."
 	done
 
 ReceivedZephyrBadgeText:
 	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	line "the ZEPHYR BADGE."
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
+	text "The ZEPHYR BADGE"
 	line "raises the attack"
 	cont "power of #MON."
 

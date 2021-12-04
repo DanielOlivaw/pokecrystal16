@@ -32,6 +32,10 @@ VermilionGymSurgeScript:
 	waitsfx
 	setflag ENGINE_THUNDERBADGE
 	writetext LtSurgeThunderBadgeText
+	buttonsound
+	verbosegivetmhm TM_THUNDERBOLT
+	setevent EVENT_GOT_TM24_THUNDERBOLT
+	writetext LtSurgeTMThunderboltText
 	waitbutton
 	closetext
 	end
@@ -121,25 +125,25 @@ LtSurgeIntroText:
 	line "the battlefield."
 
 	para "I'll zap you just"
-	line "like I did my"
-	cont "enemies in war!"
+	line "like I do all my"
+	cont "enemies in battle!"
 	done
 
 LtSurgeWinLossText:
-	text "SURGE: Arrrgh!"
+	text "SURGE: Aaargh!"
 	line "You are strong!"
 
 	para "OK, kid. You get"
-	line "THUNDERBADGE!"
+	line "the THUNDER BADGE!"
 	done
 
 ReceivedThunderBadgeText:
 	text "<PLAYER> received"
-	line "THUNDERBADGE."
+	line "the THUNDER BADGE."
 	done
 
 LtSurgeThunderBadgeText:
-	text "SURGE: THUNDER-"
+	text "SURGE: The THUNDER"
 	line "BADGE increases"
 	cont "#MON's speed. "
 
@@ -148,6 +152,19 @@ LtSurgeThunderBadgeText:
 
 	para "me. You wear it"
 	line "proudly, hear?"
+	
+	para "There is something"
+	line "else. Here is a"
+	cont "great TM for you!"
+	done
+
+LtSurgeTMThunderboltText:
+	text "That TM contains"
+	line "THUNDERBOLT…"
+	cont "Zzzap!"
+	
+	para "Use it to go like"
+	line "lightning!"
 	done
 
 LtSurgeFightDoneText:

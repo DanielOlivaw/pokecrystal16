@@ -48,7 +48,7 @@ FuchsiaGymJanineScript:
 	iftrue .AfterTM
 	writetext JanineText_ToxicSpeech
 	buttonsound
-	verbosegivetmhm TM_TOXIC
+	verbosegivetmhm TM_POISON_JAB
 	iffalse .AfterTM
 	setevent EVENT_GOT_TM06_TOXIC
 .AfterTM:
@@ -248,17 +248,30 @@ JanineText_DisappointYou:
 	done
 
 JanineText_ToughOne:
-	text "JANINE: You're a"
-	line "tough one. You"
+	text "JANINE: I see…"
+	line "You have defeated"
+
+	para "KOGA, my father"
+	line "and a member of"
+
+	para "the Elite Four, to"
+	line "come here."
+
+	para "No wonder you are"
+	line "strong! You've"
 	cont "definitely won…"
 
-	para "Here's SOULBADGE."
-	line "Take it."
+	; text "JANINE: You're a"
+	; line "tough one. You"
+	; cont "definitely won…"
+
+	para "Here's the SOUL"
+	line "BADGE. Take it."
 	done
 
 Text_ReceivedSoulBadge:
 	text "<PLAYER> received"
-	line "SOULBADGE."
+	line "the SOUL BADGE."
 	done
 
 JanineText_ToxicSpeech:
@@ -266,11 +279,10 @@ JanineText_ToxicSpeech:
 	line "tough! I have a"
 	cont "special gift!"
 
-	para "It's TOXIC, a pow-"
-	line "erful poison that"
-
-	para "steadily saps the"
-	line "victim's HP."
+	para "It's POISON JAB, a"
+	line "powerful POISON-"
+	cont "type move that may"
+	cont "poison its victim."
 	done
 
 JanineText_ApplyMyself:
@@ -281,8 +293,10 @@ JanineText_ApplyMyself:
 	line "my skills."
 
 	para "I want to become"
-	line "better than both"
-	cont "Father and you!"
+	line "much better than"
+
+	para "both my father and"
+	line "you!"
 	done
 
 LassAliceBeforeText:

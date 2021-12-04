@@ -34,6 +34,10 @@ SaffronGymSabrinaScript:
 	waitsfx
 	setflag ENGINE_MARSHBADGE
 	writetext SabrinaMarshBadgeText
+	buttonsound
+	verbosegivetmhm TM_CALM_MIND
+	setevent EVENT_GOT_TM04_CALM_MIND
+	writetext SabrinaCalmMindText
 	waitbutton
 	closetext
 	end
@@ -153,20 +157,30 @@ SabrinaWinLossText:
 
 	para "OK, you win. You"
 	line "earned yourself"
-	cont "MARSHBADGE."
+	cont "the MARSH BADGE."
 	done
 
 ReceivedMarshBadgeText:
 	text "<PLAYER> received"
-	line "MARSHBADGE."
+	line "the MARSH BADGE."
 	done
 
 SabrinaMarshBadgeText:
-	text "SABRINA: MARSH-"
+	text "SABRINA: The MARSH"
 	line "BADGE draws out"
 
 	para "your subliminal"
 	line "powers…"
+	
+	para "As will this TM."
+	done
+
+SabrinaCalmMindText:
+	text "TM04 is CALM MIND."
+	line "It makes the #-"
+	cont "MON concentrate to"
+	cont "raise both SPCL."
+	cont "ATK and SPCL.DEF."
 
 	para "Although I failed"
 	line "to accurately pre-"

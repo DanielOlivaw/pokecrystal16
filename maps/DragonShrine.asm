@@ -623,25 +623,26 @@ DragonShrineIUnderstandText:
 
 DragonShrineHereRisingBadgeText:
 	text "Here, this is the"
-	line "RISINGBADGE…"
+	line "RISING BADGE…"
 
 	para "Hurry up! Take it!"
 	done
 
 DragonShrinePlayerReceivedRisingBadgeText:
 	text "<PLAYER> received"
-	line "RISINGBADGE."
+	line "the RISING BADGE."
 	done
 
 DragonShrineRisingBadgeExplanationText:
-	text "With RISINGBADGE,"
-	line "all #MON will"
+	text "With the RISING"
+	line "BADGE, all #MON"
 
-	para "recognize you as a"
-	line "trainer and obey"
+	para "will recognize you"
+	line "as a trainer and"
 
-	para "your every command"
-	line "without question."
+	para "obey your every"
+	line "command without"
+	cont "question."
 	done
 
 	; text "RISINGBADGE will"

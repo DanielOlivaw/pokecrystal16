@@ -77,6 +77,12 @@ CeruleanGymMistyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
+	writetext MistyCascadeBadgeText
+	buttonsound
+	verbosegivetmhm TM_SCALD
+	setevent EVENT_GOT_TM55_SCALD
+	writetext MistyTMScaldText
+	buttonsound
 .FightDone:
 	writetext MistyFightDoneText
 	waitbutton
@@ -262,12 +268,28 @@ MistyWinLossText:
 	line "you are skilled…"
 
 	para "Here you go. It's"
-	line "CASCADEBADGE."
+	line "the CASCADE BADGE."
 	done
 
 ReceivedCascadeBadgeText:
 	text "<PLAYER> received"
-	line "CASCADEBADGE."
+	line "the CASCADE BADGE."
+	done
+	
+MistyCascadeBadgeText:
+	text "MISTY: Here is"
+	line "another memento"
+	cont "from this battle."
+	
+	para "Take it!"
+	done
+
+MistyTMScaldText:
+	text "It contains the"
+	line "move SCALD."
+	
+	para "It can sometimes"
+	line "burn your foe."
 	done
 
 MistyFightDoneText:

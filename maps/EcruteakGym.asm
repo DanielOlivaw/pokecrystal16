@@ -228,11 +228,11 @@ MortyWinLossText:
 
 Text_ReceivedFogBadge:
 	text "<PLAYER> received"
-	line "FOGBADGE."
+	line "the FOG BADGE."
 	done
 
 MortyText_FogBadgeSpeech:
-	text "By having FOG-"
+	text "By having the FOG"
 	line "BADGE, #MON up"
 
 	para "to L50 will obey"

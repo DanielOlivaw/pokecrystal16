@@ -225,20 +225,20 @@ WhitneyWhatDoYouWantText:
 
 	para "Oh, right."
 	line "I forgot. Here's"
-	cont "PLAINBADGE."
+	cont "the PLAIN BADGE."
 	done
 
 PlayerReceivedPlainBadgeText:
 	text "<PLAYER> received"
-	line "PLAINBADGE."
+	line "the PLAIN BADGE."
 	done
 
 WhitneyPlainBadgeText:
-	text "PLAINBADGE lets"
-	line "your #MON use"
+	text "The PLAIN BADGE"
+	line "lets your #MON"
 
-	para "STRENGTH outside"
-	line "of battle."
+	para "use STRENGTH"
+	line "outside of battle."
 
 	para "It also boosts"
 	line "your #MON's"

@@ -28,7 +28,9 @@ PewterGymBrockScript:
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
 	writetext BrockBoulderBadgeText
-	waitbutton
+	buttonsound
+	verbosegivetmhm TM_ROCK_SLIDE
+	setevent EVENT_GOT_TM80_ROCK_SLIDE
 	closetext
 	end
 
@@ -113,7 +115,7 @@ BrockWinLossText:
 
 ReceivedBoulderBadgeText:
 	text "<PLAYER> received"
-	line "BOULDERBADGE."
+	line "the BOULDER BADGE."
 	done
 
 BrockBoulderBadgeText:
@@ -124,11 +126,18 @@ BrockBoulderBadgeText:
 	line "though I am a bit"
 	cont "upset."
 
-	para "That BOULDERBADGE"
+	para "That BOULDER BADGE"
 	line "will make your"
 
 	para "#MON even more"
-	line "powerful."
+	line "powerful. I'll"
+	
+	para "give you the move"
+	line "ROCK SLIDE, too."
+	
+	para "It can sometimes"
+	line "cause your foe"
+	cont "to flinch."
 	done
 
 BrockFightDoneText:

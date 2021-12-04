@@ -25,6 +25,10 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
+	writetext LeaderBlueEarthBadgeText
+	buttonsound
+	verbosegivetmhm TM_TRICK_ROOM
+	setevent EVENT_GOT_TM92_TRICK_ROOM
 	writetext LeaderBlueAfterText
 	waitbutton
 	closetext
@@ -77,9 +81,13 @@ LeaderBlueBeforeText:
 	line "you conquered all"
 	cont "the GYMS in JOHTO?"
 
-	para "Heh! JOHTO's GYMS"
-	line "must be pretty"
-	cont "pathetic then."
+	para "Hahaha! Heh!"
+	line "JOHTO's GYMS are"
+	cont "that pathetic?"
+
+	; para "Heh! JOHTO's GYMS"
+	; line "must be pretty"
+	; cont "pathetic then."
 
 	para "Hey, don't worry"
 	line "about it."
@@ -95,7 +103,7 @@ LeaderBlueBeforeText:
 	done
 
 LeaderBlueWinText:
-	text "BLUE: What?"
+	text "BLUE: No way!"
 
 	para "How the heck did I"
 	line "lose to you?"
@@ -103,17 +111,38 @@ LeaderBlueWinText:
 	para "…"
 
 	para "Tch, all right…"
-	line "Here, take this--"
-	cont "it's EARTHBADGE."
+	line "Here, take this."
+
+	para "It's the EARTH"
+	line "BADGE."
 	done
 
 Text_ReceivedEarthBadge:
 	text "<PLAYER> received"
-	line "EARTHBADGE."
+	line "the EARTH BADGE."
+	done
+	
+LeaderBlueEarthBadgeText:
+	text "BLUE: Here! Take"
+	line "this too!"
 	done
 
 LeaderBlueAfterText:
-	text "BLUE: …"
+	text "BLUE: It contains"
+	line "TRICK ROOM!"
+
+	para "It allows slower"
+	line "#MON to move"
+
+	para "before faster"
+	line "#MON for a"
+	cont "while."
+
+	para "It's a very tricky"
+	line "move, isn't it?"
+	cont "Hence the name!"
+
+	para "…"
 
 	para "All right, I was"
 	line "wrong. You're the"

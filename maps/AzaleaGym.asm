@@ -179,13 +179,13 @@ BugsyText_ResearchIncomplete:
 
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"
-	line "HIVEBADGE."
+	line "the HIVE BADGE."
 	done
 
 BugsyText_HiveBadgeSpeech:
 	text "Do you know the"
-	line "benefits of HIVE-"
-	cont "BADGE?"
+	line "benefits of the"
+	cont "HIVE BADGE?"
 
 	para "If you have it,"
 	line "#MON up to L30"
