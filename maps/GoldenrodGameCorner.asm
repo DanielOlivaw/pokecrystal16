@@ -1,11 +1,11 @@
-GOLDENRODGAMECORNER_TM14_COINS   EQU 3500
-GOLDENRODGAMECORNER_TM25_COINS   EQU 3500
-GOLDENRODGAMECORNER_TM38_COINS   EQU 3500
-GOLDENRODGAMECORNER_TM75_COINS   EQU 2000
-GOLDENRODGAMECORNER_TM90_COINS   EQU 1000
-GOLDENRODGAMECORNER_ABRA_COINS   EQU 100
-GOLDENRODGAMECORNER_CUBONE_COINS EQU 800
-GOLDENRODGAMECORNER_ROTOM_COINS  EQU 1500
+GOLDENRODGAMECORNER_TM14_COINS EQU 3500
+GOLDENRODGAMECORNER_TM25_COINS EQU 3500
+GOLDENRODGAMECORNER_TM38_COINS EQU 3500
+GOLDENRODGAMECORNER_TM75_COINS EQU 2000
+GOLDENRODGAMECORNER_TM90_COINS EQU 1000
+GOLDENRODGAMECORNER_ABRA_COINS     EQU 100
+GOLDENRODGAMECORNER_CUBONE_COINS   EQU 800
+GOLDENRODGAMECORNER_LARVITAR_COINS EQU 2100
 
 	object_const_def ; object_event constants
 	const GOLDENRODGAMECORNER_CLERK
@@ -215,7 +215,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal 1, .Abra
 	ifequal 2, .Cubone
-	ifequal 3, .Rotom
+	ifequal 3, .Larvitar
 	sjump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
 .Abra:
@@ -254,22 +254,22 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	takecoins GOLDENRODGAMECORNER_CUBONE_COINS
 	sjump .loop
 
-.Rotom:
-	checkcoins GOLDENRODGAMECORNER_ROTOM_COINS
+.Larvitar:
+	checkcoins GOLDENRODGAMECORNER_LARVITAR_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	getmonname STRING_BUFFER_3, ROTOM
+	getmonname STRING_BUFFER_3, LARVITAR
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	loadmonindex 3, ROTOM
+	loadmonindex 3, LARVITAR
 	special GameCornerPrizeMonCheckDex
-	givepoke ROTOM, 15
-	takecoins GOLDENRODGAMECORNER_ROTOM_COINS
+	givepoke LARVITAR, 15
+	takecoins GOLDENRODGAMECORNER_LARVITAR_COINS
 	sjump .loop
 
 .MenuHeader:
@@ -283,7 +283,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "ABRA        100@"
 	db "CUBONE      800@"
-	db "ROTOM      1500@"
+	db "LARVITAR   2100@"
 	db "CANCEL@"
 
 GoldenrodGameCornerPharmacistScript:
