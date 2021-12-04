@@ -816,7 +816,7 @@ SchoolboyGroup:
 	db 51
 	dw AVALUGG
 	db 51
-	dw DUSKNOIR
+	dw DUSCLOPS
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (6)
@@ -1553,6 +1553,35 @@ CooltrainerMGroup:
 	dw SCARY_FACE, CRUNCH, DRAGON_CLAW, HEADBUTT
 	db -1 ; end
 
+	next_list_item ; COOLTRAINERM (21)
+	db "BONITA@", TRAINERTYPE_MOVES
+	db 50
+	dw KLEFKI
+	dw SPIKES, METAL_SOUND, LIGHT_SCREEN, FLASH_CANNON
+	db 50
+	dw DRAKLOAK
+	dw INFESTATION, U_TURN, DRAGON_PULSE, QUICK_ATTACK
+	db 52
+	dw SUDOWOODO
+	dw HAMMER_ARM, STONE_EDGE, COUNTER, SUCKER_PUNCH
+	db 53
+	dw EXPLOUD
+	dw REST, HYPER_VOICE, CRUNCH, SLEEP_TALK
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERM (22)
+	db "IDA@", TRAINERTYPE_MOVES
+	db 52
+	dw PORYGON2
+	dw RECOVER, TRI_ATTACK, DISCHARGE, SIGNAL_BEAM
+	db 50
+	dw GOLURK
+	dw HAMMER_ARM, HEAVY_SLAM, PHANTOM_FORCE, IRON_DEFENSE
+	db 52
+	dw TAUROS
+	dw PAYBACK, ZEN_HEADBUTT, DOUBLE_EDGE, SWAGGER
+	db -1 ; end
+
 	end_list_items
 
 CooltrainerFGroup:
@@ -1756,6 +1785,19 @@ CooltrainerFGroup:
 	db 35
 	dw HAKAMO_O
 	dw DRAGON_TAIL, SCREECH, SKY_UPPERCUT, SCALE_SHOT
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERF (22)
+	db "ELAN@", TRAINERTYPE_MOVES
+	db 50
+	dw AZUMARILL
+	dw SUPERPOWER, RAIN_DANCE, BOUNCY_TAIL, AQUA_TAIL
+	db 53
+	dw LICKILICKY
+	dw THUNDER, POWER_WHIP, ME_FIRST, KNOCK_OFF
+	db 50
+	dw SLOWKING
+	dw PSYCHIC_M, NASTY_PLOT, YAWN, SCALD
 	db -1 ; end
 
 	end_list_items
@@ -2913,7 +2955,7 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (17)
 	db "CAMERON@", TRAINERTYPE_NORMAL
 	db 54
-	dw AZUMARILL
+	dw EISCUE
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (18)
