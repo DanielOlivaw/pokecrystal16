@@ -14,6 +14,15 @@ BattleCommand_FuryCutter:
 
 	inc [hl]
 
+; Echoed Voice has a different power ramp
+	push hl
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
+	ld bc, ECHOED_VOICE
+	call CompareMove2
+	pop hl
+	jr z, .echoedvoice
+
 ; Damage capped at 3 turns' worth (4x).
 	ld a, [hl]
 	ld b, a
@@ -35,6 +44,36 @@ BattleCommand_FuryCutter:
 ; No overflow
 	ld a, $ff
 	ld [hli], a
+	ld [hl], a
+	ret
+
+.echoedvoice
+; Damage capped at 5 turns' worth (200 power).
+	ld a, [hl]
+	ld b, a
+	cp 6
+	jr c, .boostpower
+	ld b, 5
+
+.boostpower
+; Multiply base Echoed Voice damage by number of consecutive turns
+	xor a
+	ldh [hMultiplicand + 0], a
+	ld hl, wCurDamage
+	ld a, [hli]
+	ldh [hMultiplicand + 1], a
+	ld a, [hl]
+	ldh [hMultiplicand + 2], a
+
+	ld a, b
+	ldh [hMultiplier], a
+	call Multiply
+
+; Load result as current power
+	ldh a, [hProduct + 2]
+	ld hl, wCurDamage
+	ld [hli], a
+	ldh a, [hProduct + 3]
 	ld [hl], a
 	ret
 
