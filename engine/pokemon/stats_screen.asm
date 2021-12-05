@@ -837,13 +837,13 @@ StatsScreen_LoadGFX:
 	ld de, .AtLevelStr
 	hlcoord 0, 10
 	call PlaceString
-	ret ;jp PrintCharacteristics
+	jp PrintCharacteristics
 
 .UnknownLevel
 	ld de, .TradeStr
 	hlcoord 0, 10
 	call PlaceString
-	ret ;jp PrintCharacteristics
+	jp PrintCharacteristics
 
 .MetStr
 	db "Met@"
@@ -871,6 +871,98 @@ IDNoString:
 
 OTString:
 	db "OT/@"
+	
+PrintCharacteristics:
+	; b = value of best DV, c = index of best DV
+	ld hl, wTempMonDVs
+	; Atk
+	ld c, 1
+	ld a, [hl]
+	and $f
+	ld b, a
+	; HP
+	ld a, [hli]
+	swap a
+	and $f
+	cp b
+	jr z, .atk_beats_hp ; tie
+	jr c, .atk_beats_hp
+	ld c, 0
+	ld b, a
+.atk_beats_hp
+	; Spd
+	ld a, [hl]
+	and $f
+	cp b
+	jr z, .last_beats_spd ; tie
+	jr c, .last_beats_spd
+	ld c, 5
+	ld b, a
+.last_beats_spd
+	; Def
+	ld a, [hli]
+	swap a
+	and $f
+	cp b
+	jr z, .last_beats_def ; tie
+	jr c, .last_beats_def
+	ld c, 2
+	ld b, a
+.last_beats_def
+	; SDf
+	ld a, [hl]
+	and $f
+	cp b
+	jr z, .last_beats_sdf ; tie
+	jr c, .last_beats_sdf
+	ld c, 4
+	ld b, a
+.last_beats_sdf
+	; SAt
+	ld a, [hl]
+	swap a
+	and $f
+	cp b
+	jr z, .last_beats_sat ; tie
+	jr c, .last_beats_sat
+	ld c, 3
+	ld b, a
+.last_beats_sat
+
+; DVs are 0-15, but Gen 3+ IVs are 0-31.
+; Stats are calculated so that a DV of N acts like an IV of 2*N+1.
+; To keep characteristics consistent with the apparent IV values,
+; this conversion is actually done.
+	ld a, b
+	add b
+	inc a
+	ld b, a
+
+	; a = 5 * c + b % 5
+	ld a, b
+.mod_5
+	cp 5
+	jr c, .modded_5
+	sub 5
+	jr .mod_5
+.modded_5
+	ld b, a
+	ld a, 5
+	call SimpleMultiply
+	add b
+
+	ld l, a
+	ld h, 0
+	ld bc, Characteristics
+	add hl, hl
+	add hl, bc
+	ld a, [hli]
+	ld d, [hl]
+	ld e, a
+	hlcoord 0, 14
+	jp PlaceString
+
+INCLUDE "data/characteristics.asm"
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
