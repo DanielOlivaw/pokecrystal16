@@ -2127,7 +2127,6 @@ BattleCommand_CheckHit:
 	ld a, GRASS
 	call CheckIfTargetIsType
 	ret nz
-.PowderSporeMoves_GrassType
 	ld hl, .PowderSporeMoveList
 	jr .check_move_in_list
 

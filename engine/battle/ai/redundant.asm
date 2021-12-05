@@ -15,6 +15,8 @@ AI_Redundant:
 
 .Moves:
 	dbw EFFECT_SLEEP,         .Sleep
+	dbw EFFECT_PARALYZE,      .Paralyze
+	dbw EFFECT_BURN,          .Burn
 	dbw EFFECT_DREAM_EATER,   .DreamEater
 	dbw EFFECT_HEAL,          .Heal
 	dbw EFFECT_CONFUSE,       .Confuse
@@ -46,6 +48,7 @@ AI_Redundant:
 	dbw EFFECT_SYNCHRONOISE,     .Synchronoise
 	dbw EFFECT_SHEER_COLD,       .SheerCold
 	dbw EFFECT_VENOM_DRENCH,     .VenomDrench
+	dbw EFFECT_POWDER,           .Powder
 	dbw EFFECT_STATUS_SELF,      .FindMoveFar ; TEATIME, OCTOLOCK, FAIRY_LOCK, WISH, CULTIVATE, WEATHERVANE, SWALLOW, REFRESH, MAGNET_RISE, AQUA_RING, LUCKY_CHANT, INGRAIN, BLOCK, STOCKPILE, MISTY_TERRAIN, SPIKES, TOXIC_SPIKES, STEALTH_ROCK, STICKY_WEB, AURORA_VEIL, HAIL, LIGHT_SCREEN, REFLECT, SUBSTITUTE, MEAN_LOOK, PERISH_SONG, SANDSTORM, SUNNY_DAY, RAIN_DANCE, SAFEGUARD, FOCUS_ENERGY, MIST
 	dbw EFFECT_STATUS_OPP,       .FindMoveFar ; MAGIC_POWDER, SOAK, TRICK, SWITCHEROO, LEECH_SEED, NIGHTMARE, ATTRACT
 	dbw EFFECT_STATUS_OPP_ACC,   .FindMoveFar ; PURIFY
@@ -166,8 +169,8 @@ AI_Redundant:
 .SleepTalk:
 	ld a, [wEnemyMonStatus]
 	and SLP
-	jr z, .Redundant
-	jr .NotRedundant
+	jp z, .Redundant
+	jp .NotRedundant
 
 .Foresight:
 	ld a, [wPlayerSubStatus1]
@@ -179,6 +182,28 @@ AI_Redundant:
 	bit SUBSTATUS_UPROAR, a
 	ret
 
+.Paralyze:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp ELECTRIC
+	jp z, .Redundant
+	ld a, [hl]
+	cp ELECTRIC
+	jp z, .Redundant
+	jp .NotRedundant
+
+.Burn:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp FIRE
+	jr z, .Redundant
+	ld a, [hl]
+	cp FIRE
+	jr z, .Redundant
+	jr .NotRedundant
+
 .DreamEater:
 	ld a, [wBattleMonStatus]
 	and SLP
@@ -188,6 +213,17 @@ AI_Redundant:
 .VenomDrench:
 	ld hl, wBattleMonStatus
 	bit PSN, [hl]
+	jr z, .Redundant
+	jr .NotRedundant
+
+.Powder:
+	ld hl, wBattleMonType1
+	ld a, [hl]
+	inc hl
+	cp GRASS
+	jr z, .Redundant
+	ld a, [hl]
+	cp GRASS
 	jr z, .Redundant
 	jr .NotRedundant
 
