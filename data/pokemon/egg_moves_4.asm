@@ -110,6 +110,7 @@ TurtwigEggMoves:
 	dw SWALLOW
 	dw THRASH
 	dw TICKLE
+	dw ABSORB
 	dw -1 ; end
 
 ChimcharEggMoves:
@@ -123,6 +124,7 @@ ChimcharEggMoves:
 	dw HEAT_WAVE
 	dw POWER_UP_PUNCH
 	dw SUBMISSION
+	dw FEINT
 	dw -1 ; end
 
 PiplupEggMoves:
@@ -138,6 +140,7 @@ PiplupEggMoves:
 	dw SNORE
 	dw SUPERSONIC
 	dw YAWN
+	dw BIDE
 	dw -1 ; end
 
 StarlyEggMoves:
@@ -222,7 +225,7 @@ ShieldonEggMoves:
 
 PachirisuEggMoves:
 	dw BOUNCY_TAIL
-	dw BABY_DOLL_EYES
+	dw BIDE
 	dw BITE
 	dw CHARGE
 	dw COVET

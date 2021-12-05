@@ -101,7 +101,7 @@ TurtwigEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, WITHDRAW
-	dbw 6, ABSORB
+	dbw 6, LEAFAGE
 	dbw 9, GROWTH
 	dbw 12, RAZOR_LEAF
 	dbw 15, BITE
@@ -120,7 +120,7 @@ GrotleEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, WITHDRAW
-	dbw 6, ABSORB
+	dbw 6, LEAFAGE
 	dbw 9, GROWTH
 	dbw 12, RAZOR_LEAF
 	dbw 15, BITE
@@ -141,7 +141,7 @@ TorterraEvosAttacks:
 	dbw 1, CULTIVATE
 	dbw 1, TACKLE
 	dbw 1, WITHDRAW
-	dbw 6, ABSORB
+	dbw 6, LEAFAGE
 	dbw 9, GROWTH
 	dbw 12, RAZOR_LEAF
 	dbw 15, BITE
@@ -165,7 +165,7 @@ ChimcharEvosAttacks:
 	dbw 6, EMBER
 	dbw 9, FOCUS_ENERGY
 	dbw 12, FURY_SWIPES
-	dbw 15, FEINT
+	dbw 15, POWER_UP_PUNCH
 	dbw 18, FLAME_WHEEL
 	dbw 21, FIRE_SPIN
 	dbw 24, FACADE
@@ -188,7 +188,7 @@ MonfernoEvosAttacks:
 	dbw 9, FOCUS_ENERGY
 	dbw 12, FURY_SWIPES
 	dbw 13, MACH_PUNCH
-	dbw 16, FEINT
+	dbw 16, POWER_UP_PUNCH
 	dbw 20, FLAME_WHEEL
 	dbw 24, FIRE_SPIN
 	dbw 28, PAYBACK
@@ -211,7 +211,7 @@ InfernapeEvosAttacks:
 	dbw 9, FOCUS_ENERGY
 	dbw 12, FURY_SWIPES
 	dbw 13, MACH_PUNCH
-	dbw 16, FEINT
+	dbw 16, POWER_UP_PUNCH
 	dbw 20, FLAME_WHEEL
 	dbw 24, FIRE_SPIN
 	dbw 28, PAYBACK
@@ -229,7 +229,7 @@ PiplupEvosAttacks:
 	dbw 1, POUND
 	dbw 1, GROWL
 	dbw 6, BUBBLE
-	dbw 9, BIDE
+	dbw 9, CHARM
 	dbw 12, PECK
 	dbw 15, FURY_ATTACK
 	dbw 18, BUBBLEBEAM
@@ -249,7 +249,7 @@ PrinplupEvosAttacks:
 	dbw 1, POUND
 	dbw 1, GROWL
 	dbw 6, BUBBLE
-	dbw 9, BIDE
+	dbw 9, CHARM
 	dbw 12, PECK
 	dbw 15, FURY_ATTACK
 	dbw 15, METAL_CLAW
@@ -271,7 +271,7 @@ EmpoleonEvosAttacks:
 	dbw 1, POUND
 	dbw 1, GROWL
 	dbw 6, BUBBLE
-	dbw 9, BIDE
+	dbw 9, CHARM
 	dbw 12, PECK
 	dbw 15, FURY_ATTACK
 	dbw 15, METAL_CLAW
@@ -476,31 +476,35 @@ CranidosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, HEADBUTT
 	dbw 1, LEER
-	dbw 5, FOCUS_ENERGY
-	dbw 10, PURSUIT
-	dbw 15, TAKE_DOWN
+	dbw 4, FOCUS_ENERGY
+	dbw 8, PURSUIT
+	dbw 12, ROCK_POLISH
+	dbw 16, TAKE_DOWN
 	dbw 20, SCARY_FACE
-	dbw 25, CHIP_AWAY
-	dbw 30, ANCIENTPOWER
-	dbw 35, ZEN_HEADBUTT
+	dbw 24, CHIP_AWAY
+	dbw 28, SWORDS_DANCE
+	dbw 32, ANCIENTPOWER
+	dbw 36, ZEN_HEADBUTT
 	dbw 40, SCREECH
-	dbw 45, HEAD_SMASH
+	dbw 44, HEAD_SMASH
 	db 0 ; no more level-up moves
 
 RampardosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, HEADBUTT
 	dbw 1, LEER
-	dbw 5, FOCUS_ENERGY
-	dbw 10, PURSUIT
-	dbw 15, TAKE_DOWN
+	dbw 4, FOCUS_ENERGY
+	dbw 8, PURSUIT
+	dbw 12, ROCK_POLISH
+	dbw 16, TAKE_DOWN
 	dbw 20, SCARY_FACE
-	dbw 25, CHIP_AWAY
+	dbw 24, CHIP_AWAY
+	dbw 28, SWORDS_DANCE
 	dbw 29, ENDEAVOR
-	dbw 32, ANCIENTPOWER
-	dbw 39, ZEN_HEADBUTT
+	dbw 34, ANCIENTPOWER
+	dbw 40, ZEN_HEADBUTT
 	dbw 46, SCREECH
-	dbw 53, HEAD_SMASH
+	dbw 52, HEAD_SMASH
 	db 0 ; no more level-up moves
 
 ShieldonEvosAttacks:
@@ -560,13 +564,13 @@ VespiquenEvosAttacks:
 	dbw 20, SLASH
 	dbw 24, AROMATHERAPY
 	dbw 27, AIR_SLASH
-	dbw 45, HEAL_ORDER
-	dbw 30, TOXIC
+	dbw 30, HEAL_ORDER
 	dbw 33, POWER_GEM
-	dbw 36, CAPTIVATE
-	dbw 39, ATTACK_ORDER
-	dbw 39, DEFEND_ORDER
-	dbw 42, SWAGGER
+	dbw 36, TOXIC
+	dbw 39, CAPTIVATE
+	dbw 42, ATTACK_ORDER
+	dbw 42, DEFEND_ORDER
+	dbw 45, SWAGGER
 	dbw 48, DESTINY_BOND
 	dbw 51, FELL_STINGER
 	db 0 ; no more level-up moves
@@ -574,7 +578,7 @@ VespiquenEvosAttacks:
 PachirisuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GROWL
-	dbw 1, BIDE
+	dbw 1, BABY_DOLL_EYES
 	dbw 4, QUICK_ATTACK
 	dbw 8, CHARM
 	dbw 12, SPARK
@@ -587,42 +591,49 @@ PachirisuEvosAttacks:
 	dbw 40, SUPER_FANG
 	dbw 44, DISCHARGE
 	dbw 48, HYPER_FANG
+	dbw 52, THUNDER
 	db 0 ; no more level-up moves
 
 BuizelEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 26, TR_ANYTIME, FLOATZEL
 	db 0 ; no more evolutions
-	dbw 1, QUICK_ATTACK
+	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 4, WATER_GUN
-	dbw 8, PURSUIT
-	dbw 12, SONICBOOM
-	dbw 16, SWIFT
-	dbw 20, AQUA_JET
-	dbw 24, DOUBLE_HIT
-	dbw 28, WHIRLPOOL
-	dbw 32, RAZOR_WIND
+	dbw 3, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 9, WATER_GUN
+	dbw 12, PURSUIT
+	dbw 15, SONICBOOM
+	dbw 18, BITE
+	dbw 21, SWIFT
+	dbw 24, AQUA_JET
+	dbw 27, DOUBLE_HIT
+	dbw 30, WHIRLPOOL
+	dbw 33, RAZOR_WIND
 	dbw 36, AQUA_TAIL
-	dbw 40, AGILITY
-	dbw 44, HYDRO_PUMP
+	dbw 39, AGILITY
+	dbw 42, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 FloatzelEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ICE_FANG
-	dbw 1, QUICK_ATTACK
+	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 4, WATER_GUN
-	dbw 8, PURSUIT
-	dbw 12, SONICBOOM
-	dbw 16, SWIFT
-	dbw 20, AQUA_JET
-	dbw 24, DOUBLE_HIT
+	dbw 3, TAIL_WHIP
+	dbw 6, QUICK_ATTACK
+	dbw 9, WATER_GUN
+	dbw 12, PURSUIT
+	dbw 15, SONICBOOM
+	dbw 18, BITE
+	dbw 21, SWIFT
+	dbw 24, AQUA_JET
 	dbw 25, CRUNCH
-	dbw 30, WHIRLPOOL
-	dbw 36, RAZOR_WIND
-	dbw 42, AQUA_TAIL
-	dbw 48, AGILITY
+	dbw 29, DOUBLE_HIT
+	dbw 34, WHIRLPOOL
+	dbw 39, RAZOR_WIND
+	dbw 44, AQUA_TAIL
+	dbw 49, AGILITY
 	dbw 54, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -631,35 +642,34 @@ ShellosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, MUD_SLAP
 	dbw 1, HARDEN
-	dbw 4, MUD_SHOT
-	dbw 8, WATER_PULSE
+	dbw 4, WATER_GUN
+	dbw 8, HIDDEN_POWER
 	dbw 12, MUD_BOMB
-	dbw 16, HIDDEN_POWER
-	dbw 20, YAWN
-	dbw 24, BRINE
-	dbw 28, RAIN_DANCE
-	dbw 32, BODY_SLAM
-	dbw 36, AMNESIA
-	dbw 40, MUDDY_WATER
-	dbw 44, RECOVER
+	dbw 16, WATER_PULSE
+	dbw 20, ANCIENTPOWER
+	dbw 24, BODY_SLAM
+	dbw 28, RECOVER
+	dbw 32, MUDDY_WATER
+	dbw 36, EARTH_POWER
+	dbw 40, RAIN_DANCE
+	dbw 44, MEMENTO
 	db 0 ; no more level-up moves
 
 GastrodonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, MUD_SLAP
 	dbw 1, HARDEN
-	dbw 4, MUD_SHOT
-	dbw 8, WATER_PULSE
+	dbw 4, WATER_GUN
+	dbw 8, HIDDEN_POWER
 	dbw 12, MUD_BOMB
-	dbw 16, HIDDEN_POWER
-	dbw 20, YAWN
-	dbw 24, BRINE
-	dbw 28, RAIN_DANCE
-	dbw 29, EARTH_POWER
-	dbw 34, BODY_SLAM
-	dbw 40, AMNESIA
-	dbw 46, MUDDY_WATER
-	dbw 52, RECOVER
+	dbw 16, WATER_PULSE
+	dbw 20, ANCIENTPOWER
+	dbw 24, BODY_SLAM
+	dbw 28, RECOVER
+	dbw 34, MUDDY_WATER
+	dbw 40, EARTH_POWER
+	dbw 46, RAIN_DANCE
+	dbw 52, MEMENTO
 	db 0 ; no more level-up moves
 
 DrifloonEvosAttacks:
