@@ -1243,7 +1243,7 @@ UnknownText_0x1c5b38::
 	line "sent to BILL's PC."
 	prompt
 
-UnknownText_0x1c5b53::
+_NewDexDataText::
 	text_ram wEnemyMonNick
 	text "'s data"
 	line "was newly added to"
@@ -1252,7 +1252,15 @@ UnknownText_0x1c5b53::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
+_EvoNewDexDataText::
+	text "@"
+	text_ram wStringBuffer1
+	text "'s data"
+	line "was newly added to"
+	cont "the #DEX.@"
+	sound_slot_machine_start
+	text_waitbutton
+	text_end
 
 UnknownText_0x1c5b7f::
 	text "Give a nickname to"

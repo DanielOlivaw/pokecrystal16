@@ -1302,7 +1302,7 @@ Text_SentToBillsPC:
 
 Text_AddedToPokedex:
 	; 's data was newly added to the #DEX.@ @
-	text_far UnknownText_0x1c5b53
+	text_far _NewDexDataText
 	text_end
 
 Text_AskNicknameNewlyCaughtMon:

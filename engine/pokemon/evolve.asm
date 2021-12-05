@@ -481,8 +481,9 @@ EvolveAfterBattle_MasterLoop:
 	ld [wMonType], a
 	call LearnEvolutionMoves
 	call LearnLevelMoves
-	ld a, [wTempSpecies]
-	call SetSeenAndCaughtMon
+	; ld a, [wTempSpecies]
+	; call SetSeenAndCaughtMon
+	call ShowEvoDexEntry
 
 	ld a, [wTempSpecies]
 	call GetPokemonIndexFromID
@@ -616,6 +617,37 @@ Text_StoppedEvolving:
 Text_WhatEvolving:
 	; What? @ is evolving!
 	text_far UnknownText_0x1c4be3
+	text_end
+
+ShowEvoDexEntry:
+	ld a, [wTempSpecies]
+	call CheckCaughtMon
+
+	ld a, c
+	push af
+	ld a, [wTempSpecies]
+	call SetSeenAndCaughtMon
+	pop af
+	and a
+	jr nz, .skip_pokedex
+
+	call CheckReceivedDex
+	jr z, .skip_pokedex
+
+	ld a, [wTempSpecies]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonName
+	ld hl, EvoNewDexDataText
+	call PrintText
+
+	call ClearSprites
+
+	predef NewPokedexEntry
+.skip_pokedex
+	ret
+
+EvoNewDexDataText:
+	text_far _EvoNewDexDataText
 	text_end
 
 LearnEvolutionMoves:
