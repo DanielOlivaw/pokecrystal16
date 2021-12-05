@@ -14,6 +14,8 @@ OlivineLighthouse6F_MapScripts:
 	return
 
 OlivineLighthouseJasmine:
+	loadmonindex 1, AMPHAROS
+	special SpecialSetSeenMon
 	faceplayer
 	opentext
 	checkitem SECRETPOTION
@@ -102,11 +104,13 @@ OlivineLighthouseJasmine:
 	closetext
 	end
 
-OlivineLighthouseUnusedDummyScript:
-; unused
-	end
+; OlivineLighthouseUnusedDummyScript:
+;; unused
+	; end
 
 OlivineLighthouseAmphy:
+	loadmonindex 1, AMPHAROS
+	special SpecialSetSeenMon
 	faceplayer
 	opentext
 	checkevent EVENT_JASMINE_RETURNED_TO_GYM

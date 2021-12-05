@@ -168,6 +168,8 @@ AbraScript:
 	opentext
 	writetext AbraText
 	cry ABRA
+	loadmonindex 1, ABRA
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

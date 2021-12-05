@@ -110,6 +110,8 @@ ElmCheckEverstone:
 	iftrue ShowElmTogepiScript
 	loadmonindex 2, TOGETIC
 	special FindPartyMonThatSpeciesYourTrainerID
+	loadmonindex 3, TOGEKISS
+	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
 	writetext ElmThoughtEggHatchedText
 	waitbutton
@@ -121,6 +123,8 @@ ElmEggHatchedScript:
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
 	loadmonindex 2, TOGETIC
+	special FindPartyMonThatSpeciesYourTrainerID
+	loadmonindex 3, TOGEKISS
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
 	sjump ElmCheckGotEggAgain
@@ -179,6 +183,8 @@ FireStarterPokeBallScript:
 	setevent EVENT_CHARMANDER_IS_FIRE_STARTER
 	pokepic CHARMANDER
 	cry CHARMANDER
+	loadmonindex 1, CHARMANDER
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -207,6 +213,8 @@ FireStarterPokeBallScript:
 	setevent EVENT_CYNDAQUIL_IS_FIRE_STARTER
 	pokepic CYNDAQUIL
 	cry CYNDAQUIL
+	loadmonindex 1, CYNDAQUIL
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -230,6 +238,8 @@ FireStarterPokeBallScript:
 	setevent EVENT_TORCHIC_IS_FIRE_STARTER
 	pokepic TORCHIC
 	cry TORCHIC
+	loadmonindex 1, TORCHIC
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -253,6 +263,8 @@ FireStarterPokeBallScript:
 	setevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	pokepic CHIMCHAR
 	cry CHIMCHAR
+	loadmonindex 1, CHIMCHAR
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -276,6 +288,8 @@ FireStarterPokeBallScript:
 	setevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	pokepic FENNEKIN
 	cry FENNEKIN
+	loadmonindex 1, FENNEKIN
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -322,6 +336,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_SQUIRTLE_IS_WATER_STARTER
 	pokepic SQUIRTLE
 	cry SQUIRTLE
+	loadmonindex 1, SQUIRTLE
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -348,6 +364,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_TOTODILE_IS_WATER_STARTER
 	pokepic TOTODILE
 	cry TOTODILE
+	loadmonindex 1, TOTODILE
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -371,6 +389,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_MUDKIP_IS_WATER_STARTER
 	pokepic MUDKIP
 	cry MUDKIP
+	loadmonindex 1, MUDKIP
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -394,6 +414,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_PIPLUP_IS_WATER_STARTER
 	pokepic PIPLUP
 	cry PIPLUP
+	loadmonindex 1, PIPLUP
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -417,6 +439,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	pokepic OSHAWOTT
 	cry OSHAWOTT
+	loadmonindex 1, OSHAWOTT
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -440,6 +464,8 @@ WaterStarterPokeBallScript:
 	setevent EVENT_FROAKIE_IS_WATER_STARTER
 	pokepic FROAKIE
 	cry FROAKIE
+	loadmonindex 1, FROAKIE
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -486,6 +512,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_BULBASAUR_IS_GRASS_STARTER
 	pokepic BULBASAUR
 	cry BULBASAUR
+	loadmonindex 1, BULBASAUR
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -512,6 +540,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_CHIKORITA_IS_GRASS_STARTER
 	pokepic CHIKORITA
 	cry CHIKORITA
+	loadmonindex 1, CHIKORITA
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -535,6 +565,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_TREECKO_IS_GRASS_STARTER
 	pokepic TREECKO
 	cry TREECKO
+	loadmonindex 1, TREECKO
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -558,6 +590,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_TURTWIG_IS_GRASS_STARTER
 	pokepic TURTWIG
 	cry TURTWIG
+	loadmonindex 1, TURTWIG
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -581,6 +615,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_CHESPIN_IS_GRASS_STARTER
 	pokepic CHESPIN
 	cry CHESPIN
+	loadmonindex 1, CHESPIN
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext
@@ -604,6 +640,8 @@ GrassStarterPokeBallScript:
 	setevent EVENT_ROWLET_IS_GRASS_STARTER
 	pokepic ROWLET
 	cry ROWLET
+	loadmonindex 1, ROWLET
+	special SpecialSetSeenMon
 	waitbutton
 	closepokepic
 	opentext

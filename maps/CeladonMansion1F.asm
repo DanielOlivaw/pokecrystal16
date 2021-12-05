@@ -16,6 +16,8 @@ CeladonMansion1FMeowth:
 	opentext
 	writetext CeladonMansion1FMeowthText
 	cry MEOWTH_G
+	loadmonindex 1, MEOWTH_G
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -24,6 +26,8 @@ CeladonMansion1FClefairy:
 	opentext
 	writetext CeladonMansion1FClefairyText
 	cry CLEFAIRY
+	loadmonindex 1, CLEFAIRY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -32,6 +36,8 @@ CeladonMansion1FNidoranF:
 	opentext
 	writetext CeladonMansion1FNidoranFText
 	cry NIDORAN_F
+	loadmonindex 1, NIDORAN_F
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

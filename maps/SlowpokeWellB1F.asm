@@ -97,6 +97,8 @@ SlowpokeWellB1FSlowpokeWithMailScript:
 	faceplayer
 	opentext
 	cry SLOWPOKE
+	loadmonindex 1, SLOWPOKE
+	special SpecialSetSeenMon
 	writetext SlowpokeWellB1FSlowpokeWithMailText
 	yesorno
 	iftrue .ReadMail
@@ -114,6 +116,8 @@ SlowpokeWellB1FTaillessSlowpokeScript:
 	opentext
 	writetext SlowpokeWellB1FTaillessSlowpokeText
 	cry SLOWPOKE
+	loadmonindex 1, SLOWPOKE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

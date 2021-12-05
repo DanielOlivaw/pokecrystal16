@@ -139,19 +139,23 @@ AzaleaTownSlowpokeScript:
 	pause 60
 	writetext AzaleaTownSlowpokeText2
 	cry SLOWPOKE
+	loadmonindex 1, SLOWPOKE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
 
-UnusedWoosterScript:
-; unused
-	faceplayer
-	opentext
-	writetext WoosterText
-	cry QUAGSIRE
-	waitbutton
-	closetext
-	end
+; UnusedWoosterScript:
+;; unused
+	; faceplayer
+	; opentext
+	; writetext WoosterText
+	; cry QUAGSIRE
+	; loadmonindex 1, QUAGSIRE
+	; special SpecialSetSeenMon
+	; waitbutton
+	; closetext
+	; end
 
 AzaleaTownCelebiScene:
 	applymovement PLAYER, AzaleaTownPlayerLeavesKurtsHouseMovement
@@ -381,9 +385,9 @@ AzaleaTownSlowpokeText2:
 	text "<……> <……>Yawn?"
 	done
 
-WoosterText:
-	text "WOOSTER: Gugyoo…"
-	done
+; WoosterText:
+	; text "WOOSTER: Gugyoo…"
+	; done
 
 AzaleaTownKurtText1:
 	text "ILEX FOREST is"

@@ -415,6 +415,8 @@ KurtsHouseSlowpoke:
 	opentext
 	writetext KurtsHouseSlowpokeText
 	cry SLOWPOKE
+	loadmonindex 1, SLOWPOKE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

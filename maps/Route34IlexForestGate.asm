@@ -69,6 +69,8 @@ Route34IlexForestGateButterfreeScript:
 	opentext
 	writetext Route34IlexForestGateButterfreeText
 	cry BUTTERFREE
+	loadmonindex 1, BUTTERFREE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

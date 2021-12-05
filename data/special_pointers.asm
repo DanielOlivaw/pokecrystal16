@@ -69,7 +69,7 @@ SpecialsPointers::
 	add_special UpdateSprites ; bank 0
 	add_special ReplaceKrisSprite ; $38 ; bank 0
 	add_special GameCornerPrizeMonCheckDex
-	add_special UnusedSetSeenMon
+	add_special SpecialSetSeenMon
 	add_special WaitSFX ; bank 0
 	add_special PlayMapMusic ; bank 0
 	add_special RestartMapMusic ; bank 0

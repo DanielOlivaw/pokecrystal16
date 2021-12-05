@@ -38,6 +38,8 @@ ClefairyDance:
 	turnobject MOUNTMOONSQUARE_FAIRY1, RIGHT
 	cry CLEFAIRY
 	waitsfx
+	loadmonindex 1, CLEFAIRY
+	special SpecialSetSeenMon
 	pause 30
 	follow MOUNTMOONSQUARE_FAIRY1, MOUNTMOONSQUARE_FAIRY2
 	cry CLEFAIRY

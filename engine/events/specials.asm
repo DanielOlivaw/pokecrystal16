@@ -37,7 +37,7 @@ GameCornerPrizeMonCheckDex:
 	call ExitAllMenus
 	ret
 
-UnusedSetSeenMon:
+SpecialSetSeenMon:
 	ld a, [wScriptVar]
 	call SetSeenMon
 	ret

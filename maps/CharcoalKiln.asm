@@ -65,6 +65,8 @@ CharcoalKilnFarfetchd:
 	opentext
 	writetext FarfetchdText
 	cry FARFETCH_D
+	loadmonindex 1, FARFETCH_D
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

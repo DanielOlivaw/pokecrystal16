@@ -51,6 +51,7 @@ MoomooScript:
 	writetext MoomooWeakMooText
 	loadmonindex 1, MILTANK
 	special PlaySlowCry
+	special SpecialSetSeenMon
 	buttonsound
 	writetext Route39BarnItsCryIsWeakText
 	checkevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO

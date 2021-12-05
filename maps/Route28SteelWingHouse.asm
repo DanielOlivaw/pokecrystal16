@@ -34,6 +34,8 @@ CelebritysFearow:
 	opentext
 	writetext CelebritysFearowText
 	cry SKARMORY
+	loadmonindex 1, SKARMORY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

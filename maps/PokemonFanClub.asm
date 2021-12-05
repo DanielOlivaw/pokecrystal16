@@ -108,6 +108,8 @@ PokemonFanClubBayleefScript:
 	opentext
 	writetext PokemonFanClubBayleefText
 	cry BAYLEEF
+	loadmonindex 1, BAYLEEF
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

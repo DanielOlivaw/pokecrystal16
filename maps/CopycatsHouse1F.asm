@@ -31,6 +31,8 @@ CopycatsHouse1FBlisseyScript:
 	opentext
 	writetext CopycatsHouse1FBlisseyText
 	cry BLISSEY
+	loadmonindex 1, BLISSEY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

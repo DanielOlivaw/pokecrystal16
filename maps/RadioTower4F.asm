@@ -49,6 +49,8 @@ RadioTowerMeowth:
 	opentext
 	writetext RadioTowerMeowthText
 	cry MEOWTH_G
+	loadmonindex 1, MEOWTH_G
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

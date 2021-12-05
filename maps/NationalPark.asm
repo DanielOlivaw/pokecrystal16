@@ -56,6 +56,8 @@ NationalParkPersian:
 	opentext
 	writetext NationalParkPersianText
 	cry LIEPARD
+	loadmonindex 1, LIEPARD
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

@@ -20,6 +20,8 @@ MrFujisPsyduck:
 	opentext
 	writetext MrFujisPsyduckText
 	cry PSYDUCK
+	loadmonindex 1, PSYDUCK
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -28,6 +30,8 @@ MrFujisNidorino:
 	opentext
 	writetext MrFujisNidorinoText
 	cry GROWLITHE
+	loadmonindex 1, GROWLITHE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -36,6 +40,8 @@ MrFujisPidgey:
 	opentext
 	writetext MrFujisPidgeyText
 	cry STARLY
+	loadmonindex 1, STARLY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

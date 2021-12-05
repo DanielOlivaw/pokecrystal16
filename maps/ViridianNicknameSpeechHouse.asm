@@ -19,6 +19,8 @@ Speary:
 	opentext
 	writetext SpearyText
 	cry STARLY
+	loadmonindex 1, STARLY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -27,6 +29,8 @@ Rattey:
 	opentext
 	writetext RatteyText
 	cry RATTATA_A
+	loadmonindex 1, RATTATA_A
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

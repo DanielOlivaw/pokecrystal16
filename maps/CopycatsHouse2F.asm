@@ -174,6 +174,8 @@ CopycatsDodrio:
 	opentext
 	writetext CopycatsDodrioText1
 	cry MIMIKYU
+	loadmonindex 1, MIMIKYU
+	special SpecialSetSeenMon
 	buttonsound
 	writetext CopycatsDodrioText2
 	waitbutton

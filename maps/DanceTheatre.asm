@@ -122,6 +122,8 @@ DanceTheaterRhydon:
 	opentext
 	writetext RhydonText
 	cry HAXORUS
+	loadmonindex 1, HAXORUS
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

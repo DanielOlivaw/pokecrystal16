@@ -25,7 +25,9 @@ CeladonCityFisherScript:
 CeladonCityPoliwrath:
 	opentext
 	writetext CeladonCityPoliwrathText
-	cry STARLY
+	cry VILEPLUME
+	loadmonindex 1, VILEPLUME
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

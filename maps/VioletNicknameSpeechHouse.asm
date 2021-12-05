@@ -19,6 +19,8 @@ VioletNicknameSpeechHouseBirdScript:
 	opentext
 	writetext VioletNicknameSpeechHouseBirdText
 	cry STARLY
+	loadmonindex 1, STARLY
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

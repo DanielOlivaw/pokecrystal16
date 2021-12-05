@@ -20,6 +20,8 @@ Route39Miltank:
 	opentext
 	writetext Route39MiltankText
 	cry MILTANK
+	loadmonindex 1, MILTANK
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

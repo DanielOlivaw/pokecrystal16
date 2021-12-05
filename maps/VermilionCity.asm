@@ -26,6 +26,8 @@ VermilionMachop:
 	opentext
 	writetext VermilionMachopText1
 	cry MACHOP
+	loadmonindex 1, MACHOP
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	earthquake 30
@@ -40,6 +42,8 @@ VermilionCitySuperNerdScript:
 
 VermilionSnorlax:
 	opentext
+	loadmonindex 1, SNORLAX
+	special SpecialSetSeenMon
 	special SnorlaxAwake
 	iftrue .Awake
 	writetext UnknownText_0x1aab64

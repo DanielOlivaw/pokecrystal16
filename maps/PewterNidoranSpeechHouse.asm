@@ -14,6 +14,8 @@ PewterNidoran:
 	opentext
 	writetext PewterNidoranText
 	cry NIDORAN_M
+	loadmonindex 1, NIDORAN_M
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

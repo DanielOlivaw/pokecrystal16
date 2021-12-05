@@ -14,6 +14,8 @@ BlackthornDragonSpeechHouseDratiniScript:
 	opentext
 	writetext BlackthornDragonSpeechHouseDratiniText
 	cry DRATINI
+	loadmonindex 1, DRATINI
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

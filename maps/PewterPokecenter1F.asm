@@ -20,6 +20,8 @@ PewterJigglypuff:
 	opentext
 	writetext PewterJigglypuffText
 	cry JIGGLYPUFF
+	loadmonindex 1, JIGGLYPUFF
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

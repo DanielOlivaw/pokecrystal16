@@ -18,6 +18,8 @@ CeruleanDiglett:
 	opentext
 	writetext CeruleanDiglettText
 	cry ROCKRUFF
+	loadmonindex 1, ROCKRUFF
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

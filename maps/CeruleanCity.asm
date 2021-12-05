@@ -39,6 +39,8 @@ CeruleanCitySlowbro:
 	opentext
 	writetext CeruleanCitySlowbroText
 	cry SLOWBRO
+	loadmonindex 1, SLOWBRO
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -57,6 +59,8 @@ CeruleanCityCooltrainerFScript:
 	opentext
 	writetext CeruleanCitySlowbroText
 	cry SLOWBRO
+	loadmonindex 1, SLOWBRO
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	opentext

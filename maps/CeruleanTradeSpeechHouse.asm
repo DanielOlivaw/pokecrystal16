@@ -19,6 +19,8 @@ CeruleanTradeSpeechHouseRhydonScript:
 	opentext
 	writetext CeruleanTradeSpeechHouseRhydonText
 	cry PIKACHU
+	loadmonindex 1, PIKACHU
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -27,6 +29,8 @@ CeruleanTradeSpeechHouseZubatScript:
 	opentext
 	writetext CeruleanTradeSpeechHouseZubatText
 	cry ZUBAT
+	loadmonindex 1, ZUBAT
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

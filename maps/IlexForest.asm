@@ -120,6 +120,8 @@ IlexForestFarfetchdScript:
 	buttonsound
 	writetext Text_Kwaaaa
 	cry FARFETCH_D
+	loadmonindex 1, FARFETCH_D
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos1_Pos2
@@ -328,6 +330,8 @@ IlexForestFarfetchdScript:
 	opentext
 	writetext Text_Kwaaaa
 	cry FARFETCH_D
+	loadmonindex 1, FARFETCH_D
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end
@@ -337,6 +341,8 @@ IlexForestFarfetchdScript:
 	opentext
 	writetext Text_Kwaaaa
 	cry FARFETCH_D
+	loadmonindex 1, FARFETCH_D
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	readvar VAR_FACING

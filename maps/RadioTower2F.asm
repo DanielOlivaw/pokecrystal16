@@ -43,6 +43,8 @@ RadioTowerJigglypuff:
 	opentext
 	writetext RadioTowerJigglypuffText
 	cry JIGGLYPUFF
+	loadmonindex 1, JIGGLYPUFF
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

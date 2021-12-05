@@ -57,6 +57,8 @@ GoldenrodDeptStoreB1FMachopScript:
 	opentext
 	writetext GoldenrodDeptStoreB1FMachokeText
 	cry MACHOKE
+	loadmonindex 1, MACHOKE
+	special SpecialSetSeenMon
 	waitbutton
 	closetext
 	end

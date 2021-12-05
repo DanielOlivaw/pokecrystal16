@@ -61,6 +61,8 @@ MahogayMart1FBlackBeltScript:
 	end
 
 MahoganyMart1FLanceUncoversStaircaseScript:
+	loadmonindex 1, DRAGONITE
+	special SpecialSetSeenMon
 	pause 15
 	opentext
 	writetext UnknownText_0x6c52a
