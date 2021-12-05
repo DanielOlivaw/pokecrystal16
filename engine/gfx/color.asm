@@ -223,7 +223,7 @@ LoadStatsScreenPals:
 	ret z
 	ld hl, StatsScreenPals
 	ld b, 0
-	dec c
+	; dec c ; Changed when adding 4th stats screen
 	add hl, bc
 	add hl, bc
 	ldh a, [rSVBK]

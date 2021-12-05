@@ -1,8 +1,9 @@
-	const_def 1
-	const PINK_PAGE  ; 1
-	const GREEN_PAGE ; 2
-	const BLUE_PAGE  ; 3
-NUM_STAT_PAGES EQU const_value + -1
+	const_def
+	const PINK_PAGE   ; 0
+	const GREEN_PAGE  ; 1
+	const BLUE_PAGE   ; 2
+	const ORANGE_PAGE ; 3 (New screen for catch location, etc.)
+NUM_STAT_PAGES EQU const_value
 
 BattleStatsScreenInit:
 	ld a, [wLinkMode]
@@ -60,12 +61,11 @@ StatsScreenInit_gotaddress:
 StatsScreenMain:
 	xor a
 	ld [wJumptableIndex], a
-	; stupid interns
-	ld [wcf64], a
-	ld a, [wcf64]
-	and %11111100
-	or 1
-	ld [wcf64], a
+	; ld [wcf64], a
+	; ld a, [wcf64]
+	; and %11111100
+	; or 1
+	ld [wcf64], a ; PINK_PAGE
 .loop
 	ld a, [wJumptableIndex]
 	and $ff ^ (1 << 7)
@@ -80,12 +80,11 @@ StatsScreenMain:
 StatsScreenMobile:
 	xor a
 	ld [wJumptableIndex], a
-	; stupid interns
-	ld [wcf64], a
-	ld a, [wcf64]
-	and %11111100
-	or 1
-	ld [wcf64], a
+	; ld [wcf64], a
+	; ld a, [wcf64]
+	; and %11111100
+	; or 1
+	ld [wcf64], a ; PINK_PAGE
 .loop
 	farcall Mobile_SetOverworldDelay
 	ld a, [wJumptableIndex]
@@ -334,20 +333,22 @@ StatsScreen_JoypadAction:
 
 .a_button
 	ld a, c
-	cp BLUE_PAGE ; last page
+	cp ORANGE_PAGE ; last page
 	jr z, .b_button
 .d_right
 	inc c
-	ld a, BLUE_PAGE ; last page
+	ld a, ORANGE_PAGE ; last page
 	cp c
 	jr nc, .set_page
 	ld c, PINK_PAGE ; first page
 	jr .set_page
 
 .d_left
+	ld a, c
 	dec c
+	and a ; cp PINK_PAGE ; first page
 	jr nz, .set_page
-	ld c, BLUE_PAGE ; last page
+	ld c, ORANGE_PAGE ; last page
 	jr .set_page
 
 .done
@@ -450,17 +451,17 @@ StatsScreen_InitUpperHalf:
 	dw sBoxMonNicknames
 	dw wBufferMonNick
 
-Unreferenced_Function4df7f:
-	hlcoord 7, 0
-	ld bc, SCREEN_WIDTH
-	ld d, SCREEN_HEIGHT
-.loop
-	ld a, $31 ; vertical divider
-	ld [hl], a
-	add hl, bc
-	dec d
-	jr nz, .loop
-	ret
+; Unreferenced_Function4df7f:
+	; hlcoord 7, 0
+	; ld bc, SCREEN_WIDTH
+	; ld d, SCREEN_HEIGHT
+; .loop
+	; ld a, $31 ; vertical divider
+	; ld [hl], a
+	; add hl, bc
+	; dec d
+	; jr nz, .loop
+	; ret
 
 StatsScreen_PlaceHorizontalDivider:
 	hlcoord 0, 7
@@ -473,7 +474,7 @@ StatsScreen_PlaceHorizontalDivider:
 	ret
 
 StatsScreen_PlacePageSwitchArrows:
-	hlcoord 12, 6
+	hlcoord 10, 6
 	ld [hl], "◀"
 	hlcoord 19, 6
 	ld [hl], "▶"
@@ -529,7 +530,7 @@ StatsScreen_LoadGFX:
 .PageTilemap:
 	ld a, [wcf64]
 	maskbits NUM_STAT_PAGES
-	dec a
+	; dec a
 	ld hl, .Jumptable
 	rst JumpTable
 	ret
@@ -539,6 +540,7 @@ StatsScreen_LoadGFX:
 	dw .PinkPage
 	dw .GreenPage
 	dw .BluePage
+	dw .OrangePage
 
 .PinkPage:
 	hlcoord 0, 9
@@ -781,6 +783,89 @@ StatsScreen_LoadGFX:
 	dw sBoxMonOT
 	dw wBufferMonOT
 
+.OrangePage:
+	; Time of day when caught
+	ld de, .MetStr
+	hlcoord 0, 8
+	call PlaceString
+	ld a, [wTempMonCaughtTime]
+	and CAUGHT_TIME_MASK
+	ret z ; no time
+	rlca
+	rlca
+	dec a
+	maskbits NUM_DAYTIMES
+	ld hl, .times
+	call GetNthString
+	ld d, h
+	ld e, l
+	call CopyName1
+	ld de, wStringBuffer2
+	hlcoord 4, 8
+	call PlaceString
+
+	; Location where caught
+	ld a, [wTempMonCaughtLocation]
+	and $7f
+	ld de, .EventStr
+	jr z, .PrintLocation
+	cp $7f
+	jr z, .PrintLocation
+	cp $ff
+	jr z, .PrintLocation
+	ld e, a
+	callba GetLandmarkName
+	ld de, wStringBuffer1
+.PrintLocation
+	hlcoord 0, 12
+	call PlaceString
+
+	; Level when caught
+	; Limited to between 1 and 63 since it's a 6-bit quantity.
+	ld a, [wTempMonCaughtLevel]
+	and CAUGHT_LEVEL_MASK
+	jr z, .UnknownLevel
+	cp CAUGHT_EGG_LEVEL ; egg marker value
+	jr nz, .PrintLevel
+	ld a, EGG_LEVEL ; egg hatch level
+.PrintLevel
+	ld [wBuffer2], a
+	hlcoord 4, 10
+	ld de, wBuffer2
+	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
+	call PrintNum
+	ld de, .AtLevelStr
+	hlcoord 0, 10
+	call PlaceString
+	ret ;jp PrintCharacteristics
+
+.UnknownLevel
+	ld de, .TradeStr
+	hlcoord 0, 10
+	call PlaceString
+	ret ;jp PrintCharacteristics
+
+.MetStr
+	db "Met@"
+
+.times
+	db "in the morning@"
+	db "during the day@"
+	db "at night@"
+	; db "in the evening@"
+
+.AtLevelStr
+	db "At <LV>@"
+
+.EventStr
+	db "Event #MON@"
+
+.HatchedStr
+	db "Hatched at@"
+
+.TradeStr
+	db "By trade@"
+
 IDNoString:
 	db "<ID>№.@"
 
@@ -968,10 +1053,6 @@ StatsScreen_LoadTextboxSpaceGFX:
 	pop hl
 	ret
 
-Unreferenced_4e32a:
-; A blank space tile?
-	ds 16
-
 EggStatsScreen:
 	xor a
 	ldh [hBGMapMode], a
@@ -1080,25 +1161,63 @@ StatsScreen_AnimateEgg:
 	ret
 
 StatsScreen_LoadPageIndicators:
-	hlcoord 13, 5
-	ld a, $36 ; first of 4 small square tiles
-	call .load_square
-	hlcoord 15, 5
-	ld a, $36 ; " " " "
-	call .load_square
-	hlcoord 17, 5
-	ld a, $36 ; " " " "
-	call .load_square
-	ld a, c
-	cp GREEN_PAGE
-	ld a, $3a ; first of 4 large square tiles
-	hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
-	jr c, .load_square
-	hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
-	jr z, .load_square
-	hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
-.load_square
-	push bc
+	; hlcoord 13, 5
+	; ld a, $36 ; first of 4 small square tiles
+	; call .load_square
+	; hlcoord 15, 5
+	; ld a, $36 ; " " " "
+	; call .load_square
+	; hlcoord 17, 5
+	; ld a, $36 ; " " " "
+	; call .load_square
+	; ld a, c
+	; cp GREEN_PAGE
+	; ld a, $3a ; first of 4 large square tiles
+	; hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
+	; jr c, .load_square
+	; hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
+	; jr z, .load_square
+	; hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
+; .load_square
+	; push bc
+	; ld [hli], a
+	; inc a
+	; ld [hld], a
+	; ld bc, SCREEN_WIDTH
+	; add hl, bc
+	; inc a
+	; ld [hli], a
+	; inc a
+	; ld [hl], a
+	; pop bc
+	; ret
+
+	; Write the smaller squares for page display.
+	hlcoord 11, 5
+	ld a, $7f
+	ld b, 8
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+
+	hlcoord 11, 6
+	ld a, $38
+	ld b, 4
+.loop2
+	ld [hli], a
+	inc a
+	ld [hli], a
+	dec a
+	dec b
+	jr nz, .loop2
+
+	; Write the bigger (selected) square for selected page.
+	; c contains current page (0-3)
+	sla c
+	hlcoord 11, 5
+	add hl, bc
+	ld a, $3a
 	ld [hli], a
 	inc a
 	ld [hld], a
@@ -1108,7 +1227,6 @@ StatsScreen_LoadPageIndicators:
 	ld [hli], a
 	inc a
 	ld [hl], a
-	pop bc
 	ret
 
 CopyNickname:
