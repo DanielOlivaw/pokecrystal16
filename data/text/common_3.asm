@@ -1252,7 +1252,7 @@ _NewDexDataText::
 	text_waitbutton
 	text_end
 
-_EvoNewDexDataText::
+_EvoOrEggNewDexDataText::
 	text "@"
 	text_ram wStringBuffer1
 	text "'s data"

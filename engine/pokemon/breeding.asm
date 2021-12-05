@@ -239,7 +239,8 @@ HatchEggs:
 	call AddNTimes
 	ld a, [hl]
 	ld [wCurPartySpecies], a
-	call SetSeenAndCaughtMon
+	; call SetSeenAndCaughtMon
+	call ShowEggDexEntry
 
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
@@ -407,6 +408,37 @@ HatchEggs:
 .Text_NicknameHatchling:
 	; Give a nickname to @ ?
 	text_far UnknownText_0x1c0dd8
+	text_end
+
+ShowEggDexEntry:
+	ld a, [wCurPartySpecies]
+	call CheckCaughtMon
+
+	ld a, c
+	push af
+	ld a, [wCurPartySpecies]
+	call SetSeenAndCaughtMon
+	pop af
+	and a
+	jr nz, .skip_pokedex
+
+	call CheckReceivedDex
+	jr z, .skip_pokedex
+
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonName
+	ld hl, EggNewDexDataText
+	call PrintText
+
+	call ClearSprites
+
+	predef NewPokedexEntry
+.skip_pokedex
+	ret
+
+EggNewDexDataText:
+	text_far _EvoOrEggNewDexDataText
 	text_end
 
 InitEggMoves:

@@ -647,7 +647,7 @@ ShowEvoDexEntry:
 	ret
 
 EvoNewDexDataText:
-	text_far _EvoNewDexDataText
+	text_far _EvoOrEggNewDexDataText
 	text_end
 
 LearnEvolutionMoves:
