@@ -35,3 +35,4 @@ SpriteMons:
 	dw GYARADOS
 	dw LUGIA
 	dw HO_OH
+	dw REGIROCK

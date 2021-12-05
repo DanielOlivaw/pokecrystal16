@@ -172,6 +172,7 @@ UnusedTilesetAnim_fc1af:
 
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
+TilesetSeafoamDepthsAnim:
 	dw vTiles2 tile $14, WriteTileToBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -210,6 +211,27 @@ TilesetIcePathAnim:
 	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw vTiles2 tile $31, WriteTileFromBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  DoneTileAnimation
+
+TilesetSeafoamDepths:
+	dw vTiles2 tile $20, WriteTileToBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $20, WriteTileFromBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $40, WriteTileToBuffer
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw wTileAnimBuffer, ScrollTileDown
+	dw NULL,  FlickeringCaveEntrancePalette
+	dw vTiles2 tile $40, WriteTileFromBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw NULL,  DoneTileAnimation
 

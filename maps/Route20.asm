@@ -49,6 +49,9 @@ TrainerSwimmermCameron:
 CinnabarGymSign:
 	jumptext CinnabarGymSignText
 
+SeafoamIslandsSign:
+	jumptext SeafoamIslandsSignText
+
 Route20HiddenStardust:
 	hiddenitem STARDUST, EVENT_ROUTE_20_HIDDEN_STARDUST
 
@@ -119,16 +122,22 @@ CinnabarGymSignText:
 	line "LEADER: BLAINE"
 	done
 
+SeafoamIslandsSignText:
+	text "SEAFOAM ISLANDS"
+	done
+
 Route20_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
+	db 2 ; warp events
 	warp_event 38,  9, SEAFOAM_GYM, 1
+	warp_event 30,  5, SEAFOAM_ISLAND_1F, 1
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 37, 11, BGEVENT_READ, CinnabarGymSign
+	bg_event 29,  7, BGEVENT_READ, SeafoamIslandsSign
 	bg_event 15, 11, BGEVENT_ITEM, Route20HiddenStardust
 	bg_event 29,  8, BGEVENT_ITEM, Route20HiddenSeaScale
 	bg_event 40, 10, BGEVENT_ITEM, Route20HiddenRazorFang
