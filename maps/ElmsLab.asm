@@ -975,8 +975,8 @@ CopScript:
 	turnobject ELMSLAB_OFFICER, LEFT
 	opentext
 	writetext ElmsLabOfficerText1
-.TryNameRival
 	buttonsound
+.TryNameRival
 	special NameRival
 	writetext ElmsLabOfficerTextConfirmName
 	yesorno
