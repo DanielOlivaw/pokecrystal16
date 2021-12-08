@@ -494,16 +494,14 @@ TMHM_GetCurrentPocketPosition:
 	ld a, [wTMHMPocketScrollPosition]
 	ld b, a
 	inc b
-	ld c, 0
+	ld c, -1
 .loop
 	inc c
-	ld a, [hli]
+	ld a, c
 	call InnerCheckTMHM
-	; and a
-	; jr z, .loop
+	jr z, .loop
 	dec b
 	jr nz, .loop
-	dec hl
 	dec c
 	ret
 
