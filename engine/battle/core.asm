@@ -2295,6 +2295,14 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	call IsAnyMonHoldingExpShare
 	ret z
 
+	ld hl, wEnemyMonBaseStats
+	ld b, wEnemyMonEnd - wEnemyMonBaseStats
+.loop
+	srl [hl]
+	inc hl
+	dec b
+	jr nz, .loop
+
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
@@ -2320,6 +2328,14 @@ ApplyExperienceAfterEnemyCaught:
 	call GiveExperiencePoints
 	call IsAnyMonHoldingExpShare
 	ret z
+
+	ld hl, wEnemyMonBaseStats
+	ld b, wEnemyMonEnd - wEnemyMonBaseStats
+.loop
+	srl [hl]
+	inc hl
+	dec b
+	jr nz, .loop
 
 	ld a, [wBattleParticipantsNotFainted]
 	push af
