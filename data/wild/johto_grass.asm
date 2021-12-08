@@ -491,29 +491,29 @@ JohtoGrassWildMons:
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
+	dbw 8, ZUBAT
 	dbw 9, ZUBAT
 	dbw 10, ZUBAT
+	dbw 9, SLOWPOKE
 	dbw 11, ZUBAT
-	dbw 10, SLOWPOKE
-	dbw 12, ZUBAT
-	dbw 12, SLOWPOKE
-	dbw 12, SLOWPOKE
+	dbw 11, SLOWPOKE
+	dbw 11, SLOWPOKE
 	; day
+	dbw 8, ZUBAT
 	dbw 9, ZUBAT
 	dbw 10, ZUBAT
+	dbw 9, SLOWPOKE
 	dbw 11, ZUBAT
-	dbw 10, SLOWPOKE
-	dbw 12, ZUBAT
-	dbw 12, SLOWPOKE
-	dbw 12, SLOWPOKE
+	dbw 11, SLOWPOKE
+	dbw 11, SLOWPOKE
 	; nite
+	dbw 8, ZUBAT
 	dbw 9, ZUBAT
 	dbw 10, ZUBAT
+	dbw 9, SLOWPOKE
 	dbw 11, ZUBAT
-	dbw 10, SLOWPOKE
-	dbw 12, ZUBAT
-	dbw 12, SLOWPOKE
-	dbw 12, SLOWPOKE
+	dbw 11, SLOWPOKE
+	dbw 11, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite

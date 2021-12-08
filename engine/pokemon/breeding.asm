@@ -240,7 +240,6 @@ HatchEggs:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	; call SetSeenAndCaughtMon
-	call ShowEggDexEntry
 
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
@@ -338,6 +337,9 @@ HatchEggs:
 	ld d, h
 	ld e, l
 	push de
+
+	call ShowEggDexEntry
+
 	ld hl, .Text_NicknameHatchling
 	call PrintText
 	call YesNoBox
@@ -411,12 +413,12 @@ HatchEggs:
 	text_end
 
 ShowEggDexEntry:
-	ld a, [wCurPartySpecies]
+	ld a, [wCurSpecies]
 	call CheckCaughtMon
 
 	ld a, c
 	push af
-	ld a, [wCurPartySpecies]
+	ld a, [wCurSpecies]
 	call SetSeenAndCaughtMon
 	pop af
 	and a
@@ -425,7 +427,7 @@ ShowEggDexEntry:
 	call CheckReceivedDex
 	jr z, .skip_pokedex
 
-	ld a, [wCurPartySpecies]
+	ld a, [wCurSpecies]
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName
 	ld hl, EggNewDexDataText

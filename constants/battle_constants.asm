@@ -1,7 +1,7 @@
 ; significant level values
 MAX_LEVEL EQU 100
-MIN_LEVEL EQU 2
-EGG_LEVEL EQU 1 ; Gonna try this one out
+MIN_LEVEL EQU 1
+EGG_LEVEL EQU 5
 
 ; maximum moves known per mon
 NUM_MOVES EQU 4

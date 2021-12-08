@@ -2030,19 +2030,19 @@ PokemaniacGroup:
 GruntMGroup:
 	next_list_item ; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 8
+	db 9
 	dw POOCHYENA
-	db 12
+	db 13
 	dw SCRAGGY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 7
+	db 9
 	dw NICKIT
-	db 9
+	db 11
 	dw SPINARAK
-	db 9
+	db 11
 	dw SPINARAK
 	db -1 ; end
 
@@ -2262,9 +2262,9 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (29)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 9
+	db 12
 	dw RATTATA_A
-	db 9
+	db 12
 	dw RATTATA_A
 	db -1 ; end
 
@@ -3934,9 +3934,9 @@ FirebreatherGroup:
 
 	next_list_item ; FIREBREATHER (5)
 	db "BILL@", TRAINERTYPE_NORMAL
-	db 6
+	db 7
 	dw KOFFING
-	db 6
+	db 7
 	dw KOFFING
 	db -1 ; end
 
@@ -3950,7 +3950,7 @@ FirebreatherGroup:
 
 	next_list_item ; FIREBREATHER (7)
 	db "RAY@", TRAINERTYPE_NORMAL
-	db 9
+	db 11
 	dw FENNEKIN
 	db -1 ; end
 
@@ -4140,9 +4140,9 @@ ArcherGroup:
 ProtonGroup:
 	next_list_item ; PROTON (1)
 	db "PROTON@", TRAINERTYPE_NORMAL
-	db 8
+	db 11
 	dw POOCHYENA
-	db 12
+	db 15
 	dw SCRAGGY
 	db -1 ; end
 
@@ -5385,9 +5385,9 @@ OfficerGroup:
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 9
+	db 12
 	dw SANDILE
-	db 11
+	db 14
 	dw GLAMEOW
 	db -1 ; end
 

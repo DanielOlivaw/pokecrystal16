@@ -304,7 +304,7 @@ SageTroyAfterBattleText:
 	done
 
 SageNealSeenText:
-	text "The ELDER's HM"
+	text "The ELDER's TM"
 	line "lights even pitch-"
 	cont "black darkness."
 	done

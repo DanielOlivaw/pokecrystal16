@@ -1,4 +1,4 @@
-	db "FAIRYFLOSS@" ; species name
+	db "COTTONCANDY@" ; species name
 	dw 104, 77 ; height, weight
 
 	db   "It eats its own"

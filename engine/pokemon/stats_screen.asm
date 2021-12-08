@@ -790,7 +790,6 @@ StatsScreen_LoadGFX:
 	call PlaceString
 	ld a, [wTempMonCaughtTime]
 	and CAUGHT_TIME_MASK
-	ret z ; no time
 	rlca
 	rlca
 	dec a
@@ -804,12 +803,31 @@ StatsScreen_LoadGFX:
 	hlcoord 4, 8
 	call PlaceString
 
+	; Level when caught
+	; Limited to between 1 and 63 since it's a 6-bit quantity.
+	ld a, [wTempMonCaughtLevel]
+	and CAUGHT_LEVEL_MASK
+	jr z, .UnknownLevel
+	; cp CAUGHT_EGG_LEVEL ; egg marker value
+	; jr z, .HatchedLevel
+	ld [wBuffer2], a
+	hlcoord 4, 10
+	ld de, wBuffer2
+	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
+	call PrintNum
+	ld de, .AtLevelStr
+	hlcoord 0, 10
+	call PlaceString
+
 	; Location where caught
 	ld a, [wTempMonCaughtLocation]
 	and $7f
-	ld de, .EventStr
 	jr z, .PrintLocation
-	cp $7f
+	ld de, .GiftStr
+	cp GIFT_LOCATION
+	jr z, .PrintLocation
+	ld de, .EventStr
+	cp EVENT_LOCATION
 	jr z, .PrintLocation
 	cp $ff
 	jr z, .PrintLocation
@@ -819,29 +837,11 @@ StatsScreen_LoadGFX:
 .PrintLocation
 	hlcoord 0, 12
 	call PlaceString
-
-	; Level when caught
-	; Limited to between 1 and 63 since it's a 6-bit quantity.
-	ld a, [wTempMonCaughtLevel]
-	and CAUGHT_LEVEL_MASK
-	jr z, .UnknownLevel
-	cp CAUGHT_EGG_LEVEL ; egg marker value
-	jr nz, .PrintLevel
-	ld a, EGG_LEVEL ; egg hatch level
-.PrintLevel
-	ld [wBuffer2], a
-	hlcoord 4, 10
-	ld de, wBuffer2
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
-	call PrintNum
-	ld de, .AtLevelStr
-	hlcoord 0, 10
-	call PlaceString
 	jp PrintCharacteristics
 
 .UnknownLevel
 	ld de, .TradeStr
-	hlcoord 0, 10
+	hlcoord 4, 8
 	call PlaceString
 	jp PrintCharacteristics
 
@@ -853,18 +853,22 @@ StatsScreen_LoadGFX:
 	db "during the day@"
 	db "at night@"
 	; db "in the evening@"
+	db "@"
 
 .AtLevelStr
-	db "At <LV>@"
+	db "at <LV>@"
+
+.GiftStr
+	db "as a gift@"
 
 .EventStr
-	db "Event #MON@"
+	db "in an event@"
 
-.HatchedStr
-	db "Hatched at@"
+; .HatchedStr
+	; db "Hatched at@"
 
 .TradeStr
-	db "By trade@"
+	db "in a trade@"
 
 IDNoString:
 	db "<ID>№.@"
