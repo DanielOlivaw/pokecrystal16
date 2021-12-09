@@ -137,7 +137,7 @@ FarmerMText_NoMoney:
 
 FarmerMText_NoRoom:
 	text "I reckon yer"
-	line "PACK's full."
+	line "BAG's full."
 	done
 
 FarmerMText_NoSale:

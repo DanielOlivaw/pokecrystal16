@@ -530,7 +530,7 @@ _HerbalLadyThanksText::
 	done
 
 _HerbalLadyPackFullText::
-	text "Oh? Your PACK is"
+	text "Oh? Your BAG is"
 	line "full, dear."
 	done
 
@@ -568,7 +568,7 @@ _BargainShopThanksText::
 	done
 
 _BargainShopPackFullText::
-	text "Uh-oh, your PACK"
+	text "Uh-oh, your BAG"
 	line "is chock-full."
 	done
 

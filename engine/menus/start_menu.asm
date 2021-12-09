@@ -187,7 +187,7 @@ StartMenu::
 
 .PokedexString:  db "#DEX@"
 .PartyString:    db "#MON@"
-.PackString:     db "PACK@"
+.PackString:     db "BAG@"
 .StatusString:   db "<PLAYER>@"
 .SaveString:     db "SAVE@"
 .OptionString:   db "OPTIONS@"

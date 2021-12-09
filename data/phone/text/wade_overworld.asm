@@ -62,7 +62,7 @@ WadeGiftText:
 	done
 
 WadePackFullText:
-	text "Oops, your PACK's"
+	text "Oops, your BAG's"
 	line "full. Too bad."
 
 	para "You should come"

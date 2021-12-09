@@ -50,7 +50,7 @@ ParryRematchText:
 	done
 
 ParryPackFullText:
-	text "Your PACK looks"
+	text "Your BAG looks"
 	line "stuffed full!"
 
 	para "You can't have"

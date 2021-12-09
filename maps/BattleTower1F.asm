@@ -532,7 +532,7 @@ Text_PlayerGotFive:
 	text_end
 
 Text_YourPackIsStuffedFull:
-	text "Oops, your PACK is"
+	text "Oops, your BAG is"
 	line "stuffed full."
 
 	para "Please make room"

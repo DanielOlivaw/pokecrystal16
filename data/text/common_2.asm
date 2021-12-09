@@ -879,7 +879,7 @@ ClearedMailPutAwayText::
 	prompt
 
 MailPackFullText::
-	text "The PACK is full."
+	text "The BAG is full."
 	prompt
 
 MailMessageLostText::
@@ -1543,7 +1543,7 @@ UnknownText_0x1c1ce3::
 
 UnknownText_0x1c1cf3::
 	text "An item in your"
-	line "PACK may be"
+	line "BAG may be"
 
 	para "registered for use"
 	line "on SELECT Button."

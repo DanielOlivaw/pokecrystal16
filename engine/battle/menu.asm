@@ -44,7 +44,7 @@ MenuData_0x24f34:
 Strings24f3d:
 	db "FIGHT@"
 	db "<PKMN>@"
-	db "PACK@"
+	db "BAG@"
 	db "RUN@"
 
 MenuHeader_0x24f4e:

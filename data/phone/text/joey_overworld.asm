@@ -46,7 +46,7 @@ JoeyRematchText:
 
 JoeyPackFullText:
 	text "Hey, wait! Your"
-	line "PACK is stuffed!"
+	line "BAG is stuffed!"
 
 	para "Well, we'll leave"
 	line "it till next time."

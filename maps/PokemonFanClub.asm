@@ -260,7 +260,7 @@ PokemonFanClubClefairyGuyGoingToGetARealClefairyText:
 	done
 
 PokemonFanClubClefairyGuyPackIsJammedFullText:
-	text "Your PACK is"
+	text "Your BAG is"
 	line "jammed full."
 	done
 

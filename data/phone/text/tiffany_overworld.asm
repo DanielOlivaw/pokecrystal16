@@ -57,6 +57,6 @@ TiffanyGiftText:
 	done
 
 TiffanyPackFullText:
-	text "Uh-oh. Your PACK"
+	text "Uh-oh. Your BAG"
 	line "is crammed full."
 	done
