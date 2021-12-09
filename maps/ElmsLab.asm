@@ -1662,7 +1662,7 @@ ElmsLabSignpostText_Egg:
 
 AideText_GiveYouPotion:
 	text "<PLAY_G>, I want"
-	line "you to have this"
+	line "you to have these"
 	cont "for your errand."
 	done
 
