@@ -309,16 +309,12 @@ TMHM_CheckHoveringOverCancel:
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .okay
 	call InnerCheckTMHM
-	; ld a, [hli]
-	; and a
 	jr z, .loop
 	dec b
 	jr nz, .loop
 	ld a, c
 .okay
 	ld [wCurTMHM], a
-	; ld [wCurItem], a
-	; cp -1
 	ret
 
 TMHM_ExitPack:
@@ -371,7 +367,6 @@ TMHM_DisplayPocketItems:
 
 	hlcoord 5, 2
 	lb bc, 10, 15
-	ld a, " "
 	call ClearBox
 	call TMHM_GetCurrentPocketPosition
 	ld d, $5
@@ -381,8 +376,6 @@ TMHM_DisplayPocketItems:
 	cp NUM_TMS + NUM_HMS + 1
 	jr nc, .NotTMHM
 	call InnerCheckTMHM
-	; ld a, [hli]
-	; and a
 	jr z, .loop2
 	ld b, a
 	ld a, c
@@ -408,7 +401,6 @@ TMHM_DisplayPocketItems:
 	inc hl
 	ld de, wTempTMHM
 	lb bc, PRINTNUM_RIGHTALIGN | 1, 2
-	; lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
 	pop af
 	ld [wTempTMHM], a
@@ -424,29 +416,11 @@ TMHM_DisplayPocketItems:
 	call PlaceString
 	pop hl
 	pop bc
-	; ld a, c
-	; push bc
-	; cp NUM_TMS + 1
-	; jr nc, .hm2
-	; ld bc, SCREEN_WIDTH + 9
-	; add hl, bc
-	; ld [hl], "×"
-	; inc hl
-	; ld a, "0" ; why are we doing this?
-	; pop bc
-	; push bc
-	; ld a, b
-	; ld [wTempTMHM], a
-	; ld de, wTempTMHM
-	; lb bc, 1, 2
-	; call PrintNum
-; .hm2
-	; pop bc
 	pop de
 	pop hl
 	dec d
 	jr nz, .loop2
-	jr .done
+	ret
 
 .NotTMHM:
 	call TMHMPocket_GetCurrentLineCoord
@@ -457,7 +431,6 @@ TMHM_DisplayPocketItems:
 	ld de, TMHM_String_Cancel
 	call PlaceString
 	pop de
-.done
 	ret
 
 TMHMPocket_GetCurrentLineCoord:
@@ -494,10 +467,16 @@ TMHM_GetCurrentPocketPosition:
 	ld a, [wTMHMPocketScrollPosition]
 	ld b, a
 	inc b
-	ld c, -1
+	ld c, 0
 .loop
 	inc c
 	ld a, c
+; If we don't cut off c when it passes the maximum number of
+; TMs and HMs, it will get stuck in an infinite loop if
+; no TMs have been obtained.
+	cp NUM_TMS + NUM_HMS + 1
+	ret nc
+
 	call InnerCheckTMHM
 	jr z, .loop
 	dec b
