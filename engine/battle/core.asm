@@ -2295,14 +2295,6 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	call IsAnyMonHoldingExpShare
 	ret z
 
-	ld hl, wEnemyMonBaseStats
-	ld b, wEnemyMonEnd - wEnemyMonBaseStats
-.loop
-	srl [hl]
-	inc hl
-	dec b
-	jr nz, .loop
-
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
@@ -2328,14 +2320,6 @@ ApplyExperienceAfterEnemyCaught:
 	call GiveExperiencePoints
 	call IsAnyMonHoldingExpShare
 	ret z
-
-	ld hl, wEnemyMonBaseStats
-	ld b, wEnemyMonEnd - wEnemyMonBaseStats
-.loop
-	srl [hl]
-	inc hl
-	dec b
-	jr nz, .loop
 
 	ld a, [wBattleParticipantsNotFainted]
 	push af
@@ -7359,19 +7343,19 @@ _LoadHPBar:
 	callfar LoadHPBar
 	ret
 
-Unreferenced_LoadHPExpBarGFX:
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
+; Unreferenced_LoadHPExpBarGFX:
+	; ld de, EnemyHPBarBorderGFX
+	; ld hl, vTiles2 tile $6c
+	; lb bc, BANK(EnemyHPBarBorderGFX), 4
+	; call Get1bpp
+	; ld de, HPExpBarBorderGFX
+	; ld hl, vTiles2 tile $73
+	; lb bc, BANK(HPExpBarBorderGFX), 6
+	; call Get1bpp
+	; ld de, ExpBarGFX
+	; ld hl, vTiles2 tile $55
+	; lb bc, BANK(ExpBarGFX), 8
+	; jp Get2bpp
 
 EmptyBattleTextbox:
 	ld hl, .empty
@@ -7488,7 +7472,7 @@ GiveExperiencePoints:
 	bit 0, a
 	ret nz
 
-	call .EvenlyDivideExpAmongParticipants
+	; call .EvenlyDivideExpAmongParticipants
 	xor a
 	ld [wCurPartyMon], a
 	ld bc, wPartyMon1Species
@@ -7511,61 +7495,6 @@ GiveExperiencePoints:
 	and a
 	pop bc
 	jp z, .next_mon
-
-;; give stat exp
-	; ld hl, MON_STAT_EXP + 1
-	; add hl, bc
-	; ld d, h
-	; ld e, l
-	; ld hl, wEnemyMonBaseStats - 1
-	; push bc
-	; ld c, NUM_EXP_STATS
-; .stat_exp_loop
-	; inc hl
-	; ld a, [de]
-	; add [hl]
-	; ld [de], a
-	; jr nc, .no_carry_stat_exp
-	; dec de
-	; ld a, [de]
-	; inc a
-	; jr z, .stat_exp_maxed_out
-	; ld [de], a
-	; inc de
-
-; .no_carry_stat_exp
-	; push hl
-	; push bc
-	; ld a, MON_PKRUS
-	; call GetPartyParamLocation
-	; ld a, [hl]
-	; and a
-	; pop bc
-	; pop hl
-	; jr z, .stat_exp_awarded
-	; ld a, [de]
-	; add [hl]
-	; ld [de], a
-	; jr nc, .stat_exp_awarded
-	; dec de
-	; ld a, [de]
-	; inc a
-	; jr z, .stat_exp_maxed_out
-	; ld [de], a
-	; inc de
-	; jr .stat_exp_awarded
-
-; .stat_exp_maxed_out
-	; ld a, $ff
-	; ld [de], a
-	; inc de
-	; ld [de], a
-
-; .stat_exp_awarded
-	; inc de
-	; inc de
-	; dec c
-	; jr nz, .stat_exp_loop
 
 ; Give EVs
 ; e = 0 for no Pokerus, 1 for Pokerus
@@ -7658,6 +7587,8 @@ GiveExperiencePoints:
 	ld a, [hl]
 	cp LUCKY_EGG
 	call z, BoostExp
+	cp EXP_SHARE
+	call z, HalfExp
 	ldh a, [hQuotient + 3]
 	ld [wStringBuffer2 + 1], a
 	ldh a, [hQuotient + 2]
@@ -7907,26 +7838,26 @@ GiveExperiencePoints:
 .done
 	jp ResetBattleParticipants
 
-.EvenlyDivideExpAmongParticipants:
-; count number of battle participants
-	ld a, [wBattleParticipantsNotFainted]
-	ld b, a
-	ld c, PARTY_LENGTH
-	ld d, 0
-.count_loop
-	xor a
-	srl b
-	adc d
-	ld d, a
-	dec c
-	jr nz, .count_loop
-	cp 2
-	ret c
+; .EvenlyDivideExpAmongParticipants:
+;; count number of battle participants
+	; ld a, [wBattleParticipantsNotFainted]
+	; ld b, a
+	; ld c, PARTY_LENGTH
+	; ld d, 0
+; .count_loop
+	; xor a
+	; srl b
+	; adc d
+	; ld d, a
+	; dec c
+	; jr nz, .count_loop
+	; cp 2
+	; ret c
 
-	ld [wTempByteValue], a
-	ld hl, wEnemyMonBaseStats
-	ld c, wEnemyMonEnd - wEnemyMonBaseStats
-.base_stat_division_loop
+	; ld [wTempByteValue], a
+	; ld hl, wEnemyMonBaseStats
+	; ld c, wEnemyMonEnd - wEnemyMonBaseStats
+; .base_stat_division_loop
 	; xor a
 	; ldh [hDividend + 0], a
 	; ld a, [hl]
@@ -7939,7 +7870,7 @@ GiveExperiencePoints:
 	; ld [hli], a
 	; dec c
 	; jr nz, .base_stat_division_loop
-	ret
+	; ret
 
 BoostExp:
 ; Multiply experience by 1.5x
@@ -7957,6 +7888,24 @@ BoostExp:
 	ldh [hProduct + 3], a
 	ldh a, [hProduct + 2]
 	adc b
+	ldh [hProduct + 2], a
+	pop bc
+	ret
+
+HalfExp:
+; Divide experience by 2
+	push bc
+; load experience value
+	ldh a, [hProduct + 2]
+	ld b, a
+	ldh a, [hProduct + 3]
+	ld c, a
+; halve it
+	srl b
+	rr c
+	ld a, c
+	ldh [hProduct + 3], a
+	ld a, b
 	ldh [hProduct + 2], a
 	pop bc
 	ret
