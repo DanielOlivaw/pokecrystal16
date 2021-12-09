@@ -154,7 +154,6 @@ Kurt1:
 	sjump .GaveKurtApricorns
 
 .Wht:
-	writetext KurtsHouseKurtItWillTakeADayText
 	setevent EVENT_GAVE_KURT_WHT_APRICORN
 	sjump .GaveKurtApricorns
 
