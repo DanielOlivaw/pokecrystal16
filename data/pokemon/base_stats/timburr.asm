@@ -7,7 +7,7 @@
 	db FIGHTING, FIGHTING ; type
 	db 180 ; catch rate
 	db 61 ; base exp
-	db STICK, STICK ; items
+	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F25 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/timburr/front.dimensions"
