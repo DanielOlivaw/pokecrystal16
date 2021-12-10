@@ -26,6 +26,8 @@ DudeAutoInput_RightA:
 	db NO_INPUT, $08
 	db D_RIGHT,  $00
 	db NO_INPUT, $08
+	db D_RIGHT,  $00
+	db NO_INPUT, $08
 	db A_BUTTON, $00
 	db NO_INPUT, $ff ; end
 
