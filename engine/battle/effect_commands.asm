@@ -1773,7 +1773,7 @@ BattleCommand_CheckHit:
 	call .BurnUp
 
 	call .FirstTurn
-	
+
 	call .FocusPunchShellTrap
 
 	call .SpitUp
@@ -1787,15 +1787,15 @@ BattleCommand_CheckHit:
 
 	call .DreamEater
 	jp z, .Miss
+	
+	call .PowderSporeMoves
+	jp z, .Miss
 
 	call .Protect
 	jp nz, .Miss
 
 	call .MagnetRise
 	jp nz, .Miss
-	
-	call .PowderSporeMoves
-	jp z, .Miss
 
 	call .DrainSub
 	jp z, .Miss
@@ -1904,7 +1904,7 @@ BattleCommand_CheckHit:
 .Hit:
 	ret
 
-.Failed
+.Failed:
 	ld a, 4
 	ld [wFailedMessage], a
 .Miss:
@@ -2130,7 +2130,7 @@ BattleCommand_CheckHit:
 	ld hl, .PowderSporeMoveList
 	jr .check_move_in_list
 
-.PowderSporeMoveList
+.PowderSporeMoveList:
 	dw COTTON_SPORE
 	dw MAGIC_POWDER
 	dw POISONPOWDER
@@ -4543,7 +4543,7 @@ BattleCommand_Poison:
 	jr nz, .failed
 	ld a, [wAttackMissed]
 	and a
-	jr nz, .failed
+	jr nz, .avoided
 	call .check_toxic
 	jr z, .toxic
 
@@ -4575,6 +4575,9 @@ BattleCommand_Poison:
 	call AnimateFailedMove
 	pop hl
 	jp StdBattleTextbox
+
+.avoided
+	jp PrintDidntAffect2
 	
 .fog
 	call AnimateFailedMove
