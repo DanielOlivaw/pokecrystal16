@@ -1,8 +1,8 @@
 SpriteMons:
 ; entries correspond to SPRITE_* constants past SPRITE_POKEMON
-	dw UNOWN
-	dw GEODUDE
-	dw GROWLITHE
+	dw EEVEE
+	dw ROWLET
+	dw NIDORAN_F
 	dw STARLY
 	dw SKARMORY
 	dw ODDISH
@@ -24,7 +24,7 @@ SpriteMons:
 	dw PSYDUCK
 	dw DRATINI
 	dw MURKROW
-	dw TENTACOOL
+	dw MEOWTH_G
 	dw TAUROS
 	dw MACHOP
 	dw MAGNETON
@@ -36,3 +36,6 @@ SpriteMons:
 	dw LUGIA
 	dw HO_OH
 	dw REGIROCK
+	dw TEDDIURSA
+	dw MARILL
+	dw CHANSEY

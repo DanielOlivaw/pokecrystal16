@@ -114,9 +114,9 @@
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
 SPRITE_POKEMON EQU const_value
-	const SPRITE_UNOWN ; 80
-	const SPRITE_GEODUDE ; 81
-	const SPRITE_GROWLITHE ; 82
+	const SPRITE_EEVEE ; 80
+	const SPRITE_ROWLET ; 81
+	const SPRITE_NIDORAN_F ; 82
 	const SPRITE_STARLY ; 83
 	const SPRITE_SKARMORY ; 84
 	const SPRITE_ODDISH ; 85
@@ -138,7 +138,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_PSYDUCK ; 95
 	const SPRITE_DRATINI ; 96
 	const SPRITE_MURKROW ; 97
-	const SPRITE_TENTACOOL ; 98
+	const SPRITE_MEOWTH ; 98
 	const SPRITE_TAUROS ; 99
 	const SPRITE_MACHOP ; 9a
 	const SPRITE_MAGNETON ; 9b
@@ -150,6 +150,9 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_LUGIA ; a1
 	const SPRITE_HO_OH ; a2
 	const SPRITE_REGI ; a3
+	const SPRITE_TEDDIURSA ; a4
+	const SPRITE_MARILL ; a5
+	const SPRITE_CHANSEY ; a6
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0
