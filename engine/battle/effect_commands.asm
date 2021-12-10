@@ -4328,20 +4328,32 @@ CheckForStatusIfAlreadyHasAny:
 	ld hl, AlreadyAsleepText
 	ret nz
 
-	bit FRZ, a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	ld b, a
 	ld hl, AlreadyFrozenText
+	and 1 << FRZ
 	ret nz
 	
-	bit PAR, a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	ld b, a
 	ld hl, AlreadyParalyzedText
+	and 1 << PAR
 	ret nz
 	
-	bit PSN, a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	ld b, a
 	ld hl, AlreadyPoisonedText
+	and 1 << PSN
 	ret nz
 	
-	bit BRN, a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	ld b, a
 	ld hl, AlreadyBurnedText
+	and 1 << BRN
 	ret
 
 BattleCommand_SleepTarget:
