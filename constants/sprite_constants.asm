@@ -153,6 +153,22 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_TEDDIURSA ; a4
 	const SPRITE_MARILL ; a5
 	const SPRITE_CHANSEY ; a6
+	const SPRITE_VENONAT ; a7
+	const SPRITE_VICTREEBEL ; a8
+	const SPRITE_CHIKORITA ; a9
+	const SPRITE_SENTRET ; aa
+	const SPRITE_PHANPY ; ab
+	const SPRITE_MILTANK ; ac
+	const SPRITE_WINGULL ; ad
+	const SPRITE_MAKUHITA ; ae
+	const SPRITE_GRUMPIG ; af
+	const SPRITE_ZANGOOSE ; b0
+	const SPRITE_FLOATZEL ; b1
+	const SPRITE_CROAGUNK ; b2
+	const SPRITE_MUNNA ; b3
+	const SPRITE_HEATMOR ; b4
+	const SPRITE_FLOETTE ; b5
+	const SPRITE_MAREANIE ; b6
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0

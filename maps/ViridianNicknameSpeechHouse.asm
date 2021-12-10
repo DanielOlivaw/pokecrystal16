@@ -18,8 +18,8 @@ ViridianNicknameSpeechHouseLassScript:
 Speary:
 	opentext
 	writetext SpearyText
-	cry STARLY
-	loadmonindex 1, STARLY
+	cry TAILLOW
+	loadmonindex 1, TAILLOW
 	special SpecialSetSeenMon
 	waitbutton
 	closetext
@@ -50,13 +50,13 @@ ViridianNicknameSpeechHousePokefanMText:
 	done
 
 ViridianNicknameSpeechHouseLassText:
-	text "They're STARS--"
-	line "a STARLY--and"
+	text "They're TAILS--"
+	line "a TAILLOW--and"
 	cont "RATTEY--a RATTATA."
 	done
 
 SpearyText:
-	text "STARS: Ch-chun!"
+	text "TAILS: Ch-chun!"
 	done
 
 RatteyText:

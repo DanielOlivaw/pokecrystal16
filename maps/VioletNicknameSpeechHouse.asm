@@ -18,8 +18,8 @@ VioletNicknameSpeechHouseBirdScript:
 	faceplayer
 	opentext
 	writetext VioletNicknameSpeechHouseBirdText
-	cry STARLY
-	loadmonindex 1, STARLY
+	cry PIDGEY
+	loadmonindex 1, PIDGEY
 	special SpecialSetSeenMon
 	waitbutton
 	closetext
@@ -36,7 +36,7 @@ VioletNicknameSpeechHouseTeacherText:
 	done
 
 VioletNicknameSpeechHouseLassText:
-	text "I call my STARLY"
+	text "I call my PIDGEY"
 	line "STRAWBERRY!"
 	done
 
