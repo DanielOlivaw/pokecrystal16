@@ -14,7 +14,7 @@ OlivineMartClerk1Script:
 
 OlivineMartClerk2Script:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_OLIVINE
+	pokemart MARTTYPE_TM, MART_OLIVINE
 	closetext
 	end
 

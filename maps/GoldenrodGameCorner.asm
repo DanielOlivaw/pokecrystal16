@@ -1,8 +1,6 @@
 GOLDENRODGAMECORNER_TM14_COINS EQU 3500
 GOLDENRODGAMECORNER_TM25_COINS EQU 3500
 GOLDENRODGAMECORNER_TM38_COINS EQU 3500
-GOLDENRODGAMECORNER_TM75_COINS EQU 2000
-GOLDENRODGAMECORNER_TM90_COINS EQU 1000
 GOLDENRODGAMECORNER_ABRA_COINS     EQU 100
 GOLDENRODGAMECORNER_CUBONE_COINS   EQU 800
 GOLDENRODGAMECORNER_LARVITAR_COINS EQU 2100
@@ -74,8 +72,6 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	ifequal 1, .Blizzard
 	ifequal 2, .Thunder
 	ifequal 3, .FireBlast
-	ifequal 4, .SwordsDance
-	ifequal 5, .Substitute
 	sjump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
 .Blizzard:
@@ -115,32 +111,6 @@ GoldenrodGameCornerTMVendor_LoopScript:
 	giveitem TM_FIRE_BLAST
 	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins GOLDENRODGAMECORNER_TM38_COINS
-	sjump GoldenrodGameCornerTMVendor_FinishScript
-
-.SwordsDance:
-	checktmhm TM_SWORDS_DANCE
-	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins GOLDENRODGAMECORNER_TM75_COINS
-	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, TM_SWORDS_DANCE
-	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
-	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem TM_SWORDS_DANCE
-	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins GOLDENRODGAMECORNER_TM75_COINS
-	sjump GoldenrodGameCornerTMVendor_FinishScript
-
-.Substitute:
-	checktmhm TM_SUBSTITUTE
-	iftrue GoldenrodGameCornerPrizeVendor_AlreadyHaveTMScript
-	checkcoins GOLDENRODGAMECORNER_TM90_COINS
-	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getitemname STRING_BUFFER_3, TM_SUBSTITUTE
-	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
-	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem TM_SUBSTITUTE
-	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins GOLDENRODGAMECORNER_TM90_COINS
 	sjump GoldenrodGameCornerTMVendor_FinishScript
 
 GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript:
@@ -192,12 +162,10 @@ GoldenrodGameCornerTMVendorMenuHeader:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 6 ; items
+	db 4 ; items
 	db "TM14    3500@"
 	db "TM25    3500@"
 	db "TM38    3500@"
-	db "TM75    2000@"
-	db "TM90    1000@"
 	db "CANCEL@"
 
 GoldenrodGameCornerPrizeMonVendorScript:
