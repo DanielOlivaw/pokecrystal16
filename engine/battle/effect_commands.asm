@@ -4398,10 +4398,10 @@ BattleCommand_SleepTarget:
 	jr nz, .fail
 
 	call AnimateCurrentMove
-	ld b, $7
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr z, .random_loop
+	; ld b, $7
+	; ld a, [wInBattleTowerBattle]
+	; and a
+	; jr z, .random_loop
 	ld b, $3
 
 .random_loop
