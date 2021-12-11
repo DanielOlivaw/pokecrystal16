@@ -329,29 +329,29 @@ JohtoGrassWildMons:
 	map_id NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 11, FLABEBE
-	dbw 13, NIDORAN_M
-	dbw 13, NIDORAN_F
-	dbw 11, PETILIL
+	dbw 12, FLABEBE
+	dbw 14, NIDORAN_M
+	dbw 14, NIDORAN_F
 	dbw 12, PETILIL
-	dbw 13, PACHIRISU
-	dbw 14, DRIFLOON
+	dbw 13, PETILIL
+	dbw 14, PACHIRISU
+	dbw 15, DRIFLOON
 	; day
-	dbw 11, FLABEBE
-	dbw 13, NIDORAN_M
-	dbw 13, NIDORAN_F
-	dbw 11, SUNKERN
+	dbw 12, FLABEBE
+	dbw 14, NIDORAN_M
+	dbw 14, NIDORAN_F
 	dbw 12, SUNKERN
-	dbw 13, PACHIRISU
-	dbw 14, DRIFLOON
+	dbw 13, SUNKERN
+	dbw 14, PACHIRISU
+	dbw 15, DRIFLOON
 	; nite
-	dbw 11, ODDISH
-	dbw 12, PSYDUCK
-	dbw 13, PSYDUCK
-	dbw 11, VENIPEDE
+	dbw 12, ODDISH
+	dbw 14, PSYDUCK
+	dbw 14, PSYDUCK
 	dbw 12, VENIPEDE
-	dbw 13, ODDISH
-	dbw 14, DRIFLOON
+	dbw 13, VENIPEDE
+	dbw 14, ODDISH
+	dbw 15, DRIFLOON
 
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1355,29 +1355,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 12, SNUBBULL
-	dbw 12, PIDGEY
-	dbw 10, POOCHYENA
-	dbw 14, HATENNA
-	dbw 12, DEERLING
-	dbw 14, DEERLING
-	dbw 12, YANMA
+	dbw 13, SNUBBULL
+	dbw 13, PIDGEY
+	dbw 11, POOCHYENA
+	dbw 15, HATENNA
+	dbw 13, DEERLING
+	dbw 15, DEERLING
+	dbw 13, YANMA
 	; day
-	dbw 12, SNUBBULL
-	dbw 12, PIDGEY
-	dbw 10, POOCHYENA
-	dbw 14, HATENNA
-	dbw 12, DEERLING
-	dbw 14, DEERLING
-	dbw 12, YANMA
+	dbw 13, SNUBBULL
+	dbw 13, PIDGEY
+	dbw 11, POOCHYENA
+	dbw 15, HATENNA
+	dbw 13, DEERLING
+	dbw 15, DEERLING
+	dbw 13, YANMA
 	; nite
-	dbw 12, DROWZEE
-	dbw 12, HOOTHOOT
-	dbw 10, POOCHYENA
-	dbw 14, HATENNA
-	dbw 12, PSYDUCK
-	dbw 14, PSYDUCK
-	dbw 12, YANMA
+	dbw 13, DROWZEE
+	dbw 13, HOOTHOOT
+	dbw 11, POOCHYENA
+	dbw 15, HATENNA
+	dbw 13, PSYDUCK
+	dbw 15, PSYDUCK
+	dbw 13, YANMA
 
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

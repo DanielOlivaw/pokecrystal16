@@ -691,21 +691,21 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (5)
 	db "SAMUEL@", TRAINERTYPE_NORMAL
-	db 9
+	db 11
 	dw ZIGZAGOON_G
-	db 12
+	db 14
 	dw FOMANTIS
-	db 10
+	db 12
 	dw STARLY
-	db 10
+	db 12
 	dw STARLY
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (6)
 	db "IAN@", TRAINERTYPE_NORMAL
-	db 12
-	dw MANKEY
 	db 14
+	dw MANKEY
+	db 16
 	dw ROCKRUFF
 	db -1 ; end
 
@@ -775,9 +775,9 @@ SECTION "Enemy Trainer Parties 2", ROMX
 SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL
-	db 12
-	dw SEEDOT
 	db 15
+	dw SEEDOT
+	db 18
 	dw SHINX
 	db -1 ; end
 
@@ -795,7 +795,7 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (3)
 	db "ALAN@", TRAINERTYPE_NORMAL
-	db 18
+	db 19
 	dw TANGEL
 	db -1 ; end
 
@@ -1019,9 +1019,9 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (3)
 	db "BRYAN@", TRAINERTYPE_NORMAL
-	db 14
+	db 15
 	dw STARLY
-	db 16
+	db 17
 	dw STARAVIA
 	db -1 ; end
 
@@ -1198,9 +1198,9 @@ LassGroup:
 
 	next_list_item ; LASS (4)
 	db "KRISE@", TRAINERTYPE_NORMAL
-	db 14
+	db 15
 	dw PETILIL
-	db 17
+	db 18
 	dw CUBONE
 	db -1 ; end
 
@@ -2464,9 +2464,9 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (8)
 	db "ARNIE@", TRAINERTYPE_NORMAL
-	db 15
+	db 16
 	dw SURSKIT
-	db 17
+	db 18
 	dw VENONAT
 	db -1 ; end
 
@@ -3942,9 +3942,9 @@ FirebreatherGroup:
 
 	next_list_item ; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
-	db 12
+	db 13
 	dw TORKOAL
-	db 14
+	db 15
 	dw TORKOAL
 	db -1 ; end
 
@@ -3975,13 +3975,13 @@ FirebreatherGroup:
 JugglerGroup:
 	next_list_item ; JUGGLER (1)
 	db "IRWIN@", TRAINERTYPE_NORMAL
-	db 2
+	db 4
 	dw APPLIN
-	db 6
+	db 8
 	dw APPLIN
-	db 10
+	db 12
 	dw APPLIN
-	db 14
+	db 16
 	dw APPLIN
 	db -1 ; end
 
@@ -4230,7 +4230,7 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (5)
 	db "GREG@", TRAINERTYPE_MOVES
-	db 17
+	db 18
 	dw LUNATONE
 	dw HYPNOSIS, ROCK_POLISH, DREAM_EATER, HARDEN
 	db -1 ; end
@@ -4247,13 +4247,13 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (7)
 	db "MARK@", TRAINERTYPE_MOVES
-	db 13
+	db 15
 	dw ABRA
 	dw TELEPORT, FLASH, NO_MOVE, NO_MOVE
-	db 13
+	db 15
 	dw ABRA
 	dw TELEPORT, FLASH, NO_MOVE, NO_MOVE
-	db 16
+	db 18
 	dw KADABRA
 	dw TELEPORT, KINESIS, CONFUSION, NO_MOVE
 	db -1 ; end
@@ -4315,24 +4315,24 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (2)
 	db "GINA@", TRAINERTYPE_NORMAL
-	db 11
+	db 13
 	dw HOPPIP
-	db 11
+	db 13
 	dw HOPPIP
-	db 14
+	db 16
 	dw ROSELIA
 	db -1 ; end
 
 	next_list_item ; PICNICKER (3)
 	db "BROOKE@", TRAINERTYPE_MOVES
-	db 16
+	db 17
 	dw PACHIRISU
 	dw SPARK, GROWL, QUICK_ATTACK, CHARM
 	db -1 ; end
 
 	next_list_item ; PICNICKER (4)
 	db "KIM@", TRAINERTYPE_NORMAL
-	db 16
+	db 18
 	dw VULPIX_A
 	db -1 ; end
 
@@ -4560,27 +4560,27 @@ CamperGroup:
 
 	next_list_item ; CAMPER (2)
 	db "TODD@", TRAINERTYPE_NORMAL
-	db 14
+	db 15
 	dw PSYDUCK
-	db 16
+	db 17
 	dw TYKER
 	db -1 ; end
 
 	next_list_item ; CAMPER (3)
 	db "IVAN@", TRAINERTYPE_NORMAL
-	db 12
+	db 13
 	dw ROCKRUFF
-	db 12
+	db 13
 	dw LOTAD
-	db 16
+	db 17
 	dw ROCKRUFF
 	db -1 ; end
 
 	next_list_item ; CAMPER (4)
 	db "ELLIOT@", TRAINERTYPE_NORMAL
-	db 13
+	db 14
 	dw WOOLOO
-	db 15
+	db 16
 	dw MARILL
 	db -1 ; end
 
@@ -4640,8 +4640,10 @@ CamperGroup:
 	dw ROGGENROLA
 	db 21
 	dw ROGGENROLA
-	db 27
+	db 25
 	dw PSYDUCK
+	db 27
+	dw TYKER
 	db -1 ; end
 
 	next_list_item ; CAMPER (13)
@@ -4650,8 +4652,10 @@ CamperGroup:
 	dw BOLDORE
 	db 33
 	dw BOLDORE
-	db 36
+	db 35
 	dw GOLDUCK
+	db 37
+	dw STRAIGAR
 	db -1 ; end
 
 	next_list_item ; CAMPER (14)
@@ -4702,8 +4706,10 @@ CamperGroup:
 	dw BOLDORE
 	db 40
 	dw SLUGMA
-	db 42
+	db 41
 	dw GOLDUCK
+	db 42
+	dw STRAIGAR
 	db -1 ; end
 
 	next_list_item ; CAMPER (21)
@@ -4720,6 +4726,9 @@ CamperGroup:
 	db 45
 	dw GOLDUCK
 	dw DISABLE, ZEN_HEADBUTT, AQUA_TAIL, PSYCH_UP
+	db 47
+	dw STRAIGAR
+	dw DYNAMO_RUSH, AGILITY, PLAY_ROUGH, ZEN_HEADBUTT
 	db -1 ; end
 
 	next_list_item ; CAMPER (22)
@@ -4975,7 +4984,7 @@ BoarderGroup:
 PokefanMGroup:
 	next_list_item ; POKEFANM (1)
 	db "WILLIAM@", TRAINERTYPE_ITEM
-	db 14
+	db 16
 	dw DEDENNE
 	db BERRY
 	db -1 ; end
@@ -5039,10 +5048,10 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (7)
 	db "BRANDON@", TRAINERTYPE_ITEM
-	db 15
+	db 16
 	dw LILLIPUP
 	db BERRY
-	db 15
+	db 16
 	dw MAREEP
 	db BERRY
 	db -1 ; end
@@ -5178,20 +5187,20 @@ TwinsGroup:
 
 	next_list_item ; TWINS (2)
 	db "ANN & ANNE@", TRAINERTYPE_MOVES
-	db 16
+	db 18
 	dw CLEFAIRY
 	dw STORED_POWER, DEFENSE_CURL, DOUBLESLAP, DISARMING_VOICE
-	db 16
+	db 18
 	dw JIGGLYPUFF
 	dw SING, PLAY_NICE, ECHOED_VOICE, DISABLE
 	db -1 ; end
 
 	next_list_item ; TWINS (3)
 	db "ANN & ANNE@", TRAINERTYPE_MOVES
-	db 16
+	db 18
 	dw JIGGLYPUFF
 	dw SING, PLAY_NICE, ECHOED_VOICE, DISABLE
-	db 16
+	db 18
 	dw CLEFAIRY
 	dw STORED_POWER, DEFENSE_CURL, DOUBLESLAP, DISARMING_VOICE
 	db -1 ; end
@@ -5261,7 +5270,7 @@ TwinsGroup:
 PokefanFGroup:
 	next_list_item ; POKEFANF (1)
 	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 16
+	db 18
 	dw SNUBBULL
 	db BERRY
 	db -1 ; end
@@ -5374,9 +5383,9 @@ OfficerGroup:
 
 	next_list_item ; OFFICER (2)
 	db "DIRK@", TRAINERTYPE_NORMAL
-	db 14
+	db 17
 	dw GROWLITHE
-	db 14
+	db 17
 	dw GROWLITHE
 	db -1 ; end
 

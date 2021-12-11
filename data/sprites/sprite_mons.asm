@@ -13,7 +13,7 @@ SpriteMons:
 	dw TOGEPI
 	dw BUTTERFREE
 	dw ROCKRUFF
-	dw VILEPLUME
+	dw MAREANIE
 	dw PIKACHU
 	dw CLEFAIRY
 	dw CHARMANDER
@@ -54,4 +54,3 @@ SpriteMons:
 	dw MUNNA
 	dw HEATMOR
 	dw FLOETTE
-	dw MAREANIE

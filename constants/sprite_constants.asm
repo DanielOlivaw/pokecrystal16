@@ -127,7 +127,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_TOGEPI ; 8a
 	const SPRITE_BUTTERFREE ; 8b
 	const SPRITE_ROCKRUFF ; 8c
-	const SPRITE_VILEPLUME ; 8d
+	const SPRITE_MAREANIE ; 8d
 	const SPRITE_PIKACHU ; 8e
 	const SPRITE_CLEFAIRY ; 8f
 	const SPRITE_CHARMANDER ; 90
@@ -168,7 +168,6 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MUNNA ; b3
 	const SPRITE_HEATMOR ; b4
 	const SPRITE_FLOETTE ; b5
-	const SPRITE_MAREANIE ; b6
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0
