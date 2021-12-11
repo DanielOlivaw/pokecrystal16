@@ -190,16 +190,16 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_ROUTE_46_1    ; 04
 	const FRUITTREE_ROUTE_30_2    ; 05
 	const FRUITTREE_ROUTE_33_1    ; 06
-	const FRUITTREE_ROUTE_33_2    ; 07
-	const FRUITTREE_ROUTE_31      ; 08
-	const FRUITTREE_ROUTE_43      ; 09
-	const FRUITTREE_VIOLET_CITY   ; 0a
-	const FRUITTREE_ROUTE_46_2    ; 0b
-	const FRUITTREE_ROUTE_35      ; 0c
-	const FRUITTREE_ROUTE_45      ; 0d
-	const FRUITTREE_ROUTE_36      ; 0e
-	const FRUITTREE_ROUTE_26      ; 0f
-	const FRUITTREE_ROUTE_39      ; 10
+	const FRUITTREE_ROUTE_31      ; 07
+	const FRUITTREE_ROUTE_33_2    ; 08
+	const FRUITTREE_VIOLET_CITY   ; 09
+	const FRUITTREE_ROUTE_46_2    ; 0a
+	const FRUITTREE_ROUTE_35      ; 0b
+	const FRUITTREE_ROUTE_45      ; 0c
+	const FRUITTREE_ROUTE_36      ; 0d
+	const FRUITTREE_ROUTE_26      ; 0e
+	const FRUITTREE_ROUTE_39      ; 0f
+	const FRUITTREE_ROUTE_43      ; 10
 	const FRUITTREE_ROUTE_44      ; 11
 	const FRUITTREE_ROUTE_37_1    ; 12
 	const FRUITTREE_ROUTE_37_2    ; 13
