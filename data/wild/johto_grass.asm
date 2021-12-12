@@ -1440,7 +1440,7 @@ JohtoGrassWildMons:
 	dbw 17, PIDGEOTTO
 	dbw 16, MAGNEMITE
 	dbw 17, JOLTIK
-	dbw 15, SKIDDO
+	dbw 17, SKIDDO
 	dbw 13, TAUROS
 	dbw 13, MILTANK
 	; day
@@ -1448,7 +1448,7 @@ JohtoGrassWildMons:
 	dbw 17, PIDGEOTTO
 	dbw 16, MAGNEMITE
 	dbw 17, JOLTIK
-	dbw 15, SKIDDO
+	dbw 17, SKIDDO
 	dbw 13, TAUROS
 	dbw 13, MILTANK
 	; nite
@@ -1456,9 +1456,9 @@ JohtoGrassWildMons:
 	dbw 17, HOOTHOOT
 	dbw 16, MAGNEMITE
 	dbw 17, JOLTIK
-	dbw 15, SCRAGGY
-	dbw 15, MEOWTH_G
-	dbw 15, MEOWTH_G
+	dbw 17, SCRAGGY
+	dbw 13, MEOWTH_G
+	dbw 13, MEOWTH_G
 
 	map_id ROUTE_39
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
