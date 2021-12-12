@@ -288,7 +288,7 @@ MonMenuIconPals:
 	icon_pals PINK,   BLUE   ; MEDICHAM
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GRAY   ; MANECTRIC
-	icon_pals GREEN,  GOLD   ; ROSELIA
+	icon_pals GREEN,  PURPLE ; ROSELIA
 	icon_pals GREEN,  BLUE   ; GULPIN
 	icon_pals PURPLE, BLUE   ; SWALOT
 	icon_pals BLUE,   GREEN  ; CARVANHA
@@ -374,8 +374,8 @@ MonMenuIconPals:
 	icon_pals BLUE,   GOLD   ; SHINX
 	icon_pals BLUE,   GOLD   ; LUXIO
 	icon_pals BLUE,   GOLD   ; LUXRAY
-	icon_pals GREEN,  GOLD   ; BUDEW
-	icon_pals GREEN,  GOLD   ; ROSERADE
+	icon_pals GREEN,  PURPLE ; BUDEW
+	icon_pals GREEN,  PURPLE ; ROSERADE
 	icon_pals BLUE,   RED    ; CRANIDOS
 	icon_pals BLUE,   RED    ; RAMPARDOS
 	icon_pals GRAY,   BLUE   ; SHIELDON
