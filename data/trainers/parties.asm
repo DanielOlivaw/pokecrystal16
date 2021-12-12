@@ -857,10 +857,10 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (10)
 	db "CHAD@", TRAINERTYPE_NORMAL
+	db 19
+	dw BLIPBUG
 	db 21
 	dw MAWILE
-	db 21
-	dw BLIPBUG
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (11)
@@ -1253,14 +1253,14 @@ LassGroup:
 	next_list_item ; LASS (10)
 	db "DANA@", TRAINERTYPE_MOVES
 	db 18
-	dw FLAAFFY
-	dw TAKE_DOWN, COTTON_SPORE, THUNDERSHOCK, THUNDER_WAVE
-	db 18
 	dw HATENNA
 	dw PSYBEAM, AROMATHERAPY, DISARMING_VOICE, PLAY_NICE
 	db 18
 	dw CUBCHOO
 	dw BRINE, FURY_SWIPES, ICY_WIND, PLAY_NICE
+	db 18
+	dw FLAAFFY
+	dw TAKE_DOWN, COTTON_SPORE, THUNDERSHOCK, THUNDER_WAVE
 	db -1 ; end
 
 	next_list_item ; LASS (11)
@@ -3234,8 +3234,8 @@ SailorGroup:
 
 	next_list_item ; SAILOR (10)
 	db "HARRY@", TRAINERTYPE_NORMAL
-	db 20
-	dw TOTODILE
+	db 21
+	dw WOOPER
 	db -1 ; end
 
 	next_list_item ; SAILOR (11)
