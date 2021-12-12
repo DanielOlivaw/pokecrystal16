@@ -501,8 +501,9 @@ HurtItselfText:
 	prompt
 
 ConfusedNoMoreText:
-	text "<USER>'s"
-	line "confused no more!"
+	text "<USER>"
+	line "snapped out of"
+	cont "confusion!"
 	prompt
 
 BecameConfusedText:
