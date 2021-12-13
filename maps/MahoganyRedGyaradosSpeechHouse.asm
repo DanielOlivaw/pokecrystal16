@@ -26,13 +26,13 @@ MahoganyRedGyaradosSpeechHouseTeacherScript:
 	closetext
 	end
 
-MahoganyRedGyaradosSpeechHouseUnusedBookshelf1:
-; unused
-	jumpstd picturebookshelf
+; MahoganyRedGyaradosSpeechHouseUnusedBookshelf1:
+;; unused
+	; jumpstd picturebookshelf
 
-MahoganyRedGyaradosSpeechHouseUnusedBookshelf2:
-; unused
-	jumpstd magazinebookshelf
+; MahoganyRedGyaradosSpeechHouseUnusedBookshelf2:
+;; unused
+	; jumpstd magazinebookshelf
 
 MahoganyRedGyaradosSpeechHouseBlackBeltText:
 	text "I heard that a red"

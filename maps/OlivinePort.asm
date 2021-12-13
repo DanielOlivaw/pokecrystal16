@@ -345,7 +345,7 @@ UnknownText_0x74bce:
 	done
 
 OlivinePortFishingGuru1Text:
-	text "SHELLDER are easy"
+	text "CHINCHOU are easy"
 	line "to catch here."
 
 	para "They're kind of"

@@ -233,8 +233,8 @@ MartGoldenrod5F:
 MartOlivine:
 	db 3 ; # items
 	dbw TM_MUD_SHOT,     1500
-	dbw TM_RETALIATE,    3000
 	dbw TM_SIGNAL_BEAM,  3000
+	dbw TM_RETALIATE,    3000
 	db -1 ; end
 
 MartEcruteak:
