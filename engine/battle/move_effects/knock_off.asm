@@ -72,9 +72,6 @@ BattleCommand_KnockOff:
 	and a
 	ret nz
 
-; If the enemy steals your item,
-; it's gone for good if you don't get it back.
-
 	call .playeritem
 	xor a
 	ld [hl], a
@@ -86,6 +83,17 @@ BattleCommand_KnockOff:
 	cp EFFECT_INCINERATE
 	jr z, .incinerate_text
 
+; If the enemy knocks off your item,
+; it's returned to your inventory.
+
+; If you knock off the enemy's item,
+; it's placed in your inventory.
+
+	ld a, 1
+	ld [wItemQuantityChangeBuffer], a
+	ld hl, wNumItems
+	call ReceiveItem
+
 	call GetItemName
 	ld hl, KnockedOffText
 	jp StdBattleTextbox
@@ -96,6 +104,8 @@ BattleCommand_KnockOff:
 	ld d, h
 	ld e, l
 	ld hl, wBattleMonItem
+	ld a, [hl]
+	ld [wCurItem], a
 	ret
 
 .enemyitem
@@ -104,6 +114,8 @@ BattleCommand_KnockOff:
 	ld d, h
 	ld e, l
 	ld hl, wEnemyMonItem
+	ld a, [hl]
+	ld [wCurItem], a
 	ret
 
 .incinerate_berries_player

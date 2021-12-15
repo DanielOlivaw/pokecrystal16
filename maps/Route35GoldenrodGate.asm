@@ -28,7 +28,7 @@ RandyScript:
 	writetext Route35GoldenrodGatePlayerReceivedAMonWithMailText
 	playsound SFX_KEY_ITEM
 	waitsfx
-	givepoke TROPIUS, 10, NO_ITEM, TRUE, GiftSpearowName, GiftSpearowOTName
+	givepoke STARLY, 10, NO_ITEM, TRUE, GiftSpearowName, GiftSpearowOTName
 	givepokemail GiftSpearowMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
