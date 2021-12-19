@@ -1595,8 +1595,6 @@ CooltrainerFGroup:
 	dw VAPOREON
 	db 22
 	dw LEAFEON
-	db 22
-	dw SYLVEON
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (2)
@@ -4466,13 +4464,13 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (20)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 23
+	db 21
 	dw CUTIEFLY
 	dw DRAINING_KISS, STUN_SPORE, STRUGGLE_BUG, SILVER_WIND
-	db 23
+	db 21
 	dw SINISTEA
 	dw SUCKER_PUNCH, PROTECT, MEGA_DRAIN, WITHDRAW
-	db 25
+	db 23
 	dw CLEFAIRY
 	dw WAKE_UP_SLAP, MINIMIZE, STORED_POWER, DISARMING_VOICE
 	db -1 ; end

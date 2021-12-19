@@ -87,28 +87,13 @@ YawnPutToSleep:
 	jr .fail
 
 .not_protected_by_item
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	ld d, h
-	ld e, l
-	ld a, [de]
-	and SLP
-	ld hl, AlreadyAsleepText
-	jr nz, .fail
-
-	ld a, [de]
-	and a
+	call CheckForStatusIfAlreadyHasAny
 	jr nz, .cant_sleep
 
 	farcall CheckSubstituteOpp
 	jr nz, .cant_sleep
 
-	ld b, $7
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr z, .random_loop
 	ld b, $3
-
 .random_loop
 	call BattleRandom
 	and b
@@ -123,7 +108,7 @@ YawnPutToSleep:
 	ld hl, FellAsleepText
 	call StdBattleTextbox
 	ld de, ANIM_SLP
-	call FarPlayBattleAnimation
+	farcall PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 	ret

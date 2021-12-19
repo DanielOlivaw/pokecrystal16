@@ -2993,7 +2993,6 @@ Punishment:
 	damagecalc
 	stab
 	damagevariation
-	conditionalboost
 	checkhit
 	moveanim
 	failuretext
@@ -3015,7 +3014,6 @@ StoredPower:
 	damagecalc
 	stab
 	damagevariation
-	conditionalboost
 	checkhit
 	moveanim
 	failuretext

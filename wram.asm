@@ -1760,8 +1760,9 @@ NEXTU ; d002
 ; movement buffer data
 wMovementBufferCount:: db
 wMovementBufferObject:: db
-wUnusedMovementBufferBank:: db
-wUnusedMovementBufferPointer:: dw
+; wUnusedMovementBufferBank:: db
+; wUnusedMovementBufferPointer:: dw
+	ds 3
 wMovementBuffer:: ds 55
 
 NEXTU ; d002
@@ -2048,7 +2049,8 @@ wMailboxEnd:: ; d0fe
 ENDU ; d100
 
 wListPointer:: dw ; d100
-wUnusedD102:: dw ; d102
+wStolenItem:: db ; d102
+	ds 1
 wItemAttributesPtr:: dw ; d104
 
 wCurTMHM:: db ; TMHM Update
@@ -2350,7 +2352,8 @@ wPokedexShowPointerBank:: db
 wd271:: dw ; mobile
 
 NEXTU ; d26b
-wUnusedEggHatchFlag:: db
+; wUnusedEggHatchFlag:: db
+	ds 1
 
 NEXTU ; d26b
 ; enemy party

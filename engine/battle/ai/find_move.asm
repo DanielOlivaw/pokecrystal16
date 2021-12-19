@@ -738,6 +738,7 @@ AI_Smart_MeanLook:
 
 .discourage
 	inc [hl]
+	inc [hl]
 	ret
 
 .encourage
