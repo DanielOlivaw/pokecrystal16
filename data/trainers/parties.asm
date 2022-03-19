@@ -1658,9 +1658,10 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (9)
-	db "BETH@", TRAINERTYPE_MOVES
+	db "BETH@", TRAINERTYPE_ITEM_MOVES
 	db 40
 	dw RAPIDASH
+	db GOLD_BERRY
 	dw POISON_JAB, INFERNO, SMART_STRIKE, FLAME_CHARGE
 	db -1 ; end
 
@@ -1688,9 +1689,10 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (12)
-	db "BETH@", TRAINERTYPE_MOVES
+	db "BETH@", TRAINERTYPE_ITEM_MOVES
 	db 46
 	dw RAPIDASH
+	db GOLD_BERRY
 	dw POISON_JAB, FIRE_BLAST, SMART_STRIKE, FLAME_CHARGE
 	db -1 ; end
 

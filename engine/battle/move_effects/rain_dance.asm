@@ -24,4 +24,5 @@ BattleCommand_StartRain:
 
 .failed
 	farcall AnimateFailedMove
-	jp PrintButItFailed
+	farcall PrintButItFailed
+	ret

@@ -2083,11 +2083,11 @@ RaikouEvosAttacks:
 	dbw 1, LEER
 	dbw 1, QUICK_ATTACK
 	dbw 1, CHARGE
-	dbw 3, CHARGE_BEAM
-	dbw 6, SPARK
+	dbw 3, SPARK
+	dbw 6, ROAR
 	dbw 12, BITE
 	dbw 18, CALM_MIND
-	dbw 24, ROAR
+	dbw 24, CHARGE_BEAM
 	dbw 30, THUNDER_FANG
 	dbw 36, HOWL
 	dbw 42, CRUNCH
@@ -2107,11 +2107,11 @@ EnteiEvosAttacks:
 	dbw 1, LEER
 	dbw 1, FIRE_SPIN
 	dbw 1, SMOKESCREEN
-	dbw 3, STOMP
-	dbw 6, FLAME_WHEEL
+	dbw 3, FLAME_WHEEL
+	dbw 6, ROAR
 	dbw 12, BITE
 	dbw 18, CALM_MIND
-	dbw 24, ROAR
+	dbw 24, STOMP
 	dbw 30, FIRE_FANG
 	dbw 36, SCARY_FACE
 	dbw 42, CRUNCH
@@ -2132,10 +2132,10 @@ SuicuneEvosAttacks:
 	dbw 1, GUST
 	dbw 1, MIST
 	dbw 3, AURORA_BEAM
-	dbw 6, WATER_PULSE
+	dbw 6, ROAR
 	dbw 12, BITE
 	dbw 18, CALM_MIND
-	dbw 24, ROAR
+	dbw 24, WATER_PULSE
 	dbw 30, ICE_FANG
 	dbw 36, DEFOG
 	dbw 42, CRUNCH

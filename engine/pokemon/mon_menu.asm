@@ -1278,6 +1278,8 @@ GetMoveAccuracyAsPercentage:
 	ld a, [wDeciramBuffer]
 	cp 255
 	jr z, .max_accuracy
+	cp 204
+	jr z, .eighty_accuracy
 	cp 153
 	jr z, .hypnosis_accuracy
 	ldh [hMultiplicand + 2], a
@@ -1298,6 +1300,11 @@ GetMoveAccuracyAsPercentage:
 
 .max_accuracy
 	ld a, 100
+	ld [wDeciramBuffer], a
+	ret
+
+.eighty_accuracy
+	ld a, 80
 	ld [wDeciramBuffer], a
 	ret
 

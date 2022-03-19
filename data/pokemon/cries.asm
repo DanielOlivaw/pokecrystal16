@@ -260,58 +260,58 @@ PokemonCries::
 	mon_cry CRY_GROWLITHE,     0,  256 ; LOMBRE
 	mon_cry CRY_SLOWKING,    260,  512 ; LUDICOLO
 	mon_cry CRY_MARILL,      189,  134 ; SEEDOT
-	mon_cry CRY_BULBASAUR,   128,  129  ; NUZLEAF
-	mon_cry CRY_BULBASAUR,   128,  129  ; SHIFTRY
-	mon_cry CRY_BULBASAUR,   128,  129  ; TAILLOW
-	mon_cry CRY_BULBASAUR,   128,  129  ; SWELLOW
+	mon_cry CRY_WEEPINBELL,  -44,   86 ; NUZLEAF
+	mon_cry CRY_METAPOD,     112,  256 ; SHIFTRY
+	mon_cry CRY_DIGLETT,     240,  129 ; TAILLOW
+	mon_cry CRY_DIGLETT,     170,  160 ; SWELLOW
 	mon_cry CRY_SPEAROW,       0,  256 ; WINGULL
 	mon_cry CRY_FEAROW,       64,  288 ; PELIPPER
 	mon_cry CRY_TOGEPI,       16,  256 ; RALTS
 	mon_cry CRY_TOGETIC,      59,   56 ; KIRLIA
 	mon_cry CRY_TOGEPI,     -162,  380 ; GARDEVOIR
-	mon_cry CRY_BULBASAUR,   128,  129  ; SURSKIT
-	mon_cry CRY_BULBASAUR,   128,  129  ; MASQUERAIN
+	mon_cry CRY_SPINARAK,     85,  120 ; SURSKIT
+	mon_cry CRY_VENONAT,     121,  202 ; MASQUERAIN
 	mon_cry CRY_BULBASAUR,  1128,  129 ; SHROOMISH
-	mon_cry CRY_BULBASAUR,   656,  175 ; BRELOOM
-	mon_cry CRY_BULBASAUR,   128,  129  ; WHISMUR
-	mon_cry CRY_BULBASAUR,   128,  129  ; LOUDRED
-	mon_cry CRY_BULBASAUR,   128,  129  ; EXPLOUD
+	mon_cry CRY_BULBASAUR,   969,  175 ; BRELOOM
+	mon_cry CRY_VULPIX,      204,  192 ; WHISMUR
+	mon_cry CRY_VULPIX,      -44,  280 ; LOUDRED
+	mon_cry CRY_VULPIX,     -124,  320 ; EXPLOUD
 	mon_cry CRY_GROWLITHE,   238,  129 ; MAKUHITA
 	mon_cry CRY_GROWLITHE,    72,  224 ; HARIYAMA
-	mon_cry CRY_BULBASAUR,   128,  129  ; AZURILL
-	mon_cry CRY_BULBASAUR,   128,  129  ; NOSEPASS
-	mon_cry CRY_BULBASAUR,   128,  129  ; SKITTY
-	mon_cry CRY_BULBASAUR,   128,  129  ; DELCATTY
-	mon_cry CRY_BULBASAUR,   128,  129  ; SABLEYE
+	mon_cry CRY_MARILL,      283,  288 ; AZURILL
+	mon_cry CRY_SLOWKING,   -167,  320 ; NOSEPASS
+	mon_cry CRY_CLEFAIRY,    182,  106 ; SKITTY
+	mon_cry CRY_CLEFAIRY,    153,  256 ; DELCATTY
+	mon_cry CRY_METAPOD,     102,  145 ; SABLEYE
 	mon_cry CRY_PIDGEOTTO,     0,  256 ; MAWILE
 	mon_cry CRY_NIDORAN_M,     0,  256 ; ARON
 	mon_cry CRY_NIDORAN_M,    44,  320 ; LAIRON
 	mon_cry CRY_RAICHU,        0,  256 ; AGGRON
-	mon_cry CRY_BULBASAUR,   128,  129  ; MEDITITE
-	mon_cry CRY_BULBASAUR,   128,  129  ; MEDICHAM
-	mon_cry CRY_BULBASAUR,   128,  129  ; ELECTRIKE
-	mon_cry CRY_BULBASAUR,   128,  129  ; MANECTRIC
+	mon_cry CRY_SEEL,        238,  175 ; MEDITITE
+	mon_cry CRY_SEEL,        168,  256 ; MEDICHAM
+	mon_cry CRY_GROWLITHE,    72,  160 ; ELECTRIKE
+	mon_cry CRY_GROWLITHE,   -44,  224 ; MANECTRIC
 	mon_cry CRY_CHIKORITA,   -34,  288 ; ROSELIA
-	mon_cry CRY_BULBASAUR,   128,  129  ; GULPIN
-	mon_cry CRY_BULBASAUR,   128,  129  ; SWALOT
-	mon_cry CRY_BULBASAUR,   128,  129  ; CARVANHA
-	mon_cry CRY_BULBASAUR,   128,  129  ; SHARPEDO
-	mon_cry CRY_BULBASAUR,   128,  129  ; WAILMER
-	mon_cry CRY_BULBASAUR,   128,  129  ; WAILORD
+	mon_cry CRY_GRIMER,      -34,  160 ; GULPIN
+	mon_cry CRY_MUK,        -150,  224 ; SWALOT
+	mon_cry CRY_EKANS,       182,   94 ; CARVANHA
+	mon_cry CRY_CATERPIE,    -16,  128 ; SHARPEDO
+	mon_cry CRY_CATERPIE,      0,  320 ; WAILMER
+	mon_cry CRY_CATERPIE,   -183,  512 ; WAILORD
 	mon_cry CRY_GRIMER,        0,  256 ; NUMEL
 	mon_cry CRY_MUK,         239,  383 ; CAMERUPT
 	mon_cry CRY_VOLTORB,     237,  256 ; TORKOAL
-	mon_cry CRY_BULBASAUR,   128,  129  ; SPOINK
-	mon_cry CRY_BULBASAUR,   128,  129  ; GRUMPIG
+	mon_cry CRY_NIDOQUEEN,   143,  144 ; SPOINK
+	mon_cry CRY_NIDOQUEEN,   119,  192 ; GRUMPIG
 	mon_cry CRY_CATERPIE,      0,  256 ; TRAPINCH
 	mon_cry CRY_CATERPIE,    252,  172 ; VIBRAVA
 	mon_cry CRY_CATERPIE,    168,  342 ; FLYGON
-	mon_cry CRY_BULBASAUR,   128,  129  ; CACNEA
-	mon_cry CRY_BULBASAUR,   128,  129  ; CACTURNE
+	mon_cry CRY_BULBASAUR,   144,  136 ; CACNEA
+	mon_cry CRY_BULBASAUR,    96,  192 ; CACTURNE
 	mon_cry CRY_NATU,       -103,  256 ; SWABLU
 	mon_cry CRY_NATU,       -167,  360 ; ALTARIA
-	mon_cry CRY_BULBASAUR,   128,  129  ; ZANGOOSE
-	mon_cry CRY_EKANS,       224,  144 ; SEVIPER
+	mon_cry CRY_ODDISH,      128,  224 ; ZANGOOSE
+	mon_cry CRY_EKANS,       635,  144 ; SEVIPER
 	mon_cry CRY_GOLEM,       224,  192 ; LUNATONE
 	mon_cry CRY_VULPIX,        0,  256 ; SOLROCK
 	mon_cry CRY_BULBASAUR,   128,  129  ; BARBOACH
@@ -320,26 +320,26 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      238,  352 ; CRAWDAUNT
 	mon_cry CRY_VOLTORB,     237,  256 ; BALTOY
 	mon_cry CRY_VOLTORB,     168,  272 ; CLAYDOL
-	mon_cry CRY_BULBASAUR,   128,  129  ; LILEEP
-	mon_cry CRY_BULBASAUR,   128,  129  ; CRADILY
-	mon_cry CRY_BULBASAUR,   128,  129  ; ANORITH
-	mon_cry CRY_BULBASAUR,   128,  129  ; ARMALDO
-	mon_cry CRY_BULBASAUR,   128,  129  ; FEEBAS
-	mon_cry CRY_BULBASAUR,   128,  129  ; MILOTIC
-	mon_cry CRY_BULBASAUR,   128,  129  ; SHUPPET
-	mon_cry CRY_BULBASAUR,   128,  129  ; BANETTE
-	mon_cry CRY_PARAS,         2,  160 ; DUSKULL
+	mon_cry CRY_DUNSPARCE,   461,  216 ; LILEEP
+	mon_cry CRY_DUNSPARCE,   438,  272 ; CRADILY
+	mon_cry CRY_CATERPIE,    147,  224 ; ANORITH
+	mon_cry CRY_FEAROW,      189,  145 ; ARMALDO
+	mon_cry CRY_EKANS,        85,   85 ; FEEBAS
+	mon_cry CRY_BULBASAUR,     0,  320 ; MILOTIC
+	mon_cry CRY_HOOTHOOT,    354,  129 ; SHUPPET
+	mon_cry CRY_MUK,         121,  512 ; BANETTE
+	mon_cry CRY_PARAS,         0,  160 ; DUSKULL
 	mon_cry CRY_PARAS,         0,  256 ; DUSCLOPS
 	mon_cry CRY_KANGASKHAN,    0,  256 ; TROPIUS
 	mon_cry CRY_PARAS,       238,  383 ; CHIMECHO
-	mon_cry CRY_BULBASAUR,   128,  129  ; ABSOL
-	mon_cry CRY_BULBASAUR,   128,  129  ; WYNAUT
+	mon_cry CRY_VENONAT,    -266,  288 ; ABSOL
+	mon_cry CRY_AMPHAROS,    720,  160 ; WYNAUT
 	mon_cry CRY_FEAROW,        0,  256 ; SNORUNT
 	mon_cry CRY_FEAROW,      111,  352 ; GLALIE
-	mon_cry CRY_BULBASAUR,   128,  129  ; SPHEAL
-	mon_cry CRY_BULBASAUR,   128,  129  ; SEALEO
-	mon_cry CRY_BULBASAUR,   128,  129  ; WALREIN
-	mon_cry CRY_BULBASAUR,   128,  129  ; CLAMPERL
+	mon_cry CRY_SEEL,        170,  255 ; SPHEAL
+	mon_cry CRY_SEEL,         57,  320 ; SEALEO
+	mon_cry CRY_SEEL,        -44,  512 ; WALREIN
+	mon_cry CRY_FEAROW,       64,  160 ; CLAMPERL
 	mon_cry CRY_BULBASAUR,   128,  129  ; HUNTAIL
 	mon_cry CRY_BULBASAUR,   128,  129  ; GOREBYSS
 	mon_cry CRY_SLOWKING,    352,  224 ; RELICANTH
@@ -394,7 +394,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   128,  129  ; DRIFBLIM
 	mon_cry CRY_BULBASAUR,   128,  129  ; BUNEARY
 	mon_cry CRY_BULBASAUR,   128,  129  ; LOPUNNY
-	mon_cry CRY_BULBASAUR,   128,  129  ; MISMAGIUS
+	mon_cry CRY_HOOTHOOT,    283,  383 ; MISMAGIUS
 	mon_cry CRY_MARILL,     -183,  320 ; HONCHKROW
 	mon_cry CRY_CLEFAIRY,    119,  144 ; GLAMEOW
 	mon_cry CRY_CLEFAIRY,    153,  383 ; PURUGLY
@@ -499,8 +499,8 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   128,  129  ; CARRACOSTA
 	mon_cry CRY_BULBASAUR,   128,  129  ; ARCHEN
 	mon_cry CRY_BULBASAUR,   128,  129  ; ARCHEOPS
-	mon_cry CRY_BULBASAUR,   128,  129  ; ZORUA
-	mon_cry CRY_BULBASAUR,   128,  129  ; ZOROARK
+	mon_cry CRY_VULPIX,      136,  176 ; ZORUA
+	mon_cry CRY_VULPIX,       44,  232 ; ZOROARK
 	mon_cry CRY_BULBASAUR,   128,  129  ; SOLOSIS
 	mon_cry CRY_BULBASAUR,   128,  129  ; DUOSION
 	mon_cry CRY_BULBASAUR,   128,  129  ; REUNICLUS
@@ -546,9 +546,9 @@ PokemonCries::
 	mon_cry CRY_VULPIX,      238,   72 ; FENNEKIN
 	mon_cry CRY_VULPIX,      136,  224 ; BRAIXEN
 	mon_cry CRY_VULPIX,       88,  284 ; DELPHOX
-	mon_cry CRY_BULBASAUR,   128,  129  ; FROAKIE
-	mon_cry CRY_BULBASAUR,   128,  129  ; FROGADIER
-	mon_cry CRY_BULBASAUR,   128,  129  ; GRENINJA
+	mon_cry CRY_CLEFFA,     -183,  144 ; FROAKIE
+	mon_cry CRY_CLEFFA,     -354,  224 ; FROGADIER
+	mon_cry CRY_CLEFFA,     -452,  336 ; GRENINJA
 	mon_cry CRY_SPEAROW,     330,  256 ; FLETCHLING
 	mon_cry CRY_FEAROW,      255,   72 ; FLETCHINDR
 	mon_cry CRY_RAICHU,      248,  192 ; TALONFLAME
@@ -562,8 +562,8 @@ PokemonCries::
 	mon_cry CRY_SQUIRTLE,     17,  192 ; GOGOAT
 	mon_cry CRY_TEDDIURSA,  1954,  110 ; PANCHAM
 	mon_cry CRY_TEDDIURSA,  1600,  216 ; PANGORO
-	mon_cry CRY_BULBASAUR,   128,  129  ; ESPURR
-	mon_cry CRY_BULBASAUR,   128,  129  ; MEOWSTIC
+	mon_cry CRY_CLEFAIRY,    128,  129 ; ESPURR
+	mon_cry CRY_CLEFAIRY,      0,  192 ; MEOWSTIC
 	mon_cry CRY_BULBASAUR,   128,  129  ; HONEDGE
 	mon_cry CRY_BULBASAUR,   128,  129  ; DOUBLADE
 	mon_cry CRY_BULBASAUR,   128,  129  ; AEGISLASH

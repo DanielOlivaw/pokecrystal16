@@ -24,4 +24,5 @@ BattleCommand_StartSun:
 
 .failed
 	farcall AnimateFailedMove
-	jp PrintButItFailed
+	farcall PrintButItFailed
+	ret

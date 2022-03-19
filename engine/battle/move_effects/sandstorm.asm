@@ -24,4 +24,5 @@ BattleCommand_StartSandstorm:
 
 .failed
 	farcall AnimateFailedMove
-	jp PrintButItFailed
+	farcall PrintButItFailed
+	ret

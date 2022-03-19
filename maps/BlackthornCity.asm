@@ -303,11 +303,10 @@ BlackthornCityTrainerTipsText:
 	text "TRAINER TIPS"
 
 	para "A #MON holding"
-	line "a MIRACLEBERRY"
+	line "a LUM BERRY will"
 
-	para "will cure itself"
-	line "of any status"
-	cont "problem."
+	para "cure itself of any"
+	line "status problem."
 	done
 
 BlackthornCity_MapEvents:

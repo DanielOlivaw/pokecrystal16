@@ -4809,8 +4809,6 @@ BattleCommand_BurnTarget:
 
 	ld hl, WasBurnedText
 	call StdBattleTextbox
-	ld de, ANIM_BRN
-	call PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4873,8 +4871,6 @@ BattleCommand_Burn:
 
 	ld hl, WasBurnedText
 	call StdBattleTextbox
-	ld de, ANIM_BRN
-	call PlayOpponentBattleAnim
 
 	farcall UseHeldStatusHealingItem
 	ret
@@ -5850,11 +5846,12 @@ BattleCommand_TriStatusChance:
 BattleCommand_ElementalFang:
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-
 	ld bc, ICE_FANG
 	call CompareMove
 	jr z, BattleCommand_IceFang
 
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVar
 	ld bc, THUNDER_FANG
 	call CompareMove
 	jr z, BattleCommand_ThunderFang

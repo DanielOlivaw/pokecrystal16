@@ -193,7 +193,7 @@ MahogayMart1FBlackBeltText_LanceEntered:
 
 UnknownText_0x6c52a:
 	text "LANCE: DRAGONITE,"
-	line "HYPER BEAM."
+	line "GIGA IMPACT."
 	done
 
 UnknownText_0x6c549:

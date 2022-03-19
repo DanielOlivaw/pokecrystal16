@@ -1919,7 +1919,7 @@ MistyTerrainDescription:
 
 DefogDescription:
 	db   "Strong wind blows"
-	next "away barriers.@"
+	next "away obstacles.@"
 
 FairyWindDescription:
 	db   "Stirs up a fairy"
