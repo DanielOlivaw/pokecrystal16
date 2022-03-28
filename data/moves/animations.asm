@@ -2396,7 +2396,6 @@ BattleAnim_Fissure:
 BattleAnim_Growl:
 BattleAnim_BugBuzz:
 BattleAnim_Snarl:
-BattleAnim_Yawn:
 	anim_1gfx ANIM_GFX_NOISE
 	anim_battlergfx_2row
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
@@ -4125,6 +4124,7 @@ BattleAnim_MudShot:
 	anim_ret
 
 BattleAnim_Octazooka:
+BattleAnim_MistBall:
 	anim_3gfx ANIM_GFX_HAZE, ANIM_GFX_EGG, ANIM_GFX_SMOKE
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
 	anim_obj ANIM_OBJ_OCTAZOOKA, 64, 92, $4
@@ -4221,7 +4221,6 @@ BattleAnim_PerishSong:
 
 BattleAnim_IcyWind:
 BattleAnim_SilverWind:
-BattleAnim_FairyWind:
 BattleAnim_OminousWind:
 	anim_1gfx ANIM_GFX_SPEED
 	anim_call BattleAnim_MetalBurst
@@ -4427,6 +4426,14 @@ BattleAnim_Swagger:
 	anim_wait 32
 	anim_sound 0, 1, SFX_KINESIS_2
 	anim_obj ANIM_OBJ_ANGER, 104, 40, $0
+	anim_wait 40
+	anim_ret
+
+BattleAnim_Yawn:
+	anim_1gfx ANIM_GFX_WIND
+.loop
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
 	anim_wait 40
 	anim_ret
 
@@ -4826,6 +4833,7 @@ BattleAnim_StruggleBug:
 	anim_ret
 
 BattleAnim_SweetScent:
+BattleAnim_FairyWind:
 	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
 	anim_sound 0, 0, SFX_SWEET_SCENT
 	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
@@ -5226,7 +5234,6 @@ BattleAnim_Ancientpower:
 	anim_ret
 
 BattleAnim_ShadowBall:
-BattleAnim_MistBall:
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_SMOKE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
@@ -6964,7 +6971,6 @@ BattleAnim_BrightMoss:
 	anim_obj ANIM_OBJ_SHINY, 48, 96, $38
 	anim_wait 32
 	anim_ret
-
 
 BattleAnim_Ingrain:
 	anim_1gfx ANIM_GFX_CHARGE
