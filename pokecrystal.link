@@ -152,14 +152,13 @@ ROMX $39
 	"bank39"
 ROMX $3a
 	"Audio"
-	"Songs 1"
-ROMX $3b
-	"Songs 2"
-ROMX $3c
-	"Songs 3"
 	"Sound Effects"
+ROMX $3b
+	"Songs 1"
+ROMX $3c
+	"Songs 2"
 ROMX $3d
-	"Songs 4"
+	"Songs 3"
 ROMX $3e
 	"bank3E"
 ROMX $3f
@@ -222,7 +221,7 @@ ROMX $5d
 	"Crystal Phone Text 2"
 ROMX $5e
 	"UpdateBattleHUDs"
-	"Songs 5"
+	"Songs 4"
 	"Crystal Sound Effects"
 	"Mobile 5E"
 ROMX $5f

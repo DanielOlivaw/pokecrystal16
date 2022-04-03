@@ -108,13 +108,45 @@
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
 
-; GetMapMusic picks music for this value (see home/map.asm)
-MUSIC_MAHOGANY_MART EQU $64
+; new to pokecrystal
+	const MUSIC_SLATEPORT_CITY               ; 67
+	const MUSIC_FALLARBOR_TOWN               ; 68
+	const MUSIC_BLACK_CITY                   ; 69
+	const MUSIC_CONTEST_LOBBY                ; 6a
+	const MUSIC_FLOAROMA_TOWN                ; 6b
+	const MUSIC_FORTREE_CITY                 ; 6c
+	const MUSIC_HOENN_BICYCLE                ; 6d
+	const MUSIC_HOENN_MART                   ; 6e
+	const MUSIC_FRIENDLY_SHOP                ; 6f
+	const MUSIC_JOHTO_SAFARI_GATE            ; 70
+	const MUSIC_LAVERRE_CITY                 ; 71
+	const MUSIC_SOOTOPOLIS_CITY              ; 72
+	const MUSIC_NIMBASA_CITY                 ; 73
+	const MUSIC_METEOR_FALLS                 ; 74
+	const MUSIC_MT_CHIMNEY                   ; 75
+	const MUSIC_OREBURGH_GATE                ; 76
+	const MUSIC_PETALBURG_WOODS              ; 77
+	const MUSIC_SANTALUNE_FOREST             ; 78
+	const MUSIC_SCARY_HOUSE                  ; 79
+	const MUSIC_MARINE_TUBE                  ; 7a
+	const MUSIC_ROUTE_110                    ; 7b
+	const MUSIC_ROUTE_111                    ; 7c
+	const MUSIC_ROUTE_113                    ; 7d
+	const MUSIC_ROUTE_119                    ; 7e
+	const MUSIC_ROUTE_201                    ; 7f
+	const MUSIC_ROUTE_205                    ; 80
+	const MUSIC_UNOVA_ROUTE_1                ; 81
+	const MUSIC_UNOVA_ROUTE_2                ; 82
+	const MUSIC_UNOVA_ROUTE_4                ; 83
+	const MUSIC_UNOVA_ROUTE_12               ; 84
+	const MUSIC_MAXIE_ARCHIE_BATTLE          ; 85
+	const MUSIC_ALOLA_ELITE_FOUR_BATTLE      ; 86
+	const MUSIC_CHAMPION_BATTLE_B2W2         ; 87
+
+; GetMapMusic picks music for these values (see home/map.asm)
+MUSIC_MAHOGANY_MART EQU $fc
+MUSIC_RADIO_TOWER   EQU $fd
 
 ; ExitPokegearRadio_HandleMusic uses these values
 RESTART_MAP_MUSIC EQU $fe
 ENTER_MAP_MUSIC   EQU $ff
-
-; GetMapMusic picks music for this bit flag
-RADIO_TOWER_MUSIC_F EQU 7
-RADIO_TOWER_MUSIC EQU 1 << RADIO_TOWER_MUSIC_F

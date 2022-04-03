@@ -106,3 +106,37 @@ Music:
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
+; new to pokecrystal
+	dba Music_SlateportCity
+	dba Music_FallarborTown
+	dba Music_BlackCity
+	dba Music_ContestLobby
+	dba Music_FloaromaTown
+	dba Music_FortreeCity
+	dba Music_HoennBicycle
+	dba Music_HoennMart
+	dba Music_FriendlyShop
+	dba Music_JohtoSafariGate
+	dba Music_LaverreCity
+	dba Music_SootopolisCity
+	dba Music_NimbasaCity
+	dba Music_MeteorFalls
+	dba Music_MtChimney
+	dba Music_OreburghGate
+	dba Music_PetalburgWoods
+	dba Music_SantaluneForest
+	dba Music_ScaryHouse
+	dba Music_MarineTube
+	dba Music_Route110
+	dba Music_Route111
+	dba Music_Route113
+	dba Music_Route119
+	dba Music_Route201
+	dba Music_Route205
+	dba Music_UnovaRoute1
+	dba Music_UnovaRoute2
+	dba Music_UnovaRoute4
+	dba Music_UnovaRoute12
+	dba Music_MaxieArchieBattle
+	dba Music_AlolaEliteFourBattle
+	dba Music_ChampionBattle_B2W2

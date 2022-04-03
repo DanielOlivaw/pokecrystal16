@@ -78,18 +78,30 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .done
+	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jr .done
+	jp .done
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
-	jr .done
+	jp .done
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
+	jp z, .done
+
+	ld de, MUSIC_ALOLA_ELITE_FOUR_BATTLE
+	cp WILL
 	jr z, .done
+	cp BRUNO
+	jr z, .done
+	cp KAREN
+	jr z, .done
+	cp KOGA
+	jr z, .done
+
+	ld de, MUSIC_CHAMPION_BATTLE_B2W2
 	cp RED
 	jr z, .done
 
@@ -100,6 +112,8 @@ PlayBattleMusic:
 	jr z, .done
 	cp SCIENTIST
 	jr z, .done
+	
+	ld de, MUSIC_MAXIE_ARCHIE_BATTLE
 	cp ARCHER
 	jr z, .done
 	cp PROTON

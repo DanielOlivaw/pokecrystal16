@@ -28,15 +28,15 @@ INCLUDE "audio/music/titlescreen.asm"
 INCLUDE "audio/music/ruinsofalphinterior.asm"
 INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
-
-
-SECTION "Songs 2", ROMX
-
 INCLUDE "audio/music/route1.asm"
 INCLUDE "audio/music/route3.asm"
 INCLUDE "audio/music/route12.asm"
 INCLUDE "audio/music/kantogymbattle.asm"
 INCLUDE "audio/music/kantotrainerbattle.asm"
+
+
+SECTION "Songs 2", ROMX
+
 INCLUDE "audio/music/kantowildbattle.asm"
 INCLUDE "audio/music/pokemoncenter.asm"
 INCLUDE "audio/music/looklass.asm"
@@ -64,25 +64,21 @@ INCLUDE "audio/music/lavendertown.asm"
 INCLUDE "audio/music/dancinghall.asm"
 INCLUDE "audio/music/contestresults.asm"
 INCLUDE "audio/music/route30.asm"
-
-
-SECTION "Songs 3", ROMX
-
 INCLUDE "audio/music/violetcity.asm"
 INCLUDE "audio/music/route29.asm"
 INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"
 INCLUDE "audio/music/evolution.asm"
 INCLUDE "audio/music/printer.asm"
-
-
-SECTION "Songs 4", ROMX
-
 INCLUDE "audio/music/viridiancity.asm"
 INCLUDE "audio/music/celadoncity.asm"
 INCLUDE "audio/music/wildpokemonvictory.asm"
 INCLUDE "audio/music/successfulcapture.asm"
 INCLUDE "audio/music/gymleadervictory.asm"
+
+
+SECTION "Songs 3", ROMX
+
 INCLUDE "audio/music/mtmoonsquare.asm"
 INCLUDE "audio/music/gym.asm"
 INCLUDE "audio/music/pallettown.asm"
@@ -115,14 +111,14 @@ INCLUDE "audio/music/mainmenu.asm"
 INCLUDE "audio/music/lookkimonogirl.asm"
 INCLUDE "audio/music/pokeflutechannel.asm"
 INCLUDE "audio/music/bugcatchingcontest.asm"
-
-
-SECTION "Songs 5", ROMX
-
 INCLUDE "audio/music/mobileadaptermenu.asm"
 INCLUDE "audio/music/buenaspassword.asm"
 INCLUDE "audio/music/lookmysticalman.asm"
 INCLUDE "audio/music/crystalopening.asm"
+
+
+SECTION "Songs 4", ROMX
+
 INCLUDE "audio/music/battletowertheme.asm"
 INCLUDE "audio/music/suicunebattle.asm"
 INCLUDE "audio/music/battletowerlobby.asm"
@@ -139,6 +135,51 @@ INCLUDE "audio/music/mobileadapter.asm"
 SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
+
+
+SECTION "New Map Songs 1", ROMX
+
+INCLUDE "audio/music/slateportcity.asm"
+INCLUDE "audio/music/fallarbortown.asm"
+INCLUDE "audio/music/blackcity.asm"
+INCLUDE "audio/music/contestlobby.asm"
+INCLUDE "audio/music/floaromatown.asm"
+INCLUDE "audio/music/fortreecity.asm"
+INCLUDE "audio/music/hoennbicycle.asm"
+INCLUDE "audio/music/hoennmart.asm"
+INCLUDE "audio/music/friendlyshop.asm"
+INCLUDE "audio/music/johtosafarigate.asm"
+INCLUDE "audio/music/laverrecity.asm"
+INCLUDE "audio/music/sootopoliscity.asm"
+INCLUDE "audio/music/nimbasacity.asm"
+INCLUDE "audio/music/meteorfalls.asm"
+INCLUDE "audio/music/mtchimney.asm"
+
+
+SECTION "New Map Songs 2", ROMX
+
+INCLUDE "audio/music/oreburghgate.asm"
+INCLUDE "audio/music/petalburgwoods.asm"
+INCLUDE "audio/music/santaluneforest.asm"
+INCLUDE "audio/music/scaryhouse.asm"
+INCLUDE "audio/music/marinetube.asm"
+INCLUDE "audio/music/route110.asm"
+INCLUDE "audio/music/route111.asm"
+INCLUDE "audio/music/route113.asm"
+INCLUDE "audio/music/route119.asm"
+INCLUDE "audio/music/route201.asm"
+INCLUDE "audio/music/route205.asm"
+INCLUDE "audio/music/unovaroute1.asm"
+INCLUDE "audio/music/unovaroute2.asm"
+INCLUDE "audio/music/unovaroute4.asm"
+INCLUDE "audio/music/unovaroute12.asm"
+
+
+SECTION "New Battle Songs", ROMX
+
+INCLUDE "audio/music/maxiearchiebattle.asm"
+INCLUDE "audio/music/alolaelitefourbattle.asm"
+INCLUDE "audio/music/championbattleb2w2.asm"
 
 
 SECTION "Sound Effects", ROMX
