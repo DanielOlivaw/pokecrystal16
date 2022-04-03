@@ -126,24 +126,6 @@ OBJECT_EVENT_SIZE EQU 13 ; object_event
 	const OBJECTTYPE_5
 	const OBJECTTYPE_6
 
-; command queue members
-CMDQUEUE_TYPE  EQU 0
-CMDQUEUE_ADDR  EQU 1
-CMDQUEUE_03    EQU 3
-CMDQUEUE_04    EQU 4
-CMDQUEUE_05    EQU 5
-CMDQUEUE_ENTRY_SIZE EQU 6
-CMDQUEUE_CAPACITY EQU 4
-
-; HandleQueuedCommand.Jumptable indexes (see engine/overworld/events.asm)
-	const_def
-	const CMDQUEUE_NULL
-	const CMDQUEUE_NULL2
-	const CMDQUEUE_STONETABLE
-	const CMDQUEUE_TYPE3
-	const CMDQUEUE_TYPE4
-NUM_CMDQUEUE_TYPES EQU const_value
-
 ; elevfloor macro values
 ; ElevatorFloorNames indexes (see data/events/elevator_floors.asm)
 	const_def

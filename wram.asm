@@ -2543,8 +2543,9 @@ wObject11Struct:: object_struct wObject11
 wObject12Struct:: object_struct wObject12
 wObjectStructsEnd:: ; d6de
 
-wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
+wStoneTableAddress:: dw
 
+	ds 22
 	;ds 40 ; needed space for new mons
 
 wMapObjects:: ; d71e
