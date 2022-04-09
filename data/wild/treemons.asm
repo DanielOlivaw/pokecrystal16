@@ -162,7 +162,8 @@ TreeMonSet_Seaside:
 	db -1   
 
 TreeMonSet_CaveRock:
-	dbbw 90, 15, NOSEPASS
+	dbbw 60, 15, GEODUDE
+	dbbw 30, 15, NOSEPASS
 	dbbw 10, 15, SHUCKLE
 	db -1
 
@@ -174,6 +175,7 @@ TreeMonSet_BeachRock:
 	db -1
 
 TreeMonSet_KantoRock:
-	dbbw 90, 33, NOSEPASS
+	dbbw 60, 33, GRAVELER
+	dbbw 30, 33, NOSEPASS
 	dbbw 10, 33, CARBINK
 	db -1

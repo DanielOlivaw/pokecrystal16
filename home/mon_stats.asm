@@ -26,12 +26,12 @@ DrawBattleHPBar::
 ; Place 'HP:'
 	ld a, $60
 	ld [hli], a
-	ld a, $61
+	inc a ; ld a, $61
 	ld [hli], a
 
 ; Draw a template
 	push hl
-	ld a, $62 ; empty bar
+	inc a ; ld a, $62 ; empty bar
 .template
 	ld [hli], a
 	dec d
