@@ -82,6 +82,57 @@ CheckForHiddenItems:
 	inc hl
 	ret
 
+TreeItemEncounter:
+	ld hl, .TreeItems
+	call Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	jr .loop
+
+.ok
+	ld a, [hli]
+	inc a
+	jr z, .done
+	ld a, [hli]
+.done
+	ld [wScriptVar], a
+	ret
+
+.TreeItems:
+	db 4, TART_APPLE
+	db 4, SWEET_APPLE
+	db 1, GOLD_LEAF
+	db 4, SILVER_LEAF
+	db 10, PRETTY_WING
+	db 1, LUM_BERRY
+	db 3, LEPPA_BERRY
+	db 4, SITRUS_BERRY
+	db 5, PECHA_BERRY
+	db 5, CHERI_BERRY
+	db 5, ASPEAR_BERRY
+	db 5, RAWST_BERRY
+	db 5, PERSIM_BERRY
+	db 5, CHESTO_BERRY
+	db 10, ORAN_BERRY
+	db 2, LIECHI_BERRY
+	db 2, GANLON_BERRY
+	db 2, SALAC_BERRY
+	db 2, PETAYA_BERRY
+	db 2, APICOT_BERRY
+	db 2, MICLE_BERRY
+	db 2, GINEMA_BERRY
+	db 5, RED_APRICORN
+	db 5, BLU_APRICORN
+	db 5, YLW_APRICORN
+	db 5, GRN_APRICORN
+	db 5, WHT_APRICORN
+	db 5, BLK_APRICORN
+	db 5, PNK_APRICORN
+	db -1
+
 RockItemEncounter:
 	ld hl, .RockItems
 	call Random
