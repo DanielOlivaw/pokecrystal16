@@ -220,21 +220,22 @@ MartGoldenrod4F:
 
 MartGoldenrod5F:
 	db 8 ; # items
-	dbw TM_PROTECT,      2000
-	dbw TM_LIGHT_SCREEN, 2000
-	dbw TM_REFLECT,      2000
-	dbw TM_THUNDERPUNCH, 3000
-	dbw TM_FIRE_PUNCH,   3000
-	dbw TM_ICE_PUNCH,    3000
-	dbw TM_HYPER_BEAM,   7500
-	dbw TM_GIGA_IMPACT,  7500
+	dbw TM_PROTECT,      10000
+	dbw TM_LIGHT_SCREEN, 10000
+	dbw TM_REFLECT,      10000
+	dbw TM_THUNDERPUNCH, 10000
+	dbw TM_FIRE_PUNCH,   10000
+	dbw TM_ICE_PUNCH,    10000
+	dbw TM_HYPER_BEAM,   50000
+	dbw TM_GIGA_IMPACT,  50000
 	db -1 ; end
 
 MartOlivine:
 	db 3 ; # items
-	dbw TM_MUD_SHOT,     1500
-	dbw TM_SIGNAL_BEAM,  3000
-	dbw TM_RETALIATE,    3000
+	dbw TM_MUD_SHOT,     7500
+	dbw TM_WATER_PULSE,  7500
+	dbw TM_SIGNAL_BEAM,  10000
+	dbw TM_RETALIATE,    10000
 	db -1 ; end
 
 MartEcruteak:
@@ -343,14 +344,14 @@ MartCeladon2F2:
 
 MartCeladon3F:
 	db 8 ; # items
-	dbw TM_SAFEGUARD,    2000
-	dbw TM_STEALTH_ROCK, 2000
-	dbw TM_WEATHER_BALL, 3000
-	dbw TM_OMINOUS_WIND, 3000
-	dbw TM_VENOSHOCK,    4000
-	dbw TM_SWORDS_DANCE, 4500
-	dbw TM_SUBSTITUTE,   4500
-	dbw TM_FOCUS_BLAST,  5500
+	dbw TM_SAFEGUARD,    10000
+	dbw TM_STEALTH_ROCK, 10000
+	dbw TM_SWORDS_DANCE, 10000
+	dbw TM_WEATHER_BALL, 10000
+	dbw TM_OMINOUS_WIND, 10000
+	dbw TM_VENOSHOCK,    10000
+	dbw TM_SUBSTITUTE,   20000
+	dbw TM_FOCUS_BLAST,  30000
 	db -1 ; end
 
 MartCeladon4F:
