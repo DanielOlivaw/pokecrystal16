@@ -6,6 +6,6 @@
 	next "on its head, it"
 	next "senses other crea-"
 
-	page "ture's emotions."
+	page "tures' emotions."
 	next "It runs away from"
 	next "strong emotions.@"
