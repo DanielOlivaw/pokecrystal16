@@ -1168,7 +1168,6 @@ BattleAnim_StrengthSap:
 BattleAnim_Endeavor:
 BattleAnim_Refresh:
 BattleAnim_GyroBall:
-BattleAnim_ElectroBall:
 BattleAnim_HeatCrash:
 BattleAnim_HeavySlam:
 BattleAnim_DarkVoid:
@@ -1177,7 +1176,6 @@ BattleAnim_HealingWish:
 BattleAnim_LunarDance:
 BattleAnim_HealOrder:
 BattleAnim_DefendOrder:
-BattleAnim_TeeterDance:
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_POUND
@@ -2575,6 +2573,22 @@ BattleAnim_FakeTears:
 	anim_wait 96
 	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_TeeterDance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 0, 0, SFX_VICEGRIP
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
+	anim_wait 96
+	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
+	anim_call BattleAnim_ShowMon_0
+	anim_wait 16
+	anim_sound 0, 1, SFX_KINESIS
+	anim_obj ANIM_OBJ_CHICK, 136, 24, $15
+	anim_obj ANIM_OBJ_CHICK, 136, 24, $aa
+	anim_obj ANIM_OBJ_CHICK, 136, 24, $bf
+	anim_wait 96
 	anim_ret
 
 BattleAnim_Dig:
@@ -4109,11 +4123,11 @@ BattleAnim_SludgeBomb:
 	anim_ret
 
 BattleAnim_Purify:
-	anim_1gfx ANIM_GFX_EGG
-	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
-	anim_sound 6, 2, SFX_SLUDGE_BOMB
-	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
-	anim_wait 36
+	; anim_1gfx ANIM_GFX_EGG
+	; anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
+	; anim_sound 6, 2, SFX_SLUDGE_BOMB
+	; anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
+	; anim_wait 36
 	anim_ret
 
 BattleAnim_MudSlap:
@@ -4158,9 +4172,22 @@ BattleAnim_Caltrops:
 	anim_ret
 
 BattleAnim_ZapCannon:
-BattleAnim_ChargeBeam:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
 	anim_bgp $1b
+	anim_obp0 $30
+	anim_sound 6, 2, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_ZAP_CANNON, 64, 92, $2
+	anim_wait 40
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_LIGHTNING_BOLT, 136, 56, $2
+	anim_wait 16
+	anim_obj ANIM_OBJ_31, 136, 56, $0
+	anim_wait 128
+	anim_ret
+
+BattleAnim_ChargeBeam:
+BattleAnim_ElectroBall:
+	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
 	anim_obp0 $30
 	anim_sound 6, 2, SFX_ZAP_CANNON
 	anim_obj ANIM_OBJ_ZAP_CANNON, 64, 92, $2
@@ -4833,7 +4860,6 @@ BattleAnim_StruggleBug:
 	anim_ret
 
 BattleAnim_SweetScent:
-BattleAnim_FairyWind:
 	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
 	anim_sound 0, 0, SFX_SWEET_SCENT
 	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
@@ -4846,6 +4872,15 @@ BattleAnim_FairyWind:
 	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
 	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
 	anim_wait 128
+	anim_ret
+	
+BattleAnim_FairyWind:
+	anim_1gfx ANIM_GFX_FLOWER
+	anim_sound 0, 0, SFX_SWEET_SCENT
+	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
+	anim_wait 2
+	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
+	anim_wait 96
 	anim_ret
 
 BattleAnim_IronTail:
