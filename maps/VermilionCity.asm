@@ -295,7 +295,7 @@ VermilionCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 8 ; bg events
+	db 11 ; bg events
 	bg_event 25,  3, BGEVENT_READ, VermilionCitySign
 	bg_event  5, 19, BGEVENT_READ, VermilionGymSign
 	bg_event  5, 13, BGEVENT_READ, PokemonFanClubSign
