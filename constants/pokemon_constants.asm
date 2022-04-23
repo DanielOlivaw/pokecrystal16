@@ -742,6 +742,63 @@ if NUM_POKEMON > 999
 	fail "Too many Pokémon defined!"
 endc
 
+; Form values
+; related to:
+; - CosmeticSpeciesAndFormTable (see data/pokemon/variant_forms.asm)
+; - ValidVariantRanges (see data/pokemon/valid_variants.asm)
+
+; Gender & regional forms
+NO_FORM EQU 0
+PLAIN_FORM EQU 1
+; rattata/raticate
+; raichu
+; sandshrew/sandslash
+; vulpix/ninetales
+; exeggutor
+;  meowth/persian
+;  geodude/graveler/golem
+ALOLAN_FORM EQU 2
+; meowth
+;  slowpoke/slowbro/slowking
+; weezing
+; mr. mime
+; articuno/zapdos/moltres
+; corsola
+; zigzagoon/linoone
+; darumaka/darmanitan
+; yamask
+GALARIAN_FORM EQU 2
+
+; Gender-based forms
+; Pikachu
+; Gloom/Vileplume
+; Gyarados
+; Warwolf
+; Sudowoodo
+; Wooper
+; Wobbuffet
+; Gligar
+; Heracross
+; Sneasel
+; Meditite
+; Roselia
+; Gulpin/Swalot
+; Milotic
+; Relicanth
+; Bidoof/Bibarel
+; Combee
+; Pachirisu
+; Floatzel
+; Gible/Gabite/Garchomp
+; Hippopotas/Hippowdon
+; Snover
+; Weavile
+; Frillish/Jellicent
+; Meowstic
+	const_def 1
+	const MALE_FORM
+	const FEMALE_FORM
+
 ; Unown forms
 ; indexes for:
 ; - UnownWords (see data/pokemon/unown_words.asm)
@@ -778,3 +835,49 @@ endc
 	const UNOWN_Y ; 25
 	const UNOWN_Z ; 26
 NUM_UNOWN EQU const_value + -1 ; 26
+
+; Shellos/Gastrodon forms
+	const_def 1
+	const SHELLOS_WEST_SEA_FORM
+	const SHELLOS_EAST_SEA_FORM
+
+; Basculin forms
+	const_def 1
+	const BASCULIN_RED_STRIPED_FORM
+	const BASCULIN_BLUE_STRIPED_FORM
+
+; Vivillon forms
+	const_def 1
+	const VIVILLON_ARCHIPELAGO_FORM
+	const VIVILLON_CONTINENTAL_FORM
+	const VIVILLON_ELEGANT_FORM
+	const VIVILLON_GARDEN_FORM
+	const VIVILLON_HIGH_PLAINS_FORM
+	const VIVILLON_ICY_SNOW_FORM
+	const VIVILLON_JUNGLE_FORM
+	const VIVILLON_MARINE_FORM
+	const VIVILLON_MEADOW_FORM
+	const VIVILLON_MODERN_FORM
+	const VIVILLON_MONSOON_FORM
+	const VIVILLON_OCEAN_FORM
+	const VIVILLON_POLAR_FORM
+	const VIVILLON_RIVER_FORM
+	const VIVILLON_SANDSTORM_FORM
+	const VIVILLON_SAVANNA_FORM
+	const VIVILLON_SUN_FORM
+	const VIVILLON_TUNDRA_FORM
+	const VIVILLON_POKE_BALL_FORM
+	const VIVILLON_FANCY_FORM
+
+; Flabebe/Floette/Florges forms
+	const_def 1
+	const FLABEBE_RED_FORM
+	const FLABEBE_YELLOW_FORM
+	const FLABEBE_ORANGE_FORM
+	const FLABEBE_BLUE_FORM
+	const FLABEBE_WHITE_FORM
+
+; Toxtricity forms
+	const_def 1
+	const TOXTRICITY_AMPED_FORM
+	const TOXTRICITY_LOW_KEY_FORM
