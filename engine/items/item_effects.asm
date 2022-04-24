@@ -1189,7 +1189,8 @@ FastBallMultiplier:
 	call GetFarByte
 	ld b, a
 	and c
-	inc a
+	inc hl
+	cp -1
 	jr z, .next_list
 	ld a, b
 	cp d
