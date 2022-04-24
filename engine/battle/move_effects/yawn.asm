@@ -75,19 +75,19 @@ YawnPutToSleep:
 	jr z, .fog
 	cp WEATHER_STORM
 	jr z, .cant_sleep
-	callfar GetOpponentItem
-	ld a, b
-	cp HELD_PREVENT_SLEEP
-	jr nz, .not_protected_by_item
 
+	callfar GetOpponentItem
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
+	ld a, b
+	cp HELD_PREVENT_SLEEP
+	jr nz, .not_protected_by_item
 	ld hl, ProtectedByText
 	jr .fail
 
 .not_protected_by_item
-	call CheckForStatusIfAlreadyHasAny
+	farcall CheckForStatusIfAlreadyHasAny
 	jr nz, .cant_sleep
 
 	farcall CheckSubstituteOpp
@@ -103,7 +103,7 @@ YawnPutToSleep:
 	inc a
 	ld [de], a
 	call UpdateOpponentInParty
-	call RefreshBattleHuds
+	farcall RefreshBattleHuds
 
 	ld hl, FellAsleepText
 	call StdBattleTextbox

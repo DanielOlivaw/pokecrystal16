@@ -44,6 +44,14 @@ UproarState:
 .first_turn
 	ld hl, MakingUproarText
 	call StdBattleTextbox
+
+; get the opponent's status condition
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+; return if opponent is not asleep
+	ld b, a
+	and SLP
+	ret z
 	
 ; Wake up a sleeping opponent after Uproar is first used.
 	ld hl, wEnemyMonStatus

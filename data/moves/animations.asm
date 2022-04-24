@@ -4459,7 +4459,7 @@ BattleAnim_Swagger:
 BattleAnim_Yawn:
 	anim_1gfx ANIM_GFX_WIND
 .loop
-	anim_sound 0, 0, SFX_MENU
+	anim_sound 0, 0, SFX_LICK
 	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
 	anim_wait 40
 	anim_ret
