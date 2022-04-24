@@ -9,6 +9,16 @@ GuideGentsHouse_MapScripts:
 GuideGentsHouseGuideGent:
 	jumptextfaceplayer GuideGentsHouseGuideGentText
 
+GuideGentsHouseRockruff:
+	opentext
+	writetext GuideGentsHouseRockruffText
+	cry ROCKRUFF
+	loadmonindex 1, ROCKRUFF
+	special SpecialSetSeenMon
+	waitbutton
+	closetext
+	end
+
 GuideGentsHouseBookshelf:
 	jumpstd magazinebookshelf
 
@@ -25,6 +35,11 @@ GuideGentsHouseGuideGentText:
 	line "with kindness!"
 	done
 
+GuideGentsHouseRockruffText:
+	text "ROCKRUFF: Ruff"
+	line "ruff!"
+	done
+
 GuideGentsHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -38,5 +53,6 @@ GuideGentsHouse_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, GuideGentsHouseBookshelf
 	bg_event  1,  1, BGEVENT_READ, GuideGentsHouseBookshelf
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GuideGentsHouseGuideGent, EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+	object_event  3,  5, SPRITE_ROCKRUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GuideGentsHouseRockruff, -1
