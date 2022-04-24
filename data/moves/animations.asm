@@ -7221,6 +7221,23 @@ BattleAnim_PoisonTail:
 	anim_wait 64
 	anim_ret
 
+; BattleAnim_UTurn:
+	; anim_2gfx ANIM_GFX_HIT, ANIM_GFX_EXPLOSION
+	; anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	; anim_sound 6, 2, SFX_THROW_BALL
+	; anim_obj ANIM_OBJ_U_TURN_LAUNCH, 64, 92, $4
+	; anim_wait 16
+	; anim_sound 0, 1, SFX_DOUBLE_KICK
+	; anim_obj ANIM_OBJ_HIT_BIG_YFIX, 132, 56, $0
+	; anim_wait 8
+	; anim_sound 0, 0, SFX_RETURN
+	; anim_obj ANIM_OBJ_U_TURN_RISE, 132, 40, $6
+	; anim_wait 32
+	; anim_obj ANIM_OBJ_U_TURN_FALL, 48, 92, $30
+	; anim_wait 16
+	; anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	; anim_ret
+
 BattleAnim_DreamEater_branch_cbab3:
 BattleAnim_GigaDrain_branch_cbab3:
 BattleAnim_LeechLife_branch_cbab3:

@@ -294,7 +294,7 @@ JohtoGrassWildMons:
 	dbw 14, ZIGZAGOON_G
 	dbw 15, KOFFING
 	dbw 16, WOOBAT
-	dbw 15, ZIGZAGOON_G
+	dbw 15, KURSTRAW
 	dbw 14, KURSTRAW
 	dbw 16, ZIGZAGOON_G
 	dbw 16, ZIGZAGOON_G
@@ -700,9 +700,9 @@ JohtoGrassWildMons:
 	dbw 27, SNOM
 	dbw 28, GOLBAT
 	dbw 29, DELIBIRD
-	dbw 28, SNOVER
+	dbw 28, WOLFROST
 	dbw 30, GOLBAT
-	dbw 30, SNOVER
+	dbw 30, WOLFROST
 
 	map_id ICE_PATH_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -727,7 +727,7 @@ JohtoGrassWildMons:
 	dbw 28, SNOM
 	dbw 29, GOLBAT
 	dbw 30, DELIBIRD
-	dbw 29, SNOVER
+	dbw 29, WOLFROST
 	dbw 31, GOLBAT
 	dbw 28, SNEASEL
 
@@ -756,7 +756,7 @@ JohtoGrassWildMons:
 	dbw 31, DELIBIRD
 	dbw 28, SNEASEL
 	dbw 32, GOLBAT
-	dbw 30, SNOVER
+	dbw 30, WOLFROST
 
 	map_id ICE_PATH_B2F_BLACKTHORN_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -783,7 +783,7 @@ JohtoGrassWildMons:
 	dbw 31, DELIBIRD
 	dbw 28, SNEASEL
 	dbw 32, GOLBAT
-	dbw 30, SNOVER
+	dbw 30, WOLFROST
 
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1160,7 +1160,7 @@ JohtoGrassWildMons:
 	dbw 4, WOOBAT
 	dbw 2, GEODUDE
 	dbw 4, GEODUDE
-	dbw 2, WOOBAT
+	dbw 2, WOLFROST
 	dbw 4, DUNSPARCE
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
@@ -1293,8 +1293,8 @@ JohtoGrassWildMons:
 	dbw 5, WOOPER
 	dbw 6, GASTLY
 	dbw 7, TANGEL
-	dbw 6, WOOPER
-	dbw 7, WOOPER
+	dbw 6, MOIBELLE
+	dbw 7, MOIBELLE
 	dbw 6, RALTS
 	dbw 7, RALTS
 
@@ -1546,25 +1546,25 @@ JohtoGrassWildMons:
 	; morn
 	dbw 27, SWABLU
 	dbw 29, LICKITUNG
-	dbw 27, TANGELA
 	dbw 26, TYKER
+	dbw 27, TANGELA
 	dbw 29, TROPIUS
 	dbw 25, GOOMY
 	dbw 26, GOOMY
 	; day
 	dbw 27, SWABLU
 	dbw 29, LICKITUNG
-	dbw 27, TANGELA
 	dbw 26, TYKER
+	dbw 27, TANGELA
 	dbw 29, TROPIUS
 	dbw 25, GOOMY
 	dbw 26, GOOMY
 	; nite
 	dbw 27, MURKROW
 	dbw 29, SKORUPI
-	dbw 27, TANGELA
-	dbw 28, MURKROW
 	dbw 28, MISDREAVUS
+	dbw 27, TANGELA
+	dbw 28, SKORUPI
 	dbw 25, GOOMY
 	dbw 26, GOOMY
 
@@ -1620,7 +1620,7 @@ JohtoGrassWildMons:
 	dbw 3, ESPURR
 	dbw 2, BLIPBUG
 	dbw 3, BLIPBUG
-	dbw 2, WOLFROST
+	dbw 2, HOOTHOOT
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
