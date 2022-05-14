@@ -338,19 +338,19 @@ GetTradeMonName:
 	pop de
 	ret
 
-Unreferenced_Functionfcdfb:
-	ld bc, 4
-	call CopyBytes
-	ld a, "@"
-	ld [de], a
-	ret
+; Unreferenced_Functionfcdfb:
+	; ld bc, 4
+	; call CopyBytes
+	; ld a, "@"
+	; ld [de], a
+	; ret
 
-Unreferenced_Functionfce05:
-	ld bc, 3
-	call CopyBytes
-	ld a, "@"
-	ld [de], a
-	ret
+; Unreferenced_Functionfce05:
+	; ld bc, 3
+	; call CopyBytes
+	; ld a, "@"
+	; ld [de], a
+	; ret
 
 Trade_CopyTwoBytes:
 	ld a, [hli]

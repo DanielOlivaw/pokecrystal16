@@ -270,6 +270,7 @@
 	const MONICON_MOBILE1
 	const MONICON_MOBILE2
 	const MONICON_UNUSED
+	const MONICON_POKEDEX
 
 ; party menu icon palettes
 	const_def
