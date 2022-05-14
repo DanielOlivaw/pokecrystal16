@@ -96,6 +96,7 @@ CheckDailyResetTimer::
 	ld [hli], a ; wDailyFlags2
 	ld [hli], a ; wSwarmFlags
 	ld [hl], a  ; wSwarmFlags + 1
+	ld [wLuckyNumberShowFlag], a
 	ld hl, wDailyRematchFlags
 rept 4
 	ld [hli], a
