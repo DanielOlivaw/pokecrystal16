@@ -561,18 +561,11 @@ UnknownText_0x1c0aa9::
 	cont "responding."
 	prompt
 
-UnknownText_0x1c0acc::
+_SurvivedPoisoningText::
 	text_ram wStringBuffer3
 	text_start
-	line "fainted!"
-	prompt
-
-UnknownText_0x1c0ada::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
-
-	para "<PLAYER> whited"
-	line "out!"
+	line "survived the"
+	cont "poisoning!"
 	prompt
 
 _SweetAromaText::
