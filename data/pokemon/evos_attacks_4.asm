@@ -842,7 +842,7 @@ PuruglyEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChinglingEvosAttacks:
-	dbbw  EVOLVE_HAPPINESS, TR_NITE, CHIMECHO
+	dbbw  EVOLVE_HAPPINESS, TR_EVENITE, CHIMECHO
 	db 0 ; no more evolutions
 	dbw 1, WRAP
 	dbw 1, GROWL

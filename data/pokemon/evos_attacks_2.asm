@@ -301,7 +301,7 @@ SwandameEvosAttacks:
 	db 0 ; no more level-up moves
 
 KurstrawEvosAttacks:
-	dbbbw EVOLVE_HOLDING, SPELL_TAG, TR_NITE, PHANDARIN
+	dbbbw EVOLVE_HOLDING, SPELL_TAG, TR_EVENITE, PHANDARIN
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, DISABLE
@@ -347,7 +347,7 @@ PhandarinEvosAttacks:
 	db 0 ; no more level-up moves
 
 WolfrostEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 35, TR_NITE, WARWOLF
+	dbbbw EVOLVE_LEVEL, 35, TR_EVENITE, WARWOLF
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, TAIL_WHIP
@@ -1454,7 +1454,7 @@ DunsparceEvosAttacks:
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
-	dbbbw EVOLVE_HOLDING, RAZOR_FANG, TR_NITE, GLISCOR
+	dbbbw EVOLVE_HOLDING, RAZOR_FANG, TR_EVENITE, GLISCOR
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, SAND_ATTACK
@@ -1620,7 +1620,7 @@ HeracrossEvosAttacks:
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
-	dbbbw EVOLVE_HOLDING, RAZOR_CLAW, TR_NITE, WEAVILE
+	dbbbw EVOLVE_HOLDING, RAZOR_CLAW, TR_EVENITE, WEAVILE
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER

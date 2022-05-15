@@ -14,14 +14,14 @@ BuenasPasswordTable:
 
                ; string type, points, option 1, option 2, option 3
 .JohtoStarters: db BUENA_MON,    10
-                dw CYNDAQUIL, TOTODILE, CHIKORITA
+                dw CYNDAQUIL, OSHAWOTT, ROWLET
 .Beverages:     db BUENA_ITEM,   12, FRESH_WATER, SODA_POP, LEMONADE
 .HealingItems:  db BUENA_ITEM,   12, POTION, ANTIDOTE, PARLYZ_HEAL
 .Balls:         db BUENA_ITEM,   12, POKE_BALL, GREAT_BALL, ULTRA_BALL
 .Pokemon1:      db BUENA_MON,    10
-                dw PIKACHU, RATTATA_A, GEODUDE
+                dw PIKACHU, BIDOOF, NOSEPASS
 .Pokemon2:      db BUENA_MON,    10
-                dw HOOTHOOT, SPINARAK, DROWZEE
+                dw HOOTHOOT, CUTIEFLY, MUNNA
 .JohtoTowns:    db BUENA_STRING, 16, "NEW BARK TOWN@", "CHERRYGROVE CITY@", "AZALEA TOWN@"
 .Types:         db BUENA_STRING,  6, "FLYING@", "BUG@", "GRASS@"
 .Moves:         db BUENA_MOVE,   12

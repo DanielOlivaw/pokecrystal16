@@ -316,7 +316,7 @@ RibombeeEvosAttacks:
 
 RockruffEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 25, TR_MORNDAY, LYCANROC_MD
-	dbbbw EVOLVE_LEVEL, 25, TR_NITE, LYCANROC_MN
+	dbbbw EVOLVE_LEVEL, 25, TR_EVENITE, LYCANROC_MN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER

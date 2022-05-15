@@ -363,16 +363,16 @@ EvolveAfterBattle_MasterLoop:
 	cp TR_MORNDAY
 	jr z, .evo_daylight
 
-; TR_NITE
+; TR_EVENITE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jp nz, .skip_evolution_species
+	jp c, .skip_evolution_species ; MORN_F or DAY_F < NITE_F
 	jr .proceed
 	
 .evo_daylight
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jp z, .skip_evolution_species
+	jp nc, .skip_evolution_species ; NITE_F or EVE_F >= NITE_F
 
 	; fallthrough
 

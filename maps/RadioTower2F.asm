@@ -109,7 +109,7 @@ Buena:
 	checkflag ENGINE_BUENAS_PASSWORD_2
 	iftrue .PlayedAlready
 	readvar VAR_HOUR
-	ifless 18, .TooEarly
+	ifless EVE_HOUR, .TooEarly
 	checkflag ENGINE_BUENAS_PASSWORD
 	iffalse .TuneIn
 	checkitem BLUE_CARD
@@ -250,7 +250,7 @@ Buena:
 	end
 
 .TooEarly:
-	writetext RadioTower2FBuenaTuneInAfterSixText
+	writetext RadioTower2FBuenaTuneInAfterFiveText
 	waitbutton
 	closetext
 	checkcellnum PHONE_BUENA
@@ -603,11 +603,11 @@ RadioTower2FBuenaCardIsFullText:
 	line "fabulous prize!"
 	done
 
-RadioTower2FBuenaTuneInAfterSixText:
+RadioTower2FBuenaTuneInAfterFiveText:
 	text "BUENA: Tune in to"
 	line "PASSWORD every"
 
-	para "night from six to"
+	para "night from five to"
 	line "midnight!"
 
 	para "Tune in, then drop"

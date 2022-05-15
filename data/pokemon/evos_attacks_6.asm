@@ -460,7 +460,7 @@ GogoatEvosAttacks:
 	db 0 ; no more level-up moves
 
 PanchamEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 32, TR_NITE, PANGORO
+	dbbbw EVOLVE_LEVEL, 32, TR_EVENITE, PANGORO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
@@ -906,7 +906,7 @@ TyrantrumEvosAttacks:
 	db 0 ; no more level-up moves
 
 AmauraEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 39, TR_NITE, AURORUS
+	dbbbw EVOLVE_LEVEL, 39, TR_EVENITE, AURORUS
 	db 0 ; no more evolutions
 	dbw 1, POWDER_SNOW
 	dbw 1, GROWL

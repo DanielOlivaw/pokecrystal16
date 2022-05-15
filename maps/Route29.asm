@@ -148,9 +148,9 @@ Route29FisherScript:
 Route29CooltrainerMScript:
 	faceplayer
 	opentext
-	checktime DAY
+	checktime MORN | DAY
 	iftrue .day_morn
-	checktime NITE
+	checktime EVE | NITE
 	iftrue .nite
 .day_morn
 	writetext Route29CooltrainerMText_WaitingForNight
@@ -159,7 +159,7 @@ Route29CooltrainerMScript:
 	end
 
 .nite
-	writetext Route29CooltrainerMText_WaitingForMorning
+	writetext Route29CooltrainerMText_WaitingForDay
 	waitbutton
 	closetext
 	end
@@ -322,8 +322,7 @@ Route29FisherText:
 	line "progress."
 	done
 
-; unused
-Text_WaitingForDay:
+Route29CooltrainerMText_WaitingForDay:
 	text "I'm waiting for"
 	line "#MON that"
 
@@ -339,6 +338,7 @@ Route29CooltrainerMText_WaitingForNight:
 	line "night."
 	done
 
+; unused
 Route29CooltrainerMText_WaitingForMorning:
 	text "I'm waiting for"
 	line "#MON that"

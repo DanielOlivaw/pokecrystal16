@@ -852,7 +852,7 @@ StatsScreen_LoadGFX:
 	db "in the morning@"
 	db "during the day@"
 	db "at night@"
-	; db "in the evening@"
+	db "in the evening@"
 	db "@"
 
 .AtLevelStr

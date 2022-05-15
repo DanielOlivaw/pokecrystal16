@@ -389,7 +389,7 @@ ZigzagoonGEvosAttacks:
 	db 0 ; no more level-up moves
 
 LinooneGEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 35, TR_NITE, OBSTAGOON
+	dbbbw EVOLVE_LEVEL, 35, TR_EVENITE, OBSTAGOON
 	db 0 ; no more evolutions
 	dbw 1, SWITCHEROO
 	dbw 1, HONE_CLAWS

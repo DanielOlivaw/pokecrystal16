@@ -787,7 +787,7 @@ PincurchinEvosAttacks:
 	db 0 ; no more level-up moves
 
 SnomEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_NITE, FROSMOTH
+	dbbw EVOLVE_HAPPINESS, TR_EVENITE, FROSMOTH
 	db 0 ; no more evolutions
 	dbw 1, POWDER_SNOW
 	dbw 1, STRUGGLE_BUG

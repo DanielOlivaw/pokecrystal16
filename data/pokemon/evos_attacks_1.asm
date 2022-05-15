@@ -435,7 +435,7 @@ PidgeotEvosAttacks:
 	db 0 ; no more level-up moves
 
 RattataAEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 20, TR_NITE, RATICATE_A
+	dbbbw EVOLVE_LEVEL, 20, TR_EVENITE, RATICATE_A
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
@@ -2448,7 +2448,7 @@ EeveeEvosAttacks:
 	dbbw EVOLVE_ITEM, ICE_STONE, GLACEON
 	dbbw EVOLVE_MOVE_TYPE, FAIRY, SYLVEON
 	dbbw EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
-	dbbw EVOLVE_HAPPINESS, TR_NITE, UMBREON
+	dbbw EVOLVE_HAPPINESS, TR_EVENITE, UMBREON
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
