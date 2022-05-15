@@ -539,7 +539,7 @@ _CantCarryItemText::
 	cont "items."
 	done
 
-UnknownText_0x1c0a4e::
+_BlackedOutText::
 	text "<PLAYER> is out of"
 	line "useable #MON!"
 
@@ -567,6 +567,40 @@ _SurvivedPoisoningText::
 	line "survived the"
 	cont "poisoning!"
 	prompt
+
+_BlackedOutToWildMonText::
+	text "<PLAYER> is out of"
+	line "useable #MON!"
+
+	para "<PLAYER> panicked"
+	line "and dropped"
+	cont "¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text "…"
+
+	para "<……><……><……>"
+	line "<……><……><……>"
+
+	para "<PLAYER> blacked"
+	line "out!"
+	done
+
+_BlackedOutToTrainerText::
+	text "<PLAYER> is out of"
+	line "useable #MON!"
+
+	para "<PLAYER> gave"
+	line "¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text " to the"
+	cont "winner…"
+
+	para "<……><……><……>"
+	line "<……><……><……>"
+
+	para "<PLAYER> blacked"
+	line "out!"
+	done
 
 _SweetAromaText::
 	; text_ram wStringBuffer3
