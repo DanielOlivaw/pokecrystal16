@@ -3363,6 +3363,8 @@ PlayerAttackDamage:
 	ld b, a
 	ld c, [hl]
 
+	call SandstormSpDefBoost
+
 	ld a, [wEnemyScreens]
 	bit SCREENS_LIGHT_SCREEN, a
 	jr nz, .specialscreen
@@ -3701,6 +3703,8 @@ EnemyAttackDamage:
 	ld b, a
 	ld c, [hl]
 
+	call SandstormSpDefBoost
+
 	ld a, [wPlayerScreens]
 	bit SCREENS_LIGHT_SCREEN, a
 	jr nz, .specialscreen
@@ -3783,6 +3787,36 @@ EnemyAttackDamage:
 	ld b, a
 	ld c, [hl]
 	jp .check_physicalcrit
+
+SandstormSpDefBoost: 
+; First, check if Sandstorm is active.
+	ld a, [wBattleWeather]
+	cp WEATHER_SANDSTORM
+	ret nz
+
+; Then, check the opponent's types.
+	ld hl, wEnemyMonType1
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld hl, wBattleMonType1
+.ok
+	ld a, [hli]
+	cp ROCK
+	jr z, .start_boost
+	ld a, [hl]
+	cp ROCK
+	ret nz
+
+.start_boost
+	ld h, b
+	ld l, c
+	srl b
+	rr c
+	add hl, bc
+	ld b, h
+	ld c, l
+	ret
 
 INCLUDE "engine/battle/move_effects/beat_up.asm"
 
@@ -4135,7 +4169,7 @@ DoEnemyDamage:
 	jr nz, .ignore_substitute
 	ld a, [wEnemySubStatus4]
 	bit SUBSTATUS_SUBSTITUTE, a
-	jp nz, DoSubstituteDamage
+	jp nz, .do_substitute_damage
 
 .ignore_substitute
 	; Substract wCurDamage from wEnemyMonHP.
@@ -4182,6 +4216,10 @@ DoEnemyDamage:
 .did_no_damage
 	jp RefreshBattleHuds
 
+.do_substitute_damage
+	farcall DoSubstituteDamage
+	ret
+
 DoPlayerDamage:
 	ld hl, wCurDamage
 	ld a, [hli]
@@ -4195,7 +4233,7 @@ DoPlayerDamage:
 	jr nz, .ignore_substitute
 	ld a, [wPlayerSubStatus4]
 	bit SUBSTATUS_SUBSTITUTE, a
-	jp nz, DoSubstituteDamage
+	jp nz, .do_substitute_damage
 
 .ignore_substitute
 	; Substract wCurDamage from wBattleMonHP.
@@ -4242,66 +4280,9 @@ DoPlayerDamage:
 .did_no_damage
 	jp RefreshBattleHuds
 
-DoSubstituteDamage:
-	ld hl, SubTookDamageText
-	call StdBattleTextbox
-
-	ld de, wEnemySubstituteHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .got_hp
-	ld de, wPlayerSubstituteHP
-.got_hp
-
-	ld hl, wCurDamage
-	ld a, [hli]
-	and a
-	jr nz, .broke
-
-	ld a, [de]
-	sub [hl]
-	ld [de], a
-	jr z, .broke
-	jr nc, .done
-
-.broke
-	ld a, BATTLE_VARS_SUBSTATUS4_OPP
-	call GetBattleVarAddr
-	res SUBSTATUS_SUBSTITUTE, [hl]
-
-	ld hl, SubFadedText
-	call StdBattleTextbox
-
-	call BattleCommand_SwitchTurn
-	call BattleCommand_LowerSubNoAnim
-	ld a, BATTLE_VARS_SUBSTATUS3
-	call GetBattleVar
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
-	call z, AppearUserLowerSub
-	call BattleCommand_SwitchTurn
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVarAddr
-	cp EFFECT_MULTI_HIT
-	jr z, .ok
-	cp EFFECT_DOUBLE_HIT
-	jr z, .ok
-	cp EFFECT_POISON_MULTI_HIT
-	jr z, .ok
-	cp EFFECT_PRIORITY_MULTI_HIT
-	jr z, .ok
-	cp EFFECT_SCALE_SHOT
-	jr z, .ok
-	cp EFFECT_TRIPLE_KICK
-	jr z, .ok
-	cp EFFECT_BEAT_UP
-	jr z, .ok
-	xor a
-	ld [hl], a
-.ok
-	call RefreshBattleHuds
-.done
-	jp ResetDamage
+.do_substitute_damage
+	farcall DoSubstituteDamage
+	ret
 
 UpdateMoveData:
 	ld a, BATTLE_VARS_MOVE_ANIM

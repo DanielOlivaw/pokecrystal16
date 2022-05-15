@@ -138,3 +138,68 @@ CheckSafeguardEffect:
 	call StdBattleTextbox
 	farcall EndMoveEffect
 	ret
+
+DoSubstituteDamage:
+	ld hl, SubTookDamageText
+	call StdBattleTextbox
+
+	ld de, wEnemySubstituteHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld de, wPlayerSubstituteHP
+.got_hp
+
+	ld hl, wCurDamage
+	ld a, [hli]
+	and a
+	jr nz, .broke
+
+	ld a, [de]
+	sub [hl]
+	ld [de], a
+	jr z, .broke
+	jr nc, .done
+
+.broke
+	ld a, BATTLE_VARS_SUBSTATUS4_OPP
+	call GetBattleVarAddr
+	res SUBSTATUS_SUBSTITUTE, [hl]
+
+	ld hl, SubFadedText
+	call StdBattleTextbox
+
+	farcall BattleCommand_SwitchTurn
+	farcall BattleCommand_LowerSubNoAnim
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVar
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << SUBSTATUS_DIVING | 1 << SUBSTATUS_VANISHED
+	call z, .appear_user_lower_sub
+	farcall BattleCommand_SwitchTurn
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVarAddr
+	cp EFFECT_MULTI_HIT
+	jr z, .ok
+	cp EFFECT_DOUBLE_HIT
+	jr z, .ok
+	cp EFFECT_POISON_MULTI_HIT
+	jr z, .ok
+	cp EFFECT_PRIORITY_MULTI_HIT
+	jr z, .ok
+	cp EFFECT_SCALE_SHOT
+	jr z, .ok
+	cp EFFECT_TRIPLE_KICK
+	jr z, .ok
+	cp EFFECT_BEAT_UP
+	jr z, .ok
+	xor a
+	ld [hl], a
+.ok
+	farcall RefreshBattleHuds
+.done
+	jp ResetDamage
+
+.appear_user_lower_sub
+	farcall _AppearUserLowerSub
+	ret
