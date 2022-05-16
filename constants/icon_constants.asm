@@ -260,6 +260,7 @@
 	const ICON_SIZZLIPEDE
 	const ICON_CLOBBOPUS
 	const ICON_POLTEAGEIST
+NUM_ICONS EQU const_value - 1
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def

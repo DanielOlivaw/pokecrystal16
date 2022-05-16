@@ -1,5 +1,6 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
+	table_width 2, TreeMons
 	dw TreeMonSet_City
 	dw TreeMonSet_Canyon       ; Route 44
 	dw TreeMonSet_Town         ; Azalea Town, Route 33, 42
@@ -12,6 +13,7 @@ TreeMons:
 	dw TreeMonSet_CaveRock     ; Dark Cave
 	dw TreeMonSet_BeachRock    ; Route 40, Cianwood City
 	dw TreeMonSet_KantoRock    ; Victory Road
+	assert_table_length NUM_TREEMON_SETS
 	dw TreeMonSet_City
 
 ; Two tables each (common, rare).

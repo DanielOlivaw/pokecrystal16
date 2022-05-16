@@ -1,5 +1,6 @@
 MoveEffectsPointers:
 ; entries correspond to EFFECT_* constants
+	table_width 2, MoveEffectsPointers
 	dw NormalHit              ; EFFECT_NORMAL_HIT
 	dw DoSleep                ; EFFECT_SLEEP
 	dw PoisonHit              ; EFFECT_POISON_HIT
@@ -253,3 +254,4 @@ MoveEffectsPointers:
 	dw GuileFang              ; EFFECT_GUILE_FANG
 	dw DataPulse              ; EFFECT_DATA_PULSE
 	dw MeFirst                ; EFFECT_ME_FIRST
+	assert_table_length NUM_MOVE_EFECTS

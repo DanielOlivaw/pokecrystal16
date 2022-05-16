@@ -23,7 +23,7 @@ _PlayerDecorationMenu:
 	ld [wBuffer6], a
 	jr c, .exit_menu
 	ld a, [wMenuSelection]
-	ld hl, .pointers
+	ld hl, .category_pointers
 	call MenuJumptable
 	jr nc, .top_loop
 
@@ -46,9 +46,10 @@ _PlayerDecorationMenu:
 	db 0 ; items
 	dw wd002
 	dw PlaceNthMenuStrings
-	dw .pointers
+	dw .category_pointers
 
-.pointers
+.category_pointers:
+	table_width 2 + 2, _PlayerDecorationMenu.category_pointers
 	dw DecoBedMenu, .bed
 	dw DecoCarpetMenu, .carpet
 	dw DecoPlantMenu, .plant
@@ -57,6 +58,7 @@ _PlayerDecorationMenu:
 	dw DecoOrnamentMenu, .ornament
 	dw DecoBigDollMenu, .big_doll
 	dw DecoExitMenu, .exit
+	assert_table_length NUM_DECO_CATEGORIES + 1
 
 .bed      db "BED@"
 .carpet   db "CARPET@"
@@ -99,7 +101,7 @@ _PlayerDecorationMenu:
 	ret
 
 .FindOwndDecos:
-	ld hl, .dw
+	ld hl, .owned_pointers
 .loop
 	ld a, [hli]
 	ld e, a
@@ -121,7 +123,8 @@ _PlayerDecorationMenu:
 .done
 	ret
 
-.dw
+.owned_pointers:
+	table_width 3, _PlayerDecorationMenu.owned_pointers
 	dwb FindOwnedBeds, 0 ; bed
 	dwb FindOwnedCarpets, 1 ; carpet
 	dwb FindOwnedPlants, 2 ; plant
@@ -129,6 +132,7 @@ _PlayerDecorationMenu:
 	dwb FindOwnedConsoles, 4 ; game console
 	dwb FindOwnedOrnaments, 5 ; ornament
 	dwb FindOwnedBigDolls, 6 ; big doll
+	assert_table_length NUM_DECO_CATEGORIES
 	dw 0 ; end
 
 Deco_FillTempWithMinusOne:
@@ -417,7 +421,7 @@ PopulateDecoCategoryMenu:
 
 GetDecorationData:
 	ld hl, DecorationAttributes
-	ld bc, 6
+	ld bc, DECOATTR_STRUCT_LENGTH
 	call AddNTimes
 	ret
 
@@ -441,7 +445,7 @@ DecorationMenuFunction:
 DoDecorationAction2:
 	ld a, [wMenuSelection]
 	call GetDecorationData
-	ld de, 2 ; function 2
+	ld de, DECOATTR_ACTION
 	add hl, de
 	ld a, [hl]
 	ld hl, .DecoActions
@@ -449,6 +453,7 @@ DoDecorationAction2:
 	ret
 
 .DecoActions:
+	table_width 2, DoDecorationAction2.DecoActions
 	dw DecoAction_nothing
 	dw DecoAction_setupbed
 	dw DecoAction_putawaybed
@@ -464,10 +469,11 @@ DoDecorationAction2:
 	dw DecoAction_putawaybigdoll
 	dw DecoAction_setupornament
 	dw DecoAction_putawayornament
+	assert_table_length NUM_DECO_ACTIONS + 1
 
 GetDecorationFlag:
 	call GetDecorationData
-	ld de, 3 ; event flag
+	ld de, DECOATTR_EVENT_FLAG
 	add hl, de
 	ld a, [hli]
 	ld d, [hl]
@@ -484,7 +490,7 @@ DecorationFlagAction:
 GetDecorationSprite:
 	ld a, c
 	call GetDecorationData
-	ld de, 5 ; sprite
+	ld de, DECOATTR_SPRITE
 	add hl, de
 	ld a, [hl]
 	ld c, a
@@ -495,8 +501,8 @@ INCLUDE "data/decorations/attributes.asm"
 INCLUDE "data/decorations/names.asm"
 
 GetDecoName:
-	ld a, [hli]
-	ld e, [hl]
+	ld a, [hli] ; DECOATTR_TYPE
+	ld e, [hl] ; DECOATTR_NAME
 	ld bc, wStringBuffer2
 	push bc
 	ld hl, .NameFunctions
@@ -505,6 +511,7 @@ GetDecoName:
 	ret
 
 .NameFunctions:
+	table_width 2, GetDecoName.NameFunctions
 	dw .invalid
 	dw .plant
 	dw .bed
@@ -512,6 +519,7 @@ GetDecoName:
 	dw .poster
 	dw .doll
 	dw .bigdoll
+	assert_table_length NUM_DECO_TYPES + 1
 
 .invalid
 	ret
@@ -981,11 +989,13 @@ DescribeDecoration::
 
 .JumpTable:
 ; entries correspond to DECODESC_* constants
+	table_width 2, DescribeDecoration.JumpTable
 	dw DecorationDesc_Poster
 	dw DecorationDesc_LeftOrnament
 	dw DecorationDesc_RightOrnament
 	dw DecorationDesc_GiantOrnament
 	dw DecorationDesc_Console
+	assert_table_length NUM_DECODESCS
 
 DecorationDesc_Poster:
 	ld a, [wDecoPoster]

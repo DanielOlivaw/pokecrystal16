@@ -110,6 +110,7 @@
 	const SPRITE_ARIANA ; 70
 	const SPRITE_SCIENTIST_F ; 71
 	const SPRITE_FARFETCHD ; 72
+NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
@@ -168,6 +169,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MUNNA ; b3
 	const SPRITE_HEATMOR ; b4
 	const SPRITE_FLOETTE ; b5
+NUM_POKEMON_SPRITES EQU const_value - SPRITE_POKEMON
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0

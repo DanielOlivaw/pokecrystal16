@@ -122,6 +122,8 @@ CAUGHT_BY_BOY     EQU 2
 
 CAUGHT_EGG_LEVEL EQU 5
 
+MON_CRY_LENGTH EQU 6
+
 ; maximum number of party pokemon
 PARTY_LENGTH EQU 6
 
@@ -216,6 +218,7 @@ const_value = 1
 	const HAPPINESS_REVIVALHERB       ; 11
 	const HAPPINESS_GROOMING          ; 12
 	const HAPPINESS_GAINLEVELATHOME   ; 13
+NUM_HAPPINESS_CHANGES EQU const_value - 1
 
 ; significant happiness values
 BASE_HAPPINESS        EQU 70

@@ -3,6 +3,7 @@
 	db "?????@@@@@"
 	db "?????@@@@@"
 PokemonNames::
+	table_width NAME_LENGTH - 1, PokemonNames
 	db "BULBASAUR@"
 	db "IVYSAUR@@@"
 	db "VENUSAUR@@"
@@ -710,3 +711,4 @@ PokemonNames::
 	db "DRAGAPULT@"
 	db "REGIELEKI@"
 	db "REGIDRAGO@"
+	assert_table_length NUM_POKEMON

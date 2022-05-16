@@ -3,6 +3,7 @@ TALKABLE    EQUS "db TALK +"
 
 TileCollisionTable::
 ; entries correspond to COLL_* constants
+	table_width 1, TileCollisionTable
 	NONTALKABLE  LANDTILE ; COLL_FLOOR
 	NONTALKABLE  LANDTILE ; COLL_01
 	NONTALKABLE  LANDTILE ; 02
@@ -259,3 +260,4 @@ TileCollisionTable::
 	NONTALKABLE  LANDTILE ; fd
 	NONTALKABLE  LANDTILE ; fe
 	NONTALKABLE  WALLTILE ; COLL_FF
+	assert_table_length $100

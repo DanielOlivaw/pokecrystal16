@@ -12,7 +12,8 @@ _DoItemEffect::
 	ret
 
 ItemEffects:
-; entries correspond to item ids
+; entries correspond to item ids (see constants/item_constants.asm)
+	table_width 2, ItemEffects
 	dw PokeBallEffect      ; MASTER_BALL
 	dw PokeBallEffect      ; ULTRA_BALL
 	dw PokeBallEffect      ; GREAT_BALL
@@ -230,6 +231,7 @@ ItemEffects:
 	dw StatusHealingEffect ; BLUE_FLUTE
 	dw BitterBerryEffect   ; YELLOW_FLUTE
 	dw RedFluteEffect      ; RED_FLUTE
+	assert_table_length RED_FLUTE
 
 PokeBallEffect:
 	ld a, [wBattleMode]

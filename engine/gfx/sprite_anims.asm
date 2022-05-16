@@ -12,7 +12,8 @@ DoAnimFrame:
 	jp hl
 
 .Jumptable:
-; entries correspond to SPRITE_ANIM_SEQ_* constants
+; entries correspond to SPRITE_ANIM_SEQ_* constants (see constants/sprite_anim_constants.asm)
+	table_width 2, DoAnimFrame.Jumptable
 	dw .Null
 	dw .PartyMon
 	dw .PartyMonSwitch
@@ -48,6 +49,7 @@ DoAnimFrame:
 	dw .IntroUnown
 	dw .IntroUnownF
 	dw .IntroSuicuneAway
+	assert_table_length NUM_SPRITE_ANIM_SEQS
 
 .Null:
 	ret

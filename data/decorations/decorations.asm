@@ -1,5 +1,6 @@
 DecorationIDs:
 ; see constants/deco_constants.asm
+	table_width 1, DecorationIDs
 	db DECO_FEATHERY_BED ; 2
 	db DECO_PINK_BED ; 3
 	db DECO_POLKADOT_BED ; 4
@@ -51,4 +52,6 @@ DecorationIDs:
 TrophyIDs:
 	db DECO_GOLD_TROPHY_DOLL ; 33
 	db DECO_SILVER_TROPHY_DOLL ; 34
+	
+	assert_table_length NUM_DECOS
 	db -1

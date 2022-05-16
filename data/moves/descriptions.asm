@@ -5,6 +5,7 @@ MoveDescriptions::
 	indirect_table_end
 
 MoveDescriptions1:
+	table_width 2, MoveDescriptions1
 	dw PoundDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
@@ -313,7 +314,6 @@ MoveDescriptions1:
 	dw SignalBeamDescription
 	dw ZenHeadbuttDescription
 	dw SilverWindDescription
-	; dw FakeOutDescription
 	dw HoneClawsDescription
 	dw MetalSoundDescription
 	dw AquaJetDescription
@@ -640,6 +640,7 @@ MoveDescriptions1:
 	dw PartingShotDescription
 	dw NightDazeDescription
 	dw PurifyDescription
+	assert_table_length NUM_ATTACKS
 
 InvalidMoveDescription:
 	db "?@"

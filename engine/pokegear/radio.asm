@@ -29,6 +29,7 @@ PlayRadioShow:
 
 RadioJumptable:
 ; entries correspond to constants/radio_constants.asm
+	table_width 2, RadioJumptable
 	dw OaksPKMNTalk1  ; $00
 	dw PokedexShow1 ; $01
 	dw BenMonMusic1  ; $02
@@ -40,6 +41,7 @@ RadioJumptable:
 	dw PokeFluteRadio ; $08
 	dw UnownRadio ; $09
 	dw EvolutionRadio ; $0a
+	assert_table_length NUM_RADIO_CHANNELS
 ; OaksPKMNTalk
 	dw OaksPKMNTalk2  ; $0b
 	dw OaksPKMNTalk3  ; $0c
@@ -125,6 +127,7 @@ RadioJumptable:
 	dw PokedexShow6 ; $55
 	dw PokedexShow7 ; $56
 	dw PokedexShow8 ; $57
+	assert_table_length NUM_RADIO_SEGMENTS
 
 PrintRadioLine:
 	ld [wNextRadioLine], a
@@ -345,7 +348,7 @@ OaksPKMNTalk8:
 	jp NextRadioLine
 
 .Adverbs:
-; there are NUM_OAKS_POKEMON_TALK_ADVERBS entries
+	table_width 2, OaksPKMNTalk8.Adverbs
 	dw .sweetadorably
 	dw .wigglyslickly
 	dw .aptlynamed
@@ -362,6 +365,7 @@ OaksPKMNTalk8:
 	dw .provocatively
 	dw .flippedout
 	dw .heartmeltingly
+	assert_table_length NUM_OAKS_POKEMON_TALK_ADVERBS
 
 .sweetadorably
 	; sweet and adorably
@@ -468,7 +472,7 @@ OaksPKMNTalk9:
 	jp NextRadioLine
 
 .Adjectives:
-; there are NUM_OAKS_POKEMON_TALK_ADJECTIVES entries
+	table_width 2, OaksPKMNTalk9.Adjectives
 	dw .cute
 	dw .weird
 	dw .pleasant
@@ -485,6 +489,7 @@ OaksPKMNTalk9:
 	dw .guarded
 	dw .lovely
 	dw .speedy
+	assert_table_length NUM_OAKS_POKEMON_TALK_ADJECTIVES
 
 .cute
 	; cute.
@@ -1137,7 +1142,7 @@ PeoplePlaces4: ; People
 	call Random
 	maskbits NUM_TRAINER_CLASSES
 	inc a
-	cp NUM_TRAINER_CLASSES - 1
+	cp NUM_TRAINER_CLASSES
 	jr nc, PeoplePlaces4
 	push af
 	ld hl, PnP_HiddenPeople
@@ -1201,7 +1206,7 @@ PeoplePlaces5:
 	jp NextRadioLine
 
 .Adjectives:
-; there are NUM_PNP_PEOPLE_ADJECTIVES entries
+	table_width 2, PeoplePlaces5.Adjectives
 	dw PnP_cute
 	dw PnP_lazy
 	dw PnP_happy
@@ -1218,6 +1223,7 @@ PeoplePlaces5:
 	dw PnP_weird
 	dw PnP_rightforme
 	dw PnP_odd
+	assert_table_length NUM_PNP_PEOPLE_ADJECTIVES
 
 PnP_cute:
 	; is cute.
@@ -1352,7 +1358,7 @@ PeoplePlaces7:
 	jp PrintRadioLine
 
 .Adjectives:
-; there are NUM_PNP_PLACES_ADJECTIVES entries
+	table_width 2, PeoplePlaces7.Adjectives
 	dw PnP_cute
 	dw PnP_lazy
 	dw PnP_happy
@@ -1369,6 +1375,7 @@ PeoplePlaces7:
 	dw PnP_weird
 	dw PnP_rightforme
 	dw PnP_odd
+	assert_table_length NUM_PNP_PLACES_ADJECTIVES
 
 RocketRadio1:
 	call StartRadioStation

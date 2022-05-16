@@ -182,6 +182,7 @@ ENDM
 	command datapulse               ; af
 	command mefirst                 ; b0
 	command defoganim               ; b1
+; NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	enum_start $fe
 	command endturn                 ; fe

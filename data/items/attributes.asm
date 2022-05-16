@@ -6,7 +6,8 @@ item_attribute: MACRO
 ENDM
 
 ItemAttributes:
-; entries correspond to item ids
+; entries correspond to item ids (see constants/item_constants.asm)
+	table_width ITEMATTR_STRUCT_LENGTH, ItemAttributes
 ; MASTER_BALL
 	item_attribute 0, HELD_NONE, 0, CANT_SELECT, BALL, ITEMMENU_NOUSE, ITEMMENU_CLOSE
 ; ULTRA_BALL
@@ -483,14 +484,6 @@ ItemAttributes:
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; ITEM_B3
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; TM44
-	item_attribute 3000, HELD_NONE, 0, CANT_SELECT, TM_HM, ITEMMENU_PARTY, ITEMMENU_NOUSE
-; TM45
-	item_attribute 3000, HELD_NONE, 0, CANT_SELECT, TM_HM, ITEMMENU_PARTY, ITEMMENU_NOUSE
-; TM46
-	item_attribute 3000, HELD_NONE, 0, CANT_SELECT, TM_HM, ITEMMENU_PARTY, ITEMMENU_NOUSE
-; TM47
-	item_attribute 3000, HELD_NONE, 0, CANT_SELECT, TM_HM, ITEMMENU_PARTY, ITEMMENU_NOUSE
 ; TM48
 	item_attribute 3000, HELD_NONE, 0, CANT_SELECT, TM_HM, ITEMMENU_PARTY, ITEMMENU_NOUSE
 ; TM49
@@ -523,3 +516,4 @@ ItemAttributes:
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; $00
 	item_attribute $9999, HELD_NONE, 0, NO_LIMITS, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+	assert_table_length NUM_ITEMS

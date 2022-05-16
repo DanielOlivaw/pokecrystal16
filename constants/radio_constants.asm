@@ -15,6 +15,7 @@
 	const POKE_FLUTE_RADIO       ; 08
 	const UNOWN_RADIO            ; 09
 	const EVOLUTION_RADIO        ; 0a
+NUM_RADIO_CHANNELS EQU const_value
 ; internal indexes for channel segments
 	const OAKS_POKEMON_TALK_2    ; 0b
 	const OAKS_POKEMON_TALK_3    ; 0c
@@ -93,6 +94,7 @@
 	const POKEDEX_SHOW_6         ; 55
 	const POKEDEX_SHOW_7         ; 56
 	const POKEDEX_SHOW_8         ; 57
+NUM_RADIO_SEGMENTS EQU const_value
 
 ; PlayRadio.StationPointers indexes (see engine/pokegear/pokegear.asm)
 	const_def

@@ -59,7 +59,7 @@ LoadCry::
 	rst Bankswitch
 
 	ld hl, PokemonCries
-rept 6 ; sizeof(mon_cry)
+rept MON_CRY_LENGTH
 	add hl, bc
 endr
 

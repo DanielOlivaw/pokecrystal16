@@ -53,6 +53,7 @@ IN_DARKNESS EQU 1 << IN_DARKNESS_F ; masked with a PALETTE_* constant
 	const FISHGROUP_QWILFISH
 	const FISHGROUP_REMORAID
 	const FISHGROUP_QWILFISH_NO_SWARM
+NUM_FISHGROUPS EQU const_value - 1
 
 ; connection directions (see data/maps/data.asm)
 	const_def
@@ -69,8 +70,7 @@ IN_DARKNESS EQU 1 << IN_DARKNESS_F ; masked with a PALETTE_* constant
 	shift_const NORTH
 
 ; SpawnPoints indexes (see data/maps/spawn_points.asm)
-const_value = -1
-	const SPAWN_N_A
+	const_def
 	const SPAWN_HOME
 	const SPAWN_DEBUG
 ; kanto
@@ -104,5 +104,7 @@ const_value = -1
 	const SPAWN_MT_SILVER
 	const SPAWN_FAST_SHIP
 NUM_SPAWNS EQU const_value
+
+SPAWN_N_A EQU -1
 
 MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm

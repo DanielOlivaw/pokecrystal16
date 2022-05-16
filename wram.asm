@@ -2169,6 +2169,7 @@ wTilesetAnim:: dw ; bank 3f ; d1e2
 	ds 2 ; unused ; d1e4
 wTilesetPalettes:: dw ; bank 3f ; d1e6
 wTilesetEnd::
+	assert wTilesetEnd - wTileset == TILESET_LENGTH
 
 wEvolvableFlags:: flag_array PARTY_LENGTH ; d1e8
 
@@ -2299,6 +2300,7 @@ wBaseGrowthRate:: db ; d24c
 wBaseEggGroups:: db ; d24d
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e
 wCurBaseDataEnd::
+	assert wCurBaseDataEnd - wCurBaseData == BASE_DATA_SIZE
 
 wCurDamage:: dw ; d256
 

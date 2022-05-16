@@ -260,6 +260,7 @@
 	const ITEM_FC      ; fc
 	const ITEM_FD      ; fd
 	const ITEM_FE      ; fe
+NUM_ITEMS EQU const_value - 1
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff

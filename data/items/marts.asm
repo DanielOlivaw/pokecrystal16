@@ -1,5 +1,5 @@
 Marts:
-; entries correspond to MART_* constants
+; entries correspond to MART_* constants (see constants/mart_constants.asm)
 	dw MartCherrygrove
 	dw MartStandardDex ;MartCherrygroveDex
 	dw MartStandardBadge1

@@ -1,6 +1,7 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
+	table_width 2, NewPokedexOrder
 	dw BULBASAUR
 	dw IVYSAUR
 	dw VENUSAUR
@@ -711,3 +712,4 @@ NewPokedexOrder:
 	dw MAGEARNA
 	dw STAKATAKA
 	dw BLACEPHLON
+	assert_table_length NUM_POKEMON

@@ -23,6 +23,7 @@ CHRIS EQU __enum__
 	const PHONECONTACT_BILL
 	const PHONECONTACT_ELM
 	const PHONECONTACT_BUENA
+NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
 KRIS EQU __enum__
 	trainerclass FALKNER ; 1
@@ -726,4 +727,4 @@ KRIS EQU __enum__
 	const LINDE
 	const MERLE
 
-NUM_TRAINER_CLASSES EQU __enum__
+NUM_TRAINER_CLASSES EQU __enum__ - 1

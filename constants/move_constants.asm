@@ -676,6 +676,7 @@ const_value = -$19 ;fix if more negative values are added
 	const ANIM_IN_HAIL           ;  -3
 	const ANIM_IN_FOG            ;  -2
 	const ANIM_IN_STORM          ;  -1
+NUM_BATTLE_ANIMS EQU const_value - 1
 
 	if const_value
 		fail "Please adjust the initial constant value to ensure that the last animation constant has a value of -1"

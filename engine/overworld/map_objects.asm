@@ -520,7 +520,8 @@ MapObjectMovementPattern:
 	ret
 
 .Pointers:
-; entries correspond to SPRITEMOVEFN_* constants
+; entries correspond to SPRITEMOVEFN_* constants (see constants/map_object_constants.asm)
+	table_width 2, MapObjectMovementPattern.Pointers
 	dw .Null_00 ; 00
 	dw .RandomWalkY ; 01
 	dw .RandomWalkX ; 02
@@ -549,6 +550,7 @@ MapObjectMovementPattern:
 	dw .MovementSpinCounterclockwise ; 19
 	dw .MovementBoulderDust ; 1a
 	dw .MovementShakingGrass ; 1b
+	assert_table_length NUM_SPRITEMOVEFN
 
 .Null_00:
 	ret
@@ -1069,7 +1071,8 @@ SetRandomStepDuration:
 	ret
 
 StepTypesJumptable:
-; entries correspond to STEP_TYPE_* constants
+; entries correspond to STEP_TYPE_* constants (see constants/map_object_constants.asm)
+	table_width 2, StepTypesJumptable
 	dw ObjectMovementReset ; 00
 	dw MapObjectMovementPattern ; 01
 	dw NPCStep ; 02
@@ -1096,6 +1099,7 @@ StepTypesJumptable:
 	dw StepType17 ; 17
 	dw StepType18 ; 18
 	dw SkyfallTop ; 19
+	assert_table_length NUM_STEP_TYPES
 
 WaitStep_InPlace:
 	ld hl, OBJECT_STEP_DURATION

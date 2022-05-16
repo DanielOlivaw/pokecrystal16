@@ -23,6 +23,8 @@ PokemonPalettes:
 ; only the middle two colors are included, not black or white.
 ; Shiny palettes are defined directly, not generated.
 
+	table_width PAL_COLOR_SIZE * 2 * 2, PokemonPalettes
+
 ; 000
 	RGB 30, 22, 17
 	RGB 16, 14, 19
@@ -1444,3 +1446,5 @@ INCBIN "gfx/pokemon/regieleki/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/regieleki/shiny.pal"
 INCBIN "gfx/pokemon/regidrago/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/regidrago/shiny.pal"
+
+	assert_table_length NUM_POKEMON + 1

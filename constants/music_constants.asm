@@ -142,6 +142,7 @@
 	const MUSIC_MAXIE_ARCHIE_BATTLE          ; 85
 	const MUSIC_ALOLA_ELITE_FOUR_BATTLE      ; 86
 	const MUSIC_CHAMPION_BATTLE_B2W2         ; 87
+NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for these values (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $fc

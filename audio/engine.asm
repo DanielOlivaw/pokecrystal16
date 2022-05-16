@@ -728,7 +728,7 @@ LoadNote:
 	inc hl
 	ld d, [hl]
 	; get direction of pitch wheel
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld a, e
 	sub [hl]
@@ -736,7 +736,7 @@ LoadNote:
 	ld a, d
 	sbc 0
 	ld d, a
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	sub [hl]
 	jr nc, .greater_than
@@ -750,7 +750,7 @@ LoadNote:
 	inc hl
 	ld d, [hl]
 	; ????
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld a, [hl]
 	sub e
@@ -759,7 +759,7 @@ LoadNote:
 	sbc 0
 	ld d, a
 	; ????
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	ld a, [hl]
 	sub d
@@ -777,7 +777,7 @@ LoadNote:
 	inc hl
 	ld d, [hl]
 	; get distance from pitch wheel target
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld a, e
 	sub [hl]
@@ -785,7 +785,7 @@ LoadNote:
 	ld a, d
 	sbc 0
 	ld d, a
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	sub [hl]
 	ld d, a
@@ -813,10 +813,10 @@ LoadNote:
 	add [hl]
 	ld d, b ; quotient
 	pop bc
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT
 	add hl, bc
 	ld [hl], d ; quotient
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT_FRACTION
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT_FRACTION
 	add hl, bc
 	ld [hl], a ; remainder
 	ld hl, CHANNEL_FIELD25
@@ -831,7 +831,7 @@ HandleTrackVibrato:
 	add hl, bc
 	bit SOUND_DUTY, [hl] ; duty
 	jr z, .next
-	ld hl, CHANNEL_SFX_DUTY_LOOP
+	ld hl, CHANNEL_DUTY_CYCLE_PATTERN
 	add hl, bc
 	ld a, [hl]
 	rlca
@@ -847,7 +847,7 @@ HandleTrackVibrato:
 	add hl, bc
 	bit SOUND_CRY_PITCH, [hl]
 	jr z, .vibrato
-	ld hl, CHANNEL_CRY_PITCH
+	ld hl, CHANNEL_PITCH_OFFSET
 	add hl, bc
 	ld e, [hl]
 	inc hl
@@ -960,7 +960,7 @@ ApplyPitchWheel:
 	bit SOUND_PITCH_WHEEL_DIR, [hl]
 	jr z, .decreasing
 	; frequency += [Channel*PitchWheelAmount]
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT
 	add hl, bc
 	ld l, [hl]
 	ld h, 0
@@ -969,7 +969,7 @@ ApplyPitchWheel:
 	ld e, l
 	; [Channel*Field25] += [Channel*PitchWheelAmountFraction]
 	; if rollover: Frequency += 1
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT_FRACTION
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT_FRACTION
 	add hl, bc
 	ld a, [hl]
 	ld hl, CHANNEL_FIELD25
@@ -985,13 +985,13 @@ ApplyPitchWheel:
 	; Compare the dw at [Channel*PitchWheelTarget] to de.
 	; If frequency is greater, we're finished.
 	; Otherwise, load the frequency and set two flags.
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	ld a, [hl]
 	cp d
 	jp c, .finished_pitch_wheel
 	jr nz, .continue_pitch_wheel
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld a, [hl]
 	cp e
@@ -1001,7 +1001,7 @@ ApplyPitchWheel:
 .decreasing
 	; frequency -= [Channel*PitchWheelAmount]
 	ld a, e
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT
 	add hl, bc
 	ld e, [hl]
 	sub e
@@ -1011,7 +1011,7 @@ ApplyPitchWheel:
 	ld d, a
 	; [Channel*Field25] *= 2
 	; if rollover: Frequency -= 1
-	ld hl, CHANNEL_PITCH_WHEEL_AMOUNT_FRACTION
+	ld hl, CHANNEL_PITCH_SLIDE_AMOUNT_FRACTION
 	add hl, bc
 	ld a, [hl]
 	add a
@@ -1025,13 +1025,13 @@ ApplyPitchWheel:
 	; Compare the dw at [Channel*PitchWheelTarget] to de.
 	; If frequency is lower, we're finished.
 	; Otherwise, load the frequency and set two flags.
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	ld a, d
 	cp [hl]
 	jr c, .finished_pitch_wheel
 	jr nz, .continue_pitch_wheel
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld a, e
 	cp [hl]
@@ -1270,7 +1270,7 @@ ParseSFXOrRest:
 	call SetNoteDuration ; top nybble doesnt matter?
 	; update intensity from next param
 	call GetMusicByte
-	ld hl, CHANNEL_INTENSITY
+	ld hl, CHANNEL_VOLUME_ENVELOPE
 	add hl, bc
 	ld [hl], a
 	; update lo frequency from next param
@@ -1760,10 +1760,10 @@ Music_SlidePitchTo:
 	and $f
 	ld d, a
 	call GetFrequency
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET
 	add hl, bc
 	ld [hl], e
-	ld hl, CHANNEL_PITCH_WHEEL_TARGET + 1
+	ld hl, CHANNEL_PITCH_SLIDE_TARGET + 1
 	add hl, bc
 	ld [hl], d
 	ld hl, CHANNEL_FLAGS2
@@ -1777,7 +1777,7 @@ Music_Tone:
 	ld hl, CHANNEL_FLAGS2
 	add hl, bc
 	set SOUND_CRY_PITCH, [hl]
-	ld hl, CHANNEL_CRY_PITCH + 1
+	ld hl, CHANNEL_PITCH_OFFSET + 1
 	add hl, bc
 	call GetMusicByte
 	ld [hld], a
@@ -1807,7 +1807,7 @@ Music_SoundDuty:
 	call GetMusicByte
 	rrca
 	rrca
-	ld hl, CHANNEL_SFX_DUTY_LOOP
+	ld hl, CHANNEL_DUTY_CYCLE_PATTERN
 	add hl, bc
 	ld [hl], a
 	; update duty cycle
@@ -1932,7 +1932,7 @@ Music_Intensity:
 ;	hi: pressure
 ;   lo: velocity
 	call GetMusicByte
-	ld hl, CHANNEL_INTENSITY
+	ld hl, CHANNEL_VOLUME_ENVELOPE
 	add hl, bc
 	ld [hl], a
 	ret
@@ -2404,7 +2404,7 @@ _PlayCry::
 	add hl, bc
 	set SOUND_CRY_PITCH, [hl]
 
-	ld hl, CHANNEL_CRY_PITCH
+	ld hl, CHANNEL_PITCH_OFFSET
 	add hl, bc
 	ld a, [wCryPitch]
 	ld [hli], a

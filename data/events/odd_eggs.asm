@@ -1,9 +1,12 @@
+NUM_ODD_EGGS EQU 15
+
 prob: MACRO
 prob_total = prob_total + (\1)
 	dw prob_total * $ffff / 100
 ENDM
 
 OddEggProbabilities:
+	table_width 2, OddEggProbabilities
 prob_total = 0
 ; Pichu
 	prob 6
@@ -35,6 +38,7 @@ prob_total = 0
 	prob 7
 ; Toxel
 	prob 6
+	assert_table_length NUM_ODD_EGGS
 
 OddEggSpecies:
 	dw PICHU

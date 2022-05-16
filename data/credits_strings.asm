@@ -1,5 +1,6 @@
 CreditsStrings:
 ; entries correspond to constants/credits_constants.asm
+	table_width 2, CreditsStrings
 	dw .SatoshiTajiri
 	dw .JunichiMasuda
 	dw .TetsuyaWatanabe
@@ -103,6 +104,7 @@ CreditsStrings:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	assert_table_length NUM_CREDITS_STRINGS
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"

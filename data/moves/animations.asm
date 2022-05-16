@@ -1,5 +1,6 @@
 ; entries correspond to constants/move_constants.asm
 ; negative entries first (see the constants file for details)
+	table_width 2, BattleAnimations
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
@@ -25,6 +26,7 @@
 	dw BattleAnim_InHail
 	dw BattleAnim_InFog
 	dw BattleAnim_InStorm
+	assert_table_length NUM_BATTLE_ANIMS + 1
 BattleAnimations::
 	dw BattleAnim_0
 	dw BattleAnim_Pound
@@ -661,6 +663,7 @@ BattleAnimations::
 	dw BattleAnim_PartingShot
 	dw BattleAnim_NightDaze
 	dw BattleAnim_Purify
+	assert_table_length NUM_ATTACKS + 1
 
 	dw BattleAnim_SweetScent2
 

@@ -2,7 +2,7 @@
 
 KantoWaterWildMons:
 
-	map_id TOHJO_FALLS ; GOLDEEN, SLOWPOKE, BASCULIN
+	def_water_wildmons TOHJO_FALLS ; GOLDEEN, SLOWPOKE, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 15, GOLDEEN
 	dbw 15, SLOWPOKE
@@ -10,8 +10,9 @@ KantoWaterWildMons:
 	dbw 15, SLOWPOKE
 	dbw 20, GOLDEEN
 	dbw 20, GOLDEEN
+	end_water_wildmons
 
-	map_id VERMILION_PORT ; TENTACOOL, MOLANCORA, SKRELP
+	def_water_wildmons VERMILION_PORT ; TENTACOOL, MOLANCORA, SKRELP
 	db 2 percent ; encounter rate
 	dbw 35, TENTACRUEL
 	dbw 35, MOLANCORA
@@ -19,8 +20,9 @@ KantoWaterWildMons:
 	dbw 40, SKRELP
 	dbw 40, ANCHORRAGE
 	dbw 40, ANCHORRAGE
+	end_water_wildmons
 
-	map_id ROUTE_4 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons ROUTE_4 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -28,8 +30,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id ROUTE_6 ; PSYDUCK, LOTAD, SURSKIT, BASCULIN, ARROKUDA
+	def_water_wildmons ROUTE_6 ; PSYDUCK, LOTAD, SURSKIT, BASCULIN, ARROKUDA
 	db 2 percent ; encounter rate
 	dbw 40, GOLDUCK
 	dbw 35, LOMBRE
@@ -37,8 +40,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 35, MASQUERAIN
 	dbw 40, MASQUERAIN
+	end_water_wildmons
 
-	map_id ROUTE_9 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons ROUTE_9 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -46,8 +50,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id ROUTE_10_NORTH ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons ROUTE_10_NORTH ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -55,8 +60,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id ROUTE_12 ; FRILLISH, WOOPER, MOLANCORA
+	def_water_wildmons ROUTE_12 ; FRILLISH, WOOPER, MOLANCORA
 	db 6 percent ; encounter rate
 	dbw 35, FRILLISH
 	dbw 40, PELIPPER
@@ -64,8 +70,9 @@ KantoWaterWildMons:
 	dbw 40, QUAGSIRE
 	dbw 40, QUAGSIRE
 	dbw 40, QUAGSIRE
+	end_water_wildmons
 
-	map_id ROUTE_13 ; FRILLISH, WOOPER, MOLANCORA
+	def_water_wildmons ROUTE_13 ; FRILLISH, WOOPER, MOLANCORA
 	db 6 percent ; encounter rate
 	dbw 35, FRILLISH
 	dbw 40, PELIPPER
@@ -73,8 +80,9 @@ KantoWaterWildMons:
 	dbw 40, QUAGSIRE
 	dbw 40, QUAGSIRE
 	dbw 40, QUAGSIRE
+	end_water_wildmons
 
-	map_id ROUTE_19 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
+	def_water_wildmons ROUTE_19 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
@@ -82,8 +90,9 @@ KantoWaterWildMons:
 	dbw 35, SEALEO
 	dbw 35, WAILMER
 	dbw 35, WAILMER
+	end_water_wildmons
 
-	map_id ROUTE_20 ; TENTACOOL, MOLANCORA, WINGULL, SPHEAL, BERGMITE
+	def_water_wildmons ROUTE_20 ; TENTACOOL, MOLANCORA, WINGULL, SPHEAL, BERGMITE
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
@@ -91,8 +100,9 @@ KantoWaterWildMons:
 	dbw 35, SEALEO
 	dbw 35, BERGMITE
 	dbw 35, BERGMITE
+	end_water_wildmons
 
-	map_id ROUTE_21 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons ROUTE_21 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
@@ -100,8 +110,9 @@ KantoWaterWildMons:
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
+	end_water_wildmons
 
-	map_id ROUTE_22 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, ARROKUDA
+	def_water_wildmons ROUTE_22 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, ARROKUDA
 	db 2 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -109,8 +120,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 35, ARAQUANID
 	dbw 40, ARAQUANID
+	end_water_wildmons
 
-	map_id ROUTE_24 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons ROUTE_24 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -118,8 +130,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id ROUTE_25 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons ROUTE_25 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -127,8 +140,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id ROUTE_26 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons ROUTE_26 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
@@ -136,8 +150,9 @@ KantoWaterWildMons:
 	dbw 20, WAILMER
 	dbw 20, SKRELP
 	dbw 20, SKRELP
+	end_water_wildmons
 
-	map_id ROUTE_27 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons ROUTE_27 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
@@ -145,8 +160,9 @@ KantoWaterWildMons:
 	dbw 20, WAILMER
 	dbw 20, SKRELP
 	dbw 20, SKRELP
+	end_water_wildmons
 
-	map_id ROUTE_28 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, CARVANHA
+	def_water_wildmons ROUTE_28 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, CARVANHA
 	db 2 percent ; encounter rate
 	dbw 50, FLOATZEL
 	dbw 45, LOMBRE
@@ -154,8 +170,9 @@ KantoWaterWildMons:
 	dbw 45, BASCULIN
 	dbw 45, ARAQUANID
 	dbw 50, ARAQUANID
+	end_water_wildmons
 
-	map_id PALLET_TOWN ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons PALLET_TOWN ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
@@ -163,8 +180,9 @@ KantoWaterWildMons:
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
+	end_water_wildmons
 
-	map_id VIRIDIAN_CITY ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, ARROKUDA
+	def_water_wildmons VIRIDIAN_CITY ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, ARROKUDA
 	db 2 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -172,8 +190,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 35, ARAQUANID
 	dbw 40, ARAQUANID
+	end_water_wildmons
 
-	map_id CERULEAN_CITY ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
+	def_water_wildmons CERULEAN_CITY ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
 	dbw 35, LOMBRE
@@ -181,8 +200,9 @@ KantoWaterWildMons:
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
+	end_water_wildmons
 
-	map_id VERMILION_CITY ; TENTACOOL, MOLANCORA, WINGULL
+	def_water_wildmons VERMILION_CITY ; TENTACOOL, MOLANCORA, WINGULL
 	db 6 percent ; encounter rate
 	dbw 35, MOLANCORA
 	dbw 35, PELIPPER
@@ -190,8 +210,9 @@ KantoWaterWildMons:
 	dbw 40, TENTACRUEL
 	dbw 40, ANCHORRAGE
 	dbw 40, ANCHORRAGE
+	end_water_wildmons
 
-	map_id CELADON_CITY ; GRIMER
+	def_water_wildmons CELADON_CITY ; GRIMER
 	db 2 percent ; encounter rate
 	dbw 40, GRIMER
 	dbw 40, GRIMER
@@ -199,8 +220,9 @@ KantoWaterWildMons:
 	dbw 35, GRIMER
 	dbw 35, MUK
 	dbw 40, MUK
+	end_water_wildmons
 
-	map_id FUCHSIA_CITY ; MAGIKARP
+	def_water_wildmons FUCHSIA_CITY ; MAGIKARP
 	db 2 percent ; encounter rate
 	dbw 35, MAGIKARP
 	dbw 35, MAGIKARP
@@ -208,8 +230,9 @@ KantoWaterWildMons:
 	dbw 40, MAGIKARP
 	dbw 40, MAGIKARP
 	dbw 40, MAGIKARP
+	end_water_wildmons
 
-	map_id CINNABAR_ISLAND ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
+	def_water_wildmons CINNABAR_ISLAND ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
@@ -217,5 +240,6 @@ KantoWaterWildMons:
 	dbw 35, SEALEO
 	dbw 35, WAILMER
 	dbw 35, WAILMER
+	end_water_wildmons
 
 	db -1 ; end

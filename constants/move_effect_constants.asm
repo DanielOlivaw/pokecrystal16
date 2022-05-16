@@ -253,3 +253,4 @@
 	const EFFECT_GUILE_FANG         ; fc
 	const EFFECT_DATA_PULSE         ; fd
 	const EFFECT_ME_FIRST           ; fe
+NUM_MOVE_EFECTS EQU const_value

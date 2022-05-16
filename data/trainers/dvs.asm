@@ -1,5 +1,6 @@
 TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
+	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
 	dn  9, 10,  7,  8 ; FALKNER
 	dn  8,  8,  8,  9 ; WHITNEY
@@ -72,3 +73,4 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; BUG_MANIAC
 	dn  7,  8,  8,  9 ; SCIENTIST_F
+	assert_table_length NUM_TRAINER_CLASSES

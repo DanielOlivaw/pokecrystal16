@@ -1,5 +1,6 @@
 ItemDescriptions:
-; entries correspond to item ids
+; entries correspond to item ids (see constants/item_constants.asm)
+	table_width 2, ItemDescriptions
 	dw MasterBallDesc
 	dw UltraBallDesc
 	dw GreatBallDesc
@@ -254,7 +255,7 @@ ItemDescriptions:
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	assert_table_length NUM_ITEMS
 
 MasterBallDesc:
 	db   "The best BALL. It"

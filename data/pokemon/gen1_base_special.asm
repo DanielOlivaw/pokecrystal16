@@ -1,6 +1,7 @@
 ; The original base Special stat for each Pokémon from Red/Blue
 
 KantoMonSpecials:
+	table_width 1, KantoMonSpecials
 	db  65 ; BULBASAUR
 	db  80 ; IVYSAUR
 	db 100 ; VENUSAUR
@@ -21,10 +22,6 @@ KantoMonSpecials:
 	db  70 ; PIDGEOT
 	db  25 ; RATTATA
 	db  50 ; RATICATE
-	db  31 ; SPEAROW
-	db  61 ; FEAROW
-	db  40 ; EKANS
-	db  65 ; ARBOK
 	db  50 ; PIKACHU
 	db  90 ; RAICHU
 	db  30 ; SANDSHREW
@@ -50,19 +47,13 @@ KantoMonSpecials:
 	db  80 ; PARASECT
 	db  40 ; VENONAT
 	db  90 ; VENOMOTH
-	db  45 ; DIGLETT
-	db  70 ; DUGTRIO
 	db  40 ; MEOWTH
-	db  65 ; PERSIAN
 	db  50 ; PSYDUCK
 	db  80 ; GOLDUCK
 	db  35 ; MANKEY
 	db  60 ; PRIMEAPE
 	db  50 ; GROWLITHE
 	db  80 ; ARCANINE
-	db  40 ; POLIWAG
-	db  50 ; POLIWHIRL
-	db  70 ; POLIWRATH
 	db 105 ; ABRA
 	db 120 ; KADABRA
 	db 135 ; ALAKAZAM
@@ -84,8 +75,6 @@ KantoMonSpecials:
 	db  95 ; MAGNEMITE
 	db 120 ; MAGNETON
 	db  58 ; FARFETCH_D
-	db  35 ; DODUO
-	db  60 ; DODRIO
 	db  70 ; SEEL
 	db  95 ; DEWGONG
 	db  40 ; GRIMER
@@ -100,19 +89,13 @@ KantoMonSpecials:
 	db 115 ; HYPNO
 	db  25 ; KRABBY
 	db  50 ; KINGLER
-	db  55 ; VOLTORB
-	db  80 ; ELECTRODE
 	db  60 ; EXEGGCUTE
 	db 125 ; EXEGGUTOR
 	db  40 ; CUBONE
 	db  50 ; MAROWAK
-	db  35 ; HITMONLEE
-	db  35 ; HITMONCHAN
 	db  60 ; LICKITUNG
 	db  60 ; KOFFING
 	db  85 ; WEEZING
-	db  30 ; RHYHORN
-	db  45 ; RHYDON
 	db 105 ; CHANSEY
 	db 100 ; TANGELA
 	db  40 ; KANGASKHAN
@@ -124,9 +107,7 @@ KantoMonSpecials:
 	db 100 ; STARMIE
 	db 100 ; MR__MIME
 	db  55 ; SCYTHER
-	db  95 ; JYNX
 	db  85 ; ELECTABUZZ
-	db  85 ; MAGMAR
 	db  55 ; PINSIR
 	db  70 ; TAUROS
 	db  20 ; MAGIKARP
@@ -152,3 +133,4 @@ KantoMonSpecials:
 	db 100 ; DRAGONITE
 	db 154 ; MEWTWO
 	db 100 ; MEW
+	assert_table_length KANTO_POKEMON - 1

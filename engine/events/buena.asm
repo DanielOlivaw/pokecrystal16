@@ -268,7 +268,7 @@ Buena_PrizeMenu:
 	dba .prizeitem
 	dba .prizepoints
 
-NUM_BUENA_PRIZES EQU 9 ; ((BuenaPrizeItems.End - BuenaPrizeItems) / 2)
+NUM_BUENA_PRIZES EQU 10 ; ((BuenaPrizeItems.End - BuenaPrizeItems) / 2)
 
 .indices
 	db NUM_BUENA_PRIZES

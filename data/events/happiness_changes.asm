@@ -1,6 +1,7 @@
 HappinessChanges:
 ; entries correspond to HAPPINESS_* constants
-; change if happiness < 100, change if happiness < 200, change otherwise
+	table_width 3, HappinessChanges
+	; change if happiness < 100, change if happiness < 200, change otherwise
 	db  +5,  +4,  +3 ; Gained a level
 	db  +5,  +3,  +2 ; Vitamin
 	db  +1,  +1,  +0 ; X Item
@@ -20,3 +21,4 @@ HappinessChanges:
 	db -15, -15, -20 ; Used Revival Herb (bitter)
 	db +30, +30, +30 ; Grooming
 	db +10,  +8,  +6 ; Gained a level in the place where it was caught
+	assert_table_length NUM_HAPPINESS_CHANGES

@@ -7,6 +7,7 @@ ENDM
 
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm
+	table_width MON_CRY_LENGTH, PokemonCries
 	mon_cry CRY_BULBASAUR,   128,  129 ; BULBASAUR
 	mon_cry CRY_BULBASAUR,    32,  256 ; IVYSAUR
 	mon_cry CRY_BULBASAUR,     0,  320 ; VENUSAUR
@@ -714,6 +715,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   128,  129  ; DRAGAPULT
 	mon_cry CRY_BULBASAUR,   128,  129  ; REGIELEKI
 	mon_cry CRY_BULBASAUR,   128,  129  ; REGIDRAGO
+	assert_table_length NUM_POKEMON
 
 	; mon_cry CRY_SPEAROW,       0,  256 ; SPEAROW
 	; mon_cry CRY_FEAROW,       64,  288 ; FEAROW

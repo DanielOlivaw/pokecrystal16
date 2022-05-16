@@ -1,5 +1,6 @@
 BTTrainerClassSprites:
 ; entries correspond to trainer classes
+	table_width 1, BTTrainerClassSprites
 	db SPRITE_FALKNER
 	db SPRITE_WHITNEY
 	db SPRITE_BUGSY
@@ -68,5 +69,7 @@ BTTrainerClassSprites:
 	db SPRITE_BLUE
 	db SPRITE_OFFICER
 	db SPRITE_ROCKET_GIRL
+	db SPRITE_SUPER_NERD
 	db SPRITE_GYM_GUY       ; BUG_MANIAC
 	db SPRITE_SCIENTIST_F
+	assert_table_length NUM_TRAINER_CLASSES

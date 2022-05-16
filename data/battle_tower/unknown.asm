@@ -1,6 +1,7 @@
 BattleTowerTrainerData:: ; What exactly it is, I don't know
 ; Size is 70 (Nr of Trainers in BattleTower) * 0x24 (Nr of Bytes that are copied)
 ; Second argument points to an entry in Unknown_170470, to which the first argument is compared.
+	table_width BATTLETOWER_TRAINERDATALENGTH, BattleTowerTrainerData
 
 BattleTowerTrainer1DataTable:
 	db $37,  3
@@ -1401,4 +1402,5 @@ BattleTowerTrainer70DataTable:
 	db $22,  7
 	db $d1,  0
 	db $32, 13
-BattleTowerTrainerDataEnd:
+
+	assert_table_length BATTLETOWER_NUM_UNIQUE_TRAINERS
