@@ -82,19 +82,19 @@ HasANightmareText:
 HurtByCurseText:
 	text "<USER>"
 	line "is hurt by the"
-	cont "CURSE!"
+	scroll "CURSE!"
 	prompt
 
 SandstormHitsText:
 	text "<USER>"
 	line "is buffeted by the"
-	cont "sandstorm!"
+	scroll "sandstorm!"
 	prompt
 
 HailHitsText:
 	text "<USER>"
 	line "is buffeted by the"
-	cont "hail!"
+	scroll "hail!"
 	prompt
 
 PerishCountText:
@@ -107,20 +107,20 @@ PerishCountText:
 AbsorbedNutrientsText:
 	text "<TARGET>"
 	line "absorbed nutrients"
-	cont "with its roots!"
+	scroll "with its roots!"
 	prompt
 
 VeilOfWaterRestoredText:
 	text "A veil of water"
 	line "restored"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "HP!"
 	prompt
 
 BattleText_TargetRecoveredWithItem:
 	text "<TARGET>"
 	line "recovered with"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "."
 	prompt
@@ -128,7 +128,7 @@ BattleText_TargetRecoveredWithItem:
 BattleText_UserRecoveredPPUsing:
 	text "<USER>"
 	line "recovered PP using"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "."
 	prompt
@@ -140,7 +140,7 @@ BattleText_TargetWasHitByFutureSight:
 
 	; text "<TARGET>"
 	; line "was hit by FUTURE"
-	; cont "SIGHT!"
+	; scroll "SIGHT!"
 	; prompt
 
 BattleText_SafeguardFaded:
@@ -314,10 +314,10 @@ BattleText_PluralEnemyAreAboutToUseWillPlayerChangeMon:
 BattleText_EnemySentOut:
 	text "<ENEMY>"
 	line "sent out"
-	cont "@"
+	scroll "@"
 	text_ram wEnemyMonNick
 	text "!"
-	done
+	autodone
 
 BattleText_TheresNoWillToBattle:
 	text "There's no will to"
@@ -336,7 +336,7 @@ BattleText_CantEscape2:
 BattleText_TheresNoEscapeFromTrainerBattle:
 	text "No! There's no"
 	line "running from a"
-	cont "trainer battle!"
+	scroll "trainer battle!"
 	prompt
 
 BattleText_GotAwaySafely:
@@ -346,7 +346,7 @@ BattleText_GotAwaySafely:
 BattleText_UserFledUsingAStringBuffer1:
 	text "<USER>"
 	line "fled using a"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -369,7 +369,7 @@ BattleText_UserHurtByStealthRock:
 RecoveredUsingText:
 	text "<TARGET>"
 	line "recovered using a"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -379,7 +379,7 @@ BattleText_UsersStringBuffer1Activated:
 	line "@"
 	text_ram wStringBuffer1
 	text_start
-	cont "activated!"
+	scroll "activated!"
 	prompt
 
 BattleText_ItemsCantBeUsedHere:
@@ -413,7 +413,7 @@ BattleText_MonHasNoMovesLeft:
 	text_ram wBattleMonNick
 	text_start
 	line "has no moves left!"
-	done
+	autodone
 
 BattleText_TargetsEncoreEnded:
 	text "<TARGET>'s"
@@ -503,7 +503,7 @@ HurtItselfText:
 ConfusedNoMoreText:
 	text "<USER>"
 	line "snapped out of"
-	cont "confusion!"
+	scroll "confusion!"
 	prompt
 
 BecameConfusedText:
@@ -516,7 +516,7 @@ BattleText_ItemHealedConfusion:
 	text_ram wStringBuffer1
 	text " rid"
 	line "<TARGET>"
-	cont "of its confusion."
+	scroll "of its confusion."
 	prompt
 
 AlreadyConfusedText:
@@ -527,7 +527,7 @@ AlreadyConfusedText:
 BattleText_UsersHurtByStringBuffer1:
 	text "<USER>'s"
 	line "hurt by"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -535,7 +535,7 @@ BattleText_UsersHurtByStringBuffer1:
 BattleText_UsersTrappedByStringBuffer1:
 	text "<USER>'s"
 	line "trapped by"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -543,7 +543,7 @@ BattleText_UsersTrappedByStringBuffer1:
 BattleText_UserWasReleasedFromStringBuffer1:
 	text "<USER>"
 	line "was released from"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -551,58 +551,58 @@ BattleText_UserWasReleasedFromStringBuffer1:
 UsedBindText:
 	text "<TARGET>"
 	line "was squeezed by"
-	cont "<USER>!"
+	scroll "<USER>!"
 	prompt
 
 WhirlpoolTrapText:
 FireSpinTrapText:
 	text "<TARGET>"
 	line "became trapped in"
-	cont "the vortex!"
+	scroll "the vortex!"
 	prompt
 
 SandTombTrapText:
 	text "<TARGET>"
 	line "became trapped by"
-	cont "SAND TOMB!"
+	scroll "SAND TOMB!"
 	prompt
 
 NailDownTrapText:
 	text "<TARGET>"
 	line "was NAILED DOWN by"
-	cont "<USER>!"
+	scroll "<USER>!"
 	prompt
 
 InfestationTrapText:
 	text "<TARGET>"
 	line "was afflicted with"
-	cont "an INFESTATION by"
-	cont "<USER>!"
+	scroll "an INFESTATION by"
+	scroll "<USER>!"
 	prompt
 
 WrappedByText:
 	text "<TARGET>"
 	line "was WRAPPED by"
-	cont "<USER>!"
+	scroll "<USER>!"
 	prompt
 
 ClampedByText:
 	text "<TARGET>"
 	line "was CLAMPED by"
-	cont "<USER>!"
+	scroll "<USER>!"
 	prompt
 
 TrappedText:
 	text "<USER>"
 	line "trapped"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 CaughtInJawsText:
 	text "<TARGET>"
 	line "was caught in"
-	cont "<USER>'s"
-	cont "jaws!"
+	scroll "<USER>'s"
+	scroll "jaws!"
 	prompt
 
 		;"123456789123456789"
@@ -618,16 +618,15 @@ UnleashedEnergyText:
 	prompt
 
 CloakedInHarshLightText:
-		;"123456789123456789"
 	text "<USER>"
 	line "became cloaked in"
-	cont "a harsh light!"
+	scroll "a harsh light!"
 	prompt
 
 HungOnText:
 	text "<TARGET>"
 	line "hung on with"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -640,19 +639,19 @@ EnduredText:
 InLoveWithText:
 	text "<USER>"
 	line "is in love with"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 InfatuationText:
 	text "<USER>'s"
 	line "infatuation kept"
-	cont "it from attacking!"
+	scroll "it from attacking!"
 	prompt
 
 InfatuatedNoMoreText:
 	text "<USER>'s"
 	line "infatuated no"
-	cont "more!"
+	scroll "more!"
 	prompt
 
 DisabledMoveText:
@@ -660,7 +659,7 @@ DisabledMoveText:
 	line "@"
 	text_ram wStringBuffer1
 	text " is"
-	cont "DISABLED!"
+	scroll "DISABLED!"
 	prompt
 
 LoafingAroundText:
@@ -707,7 +706,7 @@ NoPPLeftText:
 HasNoPPLeftText:
 	text "<USER>"
 	line "has no PP left for"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer2
 	text "!"
 	prompt
@@ -715,13 +714,13 @@ HasNoPPLeftText:
 WentToSleepText:
 	text "<USER>"
 	line "went to sleep!"
-	done
+	autodone
 
 RestedText:
 	text "<USER>"
 	line "fell asleep and"
-	cont "became healthy!"
-	done
+	scroll "became healthy!"
+	autodone
 
 RegainedHealthText:
 	text "<USER>"
@@ -746,13 +745,13 @@ AttackMissed2Text:
 AvoidStatusText:
 	text "<TARGET>"
 	line "avoided the"
-	cont "attack!"
+	scroll "attack!"
 	prompt
 
 CrashedText:
 	text "<USER>"
 	line "kept going and"
-	cont "crashed!"
+	scroll "crashed!"
 	prompt
 
 UnaffectedText:
@@ -768,7 +767,7 @@ DoesntAffectText:
 FogProtectionText:
 	text "<TARGET>"
 	line "is protected by"
-	cont "the fog!"
+	scroll "the fog!"
 	prompt
 
 CriticalHitText:
@@ -791,8 +790,9 @@ NotVeryEffectiveText:
 
 TookDownWithItText:
 	text "<TARGET>"
-	line "took down with it,"
-	cont "<USER>!"
+	line "took down"
+	scroll "<USER>"
+	scroll "with it!"
 	prompt
 
 		;"123456789123456789"
@@ -802,7 +802,7 @@ ReducedPPToZeroText:
 	line "@"
 	text_ram wStringBuffer1
 	text " was"
-	cont "reduced to 0!"
+	scroll "reduced to 0!"
 	prompt
 
 RageBuildingText:
@@ -828,7 +828,7 @@ TookAimText:
 SketchedText:
 	text "<USER>"
 	line "SKETCHED"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -836,13 +836,13 @@ SketchedText:
 DestinyBondEffectText:
 	text "<USER>'s"
 	line "trying to take its"
-	cont "opponent with it!"
+	scroll "opponent with it!"
 	prompt
 
 GrudgeEffectText:
 	text "<USER>"
 	line "wants its opponent"
-	cont "to bear a grudge!"
+	scroll "to bear a grudge!"
 	prompt
 
 SpiteEffectText:
@@ -850,7 +850,7 @@ SpiteEffectText:
 	line "@"
 	text_ram wStringBuffer1
 	text " was"
-	cont "reduced by @"
+	scroll "reduced by @"
 	text_decimal wDeciramBuffer, 1, 1
 	text "!"
 	prompt
@@ -868,13 +868,13 @@ SoothingAromaText:
 UserStatusReturnedToNormalText:
 	text "<USER>'s"
 	line "status returned to"
-	cont "normal!"
+	scroll "normal!"
 	prompt
 
 TargetStatusReturnedToNormalText:
 	text "<TARGET>'s"
 	line "status returned to"
-	cont "normal!"
+	scroll "normal!"
 	prompt
 
 FellAsleepText:
@@ -932,25 +932,25 @@ WontRiseAnymoreText:
 	line "@"
 	text_ram wStringBuffer2
 	text " won't"
-	cont "go any higher!"
+	scroll "go any higher!"
 	prompt
 
 StatsWontRiseAnymoreText:
 	text "<USER>'s"
 	line "stats won't go any"
-	cont "higher!"
+	scroll "higher!"
 	prompt
 
 AccuracyWontRiseAnymoreText:
 	text "<USER>'s"
 	line "ACCURACY won't"
-	cont "go any higher!"
+	scroll "go any higher!"
 	prompt
 
 SpDefWontRiseAnymoreText:
 	text "<USER>'s"
 	line "SP.DEF won't"
-	cont "go any higher!"
+	scroll "go any higher!"
 	prompt
 
 WontDropAnymoreText:
@@ -958,13 +958,13 @@ WontDropAnymoreText:
 	line "@"
 	text_ram wStringBuffer2
 	text " won't"
-	cont "go any lower!"
+	scroll "go any lower!"
 	prompt
 
 StatsWontDropAnymoreText:
 	text "<TARGET>'s"
 	line "stats won't go any"
-	cont "lower!"
+	scroll "lower!"
 	prompt
 
 FledFromBattleText::
@@ -1021,7 +1021,7 @@ VeilOfWaterText:
 	text_pause
 	text "<USER>"
 	line "surrounded itself"
-	para "with a veil of"
+	autopara "with a veil of"
 	line "water!"
 	prompt
 
@@ -1029,7 +1029,7 @@ ShieldedFromCriticalHitsText:
 	text_pause
 	text "<USER>"
 	line "is shielded from"
-	cont "critical hits!"
+	scroll "critical hits!"
 	prompt
 
 BattleText_LuckyChantEnded:
@@ -1041,27 +1041,27 @@ LevitatedWithElectromagnetismText:
 	text_pause
 	text "<USER>"
 	line "levitated with"
-	cont "electromagnetism!"
+	scroll "electromagnetism!"
 	prompt
 
 ReturnedToTheGroundText:
 	text_pause
 	text "<USER>"
 	line "returned to the"
-	cont "ground!"
+	scroll "ground!"
 	prompt
 
 TrickRoomText:
 	text "<USER>"
 	line "twisted the"
-	cont "dimensions!"
+	scroll "dimensions!"
 	prompt
 
 TrickRoomEndedText:
 	text "The twisted"
 	line "dimensions"
 
-	para "returned to"
+	autopara "returned to"
 	line "normal!"
 	prompt
 
@@ -1083,14 +1083,14 @@ ChargingPowerText:
 	text_pause
 	text "<USER>"
 	line "began charging"
-	cont "power!"
+	scroll "power!"
 	prompt
 
 ConcentratedIntenselyText:
 	text_pause
 	text "<USER>"
 	line "concentrated"
-	cont "intensely!"
+	scroll "intensely!"
 	prompt
 
 RecoilText:
@@ -1116,7 +1116,7 @@ TooWeakSubText:
 SubTookDamageText:
 	text "The SUBSTITUTE"
 	line "took damage for"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 SubFadedText:
@@ -1127,7 +1127,7 @@ SubFadedText:
 LearnedMoveText:
 	text "<USER>"
 	line "learned"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1147,7 +1147,7 @@ WasDisabledText:
 	line "@"
 	text_ram wStringBuffer1
 	text " was"
-	cont "DISABLED!"
+	scroll "DISABLED!"
 	prompt
 
 CoinsScatteredText:
@@ -1158,7 +1158,7 @@ CoinsScatteredText:
 TransformedTypeText:
 	text "<USER>"
 	line "transformed into"
-	cont "the @"
+	scroll "the @"
 	text_ram wStringBuffer1
 	text " type!"
 	prompt
@@ -1166,7 +1166,7 @@ TransformedTypeText:
 TargetTransformedTypeText:
 	text "<TARGET>"
 	line "transformed into"
-	cont "the @"
+	scroll "the @"
 	text_ram wStringBuffer1
 	text " type!"
 	prompt
@@ -1179,7 +1179,7 @@ BurnedItselfOutText:
 ReflectTypeText:
 	text "<USER>"
 	line "changed its type"
-	para "to match"
+	autopara "to match"
 	line "<TARGET>'s!"
 	prompt
 
@@ -1193,13 +1193,13 @@ EliminatedStatsText:
 EliminatedTargetStatsText:
 	text "<TARGET>'s"
 	line "stat changes were"
-	cont "eliminated!"
+	scroll "eliminated!"
 	prompt
 
 TransformedText:
 	text "<USER>"
 	line "TRANSFORMED into"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1207,7 +1207,7 @@ TransformedText:
 LightScreenEffectText:
 	text "LIGHT SCREEN"
 	line "raised the team's"
-	cont "SP.DEF!"
+	scroll "SP.DEF!"
 	prompt
 
 ReflectEffectText:
@@ -1220,14 +1220,14 @@ AuroraVeilEffectText:
 	text "AURORA VEIL made"
 	line "the team stronger"
 
-	para "against PHYSICAL"
+	autopara "against PHYSICAL"
 	line "and SPECIAL moves!"
 	prompt
 
 BrokeLightScreenText:
 	text "<TARGET>'s"
 	line "LIGHT SCREEN"
-	cont "shattered!"
+	scroll "shattered!"
 	prompt
 
 BrokeReflectText:
@@ -1240,7 +1240,7 @@ BrokeReflectText:
 BrokeAuroraVeilText:
 	text "<TARGET>'s"
 	line "AURORA VEIL"
-	cont "shattered!"
+	scroll "shattered!"
 	prompt
 
 NothingHappenedText:
@@ -1289,13 +1289,13 @@ DraggedOutText:
 ParalyzedText:
 	text "<TARGET>'s"
 	line "paralyzed! Maybe"
-	cont "it can't attack!"
+	scroll "it can't attack!"
 	prompt
 
 FullyParalyzedText:
 	text "<USER>"
 	line "is paralyzed!"
-	cont "It can't move!"
+	scroll "It can't move!"
 	prompt
 
 AlreadyParalyzedText:
@@ -1316,7 +1316,7 @@ AlreadyFrozenText:
 ProtectedByText:
 	text "<TARGET>'s"
 	line "protected by"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1331,19 +1331,19 @@ StoleText:
 	line "stole @"
 	text_ram wStringBuffer1
 	text_start
-	cont "from its foe!"
+	scroll "from its foe!"
 	prompt
 
 TrickText:
 	text "<USER>"
 	line "switched items"
-	cont "with its target!"
+	scroll "with its target!"
 	prompt
 
 TrickUserObtainedText:
 	text "<USER>"
 	line "obtained one"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "."
 	prompt
@@ -1351,7 +1351,7 @@ TrickUserObtainedText:
 TrickTargetObtainedText:
 	text "<TARGET>"
 	line "obtained one"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "."
 	prompt
@@ -1359,7 +1359,7 @@ TrickTargetObtainedText:
 KnockedOffText:
 	text "<USER>"
 	line "knocked off"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "@"
 	text_ram wStringBuffer1
 	text "!"
@@ -1368,7 +1368,7 @@ KnockedOffText:
 IncineratedText:
 	text "<USER>"
 	line "INCINERATED"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "@"
 	text_ram wStringBuffer1
 	text "!"
@@ -1377,8 +1377,8 @@ IncineratedText:
 StoleBerryText:
 	text "<USER>"
 	line "ate its foe's"
-	; cont "BERRY!"
-	cont "@"
+	; scroll "BERRY!"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1386,8 +1386,8 @@ StoleBerryText:
 StoleBerryRecoveryText:
 	text "<USER>"
 	line "recovered using"
-	; cont "the foe's BERRY!"
-	para "the foe's"
+	; scroll "the foe's BERRY!"
+	autopara "the foe's"
 	line "@"
 	text_ram wStringBuffer1
 	text "!"
@@ -1396,7 +1396,7 @@ StoleBerryRecoveryText:
 CultivateText:
 	text "<USER>"
 	line "grew one"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1404,7 +1404,7 @@ CultivateText:
 AteBerryText:
 	text "<TARGET>"
 	line "ate its"
-	cont "@"
+	scroll "@"
 	text_ram wStringBuffer1
 	text "!"
 	prompt
@@ -1417,25 +1417,25 @@ CantEscapeNowText:
 StartedNightmareText:
 	text "<TARGET>"
 	line "started to have a"
-	cont "NIGHTMARE!"
+	scroll "NIGHTMARE!"
 	prompt
 
 CoveredInPowderText:
 	text "<TARGET>"
 	line "is covered in"
-	cont "POWDER!"
+	scroll "POWDER!"
 	prompt
 
 PowderExplodedText:
 	text "The POWDER on"
 	line "<USER>"
-	cont "exploded!"
+	scroll "exploded!"
 	prompt
 
 MovesHaveBeenElectrifiedText:
 	text "<TARGET>'s"
 	line "moves have been"
-	cont "electrified!"
+	scroll "electrified!"
 	prompt
 
 WasDefrostedText:
@@ -1447,7 +1447,7 @@ PutACurseText:
 	text "<USER>"
 	line "cut its own HP and"
 
-	para "put a CURSE on"
+	autopara "put a CURSE on"
 	line "<TARGET>!"
 	prompt
 
@@ -1459,45 +1459,45 @@ ProtectedItselfText:
 ProtectingItselfText:
 	text "<TARGET>'s"
 	line "PROTECTING itself!"
-	done
+	autodone
 
 HurtBySpikyShieldText:
 	text "<USER>"
 	line "is hurt by"
 
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "SPIKY SHIELD!"
 	prompt
 
 SpikesText:
 	text "SPIKES scattered"
 	line "all around"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 ToxicSpikesText:
 	text "TOXIC SPIKES scat-"
 	line "tered all around"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 StealthRockText:
 	text "Pointed stones"
 	line "float all around"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 StickyWebText:
 		;"123456789123456789"
 	text "A STICKY WEB has"
 	line "been laid beneath"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 IdentifiedText:
 	text "<USER>"
 	line "identified"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 StartPerishText:
@@ -1533,7 +1533,7 @@ CoveredByVeilText:
 SafeguardProtectText:
 	text "<TARGET>"
 	line "is protected by"
-	cont "SAFEGUARD!"
+	scroll "SAFEGUARD!"
 	prompt
 
 MagnitudeText:
@@ -1545,7 +1545,7 @@ MagnitudeText:
 ReleasedByText:
 	text "<USER>"
 	line "was released by"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 ShedLeechSeedText:
@@ -1556,66 +1556,66 @@ ShedLeechSeedText:
 BlewSpikesText:
 	text "<USER>"
 	line "blew away the"
-	cont "SPIKES!"
+	scroll "SPIKES!"
 	prompt
 
 BlewToxicSpikesText:
 	text "<USER>"
 	line "blew away the"
-	cont "TOXIC SPIKES!"
+	scroll "TOXIC SPIKES!"
 	prompt
 
 BlewStealthRockText:
 	text "<USER>"
 	line "blew away the"
-	cont "pointed stones!"
+	scroll "pointed stones!"
 	prompt
 
 BlewStickyWebText:
 	text "<USER>"
 	line "blew away the"
-	cont "STICKY WEB!"
+	scroll "STICKY WEB!"
 	prompt
 
 BlewReflectText:
 	text "<USER>"
 	line "blew away"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "REFLECT!"
 	prompt
 
 BlewLightScreenText:
 	text "<USER>"
 	line "blew away"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "LIGHT SCREEN!"
 	prompt
 
 BlewSafeguardText:
 	text "<USER>"
 	line "blew away"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "SAFEGUARD!"
 	prompt
 
 BlewMistText:
 	text "<USER>"
 	line "blew away"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "MIST!"
 	prompt
 
 BlewAuroraVeilText:
 	text "<USER>"
 	line "blew away"
-	para "<TARGET>'s"
+	autopara "<TARGET>'s"
 	line "AURORA VEIL!"
 	prompt
 
 AbsorbedToxicSpikesText:
 	text "<USER>"
 	line "absorbed the"
-	cont "TOXIC SPIKES!"
+	scroll "TOXIC SPIKES!"
 	prompt
 
 DownpourText:
@@ -1668,21 +1668,21 @@ FogIsDeepText:
 BellyDrumText:
 	text "<USER>"
 	line "cut its HP and"
-	cont "maximized ATTACK!"
+	scroll "maximized ATTACK!"
 	prompt
 
 CopiedStatsText:
 	text "<USER>"
 	line "copied the stat"
 
-	para "changes of"
+	autopara "changes of"
 	line "<TARGET>!"
 	prompt
 
 StatChangesReversedText:
 	text "<TARGET>'s"
 	line "stat changes were"
-	cont "all reversed!"
+	scroll "all reversed!"
 	prompt
 
 		;"123456789123456789"
@@ -1695,7 +1695,7 @@ ForesawAttackText:
 ChoseDestinyText:
 	text "<USER>"
 	line "chose DOOM DESIRE"
-	cont "as its destiny!"
+	scroll "as its destiny!"
 	prompt
 
 		;"123456789123456789"
@@ -1704,7 +1704,7 @@ BeatUpAttackText:
 	text_ram wStringBuffer1
 	text "'s"
 	line "attack!"
-	done
+	autodone
 
 RefusedGiftText:
 	text "<TARGET>"
@@ -1719,20 +1719,20 @@ IgnoredOrders2Text:
 BattleText_LinkErrorBattleCanceled:
 	text "Link error…"
 
-	para "The battle has"
+	autopara "The battle has"
 	line "been canceled…"
 	prompt
 
 BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
-	done
+	autodone
 
 PlateTypeText:
 	text "<USER>'s"
 	line "PLATE transformed"
-	cont "it into the"
-	cont "@"
+	scroll "it into the"
+	scroll "@"
 	text_ram wStringBuffer1
 	text " type!"
 	prompt
@@ -1740,7 +1740,7 @@ PlateTypeText:
 MakingUproarText:
 	text "<USER>"
 	line "is making an"
-	cont "UPROAR!"
+	scroll "UPROAR!"
 	prompt
 
 CalmedDownText:
@@ -1778,31 +1778,31 @@ StockpileText:
 SharedPowerText:
 	text "<USER>"
 	line "shared power with"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 SharedGuardText:
 	text "<USER>"
 	line "shared guard with"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 SwappedAttackAndDefenseText:
 	text "<USER>"
 	line "swapped its ATTACK"
-	cont "and DEFENSE!"
+	scroll "and DEFENSE!"
 	prompt
 
 TighteningFocusText:
 	text "<USER>"
 	line "is tightening its"
-	cont "focus!"
+	scroll "focus!"
 	prompt
 
 StartedHeatingUpBeakText:
 	text "<USER>"
 	line "started heating up"
-	cont "its beak!"
+	scroll "its beak!"
 	prompt
 
 SetAShellTrapText:
@@ -1813,31 +1813,31 @@ SetAShellTrapText:
 SwappedSpeedText:
 	text "<USER>"
 	line "swapped SPEED with"
-	cont "<TARGET>!"
+	scroll "<TARGET>!"
 	prompt
 
 SwitchedPowerChangesText:
 	text "<USER>"
 	line "switched all"
-	para "changes to its"
+	autopara "changes to its"
 	line "ATTACK and"
-	para "SP.ATK with"
+	autopara "SP.ATK with"
 	line "<TARGET>!"
 	prompt
 
 SwitchedGuardChangesText:
 	text "<USER>"
 	line "switched all"
-	para "changes to its"
+	autopara "changes to its"
 	line "DEFENSE and"
-	para "SP.DEF with"
+	autopara "SP.DEF with"
 	line "<TARGET>!"
 	prompt
 
 SwitchedStatChangesText:
 	text "<USER>"
 	line "switched stat"
-	para "changes with"
+	autopara "changes with"
 	line "<TARGET>!"
 	prompt
 
