@@ -559,8 +559,8 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,   232,  232 ; FLABEBE
 	mon_cry CRY_PIDGEY,      255,  181 ; FLOETTE
 	mon_cry CRY_PIDGEY,      104,  224 ; FLORGES
-	mon_cry CRY_SQUIRTLE,    204,   72 ; SKIDDO
-	mon_cry CRY_SQUIRTLE,     17,  192 ; GOGOAT
+	mon_cry CRY_SLOWKING,      0,  384 ; SKIDDO
+	mon_cry CRY_SLOWKING,    -17,  462 ; GOGOAT
 	mon_cry CRY_TEDDIURSA,  1954,  110 ; PANCHAM
 	mon_cry CRY_TEDDIURSA,  1600,  216 ; PANGORO
 	mon_cry CRY_CLEFAIRY,    128,  129 ; ESPURR
@@ -608,7 +608,7 @@ PokemonCries::
 	mon_cry CRY_BULBASAUR,   128,  129  ; TRUMBEAK
 	mon_cry CRY_BULBASAUR,   128,  129  ; TOUCANNON
 	mon_cry CRY_SLOWKING,    128,  256 ; GRUBBIN
-	mon_cry CRY_SLOWKING,      0,  384 ; CHARJABUG
+	mon_cry CRY_SQUIRTLE,    204,   72 ; CHARJABUG
 	mon_cry CRY_PIDGEOTTO,   -44,  256 ; VIKAVOLT
 	mon_cry CRY_BULBASAUR,   128,  129  ; CRABRAWLER
 	mon_cry CRY_BULBASAUR,   128,  129  ; CRABOMABLE
