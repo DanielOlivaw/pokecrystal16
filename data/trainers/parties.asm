@@ -1965,9 +1965,10 @@ PokemaniacGroup:
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
-	db "RON@", TRAINERTYPE_NORMAL
+	db "RON@", TRAINERTYPE_MOVES
 	db 22
 	dw DRAMPA
+	dw GLARE, TWISTER, ECHOED_VOICE, STEEL_WING
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (8)
