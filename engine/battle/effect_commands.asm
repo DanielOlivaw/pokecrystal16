@@ -4453,9 +4453,6 @@ BattleCommand_PoisonTarget:
 
 	ld hl, WasPoisonedText
 	call StdBattleTextbox
-	ld de, ANIM_PSN
-	call PlayOpponentBattleAnim
-
 	jr .finished
 
 .toxic
@@ -4466,8 +4463,6 @@ BattleCommand_PoisonTarget:
 
 	ld hl, BadlyPoisonedText
 	call StdBattleTextbox
-	ld de, ANIM_PSN
-	call PlayOpponentBattleAnim
 .finished
 	farcall UseHeldStatusHealingItem
 	ret
@@ -4755,7 +4750,7 @@ BattleCommand_BurnTarget:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	bit BRN, a
-	jr nz, .burned
+	ret nz
 	call GetBattleVarAddr
 	and a
 	jp nz, Defrost
@@ -4793,11 +4788,6 @@ BattleCommand_BurnTarget:
 
 	farcall UseHeldStatusHealingItem
 	ret
-	
-.burned
-	call AnimateFailedMove
-	ld hl, AlreadyBurnedText
-	jp StdBattleTextbox
 
 BattleCommand_Burn:
 ; burn
