@@ -88,32 +88,191 @@ PlateauRivalBattleCommon:
 	waitbutton
 	closetext
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
-	; Cyndaquil
+	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
+	iftrue .GotWaterStarter
+	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
+	iftrue .GotGrassStarter
+; Player chose a Fire-type starter
+	checkevent EVENT_SQUIRTLE_IS_WATER_STARTER
+	iftrue .RivalSquirtle
+	checkevent EVENT_TOTODILE_IS_WATER_STARTER
+	iftrue .RivalTotodile
+	checkevent EVENT_MUDKIP_IS_WATER_STARTER
+	iftrue .RivalMudkip
+	checkevent EVENT_PIPLUP_IS_WATER_STARTER
+	iftrue .RivalPiplup
+	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
+	iftrue .RivalOshawott
+; Rival defaults to Froakie if water starter wasn't identified
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
-	loadtrainer RIVAL2, RIVAL2_2_TOTODILE
+	loadtrainer RIVAL2, RIVAL2_2_FROAKIE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump PlateauRivalPostBattle
 
-.Totodile:
+.GotWaterStarter:
+; Player chose a Water-type starter
+	checkevent EVENT_BULBASAUR_IS_GRASS_STARTER
+	iftrue .RivalBulbasaur
+	checkevent EVENT_CHIKORITA_IS_GRASS_STARTER
+	iftrue .RivalChikorita
+	checkevent EVENT_TREECKO_IS_GRASS_STARTER
+	iftrue .RivalTreecko
+	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
+	iftrue .RivalTurtwig
+	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
+	iftrue .RivalChespin
+; Rival defaults to Rowlet if grass starter wasn't identified
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
-	loadtrainer RIVAL2, RIVAL2_2_CHIKORITA
+	loadtrainer RIVAL1, RIVAL2_2_ROWLET
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump PlateauRivalPostBattle
 
-.Chikorita:
+.GotGrassStarter:
+; Player chose a Grass-type starter
+	checkevent EVENT_CHARMANDER_IS_FIRE_STARTER
+	iftrue .RivalCharmander
+	checkevent EVENT_TORCHIC_IS_FIRE_STARTER
+	iftrue .RivalTorchic
+	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
+	iftrue .RivalChimchar
+	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
+	iftrue .RivalFennekin
+; Rival defaults to Cyndaquil if fire starter wasn't identified
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
-	loadtrainer RIVAL2, RIVAL2_2_CYNDAQUIL
+	loadtrainer RIVAL1, RIVAL2_2_CYNDAQUIL
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalBulbasaur:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_BULBASAUR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalChikorita:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_CHIKORITA
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalTreecko:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_TREECKO
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalTurtwig:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_TURTWIG
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalChespin:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_CHESPIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalCharmander:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_CHARMANDER
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalTorchic:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_TORCHIC
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalChimchar:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_CHIMCHAR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalFennekin:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_FENNEKIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalSquirtle:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_SQUIRTLE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalTotodile:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_TOTODILE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalMudkip:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_MUDKIP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalPiplup:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_PIPLUP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump PlateauRivalPostBattle
+	
+.RivalOshawott:
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
+	loadtrainer RIVAL1, RIVAL2_2_OSHAWOTT
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

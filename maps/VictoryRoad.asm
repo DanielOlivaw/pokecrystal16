@@ -59,19 +59,80 @@ VictoryRoadRivalNext:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_VICTORY_ROAD
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .GotTotodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .GotChikorita
+	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
+	iftrue .GotWaterStarter
+	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
+	iftrue .GotGrassStarter
+; Player chose a Fire-type starter
+	checkevent EVENT_SQUIRTLE_IS_WATER_STARTER
+	iftrue .RivalSquirtle
+	checkevent EVENT_TOTODILE_IS_WATER_STARTER
+	iftrue .RivalTotodile
+	checkevent EVENT_MUDKIP_IS_WATER_STARTER
+	iftrue .RivalMudkip
+	checkevent EVENT_PIPLUP_IS_WATER_STARTER
+	iftrue .RivalPiplup
+	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
+	iftrue .RivalOshawott
+; Rival defaults to Froakie if water starter wasn't identified
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_TOTODILE
+	loadtrainer RIVAL1, RIVAL1_5_FROAKIE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump .AfterBattle
 
-.GotTotodile:
+.GotWaterStarter:
+; Player chose a Water-type starter
+	checkevent EVENT_BULBASAUR_IS_GRASS_STARTER
+	iftrue .RivalBulbasaur
+	checkevent EVENT_CHIKORITA_IS_GRASS_STARTER
+	iftrue .RivalChikorita
+	checkevent EVENT_TREECKO_IS_GRASS_STARTER
+	iftrue .RivalTreecko
+	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
+	iftrue .RivalTurtwig
+	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
+	iftrue .RivalChespin
+; Rival defaults to Rowlet if grass starter wasn't identified
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_ROWLET
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.GotGrassStarter:
+; Player chose a Grass-type starter
+	checkevent EVENT_CHARMANDER_IS_FIRE_STARTER
+	iftrue .RivalCharmander
+	checkevent EVENT_TORCHIC_IS_FIRE_STARTER
+	iftrue .RivalTorchic
+	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
+	iftrue .RivalChimchar
+	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
+	iftrue .RivalFennekin
+; Rival defaults to Cyndaquil if fire starter wasn't identified
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_CYNDAQUIL
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalBulbasaur:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_BULBASAUR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalChikorita:
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD_SILVER
 	loadtrainer RIVAL1, RIVAL1_5_CHIKORITA
@@ -79,11 +140,110 @@ VictoryRoadRivalNext:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump .AfterBattle
-
-.GotChikorita:
+	
+.RivalTreecko:
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_CYNDAQUIL
+	loadtrainer RIVAL1, RIVAL1_5_TREECKO
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalTurtwig:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_TURTWIG
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalChespin:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_CHESPIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalCharmander:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_CHARMANDER
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalTorchic:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_TORCHIC
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalChimchar:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_CHIMCHAR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalFennekin:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_FENNEKIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalSquirtle:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_SQUIRTLE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalTotodile:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_TOTODILE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalMudkip:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_MUDKIP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalPiplup:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_PIPLUP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+	
+.RivalOshawott:
+	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	setlasttalked VICTORYROAD_SILVER
+	loadtrainer RIVAL1, RIVAL1_5_OSHAWOTT
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

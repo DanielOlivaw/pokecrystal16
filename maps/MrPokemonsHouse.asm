@@ -128,9 +128,9 @@ MrPokemonsHouse_OakScript:
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 	specialphonecall SPECIALCALL_ROBBED
 	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	iftrue .RivalTakesCyndaquil
 	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	end

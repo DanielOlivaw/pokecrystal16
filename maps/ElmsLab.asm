@@ -193,7 +193,7 @@ FireStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -223,7 +223,7 @@ FireStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -248,7 +248,7 @@ FireStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -273,7 +273,7 @@ FireStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -298,7 +298,7 @@ FireStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -346,7 +346,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -374,7 +374,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -399,7 +399,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -424,7 +424,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -449,7 +449,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -474,7 +474,7 @@ WaterStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	setevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -522,7 +522,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -550,7 +550,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -575,7 +575,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -600,7 +600,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -625,7 +625,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -650,7 +650,7 @@ GrassStarterPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx

@@ -60,19 +60,80 @@ BurnedTowerRivalBattleScript:
 	writetext BurnedTowerSilver_BeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .chikorita
+	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
+	iftrue .GotWaterStarter
+	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
+	iftrue .GotGrassStarter
+; Player chose a Fire-type starter
+	checkevent EVENT_SQUIRTLE_IS_WATER_STARTER
+	iftrue .RivalSquirtle
+	checkevent EVENT_TOTODILE_IS_WATER_STARTER
+	iftrue .RivalTotodile
+	checkevent EVENT_MUDKIP_IS_WATER_STARTER
+	iftrue .RivalMudkip
+	checkevent EVENT_PIPLUP_IS_WATER_STARTER
+	iftrue .RivalPiplup
+	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
+	iftrue .RivalOshawott
+; Rival defaults to Froakie if water starter wasn't identified
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	setlasttalked BURNEDTOWER1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_3_TOTODILE
+	loadtrainer RIVAL1, RIVAL1_3_FROAKIE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump .returnfrombattle
 
-.totodile
+.GotWaterStarter:
+; Player chose a Water-type starter
+	checkevent EVENT_BULBASAUR_IS_GRASS_STARTER
+	iftrue .RivalBulbasaur
+	checkevent EVENT_CHIKORITA_IS_GRASS_STARTER
+	iftrue .RivalChikorita
+	checkevent EVENT_TREECKO_IS_GRASS_STARTER
+	iftrue .RivalTreecko
+	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
+	iftrue .RivalTurtwig
+	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
+	iftrue .RivalChespin
+; Rival defaults to Rowlet if grass starter wasn't identified
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_ROWLET
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+
+.GotGrassStarter:
+; Player chose a Grass-type starter
+	checkevent EVENT_CHARMANDER_IS_FIRE_STARTER
+	iftrue .RivalCharmander
+	checkevent EVENT_TORCHIC_IS_FIRE_STARTER
+	iftrue .RivalTorchic
+	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
+	iftrue .RivalChimchar
+	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
+	iftrue .RivalFennekin
+; Rival defaults to Cyndaquil if fire starter wasn't identified
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_CYNDAQUIL
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalBulbasaur:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_BULBASAUR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalChikorita:
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	setlasttalked BURNEDTOWER1F_SILVER
 	loadtrainer RIVAL1, RIVAL1_3_CHIKORITA
@@ -80,11 +141,110 @@ BurnedTowerRivalBattleScript:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	sjump .returnfrombattle
-
-.chikorita
+	
+.RivalTreecko:
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	setlasttalked BURNEDTOWER1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_3_CYNDAQUIL
+	loadtrainer RIVAL1, RIVAL1_3_TREECKO
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalTurtwig:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_TURTWIG
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalChespin:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_CHESPIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalCharmander:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_CHARMANDER
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalTorchic:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_TORCHIC
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalChimchar:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_CHIMCHAR
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalFennekin:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_FENNEKIN
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalSquirtle:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_SQUIRTLE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalTotodile:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_TOTODILE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalMudkip:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_MUDKIP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalPiplup:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_PIPLUP
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .returnfrombattle
+	
+.RivalOshawott:
+	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	setlasttalked BURNEDTOWER1F_SILVER
+	loadtrainer RIVAL1, RIVAL1_3_OSHAWOTT
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

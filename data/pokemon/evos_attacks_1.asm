@@ -299,9 +299,9 @@ BlastoiseEvosAttacks:
 	dbw 30, AQUA_TAIL
 	dbw 35, SHELL_SMASH
 	dbw 35, FLASH_CANNON
-	dbw 40, IRON_DEFENSE
-	dbw 45, HYDRO_PUMP
-	dbw 50, SKULL_BASH
+	dbw 42, IRON_DEFENSE
+	dbw 49, HYDRO_PUMP
+	dbw 56, SKULL_BASH
 	db 0 ; no more level-up moves
 
 CaterpieEvosAttacks:
