@@ -471,7 +471,7 @@ DragonShrineMustIInformLanceText:
 	cont "skill and spirit!"
 
 	para "Admit defeat and"
-	line "confer the RISING-"
+	line "confer the RISING"
 	cont "BADGE!"
 
 	para "…Or must I inform"

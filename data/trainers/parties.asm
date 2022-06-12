@@ -511,7 +511,7 @@ YoungsterGroup:
 	next_list_item ; YOUNGSTER (10)
 	db "JIMMY@", TRAINERTYPE_NORMAL
 	db 48
-	dw CACTURNE
+	dw SCEPTILE
 	db 48
 	dw EELEKTROSS
 	db 48
@@ -624,9 +624,9 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (9)
 	db "BILLY@", TRAINERTYPE_NORMAL
 	db 37
-	dw TRAPINCH
+	dw CACTURNE
 	db 37
-	dw TRAPINCH
+	dw CACTURNE
 	db 37
 	dw GOLISOPOD
 	db 45
@@ -1319,6 +1319,9 @@ CooltrainerMGroup:
 	db 35
 	dw GROVYLE
 	dw X_SCISSOR, GIGA_DRAIN, PURSUIT, AGILITY
+	db 33
+	dw SIZZLIPEDE
+	dw BUG_BITE, FLAME_WHEEL, COIL, BITE
 	db 35
 	dw HELIOPTILE
 	dw VOLT_SWITCH, BULLDOZE, RAZOR_WIND, THUNDER_WAVE
@@ -1479,7 +1482,7 @@ CooltrainerFGroup:
 	db 44
 	dw EELEKTROSS
 	db 44
-	dw BANETTE
+	dw PHANDARIN
 	db 44
 	dw LOPUNNY
 	db -1 ; end
@@ -1555,14 +1558,14 @@ CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (21)
 	db "CARA@", TRAINERTYPE_MOVES
 	db 33
-	dw JANGMO_O
-	dw DRAGON_TAIL, SCREECH, HEADBUTT, SCALE_SHOT
+	dw SWABLU
+	dw SAFEGUARD, MIST, DRAGONBREATH, ROUND_M
 	db 33
-	dw JANGMO_O
-	dw DRAGON_TAIL, SCREECH, HEADBUTT, SCALE_SHOT
+	dw SWABLU
+	dw REFRESH, MIRROR_MOVE, DRAGONBREATH, ROUND_M
 	db 35
-	dw HAKAMO_O
-	dw DRAGON_TAIL, SCREECH, SKY_UPPERCUT, SCALE_SHOT
+	dw TRAPINCH
+	dw DIG, SAND_TOMB, SANDSTORM, ROCK_SLIDE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (22)
@@ -2385,7 +2388,7 @@ FisherGroup:
 	next_list_item ; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 10
-	dw ARROKUDA
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (3)
@@ -2463,11 +2466,11 @@ FisherGroup:
 	next_list_item ; FISHER (11)
 	db "EDGAR@", TRAINERTYPE_MOVES
 	db 32
-	dw MOLANCORA
-	dw THRASH, IRON_HEAD, SLAM, LEER
+	dw REMORAID
+	dw ICE_BEAM, BULLET_SEED, SIGNAL_BEAM, BUBBLEBEAM
 	db 32
-	dw MOLANCORA
-	dw THRASH, IRON_HEAD, SLAM, LEER
+	dw REMORAID
+	dw ICE_BEAM, PSYBEAM, SIGNAL_BEAM, BUBBLEBEAM
 	db -1 ; end
 
 	next_list_item ; FISHER (12)
@@ -2515,7 +2518,7 @@ FisherGroup:
 	next_list_item ; FISHER (16)
 	db "RALPH@", TRAINERTYPE_NORMAL
 	db 20
-	dw ARROKUDA
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (17)
@@ -2523,7 +2526,7 @@ FisherGroup:
 	db 23
 	dw BASCULIN
 	db 25
-	dw ARROKUDA
+	dw MOLANCORA
 	db -1 ; end
 
 	next_list_item ; FISHER (18)
@@ -2571,8 +2574,8 @@ FisherGroup:
 	dw WHISCASH
 	dw TICKLE, EARTHQUAKE, ZEN_HEADBUTT, AQUA_TAIL
 	db 48
-	dw BASCULIN
-	dw CRUNCH, CHIP_AWAY, SCARY_FACE, AQUA_JET
+	dw REMORAID
+	dw HYPER_BEAM, HYDRO_PUMP, ICE_BEAM, SIGNAL_BEAM
 	db -1 ; end
 
 	next_list_item ; FISHER (23)
@@ -2580,7 +2583,7 @@ FisherGroup:
 	db 40
 	dw BASCULIN
 	db 42
-	dw BARASKEWDA
+	dw ANCHORRAGE
 	db -1 ; end
 
 	next_list_item ; FISHER (24)
@@ -2589,8 +2592,8 @@ FisherGroup:
 	dw BASCULIN
 	dw CRUNCH, HEADBUTT, SCARY_FACE, AQUA_JET
 	db 49
-	dw BARASKEWDA
-	dw LIQUIDATION, CRUNCH, LASER_FOCUS, AQUA_JET
+	dw ANCHORRAGE
+	dw AQUA_TAIL, CRUNCH, ANCHOR_SHOT, SCARY_FACE
 	db -1 ; end
 
 	next_list_item ; FISHER (25)
