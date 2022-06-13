@@ -399,17 +399,17 @@ ScientistGroup:
 
 	next_list_item ; SCIENTIST (4)
 	db "GARETT@", TRAINERTYPE_NORMAL
-	db 27
+	db 29
 	dw JOLTIK
-	db 27
+	db 29
 	dw JOLTIK
-	db 27
+	db 29
 	dw JOLTIK
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (5)
 	db "TRENTON@", TRAINERTYPE_MOVES
-	db 30
+	db 32
 	dw PORYGON
 	dw CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
 	db -1 ; end
@@ -1336,9 +1336,9 @@ CooltrainerMGroup:
 	dw GROVYLE
 	dw X_SCISSOR, GIGA_DRAIN, PURSUIT, AGILITY
 	db 33
-	dw SIZZLIPEDE
-	dw BUG_BITE, FLAME_WHEEL, COIL, BITE
-	db 35
+	dw ZANGOOSE
+	dw CRUSH_CLAW, REVENGE, HONE_CLAWS, PURSUIT
+	db 33
 	dw HELIOPTILE
 	dw VOLT_SWITCH, BULLDOZE, RAZOR_WIND, THUNDER_WAVE
 	db -1 ; end
@@ -1841,95 +1841,96 @@ GruntMGroup:
 	db 9
 	dw NICKIT
 	db 11
-	dw SPINARAK
+	dw CROAGUNK
 	db 11
-	dw SPINARAK
+	dw CROAGUNK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 28
 	dw RATICATE_A
-	db 26
+	db 28
 	dw RATICATE_A
 	db -1 ; end
 
 	next_list_item ; GRUNTM (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
-	dw GULPIN
-	db 25
+	db 27
 	dw GULPIN
 	db 27
+	dw GULPIN
+	db 29
 	dw SWALOT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
-	dw PAWNIARD
-	db 23
-	dw PAWNIARD
 	db 25
 	dw PAWNIARD
 	db 25
 	dw PAWNIARD
-	db 25
+	db 27
+	dw PAWNIARD
+	db 27
+	dw PAWNIARD
+	db 27
 	dw PAWNIARD
 	db -1 ; end
 
 	next_list_item ; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 28
+	db 30
 	dw CROAGUNK
-	db 28
+	db 30
 	dw CROAGUNK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (7)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
+	db 27
 	dw KOFFING
-	db 25
+	db 27
 	dw PANCHAM
-	db 25
+	db 27
 	dw SKORUPI
-	db 25
+	db 27
 	dw GLAMEOW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (8)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 28
+	db "GRUNT@", TRAINERTYPE_MOVES
+	db 30
 	dw THIEVUL
+	dw SUCKER_PUNCH, SNARL, HONE_CLAWS, NASTY_PLOT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (9)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
-	dw LINOONE_G
 	db 28
+	dw LINOONE_G
+	db 30
 	dw MAREANIE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
-	dw PURRLOIN
 	db 26
+	dw PURRLOIN
+	db 28
 	dw LIEPARD
-	db 24
+	db 26
 	dw GRIMER
 	db -1 ; end
 
 	next_list_item ; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 25
-	dw GRIMER
-	db 25
-	dw MURKROW
 	db 27
-	dw ZANGOOSE
+	dw GRIMER
+	db 27
+	dw PANCHAM
+	db 29
+	dw MURKROW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (12)
@@ -1940,23 +1941,23 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (13)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 27
+	db 29
 	dw MIGHTYENA
 	db -1 ; end
 
 	next_list_item ; GRUNTM (14)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 28
 	dw LINOONE_G
-	db 26
+	db 28
 	dw GOLBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (15)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 28
+	db 30
 	dw CROAGUNK
-	db 25
+	db 27
 	dw RATICATE_A
 	db -1 ; end
 
@@ -2028,17 +2029,17 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (24)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 27
+	db 29
 	dw SCRAGGY
-	db 27
+	db 29
 	dw SCRAGGY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 28
 	dw STUNKY
-	db 26
+	db 28
 	dw ARIADOS
 	db -1 ; end
 
@@ -4411,13 +4412,13 @@ CamperGroup:
 ArianaGroup:
 	next_list_item ; ARIANA (1)
 	db "ARIANA@", TRAINERTYPE_MOVES
-	db 32
+	db 33
 	dw SEVIPER
 	dw SCREECH, POISON_FANG, NIGHT_SLASH, GLARE
-	db 32
+	db 33
 	dw VILEPLUME
 	dw GIGA_DRAIN, SWEET_SCENT, SLEEP_POWDER, ACID
-	db 32
+	db 33
 	dw HONCHKROW
 	dw WING_ATTACK, FAINT_ATTACK, HAZE, MEAN_LOOK
 	db -1 ; end
@@ -5067,27 +5068,27 @@ GruntFGroup:
 
 	next_list_item ; GRUNTF (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 28
+	db 30
 	dw SEVIPER
 	db -1 ; end
 
 	next_list_item ; GRUNTF (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 27
+	db 29
 	dw GLOOM
-	db 27
+	db 29
 	dw GLOOM
 	db -1 ; end
 
 	next_list_item ; GRUNTF (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
-	dw PURRLOIN
 	db 26
-	dw ODDISH
-	db 24
 	dw PURRLOIN
-	db 27
+	db 28
+	dw ODDISH
+	db 26
+	dw PURRLOIN
+	db 29
 	dw GLOOM
 	db -1 ; end
 
