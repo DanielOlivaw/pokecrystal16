@@ -1219,9 +1219,12 @@ CooltrainerMGroup:
 	db 34
 	dw STARAPTOR
 	dw TAKE_DOWN, CLOSE_COMBAT, WHIRLWIND, AERIAL_ACE
-	db 36
+	db 34
 	dw URSARING
 	dw SLASH, SCARY_FACE, FAINT_ATTACK, PLAY_NICE
+	db 36
+	dw ELECTABUZZ
+	dw THUNDERPUNCH, SCREECH, THUNDER_WAVE, DUAL_CHOP
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (9)
@@ -1420,11 +1423,11 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (7)
 	db "KELLY@", TRAINERTYPE_NORMAL
-	db 36
+	db 38
 	dw TOGETIC
-	db 33
+	db 35
 	dw DEWOTT
-	db 33
+	db 35
 	dw DEWOTT
 	db -1 ; end
 
@@ -3247,21 +3250,21 @@ HikerGroup:
 
 	next_list_item ; HIKER (7)
 	db "ERIK@", TRAINERTYPE_NORMAL
-	db 31
+	db 32
 	dw NUMEL
-	db 34
+	db 35
 	dw GRAVELER
-	db 34
+	db 35
 	dw HIPPOWDON
 	db -1 ; end
 
 	next_list_item ; HIKER (8)
 	db "MICHAEL@", TRAINERTYPE_NORMAL
-	db 32
+	db 34
 	dw ROGGENROLA
-	db 32
+	db 34
 	dw BOLDORE
-	db 32
+	db 34
 	dw GIGALITH
 	db -1 ; end
 
@@ -3275,16 +3278,16 @@ HikerGroup:
 
 	next_list_item ; HIKER (10)
 	db "TIMOTHY@", TRAINERTYPE_MOVES
-	db 32
+	db 33
 	dw SHIELDON
 	dw IRON_HEAD, METAL_SOUND, ANCIENTPOWER, PROTECT
-	db 34
+	db 35
 	dw RAMPARDOS
 	dw TAKE_DOWN, ENDEAVOR, PURSUIT, LEER
-	db 32
+	db 33
 	dw CRANIDOS
 	dw CHIP_AWAY, SCARY_FACE, PURSUIT, FOCUS_ENERGY
-	db 34
+	db 35
 	dw BASTIODON
 	dw IRON_HEAD, IRON_DEFENSE, TAKE_DOWN, BLOCK
 	db -1 ; end
@@ -3380,9 +3383,9 @@ HikerGroup:
 
 	next_list_item ; HIKER (20)
 	db "PARRY@", TRAINERTYPE_NORMAL
-	db 31
+	db 34
 	dw NOSEPASS
-	db 29
+	db 32
 	dw SWINUB
 	db -1 ; end
 
@@ -3749,7 +3752,7 @@ BlackbeltGroup:
 
 	next_list_item ; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 35
+	db 37
 	dw CRABOMABLE
 	db -1 ; end
 
@@ -4380,11 +4383,11 @@ CamperGroup:
 
 	next_list_item ; CAMPER (22)
 	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 32
+	db 34
 	dw SWANDAME
-	db 32
+	db 34
 	dw MONFERNO
-	db 32
+	db 34
 	dw TAUROS
 	db -1 ; end
 
