@@ -1194,6 +1194,9 @@ CooltrainerMGroup:
 	dw CRAWDAUNT
 	dw RAZOR_SHELL, SWIFT, CRUNCH, PROTECT
 	db 45
+	dw WARWOLF
+	dw WILD_FURY, SHATTER_CLAW, NIGHT_SLASH, MOONLIGHT
+	db 45
 	dw AEGISLASH
 	dw IRON_HEAD, RETALIATE, KINGS_SHIELD, SHADOW_SNEAK
 	db -1 ; end
@@ -1208,6 +1211,10 @@ CooltrainerMGroup:
 	dw CRAWDAUNT
 	db NO_ITEM
 	dw CRABHAMMER, SWIFT, CRUNCH, PROTECT
+	db 49
+	dw WARWOLF
+	db NO_ITEM
+	dw WILD_FURY, SHATTER_CLAW, NIGHT_SLASH, CONFUSE_RAY
 	db 49
 	dw AEGISLASH
 	db KINGS_ROCK
@@ -1229,46 +1236,52 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (9)
 	db "JAKE@", TRAINERTYPE_MOVES
-	db 35
+	db 37
 	dw PARASECT
 	dw X_SCISSOR, SPORE, CROSS_POISON, SWORDS_DANCE
 	db 37
+	dw GASTRODON
+	dw MUDDY_WATER, RECOVER, BODY_SLAM, ANCIENTPOWER
+	db 39
 	dw BEARTIC
 	dw SHATTER_CLAW, FROST_BREATH, AQUA_JET, CHARM
-	db 35
+	db 37
 	dw PASSIMIAN
 	dw THRASH, BEAT_UP, BULK_UP, BRICK_BREAK
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (10)
 	db "GAVEN@", TRAINERTYPE_MOVES
-	db 35
+	db 38
 	dw VICTREEBEL
 	dw WRAP, TOXIC, POISON_JAB, LEAF_TORNADO
-	db 35
+	db 38
 	dw CRAWDAUNT
 	dw RAZOR_SHELL, SWIFT, NIGHT_SLASH, PROTECT
-	db 35
+	db 38
 	dw DOUBLADE
 	dw DUAL_CHOP, RETALIATE, AERIAL_ACE, SHADOW_SNEAK
+	db 38
+	dw WARWOLF
+	dw WILD_FURY, AVALANCHE, SLASH, MOONLIGHT
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (11)
 	db "BLAKE@", TRAINERTYPE_MOVES
-	db 36
+	db 38
 	dw MAGNETON
 	dw ELECTRO_BALL, SUPERSONIC, TRI_ATTACK, FLASH_CANNON
-	db 34
+	db 36
 	dw QUAGSIRE
 	dw AQUA_TAIL, YAWN, RAIN_DANCE, MUD_BOMB
-	db 34
+	db 36
 	dw TROPIUS
 	dw CULTIVATE, WHIRLWIND, FLY, LEAF_TORNADO
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (12)
 	db "BRIAN@", TRAINERTYPE_MOVES
-	db 38
+	db 40
 	dw ABSOL
 	dw NIGHT_SLASH, FOCUS_ENERGY, SLASH, PSYCHO_CUT
 	db -1 ; end
@@ -1433,17 +1446,17 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (8)
 	db "JOYCE@", TRAINERTYPE_MOVES
-	db 38
+	db 42
 	dw PIKACHU
 	dw QUICK_ATTACK, DOUBLE_TEAM, RAIN_DANCE, THUNDER
-	db 36
+	db 38
 	dw SWAMPERT
 	dw HAMMER_ARM, MUDDY_WATER, ROCK_SLIDE, EARTH_POWER
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (9)
 	db "BETH@", TRAINERTYPE_ITEM_MOVES
-	db 40
+	db 42
 	dw RAPIDASH
 	db GOLD_BERRY
 	dw POISON_JAB, INFERNO, SMART_STRIKE, FLAME_CHARGE
@@ -1451,23 +1464,25 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (10)
 	db "REENA@", TRAINERTYPE_NORMAL
-	db 34
+	db 39
 	dw GOOMY
-	db 36
+	db 37
 	dw MILOTIC
-	db 34
+	db 39
 	dw SNORUNT
+	db 37
+	dw MISMAGIUS
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (11)
 	db "MEGAN@", TRAINERTYPE_MOVES
-	db 35
+	db 36
 	dw TURTWIG
 	dw CURSE, LEECH_SEED, BITE, GIGA_DRAIN
-	db 35
+	db 36
 	dw GROTLE
 	dw CURSE, LEECH_SEED, BULLDOZE, LEAF_TORNADO
-	db 35
+	db 36
 	dw TORTERRA
 	dw CURSE, LEECH_SEED, EARTHQUAKE, WOOD_HAMMER
 	db -1 ; end
@@ -2560,11 +2575,11 @@ FisherGroup:
 
 	next_list_item ; FISHER (21)
 	db "SCOTT@", TRAINERTYPE_NORMAL
-	db 33
+	db 34
 	dw FINNEON
-	db 33
+	db 34
 	dw FINNEON
-	db 37
+	db 38
 	dw SEAKING
 	db -1 ; end
 
@@ -3875,7 +3890,7 @@ PsychicGroup:
 	db 44
 	dw XATU
 	db 42
-	dw MISMAGIUS
+	dw BANETTE
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (5)
@@ -3920,19 +3935,19 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (9)
 	db "RICHARD@", TRAINERTYPE_NORMAL
-	db 35
+	db 37
 	dw RUNERIGUS
-	db 36
+	db 38
 	dw GALLADE
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (10)
 	db "GILBERT@", TRAINERTYPE_NORMAL
-	db 33
+	db 35
 	dw STARMIE
-	db 33
+	db 35
 	dw EXEGGCUTE
-	db 37
+	db 39
 	dw GIRAFARIG
 	db -1 ; end
 
