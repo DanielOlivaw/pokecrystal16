@@ -117,7 +117,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Scientist
-	db X_SP_ATK, X_SP_DEF ; items
+	db X_SP_ATK, NO_ITEM ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -177,7 +177,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Pokemaniac
-	db NO_ITEM, NO_ITEM ; items
+	db SODA_POP, NO_ITEM ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_OFFENSIVE | AI_AGGRESSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -195,7 +195,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Skier
-	db BURN_HEAL, NO_ITEM ; items
+	db NO_ITEM, NO_ITEM ; items
 	db 18 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -261,7 +261,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Hiker
-	db FRESH_WATER, X_DEFEND ; items
+	db FRESH_WATER, NO_ITEM ; items
 	db 8 ; base reward
 	dw AI_BASIC | AI_OFFENSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -297,7 +297,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Blackbelt T
-	db X_ATTACK, NO_ITEM ; items
+	db NO_ITEM, NO_ITEM ; items
 	db 8 ; base reward
 	dw AI_BASIC | AI_OFFENSIVE | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -321,7 +321,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Psychic T
-	db X_SP_ATK, NO_ITEM ; items
+	db NO_ITEM, NO_ITEM ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -351,25 +351,25 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Medium
-	db NO_ITEM, NO_ITEM ; items
+	db ENERGY_ROOT, NO_ITEM ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Boarder
-	db BURN_HEAL, NO_ITEM ; items
+	db NO_ITEM, NO_ITEM ; items
 	db 18 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Pokefanm
-	db GOLD_BERRY, MIRACLEBERRY ; items
+	db MAX_POTION, MIRACLEBERRY ; items
 	db 20 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Kimono Girl
-	db FULL_HEAL, FRESH_WATER ; items
+	db FULL_HEAL, NO_ITEM ; items
 	db 30 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -381,7 +381,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Pokefanf
-	db GOLD_BERRY, MIRACLEBERRY ; items
+	db MAX_POTION, MIRACLEBERRY ; items
 	db 20 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -399,7 +399,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Officer
-	db X_SP_DEF, NO_ITEM ; items
+	db NO_ITEM, NO_ITEM ; items
 	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -423,7 +423,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; ScientistF
-	db X_SP_ATK, X_SP_DEF ; items
+	db FULL_HEAL, HYPER_POTION ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES

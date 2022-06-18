@@ -287,10 +287,17 @@ AI_Items:
 	dbw FULL_RESTORE, .FullRestore
 	dbw MAX_POTION,   .MaxPotion
 	dbw HYPER_POTION, .HyperPotion
+	dbw ENERGY_ROOT,  .EnergyRoot
+	dbw LEMONADE,     .Lemonade
+	dbw SODA_POP,     .SodaPop
 	dbw SUPER_POTION, .SuperPotion
+	dbw FRESH_WATER,  .FreshWater
 	dbw POTION,       .Potion
+	dbw BERRY,        .OranBerry
 	dbw X_ACCURACY,   .XAccuracy
 	dbw FULL_HEAL,    .FullHeal
+	dbw ANTIDOTE,     .Antidote
+	dbw PARLYZ_HEAL,  .ParlyzHeal
 	dbw GUARD_SPEC,   .GuardSpec
 	dbw DIRE_HIT,     .DireHit
 	dbw X_ATTACK,     .XAttack
@@ -299,6 +306,7 @@ AI_Items:
 	dbw X_SP_ATK,     .XSpAtk
 	dbw X_SP_DEF,     .XSpDef
 	dbw LAVA_COOKIE,  .LavaCookie
+	dbw MIRACLEBERRY, .LumBerry
 	db -1 ; end
 
 .FullHeal:
@@ -311,6 +319,12 @@ AI_Items:
 	call .Status
 	jp c, .DontUse
 	call EnemyUsedLavaCookie
+	jp .Use
+
+.LumBerry:
+	call .Status
+	jp c, .DontUse
+	call EnemyUsedLumBerry
 	jp .Use
 
 .Status:
@@ -342,6 +356,18 @@ AI_Items:
 .FailToxicCheck:
 	ld a, [wEnemyMonStatus]
 	and 1 << FRZ | SLP
+	jp z, .DontUse
+	jp .Use
+
+.Antidote
+	ld a, [wEnemyMonStatus]
+	and 1 << PSN
+	jp z, .DontUse
+	jp .Use
+
+.ParlyzHeal
+	ld a, [wEnemyMonStatus]
+	and 1 << PAR
 	jp z, .DontUse
 	jp .Use
 
@@ -403,8 +429,29 @@ AI_Items:
 .HyperPotion:
 	call .HealItem
 	jp c, .DontUse
-	ld b, 200
+	ld b, 120
 	call EnemyUsedHyperPotion
+	jp .Use
+
+.EnergyRoot:
+	call .HealItem
+	jp c, .DontUse
+	ld b, 120
+	call EnemyUsedEnergyRoot
+	jp .Use
+
+.Lemonade:
+	call .HealItem
+	jp c, .DontUse
+	ld b, 80
+	call EnemyUsedLemonade
+	jp .Use
+
+.SodaPop:
+	call .HealItem
+	jp c, .DontUse
+	ld b, 60
+	call EnemyUsedSodaPop
 	jp .Use
 
 .SuperPotion:
@@ -414,11 +461,25 @@ AI_Items:
 	call EnemyUsedSuperPotion
 	jp .Use
 
+.FreshWater:
+	call .HealItem
+	jp c, .DontUse
+	ld b, 40
+	call EnemyUsedFreshWater
+	jp .Use
+
 .Potion:
 	call .HealItem
 	jp c, .DontUse
 	ld b, 20
 	call EnemyUsedPotion
+	jp .Use
+
+.OranBerry:
+	call .HealItem
+	jp c, .DontUse
+	ld b, 10
+	call EnemyUsedOranBerry
 	jp .Use
 
 .asm_382ae ; This appears to be unused
@@ -581,6 +642,15 @@ EnemyUsedLavaCookie:
 	ld [wEnemyConfuseCount], a
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
+EnemyUsedLumBerry:
+	call AIUsedItemSound
+	call AI_HealStatus
+	ld a, MIRACLEBERRY
+	ld [wCurEnemyItem], a
+	xor a
+	ld [wEnemyConfuseCount], a
+	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+
 EnemyUsedMaxPotion:
 	ld a, MAX_POTION
 	ld [wCurEnemyItem], a
@@ -616,9 +686,19 @@ FullRestoreContinue:
 	ld [wEnemyMonHP], a
 	jr EnemyPotionFinish
 
+EnemyUsedOranBerry:
+	ld a, BERRY
+	ld b, 10
+	jr EnemyPotionContinue
+
 EnemyUsedPotion:
 	ld a, POTION
 	ld b, 20
+	jr EnemyPotionContinue
+
+EnemyUsedFreshWater:
+	ld a, FRESH_WATER
+	ld b, 40
 	jr EnemyPotionContinue
 
 EnemyUsedSuperPotion:
@@ -626,9 +706,23 @@ EnemyUsedSuperPotion:
 	ld b, 50
 	jr EnemyPotionContinue
 
+EnemyUsedSodaPop:
+	ld a, SODA_POP
+	ld b, 60
+	jr EnemyPotionContinue
+
+EnemyUsedLemonade:
+	ld a, LEMONADE
+	ld b, 80
+	jr EnemyPotionContinue
+
+EnemyUsedEnergyRoot:
+	ld a, ENERGY_ROOT
+	ld b, 120
+
 EnemyUsedHyperPotion:
 	ld a, HYPER_POTION
-	ld b, 200
+	ld b, 120
 
 EnemyPotionContinue:
 	ld [wCurEnemyItem], a
