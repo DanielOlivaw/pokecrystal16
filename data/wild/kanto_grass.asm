@@ -95,7 +95,7 @@ KantoGrassWildMons:
 	dbw 41, CARBINK
 	dbw 41, STEELIX
 	dbw 38, GRAVELER
-	dbw 38, GRAVELER
+	dbw 35, TYNAMO
 	; day
 	dbw 36, MAROWAK
 	dbw 37, GRAVELER
@@ -103,15 +103,15 @@ KantoGrassWildMons:
 	dbw 41, CARBINK
 	dbw 41, STEELIX
 	dbw 38, GRAVELER
-	dbw 38, GRAVELER
+	dbw 35, TYNAMO
 	; nite
-	dbw 36, WARWOLF
+	dbw 36, MAROWAK
 	dbw 37, GRAVELER
 	dbw 38, GRAVELER
 	dbw 41, CARBINK
 	dbw 41, STEELIX
-	dbw 41, SABLEYE
-	dbw 41, SABLEYE
+	dbw 38, SABLEYE
+	dbw 35, TYNAMO
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_B1F
@@ -123,7 +123,7 @@ KantoGrassWildMons:
 	dbw 41, CARBINK
 	dbw 41, GRAVELER
 	dbw 41, KANGASKHAN
-	dbw 41, KANGASKHAN
+	dbw 37, TYNAMO
 	; day
 	dbw 38, MAROWAK
 	dbw 40, GRAVELER
@@ -131,7 +131,7 @@ KantoGrassWildMons:
 	dbw 41, CARBINK
 	dbw 41, GRAVELER
 	dbw 41, KANGASKHAN
-	dbw 41, KANGASKHAN
+	dbw 37, TYNAMO
 	; nite
 	dbw 38, WARWOLF
 	dbw 40, GRAVELER
@@ -139,30 +139,170 @@ KantoGrassWildMons:
 	dbw 41, CARBINK
 	dbw 41, GRAVELER
 	dbw 41, SABLEYE
-	dbw 41, SABLEYE
+	dbw 37, TYNAMO
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLAND_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, ZUBAT
+	dbw 39, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 41, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 37, DARUMAKA_G
+	dbw 37, DARUMAKA_G
+	; day
+	dbw 37, ZUBAT
+	dbw 39, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 41, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 37, DARUMAKA_G
+	dbw 37, DARUMAKA_G
+	; nite
+	dbw 37, ZUBAT
+	dbw 39, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 41, GOLBAT
+	dbw 39, GOLDUCK
+	dbw 41, WARWOLF
+	dbw 41, WARWOLF
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLAND_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 40, GOLBAT
+	dbw 39, SEALEO
+	dbw 33, BERGMITE
+	dbw 41, MEDICHAM
+	dbw 38, DARUMAKA_G
+	dbw 38, CHIMECHO
+	dbw 40, DARUMAKA_G
+	; day
+	dbw 40, GOLBAT
+	dbw 39, SEALEO
+	dbw 33, BERGMITE
+	dbw 41, MEDICHAM
+	dbw 38, DARUMAKA_G
+	dbw 38, CHIMECHO
+	dbw 40, DARUMAKA_G
+	; nite
+	dbw 40, GOLBAT
+	dbw 39, SEALEO
+	dbw 33, BERGMITE
+	dbw 41, MEDICHAM
+	dbw 42, WARWOLF
+	dbw 38, CHIMECHO
+	dbw 44, WARWOLF
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLAND_B2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 41, GOLBAT
+	dbw 40, SEALEO
+	dbw 34, BERGMITE
+	dbw 42, MEDICHAM
+	dbw 39, DARUMAKA_G
+	dbw 39, CHIMECHO
+	dbw 41, DARUMAKA_G
+	; day
+	dbw 41, GOLBAT
+	dbw 40, SEALEO
+	dbw 34, BERGMITE
+	dbw 42, MEDICHAM
+	dbw 39, DARUMAKA_G
+	dbw 39, CHIMECHO
+	dbw 41, DARUMAKA_G
+	; nite
+	dbw 41, GOLBAT
+	dbw 40, SEALEO
+	dbw 34, BERGMITE
+	dbw 42, MEDICHAM
+	dbw 43, WARWOLF
+	dbw 39, CHIMECHO
+	dbw 45, WARWOLF
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLAND_B3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 42, GOLBAT
+	dbw 41, SEALEO
+	dbw 35, BERGMITE
+	dbw 43, MEDICHAM
+	dbw 40, DARUMAKA_G
+	dbw 40, CHIMECHO
+	dbw 42, DARUMAKA_G
+	; day
+	dbw 42, GOLBAT
+	dbw 41, SEALEO
+	dbw 35, BERGMITE
+	dbw 43, MEDICHAM
+	dbw 40, DARUMAKA_G
+	dbw 40, CHIMECHO
+	dbw 42, DARUMAKA_G
+	; nite
+	dbw 42, GOLBAT
+	dbw 41, SEALEO
+	dbw 35, BERGMITE
+	dbw 43, MEDICHAM
+	dbw 44, WARWOLF
+	dbw 40, CHIMECHO
+	dbw 46, WARWOLF
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLAND_B4F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 43, GOLBAT
+	dbw 42, SEALEO
+	dbw 36, BERGMITE
+	dbw 44, MEDICHAM
+	dbw 41, EISCUE
+	dbw 41, CHIMECHO
+	dbw 43, EISCUE
+	; day
+	dbw 43, GOLBAT
+	dbw 42, SEALEO
+	dbw 36, BERGMITE
+	dbw 44, MEDICHAM
+	dbw 41, EISCUE
+	dbw 41, CHIMECHO
+	dbw 43, EISCUE
+	; nite
+	dbw 43, GOLBAT
+	dbw 42, SEALEO
+	dbw 36, BERGMITE
+	dbw 44, MEDICHAM
+	dbw 38, SNORUNT
+	dbw 41, CHIMECHO
+	dbw 39, SNORUNT
 	end_grass_wildmons
 
 	def_grass_wildmons VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 34, GRAVELER
-	dbw 32, NUMEL
+	dbw 33, URSARING
 	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
-	dbw 35, DRUDDIGON
-	dbw 35, CAMERUPT
 	dbw 32, AXEW
+	dbw 35, CAMERUPT
+	dbw 35, DRUDDIGON
 	; day
 	dbw 34, GRAVELER
-	dbw 32, NUMEL
+	dbw 33, URSARING
 	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
-	dbw 35, DRUDDIGON
-	dbw 35, CAMERUPT
 	dbw 32, AXEW
+	dbw 35, CAMERUPT
+	dbw 35, DRUDDIGON
 	; nite
 	dbw 34, GRAVELER
-	dbw 32, NUMEL
+	dbw 33, URSARING
 	dbw 33, HARIYAMA
 	dbw 34, COALOSSAL
 	dbw 35, GRAVELER
@@ -313,113 +453,113 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_5
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 37, PIDGEOT
-	dbw 37, GLAMEOW
+	dbw 35, PIDGEOT
+	dbw 35, GLAMEOW
 	dbw 30, SOLOSIS
-	dbw 39, PIDGEOT
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 37, PIDGEOT
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; day
+	dbw 35, PIDGEOT
+	dbw 35, GLAMEOW
+	dbw 30, SOLOSIS
 	dbw 37, PIDGEOT
-	dbw 37, GLAMEOW
-	dbw 30, SOLOSIS
-	dbw 39, PIDGEOT
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; nite
-	dbw 37, NOCTOWL
-	dbw 37, PERRSERKER
+	dbw 35, NOCTOWL
+	dbw 35, PERRSERKER
 	dbw 30, SOLOSIS
-	dbw 39, NOCTOWL
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 37, NOCTOWL
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 37, GLAMEOW
+	dbw 35, GLAMEOW
+	dbw 35, GRANBULL
+	dbw 36, KLEFKI
+	dbw 38, PURUGLY
+	dbw 34, MILCERY
 	dbw 37, GRANBULL
-	dbw 38, KLEFKI
-	dbw 39, PURUGLY
-	dbw 36, MILCERY
-	dbw 39, GRANBULL
-	dbw 39, GRANBULL
+	dbw 37, GRANBULL
 	; day
-	dbw 37, GLAMEOW
+	dbw 35, GLAMEOW
+	dbw 35, GRANBULL
+	dbw 36, KLEFKI
+	dbw 38, PURUGLY
+	dbw 34, MILCERY
 	dbw 37, GRANBULL
-	dbw 38, KLEFKI
-	dbw 39, PURUGLY
-	dbw 36, MILCERY
-	dbw 39, GRANBULL
-	dbw 39, GRANBULL
+	dbw 37, GRANBULL
 	; nite
-	dbw 37, PERRSERKER
+	dbw 35, PERRSERKER
+	dbw 35, MUNNA
+	dbw 36, KLEFKI
+	dbw 38, GOLDUCK
+	dbw 34, MILCERY
 	dbw 37, MUNNA
-	dbw 38, KLEFKI
-	dbw 39, GOLDUCK
-	dbw 36, MILCERY
-	dbw 39, MUNNA
-	dbw 39, MUNNA
+	dbw 37, MUNNA
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_7
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 37, GLAMEOW
-	dbw 37, PIDGEOT
-	dbw 38, GRANBULL
-	dbw 38, PURUGLY
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 35, GLAMEOW
+	dbw 36, PIDGEOT
+	dbw 36, GRANBULL
+	dbw 36, PURUGLY
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; day
-	dbw 37, GLAMEOW
-	dbw 37, PIDGEOT
-	dbw 38, GRANBULL
-	dbw 38, PURUGLY
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 35, GLAMEOW
+	dbw 36, PIDGEOT
+	dbw 36, GRANBULL
+	dbw 36, PURUGLY
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; nite
-	dbw 37, PERRSERKER
-	dbw 37, MURKROW
-	dbw 38, HOUNDOOM
-	dbw 38, PERRSERKER
-	dbw 36, MILCERY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 35, PERRSERKER
+	dbw 36, MURKROW
+	dbw 36, HOUNDOOM
+	dbw 36, PERRSERKER
+	dbw 34, MILCERY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 37, STUFFUL
-	dbw 39, PIDGEOTTO
+	dbw 35, STUFFUL
+	dbw 36, PIDGEOT
+	dbw 34, ROSELIA
+	dbw 35, STOUTLAND
 	dbw 36, ROSELIA
-	dbw 37, STOUTLAND
-	dbw 38, ROSELIA
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; day
-	dbw 37, STUFFUL
-	dbw 39, PIDGEOTTO
+	dbw 35, STUFFUL
+	dbw 36, PIDGEOT
+	dbw 34, ROSELIA
+	dbw 35, STOUTLAND
 	dbw 36, ROSELIA
-	dbw 37, STOUTLAND
-	dbw 38, ROSELIA
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	; nite
-	dbw 37, GLOOM
-	dbw 39, NOCTOWL
-	dbw 36, GLOOM
-	dbw 37, STOUTLAND
-	dbw 38, DREEPY
-	dbw 38, DUOSION
-	dbw 38, DUOSION
+	dbw 35, GLOOM
+	dbw 36, NOCTOWL
+	dbw 34, GLOOM
+	dbw 35, STOUTLAND
+	dbw 36, DREEPY
+	dbw 36, DUOSION
+	dbw 36, DUOSION
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_9
@@ -454,7 +594,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 36, STARAPTOR
-	dbw 36, TYNAMO
+	dbw 37, STRAIGAR
 	dbw 38, MAROWAK
 	dbw 37, STARAPTOR
 	dbw 36, TOGEDEMARU
@@ -462,7 +602,7 @@ KantoGrassWildMons:
 	dbw 38, ELECTABUZZ
 	; day
 	dbw 36, STARAPTOR
-	dbw 36, TYNAMO
+	dbw 37, STRAIGAR
 	dbw 38, MAROWAK
 	dbw 37, STARAPTOR
 	dbw 36, TOGEDEMARU
@@ -470,7 +610,7 @@ KantoGrassWildMons:
 	dbw 38, ELECTABUZZ
 	; nite
 	dbw 36, MURKROW
-	dbw 36, TYNAMO
+	dbw 37, GALVANTULA
 	dbw 38, RATICATE_A
 	dbw 37, MURKROW
 	dbw 36, GALVANTULA
@@ -509,85 +649,85 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_13
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, SWANDAME
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; day
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, SWANDAME
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; nite
+	dbw 36, VENOMOTH
+	dbw 36, QUAGSIRE
+	dbw 38, SWANDAME
 	dbw 38, VENOMOTH
-	dbw 38, QUAGSIRE
-	dbw 40, NOCTOWL
-	dbw 40, VENOMOTH
-	dbw 41, QUAGSIRE
-	dbw 42, QUAGSIRE
-	dbw 40, CHANSEY
+	dbw 39, QUAGSIRE
+	dbw 40, QUAGSIRE
+	dbw 38, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_14
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, TOUCANNON
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; day
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, TOUCANNON
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; nite
+	dbw 36, VENOMOTH
+	dbw 36, QUAGSIRE
+	dbw 38, NOCTOWL
 	dbw 38, VENOMOTH
-	dbw 38, QUAGSIRE
-	dbw 40, NOCTOWL
-	dbw 40, VENOMOTH
-	dbw 41, QUAGSIRE
-	dbw 42, QUAGSIRE
-	dbw 40, CHANSEY
+	dbw 39, QUAGSIRE
+	dbw 40, QUAGSIRE
+	dbw 38, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_15
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, TOUCANNON
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; day
-	dbw 38, NIDORINO
-	dbw 38, NIDORINA
-	dbw 40, TOUCANNON
+	dbw 36, NIDORINO
+	dbw 36, NIDORINA
+	dbw 38, TOUCANNON
+	dbw 38, SWADLOON
+	dbw 39, SWADLOON
 	dbw 40, SWADLOON
-	dbw 41, SWADLOON
-	dbw 42, SWADLOON
-	dbw 40, CHANSEY
+	dbw 38, CHANSEY
 	; nite
+	dbw 36, VENOMOTH
+	dbw 36, QUAGSIRE
+	dbw 38, NOCTOWL
 	dbw 38, VENOMOTH
-	dbw 38, QUAGSIRE
-	dbw 40, NOCTOWL
-	dbw 40, VENOMOTH
-	dbw 41, QUAGSIRE
-	dbw 42, QUAGSIRE
-	dbw 40, CHANSEY
+	dbw 39, QUAGSIRE
+	dbw 40, QUAGSIRE
+	dbw 38, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_16

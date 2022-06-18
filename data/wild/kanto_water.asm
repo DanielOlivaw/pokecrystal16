@@ -2,6 +2,16 @@
 
 KantoWaterWildMons:
 
+	def_water_wildmons SEAFOAM_ISLAND_B4F ; SEALEO, SEADRA, SLOWBRO, GOLDUCK, BERGMITE, TENTACRUEL
+	db 4 percent ; encounter rate
+	dbw 35, BERGMITE
+	dbw 35, SEADRA
+	dbw 35, SEALEO
+	dbw 40, TENTACRUEL
+	dbw 40, SLOWBRO
+	dbw 40, GOLDUCK
+	end_water_wildmons
+
 	def_water_wildmons TOHJO_FALLS ; GOLDEEN, SLOWPOKE, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 15, GOLDEEN
@@ -82,24 +92,24 @@ KantoWaterWildMons:
 	dbw 40, QUAGSIRE
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_19 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
+	def_water_wildmons ROUTE_19 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
 	dbw 40, ANCHORRAGE
-	dbw 35, SEALEO
+	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_20 ; TENTACOOL, MOLANCORA, WINGULL, SPHEAL, BERGMITE
+	def_water_wildmons ROUTE_20 ; TENTACOOL, MOLANCORA, WINGULL, SKRELP, WAILMER
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
 	dbw 40, ANCHORRAGE
-	dbw 35, SEALEO
-	dbw 35, BERGMITE
-	dbw 35, BERGMITE
+	dbw 35, SKRELP
+	dbw 35, WAILMER
+	dbw 35, WAILMER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP

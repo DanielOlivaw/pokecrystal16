@@ -288,7 +288,7 @@ JohtoGrassWildMons:
 	dbw 14, ZIGZAGOON_G
 	dbw 15, KOFFING
 	dbw 16, WOOBAT
-	dbw 15, ZIGZAGOON_G
+	dbw 15, KURSTRAW
 	dbw 14, HOUNDOUR
 	dbw 16, ZIGZAGOON_G
 	dbw 16, ZIGZAGOON_G
@@ -296,7 +296,7 @@ JohtoGrassWildMons:
 	dbw 14, ZIGZAGOON_G
 	dbw 15, KOFFING
 	dbw 16, WOOBAT
-	dbw 15, ZIGZAGOON_G
+	dbw 15, KURSTRAW
 	dbw 14, HOUNDOUR
 	dbw 16, ZIGZAGOON_G
 	dbw 16, ZIGZAGOON_G
@@ -317,7 +317,7 @@ JohtoGrassWildMons:
 	dbw 16, KOFFING
 	dbw 17, WOOBAT
 	dbw 15, HOUNDOUR
-	dbw 17, KOFFING
+	dbw 17, KURSTRAW
 	dbw 18, KOFFING
 	dbw 16, TURTONATOR
 	; day
@@ -325,7 +325,7 @@ JohtoGrassWildMons:
 	dbw 16, KOFFING
 	dbw 17, WOOBAT
 	dbw 15, HOUNDOUR
-	dbw 17, KOFFING
+	dbw 17, KURSTRAW
 	dbw 18, KOFFING
 	dbw 16, TURTONATOR
 	; nite
@@ -333,7 +333,7 @@ JohtoGrassWildMons:
 	dbw 16, KOFFING
 	dbw 17, WOOBAT
 	dbw 15, KURSTRAW
-	dbw 17, KOFFING
+	dbw 17, KURSTRAW
 	dbw 18, KOFFING
 	dbw 16, MIMIKYU
 	end_grass_wildmons
@@ -721,13 +721,13 @@ JohtoGrassWildMons:
 	dbw 30, GOLBAT
 	dbw 30, SNOVER
 	; nite
-	dbw 27, DELIBIRD
+	dbw 27, WOLFROST
 	dbw 27, SNOM
 	dbw 28, GOLBAT
-	dbw 29, DELIBIRD
-	dbw 28, WOLFROST
+	dbw 29, WOLFROST
+	dbw 28, DELIBIRD
 	dbw 30, GOLBAT
-	dbw 30, WOLFROST
+	dbw 30, DELIBIRD
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B1F
@@ -747,13 +747,13 @@ JohtoGrassWildMons:
 	dbw 30, SWINUB
 	dbw 29, SNOVER
 	dbw 31, GOLBAT
-	dbw 28, DARUMAKA_G
+	dbw 28, CUBCHOO
 	; nite
-	dbw 28, DELIBIRD
+	dbw 28, WOLFROST
 	dbw 28, SNOM
 	dbw 29, GOLBAT
-	dbw 30, DELIBIRD
-	dbw 29, WOLFROST
+	dbw 30, WOLFROST
+	dbw 29, DELIBIRD
 	dbw 31, GOLBAT
 	dbw 28, SNEASEL
 	end_grass_wildmons
@@ -773,17 +773,17 @@ JohtoGrassWildMons:
 	dbw 29, SNOM
 	dbw 30, GOLBAT
 	dbw 31, SWINUB
-	dbw 28, DARUMAKA_G
+	dbw 28, CUBCHOO
 	dbw 32, GOLBAT
 	dbw 30, SNOVER
 	; nite
-	dbw 29, DELIBIRD
+	dbw 29, WOLFROST
 	dbw 29, SNOM
 	dbw 30, GOLBAT
-	dbw 31, DELIBIRD
+	dbw 31, WOLFROST
 	dbw 28, SNEASEL
 	dbw 32, GOLBAT
-	dbw 30, WOLFROST
+	dbw 30, DELIBIRD
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
@@ -801,17 +801,17 @@ JohtoGrassWildMons:
 	dbw 29, SNOM
 	dbw 30, GOLBAT
 	dbw 31, SWINUB
-	dbw 28, DARUMAKA_G
+	dbw 28, CUBCHOO
 	dbw 32, GOLBAT
 	dbw 30, SNOVER
 	; nite
-	dbw 29, DELIBIRD
+	dbw 29, WOLFROST
 	dbw 29, SNOM
 	dbw 30, GOLBAT
-	dbw 31, DELIBIRD
+	dbw 31, WOLFROST
 	dbw 28, SNEASEL
 	dbw 32, GOLBAT
-	dbw 30, WOLFROST
+	dbw 30, DELIBIRD
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B3F
@@ -829,14 +829,14 @@ JohtoGrassWildMons:
 	dbw 30, SNOM
 	dbw 31, GOLBAT
 	dbw 32, SWINUB
-	dbw 29, DARUMAKA_G
+	dbw 29, CUBCHOO
 	dbw 30, EISCUE
-	dbw 31, DARUMAKA_G
+	dbw 31, CUBCHOO
 	; nite
-	dbw 30, DELIBIRD
+	dbw 30, WOLFROST
 	dbw 30, SNOM
 	dbw 31, GOLBAT
-	dbw 32, DELIBIRD
+	dbw 32, WOLFROST
 	dbw 29, SNEASEL
 	dbw 30, SNORUNT
 	dbw 31, SNEASEL
@@ -1326,7 +1326,7 @@ JohtoGrassWildMons:
 	dbw 7, TANGEL
 	dbw 6, MAREEP
 	dbw 7, MAREEP
-	dbw 6, RALTS
+	dbw 6, MOIBELLE
 	dbw 7, RALTS
 	; day
 	dbw 5, BIDOOF
@@ -1334,7 +1334,7 @@ JohtoGrassWildMons:
 	dbw 7, TANGEL
 	dbw 6, MAREEP
 	dbw 7, MAREEP
-	dbw 6, RALTS
+	dbw 6, MOIBELLE
 	dbw 7, RALTS
 	; nite
 	dbw 5, WOOPER
@@ -1342,7 +1342,7 @@ JohtoGrassWildMons:
 	dbw 7, TANGEL
 	dbw 6, MOIBELLE
 	dbw 7, MOIBELLE
-	dbw 6, RALTS
+	dbw 6, MOIBELLE
 	dbw 7, RALTS
 	end_grass_wildmons
 
