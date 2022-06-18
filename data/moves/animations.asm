@@ -3559,6 +3559,7 @@ BattleAnim_Barrier:
 	anim_ret
 
 BattleAnim_Waterfall:
+BattleAnim_Steamroller:
 BattleAnim_SkyUppercut:
 BattleAnim_DragonAscent:
 	anim_1gfx ANIM_GFX_HIT
@@ -6523,18 +6524,18 @@ BattleAnim_SmartStrike:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Steamroller:
-	anim_1gfx ANIM_GFX_HIT
-	anim_sound 0, 1, SFX_STOMP
-	anim_obj ANIM_OBJ_01, 136, 40, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_STOMP
-	anim_obj ANIM_OBJ_01, 136, 48, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_STOMP
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_wait 6
-	anim_ret
+; BattleAnim_Steamroller:
+	; anim_1gfx ANIM_GFX_HIT
+	; anim_sound 0, 1, SFX_STOMP
+	; anim_obj ANIM_OBJ_01, 136, 40, $0
+	; anim_wait 6
+	; anim_sound 0, 1, SFX_STOMP
+	; anim_obj ANIM_OBJ_01, 136, 48, $0
+	; anim_wait 6
+	; anim_sound 0, 1, SFX_STOMP
+	; anim_obj ANIM_OBJ_01, 136, 56, $0
+	; anim_wait 6
+	; anim_ret
 
 BattleAnim_GunkShot:
 BattleAnim_VenomDrench:
