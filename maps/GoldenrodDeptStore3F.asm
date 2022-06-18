@@ -39,7 +39,7 @@ GoldenrodDeptStore3FSuperNerdText:
 GoldenrodDeptStore3FRockerText:
 	text "Hey! When you bat-"
 	line "tle, do you use X"
-	cont "SPECIAL?"
+	cont "SP.ATK?"
 
 	para "It's awesome. It"
 	line "really jacks up"
@@ -70,5 +70,5 @@ GoldenrodDeptStore3F_MapEvents:
 
 	db 3 ; object events
 	object_event  6,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FClerkScript, -1
-	object_event 12,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FSuperNerdScript, -1
-	object_event  2,  5, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FRockerScript, -1
+	object_event 12,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FSuperNerdScript, EVENT_GOLDENROD_CITY_CIVILIANS
+	object_event  2,  5, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FRockerScript, EVENT_GOLDENROD_CITY_CIVILIANS

@@ -730,27 +730,27 @@ GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText:
 	line "again!"
 	done
 
-UnknownText_0x62370:
-	text "#COM CENTER"
-	line "1F INFORMATION"
+; UnknownText_0x62370:
+	; text "#COM CENTER"
+	; line "1F INFORMATION"
 
-	para "Left:"
-	line "ADMINISTRATION"
+	; para "Left:"
+	; line "ADMINISTRATION"
 
-	para "Center:"
-	line "TRADE CORNER"
+	; para "Center:"
+	; line "TRADE CORNER"
 
-	para "Right:"
-	line "#MON NEWS"
-	done
+	; para "Right:"
+	; line "#MON NEWS"
+	; done
 
-UnknownText_0x623c7:
-	text "It's a #MON"
-	line "NEWS MACHINE!"
+; UnknownText_0x623c7:
+	; text "It's a #MON"
+	; line "NEWS MACHINE!"
 
-	para "It's not in"
-	line "operation yet…"
-	done
+	; para "It's not in"
+	; line "operation yet…"
+	; done
 
 GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText:
 	text "Oh my, your pack"
@@ -818,6 +818,6 @@ GoldenrodPokecenter1F_MapEvents:
 	db 5 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
 	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  6,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FGameboyKidScript, -1
-	object_event  1,  4, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FLassScript, -1
+	object_event  6,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FGameboyKidScript, EVENT_GOLDENROD_CITY_CIVILIANS
+	object_event  1,  4, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FLassScript, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event  7,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FPokefanF, -1
