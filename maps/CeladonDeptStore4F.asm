@@ -28,17 +28,22 @@ CeladonDeptStore4FElevatorButton:
 	jumpstd elevatorbutton
 
 CeladonDeptStore4FSuperNerdText:
-	text "I'm here to buy"
-	line "SURF MAIL to send"
-	cont "to my girlfriend."
+	text "Should I wait to"
+	line "trade my PHANTUMP"
+	
+	para "with my girlfriend"
+	line "when she's home,"
+
+	para "or should I just"
+	line "buy a HEART STONE?"
 	done
 
 CeladonDeptStore4FYoungsterText:
 	text "This is the only"
 	line "place where you"
 
-	para "can buy LOVELY"
-	line "MAIL."
+	para "can buy evolution"
+	line "stones."
 	done
 
 CeladonDeptStore4FDirectoryText:

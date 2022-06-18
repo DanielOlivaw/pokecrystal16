@@ -226,8 +226,8 @@ CeruleanCityYoungsterText1:
 CeruleanCityYoungsterText2:
 	text "Ayuh?"
 
-	para "My ITEMFINDER is"
-	line "responding…"
+	para "My DOWSING MACHINE"
+	line "is responding…"
 	done
 
 CeruleanCitySignText:

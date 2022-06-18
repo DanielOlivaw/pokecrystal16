@@ -53,6 +53,9 @@ CeladonDeptStore3FYoungsterText:
 
 	para "should use this TM"
 	line "on…"
+
+	para "What? I don't have"
+	line "to choose?"
 	done
 
 CeladonDeptStore3FGameboyKid1Text:
