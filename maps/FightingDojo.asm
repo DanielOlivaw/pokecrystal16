@@ -21,13 +21,27 @@ FightingDojoFocusBand:
 
 FightingDojoBlackBeltText:
 	text "Hello!"
+	
+	para "We are letting GYM" 
+	line "LEADERS use the"
+	cont "FIGHTING DOJO"
 
-	para "KARATE KING, the"
-	line "FIGHTING DOJO's"
-
+	para "while the KARATE"
+	line "KING, the DOJO's"
+	
 	para "master, is in a"
 	line "cave in JOHTO for"
 	cont "training."
+
+	para "Feel free to"
+	line "invite GYM LEADERS"
+	cont "to battle here."
+	
+	para "They should be"
+	line "happy to accept"
+	
+	para "your challenge if"
+	line "they aren't busy."
 	done
 
 FightingDojoSign1Text:
