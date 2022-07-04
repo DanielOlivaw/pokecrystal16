@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const DRAGONSDENB1F_POKE_BALL1
-	const DRAGONSDENB1F_CLAIR
+	const DRAGONSDENB1F_CLAIR1
+	const DRAGONSDENB1F_CLAIR2
 	const DRAGONSDENB1F_SILVER
 	const DRAGONSDENB1F_COOLTRAINER_M
 	const DRAGONSDENB1F_COOLTRAINER_F
@@ -171,6 +172,18 @@ DragonsDenB1FSilverScript:
 	special RestartMapMusic
 	end
 
+DragonsDenB1FClairScript:
+	playmusic MUSIC_CLAIR
+	faceplayer
+	opentext
+	writetext ClairText_AskAboutRematch
+	buttonsound
+	writetext ClairText_AgreeToRematch
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
+
 DragonShrineSignpost:
 	jumptext DragonShrineSignpostText
 
@@ -275,6 +288,29 @@ ClairText_WhatsTheMatterDragonDen:
 
 	para "Give it everything"
 	line "you've got."
+	done
+
+ClairText_AskAboutRematch:
+	text "CLAIR: It's still"
+	line "early, and you've"
+
+	para "got nothing to do"
+	line "already?"
+	
+	para "I might have time"
+	line "to listen to you."
+	
+	para "…You want a"
+	line "rematch at the"
+	cont "FIGHTING DOJO?"
+	done
+	
+ClairText_AgreeToRematch:
+	text "CLAIR: I can"
+	line "battle you on"
+	
+	para "Friday nights, if"
+	line "you insist!"
 	done
 
 DragonShrineSignpostText:
@@ -420,9 +456,10 @@ DragonsDenB1F_MapEvents:
 	bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
 	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 30, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGONS_DEN_CLAIR
+	object_event 16,  5, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FClairScript, EVENT_RIVAL_DRAGONS_DEN
 	object_event 20, 23, SPRITE_SILVER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FSilverScript, EVENT_RIVAL_DRAGONS_DEN
 	object_event 20,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermDarin, -1
 	object_event  8,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1
