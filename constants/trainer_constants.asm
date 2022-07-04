@@ -173,12 +173,15 @@ KRIS EQU __enum__
 
 	trainerclass BROCK ; 11
 	const BROCK1
+	const BROCK2
 
 	trainerclass MISTY ; 12
 	const MISTY1
+	const MISTY2
 
 	trainerclass LT_SURGE ; 13
 	const LT_SURGE1
+	const LT_SURGE2
 
 	trainerclass SCIENTIST ; 14
 	const ROSS
@@ -189,6 +192,7 @@ KRIS EQU __enum__
 
 	trainerclass ERIKA ; 15
 	const ERIKA1
+	const ERIKA2
 
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
@@ -274,6 +278,7 @@ KRIS EQU __enum__
 
 	trainerclass JANINE ; 1a
 	const JANINE1
+	const JANINE2
 
 	trainerclass COOLTRAINERM ; 1b
 	const NICK
@@ -411,6 +416,7 @@ KRIS EQU __enum__
 
 	trainerclass SABRINA ; 23
 	const SABRINA1
+	const SABRINA2
 
 	trainerclass BUG_CATCHER ; 24
 	const DON
@@ -615,6 +621,7 @@ KRIS EQU __enum__
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1
+	const BLAINE2
 
 	trainerclass BURGLAR ; 2f
 	const DUNCAN
@@ -811,6 +818,7 @@ KRIS EQU __enum__
 
 	trainerclass BLUE ; 40
 	const BLUE1
+	const BLUE2
 
 	trainerclass OFFICER ; 41
 	const KEITH
