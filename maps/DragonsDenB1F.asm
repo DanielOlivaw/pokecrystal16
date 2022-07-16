@@ -42,7 +42,7 @@ DragonsDenB1F_MapScripts:
 	return
 
 DragonsDenB1F_ClairScene:
-	appear DRAGONSDENB1F_CLAIR
+	appear DRAGONSDENB1F_CLAIR1
 	opentext
 	writetext ClairText_Wait
 	pause 30
@@ -50,7 +50,7 @@ DragonsDenB1F_ClairScene:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, LEFT
 	playmusic MUSIC_CLAIR
-	applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
+	applymovement DRAGONSDENB1F_CLAIR1, MovementDragonsDen_ClairWalksToYou
 	opentext
 	writetext ClairText_GiveDragonbreathDragonDen
 	buttonsound
@@ -75,11 +75,11 @@ DragonsDenB1F_ClairScene:
 	waitbutton
 	closetext
 .FinishClair:
-	applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksAway
+	applymovement DRAGONSDENB1F_CLAIR1, MovementDragonsDen_ClairWalksAway
 	special FadeOutMusic
 	pause 30
 	special RestartMapMusic
-	disappear DRAGONSDENB1F_CLAIR
+	disappear DRAGONSDENB1F_CLAIR1
 	setscene SCENE_DRAGONSDENB1F_NOTHING
 	end
 
