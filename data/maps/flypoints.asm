@@ -28,8 +28,8 @@ KANTO_FLYPOINT EQU const_value
 	flypoint PEWTER,       PEWTER_CITY
 	flypoint CERULEAN,     CERULEAN_CITY
 	flypoint BILLS_HOUSE,  ROUTE_25
-	flypoint ROCK_TUNNEL,  ROCK_TUNNEL
 	flypoint VERMILION,    VERMILION_CITY
+	flypoint ROCK_TUNNEL,  ROCK_TUNNEL
 	flypoint LAVENDER,     LAVENDER_TOWN
 	flypoint CELADON,      CELADON_CITY
 	flypoint SAFFRON,      SAFFRON_CITY
