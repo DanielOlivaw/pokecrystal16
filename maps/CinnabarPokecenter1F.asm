@@ -21,9 +21,9 @@ CinnabarPokecenter1FCooltrainerFText:
 	text "CINNABAR GYM's"
 	line "BLAINE apparently"
 
-	para "lives alone in the"
+	para "lives in the"
 	line "SEAFOAM ISLANDS"
-	cont "cave…"
+	cont "cave now…"
 	done
 
 CinnabarPokecenter1FFisherText:

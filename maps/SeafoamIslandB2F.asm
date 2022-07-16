@@ -46,8 +46,8 @@ TrainerBoarderBryce:
 	closetext
 	end
 
-SeafoamIslandB2FRazorClaw:
-	itemball RAZOR_CLAW
+SeafoamIslandB2FGripClaw:
+	itemball GRIP_CLAW
 
 SeafoamIslandB2FHiddenBigPearl:
 	hiddenitem BIG_PEARL, EVENT_SEAFOAM_ISLAND_B2F_HIDDEN_BIG_PEARL
@@ -131,7 +131,7 @@ SeafoamIslandB2F_MapEvents:
 	bg_event 3, 4, BGEVENT_ITEM, SeafoamIslandB2FHiddenPearl
 
 	db 4 ; object events
-	object_event 15, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB2FRazorClaw, EVENT_SEAFOAM_ISLAND_B2F_RAZOR_CLAW
+	object_event 15, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB2FGripClaw, EVENT_SEAFOAM_ISLAND_B2F_GRIP_CLAW
 	object_event 12,  4, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierCady, -1
 	object_event 16,  5, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderShaun, -1
 	object_event 24,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBryce, -1
