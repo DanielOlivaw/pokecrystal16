@@ -1347,7 +1347,7 @@ LassGroup:
 	db 44
 	dw SWADLOON
 	db 45
-	dw SPRITZEE
+	dw DEERLING
 	db 46
 	dw JUMPLUFF
 	db -1 ; end
@@ -1668,12 +1668,12 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (17)
 	db "KEVIN@", TRAINERTYPE_NORMAL
-	db 48
-	dw GARCHOMP
 	db 45
 	dw BLAZIKEN
 	db 45
 	dw GRENINJA
+	db 48
+	dw GARCHOMP
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (18)
