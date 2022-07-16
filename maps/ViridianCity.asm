@@ -171,7 +171,7 @@ ViridianCityDreamEaterFisherText:
 	done
 
 ViridianCityDreamEaterFisherGotDreamEaterText:
-	text "TM42 contains"
+	text "TM85 contains"
 	line "DREAM EATER…"
 
 	para "…Zzzzz…"
