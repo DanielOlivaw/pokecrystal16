@@ -23,22 +23,22 @@ TreeMons:
 TreeMonSet_City:
 TreeMonSet_Canyon:
 ; common
-	dbbw 34, 23, NATU
-	dbbw 25, 23, PINECO
-	dbbw 20, 23, HERACROSS
-	dbbw 10, 23, TANGELA
-	dbbw  5, 23, ORANGURU
-	dbbw  5, 23, PASSIMIAN
-	dbbw  1, 23, MUNCHLAX
+	dbbw 34, 25, NATU
+	dbbw 25, 25, PINECO
+	dbbw 20, 25, HERACROSS
+	dbbw 10, 25, TANGELA
+	dbbw  5, 25, ORANGURU
+	dbbw  5, 25, PASSIMIAN
+	dbbw  1, 25, MUNCHLAX
 	db -1        
 ; rare
-	dbbw 29, 23, NATU
-	dbbw 20, 23, PINECO
-	dbbw 15, 23, HERACROSS
-	dbbw  5, 23, TANGELA
-	dbbw 15, 23, ORANGURU
-	dbbw 15, 23, PASSIMIAN
-	dbbw  1, 23, MUNCHLAX
+	dbbw 29, 25, NATU
+	dbbw 20, 25, PINECO
+	dbbw 15, 25, HERACROSS
+	dbbw  5, 25, TANGELA
+	dbbw 15, 25, ORANGURU
+	dbbw 15, 25, PASSIMIAN
+	dbbw  1, 25, MUNCHLAX
 	db -1        
 
 TreeMonSet_Town:
@@ -77,18 +77,18 @@ TreeMonSet_Route:
                  
 TreeMonSet_Kanto:
 ; common
-	dbbw 29, 30, NOCTOWL
-	dbbw 25, 30, EXEGGCUTE
-	dbbw 25, 30, PINECO
-	dbbw 20, 30, CRABRAWLER
-	dbbw  1, 30, MUNCHLAX
+	dbbw 29, 20, NOCTOWL
+	dbbw 25, 20, EXEGGCUTE
+	dbbw 25, 20, PINECO
+	dbbw 20, 20, CRABRAWLER
+	dbbw  1, 20, MUNCHLAX
 	db -1        
 ; rare
-	dbbw 29, 30, NOCTOWL
-	dbbw 25, 30, EXEGGCUTE
-	dbbw 25, 30, PINECO
-	dbbw 20, 30, CRABRAWLER
-	dbbw  1, 30, MUNCHLAX
+	dbbw 29, 20, NOCTOWL
+	dbbw 25, 20, EXEGGCUTE
+	dbbw 25, 20, PINECO
+	dbbw 20, 20, CRABRAWLER
+	dbbw  1, 20, MUNCHLAX
 	db -1        
                  
 TreeMonSet_Lake:
