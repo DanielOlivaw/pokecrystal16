@@ -7,7 +7,7 @@
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate
 	db 42 ; base exp
-	db NO_ITEM, NUGGET ; items
+	db NO_ITEM, GOLD_LEAF ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/meowsy/front.dimensions"

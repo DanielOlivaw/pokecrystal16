@@ -10,7 +10,7 @@
 	db NO_ITEM, ELECTIRIZER ; items
 	db GENDER_F25 ; gender ratio
 	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/electabuzz/front.dimensions"
+	INCBIN "gfx/pokemon/electivire/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups

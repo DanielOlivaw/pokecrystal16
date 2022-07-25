@@ -1,4 +1,4 @@
-	db "TOXICMOUTH@" ; species name
+	db "TOXIC MOUTH@" ; species name
 	dw 204, 507 ; height, weight
 
 	db   "Its cheeks hold"
