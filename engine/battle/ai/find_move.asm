@@ -1932,7 +1932,7 @@ FindMove_AI_Redundant:
 	ld hl, .Moves
 	ld de, 4
 	call IsInHalfwordArray
-	; jp nc, .NotRedundant
+	jp nc, .NotRedundant
 
 	inc hl
 	inc hl
