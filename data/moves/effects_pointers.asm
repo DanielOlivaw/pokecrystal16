@@ -139,36 +139,47 @@ MoveEffectsPointers:
 	dw FlareBlitz             ; EFFECT_FLARE_BLITZ
 	dw SuckerPunch            ; EFFECT_SUCKER_PUNCH
 	dw AttackDown             ; EFFECT_PLAY_NICE
+	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
+	dw MultiStatDown          ; EFFECT_ATK_DEF_DOWN
+	dw AttackDown             ; EFFECT_ATK_DOWN_PRIORITY
+	dw PoisonSpeedDown        ; EFFECT_POISON_SPEED_DOWN
+	dw MultiStatDown          ; EFFECT_TEARFUL_LOOK
+	dw Captivate              ; EFFECT_CAPTIVATE
+	dw MultiStatDown          ; EFFECT_ATK_SP_ATK_DOWN
+	dw SpecialAttackDown      ; EFFECT_CONFIDE
+	dw TarShot                ; EFFECT_TAR_SHOT
 	dw FreezeHit              ; EFFECT_BLIZZARD
 	dw Counter                ; EFFECT_METAL_BURST
 	dw Flatter                ; EFFECT_FLATTER
 	dw Superpower             ; EFFECT_SUPERPOWER
-	dw CosmicPower            ; EFFECT_COSMIC_POWER
 	dw OHKOHit                ; EFFECT_SHEER_COLD
 	dw PoisonHit              ; EFFECT_TOXIC_HIT
+	dw CosmicPower            ; EFFECT_COSMIC_POWER
 	dw HoneClaws              ; EFFECT_HONE_CLAWS
+	dw CalmMind               ; EFFECT_CALM_MIND
+	dw BulkUp                 ; EFFECT_BULK_UP
+	dw WorkUp                 ; EFFECT_WORK_UP
+	dw Acupressure            ; EFFECT_ACUPRESSURE
+	dw Geomancy               ; EFFECT_GEOMANCY
+	dw ShiftGear              ; EFFECT_SHIFT_GEAR
+	dw StatUp3                ; EFFECT_DEFENSE_UP_3
+	dw StatUp3                ; EFFECT_SP_ATK_UP_3
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
 	dw BurnUp                 ; EFFECT_BURN_UP
-	dw CalmMind               ; EFFECT_CALM_MIND
 	dw RemoveItemHit          ; EFFECT_KNOCK_OFF
-	dw BulkUp                 ; EFFECT_BULK_UP
 	dw HPBasedDamage          ; EFFECT_WATER_SPOUT
 	dw HPBasedDamage          ; EFFECT_WRING_OUT
 	dw NormalHit              ; EFFECT_PSYSHOCK
 	dw NormalHit              ; EFFECT_FOUL_PLAY
 	dw DracoMeteor            ; EFFECT_DRACO_METEOR
-	dw MultiStatDown          ; EFFECT_VENOM_DRENCH
 	dw CureStatusHit          ; EFFECT_CURE_SLEEP_HIT
 	dw HammerArm              ; EFFECT_HAMMER_ARM
 	dw ResetStatsHit          ; EFFECT_RESET_STATS_HIT
 	dw Defog                  ; EFFECT_DEFOG
-	dw MultiStatDown          ; EFFECT_ATK_DEF_DOWN
 	dw DragonDance            ; EFFECT_DRAGON_DANCE
 	dw FreezeDry              ; EFFECT_FREEZE_DRY
 	dw NormalHit              ; EFFECT_ALWAYS_CRIT
-	dw WorkUp                 ; EFFECT_WORK_UP
 	dw Hurricane              ; EFFECT_HURRICANE
-	dw AttackDown             ; EFFECT_ATK_DOWN_PRIORITY
 	dw PsychoShift            ; EFFECT_PSYCHO_SHIFT
 	dw Roost                  ; EFFECT_ROOST
 	dw BrickBreak             ; EFFECT_BRICK_BREAK
@@ -181,15 +192,11 @@ MoveEffectsPointers:
 	dw NormalHit              ; EFFECT_SACRED_SWORD
 	dw Uproot                 ; EFFECT_UPROOT
 	dw Uproar                 ; EFFECT_UPROAR
-	dw PoisonSpeedDown        ; EFFECT_POISON_SPEED_DOWN
 	dw NormalHit              ; EFFECT_FELL_STINGER
 	dw Bounce                 ; EFFECT_BOUNCE
-	dw MultiStatDown          ; EFFECT_TEARFUL_LOOK
 	dw NormalHit              ; EFFECT_FEINT
 	dw WeatherBall            ; EFFECT_WEATHER_BALL
 	dw CureStatusHit          ; EFFECT_CURE_PARALYSIS_HIT
-	dw Captivate              ; EFFECT_CAPTIVATE
-	dw Acupressure            ; EFFECT_ACUPRESSURE
 	dw SpecialDefenseDown2Hit ; EFFECT_SP_DEF_DOWN_2_HIT
 	dw NormalHit              ; EFFECT_BELCH
 	dw Yawn                   ; EFFECT_YAWN
@@ -197,7 +204,6 @@ MoveEffectsPointers:
 	dw Fly                    ; EFFECT_DIVE
 	dw Fly                    ; EFFECT_SHADOW_FORCE
 	dw Whirlpool              ; EFFECT_WHIRLPOOL
-	dw MultiStatDown          ; EFFECT_ATK_SP_ATK_DOWN
 	dw Protect                ; EFFECT_SPIKY_SHIELD
 	dw Protect                ; EFFECT_KINGS_SHIELD
 	dw Protect                ; EFFECT_BANEFUL_BUNKER
@@ -208,7 +214,6 @@ MoveEffectsPointers:
 	dw SpecialAttackUpHit     ; EFFECT_SP_ATK_UP_HIT
 	dw StatusTargetSelf       ; EFFECT_TRICK_ROOM
 	dw FinalGambit            ; EFFECT_FINAL_GAMBIT
-	dw SpecialAttackDown      ; EFFECT_CONFIDE
 	dw NormalHit              ; EFFECT_BODY_PRESS
 	dw Memento                ; EFFECT_MEMENTO
 	dw HealingWish            ; EFFECT_HEALING_WISH
@@ -221,7 +226,6 @@ MoveEffectsPointers:
 	dw MultiHit               ; EFFECT_PRIORITY_MULTI_HIT
 	dw StatusTargetOpponent   ; EFFECT_POWDER
 	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
-	dw Geomancy               ; EFFECT_GEOMANCY
 	dw DefenseUp2Hit          ; EFFECT_DEFENSE_UP_2_HIT
 	dw NormalHit              ; EFFECT_FOCUS_PUNCH
 	dw NormalHit              ; EFFECT_BEAK_BLAST
@@ -229,13 +233,11 @@ MoveEffectsPointers:
 	dw ConditionalBoost       ; EFFECT_REVENGE
 	dw StatusTargetSelf       ; EFFECT_SHORE_UP
 	dw ClangingScales         ; EFFECT_CLANGING_SCALES
-	dw ShiftGear              ; EFFECT_SHIFT_GEAR
 	dw RecoilHit              ; EFFECT_RECOIL_HIT_HALF
 	dw RecoilHit              ; EFFECT_RECOIL_HIT_THIRD
 	dw RecoilHit              ; EFFECT_MIND_BLOWN
 	dw Punishment             ; EFFECT_PUNISHMENT
 	dw StoredPower            ; EFFECT_STORED_POWER
-	dw TarShot                ; EFFECT_TAR_SHOT
 	dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT
 	dw VoltTackle             ; EFFECT_VOLT_TACKLE
 	dw MeteorBeam             ; EFFECT_METEOR_BEAM
@@ -245,8 +247,6 @@ MoveEffectsPointers:
 	dw TrumpCard              ; EFFECT_TRUMP_CARD
 	dw UTurn                  ; EFFECT_U_TURN
 	dw PartingShot            ; EFFECT_PARTING_SHOT
-	dw StatUp3                ; EFFECT_DEFENSE_UP_3
-	dw StatUp3                ; EFFECT_SP_ATK_UP_3
 	dw ElectroBall            ; EFFECT_ELECTRO_BALL
 	dw GyroBall               ; EFFECT_GYRO_BALL
 	dw NormalHit              ; EFFECT_SYNCHRONOISE

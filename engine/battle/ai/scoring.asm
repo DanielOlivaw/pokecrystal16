@@ -96,7 +96,7 @@ AI_Setup:
 
 	cp EFFECT_ATTACK_DOWN - 1
 	jr z, .checkmove
-	cp EFFECT_EVASION_DOWN + 1
+	cp EFFECT_EVASION_DOWN_2 + 1
 	jr c, .statdown
 
 	cp EFFECT_ATTACK_UP_2
@@ -104,50 +104,15 @@ AI_Setup:
 	cp EFFECT_EVASION_UP_2 + 1
 	jr c, .statup
 
-	cp EFFECT_ATTACK_DOWN_2 - 1
-	jr z, .checkmove
-	cp EFFECT_EVASION_DOWN_2 + 1
+	cp EFFECT_PLAY_NICE
+	jr c, .checkmove
+	cp EFFECT_TAR_SHOT + 1
 	jr c, .statdown
 
-	cp EFFECT_PLAY_NICE
-	jr z, .statdown
-	cp EFFECT_VENOM_DRENCH
-	jr z, .statdown
-	cp EFFECT_ATK_DEF_DOWN
-	jr z, .statdown
-	cp EFFECT_ATK_DOWN_PRIORITY
-	jr z, .statdown
-	cp EFFECT_POISON_SPEED_DOWN
-	jr z, .statdown
-	cp EFFECT_TEARFUL_LOOK
-	jr z, .statdown
-	cp EFFECT_CAPTIVATE
-	jr z, .statdown
-	cp EFFECT_ATK_SP_ATK_DOWN
-	jr z, .statdown
-	cp EFFECT_CONFIDE
-	jr z, .statdown
-	cp EFFECT_TAR_SHOT
-	jr z, .statdown
-
-	cp EFFECT_HONE_CLAWS
-	jr z, .statup
-	cp EFFECT_CALM_MIND
-	jr z, .statup
-	cp EFFECT_BULK_UP
-	jr z, .statup
-	cp EFFECT_WORK_UP
-	jr z, .statup
-	cp EFFECT_ACUPRESSURE
-	jr z, .statup
-	cp EFFECT_GEOMANCY
-	jr z, .statup
-	cp EFFECT_SHIFT_GEAR
-	jr z, .statup
-	cp EFFECT_DEFENSE_UP_3
-	jr z, .statup
-	cp EFFECT_SP_ATK_UP_3
-	jr z, .statup
+	cp EFFECT_COSMIC_POWER
+	jr c, .checkmove
+	cp EFFECT_SP_ATK_UP_3 + 1
+	jr c, .statup
 
 	push hl
 	ld hl, .OtherStatUpMoves

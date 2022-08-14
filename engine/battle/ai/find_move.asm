@@ -3,7 +3,7 @@ FindMove_AI_Smart_Scoring:
 
 	push hl
 	ld hl, .Moves
-	ld de, 2
+	ld de, 4
 	call IsInHalfwordArray
 	jr nc, .NotInArray
 
@@ -1930,9 +1930,9 @@ FindMove_AI_Redundant:
 
 	push hl
 	ld hl, .Moves
-	ld de, 2
+	ld de, 4
 	call IsInHalfwordArray
-	jp nc, .NotRedundant
+	; jp nc, .NotRedundant
 
 	inc hl
 	inc hl
