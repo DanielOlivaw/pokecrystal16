@@ -144,17 +144,17 @@ Dragonite                   Game Freak                        Game Freak
 Mewtwo                      Game Freak                        Game Freak
 Mew                         JaceDeane, LouLilie               Game Freak
 GS beta Tangela pre-evo     Game Freak                        Game Freak
-GS beta fish                Rool, SoupPotato                  Rool, SoupPotato
+GS beta fish                Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
 GS beta shark               marcstuts0842                     marcstuts0842
 GS beta Meowth pre-evo      Game Freak                        Game Freak
-GS beta bell cat 1          Rool, SoupPotato                  Rool, SoupPotato
-GS beta bell cat 2          Rool, SoupPotato                  Rool, SoupPotato
-GS beta electric tiger 1    Rool, SoupPotato                  Rool, SoupPotato
-GS beta electric tiger 2    Rool, SoupPotato                  Rool, SoupPotato
+GS beta bell cat 1          Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
+GS beta bell cat 2          Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
+GS beta electric tiger 1    Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
+GS beta electric tiger 2    Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
 GS beta Farfetch'd evo      Menyu, Pia Carrot                 Game Freak
-GS beta doll                Rool, SoupPotato                  Rool, SoupPotato
-GS beta panda               Rool, SoupPotato                  Rool, SoupPotato
-GS beta ice wolf 1          Rool, SoupPotato                  Rool, SoupPotato
+GS beta doll                Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
+GS beta panda               Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
+GS beta ice wolf 1          Rool, Smalls, Pik, Bencc, Nuuk, Scarlax, Sam the Salmon & Souppotato
 GS beta ice wolf 2          marcstuts0842                     marcstuts0842
 Chikorita                   Game Freak                        Game Freak
 Bayleef                     Game Freak                        Game Freak
@@ -461,6 +461,9 @@ Cresselia                   bloodless                         bloodless
 Darkrai                     bloodless                         COMBOY
 Shaymin                     bloodless, COMBOY                 COMBOY
 Arceus                      bloodless                         bloodless
+Snivy                       EeVeeEe1999                       COMBOY
+Servine                     EeVeeEe1999                       COMBOY
+Serperior                   EeVeeEe1999                       COMBOY
 Oshawott                    bloodless                         COMBOY
 Dewott                      bloodless                         COMBOY
 Samurott                    N-Kin                             COMBOY
@@ -509,7 +512,7 @@ Archeops                    Jphyper                           COMBOY
 Zorua                       Bummer                            COMBOY
 Zoroark                     Bummer                            Bummer
 Solosis                     Game Freak                        COMBOY
-Duosion                     lakeofdance                       lakeofdance
+Duosion                     EeVeeEe1999                       lakeofdance
 Reuniclus                   EeVeeEe1999                       Game Freak
 Deerling                    Bummer                            COMBOY
 Sawsbuck                    Maddalena                         COMBOY

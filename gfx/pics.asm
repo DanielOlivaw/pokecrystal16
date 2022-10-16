@@ -949,12 +949,12 @@ BibarelFrontpic:      INCBIN "gfx/pokemon/bibarel_m/front.animated.2bpp.lz"
 BibarelBackpic:       INCBIN "gfx/pokemon/bibarel_m/back.2bpp.lz"
 ShinxFrontpic:      INCBIN "gfx/pokemon/shinx/front.animated.2bpp.lz"
 ShinxBackpic:       INCBIN "gfx/pokemon/shinx/back.2bpp.lz"
-LuxioFrontpic:      INCBIN "gfx/pokemon/luxio/front.animated.2bpp.lz"
-LuxioBackpic:       INCBIN "gfx/pokemon/luxio/back.2bpp.lz"
 
 
 SECTION "Pics 27", ROMX
 
+LuxioFrontpic:      INCBIN "gfx/pokemon/luxio/front.animated.2bpp.lz"
+LuxioBackpic:       INCBIN "gfx/pokemon/luxio/back.2bpp.lz"
 LuxrayFrontpic:      INCBIN "gfx/pokemon/luxray/front.animated.2bpp.lz"
 LuxrayBackpic:       INCBIN "gfx/pokemon/luxray/back.2bpp.lz"
 BudewFrontpic:      INCBIN "gfx/pokemon/budew/front.animated.2bpp.lz"
