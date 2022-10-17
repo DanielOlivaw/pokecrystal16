@@ -107,6 +107,10 @@ TrainerCard_Page1_LoadGFX:
 	ld d, 6
 	call TrainerCard_InitBorder
 	call WaitBGMap
+	ld b, SCGB_TRAINER_CARD
+	call GetSGBLayout
+	call SetPalettes
+	call WaitBGMap
 	ld de, CardStatusGFX
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(CardStatusGFX), 86
@@ -134,6 +138,10 @@ TrainerCard_Page2_LoadGFX:
 	ld d, 6
 	call TrainerCard_InitBorder
 	call WaitBGMap
+	ld b, SCGB_TRAINER_CARD
+	call GetSGBLayout
+	call SetPalettes
+	call WaitBGMap
 	ld de, LeaderGFX
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(LeaderGFX), 86
@@ -142,6 +150,7 @@ TrainerCard_Page2_LoadGFX:
 	ld hl, vTiles0 tile $00
 	lb bc, BANK(BadgeGFX), 44
 	call Request2bpp
+	ld hl, TrainerCard_JohtoBadgesOAM
 	call TrainerCard_Page2_3_InitObjectsAndStrings
 	call TrainerCard_IncrementJumptable
 	ret
@@ -151,34 +160,32 @@ TrainerCard_Page2_Joypad:
 	call TrainerCard_Page2_3_AnimateBadges
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON
-	jr nz, .pressed_a
-	ld a, [hl]
-	and D_RIGHT
-	jr nz, .d_right
-	ld a, [hl]
 	and D_LEFT
-	jr nz, .d_left
+	jr nz, .pressed_left
+	ld a, [wKantoBadges]
+	and a
+	jr nz, .has_kanto_badges
+	ld a, [hl]
+	and A_BUTTON
+	jr nz, .Quit
+	ret
+	
+.has_kanto_badges:
+	ld a, [hl]
+	and D_RIGHT | A_BUTTON
+	jr nz, .pressed_right_a
 	ret
 
-.d_left
+.pressed_left:
 	ld a, TRAINERCARDSTATE_PAGE1_LOADGFX
 	ld [wJumptableIndex], a
 	ret
 
-.d_right:
-	ld a, [wKantoBadges]
-	and a
-	ret z
-.kanto_badges
+.pressed_right_a:
 	ld a, TRAINERCARDSTATE_PAGE3_LOADGFX
 	ld [wJumptableIndex], a
 	ret
 
-.pressed_a:
-	ld a, [wKantoBadges]
-	and a
-	jr nz, .kanto_badges
 .Quit:
 	ld a, TRAINERCARDSTATE_QUIT
 	ld [wJumptableIndex], a
@@ -190,6 +197,10 @@ TrainerCard_Page3_LoadGFX:
 	ld d, 6
 	call TrainerCard_InitBorder
 	call WaitBGMap
+	ld b, SCGB_TRAINER_CARD_KANTO
+	call GetSGBLayout
+	call SetPalettes
+	call WaitBGMap
 	ld de, LeaderGFX2
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(LeaderGFX2), 86
@@ -198,12 +209,13 @@ TrainerCard_Page3_LoadGFX:
 	ld hl, vTiles0 tile $00
 	lb bc, BANK(BadgeGFX2), 44
 	call Request2bpp
+	ld hl, TrainerCard_KantoBadgesOAM
 	call TrainerCard_Page2_3_InitObjectsAndStrings
 	call TrainerCard_IncrementJumptable
 	ret
 
 TrainerCard_Page3_Joypad:
-	ld hl, TrainerCard_JohtoBadgesOAM
+	ld hl, TrainerCard_KantoBadgesOAM
 	call TrainerCard_Page2_3_AnimateBadges
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -211,10 +223,10 @@ TrainerCard_Page3_Joypad:
 	jr nz, .Quit
 	ld a, [hl]
 	and D_LEFT
-	jr nz, .left
+	jr nz, .pressed_left
 	ret
 
-.left
+.pressed_left
 	ld a, TRAINERCARDSTATE_PAGE2_LOADGFX
 	ld [wJumptableIndex], a
 	ret
@@ -310,6 +322,7 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	db $29, $2a, $2b, $2c, $2d, -1
 
 TrainerCard_Page2_3_InitObjectsAndStrings:
+	push hl
 	hlcoord 2, 8
 	ld de, .BadgesTilemap
 	call TrainerCardSetup_PlaceTilemapString
@@ -335,7 +348,7 @@ endr
 	jr nz, .loop2
 	xor a
 	ld [wTrainerCardBadgeFrameCounter], a
-	ld hl, TrainerCard_JohtoBadgesOAM
+	pop hl
 	call TrainerCard_Page2_3_OAMUpdate
 	ret
 
@@ -559,7 +572,7 @@ TrainerCard_Page2_3_OAMUpdate:
 	db -1
 
 TrainerCard_JohtoBadgesOAM:
-; Template OAM data for each badge on the trainer card.
+; Template OAM data for Johto badges on the trainer card.
 ; Format:
 	; y, x, palette
 	; cycle 1: face tile, in1 tile, in2 tile, in3 tile
@@ -609,7 +622,7 @@ TrainerCard_JohtoBadgesOAM:
 	db $1c | (1 << 7), $20, $24, $20 | (1 << 7)
 
 TrainerCard_KantoBadgesOAM:
-; Template OAM data for each badge on the trainer card.
+; Template OAM data for Kanto badges on the trainer card.
 ; Format:
 	; y, x, palette
 	; cycle 1: face tile, in1 tile, in2 tile, in3 tile
