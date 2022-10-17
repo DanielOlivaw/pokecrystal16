@@ -917,22 +917,12 @@ UnknownText_0x1c55d6::
 	done
 
 UnknownText_0x1c55db::
-	text "Password OK."
-	line "Select CONTINUE &"
+	text "Select CONTINUE &"
 	cont "reset settings."
-	prompt
-
-UnknownText_0x1c560b::
-	text "Wrong password!"
 	prompt
 
 UnknownText_0x1c561c::
 	text "Reset the clock?"
-	done
-
-UnknownText_0x1c562e::
-	text "Please enter the"
-	line "password."
 	done
 
 UnknownText_0x1c564a::
