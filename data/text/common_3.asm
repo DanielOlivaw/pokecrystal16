@@ -918,7 +918,7 @@ UnknownText_0x1c55d6::
 
 UnknownText_0x1c55db::
 	text "Select CONTINUE &"
-	cont "reset settings."
+	line "reset settings."
 	prompt
 
 UnknownText_0x1c561c::
