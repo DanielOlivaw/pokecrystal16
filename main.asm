@@ -727,6 +727,11 @@ INCLUDE "gfx/weather_images.asm"
 INCLUDE "engine/battle/get_weather_image.asm"
 
 
+SECTION "Swarm Shinies", ROMX
+
+INCLUDE "engine/battle/swarm_shiny.asm"
+
+
 SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
