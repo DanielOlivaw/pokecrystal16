@@ -106,5 +106,3 @@ NUM_FISHGROUPS EQU const_value - 1
 NUM_SPAWNS EQU const_value
 
 SPAWN_N_A EQU -1
-
-MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm

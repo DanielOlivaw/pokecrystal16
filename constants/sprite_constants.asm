@@ -99,17 +99,15 @@
 	const SPRITE_SILVER_TROPHY ; 5f
 	const SPRITE_KRIS ; 60
 	const SPRITE_KRIS_BIKE ; 61
-	const SPRITE_KURT_OUTSIDE ; 62
-	const SPRITE_SUICUNE ; 63
-	const SPRITE_ENTEI ; 64
-	const SPRITE_RAIKOU ; 65
-	const SPRITE_STANDING_YOUNGSTER ; 66
-	const SPRITE_ARCHER ; 67
-	const SPRITE_PROTON ; 68
-	const SPRITE_PETREL ; 69
-	const SPRITE_ARIANA ; 70
-	const SPRITE_SCIENTIST_F ; 71
-	const SPRITE_FARFETCHD ; 72
+	const SPRITE_SUICUNE ; 62
+	const SPRITE_ENTEI ; 63
+	const SPRITE_RAIKOU ; 64
+	const SPRITE_ARCHER ; 65
+	const SPRITE_PROTON ; 66
+	const SPRITE_PETREL ; 67
+	const SPRITE_ARIANA ; 68
+	const SPRITE_SCIENTIST_F ; 69
+	const SPRITE_FARFETCHD ; 70
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
