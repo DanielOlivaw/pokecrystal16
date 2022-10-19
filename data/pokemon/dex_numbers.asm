@@ -3,7 +3,7 @@
 	db "?????@@@@@"
 	db "?????@@@@@"
 PokemonNumbers::
-	; table_width 5, PokemonNames
+	table_width 5, PokemonNumbers
 	db "001@@" ;"BULBASAUR@"
 	db "002@@" ;"IVYSAUR@@@"
 	db "003@@" ;"VENUSAUR@@"
@@ -711,4 +711,4 @@ PokemonNumbers::
 	db "887@@" ;"DRAGAPULT@"
 	db "894@@" ;"REGIELEKI@"
 	db "895@@" ;"REGIDRAGO@"
-	; assert_table_length NUM_POKEMON
+	assert_table_length NUM_POKEMON
