@@ -392,8 +392,10 @@ StatsScreen_InitUpperHalf:
 	ld [hli], a
 	ld a, "."
 	ld [hli], a
-	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
-	call PrintNum
+	ld a, [wBaseSpecies]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonNumber
+	call PlaceString
 	add sp, 2
 	hlcoord 14, 0
 	call PrintLevel
