@@ -393,7 +393,7 @@ RayquazaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/rayquaza.asm"
 JirachiPokedexEntry::  INCLUDE "data/pokemon/dex_entries/jirachi.asm"
 
 
-SECTION "Pokedex Entries 353-368", ROMX
+SECTION "Pokedex Entries 353-367", ROMX
 
 DeoxysPokedexEntry::  INCLUDE "data/pokemon/dex_entries/deoxys.asm"
 TurtwigPokedexEntry::  INCLUDE "data/pokemon/dex_entries/turtwig.asm"
@@ -410,11 +410,11 @@ StaraviaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/staravia.asm"
 StaraptorPokedexEntry::  INCLUDE "data/pokemon/dex_entries/staraptor.asm"
 BidoofPokedexEntry::  INCLUDE "data/pokemon/dex_entries/bidoof.asm"
 BibarelPokedexEntry::  INCLUDE "data/pokemon/dex_entries/bibarel.asm"
+
+
+SECTION "Pokedex Entries 368-383", ROMX
+
 ShinxPokedexEntry::  INCLUDE "data/pokemon/dex_entries/shinx.asm"
-
-
-SECTION "Pokedex Entries 369-384", ROMX
-
 LuxioPokedexEntry::  INCLUDE "data/pokemon/dex_entries/luxio.asm"
 LuxrayPokedexEntry::  INCLUDE "data/pokemon/dex_entries/luxray.asm"
 BudewPokedexEntry::  INCLUDE "data/pokemon/dex_entries/budew.asm"
@@ -430,11 +430,11 @@ BuizelPokedexEntry::  INCLUDE "data/pokemon/dex_entries/buizel.asm"
 FloatzelPokedexEntry::  INCLUDE "data/pokemon/dex_entries/floatzel.asm"
 ShellosPokedexEntry::  INCLUDE "data/pokemon/dex_entries/shellos.asm"
 GastrodonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/gastrodon.asm"
+
+
+SECTION "Pokedex Entries 384-400", ROMX
+
 DrifloonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/drifloon.asm"
-
-
-SECTION "Pokedex Entries 385-400", ROMX
-
 DrifblimPokedexEntry::  INCLUDE "data/pokemon/dex_entries/drifblim.asm"
 BunearyPokedexEntry::  INCLUDE "data/pokemon/dex_entries/buneary.asm"
 LopunnyPokedexEntry::  INCLUDE "data/pokemon/dex_entries/lopunny.asm"
