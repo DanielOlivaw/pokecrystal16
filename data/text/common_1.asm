@@ -4,7 +4,7 @@ _FruitBearingTreeText::
 	done
 
 _HeyItsFruitText::
-	text "Hey! It's a"
+	text "Hey! It's"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"
@@ -18,13 +18,13 @@ _ObtainedFruitText::
 	done
 	
 _ObtainedTwoFruitText::
-	text "And there's one"
-	line "more!"
+	text "One more fell from"
+	line "the tree!"
 	done
 
 _ObtainedThreeFruitText::
-	text "And there are two"
-	line "more!"
+	text "Two more fell from"
+	line "the tree!"
 	done
 
 _FruitPackIsFullText::
