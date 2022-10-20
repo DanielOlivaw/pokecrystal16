@@ -16,16 +16,6 @@ _ObtainedFruitText::
 	text_ram wStringBuffer3
 	text "!"
 	done
-	
-_ObtainedTwoFruitText::
-	text "One more fell from"
-	line "the tree!"
-	done
-
-_ObtainedThreeFruitText::
-	text "Two more fell from"
-	line "the tree!"
-	done
 
 _FruitPackIsFullText::
 	text "But the BAG is"
