@@ -1622,6 +1622,7 @@ Pokedex_PrintListing:
 	push af
 	ld a, [wDexListingHeight]
 .loop
+	ld [wDexTempCounter], a
 	push af
 	ld a, BANK(wPokedexOrder)
 	ldh [rSVBK], a
@@ -1654,7 +1655,7 @@ Pokedex_PrintListing:
 	ret z
 	ld a, BANK(wPokedexSeen)
 	ldh [rSVBK], a
-	; call Pokedex_PrintNumberIfOldMode
+	call Pokedex_PrintNumberIfOldMode
 	call Pokedex_PlaceDefaultStringIfNotSeen
 	ret c
 	call Pokedex_PlaceCaughtSymbolIfCaught
@@ -1687,13 +1688,11 @@ Pokedex_PrintNumberIfOldMode:
 	push de
 	ld bc, -SCREEN_WIDTH
 	add hl, bc
-	ld a, e
-	ld [wPokedexDisplayNumber + 1], a
-	ld a, d
-	ld de, wPokedexDisplayNumber
-	ld [de], a
-	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
-	call PrintNum
+	push hl
+	call Pokedex_GetListedMon
+	call GetPokemonNumber
+	pop hl
+	call PlaceString
 	pop de
 	pop hl
 	ret
@@ -1758,6 +1757,40 @@ Pokedex_GetSelectedMon:
 	ld e, a
 	ld d, 0
 	add hl, de
+	ld de, wPokedexOrder
+	add hl, hl
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop af
+	ldh [rSVBK], a
+	push hl
+	call GetPokemonIDFromIndex
+	ld l, LOCKED_MON_ID_DEX_SELECTED
+	call LockPokemonID
+	pop hl
+	ld [wTempSpecies], a
+	ret
+
+Pokedex_GetListedMon:
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wPokedexOrder)
+	ldh [rSVBK], a	
+	ld hl, wDexListingScrollOffset
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, [wDexTempCounter]
+	ld b, a
+	ld a, 7
+	sub b
+	add l
+	jr nc, .no_carry
+	inc h
+.no_carry
+	ld l, a
 	ld de, wPokedexOrder
 	add hl, hl
 	add hl, de
@@ -1900,7 +1933,7 @@ Pokedex_OrderMonsByMode:
 
 Pokedex_ABCMode:
 	; called in the WRAM bank of wPokedexOrder; the function doesn't preserve it
-	ld hl, wDexTempCounter
+	; ld hl, wDexTempCounter
 	ld a, LOW(-NUM_POKEMON)
 	ld [hli], a
 	ld [hl], HIGH(-NUM_POKEMON)
@@ -1934,7 +1967,7 @@ Pokedex_ABCMode:
 	ldh [rSVBK], a
 .skip
 	inc bc
-	ld hl, wDexTempCounter
+	; ld hl, wDexTempCounter
 	inc [hl]
 	jr nz, .loop
 	inc hl
