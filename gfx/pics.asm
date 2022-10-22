@@ -1575,8 +1575,6 @@ DartrixFrontpic:      INCBIN "gfx/pokemon/dartrix/front.animated.2bpp.lz"
 DartrixBackpic:       INCBIN "gfx/pokemon/dartrix/back.2bpp.lz"
 DecidueyeFrontpic:      INCBIN "gfx/pokemon/decidueye/front.animated.2bpp.lz"
 DecidueyeBackpic:       INCBIN "gfx/pokemon/decidueye/back.2bpp.lz"
-PikipekFrontpic:      INCBIN "gfx/pokemon/pikipek/front.animated.2bpp.lz"
-PikipekBackpic:       INCBIN "gfx/pokemon/pikipek/back.2bpp.lz"
 TrumbeakFrontpic:      INCBIN "gfx/pokemon/trumbeak/front.animated.2bpp.lz"
 TrumbeakBackpic:       INCBIN "gfx/pokemon/trumbeak/back.2bpp.lz"
 ToucannonFrontpic:      INCBIN "gfx/pokemon/toucannon/front.animated.2bpp.lz"
@@ -1585,6 +1583,8 @@ ToucannonBackpic:       INCBIN "gfx/pokemon/toucannon/back.2bpp.lz"
 
 SECTION "Pics 72", ROMX
 
+PikipekFrontpic:      INCBIN "gfx/pokemon/pikipek/front.animated.2bpp.lz"
+PikipekBackpic:       INCBIN "gfx/pokemon/pikipek/back.2bpp.lz"
 GrubbinFrontpic:      INCBIN "gfx/pokemon/grubbin/front.animated.2bpp.lz"
 GrubbinBackpic:       INCBIN "gfx/pokemon/grubbin/back.2bpp.lz"
 CharjabugFrontpic:      INCBIN "gfx/pokemon/charjabug/front.animated.2bpp.lz"
