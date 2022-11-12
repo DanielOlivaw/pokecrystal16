@@ -522,6 +522,7 @@ DexEntryScreen_MenuActionJumptable:
 	ld e, a
 	predef Pokedex_GetArea
 	call Pokedex_BlackOutBG
+	call Pokedex_LoadGFX
 	call DelayFrame
 	xor a
 	ldh [hBGMapMode], a
