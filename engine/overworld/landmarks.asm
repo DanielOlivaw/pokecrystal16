@@ -80,3 +80,40 @@ RegionCheck:
 .kanto
 	ld e, KANTO_REGION
 	ret
+
+RegionCheck2:
+; Checks if the player is in Kanto or Johto.
+; Counts the road to Victory Road as part of Kanto.
+; If in Johto, returns 0 in e.
+; If in Kanto, returns 1 in e.
+	ld a, [wMapGroup]
+	ld b, a
+	ld a, [wMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+	cp FAST_SHIP ; S.S. Aqua
+	jr z, .johto
+	cp SPECIAL_MAP
+	jr nz, .checkagain
+
+; In a special map, get the backup map group / map id
+	ld a, [wBackupMapGroup]
+	ld b, a
+	ld a, [wBackupMapNumber]
+	ld c, a
+	call GetWorldMapLocation
+
+.checkagain
+	cp KANTO_LANDMARK
+	jr c, .johto
+
+; Victory Road area is considered to be Kanto in this check.
+	cp FAST_SHIP
+	jr c, .kanto
+
+.johto
+	ld e, JOHTO_REGION
+	ret
+.kanto
+	ld e, KANTO_REGION
+	ret

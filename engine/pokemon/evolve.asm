@@ -188,7 +188,7 @@ EvolveAfterBattle_MasterLoop:
 
 ; TR_KANTO
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -197,7 +197,7 @@ EvolveAfterBattle_MasterLoop:
 	
 .item_region_johto
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -257,7 +257,7 @@ EvolveAfterBattle_MasterLoop:
 
 ; TR_KANTO
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -266,7 +266,7 @@ EvolveAfterBattle_MasterLoop:
 	
 .level_region_johto
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -310,7 +310,7 @@ EvolveAfterBattle_MasterLoop:
 
 ; TR_KANTO
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -319,7 +319,7 @@ EvolveAfterBattle_MasterLoop:
 	
 .happiness_region_johto
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -1146,7 +1146,7 @@ DetermineEvolutionItemResults::
 
 ; TR_KANTO
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
@@ -1155,7 +1155,7 @@ DetermineEvolutionItemResults::
 	
 .item_region_johto
 	push hl
-	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
 	ld a, e
 	and a
 	pop hl
