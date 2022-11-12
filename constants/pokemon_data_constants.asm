@@ -140,10 +140,13 @@ NUM_HOF_TEAMS EQU 30
 	const_def 1
 	const EVOLVE_LEVEL
 	const EVOLVE_LEVEL_GENDER
+	const EVOLVE_LEVEL_REGION
 	const EVOLVE_ITEM
 	const EVOLVE_ITEM_GENDER
+	const EVOLVE_ITEM_REGION
 	const EVOLVE_TRADE
 	const EVOLVE_HAPPINESS
+	const EVOLVE_HAPPINESS_REGION
 	const EVOLVE_STAT
 	const EVOLVE_MOVE
 	const EVOLVE_MOVE_TYPE
@@ -151,11 +154,19 @@ NUM_HOF_TEAMS EQU 30
 	const EVOLVE_PARTY
 EVOLVE_TYPES EQU const_value
 
-; EVOLVE_HAPPINESS triggers
+; evolution time of day triggers
+; used for EVOLVE_LEVEL, EVOLVE_HAPPINESS, and EVOLVE_HOLDING
 	const_def 1
 	const TR_ANYTIME
 	const TR_MORNDAY
 	const TR_EVENITE
+
+; evolution region triggers
+; used for EVOLVE_LEVEL_REGION, EVOLVE_ITEM_REGION, and EVOLVE_HAPPINESS_REGION
+	const_def 1
+	const TR_ANYWHERE
+	const TR_JOHTO
+	const TR_KANTO
 
 ; EVOLVE_STAT triggers
 	const_def 1

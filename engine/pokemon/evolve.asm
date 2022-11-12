@@ -77,6 +77,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_ITEM_GENDER
 	jp z, .item_gender
 
+	cp EVOLVE_ITEM_REGION
+	jp z, .item_region
+
 	ld a, [wForceEvolution]
 	and a
 	jr nz, .skip_evolve
@@ -88,8 +91,14 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_LEVEL_GENDER
 	jp z, .level_gender
 
+	cp EVOLVE_LEVEL_REGION
+	jp z, .level_region
+
 	cp EVOLVE_HAPPINESS
 	jp z, .happiness
+
+	cp EVOLVE_HAPPINESS_REGION
+	jp z, .happiness_region
 
 	cp EVOLVE_STAT
 	jp z, .stat
@@ -167,6 +176,35 @@ EvolveAfterBattle_MasterLoop:
 	; Continue by checking for the item
 	jp .item
 
+.item_region
+	; Evolve based on used item and region
+
+	; Check region
+	call GetNextEvoAttackByte
+	cp TR_ANYWHERE
+	jr z, .item
+	cp TR_JOHTO
+	jr z, .item_region_johto
+
+; TR_KANTO
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp z, .skip_evolution_species_parameter ; Johto
+	jr .item
+	
+.item_region_johto
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp nz, .skip_evolution_species_parameter ; Kanto
+	; Continue by checking for the item
+	jr .item
+
 .level
 	; Evolve based on level and time of day
 	call GetNextEvoAttackByte
@@ -207,6 +245,43 @@ EvolveAfterBattle_MasterLoop:
 	jp z, .skip_evolution_species
 	jp .proceed
 
+.level_region
+	; Evolve based on level and region
+
+	; Check region
+	call GetNextEvoAttackByte
+	cp TR_ANYWHERE
+	jr z, .level_region_match
+	cp TR_JOHTO
+	jr z, .level_region_johto
+
+; TR_KANTO
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp z, .skip_evolution_species_parameter ; Johto
+	jr .level_region_match
+	
+.level_region_johto
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp nz, .skip_evolution_species_parameter ; Kanto
+
+.level_region_match
+	call GetNextEvoAttackByte
+	ld b, a
+	ld a, [wTempMonLevel]
+	cp b
+	jp c, .skip_evolution_species
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species
+	jp .proceed
+
 .happiness
 	; Evolve based on happiness above HAPPINESS_TO_EVOLVE and time of day 
 	ld a, [wTempMonHappiness]
@@ -216,6 +291,40 @@ EvolveAfterBattle_MasterLoop:
 	call IsMonHoldingEverstone
 	jp z, .skip_evolution_species_parameter
 	jp .check_time
+
+.happiness_region
+	; Evolve based on happiness above HAPPINESS_TO_EVOLVE and region
+	ld a, [wTempMonHappiness]
+	cp HAPPINESS_TO_EVOLVE
+	jp c, .skip_evolution_species_parameter
+
+	call IsMonHoldingEverstone
+	jp z, .skip_evolution_species_parameter
+
+	; Check region
+	call GetNextEvoAttackByte
+	cp TR_ANYWHERE
+	jp z, .proceed
+	cp TR_JOHTO
+	jr z, .happiness_region_johto
+
+; TR_KANTO
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp z, .skip_evolution_species ; Johto
+	jp .proceed
+	
+.happiness_region_johto
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp nz, .skip_evolution_species ; Kanto
+	jp .proceed
 
 .stat
 	; Tyrogue evolution
@@ -522,6 +631,8 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_TRADE
 	jr z, .skip_evolution_species_parameter
 	cp EVOLVE_HAPPINESS
+	jr z, .skip_evolution_species_parameter
+	cp EVOLVE_HAPPINESS_REGION
 	jr z, .skip_evolution_species_parameter
 	cp EVOLVE_MOVE_TYPE
 	jr z, .skip_evolution_species_parameter
@@ -933,6 +1044,8 @@ SkipEvolutions::
 	jr z, .no_extra_skip
 	cp EVOLVE_HAPPINESS
 	jr z, .no_extra_skip
+	cp EVOLVE_HAPPINESS_REGION
+	jr z, .no_extra_skip
 	cp EVOLVE_MOVE_TYPE
 	jr z, .no_extra_skip
 	inc hl
@@ -955,23 +1068,25 @@ DetermineEvolutionItemResults::
 	and a
 	ret z
 	cp EVOLVE_LEVEL
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_LEVEL_GENDER
-	jr z, .skip_species_two_parameters
-	cp EVOLVE_ITEM_GENDER
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
+	cp EVOLVE_LEVEL_REGION
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_STAT
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_HOLDING
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_MOVE
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_PARTY
-	jr z, .skip_species_two_parameters
+	jp z, .skip_species_two_parameters
 	cp EVOLVE_ITEM
 	jr z, .item
 	cp EVOLVE_ITEM_GENDER
 	jr z, .item_gender
+	cp EVOLVE_ITEM_REGION
+	jr z, .item_region
 	
 	call SkipEvo
 	jr c, .loop
@@ -1021,6 +1136,45 @@ DetermineEvolutionItemResults::
 	ld e, l
 	ret
 
+.item_region
+	; Check region
+	call GetNextEvoAttackByte
+	cp TR_ANYWHERE
+	jr z, .got_region
+	cp TR_JOHTO
+	jr z, .item_region_johto
+
+; TR_KANTO
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp z, .skip_species ; Johto
+	jr .got_region
+	
+.item_region_johto
+	push hl
+	farcall RegionCheck ; returns 1 in e if in Kanto; returns 0 in e if in Johto
+	ld a, e
+	and a
+	pop hl
+	jp nz, .skip_species ; Kanto
+	
+.got_region
+	; Check item
+	; inc hl
+	call GetNextEvoAttackByte
+	ld b, a	
+	ld a, [wCurItem]
+	cp b
+	jr nz, .skip_species
+	ldh a, [hTemp]
+	call GetFarHalfword
+	ld d, h
+	ld e, l
+	ret
+
 .skip_species_two_parameters
 	inc hl
 .skip_species_parameter
@@ -1028,7 +1182,7 @@ DetermineEvolutionItemResults::
 .skip_species
 	inc hl
 	inc hl
-	jr .loop
+	jp .loop
 
 FindEvolution:
 ; For eviolite (see UnevolvedEviolite in engine/battle/effect_commands.asm)

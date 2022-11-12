@@ -15,10 +15,13 @@ SECTION "Evolutions and Attacks Pointers", ROMX
 EvoTypeSizes::
 	db 3 ; dbbbw EVOLVE_LEVEL, level, TR_* constant (ANYTIME, MORNDAY, NITE), species
 	db 3 ; dbbbw EVOLVE_LEVEL_GENDER, MON_* constant (MALE, FEMALE), level, species
+	db 3 ; dbbbw EVOLVE_LEVEL_REGION, TR_* constant (ANYWHERE, JOHTO, KANTO), level, species
 	db 2 ; dbbw  EVOLVE_ITEM, used item, species
 	db 3 ; dbbbw EVOLVE_ITEM_GENDER, MON_* constant (MALE, FEMALE), used item, species
+	db 3 ; dbbbw EVOLVE_ITEM_REGION, TR_* constant (ANYWHERE, JOHTO, KANTO), used item, species
 	db 2 ; dbbw  EVOLVE_TRADE, held item (or -1 for none), species
 	db 2 ; dbbw  EVOLVE_HAPPINESS, TR_* constant (ANYTIME, MORNDAY, NITE), species
+	db 2 ; dbbw  EVOLVE_HAPPINESS_REGION, TR_* constant (ANYWHERE, JOHTO, KANTO), species
 	db 3 ; dbbbw EVOLVE_STAT, level, ATK_*_DEF constant (LT, GT, EQ), species
 	db 3 ; dbww  EVOLVE_MOVE, move, species
 	db 2 ; dbbw  EVOLVE_MOVE_TYPE, type, species (note: also includes happiness requirement)
