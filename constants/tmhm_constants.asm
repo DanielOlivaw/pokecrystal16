@@ -78,12 +78,12 @@ ENDM
 	add_tm FOCUS_BLAST    ; TM52
 	add_tm ENERGY_BALL    ; TM53
 	add_tm FALSE_SWIPE    ; TM54
-	add_tm SCALD          ; TM55
+	add_tm WATER_PULSE    ; TM55
 	add_tm FOUL_PLAY      ; TM56
 	add_tm CHARGE_BEAM    ; TM57
 	add_tm ENDURE         ; TM58
 	add_tm DRAGON_PULSE   ; TM59
-	add_tm WATER_PULSE    ; TM60
+	add_tm EARTH_POWER    ; TM60
 	add_tm WILL_O_WISP    ; TM61
 	add_tm ACROBATICS     ; TM62
 	add_tm BULLET_SEED    ; TM63
@@ -101,7 +101,7 @@ ENDM
 	add_tm SWORDS_DANCE   ; TM75
 	add_tm STEALTH_ROCK   ; TM76
 	add_tm PSYCH_UP       ; TM77
-	add_tm EARTH_POWER    ; TM78
+	add_tm BULLDOZE       ; TM78
 	add_tm LASER_FOCUS    ; TM79
 	add_tm ROCK_SLIDE     ; TM80
 	add_tm X_SCISSOR      ; TM81

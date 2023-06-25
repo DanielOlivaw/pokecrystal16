@@ -55,12 +55,12 @@ TMHMMoves:
 	dw FOCUS_BLAST    ; TM52
 	dw ENERGY_BALL    ; TM53
 	dw FALSE_SWIPE    ; TM54
-	dw SCALD          ; TM55
+	dw WATER_PULSE    ; TM55
 	dw FOUL_PLAY      ; TM56
 	dw CHARGE_BEAM    ; TM57
 	dw ENDURE         ; TM58
 	dw DRAGON_PULSE   ; TM59
-	dw WATER_PULSE    ; TM60
+	dw EARTH_POWER    ; TM60
 	dw WILL_O_WISP    ; TM61
 	dw ACROBATICS     ; TM62
 	dw BULLET_SEED    ; TM63
@@ -78,7 +78,7 @@ TMHMMoves:
 	dw SWORDS_DANCE   ; TM75
 	dw STEALTH_ROCK   ; TM76
 	dw PSYCH_UP       ; TM77
-	dw EARTH_POWER    ; TM78
+	dw BULLDOZE       ; TM78
 	dw LASER_FOCUS    ; TM79
 	dw ROCK_SLIDE     ; TM80
 	dw X_SCISSOR      ; TM81

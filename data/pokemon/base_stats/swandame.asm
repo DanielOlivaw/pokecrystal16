@@ -4,7 +4,7 @@
 	evs  0,   0,   0,   2,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIGHTING, FLYING ; type
+	db NORMAL, FLYING ; type
 	db 45 ; catch rate
 	db 177 ; base exp
 	db STICK, STICK ; items
