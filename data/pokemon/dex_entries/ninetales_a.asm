@@ -1,5 +1,5 @@
 	db "FOX@" ; species name
-	dw 307, 440 ; height, weight
+	dw 307, 439 ; height, weight
 
 	db   "It lives on mount-"
 	next "ains perpetually"

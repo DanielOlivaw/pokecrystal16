@@ -1,10 +1,10 @@
 	db "FOX@" ; species name
-	dw 200, 220 ; height, weight
+	dw 200, 218 ; height, weight
 
-	db   "In hot weather,"
-	next "this #MON makes"
-	next "ice shards with"
+	db   "As it develops,"
+	next "its single white"
+	next "tail gains color"
 
-	page "its six tails and"
-	next "uses them to cool"
-	next "itself off.@"
+	page "and splits into"
+	next "six. It is quite"
+	next "warm and cuddly.@"

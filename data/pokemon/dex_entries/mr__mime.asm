@@ -1,10 +1,10 @@
 	db "BARRIER@" ; species name
-	dw 403, 1200 ; height, weight
+	dw 403, 1202 ; height, weight
 
-	db   "It uses the"
-	next "mysterious"
-	next "power it has in"
+	db   "It is adept at"
+	next "conning people. It"
+	next "is said to be able"
 
-	page "its fingers to"
-	next "solidify air into"
-	next "an invisible wall.@"
+	page "to create walls"
+	next "out of thin air by"
+	next "miming.@"

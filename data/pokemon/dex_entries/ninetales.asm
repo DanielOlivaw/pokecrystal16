@@ -1,10 +1,10 @@
 	db "FOX@" ; species name
-	dw 307, 440 ; height, weight
+	dw 307, 439 ; height, weight
 
-	db   "It lives on mount-"
-	next "ains perpetually"
-	next "covered in snow."
+	db   "It has nine long"
+	next "tails and fur that"
+	next "gleams gold. Its"
 
-	page "In ancient times,"
-	next "it was revered as"
-	next "a deity incarnate.@"
+	page "tails are said to"
+	next "be imbued with a"
+	next "mystic power.@"

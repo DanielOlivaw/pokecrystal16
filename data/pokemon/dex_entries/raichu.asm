@@ -1,10 +1,10 @@
 	db "MOUSE@" ; species name
-	dw 204, 463 ; height, weight
+	dw 207, 661 ; height, weight
 
-	db   "This #MON hops"
-	next "on its tail, using"
-	next "psychic power to"
+	db   "If its electric"
+	next "pouches run empty,"
+	next "it raises its tail"
 
-	page "lift the tail and"
-	next "move about while"
-	next "riding it.@"
+	page "to gather"
+	next "electricity from"
+	next "the atmosphere.@"

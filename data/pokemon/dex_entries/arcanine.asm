@@ -1,5 +1,5 @@
 	db "LEGENDARY@" ; species name
-	dw 603, 3420 ; height, weight
+	dw 603, 3417 ; height, weight
 
 	db   "Its magnificent"
 	next "bark conveys a"

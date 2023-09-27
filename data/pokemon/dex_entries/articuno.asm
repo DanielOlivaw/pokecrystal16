@@ -1,10 +1,10 @@
-	db "CRUEL@" ; species name
-	dw 507, 1122 ; height, weight
+	db "FREEZE@" ; species name
+	dw 507, 1221 ; height, weight
 
-	db   "Known as ARTICUNO,"
-	next "this #MON fires"
-	next "beams that can im-"
+	db   "A legendary bird"
+	next "#MON that is"
+	next "said to appear to"
 
-	page "mobilize opponents"
-	next "as if they had"
-	next "been frozen solid.@"
+	page "doomed people who"
+	next "are lost in icy"
+	next "mountains.@"

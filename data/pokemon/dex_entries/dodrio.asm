@@ -1,10 +1,10 @@
-	db "TRIPLEBIRD@" ; species name
-	dw 511, 1880 ; height, weight
+	db "TRIPLE BIRD@" ; species name
+	dw 511, 1878 ; height, weight
 
-	db   "An enemy that"
-	next "takes its eyes off"
-	next "any of the three"
+	db   "When DODUO evolves"
+	next "into this odd"
+	next "breed, one of its"
 
-	page "heads--even for a"
-	next "second--will get"
-	next "pecked severely.@"
+	page "heads splits into"
+	next "two. It runs at"
+	next "nearly 40 mph.@"

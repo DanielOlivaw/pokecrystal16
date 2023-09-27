@@ -1,10 +1,10 @@
 	db "LITTLE BEAR@" ; species name
-	dw 200, 190 ; height, weight
+	dw 200, 194 ; height, weight
 
-	db   "It always licks"
-	next "honey. Its palm"
-	next "tastes sweet"
+	db   "If it finds honey,"
+	next "its crescent mark"
+	next "glows. It always"
 
-	page "because of all the"
-	next "honey it has"
-	next "absorbed.@"
+	page "licks its paws"
+	next "because they are"
+	next "soaked with honey.@"

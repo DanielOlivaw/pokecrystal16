@@ -5,6 +5,6 @@
 	next "it blend in with"
 	next "its snowy habitat."
 
-	page "It gets agitated"
+	page "It grows agitated"
 	next "as the full moon"
 	next "approaches.@"

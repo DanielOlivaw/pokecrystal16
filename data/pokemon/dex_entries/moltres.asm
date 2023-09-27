@@ -1,10 +1,10 @@
-	db "MALEVOLENT@" ; species name
-	dw 607, 1455 ; height, weight
+	db "FLAME@" ; species name
+	dw 607, 1323 ; height, weight
 
-	db   "The sinister aura"
-	next "that blazes like"
-	next "molten fire around"
+	db   "One of the legend-"
+	next "ary bird #MON."
+	next "It is said that"
 
-	page "this #MON is"
-	next "what inspired the"
-	next "name MOLTRES.@"
+	page "its appearance"
+	next "indicates the"
+	next "coming of spring.@"

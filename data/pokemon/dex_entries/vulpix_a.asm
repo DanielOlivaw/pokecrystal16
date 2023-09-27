@@ -1,5 +1,5 @@
 	db "FOX@" ; species name
-	dw 200, 220 ; height, weight
+	dw 200, 218 ; height, weight
 
 	db   "In hot weather,"
 	next "this #MON makes"

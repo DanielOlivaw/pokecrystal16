@@ -1,10 +1,10 @@
-	db "BONEKEEPER@" ; species name
-	dw 303, 990 ; height, weight
+	db "BONE KEEPER@" ; species name
+	dw 303, 992 ; height, weight
 
-	db   "Somewhere in the"
-	next "world is a ceme-"
-	next "tery just for"
+	db   "It collects bones"
+	next "from an unknown"
+	next "place. A MAROWAK"
 
-	page "MAROWAK. It gets"
-	next "its bones from"
-	next "those graves.@"
+	page "graveyard exists"
+	next "somewhere in the"
+	next "world, rumors say.@"

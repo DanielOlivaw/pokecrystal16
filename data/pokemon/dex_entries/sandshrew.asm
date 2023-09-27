@@ -1,10 +1,10 @@
 	db "MOUSE@" ; species name
-	dw 200, 260 ; height, weight
+	dw 200, 265 ; height, weight
 
-	db   "It prefers dry,"
-	next "sandy places"
-	next "because it uses"
+	db   "Disliking water,"
+	next "it lives in deep"
+	next "burrows in arid"
 
-	page "the sand to"
-	next "protect itself"
-	next "when threatened.@"
+	page "areas. It can roll"
+	next "itself instantly"
+	next "into a ball.@"

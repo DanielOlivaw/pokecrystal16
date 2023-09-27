@@ -1,7 +1,6 @@
 	db "DISCHARGE@" ; species name
 	dw 411, 886 ; height, weight
 
-		;"123456789123456789"
 	db   "It discharges ele-"
 	next "ctricity from its"
 	next "mane. It creates a"

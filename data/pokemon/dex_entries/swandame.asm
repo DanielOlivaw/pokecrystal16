@@ -1,5 +1,5 @@
-	db "WILD DUCK@" ; species name
-	dw 308, 579 ; height, weight
+	db "GRACEFUL@" ; species name
+	dw 311, 403 ; height, weight
 
 	db   "SWANDAME were once"
 	next "employed as defen-"

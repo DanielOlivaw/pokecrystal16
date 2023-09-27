@@ -1,10 +1,10 @@
 	db "DRILL@" ; species name
-	dw 603, 2650 ; height, weight
+	dw 603, 2646 ; height, weight
 
-	db   "By lightly spin-"
-	next "ning its drill-"
-	next "like horn, it can"
+	db   "It rapidly rotates"
+	next "its horn to bore"
+	next "through bedrock."
 
-	page "easily shatter"
-	next "even a diamond in"
-	next "the rough.@"
+	page "Its thick hide"
+	next "protects it even"
+	next "in magma.@"

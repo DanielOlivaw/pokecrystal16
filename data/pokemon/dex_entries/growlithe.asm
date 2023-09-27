@@ -1,10 +1,10 @@
 	db "PUPPY@" ; species name
-	dw 204, 420 ; height, weight
+	dw 204, 419 ; height, weight
 
-	db   "It controls a big"
-	next "territory. If it"
-	next "detects an unknown"
+	db   "It has a brave and"
+	next "trustworthy"
+	next "nature. It fear-"
 
-	page "smell, it roars"
-	next "loudly to force"
-	next "out the intruder.@"
+	page "lessly stands up"
+	next "to bigger and"
+	next "stronger foes.@"

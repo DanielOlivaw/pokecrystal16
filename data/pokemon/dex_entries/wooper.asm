@@ -1,10 +1,10 @@
 	db "WATER FISH@" ; species name
-	dw 104, 190 ; height, weight
+	dw 104, 187 ; height, weight
 
-	db   "A mucous"
-	next "membrane covers"
-	next "its body. Touching"
+	db   "This #MON lives"
+	next "in cold water. It"
+	next "will leave the"
 
-	page "it barehanded will"
-	next "cause a shooting"
-	next "pain.@"
+	page "water to search"
+	next "for food when it"
+	next "gets cold outside.@"

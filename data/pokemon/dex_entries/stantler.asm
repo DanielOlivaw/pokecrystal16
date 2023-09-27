@@ -1,10 +1,10 @@
 	db "BIG HORN@" ; species name
 	dw 407, 1570 ; height, weight
 
-	db   "The round balls"
-	next "found on the"
-	next "fallen antlers can"
+	db   "Those who stare at"
+	next "its antlers will"
+	next "gradually lose"
 
-	page "be ground into a"
-	next "powder that aids"
-	next "in sleeping.@"
+	page "control of their"
+	next "senses and be"
+	next "unable to stand.@"

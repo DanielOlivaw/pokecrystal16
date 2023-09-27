@@ -1,10 +1,10 @@
 	db "SCRATCH CAT@" ; species name
-	dw 104, 165 ; height, weight
+	dw 104, 93 ; height, weight
 
-	db   "Living with a"
-	next "savage, seafaring"
-	next "people toughened"
+	db   "It loves anything"
+	next "that shines. It "
+	next "especially adores"
 
-	page "it so much that"
-	next "parts of it have"
-	next "turned to iron.@"
+	page "the coins that it"
+	next "picks up and"
+	next "secretly hoards.@"

@@ -1,10 +1,10 @@
-	db "STRONG LEGS@" ; species name
-	dw 503, 1283 ; height, weight
+	db "ELECTRIC@" ; species name
+	dw 503, 1160 ; height, weight
 
-	db   "One kick from its"
-	next "powerful legs will"
-	next "pulverize a truck."
+	db   "A legendary bird"
+	next "#MON that is"
+	next "said to live in"
 
-	page "It runs through"
-	next "the mountains at"
-	next "over 180 mph.@"
+	page "thunderclouds. It"
+	next "freely controls"
+	next "lightning bolts.@"

@@ -1,10 +1,10 @@
 	db "BIVALVE@" ; species name
-	dw 411, 2920 ; height, weight
+	dw 411, 2921 ; height, weight
 
-	db   "Even a missile"
-	next "can't break the"
-	next "spikes it uses to"
+	db   "CLOYSTER that live"
+	next "in seas with harsh"
+	next "tidal currents"
 
-	page "stab opponents."
-	next "They're even hard-"
-	next "er than its shell.@"
+	page "grow large, sharp"
+	next "spikes on their"
+	next "shells.@"

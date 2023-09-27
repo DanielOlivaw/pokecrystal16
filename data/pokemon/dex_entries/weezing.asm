@@ -1,10 +1,10 @@
 	db "POISON GAS@" ; species name
-	dw 910, 353 ; height, weight
+	dw 311, 209 ; height, weight
 
-	db   "During a time when"
-	next "droves of factor-"
-	next "ies fouled the air"
+	db   "When it inhales"
+	next "poisonous gases"
+	next "from garbage, its"
 
-	page "with pollution,"
-	next "WEEZING changed"
-	next "into this form.@"
+	page "body expands, and"
+	next "its insides smell"
+	next "much worse.@"

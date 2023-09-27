@@ -1,10 +1,10 @@
 	db "RUSHING@" ; species name
 	dw 108, 717 ; height, weight
 
-	db   "This very aggress-"
-	next "ive #MON will"
-	next "recklessly chall-"
+	db   "It uses its speed"
+	next "and sharp claws to"
+	next "bring down prey."
 
-	page "enge opponents"
-	next "stronger than"
-	next "itself.@"
+	page "Running along win-"
+	next "ding paths is not"
+	next "its strong suit.@"

@@ -1,5 +1,5 @@
 	db "LIVE COAL@" ; species name
-	dw 204, 470 ; height, weight
+	dw 204, 472 ; height, weight
 
 	db   "It naturally spits"
 	next "an 1100-degree"

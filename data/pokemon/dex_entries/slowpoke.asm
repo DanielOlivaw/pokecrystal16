@@ -1,10 +1,10 @@
 	db "DOPEY@" ; species name
 	dw 311, 794 ; height, weight
 
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
+	db   "Although slow, it"
+	next "is skilled at"
+	next "fishing with its"
 
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
+	page "tail. It does not"
+	next "feel pain if its"
+	next "tail is bitten.@"
