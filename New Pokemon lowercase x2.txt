@@ -288,12 +288,12 @@ ditto
 ditto
 eevee
 eevee
-flareon
-flareon
-jolteon
-jolteon
 vaporeon
 vaporeon
+jolteon
+jolteon
+flareon
+flareon
 porygon
 porygon
 omanyte

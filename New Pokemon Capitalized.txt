@@ -143,9 +143,9 @@ Gyarados
 Lapras
 Ditto
 Eevee
-Flareon
-Jolteon
 Vaporeon
+Jolteon
+Flareon
 Porygon
 Omanyte
 Omastar
@@ -284,7 +284,7 @@ Larvitar
 Pupitar
 Tyranitar
 Lugia
-Hooh
+HoOh
 Celebi
 Treecko
 Grovyle

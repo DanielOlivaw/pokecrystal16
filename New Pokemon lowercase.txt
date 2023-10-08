@@ -143,9 +143,9 @@ gyarados
 lapras
 ditto
 eevee
-flareon
-jolteon
 vaporeon
+jolteon
+flareon
 porygon
 omanyte
 omastar

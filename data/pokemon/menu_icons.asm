@@ -147,9 +147,9 @@ MonMenuIcons:
 	db ICON_LAPRAS      ; LAPRAS
 	db ICON_DITTO       ; DITTO
 	db ICON_EEVEE       ; EEVEE
-	db ICON_EEVEE       ; FLAREON
-	db ICON_EEVEE       ; JOLTEON
 	db ICON_EEVEE       ; VAPOREON
+	db ICON_EEVEE       ; JOLTEON
+	db ICON_EEVEE       ; FLAREON
 	db ICON_PORYGON2    ; PORYGON
 	db ICON_OMANYTE     ; OMANYTE
 	db ICON_OMANYTE     ; OMASTAR

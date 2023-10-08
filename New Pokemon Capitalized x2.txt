@@ -288,12 +288,12 @@ Ditto
 Ditto
 Eevee
 Eevee
-Flareon
-Flareon
-Jolteon
-Jolteon
 Vaporeon
 Vaporeon
+Jolteon
+Jolteon
+Flareon
+Flareon
 Porygon
 Porygon
 Omanyte
@@ -570,8 +570,8 @@ Tyranitar
 Tyranitar
 Lugia
 Lugia
-Hooh
-Hooh
+HoOh
+HoOh
 Celebi
 Celebi
 Treecko

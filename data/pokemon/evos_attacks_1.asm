@@ -146,9 +146,9 @@ EvosAttacksPointers1::
 	dw LaprasEvosAttacks
 	dw DittoEvosAttacks
 	dw EeveeEvosAttacks
-	dw FlareonEvosAttacks
-	dw JolteonEvosAttacks
 	dw VaporeonEvosAttacks
+	dw JolteonEvosAttacks
+	dw FlareonEvosAttacks
 	dw PorygonEvosAttacks
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
@@ -3186,8 +3186,8 @@ DittoEvosAttacks:
 	db 0 ; no more level-up moves
 
 EeveeEvosAttacks:
-	dbbw EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	dbbw EVOLVE_ITEM, WATER_STONE, VAPOREON
+	dbbw EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	dbbw EVOLVE_ITEM, FIRE_STONE, FLAREON
 	dbbw EVOLVE_ITEM, LEAF_STONE, LEAFEON
 	dbbw EVOLVE_ITEM, ICE_STONE, GLACEON
