@@ -1,0 +1,20 @@
+	db 0 ; species ID placeholder
+
+	db  75,  95, 115,  35,  95,  65
+	evs  0,   0,   2,   0,   0,   0
+	;   hp  atk  def  spd  sat  sdf
+
+	db POISON, STEEL ; type
+	db 75 ; catch rate
+	db 168 ; base exp
+	db METAL_COAT, METAL_COAT ; items
+	db GENDER_F50 ; gender ratio
+	db 20 ; step cycles to hatch
+	INCBIN "gfx/pokemon/octillery_b/front.dimensions"
+	db 0, 0, 0, 0 ; padding
+	db GROWTH_MEDIUM_FAST ; growth rate
+	dn EGG_WATER_1, EGG_WATER_2 ; egg groups
+
+	; tm/hm learnset
+	tmhm HEADBUTT, TOXIC, CURSE, VENOSHOCK, HIDDEN_POWER, SUNNY_DAY, MUD_SHOT, ICE_BEAM, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, RETURN, PSYCHIC_M, DOUBLE_TEAM, SIGNAL_BEAM, FLAMETHROWER, SLUDGE_BOMB, SANDSTORM, FIRE_BLAST, ROCK_TOMB, FACADE, REST, ATTRACT, THIEF, ENERGY_BALL, WATER_PULSE, CHARGE_BEAM, ENDURE, BULLET_SEED, PAYBACK, GIGA_IMPACT, ICY_WIND, THUNDER_WAVE, GYRO_BALL, BULLDOZE, POISON_JAB, SWAGGER, SLEEP_TALK, SUBSTITUTE, FLASH_CANNON, ROCK_SMASH, WATERFALL, SURF, WHIRLPOOL, DIVE, STEEL_BEAM
+	; end
