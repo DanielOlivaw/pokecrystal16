@@ -1,7 +1,6 @@
 	db "TIGER@" ; species name
 	dw 411, 1797 ; height, weight
 
-		;"123456789123456789"
 	db   "Its paws crackle"
 	next "with electricity."
 	next "It has a playful"

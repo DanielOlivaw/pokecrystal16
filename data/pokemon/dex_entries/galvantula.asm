@@ -1,7 +1,6 @@
 	db "ELESPIDER@" ; species name
 	dw 207, 315 ; height, weight
 
-		;"123456789123456789"
 	db   "It lays traps of"
 	next "electrified thre-"
 	next "ads near the nests"

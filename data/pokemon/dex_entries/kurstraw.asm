@@ -8,9 +8,3 @@
 	page "of its own. The"
 	next "nail traps its"
 	next "spirit inside.@"
-
-
-
-
-
-
