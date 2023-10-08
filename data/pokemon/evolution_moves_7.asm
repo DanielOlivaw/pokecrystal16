@@ -4,10 +4,13 @@ EvolutionMovePointers7::
 	dw NoEvolutionMoves7        ; ROWLET
 	dw DartrixEvolutionMoves    ; DARTRIX
 	dw DecidueyeEvolutionMoves  ; DECIDUEYE
+	dw DecidueyeHEvolutionMoves ; DECIDUEYE_H
 	dw NoEvolutionMoves7        ; PIKIPEK
 	dw NoEvolutionMoves7        ; TRUMBEAK
 	dw ToucannonEvolutionMoves  ; TOUCANNON
 	dw NoEvolutionMoves7        ; GRUBBIN
+	dw NoEvolutionMoves7        ; YUNGOOS
+	dw NoEvolutionMoves7        ; GUMSHOOS
 	dw CharjabugEvolutionMoves  ; CHARJABUG
 	dw VikavoltEvolutionMoves   ; VIKAVOLT
 	dw NoEvolutionMoves7        ; CRABRAWLER
@@ -38,6 +41,8 @@ EvolutionMovePointers7::
 	dw NoEvolutionMoves7        ; PYUKUMUKU
 	dw NoEvolutionMoves7        ; TYPE__NULL
 	dw SilvallyEvolutionMoves   ; SILVALLY
+	dw NoEvolutionMoves7        ; MINIOR_METEOR
+	dw NoEvolutionMoves7        ; MINIOR_CORE
 	dw NoEvolutionMoves7        ; KOMALA
 	dw NoEvolutionMoves7        ; TURTONATOR
 	dw NoEvolutionMoves7        ; TOGEDEMARU
@@ -64,6 +69,10 @@ DartrixEvolutionMoves:
 
 DecidueyeEvolutionMoves:
 	dw SPIRIT_SHACKLE
+	db 0 ; no more evolution moves
+
+DecidueyeHEvolutionMoves:
+	dw TRIPLE_ARROWS
 	db 0 ; no more evolution moves
 
 ToucannonEvolutionMoves:

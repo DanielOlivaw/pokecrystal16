@@ -50,10 +50,14 @@ EvosAttacksPointers6::
 	dw CarbinkEvosAttacks
 	dw GoomyEvosAttacks
 	dw SliggooEvosAttacks
+	dw SliggooHEvosAttacks
 	dw GoodraEvosAttacks
+	dw GoodraHEvosAttacks
 	dw KlefkiEvosAttacks
 	dw PhantumpEvosAttacks
 	dw TrevenantEvosAttacks
+	dw PumpkabooEvosAttacks
+	dw GourgeistEvosAttacks
 	dw BergmiteEvosAttacks
 	dw AvaluggEvosAttacks
 	dw XerneasEvosAttacks
@@ -1034,7 +1038,8 @@ CarbinkEvosAttacks:
 	db 0 ; no more level-up moves
 
 GoomyEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 40, TR_ANYTIME, SLIGGOO
+	dbbbw EVOLVE_LEVEL_REGION, TR_KANTO, 40, SLIGGOO
+	dbbbw EVOLVE_LEVEL_REGION, TR_JOHTO, 40, SLIGGOO_H
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, TACKLE
@@ -1054,6 +1059,7 @@ GoomyEvosAttacks:
 SliggooEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 50, TR_ANYTIME, GOODRA
 	db 0 ; no more evolutions
+	dbw 1, ACID_ARMOR
 	dbw 1, ABSORB
 	dbw 1, TACKLE
 	dbw 5, BUBBLE
@@ -1070,12 +1076,34 @@ SliggooEvosAttacks:
 	dbw 53, MUDDY_WATER
 	db 0 ; no more level-up moves
 
+SliggooHEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 50, TR_ANYTIME, GOODRA_H
+	db 0 ; no more evolutions
+	dbw 1, ACID_ARMOR
+	dbw 1, BODY_SLAM
+	dbw 1, ABSORB
+	dbw 1, TACKLE
+	dbw 5, BUBBLE
+	dbw 10, BIDE
+	dbw 14, DRAGONBREATH
+	dbw 19, PROTECT
+	dbw 23, FLAIL
+	dbw 28, WATER_PULSE
+	dbw 32, RAIN_DANCE
+	dbw 37, DRAGON_PULSE
+	dbw 39, SHELTER
+	dbw 42, CURSE
+	dbw 48, IRON_HEAD
+	dbw 53, MUDDY_WATER
+	db 0 ; no more level-up moves
+
 GoodraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BOUNCY_TAIL
 	dbw 1, POISON_TAIL
 	dbw 1, TEARFUL_LOOK
 	dbw 1, FEINT
+	dbw 1, ACID_ARMOR
 	dbw 1, ABSORB
 	dbw 1, TACKLE
 	dbw 5, BUBBLE
@@ -1092,6 +1120,32 @@ GoodraEvosAttacks:
 	dbw 49, AQUA_TAIL
 	dbw 54, MUDDY_WATER
 	dbw 61, POWER_WHIP
+	dbw 67, OUTRAGE
+	db 0 ; no more level-up moves
+
+GoodraHEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, ACID_SPRAY
+	dbw 1, TEARFUL_LOOK
+	dbw 1, FEINT
+	dbw 1, ACID_ARMOR
+	dbw 1, BODY_SLAM
+	dbw 1, ABSORB
+	dbw 1, TACKLE
+	dbw 5, BUBBLE
+	dbw 10, BIDE
+	dbw 14, DRAGONBREATH
+	dbw 19, PROTECT
+	dbw 23, FLAIL
+	dbw 28, WATER_PULSE
+	dbw 32, RAIN_DANCE
+	dbw 37, DRAGON_PULSE
+	dbw 39, ACID_SPRAY
+	dbw 42, CURSE
+	dbw 48, IRON_HEAD
+	dbw 49, IRON_TAIL
+	dbw 54, MUDDY_WATER
+	dbw 61, HEAVY_SLAM
 	dbw 67, OUTRAGE
 	db 0 ; no more level-up moves
 
@@ -1151,6 +1205,41 @@ TrevenantEvosAttacks:
 	dbw 44, INGRAIN
 	dbw 48, WOOD_HAMMER
 	dbw 52, DESTINY_BOND
+	db 0 ; no more level-up moves
+
+PumpkabooEvosAttacks:
+	dbbw EVOLVE_ITEM, HEART_STONE, GOURGEIST
+	dbbw EVOLVE_TRADE, -1, GOURGEIST
+	db 0 ; no more evolutions
+	dbw 1, TRICK
+	dbw 1, ASTONISH
+	dbw 5, SHADOW_SNEAK
+	dbw 10, CONFUSE_RAY
+	dbw 15, RAZOR_LEAF
+	dbw 20, LEECH_SEED
+	dbw 25, BULLET_SEED
+	dbw 30, SCARY_FACE
+	dbw 35, SEED_BOMB
+	dbw 40, SHADOW_BALL
+	dbw 45, PAIN_SPLIT
+	db 0 ; no more level-up moves
+
+GourgeistEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, MOONBLAST
+	dbw 1, TRICK
+	dbw 1, ASTONISH
+	dbw 6, SHADOW_SNEAK
+	dbw 12, CONFUSE_RAY
+	dbw 18, RAZOR_LEAF
+	dbw 24, LEECH_SEED
+	dbw 30, BULLET_SEED
+	dbw 36, SCARY_FACE
+	dbw 42, SEED_BOMB
+	dbw 48, SHADOW_BALL
+	dbw 54, PAIN_SPLIT
+	dbw 60, PHANTOM_FORCE
+	dbw 66, EXPLOSION
 	db 0 ; no more level-up moves
 
 BergmiteEvosAttacks:

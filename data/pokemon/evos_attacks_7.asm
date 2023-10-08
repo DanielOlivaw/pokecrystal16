@@ -4,9 +4,12 @@ EvosAttacksPointers7::
 	dw RowletEvosAttacks
 	dw DartrixEvosAttacks
 	dw DecidueyeEvosAttacks
+	dw DecidueyeHEvosAttacks
 	dw PikipekEvosAttacks
 	dw TrumbeakEvosAttacks
 	dw ToucannonEvosAttacks
+	dw YungoosEvosAttacks
+	dw GumshoosEvosAttacks
 	dw GrubbinEvosAttacks
 	dw CharjabugEvosAttacks
 	dw VikavoltEvosAttacks
@@ -38,15 +41,17 @@ EvosAttacksPointers7::
 	dw PyukumukuEvosAttacks
 	dw TypeNullEvosAttacks
 	dw SilvallyEvosAttacks
+	dw MiniorMeteorEvosAttacks
+	dw MiniorCoreEvosAttacks
 	dw KomalaEvosAttacks
 	dw TurtonatorEvosAttacks
 	dw TogedemaruEvosAttacks
 	dw MimikyuEvosAttacks
 	dw DrampaEvosAttacks
 	dw DhelmiseEvosAttacks
-	dw JangmoOEvosAttacks
-	dw HakamoOEvosAttacks
-	dw KommoOEvosAttacks
+	dw JangmooEvosAttacks
+	dw HakamooEvosAttacks
+	dw KommooEvosAttacks
 	dw NihilegoEvosAttacks
 	dw BuzzwoleEvosAttacks
 	dw PheromosaEvosAttacks
@@ -79,7 +84,8 @@ RowletEvosAttacks:
 	db 0 ; no more level-up moves
 
 DartrixEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 34, TR_ANYTIME, DECIDUEYE
+	dbbbw EVOLVE_LEVEL_REGION, TR_KANTO, 34, DECIDUEYE_H
+	dbbbw EVOLVE_LEVEL_REGION, TR_JOHTO, 34, DECIDUEYE
 	db 0 ; no more evolutions
 	dbw 1, OMINOUS_WIND
 	dbw 1, TACKLE
@@ -120,6 +126,32 @@ DecidueyeEvosAttacks:
 	dbw 31, FURY_ATTACK
 	dbw 33, SPIRIT_SHACKLE
 	dbw 36, NASTY_PLOT
+	dbw 41, SUCKER_PUNCH
+	dbw 46, LEAF_BLADE
+	dbw 51, FEATHERDANCE
+	dbw 56, BRAVE_BIRD
+	db 0 ; no more level-up moves
+
+DecidueyeHEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, AURA_SPHERE
+	dbw 1, LEAF_STORM
+	dbw 1, U_TURN
+	dbw 1, OMINOUS_WIND
+	dbw 1, NASTY_PLOT
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 6, LEAFAGE
+	dbw 9, ASTONISH
+	dbw 12, PECK
+	dbw 15, RAZOR_LEAF
+	dbw 16, SHADOW_SNEAK
+	dbw 19, FORESIGHT
+	dbw 23, PLUCK
+	dbw 27, SYNTHESIS
+	dbw 31, FURY_ATTACK
+	dbw 33, TRIPLE_ARROWS
+	dbw 36, BULK_UP
 	dbw 41, SUCKER_PUNCH
 	dbw 46, LEAF_BLADE
 	dbw 51, FEATHERDANCE
@@ -180,6 +212,49 @@ ToucannonEvosAttacks:
 	dbw 41, BULLET_SEED
 	dbw 48, FEATHERDANCE
 	dbw 55, HYPER_VOICE
+	db 0 ; no more level-up moves
+
+YungoosEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 20, TR_MORNDAY, GUMSHOOS
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, LEER
+	dbw 6, PURSUIT
+	dbw 9, SAND_ATTACK
+	dbw 12, ODOR_SLEUTH
+	dbw 15, BIDE
+	dbw 18, BITE
+	dbw 21, MUD_SLAP
+	dbw 24, SUPER_FANG
+	dbw 27, WORK_UP
+	dbw 30, TAKE_DOWN
+	dbw 33, SCARY_FACE
+	dbw 36, CRUNCH
+	dbw 39, HYPER_FANG
+	dbw 42, YAWN
+	dbw 45, THRASH
+	dbw 48, REST
+	db 0 ; no more level-up moves
+
+GumshoosEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, LEER
+	dbw 6, PURSUIT
+	dbw 9, SAND_ATTACK
+	dbw 12, ODOR_SLEUTH
+	dbw 15, BIDE
+	dbw 18, BITE
+	dbw 22, MUD_SLAP
+	dbw 26, SUPER_FANG
+	dbw 30, WORK_UP
+	dbw 34, TAKE_DOWN
+	dbw 38, SCARY_FACE
+	dbw 42, CRUNCH
+	dbw 46, HYPER_FANG
+	dbw 50, YAWN
+	dbw 54, THRASH
+	dbw 58, REST
 	db 0 ; no more level-up moves
 
 GrubbinEvosAttacks:
@@ -764,6 +839,46 @@ SilvallyEvosAttacks:
 	dbw 52, TAKE_DOWN
 	dbw 56, DOUBLE_EDGE
 	dbw 60, PARTING_SHOT
+	db 0 ; no more level-up moves
+
+MiniorMeteorEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, DEFENSE_CURL
+	dbw 8, ROLLOUT
+	dbw 10, CONFUSE_RAY
+	dbw 15, SWIFT
+	dbw 17, ANCIENTPOWER
+	dbw 22, SELFDESTRUCT
+	dbw 24, STEALTH_ROCK
+	dbw 29, TAKE_DOWN
+	dbw 31, AUTOTOMIZE
+	dbw 36, COSMIC_POWER
+	dbw 38, ROCK_SLIDE
+	dbw 43, DOUBLE_EDGE
+	dbw 45, SHELL_SMASH
+	dbw 50, EXPLOSION
+	dbw 52, METEOR_BEAM
+	db 0 ; no more level-up moves
+
+MiniorCoreEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 3, DEFENSE_CURL
+	dbw 8, ROLLOUT
+	dbw 10, CONFUSE_RAY
+	dbw 15, SWIFT
+	dbw 17, ANCIENTPOWER
+	dbw 22, SELFDESTRUCT
+	dbw 24, STEALTH_ROCK
+	dbw 29, TAKE_DOWN
+	dbw 31, AIR_CUTTER
+	dbw 36, COSMIC_POWER
+	dbw 38, POWER_GEM
+	dbw 43, DOUBLE_EDGE
+	dbw 45, ENDEAVOR
+	dbw 50, EXPLOSION
+	dbw 52, METEOR_BEAM
 	db 0 ; no more level-up moves
 
 KomalaEvosAttacks:

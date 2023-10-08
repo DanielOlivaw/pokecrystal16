@@ -12,7 +12,9 @@ EvosAttacksPointers3::
 	dw SwampertEvosAttacks
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
+	dw ZigzagoonEvosAttacks
 	dw ZigzagoonGEvosAttacks
+	dw LinooneEvosAttacks
 	dw LinooneGEvosAttacks
 	dw LotadEvosAttacks
 	dw LombreEvosAttacks
@@ -49,6 +51,8 @@ EvosAttacksPointers3::
 	dw MedichamEvosAttacks
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
+	dw PlusleEvosAttacks
+	dw MinunEvosAttacks
 	dw RoseliaEvosAttacks
 	dw GulpinEvosAttacks
 	dw SwalotEvosAttacks
@@ -370,6 +374,23 @@ MightyenaEvosAttacks:
 	dbw 56, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
+ZigzagoonEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, LINOONE
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, SAND_ATTACK
+	dbw 4, TAIL_WHIP
+	dbw 8, COVET
+	dbw 12, HEADBUTT
+	dbw 16, BABY_DOLL_EYES
+	dbw 20, PIN_MISSILE
+	dbw 24, REST
+	dbw 28, TAKE_DOWN
+	dbw 32, FLAIL
+	dbw 36, BELLY_DRUM
+	dbw 40, DOUBLE_EDGE
+
 ZigzagoonGEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, LINOONE_G
 	db 0 ; no more evolutions
@@ -386,6 +407,27 @@ ZigzagoonGEvosAttacks:
 	dbw 32, SCARY_FACE
 	dbw 36, COUNTER
 	dbw 40, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+
+LinooneEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SWITCHEROO
+	dbw 1, HONE_CLAWS
+	dbw 1, PIN_MISSILE
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, SAND_ATTACK
+	dbw 4, TAIL_WHIP
+	dbw 8, COVET
+	dbw 12, HEADBUTT
+	dbw 16, BABY_DOLL_EYES
+	dbw 19, SLASH
+	dbw 22, FURY_SWIPES
+	dbw 28, REST
+	dbw 34, TAKE_DOWN
+	dbw 40, FLAIL
+	dbw 46, BELLY_DRUM
+	dbw 52, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 LinooneGEvosAttacks:
@@ -461,14 +503,14 @@ LudicoloEvosAttacks:
 	dbw 12, MIST
 	dbw 13, FURY_SWIPES
 	dbw 13, TEETER_DANCE
-	dbw 17, MEGA_DRAIN
-	dbw 22, FAKE_OUT
-	dbw 27, BUBBLEBEAM
-	dbw 32, UPROAR
-	dbw 37, KNOCK_OFF
-	dbw 42, ZEN_HEADBUTT
-	dbw 47, ENERGY_BALL
-	dbw 52, HYDRO_PUMP
+	dbw 18, MEGA_DRAIN
+	dbw 24, FAKE_OUT
+	dbw 30, BUBBLEBEAM
+	dbw 36, UPROAR
+	dbw 42, KNOCK_OFF
+	dbw 48, ZEN_HEADBUTT
+	dbw 54, ENERGY_BALL
+	dbw 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SeedotEvosAttacks:
@@ -530,14 +572,14 @@ ShiftryEvosAttacks:
 	dbw 13, RAZOR_LEAF
 	dbw 13, WHIRLWIND
 	dbw 13, LEAF_TORNADO
-	dbw 17, ROLLOUT
-	dbw 22, FAKE_OUT
-	dbw 27, FAINT_ATTACK
-	dbw 32, SWAGGER
-	dbw 37, EXTRASENSORY
-	dbw 42, SUCKER_PUNCH
-	dbw 47, HURRICANE
-	dbw 52, LEAF_BLADE
+	dbw 18, ROLLOUT
+	dbw 24, FAKE_OUT
+	dbw 30, FAINT_ATTACK
+	dbw 36, SWAGGER
+	dbw 42, EXTRASENSORY
+	dbw 48, SUCKER_PUNCH
+	dbw 54, HURRICANE
+	dbw 60, LEAF_BLADE
 	db 0 ; no more level-up moves
 
 TaillowEvosAttacks:
@@ -868,7 +910,8 @@ HariyamaEvosAttacks:
 	db 0 ; no more level-up moves
 
 AzurillEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MARILL
+	dbbw EVOLVE_HAPPINESS_REGION, TR_JOHTO, MARILL
+	dbbw EVOLVE_HAPPINESS_REGION, TR_KANTO, MARILL_B
 	db 0 ; no more evolutions
 	dbw 1, SPLASH
 	dbw 1, WATER_GUN
@@ -886,21 +929,21 @@ NosepassEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, HARDEN
-	dbw 5, BLOCK
-	dbw 8, ROCK_THROW
-	dbw 12, THUNDER_WAVE
-	dbw 15, SPARK
-	dbw 19, REST
-	dbw 22, ROCK_SLIDE
-	dbw 26, POWER_GEM
-	dbw 29, ROCK_BLAST
-	dbw 33, DISCHARGE
-	dbw 36, SANDSTORM
-	dbw 40, MAGNET_GRIP
-	dbw 43, EARTH_POWER
-	dbw 47, STONE_EDGE
-	dbw 50, LOCK_ON
-	dbw 54, ZAP_CANNON
+	dbw 4, BLOCK
+	dbw 7, ROCK_THROW
+	dbw 10, THUNDER_WAVE
+	dbw 13, SPARK
+	dbw 16, REST
+	dbw 19, ROCK_SLIDE
+	dbw 22, POWER_GEM
+	dbw 25, ROCK_BLAST
+	dbw 28, DISCHARGE
+	dbw 31, SANDSTORM
+	dbw 34, MAGNET_GRIP
+	dbw 37, EARTH_POWER
+	dbw 40, STONE_EDGE
+	dbw 43, LOCK_ON
+	dbw 46, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 SkittyEvosAttacks:
@@ -909,20 +952,20 @@ SkittyEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
 	dbw 1, TACKLE
-	dbw 4, FORESIGHT
-	dbw 8, SING
-	dbw 12, DISARMING_VOICE
-	dbw 16, ATTRACT
-	dbw 20, DOUBLESLAP
-	dbw 24, FAKE_OUT
-	dbw 28, FAINT_ATTACK
-	dbw 32, CHARM
-	dbw 36, WAKE_UP_SLAP
-	dbw 40, COVET
-	dbw 44, HEAL_BELL
-	dbw 48, DOUBLE_EDGE
-	dbw 52, CAPTIVATE
-	dbw 56, PLAY_ROUGH
+	dbw 3, FORESIGHT
+	dbw 6, SING
+	dbw 9, DISARMING_VOICE
+	dbw 12, ATTRACT
+	dbw 15, DOUBLESLAP
+	dbw 18, FAKE_OUT
+	dbw 21, FAINT_ATTACK
+	dbw 24, CHARM
+	dbw 27, WAKE_UP_SLAP
+	dbw 30, COVET
+	dbw 33, HEAL_BELL
+	dbw 36, DOUBLE_EDGE
+	dbw 39, CAPTIVATE
+	dbw 42, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 DelcattyEvosAttacks:
@@ -1146,6 +1189,46 @@ ManectricEvosAttacks:
 	dbw 42, CHARGE
 	dbw 48, WILD_CHARGE
 	dbw 54, THUNDER
+	db 0 ; no more level-up moves
+
+PlusleEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, NUZZLE
+	dbw 1, PLAY_NICE
+	dbw 1, GROWL
+	dbw 1, THUNDER_WAVE
+	dbw 4, QUICK_ATTACK
+	dbw 8, SPARK
+	dbw 12, ENCORE
+	dbw 16, SWIFT
+	dbw 20, ELECTRO_BALL
+	dbw 24, CHARM
+	dbw 28, CHARGE
+	dbw 32, DISCHARGE
+	dbw 36, BATON_PASS
+	dbw 40, AGILITY
+	dbw 44, THUNDER
+	dbw 48, NASTY_PLOT
+	db 0 ; no more level-up moves
+
+MinunEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, NUZZLE
+	dbw 1, PLAY_NICE
+	dbw 1, GROWL
+	dbw 1, THUNDER_WAVE
+	dbw 4, QUICK_ATTACK
+	dbw 8, SPARK
+	dbw 12, SWITCHEROO
+	dbw 16, SWIFT
+	dbw 20, ELECTRO_BALL
+	dbw 24, FAKE_TEARS
+	dbw 28, CHARGE
+	dbw 32, DISCHARGE
+	dbw 36, BATON_PASS
+	dbw 40, AGILITY
+	dbw 44, THUNDER
+	dbw 48, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 RoseliaEvosAttacks:

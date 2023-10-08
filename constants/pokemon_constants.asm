@@ -33,11 +33,18 @@
 	const PIDGEY     ; 10
 	const PIDGEOTTO  ; 11
 	const PIDGEOT    ; 12
+	const RATTATA
 	const RATTATA_A
+	const RATICATE
 	const RATICATE_A
+	const EKANS
+	const ARBOK
 	const PIKACHU    ; 19
+	const RAICHU
 	const RAICHU_A
+	const SANDSHREW
 	const SANDSHREW_A
+	const SANDSLASH
 	const SANDSLASH_A
 	const NIDORAN_F  ; 1d
 	const NIDORINA   ; 1e
@@ -47,7 +54,9 @@
 	const NIDOKING   ; 22
 	const CLEFAIRY   ; 23
 	const CLEFABLE   ; 24
+	const VULPIX
 	const VULPIX_A
+	const NINETALES
 	const NINETALES_A
 	const JIGGLYPUFF ; 27
 	const WIGGLYTUFF ; 28
@@ -60,13 +69,19 @@
 	const PARASECT   ; 2f
 	const VENONAT    ; 30
 	const VENOMOTH   ; 31
+	const MEOWTH
+	const MEOWTH_A
 	const MEOWTH_G
+	const PERSIAN
+	const PERSIAN_A
 	const PSYDUCK    ; 36
 	const GOLDUCK    ; 37
 	const MANKEY     ; 38
 	const PRIMEAPE   ; 39
 	const GROWLITHE  ; 3a
+	const GROWLITHE_H
 	const ARCANINE   ; 3b
+	const ARCANINE_H
 	const ABRA       ; 3f
 	const KADABRA    ; 40
 	const ALAKAZAM   ; 41
@@ -79,15 +94,25 @@
 	const TENTACOOL  ; 48
 	const TENTACRUEL ; 49
 	const GEODUDE    ; 4a
+	const GEODUDE_A
 	const GRAVELER   ; 4b
+	const GRAVELER_A
 	const GOLEM      ; 4c
+	const GOLEM_A
 	const PONYTA     ; 4d
+	const PONYTA_G
 	const RAPIDASH   ; 4e
+	const RAPIDASH_G
 	const SLOWPOKE   ; 4f
+	const SLOWPOKE_G
 	const SLOWBRO    ; 50
+	const SLOWBRO_G
 	const MAGNEMITE  ; 51
 	const MAGNETON   ; 52
 	const FARFETCH_D ; 53
+	const FARFETCH_D_G
+	const DODUO
+	const DODRIO
 	const SEEL       ; 56
 	const DEWGONG    ; 57
 	const GRIMER     ; 58
@@ -103,12 +128,17 @@
 	const KRABBY     ; 62
 	const KINGLER    ; 63
 	const EXEGGCUTE  ; 66
+	const EXEGGUTOR
 	const EXEGGUTOR_A
 	const CUBONE     ; 68
 	const MAROWAK    ; 69
+	const MAROWAK_A
 	const LICKITUNG  ; 6c
 	const KOFFING    ; 6d
+	const WEEZING
 	const WEEZING_G
+	const RHYHORN
+	const RHYDON
 	const CHANSEY    ; 71
 	const TANGELA    ; 72
 	const KANGASKHAN ; 73
@@ -118,9 +148,11 @@
 	const SEAKING    ; 77
 	const STARYU     ; 78
 	const STARMIE    ; 79
+	const MR__MIME
 	const MR__MIME_G
 	const SCYTHER    ; 7b
 	const ELECTABUZZ ; 7d
+	const MAGMAR
 	const PINSIR     ; 7f
 	const TAUROS     ; 80
 	const MAGIKARP   ; 81
@@ -138,8 +170,11 @@
 	const KABUTOPS   ; 8d
 	const AERODACTYL ; 8e
 	const SNORLAX    ; 8f
+	const ARTICUNO
 	const ARTICUNO_G
+	const ZAPDOS
 	const ZAPDOS_G
+	const MOLTRES
 	const MOLTRES_G
 	const DRATINI    ; 93
 	const DRAGONAIR  ; 94
@@ -147,9 +182,11 @@
 	const MEWTWO     ; 96
 	const MEW        ; 97
 KANTO_POKEMON EQU const_value
+	const URSAFLAME
 	const TANGEL
+	const MARUMARILL
 	const MOLANCORA
-	const ANCHORRAGE
+	const ANGORE
 	const MEOWSY
 	const MOIBELLE
 	const CHIMEOW
@@ -160,6 +197,7 @@ KANTO_POKEMON EQU const_value
 	const PHANDARIN
 	const WOLFROST
 	const WARWOLF
+	const GUSTELA
 JOHTO_BETA_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const BAYLEEF    ; 99
@@ -167,6 +205,7 @@ JOHTO_BETA_POKEMON EQU const_value
 	const CYNDAQUIL  ; 9b
 	const QUILAVA    ; 9c
 	const TYPHLOSION ; 9d
+	const TYPHLOSION_H
 	const TOTODILE   ; 9e
 	const CROCONAW   ; 9f
 	const FERALIGATR ; a0
@@ -193,20 +232,26 @@ JOHTO_BETA_POKEMON EQU const_value
 	const AMPHAROS   ; b5
 	const BELLOSSOM  ; b6
 	const MARILL     ; b7
+	const MARILL_B
 	const AZUMARILL  ; b8
 	const SUDOWOODO  ; b9
 	const HOPPIP     ; bb
+	const HOPPIP_B
 	const SKIPLOOM   ; bc
+	const SKIPLOOM_B
 	const JUMPLUFF   ; bd
+	const JUMPLUFF_B
 	const SUNKERN    ; bf
 	const SUNFLORA   ; c0
 	const YANMA      ; c1
 	const WOOPER     ; c2
+	const WOOPER_P
 	const QUAGSIRE   ; c3
 	const ESPEON     ; c4
 	const UMBREON    ; c5
 	const MURKROW    ; c6
-	const SLOWKING   ; c7
+	const SLOWKING
+	const SLOWKING_G
 	const MISDREAVUS ; c8
 	const UNOWN      ; c9
 	const WOBBUFFET  ; ca
@@ -218,19 +263,24 @@ JOHTO_BETA_POKEMON EQU const_value
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const GRANBULL   ; d2
+	const QWILFISH
+	const QWILFISH_H
 	const SCIZOR     ; d4
 	const SHUCKLE    ; d5
 	const HERACROSS  ; d6
 	const SNEASEL    ; d7
 	const TEDDIURSA  ; d8
+	const TEDDIURSA_B
 	const URSARING   ; d9
 	const SLUGMA     ; da
 	const MAGCARGO   ; db
 	const SWINUB     ; dc
 	const PILOSWINE  ; dd
+	const CORSOLA
 	const CORSOLA_G
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
+	const OCTILLERY_B
 	const DELIBIRD   ; e1
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
@@ -240,8 +290,10 @@ JOHTO_BETA_POKEMON EQU const_value
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
 	const PORYGON2   ; e9
+	const STANTLER
 	const SMEARGLE   ; eb
 	const ELEKID     ; ef
+	const MAGBY
 	const MILTANK    ; f1
 	const BLISSEY    ; f2
 	const RAIKOU     ; f3
@@ -265,7 +317,9 @@ JOHTO_POKEMON EQU const_value
 	const SWAMPERT
 	const POOCHYENA
 	const MIGHTYENA
+	const ZIGZAGOON
 	const ZIGZAGOON_G
+	const LINOONE
 	const LINOONE_G
 	const LOTAD
 	const LOMBRE
@@ -302,6 +356,8 @@ JOHTO_POKEMON EQU const_value
 	const MEDICHAM
 	const ELECTRIKE
 	const MANECTRIC
+	const PLUSLE
+	const MINUN
 	const ROSELIA
 	const GULPIN
 	const SWALOT
@@ -395,13 +451,25 @@ HOENN_POKEMON EQU const_value
 	const RAMPARDOS
 	const SHIELDON
 	const BASTIODON
+	const BURMY_PLANT
+	const BURMY_SANDY
+	const BURMY_TRASH
+	const WORMADAM_PLANT
+	const WORMADAM_SANDY
+	const WORMADAM_TRASH
+	const MOTHIM
 	const COMBEE
 	const VESPIQUEN
 	const PACHIRISU
 	const BUIZEL
 	const FLOATZEL
-	const SHELLOS
-	const GASTRODON
+	const CHERUBI
+	const CHERRIM_OVERCAST
+	const CHERRIM_SUNSHINE
+	const SHELLOS_E
+	const SHELLOS_W
+	const GASTRODON_E
+	const GASTRODON_W
 	const DRIFLOON
 	const DRIFBLIM
 	const BUNEARY
@@ -441,8 +509,10 @@ HOENN_POKEMON EQU const_value
 	const WEAVILE
 	const MAGNEZONE
 	const LICKILICKY
+	const RHYPERIOR
 	const TANGROWTH
 	const ELECTIVIRE
+	const MAGMORTAR
 	const TOGEKISS
 	const YANMEGA
 	const LEAFEON
@@ -467,6 +537,12 @@ HOENN_POKEMON EQU const_value
 	const SHAYMIN
 	const ARCEUS
 SINNOH_POKEMON EQU const_value
+	const SNIVY
+	const SERVINE
+	const SERPERIOR
+	const TEPIG
+	const PIGNITE
+	const EMBOAR
 	const OSHAWOTT
 	const DEWOTT
 	const SAMUROTT
@@ -496,17 +572,22 @@ SINNOH_POKEMON EQU const_value
 	const WHIMSICOTT
 	const PETILIL
 	const LILLIGANT
-	const BASCULIN
+	const BASCULIN_R
+	const BASCULIN_B
+	const BASCULIN_W
 	const SANDILE
 	const KROKOROK
 	const KROOKODILE
+	const DARUMAKA
 	const DARUMAKA_G
+	const DARMANITAN
 	const DARMANITAN_G
 	const MARACTUS
 	const DWEBBLE
 	const CRUSTLE
 	const SCRAGGY
 	const SCRAFTY
+	const SIGILYPH
 	const YAMASK_G
 	const TIRTOUGA
 	const CARRACOSTA
@@ -546,6 +627,8 @@ SINNOH_POKEMON EQU const_value
 	const GOLURK
 	const PAWNIARD
 	const BISHARP
+	const VULLABY
+	const MANDIBUZZ
 	const HEATMOR
 	const DURANT
 	const DEINO
@@ -603,10 +686,14 @@ UNOVA_POKEMON EQU const_value
 	const CARBINK
 	const GOOMY
 	const SLIGGOO
+	const SLIGGOO_H
 	const GOODRA
+	const GOODRA_H
 	const KLEFKI
 	const PHANTUMP
 	const TREVENANT
+	const PUMPKABOO
+	const GOURGEIST
 	const BERGMITE
 	const AVALUGG
 	const XERNEAS
@@ -618,9 +705,12 @@ KALOS_POKEMON EQU const_value
 	const ROWLET
 	const DARTRIX
 	const DECIDUEYE
+	const DECIDUEYE_H
 	const PIKIPEK
 	const TRUMBEAK
 	const TOUCANNON
+	const YUNGOOS
+	const GUMSHOOS
 	const GRUBBIN
 	const CHARJABUG
 	const VIKAVOLT
@@ -652,6 +742,8 @@ KALOS_POKEMON EQU const_value
 	const PYUKUMUKU
 	const TYPE__NULL
 	const SILVALLY
+	const MINIOR_METEOR
+	const MINIOR_CORE
 	const KOMALA
 	const TURTONATOR
 	const TOGEDEMARU
@@ -683,6 +775,8 @@ ALOLA_POKEMON EQU const_value
 	const ORBEETLE
 	const NICKIT
 	const THIEVUL
+	const GOSSIFLEUR
+	const ELDEGOSS
 	const WOOLOO
 	const DUBWOOL
 	const CHEWTLE
@@ -696,7 +790,8 @@ ALOLA_POKEMON EQU const_value
 	const ARROKUDA
 	const BARASKEWDA
 	const TOXEL
-	const TOXTRICITY
+	const TOXTRICITY_AMPED
+	const TOXTRICITY_LOWKEY
 	const SIZZLIPEDE
 	const CENTISKRCH
 	const CLOBBOPUS
@@ -709,10 +804,12 @@ ALOLA_POKEMON EQU const_value
 	const OBSTAGOON
 	const PERRSERKER
 	const CURSOLA
+	const SIRFETCH_D
 	const MR__RIME
 	const RUNERIGUS
 	const MILCERY
 	const ALCREMIE
+	const FALINKS
 	const PINCURCHIN
 	const SNOM
 	const FROSMOTH
@@ -730,6 +827,35 @@ ALOLA_POKEMON EQU const_value
 	const DRAGAPULT
 	const REGIELEKI
 	const REGIDRAGO
+GALAR_POKEMON EQU const_value
+	const WYRDEER
+	const KLEAVOR
+	const URSALUNA
+	const BASCULEGON_M
+	const BASCULEGON_F
+	const OVERQWIL
+HISUI_POKEMON EQU const_value
+	const FUECOCO
+	const CROCALOR
+	const SKELEDIRGE
+	const FIDOUGH
+	const DACHSBUN
+	const TADBULB
+	const BELLIBOLT
+	const WIGLETT
+	const WUGTRIO
+	const GLIMMET
+	const GLIMMORA
+	const GREAVARD
+	const HOUNDSTONE
+	const FLAMIGO
+	const VELUZA
+	const TATSUGIRI_CURLY
+	const TATSUGIRI_DROOPY
+	const TATSUGIRI_STRETCHY
+	const CLODSIRE
+	const FARIGIRAF
+	const WO_CHIEN
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3
@@ -794,7 +920,6 @@ GALARIAN_FORM EQU 2
 ; Snover
 ; Weavile
 ; Frillish/Jellicent
-; Meowstic
 	const_def 1
 	const MALE_FORM
 	const FEMALE_FORM
@@ -835,16 +960,6 @@ GALARIAN_FORM EQU 2
 	const UNOWN_Y ; 25
 	const UNOWN_Z ; 26
 NUM_UNOWN EQU const_value + -1 ; 26
-
-; Shellos/Gastrodon forms
-	const_def 1
-	const SHELLOS_WEST_SEA_FORM
-	const SHELLOS_EAST_SEA_FORM
-
-; Basculin forms
-	const_def 1
-	const BASCULIN_RED_STRIPED_FORM
-	const BASCULIN_BLUE_STRIPED_FORM
 
 ; Vivillon forms
 	const_def 1

@@ -1,111 +1,128 @@
 SECTION "Egg Moves 2", ROMX
 
 EggMovePointers2::
-	dw TangelEggMoves
-	dw MolancoraEggMoves
-	dw NoEggMoves2
-	dw MeowsyEggMoves
-	dw MoibelleEggMoves
-	dw NoEggMoves2
-	dw TykerEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw KurstrawEggMoves
-	dw NoEggMoves2
-	dw WolfrostEggMoves
-	dw NoEggMoves2
-	dw ChikoritaEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw CyndaquilEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw TotodileEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw SentretEggMoves
-	dw NoEggMoves2
-	dw HoothootEggMoves
-	dw NoEggMoves2
-	dw LedybaEggMoves
-	dw NoEggMoves2
-	dw SpinarakEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw ChinchouEggMoves
-	dw NoEggMoves2
-	dw PichuEggMoves
-	dw CleffaEggMoves
-	dw IgglybuffEggMoves
-	dw TogepiEggMoves
-	dw NoEggMoves2
-	dw NatuEggMoves
-	dw NoEggMoves2
-	dw MareepEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw HoppipEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw SunkernEggMoves
-	dw NoEggMoves2
-	dw YanmaEggMoves
-	dw WooperEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw MurkrowEggMoves
-	dw NoEggMoves2
-	dw MisdreavusEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw GirafarigEggMoves
-	dw PinecoEggMoves
-	dw NoEggMoves2
-	dw DunsparceEggMoves
-	dw GligarEggMoves
-	dw NoEggMoves2
-	dw SnubbullEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw ShuckleEggMoves
-	dw HeracrossEggMoves
-	dw SneaselEggMoves
-	dw TeddiursaEggMoves
-	dw NoEggMoves2
-	dw SlugmaEggMoves
-	dw NoEggMoves2
-	dw SwinubEggMoves
-	dw NoEggMoves2
-	dw CorsolaGEggMoves
-	dw RemoraidEggMoves
-	dw NoEggMoves2
-	dw DelibirdEggMoves
-	dw NoEggMoves2
-	dw SkarmoryEggMoves
-	dw HoundourEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw PhanpyEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw ElekidEggMoves
-	dw MiltankEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw LarvitarEggMoves
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
-	dw NoEggMoves2
+	dw NoEggMoves2        ; URSAFLAME
+	dw TangelEggMoves     ; TANGEL
+	dw NoEggMoves2        ; MARUMARILL
+	dw MolancoraEggMoves  ; MOLANCORA
+	dw NoEggMoves2        ; ANGORE
+	dw MeowsyEggMoves     ; MEOWSY
+	dw MoibelleEggMoves   ; MOIBELLE
+	dw NoEggMoves2        ; CHIMEOW
+	dw TykerEggMoves      ; TYKER
+	dw NoEggMoves2        ; STRAIGAR
+	dw NoEggMoves2        ; SWANDAME
+	dw KurstrawEggMoves   ; KURSTRAW
+	dw NoEggMoves2        ; PHANDARIN
+	dw WolfrostEggMoves   ; WOLFROST
+	dw NoEggMoves2        ; WARWOLF
+	dw GustelaEggMoves    ; GUSTELA
+	dw ChikoritaEggMoves  ; CHIKORITA
+	dw NoEggMoves2        ; BAYLEEF
+	dw NoEggMoves2        ; MEGANIUM
+	dw CyndaquilEggMoves  ; CYNDAQUIL
+	dw NoEggMoves2        ; QUILAVA
+	dw NoEggMoves2        ; TYPHLOSION
+	dw NoEggMoves2        ; TYPHLOSION_H
+	dw TotodileEggMoves   ; TOTODILE
+	dw NoEggMoves2        ; CROCONAW
+	dw NoEggMoves2        ; FERALIGATR
+	dw SentretEggMoves    ; SENTRET
+	dw NoEggMoves2        ; FURRET
+	dw HoothootEggMoves   ; HOOTHOOT
+	dw NoEggMoves2        ; NOCTOWL
+	dw LedybaEggMoves     ; LEDYBA
+	dw NoEggMoves2        ; LEDIAN
+	dw SpinarakEggMoves   ; SPINARAK
+	dw NoEggMoves2        ; ARIADOS
+	dw NoEggMoves2        ; CROBAT
+	dw ChinchouEggMoves   ; CHINCHOU
+	dw NoEggMoves2        ; LANTURN
+	dw PichuEggMoves      ; PICHU
+	dw CleffaEggMoves     ; CLEFFA
+	dw IgglybuffEggMoves  ; IGGLYBUFF
+	dw TogepiEggMoves     ; TOGEPI
+	dw NoEggMoves2        ; TOGETIC
+	dw NatuEggMoves       ; NATU
+	dw NoEggMoves2        ; XATU
+	dw MareepEggMoves     ; MAREEP
+	dw NoEggMoves2        ; FLAAFFY
+	dw NoEggMoves2        ; AMPHAROS
+	dw NoEggMoves2        ; BELLOSSOM
+	dw NoEggMoves2        ; MARILL
+	dw NoEggMoves2        ; MARILL_B
+	dw NoEggMoves2        ; AZUMARILL
+	dw NoEggMoves2        ; SUDOWOODO
+	dw HoppipEggMoves     ; HOPPIP
+	dw HoppipBEggMoves    ; HOPPIP_B
+	dw NoEggMoves2        ; SKIPLOOM
+	dw NoEggMoves2        ; SKIPLOOM_B
+	dw NoEggMoves2        ; JUMPLUFF
+	dw NoEggMoves2        ; JUMPLUFF_B
+	dw SunkernEggMoves    ; SUNKERN
+	dw NoEggMoves2        ; SUNFLORA
+	dw YanmaEggMoves      ; YANMA
+	dw WooperEggMoves     ; WOOPER
+	dw WooperPEggMoves    ; WOOPER_P
+	dw NoEggMoves2        ; QUAGSIRE
+	dw NoEggMoves2        ; ESPEON
+	dw NoEggMoves2        ; UMBREON
+	dw MurkrowEggMoves    ; MURKROW
+	dw NoEggMoves2        ; SLOWKING
+	dw NoEggMoves2        ; SLOWKING_G
+	dw MisdreavusEggMoves ; MISDREAVUS
+	dw NoEggMoves2        ; UNOWN
+	dw NoEggMoves2        ; WOBBUFFET
+	dw GirafarigEggMoves  ; GIRAFARIG
+	dw PinecoEggMoves     ; PINECO
+	dw NoEggMoves2        ; FORRETRESS
+	dw DunsparceEggMoves  ; DUNSPARCE
+	dw GligarEggMoves     ; GLIGAR
+	dw NoEggMoves2        ; STEELIX
+	dw SnubbullEggMoves   ; SNUBBULL
+	dw NoEggMoves2        ; GRANBULL
+	dw QwilfishEggMoves   ; QWILFISH
+	dw QwilfishHEggMoves  ; QWILFISH_H
+	dw NoEggMoves2        ; SCIZOR
+	dw ShuckleEggMoves    ; SHUCKLE
+	dw HeracrossEggMoves  ; HERACROSS
+	dw SneaselEggMoves    ; SNEASEL
+	dw TeddiursaEggMoves  ; TEDDIURSA
+	dw TeddiursaBEggMoves ; TEDDIURSA_B
+	dw NoEggMoves2        ; URSARING
+	dw SlugmaEggMoves     ; SLUGMA
+	dw NoEggMoves2        ; MAGCARGO
+	dw SwinubEggMoves     ; SWINUB
+	dw NoEggMoves2        ; PILOSWINE
+	dw CorsolaEggMoves    ; CORSOLA
+	dw CorsolaGEggMoves   ; CORSOLA_G
+	dw RemoraidEggMoves   ; REMORAID
+	dw NoEggMoves2        ; OCTILLERY
+	dw NoEggMoves2        ; OCTILLERY_B
+	dw DelibirdEggMoves   ; DELIBIRD
+	dw NoEggMoves2        ; MANTINE
+	dw SkarmoryEggMoves   ; SKARMORY
+	dw HoundourEggMoves   ; HOUNDOUR
+	dw NoEggMoves2        ; HOUNDOOM
+	dw NoEggMoves2        ; KINGDRA
+	dw PhanpyEggMoves     ; PHANPY
+	dw NoEggMoves2        ; DONPHAN
+	dw NoEggMoves2        ; PORYGON2
+	dw StantlerEggMoves   ; STANTLER
+	dw NoEggMoves2        ; SMEARGLE
+	dw ElekidEggMoves     ; ELEKID
+	dw MagbyEggMoves      ; MAGBY
+	dw MiltankEggMoves    ; MILTANK
+	dw NoEggMoves2        ; BLISSEY
+	dw NoEggMoves2        ; RAIKOU
+	dw NoEggMoves2        ; ENTEI
+	dw NoEggMoves2        ; SUICUNE
+	dw LarvitarEggMoves   ; LARVITAR
+	dw NoEggMoves2        ; PUPITAR
+	dw NoEggMoves2        ; TYRANITAR
+	dw NoEggMoves2        ; LUGIA
+	dw NoEggMoves2        ; HO_OH
+	dw NoEggMoves2        ; CELEBI
 
 TangelEggMoves:
 	dw FLAIL
@@ -183,6 +200,19 @@ WolfrostEggMoves:
 	dw ICICLE_CRASH
 	dw GROWL
 	dw WILD_FURY
+	dw -1 ; end
+
+GustelaEggMoves:
+	dw POWDER_SNOW
+	dw ICE_SHARD
+	dw ICICLE_CRASH
+	dw SPITE
+	dw FEINT
+	dw FROST_BREATH
+	dw GROWL
+	dw WILD_FURY
+	dw SNARL
+	dw PURSUIT
 	dw -1 ; end
 
 ChikoritaEggMoves:
@@ -390,6 +420,20 @@ HoppipEggMoves:
 	dw WEATHERVANE
 	dw -1 ; end
 
+HoppipBEggMoves:
+	dw CONFUSION
+	dw ENCORE
+	dw DOUBLE_EDGE
+	dw AMNESIA
+	dw AROMATHERAPY
+	dw COTTON_GUARD
+	dw SEED_BOMB
+	dw STRENGTH_SAP
+	dw WEATHERVANE
+	dw DISARMING_VOICE
+	dw TAIL_SLAP
+	dw -1 ; end
+
 SunkernEggMoves:
 	dw BIDE
 	dw ENCORE
@@ -426,6 +470,21 @@ WooperEggMoves:
 	dw EERIE_IMPULSE
 	dw ENCORE
 	dw GUARD_SWAP
+	dw -1 ; end
+
+WooperPEggMoves:
+	dw BODY_SLAM
+	dw ANCIENTPOWER
+	dw ACID_SPRAY
+	dw COUNTER
+	dw DOUBLE_KICK
+	dw RECOVER
+	dw SPIT_UP
+	dw STOCKPILE
+	dw SWALLOW
+	dw POISON_STING
+	dw BODY_PRESS
+	dw GUNK_SHOT
 	dw -1 ; end
 
 MurkrowEggMoves:
@@ -529,6 +588,32 @@ SnubbullEggMoves:
 	dw THUNDER_FANG
 	dw -1 ; end
 
+QwilfishEggMoves:
+	dw ACID_SPRAY
+	dw AQUA_JET
+	dw ASTONISH
+	dw BARB_BARRAGE
+	dw BUBBLEBEAM
+	dw FLAIL
+	dw HAZE
+	dw SELFDESTRUCT
+	dw SUPERSONIC
+	dw BRINE
+	dw -1 ; end
+
+QwilfishHEggMoves:
+	dw ACID_SPRAY
+	dw AQUA_JET
+	dw ASTONISH
+	dw AQUA_TAIL
+	dw BUBBLEBEAM
+	dw FLAIL
+	dw HAZE
+	dw SELFDESTRUCT
+	dw SUPERSONIC
+	dw BRINE
+	dw -1 ; end
+
 ShuckleEggMoves:
 	dw SWEET_SCENT
 	dw ACID
@@ -591,6 +676,22 @@ TeddiursaEggMoves:
 	dw YAWN
 	dw -1 ; end
 
+TeddiursaBEggMoves:
+	dw CRUNCH
+	dw TAKE_DOWN
+	dw SEISMIC_TOSS
+	dw COUNTER
+	dw INCINERATE
+	dw BELLY_DRUM
+	dw CHIP_AWAY
+	dw FIRE_FANG
+	dw INFERNO
+	dw DOUBLE_EDGE
+	dw FAKE_TEARS
+	dw NIGHT_SLASH
+	dw YAWN
+	dw -1 ; end
+
 SlugmaEggMoves:
 	dw ACID_ARMOR
 	dw GUARD_SWAP
@@ -615,6 +716,21 @@ SwinubEggMoves:
 	dw ICICLE_CRASH
 	dw AVALANCHE
 	dw ICICLE_SPEAR
+	dw -1 ; end
+
+CorsolaEggMoves:
+	dw CONFUSE_RAY
+	dw HEAD_SMASH
+	dw MIST
+	dw AMNESIA
+	dw AQUA_RING
+	dw ICICLE_SPEAR
+	dw INGRAIN
+	dw LIQUIDATION
+	dw SCREECH
+	dw BARRIER
+	dw BIDE
+	dw STONE_EDGE
 	dw -1 ; end
 
 CorsolaGEggMoves:
@@ -708,6 +824,18 @@ PhanpyEggMoves:
 	dw SNORE
 	dw -1 ; end
 
+StantlerEggMoves:
+	dw BITE
+	dw DISABLE
+	dw DOUBLE_KICK
+	dw EXTRASENSORY
+	dw MEGAHORN
+	dw SPITE
+	dw THRASH
+	dw RAGE
+	dw ME_FIRST
+	dw -1 ; end
+
 ElekidEggMoves:
 	dw KARATE_CHOP
 	dw BARRIER
@@ -718,6 +846,22 @@ ElekidEggMoves:
 	dw FEINT
 	dw FOCUS_PUNCH
 	dw HAMMER_ARM
+	dw -1 ; end
+
+MagbyEggMoves:
+	dw BELCH
+	dw CROSS_CHOP
+	dw DYNAMICPUNCH
+	dw FOCUS_PUNCH
+	dw MACH_PUNCH
+	dw FLARE_BLITZ
+	dw BELLY_DRUM
+	dw FOCUS_ENERGY
+	dw MEGA_PUNCH
+	dw POWER_SWAP
+	dw SCREECH
+	dw BARRIER
+	dw KARATE_CHOP
 	dw -1 ; end
 
 MiltankEggMoves:

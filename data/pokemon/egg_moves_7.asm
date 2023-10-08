@@ -4,8 +4,11 @@ EggMovePointers7::
 	dw RowletEggMoves
 	dw NoEggMoves7
 	dw NoEggMoves7
+	dw NoEggMoves7
 	dw PikipekEggMoves
 	dw NoEggMoves7
+	dw NoEggMoves7
+	dw YungoosEggMoves
 	dw NoEggMoves7
 	dw GrubbinEggMoves
 	dw NoEggMoves7
@@ -36,6 +39,8 @@ EggMovePointers7::
 	dw SandygastEggMoves
 	dw NoEggMoves7
 	dw PyukumukuEggMoves
+	dw NoEggMoves7
+	dw NoEggMoves7
 	dw NoEggMoves7
 	dw NoEggMoves7
 	dw KomalaEggMoves
@@ -71,6 +76,14 @@ PikipekEggMoves:
 	dw BRAVE_BIRD
 	dw HEAT_WAVE
 	dw HYPER_VOICE
+	dw -1 ; end
+
+YungoosEggMoves:
+	dw ENDEAVOR
+	dw FIRE_FANG
+	dw ICE_FANG
+	dw THUNDER_FANG
+	dw REVENGE
 	dw -1 ; end
 
 GrubbinEggMoves:

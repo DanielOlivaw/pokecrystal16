@@ -240,7 +240,7 @@ IconPointers:
 	dw RowletIcon
 	dw DecidueyeIcon
 	dw RibombeeIcon
-	dw MareanieIcon
+	dw SnivyIcon
 	dw MudsdaleIcon
 	dw MorelullIcon
 	dw AipomIcon

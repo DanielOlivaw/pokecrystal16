@@ -50,10 +50,14 @@ EvolutionMovePointers6::
 	dw NoEvolutionMoves6        ; CARBINK
 	dw NoEvolutionMoves6        ; GOOMY
 	dw SliggooEvolutionMoves    ; SLIGGOO
+	dw SliggooHEvolutionMoves   ; SLIGGOO_H
 	dw GoodraEvolutionMoves     ; GOODRA
+	dw GoodraHEvolutionMoves    ; GOODRA_H
 	dw NoEvolutionMoves6        ; KLEFKI
 	dw NoEvolutionMoves6        ; PHANTUMP
 	dw TrevenantEvolutionMoves  ; TREVENANT
+	dw NoEvolutionMoves6        ; PUMPKABOO
+	dw NoEvolutionMoves6        ; GOURGEIST
 	dw NoEvolutionMoves6        ; BERGMITE
 	dw AvaluggEvolutionMoves    ; AVALUGG
 	dw NoEvolutionMoves6        ; XERNEAS
@@ -146,8 +150,16 @@ SliggooEvolutionMoves:
 	dw ACID_SPRAY
 	db 0 ; no more evolution moves
 
+SliggooHEvolutionMoves:
+	dw SHELTER
+	db 0 ; no more evolution moves
+
 GoodraEvolutionMoves:
 	dw AQUA_TAIL
+	db 0 ; no more evolution moves
+
+GoodraHEvolutionMoves:
+	dw IRON_TAIL
 	db 0 ; no more evolution moves
 
 TrevenantEvolutionMoves:

@@ -12,7 +12,9 @@ EvolutionMovePointers3::
 	dw SwampertEvolutionMoves   ; SWAMPERT
 	dw NoEvolutionMoves3        ; POOCHYENA
 	dw MightyenaEvolutionMoves  ; MIGHTYENA
+	dw NoEvolutionMoves3        ; ZIGZAGOON
 	dw NoEvolutionMoves3        ; ZIGZAGOON_G
+	dw LinooneEvolutionMoves    ; LINOONE
 	dw LinooneGEvolutionMoves   ; LINOONE_G
 	dw NoEvolutionMoves3        ; LOTAD
 	dw LombreEvolutionMoves     ; LOMBRE
@@ -49,6 +51,8 @@ EvolutionMovePointers3::
 	dw MedichamEvolutionMoves   ; MEDICHAM
 	dw NoEvolutionMoves3        ; ELECTRIKE
 	dw NoEvolutionMoves3        ; MANECTRIC
+	dw NoEvolutionMoves3        ; PLUSLE
+	dw NoEvolutionMoves3        ; MINUN
 	dw RoseliaEvolutionMoves    ; ROSELIA
 	dw NoEvolutionMoves3        ; GULPIN
 	dw SwalotEvolutionMoves     ; SWALOT
@@ -148,6 +152,11 @@ MightyenaEvolutionMoves:
 	dw SNARL
 	db 0 ; no more evolution moves
 
+LinooneEvolutionMoves:
+SharpedoEvolutionMoves:
+	dw SLASH
+	db 0 ; no more evolution moves
+
 LinooneGEvolutionMoves:
 	dw NIGHT_SLASH
 	db 0 ; no more evolution moves
@@ -209,10 +218,6 @@ RoseliaEvolutionMoves:
 
 SwalotEvolutionMoves:
 	dw BODY_SLAM
-	db 0 ; no more evolution moves
-
-SharpedoEvolutionMoves:
-	dw SLASH
 	db 0 ; no more evolution moves
 
 CameruptEvolutionMoves:

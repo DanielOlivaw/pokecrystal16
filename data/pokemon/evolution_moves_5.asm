@@ -1,6 +1,12 @@
 SECTION "Evolution Moves 5", ROMX
 
 EvolutionMovePointers5::
+	dw NoEvolutionMoves5         ; SNIVY
+	dw NoEvolutionMoves5         ; SERVINE
+	dw SerperiorEvolutionMoves   ; SERPERIOR
+	dw NoEvolutionMoves5         ; TEPIG
+	dw NoEvolutionMoves5         ; PIGNITE
+	dw EmboarEvolutionMoves      ; EMBOAR
 	dw NoEvolutionMoves5         ; OSHAWOTT
 	dw NoEvolutionMoves5         ; DEWOTT
 	dw SamurottEvolutionMoves    ; SAMUROTT
@@ -30,17 +36,22 @@ EvolutionMovePointers5::
 	dw WhimsicottEvolutionMoves  ; WHIMSICOTT
 	dw NoEvolutionMoves5         ; PETILIL
 	dw LilligantEvolutionMoves   ; LILLIGANT
-	dw NoEvolutionMoves5         ; BASCULIN
+	dw NoEvolutionMoves5         ; BASCULIN_R
+	dw NoEvolutionMoves5         ; BASCULIN_B
+	dw NoEvolutionMoves5         ; BASCULIN_W
 	dw NoEvolutionMoves5         ; SANDILE
 	dw NoEvolutionMoves5         ; KROKOROK
 	dw NoEvolutionMoves5         ; KROOKODILE
+	dw NoEvolutionMoves5         ; DARUMAKA
 	dw NoEvolutionMoves5         ; DARUMAKA_G
+	dw DarmanitanEvolutionMoves  ; DARMANITAN
 	dw DarmanitanGEvolutionMoves ; DARMANITAN_G
 	dw NoEvolutionMoves5         ; MARACTUS
 	dw NoEvolutionMoves5         ; DWEBBLE
 	dw NoEvolutionMoves5         ; CRUSTLE
 	dw NoEvolutionMoves5         ; SCRAGGY
 	dw NoEvolutionMoves5         ; SCRAFTY
+	dw NoEvolutionMoves5         ; SIGILYPH
 	dw NoEvolutionMoves5         ; YAMASK_G
 	dw NoEvolutionMoves5         ; TIRTOUGA
 	dw NoEvolutionMoves5         ; CARRACOSTA
@@ -80,6 +91,8 @@ EvolutionMovePointers5::
 	dw GolurkEvolutionMoves      ; GOLURK
 	dw NoEvolutionMoves5         ; PAWNIARD
 	dw BisharpEvolutionMoves     ; BISHARP
+	dw NoEvolutionMoves5         ; VULLABY
+	dw MandibuzzEvolutionMoves   ; MANDIBUZZ
 	dw NoEvolutionMoves5         ; HEATMOR
 	dw NoEvolutionMoves5         ; DURANT
 	dw NoEvolutionMoves5         ; DEINO
@@ -87,6 +100,14 @@ EvolutionMovePointers5::
 	dw HydreigonEvolutionMoves   ; HYDREIGON
 	dw NoEvolutionMoves5         ; LARVESTA
 	dw VolcaronaEvolutionMoves   ; VOLCARONA
+
+SerperiorEvolutionMoves:
+	dw DRAGON_TAIL
+	db 0 ; no more evolution moves
+
+EmboarEvolutionMoves:
+	dw ARM_THRUST
+	db 0 ; no more evolution moves
 
 SamurottEvolutionMoves:
 LeavannyEvolutionMoves:
@@ -123,6 +144,10 @@ WhimsicottEvolutionMoves:
 
 LilligantEvolutionMoves:
 	dw PETAL_DANCE
+	db 0 ; no more evolution moves
+
+DarmanitanEvolutionMoves:
+	dw HAMMER_ARM
 	db 0 ; no more evolution moves
 
 DarmanitanGEvolutionMoves:
@@ -175,6 +200,10 @@ GolurkEvolutionMoves:
 
 BisharpEvolutionMoves:
 	dw METAL_BURST
+	db 0 ; no more evolution moves
+
+MandibuzzEvolutionMoves:
+	dw BONE_RUSH
 	db 0 ; no more evolution moves
 
 ZweilousEvolutionMoves:

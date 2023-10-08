@@ -39,7 +39,8 @@ EvosAttacksPointers::
 	indirect_entries VOLCARONA, EvosAttacksPointers5
 	indirect_entries VOLCANION, EvosAttacksPointers6
 	indirect_entries BLACEPHLON, EvosAttacksPointers7
-	indirect_entries NUM_POKEMON, EvosAttacksPointers8
+	indirect_entries TOXTRICITY_LOWKEY, EvosAttacksPointers8
+	indirect_entries NUM_POKEMON, EvosAttacksPointers9
 	indirect_table_end
 
 INCLUDE "data/pokemon/evos_attacks_1.asm"

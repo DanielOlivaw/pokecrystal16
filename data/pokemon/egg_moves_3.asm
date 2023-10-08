@@ -1,123 +1,127 @@
 SECTION "Egg Moves 3", ROMX
 
 EggMovePointers3::
-	dw TreeckoEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw TorchicEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw MudkipEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw PoochyenaEggMoves
-	dw NoEggMoves3
-	dw ZigzagoonGEggMoves
-	dw NoEggMoves3
-	dw LotadEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw SeedotEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw TaillowEggMoves
-	dw NoEggMoves3
-	dw WingullEggMoves
-	dw NoEggMoves3
-	dw RaltsEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw SurskitEggMoves
-	dw NoEggMoves3
-	dw ShroomishEggMoves
-	dw NoEggMoves3
-	dw WhismurEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw MakuhitaEggMoves
-	dw NoEggMoves3
-	dw AzurillEggMoves
-	dw NosepassEggMoves
-	dw SkittyEggMoves
-	dw NoEggMoves3
-	dw SableyeEggMoves
-	dw MawileEggMoves
-	dw AronEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw MedititeEggMoves
-	dw NoEggMoves3
-	dw ElectrikeEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw GulpinEggMoves
-	dw NoEggMoves3
-	dw CarvanhaEggMoves
-	dw NoEggMoves3
-	dw WailmerEggMoves
-	dw NoEggMoves3
-	dw NumelEggMoves
-	dw NoEggMoves3
-	dw TorkoalEggMoves
-	dw SpoinkEggMoves
-	dw NoEggMoves3
-	dw TrapinchEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw CacneaEggMoves
-	dw NoEggMoves3
-	dw SwabluEggMoves
-	dw NoEggMoves3
-	dw ZangooseEggMoves
-	dw SeviperEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw BarboachEggMoves
-	dw NoEggMoves3
-	dw CorphishEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw LileepEggMoves
-	dw NoEggMoves3
-	dw AnorithEggMoves
-	dw NoEggMoves3
-	dw FeebasEggMoves
-	dw NoEggMoves3
-	dw ShuppetEggMoves
-	dw NoEggMoves3
-	dw DuskullEggMoves
-	dw NoEggMoves3
-	dw TropiusEggMoves
-	dw NoEggMoves3
-	dw AbsolEggMoves
-	dw NoEggMoves3
-	dw SnoruntEggMoves
-	dw NoEggMoves3
-	dw SphealEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw ClamperlEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw RelicanthEggMoves
-	dw LuvdiscEggMoves
-	dw BagonEggMoves
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
-	dw NoEggMoves3
+	dw TreeckoEggMoves    ; TREECKO
+	dw NoEggMoves3        ; GROVYLE
+	dw NoEggMoves3        ; SCEPTILE
+	dw TorchicEggMoves    ; TORCHIC
+	dw NoEggMoves3        ; COMBUSKEN
+	dw NoEggMoves3        ; BLAZIKEN
+	dw MudkipEggMoves     ; MUDKIP
+	dw NoEggMoves3        ; MARSHTOMP
+	dw NoEggMoves3        ; SWAMPERT
+	dw PoochyenaEggMoves  ; POOCHYENA
+	dw NoEggMoves3        ; MIGHTYENA
+	dw ZigzagoonEggMoves  ; ZIGZAGOON
+	dw ZigzagoonGEggMoves ; ZIGZAGOON_G
+	dw NoEggMoves3        ; LINOONE
+	dw NoEggMoves3        ; LINOONE_G
+	dw LotadEggMoves      ; LOTAD
+	dw NoEggMoves3        ; LOMBRE
+	dw NoEggMoves3        ; LUDICOLO
+	dw SeedotEggMoves     ; SEEDOT
+	dw NoEggMoves3        ; NUZLEAF
+	dw NoEggMoves3        ; SHIFTRY
+	dw TaillowEggMoves    ; TAILLOW
+	dw NoEggMoves3        ; SWELLOW
+	dw WingullEggMoves    ; WINGULL
+	dw NoEggMoves3        ; PELIPPER
+	dw RaltsEggMoves      ; RALTS
+	dw NoEggMoves3        ; KIRLIA
+	dw NoEggMoves3        ; GARDEVOIR
+	dw SurskitEggMoves    ; SURSKIT
+	dw NoEggMoves3        ; MASQUERAIN
+	dw ShroomishEggMoves  ; SHROOMISH
+	dw NoEggMoves3        ; BRELOOM
+	dw WhismurEggMoves    ; WHISMUR
+	dw NoEggMoves3        ; LOUDRED
+	dw NoEggMoves3        ; EXPLOUD
+	dw MakuhitaEggMoves   ; MAKUHITA
+	dw NoEggMoves3        ; HARIYAMA
+	dw AzurillEggMoves    ; AZURILL
+	dw NosepassEggMoves   ; NOSEPASS
+	dw SkittyEggMoves     ; SKITTY
+	dw NoEggMoves3        ; DELCATTY
+	dw SableyeEggMoves    ; SABLEYE
+	dw MawileEggMoves     ; MAWILE
+	dw AronEggMoves       ; ARON
+	dw NoEggMoves3        ; LAIRON
+	dw NoEggMoves3        ; AGGRON
+	dw MedititeEggMoves   ; MEDITITE
+	dw NoEggMoves3        ; MEDICHAM
+	dw ElectrikeEggMoves  ; ELECTRIKE
+	dw NoEggMoves3        ; MANECTRIC
+	dw PlusleEggMoves     ; PLUSLE
+	dw MinunEggMoves      ; MINUN
+	dw NoEggMoves3        ; ROSELIA
+	dw GulpinEggMoves     ; GULPIN
+	dw NoEggMoves3        ; SWALOT
+	dw CarvanhaEggMoves   ; CARVANHA
+	dw NoEggMoves3        ; SHARPEDO
+	dw WailmerEggMoves    ; WAILMER
+	dw NoEggMoves3        ; WAILORD
+	dw NumelEggMoves      ; NUMEL
+	dw NoEggMoves3        ; CAMERUPT
+	dw TorkoalEggMoves    ; TORKOAL
+	dw SpoinkEggMoves     ; SPOINK
+	dw NoEggMoves3        ; GRUMPIG
+	dw TrapinchEggMoves   ; TRAPINCH
+	dw NoEggMoves3        ; VIBRAVA
+	dw NoEggMoves3        ; FLYGON
+	dw CacneaEggMoves     ; CACNEA
+	dw NoEggMoves3        ; CACTURNE
+	dw SwabluEggMoves     ; SWABLU
+	dw NoEggMoves3        ; ALTARIA
+	dw ZangooseEggMoves   ; ZANGOOSE
+	dw SeviperEggMoves    ; SEVIPER
+	dw NoEggMoves3        ; LUNATONE
+	dw NoEggMoves3        ; SOLROCK
+	dw BarboachEggMoves   ; BARBOACH
+	dw NoEggMoves3        ; WHISCASH
+	dw CorphishEggMoves   ; CORPHISH
+	dw NoEggMoves3        ; CRAWDAUNT
+	dw NoEggMoves3        ; BALTOY
+	dw NoEggMoves3        ; CLAYDOL
+	dw LileepEggMoves     ; LILEEP
+	dw NoEggMoves3        ; CRADILY
+	dw AnorithEggMoves    ; ANORITH
+	dw NoEggMoves3        ; ARMALDO
+	dw FeebasEggMoves     ; FEEBAS
+	dw NoEggMoves3        ; MILOTIC
+	dw ShuppetEggMoves    ; SHUPPET
+	dw NoEggMoves3        ; BANETTE
+	dw DuskullEggMoves    ; DUSKULL
+	dw NoEggMoves3        ; DUSCLOPS
+	dw TropiusEggMoves    ; TROPIUS
+	dw NoEggMoves3        ; CHIMECHO
+	dw AbsolEggMoves      ; ABSOL
+	dw NoEggMoves3        ; WYNAUT
+	dw SnoruntEggMoves    ; SNORUNT
+	dw NoEggMoves3        ; GLALIE
+	dw SphealEggMoves     ; SPHEAL
+	dw NoEggMoves3        ; SEALEO
+	dw NoEggMoves3        ; WALREIN
+	dw ClamperlEggMoves   ; CLAMPERL
+	dw NoEggMoves3        ; HUNTAIL
+	dw NoEggMoves3        ; GOREBYSS
+	dw RelicanthEggMoves  ; RELICANTH
+	dw LuvdiscEggMoves    ; LUVDISC
+	dw BagonEggMoves      ; BAGON
+	dw NoEggMoves3        ; SHELGON
+	dw NoEggMoves3        ; SALAMENCE
+	dw NoEggMoves3        ; BELDUM
+	dw NoEggMoves3        ; METANG
+	dw NoEggMoves3        ; METAGROSS
+	dw NoEggMoves3        ; REGIROCK
+	dw NoEggMoves3        ; REGICE
+	dw NoEggMoves3        ; REGISTEEL
+	dw NoEggMoves3        ; LATIAS
+	dw NoEggMoves3        ; LATIOS
+	dw NoEggMoves3        ; KYOGRE
+	dw NoEggMoves3        ; GROUDON
+	dw NoEggMoves3        ; RAYQUAZA
+	dw NoEggMoves3        ; JIRACHI
+	dw NoEggMoves3        ; DEOXYS
 
 TreeckoEggMoves:
 	dw ABSORB
@@ -179,6 +183,15 @@ PoochyenaEggMoves:
 	dw THUNDER_FANG
 	dw YAWN
 	dw GUILE_FANG
+	dw -1 ; end
+
+ZigzagoonEggMoves:
+	dw EXTREMESPEED
+	dw TICKLE
+	dw CHARM
+	dw MUD_SLAP
+	dw PURSUIT
+	dw TRICK
 	dw -1 ; end
 
 ZigzagoonGEggMoves:
@@ -415,6 +428,17 @@ ElectrikeEggMoves:
 	dw SHOCK_WAVE
 	dw SWIFT
 	dw THUNDER_FANG
+	dw -1 ; end
+
+PlusleEggMoves:
+MinunEggMoves:
+	dw FAKE_TEARS
+	dw SING
+	dw SWEET_KISS
+	dw TEARFUL_LOOK
+	dw WISH
+	dw VOLT_SWITCH
+	dw SHOCK_WAVE
 	dw -1 ; end
 
 GulpinEggMoves:

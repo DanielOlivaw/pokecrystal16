@@ -51,8 +51,12 @@ EggMovePointers6::
 	dw GoomyEggMoves
 	dw NoEggMoves6
 	dw NoEggMoves6
+	dw NoEggMoves6
+	dw NoEggMoves6
 	dw KlefkiEggMoves
 	dw PhantumpEggMoves
+	dw NoEggMoves6
+	dw PumpkabooEggMoves
 	dw NoEggMoves6
 	dw BergmiteEggMoves
 	dw NoEggMoves6
@@ -243,6 +247,16 @@ PhantumpEggMoves:
 	dw SEED_BOMB
 	dw DISABLE
 	dw SUCKER_PUNCH
+	dw POLTERGEIST
+	dw -1 ; end
+
+PumpkabooEggMoves:
+	dw CULTIVATE
+	dw DESTINY_BOND
+	dw DISABLE
+	dw MYSTICAL_FIRE
+	dw HEX
+	dw SYNTHESIS
 	dw POLTERGEIST
 	dw -1 ; end
 
