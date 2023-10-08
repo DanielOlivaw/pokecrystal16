@@ -79,7 +79,7 @@ CeruleanGymMistyScript:
 	setflag ENGINE_CASCADEBADGE
 	writetext MistyCascadeBadgeText
 	buttonsound
-	verbosegivetmhm TM_SCALD
+	verbosegivetmhm TM_WATER_PULSE
 	setevent EVENT_GOT_TM55_SCALD
 	writetext MistyTMScaldText
 	buttonsound
