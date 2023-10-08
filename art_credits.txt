@@ -3,7 +3,7 @@ Gen 3 menu icons: EeVeeEe1999, MegamanOmega, bloodless
 Gen 5-7 menu icons: EeVeeEe1999
 Rowlet menu icon: Emi Monserrate
 
-Team Rocket Executive overworld & battle sprites: SirWhibbles
+Team Rocket Executive overworld & battle sprites: JaceDeane
 Blaine, Blue, Bugsy, Chuck, Clair, Janine, Lt. Surge, Morty, & Whitney battle sprites: Solo993
 Karen & Pryce battle sprites: Bronzeswagger
 Twins battle sprite: MajinCubyan
@@ -40,7 +40,7 @@ Ekans                       Game Freak                        Game Freak
 Arbok                       Game Freak                        Game Freak
 Pikachu                     Game Freak                        Game Freak
 Raichu (Kantonian)          Game Freak                        Game Freak
-Raichu (Alolan)             Rangi                             Rangi
+Raichu (Alolan)             Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Sandshrew (Kantonian)       Game Freak                        Game Freak
 Sandshrew (Alolan)          Enderific                         SkidMarc25
 Sandslash (Kantonian)       Game Freak                        Game Freak
@@ -93,19 +93,19 @@ Victreebel                  Game Freak                        Game Freak
 Tentacool                   Game Freak                        Game Freak
 Tentacruel                  Game Freak                        Game Freak
 Geodude (Kantonian)         Game Freak                        Game Freak
-Geodude (Alolan)            Rangi                             Rangi
+Geodude (Alolan)            Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Graveler (Kantonian)        Game Freak                        Game Freak
-Graveler (Alolan)           Rangi                             Rangi
+Graveler (Alolan)           Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Golem (Kantonian)           Game Freak                        Game Freak
-Golem (Alolan)              Rangi                             Rangi
+Golem (Alolan)              Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Ponyta (Kantonian)          Game Freak                        Game Freak
-Ponyta (Galarian)           Rangi                             Rangi
+Ponyta (Galarian)           Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Rapidash (Kantonian)        Game Freak                        Game Freak
 Rapidash (Galarian)         jushiicore                        utytft
 Slowpoke (Kantonian)        Game Freak                        Game Freak
 Slowpoke (Galarian)         Enderific                         Game Freak
 Slowbro (Kantonian)         Game Freak                        Game Freak
-Slowbro (Galarian)          Enderific                         Rangi
+Slowbro (Galarian)          Enderific                         Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Magnemite                   Game Freak                        Game Freak
 Magneton                    Game Freak                        Game Freak
 Farfetch'd (Kantonian)      Game Freak                        Game Freak
@@ -129,7 +129,7 @@ Exeggutor (Kantonian)       Game Freak                        Game Freak
 Exeggutor (Alolan)          SkidMarc25                        Pia Carrot
 Cubone                      Game Freak                        Game Freak
 Marowak (Kantonian)         Game Freak                        Game Freak
-Marowak (Alolan)            SkidMarc25                        *
+Marowak (Alolan)            SkidMarc25                        Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Lickitung                   Game Freak                        Game Freak
 Koffing                     Game Freak                        Game Freak
 Weezing (Kantonian)         Game Freak                        Game Freak
@@ -246,7 +246,7 @@ Espeon                      Game Freak                        Game Freak
 Umbreon                     Game Freak                        Game Freak
 Murkrow                     Game Freak                        Game Freak
 Slowking (Johtonian)        Game Freak                        Game Freak
-Slowking (Galarian)         Rangi                             Game Freak
+Slowking (Galarian)         Blue Emerald, solo993, Chamber, Lake, Neslug, Pikachu25, metalflygon08, JaceDeane, & flempa (Polished Crystal)
 Misdreavus                  Game Freak                        Game Freak
 Unown                       Game Freak                        Game Freak
 Wobbuffet                   Game Freak                        Game Freak
@@ -350,8 +350,8 @@ Meditite                    Blue Emerald                      bloodless
 Medicham                    Blue Emerald                      bloodless
 Electrike                   Blue Emerald                      bloodless
 Manectric                   Blue Emerald                      bloodless
-Plusle                      COMBOY                            COMBOY
-Minun                       COMBOY                            COMBOY
+Plusle                      COMBOY                            Game Freak
+Minun                       COMBOY                            Game Freak
 Roselia                     Blue Emerald                      bloodless
 Gulpin                      Blue Emerald                      COMBOY
 Swalot                      Blue Emerald                      bloodless
@@ -453,7 +453,7 @@ Pachirisu                   bloodless                         COMBOY
 Buizel                      bloodless                         bloodless
 Floatzel                    bloodless                         bloodless
 Cherubi                     bloodless                         bloodless
-Cherrim (Overcast)          bloodless                         *
+Cherrim (Overcast)          bloodless                         COMBOY
 Cherrim (Sunshine)          bloodless                         bloodless
 Shellos (West)              bloodless                         bloodless
 Shellos (East)              COMBOY                            bloodless, Linnie
@@ -634,7 +634,7 @@ Froakie                     WAH!                              Pia Carrot
 Frogadier                   Zorgoth120                        Chamber
 Greninja                    Solo993                           Chamber
 Fletchling                  WAH!                              MrDollSteak
-Fletchindr                  Zerudez                           al199288
+Fletchinder                 Zerudez                           al199288
 Talonflame                  Mr. Dollsteak, Hiraethe           MrDollSteak
 Scatterbug                  Hooded Bird                       MrDollSteak
 Spewpa                      Hooded Bird                       MrDollSteak
@@ -680,8 +680,8 @@ Goodra (Hisuian)            Wisgarus                          Wisgarus
 Klefki                      N-Kin                             MrDollSteak
 Phantump                    Dragonball253                     Bummer
 Trevenant                   Pokémon Grape                     Bummer
-Pumpkaboo                   Wobblebuns                        MrDollSteak
-Gourgeist                   PokeStitchPatterns                Fenne-King
+Pumpkaboo                   Wobblebuns                        Wobblebuns
+Gourgeist                   Ben Sheldon (PokeStitchPatterns)  Fenne-King
 Bergmite                    Dragonball253                     MrDollSteak
 Avalugg (Kalosian)          Bummer                            Captain Cohete
 Xerneas                     MyLittleKeldeo                    Pia Carrot
@@ -729,8 +729,8 @@ Palossand                   Bronzeswagger                     Z-nogyroP, Kevin R
 Pyukumuku                   SupahSanti                        princessofmusic
 Type: Null                  CopyRobot1                        *
 Silvally                    leParagon                         leParagon
-Minior (Meteor)             SupahSanti                        leParagon
-Minior (Core)               Pia Carrot                        leParagon
+Minior (Meteor)             SupahSanti                        PorousMist326, Pikafan2000, zerudez
+Minior (Core)               Pia Carrot                        PorousMist326, Pikafan2000, zerudez
 Komala                      SupahSanti                        leParagon
 Turtonator                  SupahSanti                        leParagon
 Togedemaru                  Pia Carrot                        Wisgarus
@@ -782,7 +782,7 @@ Centiskrch                  utytft                            utytft
 Clobbopus                   EzerArt                           Game Freak
 Grapploct                   King Panloco                      Game Freak
 Sinistea                    EeVeeEe1999                       Game Freak
-Polteagyst                  French Cyndaquil                  French Cyndaquil
+Polteageist                 French Cyndaquil                  French Cyndaquil
 Hatenna                     Cinnaboopa                        Game Freak
 Hattrem                     Cinnaboopa                        Game Freak
 Hatterene                   SkidMarc25                        leParagon
@@ -794,7 +794,7 @@ Mr. Rime                    Menyu                             utytft
 Runerigus                   EeVeeEe1999                       utytft
 Milcery                     Wisgarus                          leParagon
 Alcremie                    JaceDeane                         leParagon
-Falinks                     Menyu                             *
+Falinks                     Menyu                             DS-style Gen VII and Beyond PokÃ©mon Sprite Repository in 64x64
 Pincurchin                  JaceDeane                         utytft
 Snom                        Wisgarus                          Wisgarus
 Frosmoth                    Menyu                             utytft
@@ -812,11 +812,11 @@ Drakloak                    Enderific                         utytft
 Dragapult                   Menyu                             tlefonmann
 Regieleki                   Pokémon Daybreak/Aprogergely      leParagon
 Regidrago                   CyndArts                          leParagon
-Wyrdeer                     utytft                            utytft
+Wyrdeer                     utytft, LucasSevero               utytft
 Kleavor                     utytft                            utytft
 Ursaluna                    cure_pixel                        utytft
-Basculegon (Male)           LucasSevero                       utytft
-Basculegon (Female)         utytft                            utytft
+Basculegion (Male)          LucasSevero                       utytft
+Basculegion (Female)        utytft                            utytft
 Overqwil                    utytft                            utytft
 Fuecoco                     Tharkka                           KingOfThe-X-Roads
 Crocalor                    Egg3ggEgg                         KingOfThe-X-Roads
