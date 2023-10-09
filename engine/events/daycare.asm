@@ -617,7 +617,8 @@ DayCare_InitBreeding:
 .GotMother:
 	ld [wCurPartySpecies], a
 	callfar GetLowestEvolutionStage
-	ld a, EGG_LEVEL
+	; ld a, EGG_LEVEL
+	ld a, $1
 	ld [wCurPartyLevel], a
 	call Daycare_CheckAlternateOffspring
 	ld [wCurPartySpecies], a
@@ -777,4 +778,15 @@ Daycare_CheckAlternateOffspring:
 
 .alternate_offspring_table
 	dw NIDORAN_F, NIDORAN_M
+	dw NIDORINA,  NIDORAN_M
+	dw NIDOQUEEN, NIDORAN_M
+	dw NIDORAN_M, NIDORAN_F
+	dw NIDORINO,  NIDORAN_F
+	dw NIDOKING,  NIDORAN_F
+	dw WORMADAM_PLANT, BURMY_TRASH
+	dw WORMADAM_SANDY, BURMY_PLANT
+	dw WORMADAM_TRASH, BURMY_SANDY
+	dw MOTHIM, BURMY_TRASH
+	dw MINIOR_CORE, MINIOR_METEOR
+	dw MINIOR_METEOR, MINIOR_CORE
 	dw -1
