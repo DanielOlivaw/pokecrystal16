@@ -726,9 +726,9 @@ Togedemaru
 Mimikyu
 Drampa
 Dhelmise
-Jangmoo
-Hakamoo
-Kommoo
+JangmoO
+HakamoO
+KommoO
 Nihilego
 Buzzwole
 Pheromosa
