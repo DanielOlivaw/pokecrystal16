@@ -829,9 +829,7 @@ MonMenuIconPals:
 	icon_pals GRAY,   BROWN  ; HOUNDSTONE
 	icon_pals PINK,   GRAY   ; FLAMIGO
 	icon_pals GRAY,   GRAY   ; VELUZA
-	icon_pals RED,    BROWN  ; TATSUGIRI_CURLY
-	icon_pals PINK,   GRAY   ; TATSUGIRI_DROOPY
-	icon_pals GOLD,   RED    ; TATSUGIRI_STRETCHY
+	icon_pals RED,    BROWN  ; TATSUGIRI
 	icon_pals BROWN,  BLUE   ; CLODSIRE
 	icon_pals BROWN,  RED    ; FARIGIRAF
 	icon_pals GREEN,  RED    ; WO_CHIEN

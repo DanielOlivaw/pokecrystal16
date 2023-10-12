@@ -973,7 +973,7 @@ DachsbunPokedexEntry::           INCLUDE "data/pokemon/dex_entries/dachsbun.asm"
 TadbulbPokedexEntry::            INCLUDE "data/pokemon/dex_entries/tadbulb.asm"
 
 
-SECTION "Pokedex Entries 817-831", ROMX
+SECTION "Pokedex Entries 817-829", ROMX
 
 BelliboltPokedexEntry::          INCLUDE "data/pokemon/dex_entries/bellibolt.asm"
 WiglettPokedexEntry::            INCLUDE "data/pokemon/dex_entries/wiglett.asm"
@@ -985,8 +985,6 @@ HoundstonePokedexEntry::         INCLUDE "data/pokemon/dex_entries/houndstone.as
 FlamigoPokedexEntry::            INCLUDE "data/pokemon/dex_entries/flamigo.asm"
 VeluzaPokedexEntry::             INCLUDE "data/pokemon/dex_entries/veluza.asm"
 TatsugiriPokedexEntry::          INCLUDE "data/pokemon/dex_entries/tatsugiri.asm"
-; TatsugiriDroopyPokedexEntry::    INCLUDE "data/pokemon/dex_entries/tatsugiri.asm"
-; TatsugiriStretchyPokedexEntry::  INCLUDE "data/pokemon/dex_entries/tatsugiri.asm"
 ClodsirePokedexEntry::           INCLUDE "data/pokemon/dex_entries/clodsire.asm"
 FarigirafPokedexEntry::          INCLUDE "data/pokemon/dex_entries/farigiraf.asm"
 WoChienPokedexEntry::            INCLUDE "data/pokemon/dex_entries/wo_chien.asm"

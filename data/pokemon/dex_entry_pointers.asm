@@ -827,8 +827,6 @@ PokedexDataPointerTable:
 	dba FlamigoPokedexEntry
 	dba VeluzaPokedexEntry
 	dba TatsugiriPokedexEntry
-	dba TatsugiriPokedexEntry
-	dba TatsugiriPokedexEntry
 	dba ClodsirePokedexEntry
 	dba FarigirafPokedexEntry
 	dba WoChienPokedexEntry

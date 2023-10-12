@@ -823,9 +823,7 @@ greavard
 houndstone
 flamigo
 veluza
-tatsugiri_curly
-tatsugiri_droopy
-tatsugiri_stretchy
+tatsugiri
 clodsire
 farigiraf
 wo_chien

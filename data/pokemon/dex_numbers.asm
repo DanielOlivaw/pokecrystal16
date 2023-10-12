@@ -829,9 +829,7 @@ PokemonNumbers::
 	db "972@@" ; HOUNDSTONE
 	db "973@@" ; FLAMIGO
 	db "976@@" ; VELUZA
-	db "978@@" ; TATSUGIRI_CURLY
-	db "978@@" ; TATSUGIRI_DROOPY
-	db "978@@" ; TATSUGIRI_STRETCHY
+	db "978@@" ; TATSUGIRI
 	db "980@@" ; CLODSIRE
 	db "981@@" ; FARIGIRAF
 	db "1001@" ; WO_CHIEN

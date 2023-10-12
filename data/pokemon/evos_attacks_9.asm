@@ -58,8 +58,6 @@ EvosAttacksPointers9::
 	dw FlamigoEvosAttacks
 	dw VeluzaEvosAttacks
 	dw TatsugiriEvosAttacks
-	dw TatsugiriEvosAttacks
-	dw TatsugiriEvosAttacks
 	dw ClodsireEvosAttacks
 	dw FarigirafEvosAttacks
 	dw WoChienEvosAttacks

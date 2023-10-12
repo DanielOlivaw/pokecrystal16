@@ -1648,12 +1648,8 @@ flamigo
 flamigo
 veluza
 veluza
-tatsugiri_curly
-tatsugiri_curly
-tatsugiri_droopy
-tatsugiri_droopy
-tatsugiri_stretchy
-tatsugiri_stretchy
+tatsugiri
+tatsugiri
 clodsire
 clodsire
 farigiraf

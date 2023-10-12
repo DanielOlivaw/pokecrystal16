@@ -830,8 +830,6 @@ PokemonNames::
 	db "FLAMIGO@@@"
 	db "VELUZA@@@@"
 	db "TATSUGIRI@"
-	db "TATSUGIRI@"
-	db "TATSUGIRI@"
 	db "CLODSIRE@@"
 	db "FARIGIRAF@"
 	db "WO-CHIEN@@"
