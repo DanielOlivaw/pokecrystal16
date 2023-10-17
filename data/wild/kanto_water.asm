@@ -25,11 +25,11 @@ KantoWaterWildMons:
 	def_water_wildmons VERMILION_PORT ; TENTACOOL, MOLANCORA, SKRELP
 	db 2 percent ; encounter rate
 	dbw 35, TENTACRUEL
-	dbw 35, MOLANCORA
+	dbw 35, LUMINEON
 	dbw 40, TENTACRUEL
 	dbw 40, SKRELP
-	dbw 40, ANCHORRAGE
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
+	dbw 40, LUMINEON
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_4 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
@@ -55,8 +55,8 @@ KantoWaterWildMons:
 	def_water_wildmons ROUTE_9 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
-	dbw 35, LOMBRE
-	dbw 40, SEAKING
+	dbw 35, MARILL_B
+	dbw 40, MARUMARILL
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
@@ -65,8 +65,8 @@ KantoWaterWildMons:
 	def_water_wildmons ROUTE_10_NORTH ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 40, FLOATZEL
-	dbw 35, LOMBRE
-	dbw 40, SEAKING
+	dbw 35, MARILL_B
+	dbw 40, MARUMARILL
 	dbw 35, BASCULIN
 	dbw 40, SEAKING
 	dbw 40, SEAKING
@@ -96,7 +96,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
@@ -106,7 +106,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
@@ -116,7 +116,7 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
@@ -129,7 +129,7 @@ KantoWaterWildMons:
 	dbw 40, BARASKEWDA
 	dbw 35, BASCULIN
 	dbw 35, ARAQUANID
-	dbw 40, ARAQUANID
+	dbw 40, STUNFISK
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_24 ; GOLDEEN, LOTAD, BUIZEL, BASCULIN
@@ -152,21 +152,21 @@ KantoWaterWildMons:
 	dbw 40, SEAKING
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_26 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons ROUTE_26 ; TENTACOOL, FINNEON, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 20, WAILMER
 	dbw 20, SKRELP
 	dbw 20, SKRELP
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_27 ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons ROUTE_27 ; TENTACOOL, FINNEON, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 20, WAILMER
 	dbw 20, SKRELP
 	dbw 20, SKRELP
@@ -179,14 +179,14 @@ KantoWaterWildMons:
 	dbw 50, SHARPEDO
 	dbw 45, BASCULIN
 	dbw 45, ARAQUANID
-	dbw 50, ARAQUANID
+	dbw 50, STUNFISK
 	end_water_wildmons
 
-	def_water_wildmons PALLET_TOWN ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons PALLET_TOWN ; TENTACOOL, LUMINEON, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
 	dbw 35, SKRELP
 	dbw 35, WAILMER
 	dbw 35, WAILMER
@@ -212,14 +212,14 @@ KantoWaterWildMons:
 	dbw 40, SEAKING
 	end_water_wildmons
 
-	def_water_wildmons VERMILION_CITY ; TENTACOOL, MOLANCORA, WINGULL
+	def_water_wildmons VERMILION_CITY ; TENTACOOL, LUMINEON, WINGULL
 	db 6 percent ; encounter rate
-	dbw 35, MOLANCORA
+	dbw 35, LUMINEON
 	dbw 35, PELIPPER
 	dbw 35, TENTACRUEL
 	dbw 40, TENTACRUEL
-	dbw 40, ANCHORRAGE
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
+	dbw 40, LUMINEON
 	end_water_wildmons
 
 	def_water_wildmons CELADON_CITY ; GRIMER
@@ -242,11 +242,11 @@ KantoWaterWildMons:
 	dbw 40, MAGIKARP
 	end_water_wildmons
 
-	def_water_wildmons CINNABAR_ISLAND ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SPHEAL
+	def_water_wildmons CINNABAR_ISLAND ; TENTACOOL, LUMINEON, WINGULL, WAILMER, SPHEAL
 	db 6 percent ; encounter rate
 	dbw 40, TENTACRUEL
 	dbw 40, PELIPPER
-	dbw 40, ANCHORRAGE
+	dbw 40, LUMINEON
 	dbw 35, SEALEO
 	dbw 35, WAILMER
 	dbw 35, WAILMER

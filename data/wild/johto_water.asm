@@ -2,14 +2,14 @@
 
 JohtoWaterWildMons:
 
-	def_water_wildmons RUINS_OF_ALPH_OUTSIDE ; WOOPER, LOTAD, BASCULIN, STUNFISK
+	def_water_wildmons RUINS_OF_ALPH_OUTSIDE ; WOOPER, LOTAD, BASCULIN, SIGILYPH
 	db 2 percent ; encounter rate
 	dbw 15, WOOPER
 	dbw 15, LOTAD
 	dbw 15, BASCULIN
 	dbw 20, LOMBRE
-	dbw 20, QUAGSIRE
-	dbw 20, STUNFISK
+	dbw 20, SIGILYPH
+	dbw 20, SIGILYPH
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_1F ; WOOPER, BASCULIN, CHEWTLE
@@ -44,7 +44,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons SLOWPOKE_WELL_B1F ; SLOWPOKE
 	db 2 percent ; encounter rate
-	dbw 15, SLOWPOKE
+	dbw 15, ZUBAT
 	dbw 15, SLOWPOKE
 	dbw 20, SLOWPOKE
 	dbw 15, SLOWPOKE
@@ -54,12 +54,12 @@ JohtoWaterWildMons:
 
 	def_water_wildmons SLOWPOKE_WELL_B2F ; SLOWPOKE
 	db 2 percent ; encounter rate
-	dbw 15, SLOWPOKE
-	dbw 15, SLOWPOKE
-	dbw 20, SLOWPOKE
+	dbw 15, ZUBAT
 	dbw 15, SLOWPOKE
 	dbw 20, SLOWPOKE
-	dbw 20, SLOWKING
+	dbw 15, SLOWPOKE
+	dbw 20, SLOWPOKE
+	dbw 20, SLOWBRO
 	end_water_wildmons
 
 	def_water_wildmons ILEX_FOREST ; PSYDUCK, LOTAD, SURSKIT, ARROKUDA
@@ -172,14 +172,14 @@ JohtoWaterWildMons:
 	dbw 25, DRATINI
 	end_water_wildmons
 
-	def_water_wildmons OLIVINE_PORT ; FRILLISH, FINNEON, SKRELP
+	def_water_wildmons OLIVINE_PORT ; FRILLISH, MOLANCORA, SKRELP
 	db 2 percent ; encounter rate
-	dbw 20, FRILLISH
-	dbw 15, FINNEON
+	dbw 15, MOLANCORA
 	dbw 15, FRILLISH
+	dbw 20, FRILLISH
 	dbw 20, SKRELP
-	dbw 20, FINNEON
-	dbw 20, FINNEON
+	dbw 20, MOLANCORA
+	dbw 20, MOLANCORA
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_30 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, ARROKUDA
@@ -202,24 +202,24 @@ JohtoWaterWildMons:
 	dbw 15, DEWPIDER
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_32 ; TENTACOOL, WOOPER, MOLANCORA, WINGULL
+	def_water_wildmons ROUTE_32 ; TENTACOOL, WOOPER, FINNEON, WINGULL
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 15, WOOPER
 	dbw 20, QUAGSIRE
 	dbw 20, QUAGSIRE
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_34 ; FRILLISH, WINGULL, FINNEON
+	def_water_wildmons ROUTE_34 ; FRILLISH, WINGULL, MOLANCORA
 	db 6 percent ; encounter rate
-	dbw 15, FINNEON
+	dbw 15, MOLANCORA
 	dbw 15, WINGULL
 	dbw 15, FRILLISH
 	dbw 20, FRILLISH
-	dbw 20, WINGULL
-	dbw 20, WINGULL
+	dbw 20, MOLANCORA
+	dbw 20, MOLANCORA
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_35 ; PSYDUCK, LOTAD, SURSKIT, BASCULIN, ARROKUDA
@@ -232,21 +232,21 @@ JohtoWaterWildMons:
 	dbw 15, SURSKIT
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_40 ; FRILLISH, WINGULL, FINNEON, PYUKUMUKU
+	def_water_wildmons ROUTE_40 ; FRILLISH, WINGULL, MOLANCORA, PYUKUMUKU
 	db 6 percent ; encounter rate
-	dbw 20, FINNEON
+	dbw 20, MOLANCORA
 	dbw 15, WINGULL
 	dbw 15, FRILLISH
-	dbw 20, FRILLISH
-	dbw 20, WINGULL
+	dbw 20, 
+	dbw 20, 
 	dbw 20, PYUKUMUKU
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_41 ; FRILLISH, MANTYKE, WINGULL, WAILMER, FINNEON, SKRELP
+	def_water_wildmons ROUTE_41 ; FRILLISH, MANTYKE, WINGULL, WAILMER, MOLANCORA, SKRELP
 	db 6 percent ; encounter rate
 	dbw 20, FRILLISH
 	dbw 20, WINGULL
-	dbw 20, FINNEON
+	dbw 20, MOLANCORA
 	dbw 20, MANTYKE
 	dbw 20, WAILMER
 	dbw 20, SKRELP
@@ -289,22 +289,22 @@ JohtoWaterWildMons:
 	dbw 25, MAGIKARP
 	dbw 30, MAGIKARP
 	dbw 25, MAGIKARP
-	dbw 20, FEEBAS
+	dbw 20, MAGIKARP
 	end_water_wildmons
 
-	def_water_wildmons NEW_BARK_TOWN ; TENTACOOL, MOLANCORA, WINGULL, WAILMER, SKRELP
+	def_water_wildmons NEW_BARK_TOWN ; TENTACOOL, FINNEON, WINGULL, WAILMER, SKRELP
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 15, WINGULL
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 20, WAILMER
 	dbw 20, SKRELP
 	dbw 20, SKRELP
 	end_water_wildmons
 
-	def_water_wildmons CHERRYGROVE_CITY ; TENTACOOL, MOLANCORA, WINGULL, PYUKUMUKU
+	def_water_wildmons CHERRYGROVE_CITY ; TENTACOOL, FINNEON, WINGULL, PYUKUMUKU
 	db 6 percent ; encounter rate
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 15, WINGULL
 	dbw 15, TENTACOOL
 	dbw 20, TENTACOOL
@@ -322,9 +322,9 @@ JohtoWaterWildMons:
 	dbw 15, DEWPIDER
 	end_water_wildmons
 
-	def_water_wildmons CIANWOOD_CITY ; FRILLISH, WINGULL, FINNEON, PYUKUMUKU
+	def_water_wildmons CIANWOOD_CITY ; FRILLISH, WINGULL, MOLANCORA, PYUKUMUKU
 	db 6 percent ; encounter rate
-	dbw 20, FINNEON
+	dbw 20, MOLANCORA
 	dbw 15, WINGULL
 	dbw 15, FRILLISH
 	dbw 20, FRILLISH
@@ -332,9 +332,9 @@ JohtoWaterWildMons:
 	dbw 20, PYUKUMUKU
 	end_water_wildmons
 
-	def_water_wildmons OLIVINE_CITY ; FRILLISH, WINGULL, FINNEON, PYUKUMUKU
+	def_water_wildmons OLIVINE_CITY ; FRILLISH, WINGULL, MOLANCORA, PYUKUMUKU
 	db 6 percent ; encounter rate
-	dbw 20, FINNEON
+	dbw 20, MOLANCORA
 	dbw 15, WINGULL
 	dbw 15, FRILLISH
 	dbw 20, FRILLISH
@@ -359,7 +359,7 @@ JohtoWaterWildMons:
 	dbw 15, MAGIKARP
 	dbw 15, MAGIKARP
 	dbw 20, GYARADOS
-	dbw 20, GYARADOS
+	dbw 25, GYARADOS
 	end_water_wildmons
 
 	def_water_wildmons BLACKTHORN_CITY ; MAGIKARP, LOTAD, DEWPIDER
@@ -379,7 +379,7 @@ JohtoWaterWildMons:
 	dbw 50, SHARPEDO
 	dbw 45, BASCULIN
 	dbw 45, ARAQUANID
-	dbw 50, ARAQUANID
+	dbw 50, STUNFISK
 	end_water_wildmons
 
 	db -1 ; end
