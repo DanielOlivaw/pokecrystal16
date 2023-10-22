@@ -1542,6 +1542,30 @@ SlowkingEvosAttacks:
 	dbw 1, SLACK_OFF
 	dbw 1, TACKLE
 	dbw 1, CURSE
+	dbw 1, HIDDEN_POWER
+	dbw 5, GROWL
+	dbw 10, WATER_GUN
+	dbw 14, YAWN
+	dbw 19, CONFUSION
+	dbw 23, DISABLE
+	dbw 28, WATER_PULSE
+	dbw 32, HEADBUTT
+	dbw 37, ZEN_HEADBUTT
+	dbw 41, SWAGGER
+	dbw 46, NASTY_PLOT
+	dbw 50, PSYCHIC_M
+	dbw 55, PSYCH_UP
+	dbw 60, TRUMP_CARD
+	db 0 ; no more level-up moves
+
+SlowkingGEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POWER_GEM
+	dbw 1, RAIN_DANCE
+	dbw 1, AMNESIA
+	dbw 1, SLACK_OFF
+	dbw 1, TACKLE
+	dbw 1, CURSE
 	dbw 1, EERIE_SPELL
 	dbw 5, GROWL
 	dbw 10, ACID
@@ -1555,7 +1579,7 @@ SlowkingEvosAttacks:
 	dbw 46, NASTY_PLOT
 	dbw 50, PSYCHIC_M
 	dbw 55, PSYCH_UP
-	dbw 60, TRUMP_CARD
+	dbw 60, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
