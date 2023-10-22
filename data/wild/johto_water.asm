@@ -6,7 +6,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, WOOPER
 	dbw 15, LOTAD
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 20, LOMBRE
 	dbw 20, SIGILYPH
 	dbw 20, SIGILYPH
@@ -16,7 +16,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, WOOPER
 	dbw 15, CHEWTLE
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 15, WOOPER
 	dbw 20, QUAGSIRE
 	dbw 20, QUAGSIRE
@@ -26,7 +26,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, WOOPER
 	dbw 15, CHEWTLE
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 15, WOOPER
 	dbw 20, QUAGSIRE
 	dbw 20, QUAGSIRE
@@ -36,7 +36,7 @@ JohtoWaterWildMons:
 	db 4 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 20, MOLANCORA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 20, SKRELP
 	dbw 20, QUAGSIRE
 	dbw 20, QUAGSIRE
@@ -76,7 +76,7 @@ JohtoWaterWildMons:
 	db 4 percent ; encounter rate
 	dbw 15, GOLDEEN
 	dbw 15, MARILL
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 15, CHEWTLE
 	dbw 20, GOLDEEN
 	dbw 20, AZUMARILL
@@ -86,7 +86,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 25, GOLDEEN
 	dbw 25, MARILL
-	dbw 25, BASCULIN
+	dbw 25, BASCULIN_B
 	dbw 25, DREDNAW
 	dbw 30, GOLDEEN
 	dbw 30, AZUMARILL
@@ -96,7 +96,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, GOLDEEN
 	dbw 15, MARILL
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 15, CHEWTLE
 	dbw 20, GOLDEEN
 	dbw 20, AZUMARILL
@@ -136,7 +136,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 45, SEAKING
 	dbw 50, GOLDUCK
-	dbw 45, BASCULIN
+	dbw 45, BASCULIN_B
 	dbw 45, DREDNAW
 	dbw 50, DREDNAW
 	dbw 50, DREDNAW
@@ -187,7 +187,7 @@ JohtoWaterWildMons:
 	dbw 20, BUIZEL
 	dbw 15, LOTAD
 	dbw 20, ARROKUDA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 15, DEWPIDER
 	dbw 15, DEWPIDER
 	end_water_wildmons
@@ -197,7 +197,7 @@ JohtoWaterWildMons:
 	dbw 20, BUIZEL
 	dbw 15, LOTAD
 	dbw 20, ARROKUDA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 15, DEWPIDER
 	dbw 15, DEWPIDER
 	end_water_wildmons
@@ -227,7 +227,7 @@ JohtoWaterWildMons:
 	dbw 20, PSYDUCK
 	dbw 15, LOTAD
 	dbw 20, ARROKUDA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 15, SURSKIT
 	dbw 15, SURSKIT
 	end_water_wildmons
@@ -257,7 +257,7 @@ JohtoWaterWildMons:
 	dbw 20, GOLDEEN
 	dbw 15, LOTAD
 	dbw 20, CARVANHA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_B
 	dbw 15, GOLDEEN
 	dbw 20, STUNFISK
 	end_water_wildmons
@@ -277,7 +277,7 @@ JohtoWaterWildMons:
 	dbw 25, BUIZEL
 	dbw 20, LOMBRE
 	dbw 25, CARVANHA
-	dbw 20, BASCULIN
+	dbw 20, BASCULIN_R
 	dbw 20, DEWPIDER
 	dbw 20, DEWPIDER
 	end_water_wildmons
@@ -317,7 +317,7 @@ JohtoWaterWildMons:
 	dbw 20, BUIZEL
 	dbw 15, LOTAD
 	dbw 20, ARROKUDA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 15, DEWPIDER
 	dbw 15, DEWPIDER
 	end_water_wildmons
@@ -347,7 +347,7 @@ JohtoWaterWildMons:
 	dbw 20, BUIZEL
 	dbw 15, LOTAD
 	dbw 20, ARROKUDA
-	dbw 15, BASCULIN
+	dbw 15, BASCULIN_R
 	dbw 15, DEWPIDER
 	dbw 15, DEWPIDER
 	end_water_wildmons
@@ -377,7 +377,7 @@ JohtoWaterWildMons:
 	dbw 50, FLOATZEL
 	dbw 45, LOMBRE
 	dbw 50, SHARPEDO
-	dbw 45, BASCULIN
+	dbw 45, BASCULIN_R
 	dbw 45, ARAQUANID
 	dbw 50, STUNFISK
 	end_water_wildmons

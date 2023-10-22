@@ -15,7 +15,7 @@ ENDM
 ; TENTACOOL, HORSEA, MOLANCORA, MANTYKE, MANTINE, WINGULL, WAILMER, SPHEAL, FINNEON, FRILLISH, SKRELP, BERGMITE, PYUKUMUKU
 
 ; Ocean fishing:
-; MAGIKARP, SHELLDER, KRABBY, HORSEA, STARYU, MOLANCORA, CHINCHOU, CORSOLA, WAILMER, CLAMPERL, RELICANTH, LUVDISC, FINNEON, SKRELP, MAREANIE, DHELMISE
+; MAGIKARP, SHELLDER, KRABBY, HORSEA, STARYU, MOLANCORA, CHINCHOU, CORSOLA, WAILMER, CLAMPERL, QWILFISH_H, LUVDISC, FINNEON, SKRELP, MAREANIE, DHELMISE
 
 FishGroups:
 ; entries correspond to FISHGROUP_* constants
@@ -82,10 +82,10 @@ FishGroups:
 	dbbw  25 percent,     20, MAGIKARP
 	dbbw  65 percent,     20, GOLDEEN
 	dbbw  90 percent + 1, 20, CHEWTLE
-	dbbw 100 percent,      4, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw 100 percent,      4, TIME_GROUP ; BASCULIN_B, BASCULIN_B
 .Lake_Super:
 	dbbw  40 percent,     40, SEAKING
-	dbbw  65 percent,      5, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw  65 percent,      5, TIME_GROUP ; BASCULIN_B, BASCULIN_B
 	dbbw  90 percent + 1, 40, DREDNAW
 	dbbw 100 percent,     40, BARBOACH
 
@@ -99,10 +99,10 @@ FishGroups:
 	dbbw  60 percent,     20, ARROKUDA
 	dbbw  80 percent,     20, CORPHISH
 	dbbw  90 percent + 1, 20, CARVANHA
-	dbbw 100 percent,      6, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw 100 percent,      6, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 .Pond_Super:
 	dbbw  40 percent,     40, BARASKEWDA
-	dbbw  65 percent,      7, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw  65 percent,      7, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 	dbbw  90 percent + 1, 40, CRAWDAUNT
 	dbbw 100 percent,     40, CARVANHA
 
@@ -177,7 +177,7 @@ FishGroups:
 	dbbw 100 percent,     16, TIME_GROUP ; FEEBAS, FEEBAS
 .Dratini_2_Good:
 	dbbw  20 percent,     20, MAGIKARP
-	dbbw  90 percent + 1, 10, MAGIKARP
+	dbbw  90 percent + 1, 20, MAGIKARP
 	dbbw 100 percent,     16, TIME_GROUP ; FEEBAS, FEEBAS
 .Dratini_2_Super:
 	dbbw  40 percent,     20, MAGIKARP
@@ -228,10 +228,10 @@ FishGroups:
 	dbbw  70 percent,     20, CORPHISH
 	dbbw  80 percent,     20, REMORAID
 	dbbw  90 percent + 1, 20, CARVANHA
-	dbbw 100 percent,      6, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw 100 percent,      6, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 .Remoraid_Super:
 	dbbw  50 percent,     40, CRAWDAUNT
-	dbbw  75 percent,      7, TIME_GROUP ; BASCULIN, BASCULIN
+	dbbw  75 percent,      7, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 	dbbw  90 percent + 1, 40, REMORAID
 	dbbw 100 percent,     40, CARVANHA
 
@@ -241,10 +241,10 @@ TimeFishGroups:
 	dbwbw 40, CORSOLA,    40, STARYU     ;  1 Shore, Super Rod
 	dbwbw 20, SHELLDER,   20, SHELLDER   ;  2 Ocean, Good Rod
 	dbwbw 40, SHELLDER,   40, SHELLDER   ;  3 Ocean, Super Rod
-	dbwbw 20, BASCULIN,   20, BASCULIN   ;  4 Lake, Good Rod
-	dbwbw 40, BASCULIN,   40, BASCULIN   ;  5 Lake, Super Rod
-	dbwbw 20, BASCULIN,   20, BASCULIN   ;  6 Pond, Good Rod
-	dbwbw 40, BASCULIN,   40, BASCULIN   ;  7 Pond, Super Rod
+	dbwbw 20, BASCULIN_B, 20, BASCULIN_B ;  4 Lake, Good Rod
+	dbwbw 40, BASCULIN_B, 40, BASCULIN_B ;  5 Lake, Super Rod
+	dbwbw 20, BASCULIN_R, 20, BASCULIN_R ;  6 Pond, Good Rod
+	dbwbw 40, BASCULIN_R, 40, BASCULIN_R ;  7 Pond, Super Rod
 	dbwbw 20, DRATINI,    20, DRATINI    ;  8 Dragon's Den, Good Rod
 	dbwbw 40, DRATINI,    40, DRATINI    ;  9 Dragon's Den, Super Rod
 	dbwbw 20, QWILFISH_H, 20, QWILFISH_H ; 10 Route 32 swarm, Good Rod
