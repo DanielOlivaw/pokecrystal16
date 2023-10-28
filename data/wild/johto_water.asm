@@ -237,8 +237,8 @@ JohtoWaterWildMons:
 	dbw 20, MOLANCORA
 	dbw 15, WINGULL
 	dbw 15, FRILLISH
-	dbw 20, 
-	dbw 20, 
+	dbw 20, MANTYKE
+	dbw 20, PYUKUMUKU
 	dbw 20, PYUKUMUKU
 	end_water_wildmons
 

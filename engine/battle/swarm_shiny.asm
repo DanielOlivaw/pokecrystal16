@@ -9,7 +9,7 @@ GenerateSwarmShiny:
 	cp DARK_CAVE
 	jr z, .dunsparce
 	cp ROUTE_32
-	jr z, .relicanth
+	jr z, .qwilfish_h
 	jr .skipshine
 
 .yanma
@@ -50,20 +50,20 @@ GenerateSwarmShiny:
 	jr nz, .skipshine
 	jr .rollshiny
 
-.relicanth
+.qwilfish_h
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld a, l
-	sub LOW(RELICANTH)
-	if HIGH(RELICANTH) == 0
+	sub LOW(QWILFISH_H)
+	if HIGH(QWILFISH_H) == 0
 		or h
 	else
 		jr nz, .skipshine
-		if HIGH(RELICANTH) == 1
+		if HIGH(QWILFISH_H) == 1
 			dec h
 		else
 			ld a, h
-			cp HIGH(RELICANTH)
+			cp HIGH(QWILFISH_H)
 		endc
 	endc
 	jr nz, .skipshine

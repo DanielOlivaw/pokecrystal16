@@ -653,7 +653,7 @@ KantoGrassWildMons:
 	dbw 36, NIDORINO
 	dbw 36, NIDORINA
 	dbw 38, SWANDAME
-	dbw 39, AROMATISSE
+	dbw 39, SPRITZEE
 	dbw 40, SWANDAME
 	dbw 38, CHANSEY
 	; day
@@ -661,7 +661,7 @@ KantoGrassWildMons:
 	dbw 36, NIDORINO
 	dbw 36, NIDORINA
 	dbw 38, SWANDAME
-	dbw 39, AROMATISSE
+	dbw 39, SPRITZEE
 	dbw 40, SWANDAME
 	dbw 38, CHANSEY
 	; nite

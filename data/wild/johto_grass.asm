@@ -1269,7 +1269,7 @@ JohtoGrassWildMons:
 	dbw 3, CATERPIE
 	dbw 3, WEEDLE
 	dbw 4, SHINX
-	dbw 3, LOTAD
+	dbw 3, BUDEW
 	dbw 4, LOTAD
 	dbw 4, BUDEW
 	; day
@@ -1464,7 +1464,7 @@ JohtoGrassWildMons:
 	dbw 16, GROWLITHE
 	dbw 13, LEDYBA
 	dbw 14, YUNGOOS
-	dbw 15, 
+	dbw 15, BELLSPROUT
 	dbw 15, PIDGEY
 	dbw 15, SINISTEA
 	dbw 15, AUDINO
@@ -1472,7 +1472,7 @@ JohtoGrassWildMons:
 	dbw 16, GROWLITHE
 	dbw 13, CUTIEFLY
 	dbw 14, YUNGOOS
-	dbw 15, 
+	dbw 15, BELLSPROUT
 	dbw 15, PIDGEY
 	dbw 15, SINISTEA
 	dbw 15, AUDINO
@@ -1577,24 +1577,24 @@ JohtoGrassWildMons:
 	dbw 16, GIRAFARIG
 	dbw 16, FARFETCH_D
 	dbw 15, PANCHAM
-	dbw 15, CARNIVINE
 	dbw 17, FLAMIGO
+	dbw 15, TROPIUS
 	dbw 17, ABSOL
 	; day
 	dbw 17, TYKER
 	dbw 16, GIRAFARIG
 	dbw 16, FARFETCH_D
 	dbw 15, PANCHAM
-	dbw 15, CARNIVINE
 	dbw 17, FLAMIGO
+	dbw 15, TROPIUS
 	dbw 17, ABSOL
 	; nite
 	dbw 16, VENONAT
 	dbw 16, GIRAFARIG
 	dbw 16, MURKROW
 	dbw 15, PANCHAM
-	dbw 15, CARNIVINE
 	dbw 17, VENONAT
+	dbw 15, ABSOL
 	dbw 17, ABSOL
 	end_grass_wildmons
 
