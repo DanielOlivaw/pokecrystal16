@@ -1,10 +1,10 @@
 	db "MOLE@" ; species name
-	dw 204, 730 ; height, weight
+	dw 204, 734 ; height, weight
 
-	db   "These DIGLETT"
-	next "triplets dig over"
-	next "60 miles below sea"
+	db   "Its three heads"
+	next "bob separately up"
+	next "and down to loosen"
 
-	page "level. No one"
-	next "knows what it's"
-	next "like underground.@"
+	page "the soil nearby,"
+	next "making it easier"
+	next "for it to burrow.@"
