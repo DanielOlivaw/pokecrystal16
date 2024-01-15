@@ -649,8 +649,8 @@ ReadyingMoveMessage:
 .do_it
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	cp EFFECT_BEAK_BLAST
-	jr z, .beak_blast
+	; cp EFFECT_BEAK_BLAST
+	; jr z, .beak_blast
 	cp EFFECT_SHELL_TRAP
 	jr z, .shell_trap
 	cp EFFECT_FOCUS_PUNCH
@@ -658,9 +658,9 @@ ReadyingMoveMessage:
 	ld hl, TighteningFocusText
 	jp StdBattleTextbox
 
-.beak_blast
-	ld hl, StartedHeatingUpBeakText
-	jp StdBattleTextbox
+; .beak_blast
+	; ld hl, StartedHeatingUpBeakText
+	; jp StdBattleTextbox
 
 .shell_trap
 	ld hl, SetAShellTrapText

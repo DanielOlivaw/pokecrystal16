@@ -23,15 +23,15 @@ EvolutionMovePointers6::
 	dw GogoatEvolutionMoves     ; GOGOAT
 	dw NoEvolutionMoves6        ; PANCHAM
 	dw PangoroEvolutionMoves    ; PANGORO
-	dw NoEvolutionMoves6        ; ESPURR
-	dw NoEvolutionMoves6        ; MEOWSTIC
-	dw NoEvolutionMoves6        ; HONEDGE
-	dw DoubladeEvolutionMoves   ; DOUBLADE
-	dw AegislashEvolutionMoves  ; AEGISLASH
+	; dw NoEvolutionMoves6        ; ESPURR
+	; dw NoEvolutionMoves6        ; MEOWSTIC
+	; dw NoEvolutionMoves6        ; HONEDGE
+	; dw DoubladeEvolutionMoves   ; DOUBLADE
+	; dw AegislashEvolutionMoves  ; AEGISLASH
 	dw NoEvolutionMoves6        ; SPRITZEE
 	dw NoEvolutionMoves6        ; AROMATISSE
-	dw NoEvolutionMoves6        ; SWIRLIX
-	dw NoEvolutionMoves6        ; SLURPUFF
+	; dw NoEvolutionMoves6        ; SWIRLIX
+	; dw NoEvolutionMoves6        ; SLURPUFF
 	dw NoEvolutionMoves6        ; INKAY
 	dw NoEvolutionMoves6        ; MALAMAR
 	dw NoEvolutionMoves6        ; BINACLE
@@ -53,18 +53,18 @@ EvolutionMovePointers6::
 	dw SliggooHEvolutionMoves   ; SLIGGOO_H
 	dw GoodraEvolutionMoves     ; GOODRA
 	dw GoodraHEvolutionMoves    ; GOODRA_H
-	dw NoEvolutionMoves6        ; KLEFKI
+	; dw NoEvolutionMoves6        ; KLEFKI
 	dw NoEvolutionMoves6        ; PHANTUMP
 	dw TrevenantEvolutionMoves  ; TREVENANT
 	dw NoEvolutionMoves6        ; PUMPKABOO
 	dw NoEvolutionMoves6        ; GOURGEIST
 	dw NoEvolutionMoves6        ; BERGMITE
 	dw AvaluggEvolutionMoves    ; AVALUGG
-	dw NoEvolutionMoves6        ; XERNEAS
-	dw NoEvolutionMoves6        ; YVELTAL
-	dw NoEvolutionMoves6        ; ZYGARDE
+	; dw NoEvolutionMoves6        ; XERNEAS
+	; dw NoEvolutionMoves6        ; YVELTAL
+	; dw NoEvolutionMoves6        ; ZYGARDE
 	dw NoEvolutionMoves6        ; DIANCIE
-	dw NoEvolutionMoves6        ; VOLCANION
+	; dw NoEvolutionMoves6        ; VOLCANION
 
 QuilladinEvolutionMoves:
 	dw NEEDLE_ARM
@@ -118,13 +118,13 @@ PangoroEvolutionMoves:
 	dw NIGHT_SLASH
 	db 0 ; no more evolution moves
 
-DoubladeEvolutionMoves:
-	dw DUAL_CHOP
-	db 0 ; no more evolution moves
+; DoubladeEvolutionMoves:
+	; dw DUAL_CHOP
+	; db 0 ; no more evolution moves
 
-AegislashEvolutionMoves:
-	dw KINGS_SHIELD
-	db 0 ; no more evolution moves
+; AegislashEvolutionMoves:
+	; dw KINGS_SHIELD
+	; db 0 ; no more evolution moves
 
 BarbaracleEvolutionMoves:
 	dw STONE_EDGE
@@ -151,7 +151,7 @@ SliggooEvolutionMoves:
 	db 0 ; no more evolution moves
 
 SliggooHEvolutionMoves:
-	dw SHELTER
+	dw IRON_DEFENSE
 	db 0 ; no more evolution moves
 
 GoodraEvolutionMoves:

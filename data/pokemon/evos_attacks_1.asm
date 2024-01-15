@@ -55,6 +55,8 @@ EvosAttacksPointers1::
 	dw ParasectEvosAttacks
 	dw VenonatEvosAttacks
 	dw VenomothEvosAttacks
+	dw DiglettEvosAttacks
+	dw DugtrioEvosAttacks
 	dw MeowthEvosAttacks
 	dw MeowthAEvosAttacks
 	dw MeowthGEvosAttacks
@@ -998,7 +1000,7 @@ NinetalesEvosAttacks:
 	dbw 1, MYSTICAL_FIRE
 	dbw 5, DISABLE
 	dbw 8, ROAR
-	dbw 12 QUICK_ATTACK
+	dbw 12, QUICK_ATTACK
 	dbw 15, BABY_DOLL_EYES
 	dbw 19, SPITE
 	dbw 22, INCINERATE
@@ -1275,6 +1277,48 @@ VenomothEvosAttacks:
 	dbw 48, PSYCHIC_M
 	dbw 53, BUG_BUZZ
 	dbw 58, QUIVER_DANCE
+	db 0 ; no more level-up moves
+
+DiglettEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 26, TR_ANYTIME, DUGTRIO
+	db 0 ; no more evolutions
+	dbw 1, SAND_ATTACK
+	dbw 1, SCRATCH
+	dbw 4, GROWL
+	dbw 7, ASTONISH
+	dbw 10, MUD_SLAP
+	dbw 14, MAGNITUDE
+	dbw 17, BULLDOZE
+	dbw 20, SUCKER_PUNCH
+	dbw 24, MUD_BOMB
+	dbw 27, SLASH
+	dbw 30, SANDSTORM
+	dbw 34, DIG
+	dbw 37, EARTH_POWER
+	dbw 40, EARTHQUAKE
+	dbw 44, FISSURE
+	db 0 ; no more level-up moves
+
+DugtrioEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, NIGHT_SLASH
+	dbw 1, TRI_ATTACK
+	dbw 1, SAND_ATTACK
+	dbw 1, SCRATCH
+	dbw 4, GROWL
+	dbw 7, ASTONISH
+	dbw 10, MUD_SLAP
+	dbw 14, MAGNITUDE
+	dbw 17, BULLDOZE
+	dbw 20, SUCKER_PUNCH
+	dbw 24, MUD_BOMB
+	dbw 25, SAND_TOMB
+	dbw 29, SLASH
+	dbw 34, SANDSTORM
+	dbw 40, DIG
+	dbw 45, EARTH_POWER
+	dbw 50, EARTHQUAKE
+	dbw 56, FISSURE
 	db 0 ; no more level-up moves
 
 MeowthEvosAttacks:
@@ -1999,8 +2043,8 @@ SlowpokeEvosAttacks:
 	db 0 ; no more level-up moves
 
 SlowpokeGEvosAttacks:
-	dbbw EVOLVE_ITEM, GALAR_CUFF, SLOWBRO_G
-	dbbw EVOLVE_ITEM, GALAR_WREATH, SLOWKING_G
+	dbbw EVOLVE_ITEM, GALARICA_CUFF, SLOWBRO_G
+	dbbw EVOLVE_ITEM, GALARICA_WREATH, SLOWKING_G
 	; dbww EVOLVE_PARTY, SHELLDER, SLOWBRO
 	db 0 ; no more evolutions
 	dbw 1, TACKLE

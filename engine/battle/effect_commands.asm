@@ -222,7 +222,7 @@ CheckPlayerTurn:
 	dw FLARE_BLITZ
 	dw BURN_UP
 	dw FLARE_UP
-	dw STEAM_ERUPTION
+	; dw STEAM_ERUPTION
 	dw SCORCHING_SANDS
 	dw SCALD
 	dw -1
@@ -391,7 +391,7 @@ CantMove:
 	dw BOUNCE
 	dw DIG
 	dw DIVE
-	dw SHADOW_FORCE
+	; dw SHADOW_FORCE
 	dw PHANTOM_FORCE
 	dw TIME_TRAVEL
 	dw -1
@@ -489,7 +489,7 @@ CheckEnemyTurn:
 	dw FLARE_BLITZ
 	dw BURN_UP
 	dw FLARE_UP
-	dw STEAM_ERUPTION
+	; dw STEAM_ERUPTION
 	dw SCORCHING_SANDS
 	dw SCALD
 	dw -1
@@ -1180,7 +1180,7 @@ BattleCommand_DoTurn:
 	db EFFECT_SKY_ATTACK
 	db EFFECT_SKULL_BASH
 	db EFFECT_METEOR_BEAM
-	db EFFECT_GEOMANCY
+	; db EFFECT_GEOMANCY
 	db EFFECT_SOLARBEAM
 	db EFFECT_FLY
 	db EFFECT_ROLLOUT
@@ -1188,7 +1188,7 @@ BattleCommand_DoTurn:
 	db EFFECT_RAMPAGE
 	db EFFECT_UPROAR
 	db EFFECT_BOUNCE
-	db EFFECT_SHADOW_FORCE
+	; db EFFECT_SHADOW_FORCE
 	db -1
 
 CheckMimicUsed:
@@ -2499,10 +2499,10 @@ BattleCommand_LowerSub:
 	jr z, .charge_turn
 	cp EFFECT_BOUNCE
 	jr z, .charge_turn
-	cp EFFECT_SHADOW_FORCE
-	jr z, .charge_turn
-	cp EFFECT_GEOMANCY
-	jr z, .charge_turn
+	; cp EFFECT_SHADOW_FORCE
+	; jr z, .charge_turn
+	; cp EFFECT_GEOMANCY
+	; jr z, .charge_turn
 	cp EFFECT_METEOR_BEAM
 	jr z, .charge_turn
 
@@ -2610,7 +2610,7 @@ BattleCommand_MoveAnimNoSub:
 	dw BOUNCE
 	dw DIG
 	dw DIVE
-	dw SHADOW_FORCE
+	; dw SHADOW_FORCE
 	dw PHANTOM_FORCE
 	dw TIME_TRAVEL
 	dw -1
@@ -2746,7 +2746,7 @@ BattleCommand_FailureText:
 	dw BOUNCE
 	dw DIG
 	dw DIVE
-	dw SHADOW_FORCE
+	; dw SHADOW_FORCE
 	dw PHANTOM_FORCE
 	dw TIME_TRAVEL
 	dw -1
@@ -5023,7 +5023,7 @@ BattleCommand_Overheat:
 	ret nz
 	ld b, $10 | SP_ATTACK
 	jr BattleCommand_SelfStatDownHit
-BattleCommand_ClangingScales:
+BattleCommand_DefenseDownScales:
 	ld a, [wAttackMissed]
 	and a
 	ret nz
@@ -6639,8 +6639,8 @@ BattleCommand_Charge:
 	jr z, .disappear
 	cp EFFECT_DIVE
 	jr z, .disappear
-	cp EFFECT_SHADOW_FORCE
-	jr z, .disappear
+	; cp EFFECT_SHADOW_FORCE
+	; jr z, .disappear
 	call BattleCommand_RaiseSub
 	jr .dont_disappear
 
@@ -6659,11 +6659,12 @@ BattleCommand_Charge:
 	cp EFFECT_DIG
 	jr z, .set_underground
 	cp EFFECT_DIVE
-	jr z, .set_diving
-	cp EFFECT_SHADOW_FORCE
+	; jr z, .set_diving
+	; cp EFFECT_SHADOW_FORCE
 	jr nz, .dont_set_vanished
-	set SUBSTATUS_VANISHED, [hl]
-	jr .dont_set_vanished
+	; set SUBSTATUS_VANISHED, [hl]
+	; jr .dont_set_vanished
+	jr .set_diving
 
 .set_flying
 	set SUBSTATUS_FLYING, [hl]
@@ -6829,10 +6830,10 @@ BattleCommand_Charge:
 	dw DIG,           .Dig
 	dw BOUNCE,        .Bounce
 	dw DIVE,          .Dive
-	dw SHADOW_FORCE,  .ShadowForce
+	; dw SHADOW_FORCE,  .ShadowForce
 	dw PHANTOM_FORCE, .PhantomForce
 	dw TIME_TRAVEL,   .TimeTravel
-	dw GEOMANCY,      .Geomancy
+	; dw GEOMANCY,      .Geomancy
 	dw METEOR_BEAM,   .MeteorBeam
 	dw -1
 
@@ -6882,10 +6883,10 @@ BattleCommand_Charge:
 	text_far TraveledIntoTheFutureText
 	text_end
 
-.Geomancy:
-; 'is absorbing power!'
-	text_far AbsorbingPowerText
-	text_end
+; .Geomancy:
+;; 'is absorbing power!'
+	; text_far AbsorbingPowerText
+	; text_end
 
 .MeteorBeam:
 ; 'is overflowing with space power!'
@@ -6968,7 +6969,7 @@ BattleCommand_TrapTarget:
 	dw SAND_TOMB,    SandTombTrapText  ; 'was trapped!'
 	dw NAIL_DOWN,    NailDownTrapText  ; 'was NAILED DOWN by'
 	dw INFESTATION,  InfestationTrapText
-	dw THUNDER_CAGE, TrappedText       ; 'trapped'
+	; dw THUNDER_CAGE, TrappedText       ; 'trapped'
 	dw JAW_CLAMP,    CaughtInJawsText  ; 'was caught in <USER>'s jaws!'
 
 BattleCommand_Recoil:
@@ -6992,8 +6993,8 @@ BattleCommand_Recoil:
 	jp z, .get_third_damage
 	cp EFFECT_STRUGGLE
 	jp z, .struggle
-	cp EFFECT_MIND_BLOWN
-	jp z, .mind_blown
+	; cp EFFECT_MIND_BLOWN
+	; jp z, .mind_blown
 
 ; EFFECT_RECOIL_HIT_QUARTER and EFFECT_UPROOT
 	ld a, BATTLE_VARS_MOVE_ANIM

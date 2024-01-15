@@ -2493,6 +2493,8 @@ ForceSwitchHit:
 	endmove
 
 TrapHit:
+EerieSpell:
+StoneAxe:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2923,14 +2925,14 @@ StatusTargetOpponent:
 	statustargetopponent
 	endmove
 
-Geomancy:
-	checkcharge
-	checkobedience
-	doturn
-	charge
-	usedmovetext
-	statustargetself
-	endmove
+; Geomancy:
+	; checkcharge
+	; checkobedience
+	; doturn
+	; charge
+	; usedmovetext
+	; statustargetself
+	; endmove
 
 DefenseUp2Hit:
 	checkobedience
@@ -2955,33 +2957,33 @@ DefenseUp2Hit:
 	kingsrock
 	endmove
 
-ClangingScales:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	clangingscales
-	checkfaint
-	buildopponentrage
-	kingsrock
-	endmove
+; ClangingScales:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; critical
+	; damagestats
+	; damagecalc
+	; stab
+	; damagevariation
+	; checkhit
+	; moveanim
+	; failuretext
+	; applydamage
+	; criticaltext
+	; supereffectivetext
+	; defensedownscales
+	; checkfaint
+	; buildopponentrage
+	; kingsrock
+	; endmove
 
-ShiftGear:
-	checkobedience
-	usedmovetext
-	doturn
-	shiftgear
-	endmove
+; ShiftGear:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; shiftgear
+	; endmove
 
 Punishment:
 	checkobedience
@@ -3025,40 +3027,40 @@ StoredPower:
 	kingsrock
 	endmove
 
-TarShot:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	speeddown
-	lowersub
-	statdownanim
-	raisesub
-	farcommand
-	statdownmessage
-	statdownfailtext
-	endmove
+; TarShot:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; checkhit
+	; speeddown
+	; lowersub
+	; statdownanim
+	; raisesub
+	; farcommand
+	; statdownmessage
+	; statdownfailtext
+	; endmove
 
-TrickRoomHit:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	farcommand
-	kingsrock
-	endmove
+; TrickRoomHit:
+	; checkobedience
+	; usedmovetext
+	; doturn
+	; critical
+	; damagestats
+	; damagecalc
+	; stab
+	; damagevariation
+	; checkhit
+	; moveanim
+	; failuretext
+	; applydamage
+	; criticaltext
+	; supereffectivetext
+	; checkfaint
+	; buildopponentrage
+	; farcommand
+	; kingsrock
+	; endmove
 
 VoltTackle:
 	checkobedience
@@ -3153,7 +3155,7 @@ ScaleShot:
 	endloop
 	speedup
 	statupmessage
-	clangingscales
+	defensedownscales
 	raisesub
 	kingsrock
 	endmove
@@ -3265,6 +3267,29 @@ GyroBall:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+BarbBarrage:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	conditionalboost
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	poisontarget
 	endmove
 
 ; Excavate:

@@ -147,7 +147,7 @@ MoveEffectsPointers:
 	dw Captivate              ; EFFECT_CAPTIVATE
 	dw MultiStatDown          ; EFFECT_ATK_SP_ATK_DOWN
 	dw SpecialAttackDown      ; EFFECT_CONFIDE
-	dw TarShot                ; EFFECT_TAR_SHOT
+	dw EerieSpell             ; EFFECT_EERIE_SPELL
 	dw FreezeHit              ; EFFECT_BLIZZARD
 	dw Counter                ; EFFECT_METAL_BURST
 	dw Flatter                ; EFFECT_FLATTER
@@ -160,8 +160,8 @@ MoveEffectsPointers:
 	dw BulkUp                 ; EFFECT_BULK_UP
 	dw WorkUp                 ; EFFECT_WORK_UP
 	dw Acupressure            ; EFFECT_ACUPRESSURE
-	dw Geomancy               ; EFFECT_GEOMANCY
-	dw ShiftGear              ; EFFECT_SHIFT_GEAR
+	dw BarbBarrage            ; EFFECT_BARB_BARRAGE
+	; dw ShiftGear              ; EFFECT_SHIFT_GEAR
 	dw StatUp3                ; EFFECT_DEFENSE_UP_3
 	dw StatUp3                ; EFFECT_SP_ATK_UP_3
 	dw CloseCombat            ; EFFECT_CLOSE_COMBAT
@@ -205,8 +205,8 @@ MoveEffectsPointers:
 	dw Fly                    ; EFFECT_SHADOW_FORCE
 	dw Whirlpool              ; EFFECT_WHIRLPOOL
 	dw Protect                ; EFFECT_SPIKY_SHIELD
-	dw Protect                ; EFFECT_KINGS_SHIELD
-	dw Protect                ; EFFECT_BANEFUL_BUNKER
+	dw MultiHit               ; EFFECT_TRIPLE_HIT
+	dw StoneAxe               ; EFFECT_STONE_AXE
 	dw Protect                ; EFFECT_OBSTRUCT
 	dw CraftyShield           ; EFFECT_CRAFTY_SHIELD
 	dw NormalHit              ; EFFECT_FIRST_IMPRESSION
@@ -228,17 +228,17 @@ MoveEffectsPointers:
 	dw StatusTargetOpponent   ; EFFECT_STATUS_OPP_ACC
 	dw DefenseUp2Hit          ; EFFECT_DEFENSE_UP_2_HIT
 	dw NormalHit              ; EFFECT_FOCUS_PUNCH
-	dw NormalHit              ; EFFECT_BEAK_BLAST
+	; dw NormalHit              ; EFFECT_BEAK_BLAST
 	dw NormalHit              ; EFFECT_SHELL_TRAP
 	dw ConditionalBoost       ; EFFECT_REVENGE
 	dw StatusTargetSelf       ; EFFECT_SHORE_UP
-	dw ClangingScales         ; EFFECT_CLANGING_SCALES
+	; dw ClangingScales         ; EFFECT_CLANGING_SCALES
 	dw RecoilHit              ; EFFECT_RECOIL_HIT_HALF
 	dw RecoilHit              ; EFFECT_RECOIL_HIT_THIRD
 	dw RecoilHit              ; EFFECT_MIND_BLOWN
 	dw Punishment             ; EFFECT_PUNISHMENT
 	dw StoredPower            ; EFFECT_STORED_POWER
-	dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT
+	; dw TrickRoomHit           ; EFFECT_TRICK_ROOM_HIT
 	dw VoltTackle             ; EFFECT_VOLT_TACKLE
 	dw MeteorBeam             ; EFFECT_METEOR_BEAM
 	dw Poltergeist            ; EFFECT_POLTERGEIST

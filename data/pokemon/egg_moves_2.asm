@@ -16,7 +16,7 @@ EggMovePointers2::
 	dw NoEggMoves2        ; PHANDARIN
 	dw WolfrostEggMoves   ; WOLFROST
 	dw NoEggMoves2        ; WARWOLF
-	dw GustelaEggMoves    ; GUSTELA
+	; dw GustelaEggMoves    ; GUSTELA
 	dw ChikoritaEggMoves  ; CHIKORITA
 	dw NoEggMoves2        ; BAYLEEF
 	dw NoEggMoves2        ; MEGANIUM

@@ -160,7 +160,7 @@ BattleCommandPointers:
 	dw BattleCommand_HammerArm
 	dw BattleCommand_DragonDance
 	dw BattleCommand_WorkUp
-	dw BattleCommand_BrightMoss
+	; dw BattleCommand_BrightMoss
 	dw BattleCommand_Uproar
 	dw BattleCommand_UproarState
 	dw BattleCommand_WeatherBall
@@ -168,8 +168,8 @@ BattleCommandPointers:
 	dw BattleCommand_StrengthSap
 	dw BattleCommand_SpitUp
 	dw BattleCommand_Awaken
-	dw BattleCommand_ClangingScales
-	dw BattleCommand_ShiftGear
+	dw BattleCommand_DefenseDownScales
+	; dw BattleCommand_ShiftGear
 	dw BattleCommand_Punishment
 	dw BattleCommand_StoredPower
 	dw BattleCommand_HeavySlam

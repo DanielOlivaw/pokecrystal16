@@ -36,10 +36,10 @@ EvosAttacksPointers::
 	indirect_entries CELEBI, EvosAttacksPointers2
 	indirect_entries DEOXYS, EvosAttacksPointers3
 	indirect_entries ARCEUS, EvosAttacksPointers4
-	indirect_entries VOLCARONA, EvosAttacksPointers5
-	indirect_entries VOLCANION, EvosAttacksPointers6
-	indirect_entries BLACEPHLON, EvosAttacksPointers7
-	indirect_entries TOXTRICITY_LOWKEY, EvosAttacksPointers8
+	indirect_entries DURANT, EvosAttacksPointers5
+	indirect_entries DIANCIE, EvosAttacksPointers6
+	indirect_entries DHELMISE, EvosAttacksPointers7
+	indirect_entries BARASKEWDA, EvosAttacksPointers8
 	indirect_entries NUM_POKEMON, EvosAttacksPointers9
 	indirect_table_end
 
@@ -51,5 +51,6 @@ INCLUDE "data/pokemon/evos_attacks_5.asm"
 INCLUDE "data/pokemon/evos_attacks_6.asm"
 INCLUDE "data/pokemon/evos_attacks_7.asm"
 INCLUDE "data/pokemon/evos_attacks_8.asm"
+INCLUDE "data/pokemon/evos_attacks_9.asm"
 
 INCLUDE "data/pokemon/evolution_moves.asm"

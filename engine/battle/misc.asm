@@ -60,10 +60,10 @@ SubstatusBoosts:
 	bit SUBSTATUS_ME_FIRST, [hl]
 	call nz, DoMeFirstBoost
 
-	ld a, BATTLE_VARS_SUBSTATUS7_OPP
-	call GetBattleVarAddr
-	bit SUBSTATUS_TAR_SHOT, [hl]
-	jr nz, DoTarShotBoost
+	; ld a, BATTLE_VARS_SUBSTATUS7_OPP
+	; call GetBattleVarAddr
+	; bit SUBSTATUS_TAR_SHOT, [hl]
+	; jr nz, DoTarShotBoost
 	ret
 
 DoChargeBoost:

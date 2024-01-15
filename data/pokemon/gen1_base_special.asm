@@ -21,11 +21,18 @@ KantoMonSpecials:
 	db  50 ; PIDGEOTTO
 	db  70 ; PIDGEOT
 	db  25 ; RATTATA
+	db  25 ; RATTATA_A
 	db  50 ; RATICATE
+	db  50 ; RATICATE_A
+	db  40 ; EKANS
+	db  65 ; ARBOK
 	db  50 ; PIKACHU
 	db  90 ; RAICHU
+	db  90 ; RAICHU_A
 	db  30 ; SANDSHREW
+	db  30 ; SANDSHREW_A
 	db  55 ; SANDSLASH
+	db  55 ; SANDSLASH_A
 	db  40 ; NIDORAN_F
 	db  55 ; NIDORINA
 	db  75 ; NIDOQUEEN
@@ -35,7 +42,9 @@ KantoMonSpecials:
 	db  60 ; CLEFAIRY
 	db  85 ; CLEFABLE
 	db  65 ; VULPIX
+	db  65 ; VULPIX_A
 	db 100 ; NINETALES
+	db 100 ; NINETALES_A
 	db  25 ; JIGGLYPUFF
 	db  50 ; WIGGLYTUFF
 	db  40 ; ZUBAT
@@ -47,13 +56,21 @@ KantoMonSpecials:
 	db  80 ; PARASECT
 	db  40 ; VENONAT
 	db  90 ; VENOMOTH
+	db  45 ; DIGLETT
+	db  70 ; DUGTRIO
 	db  40 ; MEOWTH
+	db  40 ; MEOWTH_A
+	db  40 ; MEOWTH_G
+	db  65 ; PERSIAN
+	db  65 ; PERSIAN_A
 	db  50 ; PSYDUCK
 	db  80 ; GOLDUCK
 	db  35 ; MANKEY
 	db  60 ; PRIMEAPE
 	db  50 ; GROWLITHE
+	db  50 ; GROWLITHE_H
 	db  80 ; ARCANINE
+	db  80 ; ARCANINE_H
 	db 105 ; ABRA
 	db 120 ; KADABRA
 	db 135 ; ALAKAZAM
@@ -66,15 +83,25 @@ KantoMonSpecials:
 	db 100 ; TENTACOOL
 	db 120 ; TENTACRUEL
 	db  30 ; GEODUDE
+	db  30 ; GEODUDE_A
 	db  45 ; GRAVELER
+	db  45 ; GRAVELER_A
 	db  55 ; GOLEM
+	db  55 ; GOLEM_A
 	db  65 ; PONYTA
+	db  65 ; PONYTA_G
 	db  80 ; RAPIDASH
+	db  80 ; RAPIDASH_G
 	db  40 ; SLOWPOKE
+	db  40 ; SLOWPOKE_G
 	db  80 ; SLOWBRO
+	db  80 ; SLOWBRO_G
 	db  95 ; MAGNEMITE
 	db 120 ; MAGNETON
 	db  58 ; FARFETCH_D
+	db  58 ; FARFETCH_D_G
+	db  35 ; DODUO
+	db  60 ; DODRIO
 	db  70 ; SEEL
 	db  95 ; DEWGONG
 	db  40 ; GRIMER
@@ -91,11 +118,16 @@ KantoMonSpecials:
 	db  50 ; KINGLER
 	db  60 ; EXEGGCUTE
 	db 125 ; EXEGGUTOR
+	db 125 ; EXEGGUTOR_A
 	db  40 ; CUBONE
 	db  50 ; MAROWAK
+	db  50 ; MAROWAK_A
 	db  60 ; LICKITUNG
 	db  60 ; KOFFING
 	db  85 ; WEEZING
+	db  85 ; WEEZING_G
+	db  30 ; RHYHORN
+	db  45 ; RHYDON
 	db 105 ; CHANSEY
 	db 100 ; TANGELA
 	db  40 ; KANGASKHAN
@@ -106,8 +138,10 @@ KantoMonSpecials:
 	db  70 ; STARYU
 	db 100 ; STARMIE
 	db 100 ; MR__MIME
+	db 100 ; MR__MIME_G
 	db  55 ; SCYTHER
 	db  85 ; ELECTABUZZ
+	db  85 ; MAGMAR
 	db  55 ; PINSIR
 	db  70 ; TAUROS
 	db  20 ; MAGIKARP
@@ -126,8 +160,11 @@ KantoMonSpecials:
 	db  60 ; AERODACTYL
 	db  65 ; SNORLAX
 	db 125 ; ARTICUNO
+	db 125 ; ARTICUNO_G
 	db 125 ; ZAPDOS
+	db 125 ; ZAPDOS_G
 	db 125 ; MOLTRES
+	db 125 ; MOLTRES_G
 	db  50 ; DRATINI
 	db  70 ; DRAGONAIR
 	db 100 ; DRAGONITE

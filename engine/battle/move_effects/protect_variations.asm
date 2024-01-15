@@ -8,8 +8,8 @@ CheckProtectionCategory:
 	farcall BattleCommand_SwitchTurn
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	cp EFFECT_KINGS_SHIELD
-	jr z, .no_status_protection
+	; cp EFFECT_KINGS_SHIELD
+	; jr z, .no_status_protection
 	cp EFFECT_OBSTRUCT
 	jr z, .no_status_protection
 	cp EFFECT_CRAFTY_SHIELD
@@ -23,8 +23,8 @@ CheckProtectionCategory:
 	call GetBattleVar
 	cp EFFECT_FEINT
 	ret z
-	cp EFFECT_SHADOW_FORCE
-	ret z
+	; cp EFFECT_SHADOW_FORCE
+	; ret z
 	cp EFFECT_TEARFUL_LOOK
 	ret z
 	cp EFFECT_PLAY_NICE
@@ -79,10 +79,10 @@ GetProtectVariationEffect:
 	call GetBattleVar
 	cp EFFECT_SPIKY_SHIELD
 	jr z, .spiky_shield
-	cp EFFECT_KINGS_SHIELD
-	jr z, .kings_shield
-	cp EFFECT_BANEFUL_BUNKER
-	jr z, .baneful_bunker
+	; cp EFFECT_KINGS_SHIELD
+	; jr z, .kings_shield
+	; cp EFFECT_BANEFUL_BUNKER
+	; jr z, .baneful_bunker
 	cp EFFECT_OBSTRUCT
 	jr z, .obstruct
 
@@ -98,18 +98,18 @@ GetProtectVariationEffect:
 	ld hl, HurtBySpikyShieldText
 	jp StdBattleTextbox
 
-.kings_shield
-; Lowers attacker's Attack by one.
-	farcall BattleCommand_AttackDown
-	farcall BattleCommand_StatDownMessage
-	farcall BattleCommand_SwitchTurn
-	ret
+; .kings_shield
+;; Lowers attacker's Attack by one.
+	; farcall BattleCommand_AttackDown
+	; farcall BattleCommand_StatDownMessage
+	; farcall BattleCommand_SwitchTurn
+	; ret
 
-.baneful_bunker
-; Poisons the attacker.
-	farcall BattleCommand_PoisonTarget
-	farcall BattleCommand_SwitchTurn
-	ret
+; .baneful_bunker
+;; Poisons the attacker.
+	; farcall BattleCommand_PoisonTarget
+	; farcall BattleCommand_SwitchTurn
+	; ret
 
 .obstruct
 ; Lowers attacker's Defense by two.
@@ -287,7 +287,7 @@ CheckUserMoveContact:
 	dw HEAD_SMASH
 	dw DOUBLE_HIT
 	dw CRUSH_GRIP
-	dw SHADOW_FORCE
+	; dw SHADOW_FORCE
 	dw STORM_THROW
 	dw HEAVY_SLAM
 	dw FLAME_CHARGE
@@ -322,9 +322,9 @@ CheckUserMoveContact:
 	; dw HOLD_BACK
 	dw INFESTATION
 	dw POWER_UP_PUNCH
-	dw DRAGON_ASCENT
+	; dw DRAGON_ASCENT
 	dw FIRST_IMPRESSION
-	dw DARKEST_LARIAT
+	; dw DARKEST_LARIAT
 	dw ICE_HAMMER
 	dw HIGH_HORSEPOWER
 	dw SOLAR_BLADE
@@ -343,14 +343,14 @@ CheckUserMoveContact:
 	dw LIQUIDATION
 	; dw SPECTRAL_THIEF
 	dw ZING_ZAP
-	dw MULTI_ATTACK
+	; dw MULTI_ATTACK
 	; dw PLASMA_FISTS
 	dw JAW_LOCK
-	dw BOLT_BEAK
-	dw FISHIOUS_REND
+	; dw BOLT_BEAK
+	; dw FISHIOUS_REND
 	dw BODY_PRESS
 	; dw SNAP_TRAP
-	dw BREAKING_SWIPE
+	; dw BREAKING_SWIPE
 	dw BRANCH_POKE
 	; dw STEEL_ROLLER
 	; dw GRASSY_GLIDE
@@ -374,5 +374,7 @@ CheckUserMoveContact:
 	dw MISTY_AMBUSH
 	dw GUILE_FANG
 	dw DROWSY_WRATH
-	dw SEAMITAR
+	dw TRIPLE_DIVE
+	dw STONE_AXE
+	dw WAVE_CRASH
 	dw -1

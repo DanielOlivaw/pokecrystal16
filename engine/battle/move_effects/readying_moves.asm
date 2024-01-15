@@ -5,8 +5,8 @@ HandleReadyingMoves:
 	push af
 	farcall BattleCommand_SwitchTurn
 	pop af
-	cp EFFECT_BEAK_BLAST
-	jr z, .beak_blast
+	; cp EFFECT_BEAK_BLAST
+	; jr z, .beak_blast
 	cp EFFECT_SHELL_TRAP
 	jr z, .shell_trap
 
@@ -23,15 +23,15 @@ HandleReadyingMoves:
 	ld [wEnemyTookDamage], a
 	ret
 
-.beak_blast
-; If the user made contact with a target readying Beak Blast, the user is burned.
-	call CheckUserMoveContact
-	jr nz, .set_took_damage
+; .beak_blast
+;; If the user made contact with a target readying Beak Blast, the user is burned.
+	; call CheckUserMoveContact
+	; jr nz, .set_took_damage
 
-	farcall BattleCommand_SwitchTurn
-	farcall BattleCommand_BurnTarget
-	farcall BattleCommand_SwitchTurn
-	jr .set_took_damage
+	; farcall BattleCommand_SwitchTurn
+	; farcall BattleCommand_BurnTarget
+	; farcall BattleCommand_SwitchTurn
+	; jr .set_took_damage
 
 .shell_trap
 ; The target's Shell Trap only activates if they are hit by a physical move.

@@ -10,8 +10,8 @@ EggMovePointers3::
 	dw MudkipEggMoves     ; MUDKIP
 	dw NoEggMoves3        ; MARSHTOMP
 	dw NoEggMoves3        ; SWAMPERT
-	dw PoochyenaEggMoves  ; POOCHYENA
-	dw NoEggMoves3        ; MIGHTYENA
+	; dw PoochyenaEggMoves  ; POOCHYENA
+	; dw NoEggMoves3        ; MIGHTYENA
 	dw ZigzagoonEggMoves  ; ZIGZAGOON
 	dw ZigzagoonGEggMoves ; ZIGZAGOON_G
 	dw NoEggMoves3        ; LINOONE
@@ -49,10 +49,10 @@ EggMovePointers3::
 	dw NoEggMoves3        ; AGGRON
 	dw MedititeEggMoves   ; MEDITITE
 	dw NoEggMoves3        ; MEDICHAM
-	dw ElectrikeEggMoves  ; ELECTRIKE
-	dw NoEggMoves3        ; MANECTRIC
-	dw PlusleEggMoves     ; PLUSLE
-	dw MinunEggMoves      ; MINUN
+	; dw ElectrikeEggMoves  ; ELECTRIKE
+	; dw NoEggMoves3        ; MANECTRIC
+	; dw PlusleEggMoves     ; PLUSLE
+	; dw MinunEggMoves      ; MINUN
 	dw NoEggMoves3        ; ROSELIA
 	dw GulpinEggMoves     ; GULPIN
 	dw NoEggMoves3        ; SWALOT
@@ -62,14 +62,14 @@ EggMovePointers3::
 	dw NoEggMoves3        ; WAILORD
 	dw NumelEggMoves      ; NUMEL
 	dw NoEggMoves3        ; CAMERUPT
-	dw TorkoalEggMoves    ; TORKOAL
-	dw SpoinkEggMoves     ; SPOINK
-	dw NoEggMoves3        ; GRUMPIG
+	; dw TorkoalEggMoves    ; TORKOAL
+	; dw SpoinkEggMoves     ; SPOINK
+	; dw NoEggMoves3        ; GRUMPIG
 	dw TrapinchEggMoves   ; TRAPINCH
 	dw NoEggMoves3        ; VIBRAVA
 	dw NoEggMoves3        ; FLYGON
-	dw CacneaEggMoves     ; CACNEA
-	dw NoEggMoves3        ; CACTURNE
+	; dw CacneaEggMoves     ; CACNEA
+	; dw NoEggMoves3        ; CACTURNE
 	dw SwabluEggMoves     ; SWABLU
 	dw NoEggMoves3        ; ALTARIA
 	dw ZangooseEggMoves   ; ZANGOOSE
@@ -88,8 +88,8 @@ EggMovePointers3::
 	dw NoEggMoves3        ; ARMALDO
 	dw FeebasEggMoves     ; FEEBAS
 	dw NoEggMoves3        ; MILOTIC
-	dw ShuppetEggMoves    ; SHUPPET
-	dw NoEggMoves3        ; BANETTE
+	; dw ShuppetEggMoves    ; SHUPPET
+	; dw NoEggMoves3        ; BANETTE
 	dw DuskullEggMoves    ; DUSKULL
 	dw NoEggMoves3        ; DUSCLOPS
 	dw TropiusEggMoves    ; TROPIUS
@@ -104,7 +104,7 @@ EggMovePointers3::
 	dw ClamperlEggMoves   ; CLAMPERL
 	dw NoEggMoves3        ; HUNTAIL
 	dw NoEggMoves3        ; GOREBYSS
-	dw RelicanthEggMoves  ; RELICANTH
+	; dw RelicanthEggMoves  ; RELICANTH
 	dw LuvdiscEggMoves    ; LUVDISC
 	dw BagonEggMoves      ; BAGON
 	dw NoEggMoves3        ; SHELGON
@@ -112,15 +112,15 @@ EggMovePointers3::
 	dw NoEggMoves3        ; BELDUM
 	dw NoEggMoves3        ; METANG
 	dw NoEggMoves3        ; METAGROSS
-	dw NoEggMoves3        ; REGIROCK
-	dw NoEggMoves3        ; REGICE
-	dw NoEggMoves3        ; REGISTEEL
+	; dw NoEggMoves3        ; REGIROCK
+	; dw NoEggMoves3        ; REGICE
+	; dw NoEggMoves3        ; REGISTEEL
 	dw NoEggMoves3        ; LATIAS
 	dw NoEggMoves3        ; LATIOS
-	dw NoEggMoves3        ; KYOGRE
+	; dw NoEggMoves3        ; KYOGRE
 	dw NoEggMoves3        ; GROUDON
-	dw NoEggMoves3        ; RAYQUAZA
-	dw NoEggMoves3        ; JIRACHI
+	; dw NoEggMoves3        ; RAYQUAZA
+	; dw NoEggMoves3        ; JIRACHI
 	dw NoEggMoves3        ; DEOXYS
 
 TreeckoEggMoves:

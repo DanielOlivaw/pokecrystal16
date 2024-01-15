@@ -55,6 +55,8 @@ EggMovePointers1:
 	dw NoEggMoves1        ; PARASECT
 	dw VenonatEggMoves    ; VENONAT
 	dw NoEggMoves1        ; VENOMOTH
+	dw DiglettEggMoves    ; DIGLETT
+	dw NoEggMoves1        ; DUGTRIO
 	dw NoEggMoves1        ; MEOWTH
 	dw NoEggMoves1        ; MEOWTH_A
 	dw NoEggMoves1        ; MEOWTH_G
@@ -412,6 +414,18 @@ VenonatEggMoves:
 	dw BUG_BITE
 	dw MORNING_SUN
 	dw TOXIC_SPIKES
+	dw -1 ; end
+
+DiglettEggMoves:
+	dw ANCIENTPOWER
+	dw FINAL_GAMBIT
+	dw MEMENTO
+	dw BEAT_UP
+	dw FAINT_ATTACK
+	dw PURSUIT
+	dw REVERSAL
+	dw SCREECH
+	dw UPROAR
 	dw -1 ; end
 
 PsyduckEggMoves:

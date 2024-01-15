@@ -16,7 +16,7 @@ EvosAttacksPointers2::
 	dw PhandarinEvosAttacks
 	dw WolfrostEvosAttacks
 	dw WarwolfEvosAttacks
-	dw GustelaEvosAttacks
+	; dw GustelaEvosAttacks
 	dw ChikoritaEvosAttacks
 	dw BayleefEvosAttacks
 	dw MeganiumEvosAttacks
@@ -121,7 +121,7 @@ EvosAttacksPointers2::
 	dw PupitarEvosAttacks
 	dw TyranitarEvosAttacks
 	dw LugiaEvosAttacks
-	dw HoohEvosAttacks
+	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
 
 UrsaflameEvosAttacks:
@@ -450,27 +450,27 @@ WarwolfEvosAttacks:
 	dbw 57, BLIZZARD
 	db 0 ; no more level-up moves
 
-GustelaEvosAttacks:
-	db 0 ; no more evolutions
-	dbw 1, SCRATCH
-	dbw 1, TAIL_WHIP
-	dbw 3, QUICK_ATTACK
-	dbw 7, SAND_ATTACK
-	dbw 10, GUST
-	dbw 14, FURY_SWIPES
-	dbw 17, ICY_WIND
-	dbw 21, FAKE_OUT
-	dbw 24, HONE_CLAWS
-	dbw 28, AIR_CUTTER
-	dbw 31, SLASH
-	dbw 35, DETECT
-	dbw 38, AIR_SLASH
-	dbw 42, AGILITY
-	dbw 45, SHATTER_CLAW
-	dbw 49, RAZOR_WIND
-	dbw 52, BLIZZARD
-	dbw 56, EXTREMESPEED
-	db 0 ; no more level-up moves
+; GustelaEvosAttacks:
+	; db 0 ; no more evolutions
+	; dbw 1, SCRATCH
+	; dbw 1, TAIL_WHIP
+	; dbw 3, QUICK_ATTACK
+	; dbw 7, SAND_ATTACK
+	; dbw 10, GUST
+	; dbw 14, FURY_SWIPES
+	; dbw 17, ICY_WIND
+	; dbw 21, FAKE_OUT
+	; dbw 24, HONE_CLAWS
+	; dbw 28, AIR_CUTTER
+	; dbw 31, SLASH
+	; dbw 35, DETECT
+	; dbw 38, AIR_SLASH
+	; dbw 42, AGILITY
+	; dbw 45, SHATTER_CLAW
+	; dbw 49, RAZOR_WIND
+	; dbw 52, BLIZZARD
+	; dbw 56, EXTREMESPEED
+	; db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
 	dbbbw EVOLVE_LEVEL, 16, TR_ANYTIME, BAYLEEF

@@ -10,9 +10,9 @@ EggMovePointers5::
 	dw OshawottEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
-	dw LillipupEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
+	; dw LillipupEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
 	dw PurrloinEggMoves
 	dw NoEggMoves5
 	dw MunnaEggMoves
@@ -26,16 +26,16 @@ EggMovePointers5::
 	dw TimburrEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
-	dw SewaddleEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
+	; dw SewaddleEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
 	dw VenipedeEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
 	dw CottoneeEggMoves
 	dw NoEggMoves5
-	dw PetililEggMoves
-	dw NoEggMoves5
+	; dw PetililEggMoves
+	; dw NoEggMoves5
 	dw BasculinREggMoves
 	dw BasculinBEggMoves
 	dw BasculinWEggMoves
@@ -46,7 +46,7 @@ EggMovePointers5::
 	dw DarumakaGEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
-	dw MaractusEggMoves
+	; dw MaractusEggMoves
 	dw DwebbleEggMoves
 	dw NoEggMoves5
 	dw ScraggyEggMoves
@@ -55,8 +55,8 @@ EggMovePointers5::
 	dw YamaskGEggMoves
 	dw TirtougaEggMoves
 	dw NoEggMoves5
-	dw ArchenEggMoves
-	dw NoEggMoves5
+	; dw ArchenEggMoves
+	; dw NoEggMoves5
 	dw ZoruaEggMoves
 	dw NoEggMoves5
 	dw SolosisEggMoves
@@ -87,19 +87,19 @@ EggMovePointers5::
 	dw MienfooEggMoves
 	dw NoEggMoves5
 	dw DruddigonEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
-	dw PawniardEggMoves
-	dw NoEggMoves5
+	; dw NoEggMoves5
+	; dw NoEggMoves5
+	; dw PawniardEggMoves
+	; dw NoEggMoves5
 	dw VullabyEggMoves
 	dw NoEggMoves5
 	dw HeatmorEggMoves
 	dw DurantEggMoves
-	dw DeinoEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
-	dw LarvestaEggMoves
-	dw NoEggMoves5
+	; dw DeinoEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
+	; dw LarvestaEggMoves
+	; dw NoEggMoves5
 
 SnivyEggMoves:
 	dw CAPTIVATE

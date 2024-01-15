@@ -60,11 +60,16 @@ BaseData::
 	indirect_entries CELEBI, BaseData1
 	indirect_entries DEOXYS, BaseData2
 	indirect_entries ARCEUS, BaseData3
-	indirect_entries VOLCARONA, BaseData4
-	indirect_entries VOLCANION, BaseData5
-	indirect_entries PASSIMIAN, BaseData6
-	indirect_entries BLACEPHLON, BaseData7
-	indirect_entries TOXTRICITY_LOWKEY, BaseData8
+	; indirect_entries VOLCARONA, BaseData4
+	indirect_entries DURANT, BaseData4
+	; indirect_entries VOLCANION, BaseData5
+	indirect_entries DIANCIE, BaseData5
+	; indirect_entries PASSIMIAN, BaseData6
+	indirect_entries ORANGURU, BaseData6
+	; indirect_entries BLACEPHLON, BaseData7
+	indirect_entries DHELMISE, BaseData7
+	; indirect_entries TOXTRICITY_LOWKEY, BaseData8
+	indirect_entries DRAGAPULT, BaseData8
 	indirect_entries NUM_POKEMON, BaseData9
 	indirect_table_end
 
@@ -79,7 +84,7 @@ INCLUDE "data/pokemon/base_stats_6.asm"
 INCLUDE "data/pokemon/base_stats_7.asm"
 INCLUDE "data/pokemon/base_stats_8.asm"
 INCLUDE "data/pokemon/base_stats_9.asm"
-INCLUDE "data/pokemon/base_stats_10.asm"
+; INCLUDE "data/pokemon/base_stats_10.asm"
 
 BaseData1:
 INCLUDE "data/pokemon/base_stats/bulbasaur.asm"
@@ -136,6 +141,8 @@ INCLUDE "data/pokemon/base_stats/paras.asm"
 INCLUDE "data/pokemon/base_stats/parasect.asm"
 INCLUDE "data/pokemon/base_stats/venonat.asm"
 INCLUDE "data/pokemon/base_stats/venomoth.asm"
+INCLUDE "data/pokemon/base_stats/diglett.asm"
+INCLUDE "data/pokemon/base_stats/dugtrio.asm"
 INCLUDE "data/pokemon/base_stats/meowth.asm"
 INCLUDE "data/pokemon/base_stats/meowth_a.asm"
 INCLUDE "data/pokemon/base_stats/meowth_g.asm"
@@ -263,7 +270,7 @@ INCLUDE "data/pokemon/base_stats/kurstraw.asm"
 INCLUDE "data/pokemon/base_stats/phandarin.asm"
 INCLUDE "data/pokemon/base_stats/wolfrost.asm"
 INCLUDE "data/pokemon/base_stats/warwolf.asm"
-INCLUDE "data/pokemon/base_stats/gustela.asm"
+; INCLUDE "data/pokemon/base_stats/gustela.asm"
 INCLUDE "data/pokemon/base_stats/chikorita.asm"
 INCLUDE "data/pokemon/base_stats/bayleef.asm"
 INCLUDE "data/pokemon/base_stats/meganium.asm"

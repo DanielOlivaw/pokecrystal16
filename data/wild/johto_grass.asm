@@ -61,18 +61,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
 	; day
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
@@ -89,18 +89,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
 	; day
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
@@ -117,18 +117,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_4F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
 	; day
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
@@ -145,18 +145,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_5F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
 	; day
-	dbw 26, CORVSQUIRE
+	dbw 26, RATICATE_A
 	dbw 28, BRONZOR
 	dbw 30, LITWICK
-	dbw 27, CORVSQUIRE
+	dbw 27, RATICATE_A
 	dbw 28, MEDITITE
 	dbw 29, BRONZOR
 	dbw 30, CHIMECHO
@@ -173,18 +173,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_6F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 28, CORVSQUIRE
+	dbw 28, RATICATE_A
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
 	; day
-	dbw 28, CORVSQUIRE
+	dbw 28, RATICATE_A
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
@@ -201,18 +201,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_7F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
 	; day
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
@@ -229,18 +229,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_8F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
 	; day
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
@@ -257,18 +257,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons TIN_TOWER_9F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
 	; day
-	dbw 28, CORVSQUIRE
+	dbw 28, NOCTOWL
 	dbw 30, BRONZOR
 	dbw 32, LITWICK
-	dbw 29, CORVSQUIRE
+	dbw 29, RATICATE_A
 	dbw 30, MEDITITE
 	dbw 31, BRONZOR
 	dbw 32, CHIMECHO
@@ -1548,24 +1548,24 @@ JohtoGrassWildMons:
 	dbw 16, SWABLU
 	dbw 15, MANKEY
 	dbw 15, CROAGUNK
-	dbw 14, MUDBRAY
 	dbw 15, ZANGOOSE
+	dbw 14, CROAGUNK
 	dbw 16, FLAMIGO
 	dbw 16, FLAMIGO
 	; day
 	dbw 16, SWABLU
 	dbw 15, MANKEY
 	dbw 15, CROAGUNK
-	dbw 14, MUDBRAY
 	dbw 15, ZANGOOSE
+	dbw 14, CROAGUNK
 	dbw 16, FLAMIGO
 	dbw 16, FLAMIGO
 	; nite
 	dbw 16, MARILL
-	dbw 15, MANKEY
+	dbw 15, FOMANTIS
 	dbw 15, CROAGUNK
-	dbw 14, FOMANTIS
 	dbw 15, SEVIPER
+	dbw 14, CROAGUNK
 	dbw 16, FOMANTIS
 	dbw 16, FOMANTIS
 	end_grass_wildmons 
@@ -1691,7 +1691,7 @@ JohtoGrassWildMons:
 	dbw 52, HEATMOR
 	dbw 51, COPPERAJAH
 	dbw 53, COPPERAJAH
-	dbw 48, LARVESTA
+	dbw 53, DODRIO
 	; day
 	dbw 52, GOGOAT
 	dbw 54, RAPIDASH
@@ -1699,15 +1699,15 @@ JohtoGrassWildMons:
 	dbw 52, HEATMOR
 	dbw 51, COPPERAJAH
 	dbw 53, COPPERAJAH
-	dbw 48, LARVESTA
+	dbw 53, DODRIO
 	; nite
 	dbw 52, GOGOAT
 	dbw 54, GOLDUCK
 	dbw 51, DURANT
 	dbw 52, DRAPION
-	dbw 50, GOLBAT
-	dbw 54, GOLBAT
-	dbw 42, DEINO
+	dbw 51, GOLBAT
+	dbw 53, WARWOLF
+	dbw 51, WARWOLF
 	end_grass_wildmons
 
 	db -1 ; end

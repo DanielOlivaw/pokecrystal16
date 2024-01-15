@@ -37,8 +37,8 @@ FarCommand_BattleCommands:
 	dbw EFFECT_BRICK_BREAK, 	BattleCommand_BrickBreak
 	dbw EFFECT_TRAP_HIT, 		BattleCommand_TrapHit
 	dbw EFFECT_UPROOT, 			BattleCommand_Uproot
-	dbw EFFECT_TAR_SHOT, 		BattleCommand_TarShot
-	dbw EFFECT_TRICK_ROOM_HIT, 	BattleCommand_TrickRoomHit
+	; dbw EFFECT_TAR_SHOT, 		BattleCommand_TarShot
+	; dbw EFFECT_TRICK_ROOM_HIT, 	BattleCommand_TrickRoomHit
 	dbw EFFECT_POLTERGEIST, 	BattleCommand_Poltergeist
 	dbw EFFECT_FALSE_SWIPE, 	BattleCommand_FalseSwipe
 	dbw EFFECT_CAPTIVATE, 		BattleCommand_Captivate
@@ -46,6 +46,8 @@ FarCommand_BattleCommands:
 	dbw EFFECT_CRAFTY_SHIELD, 	BattleCommand_CraftyShield
 	dbw EFFECT_RESET_STATS_HIT, BattleCommand_ResetStatsTarget
 	dbw EFFECT_FURY_CUTTER, 	BattleCommand_FuryCutter
+	dbw EFFECT_EERIE_SPELL, 	BattleCommand_EerieSpell
+	dbw EFFECT_STONE_AXE,   	BattleCommand_StoneAxe
 	dbw EFFECT_DYNAMO_RUSH, 	BattleCommand_DynamoRush
 	dbw EFFECT_GUILE_FANG, 		BattleCommand_GuileFang
 	dbw EFFECT_DATA_PULSE, 		BattleCommand_DataPulse

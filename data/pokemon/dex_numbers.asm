@@ -58,6 +58,8 @@ PokemonNumbers::
 	db "047@@" ; PARASECT
 	db "048@@" ; VENONAT
 	db "049@@" ; VENOMOTH
+	db "050@@" ; DIGLETT
+	db "051@@" ; DUGTRIO
 	db "052@@" ; MEOWTH
 	db "052@A" ; MEOWTH_A
 	db "052@G" ; MEOWTH_G
@@ -185,7 +187,7 @@ PokemonNumbers::
 	db "B13@@" ; PHANDARIN
 	db "B14@@" ; WOLFROST
 	db "B15@@" ; WARWOLF
-	db "B16@@" ; GUSTELA
+	; db "B16@@" ; GUSTELA
 	db "152@@" ; CHIKORITA
 	db "153@@" ; BAYLEEF
 	db "154@@" ; MEGANIUM
@@ -301,8 +303,8 @@ PokemonNumbers::
 	db "258@@" ; MUDKIP
 	db "259@@" ; MARSHTOMP
 	db "260@@" ; SWAMPERT
-	db "261@@" ; POOCHYENA
-	db "262@@" ; MIGHTYENA
+	; db "261@@" ; POOCHYENA
+	; db "262@@" ; MIGHTYENA
 	db "263@@" ; ZIGZAGOON
 	db "263@G" ; ZIGZAGOON_G
 	db "264@@" ; LINOONE
@@ -340,10 +342,10 @@ PokemonNumbers::
 	db "306@@" ; AGGRON
 	db "307@@" ; MEDITITE
 	db "308@@" ; MEDICHAM
-	db "309@@" ; ELECTRIKE
-	db "310@@" ; MANECTRIC
-	db "311@@" ; PLUSLE
-	db "312@@" ; MINUN
+	; db "309@@" ; ELECTRIKE
+	; db "310@@" ; MANECTRIC
+	; db "311@@" ; PLUSLE
+	; db "312@@" ; MINUN
 	db "315@@" ; ROSELIA
 	db "316@@" ; GULPIN
 	db "317@@" ; SWALOT
@@ -353,14 +355,14 @@ PokemonNumbers::
 	db "321@@" ; WAILORD
 	db "322@@" ; NUMEL
 	db "323@@" ; CAMERUPT
-	db "324@@" ; TORKOAL
-	db "325@@" ; SPOINK
-	db "326@@" ; GRUMPIG
+	; db "324@@" ; TORKOAL
+	; db "325@@" ; SPOINK
+	; db "326@@" ; GRUMPIG
 	db "328@@" ; TRAPINCH
 	db "329@@" ; VIBRAVA
 	db "330@@" ; FLYGON
-	db "331@@" ; CACNEA
-	db "332@@" ; CACTURNE
+	; db "331@@" ; CACNEA
+	; db "332@@" ; CACTURNE
 	db "333@@" ; SWABLU
 	db "334@@" ; ALTARIA
 	db "335@@" ; ZANGOOSE
@@ -379,8 +381,8 @@ PokemonNumbers::
 	db "348@@" ; ARMALDO
 	db "349@@" ; FEEBAS
 	db "350@@" ; MILOTIC
-	db "353@@" ; SHUPPET
-	db "354@@" ; BANETTE
+	; db "353@@" ; SHUPPET
+	; db "354@@" ; BANETTE
 	db "355@@" ; DUSKULL
 	db "356@@" ; DUSCLOPS
 	db "357@@" ; TROPIUS
@@ -395,23 +397,23 @@ PokemonNumbers::
 	db "366@@" ; CLAMPERL
 	db "367@@" ; HUNTAIL
 	db "368@@" ; GOREBYSS
-	db "369@@" ; RELICANTH
+	; db "369@@" ; RELICANTH
 	db "370@@" ; LUVDISC
 	db "371@@" ; BAGON
 	db "372@@" ; SHELGON
 	db "373@@" ; SALAMENCE
-	db "374@@" ; BELDUM
-	db "375@@" ; METANG
-	db "376@@" ; METAGROSS
-	db "377@@" ; REGIROCK
-	db "378@@" ; REGICE
-	db "379@@" ; REGISTEEL
+	; db "374@@" ; BELDUM
+	; db "375@@" ; METANG
+	; db "376@@" ; METAGROSS
+	; db "377@@" ; REGIROCK
+	; db "378@@" ; REGICE
+	; db "379@@" ; REGISTEEL
 	db "380@@" ; LATIAS
 	db "381@@" ; LATIOS
-	db "382@@" ; KYOGRE
+	; db "382@@" ; KYOGRE
 	db "383@@" ; GROUDON
-	db "384@@" ; RAYQUAZA
-	db "385@@" ; JIRACHI
+	; db "384@@" ; RAYQUAZA
+	; db "385@@" ; JIRACHI
 	db "386@@" ; DEOXYS
 	db "387@@" ; TURTWIG
 	db "388@@" ; GROTLE
@@ -448,9 +450,9 @@ PokemonNumbers::
 	db "417@@" ; PACHIRISU
 	db "418@@" ; BUIZEL
 	db "419@@" ; FLOATZEL
-	db "420@@" ; CHERUBI
-	db "421@@" ; CHERRIM_OVERCAST
-	db "421@@" ; CHERRIM_SUNSHINE
+	; db "420@@" ; CHERUBI
+	; db "421@@" ; CHERRIM_OVERCAST
+	; db "421@@" ; CHERRIM_SUNSHINE
 	db "422@@" ; SHELLOS_E
 	db "422@@" ; SHELLOS_W
 	db "423@@" ; GASTRODON_E
@@ -471,8 +473,8 @@ PokemonNumbers::
 	db "438@@" ; BONSLY
 	db "439@@" ; MIME_JR
 	db "440@@" ; HAPPINY
-	db "441@@" ; CHATOT
-	db "442@@" ; SPIRITOMB
+	; db "441@@" ; CHATOT
+	; db "442@@" ; SPIRITOMB
 	db "443@@" ; GIBLE
 	db "444@@" ; GABITE
 	db "445@@" ; GARCHOMP
@@ -509,17 +511,17 @@ PokemonNumbers::
 	db "476@@" ; PROBOPASS
 	db "477@@" ; DUSKNOIR
 	db "478@@" ; FROSLASS
-	db "479@@" ; ROTOM
-	db "480@@" ; UXIE
-	db "481@@" ; MESPRIT
-	db "482@@" ; AZELF
-	db "483@@" ; DIALGA
-	db "484@@" ; PALKIA
-	db "486@@" ; REGIGIGAS
-	db "487@@" ; GIRATINA
-	db "488@@" ; CRESSELIA
+	; db "479@@" ; ROTOM
+	; db "480@@" ; UXIE
+	; db "481@@" ; MESPRIT
+	; db "482@@" ; AZELF
+	; db "483@@" ; DIALGA
+	; db "484@@" ; PALKIA
+	; db "486@@" ; REGIGIGAS
+	; db "487@@" ; GIRATINA
+	; db "488@@" ; CRESSELIA
 	db "491@@" ; DARKRAI
-	db "492@@" ; SHAYMIN
+	; db "492@@" ; SHAYMIN
 	db "493@@" ; ARCEUS
 	db "495@@" ; SNIVY
 	db "496@@" ; SERVINE
@@ -530,9 +532,9 @@ PokemonNumbers::
 	db "501@@" ; OSHAWOTT
 	db "502@@" ; DEWOTT
 	db "503@@" ; SAMUROTT
-	db "506@@" ; LILLIPUP
-	db "507@@" ; HERDIER
-	db "508@@" ; STOUTLAND
+	; db "506@@" ; LILLIPUP
+	; db "507@@" ; HERDIER
+	; db "508@@" ; STOUTLAND
 	db "509@@" ; PURRLOIN
 	db "510@@" ; LIEPARD
 	db "517@@" ; MUNNA
@@ -546,16 +548,16 @@ PokemonNumbers::
 	db "532@@" ; TIMBURR
 	db "533@@" ; GURDURR
 	db "534@@" ; CONKELDURR
-	db "540@@" ; SEWADDLE
-	db "541@@" ; SWADLOON
-	db "542@@" ; LEAVANNY
+	; db "540@@" ; SEWADDLE
+	; db "541@@" ; SWADLOON
+	; db "542@@" ; LEAVANNY
 	db "543@@" ; VENIPEDE
 	db "544@@" ; WHIRLIPEDE
 	db "545@@" ; SCOLIPEDE
 	db "546@@" ; COTTONEE
 	db "547@@" ; WHIMSICOTT
-	db "548@@" ; PETILIL
-	db "549@@" ; LILLIGANT
+	; db "548@@" ; PETILIL
+	; db "549@@" ; LILLIGANT
 	db "550@@" ; BASCULIN_R
 	db "550@@" ; BASCULIN_B
 	db "550@H" ; BASCULIN_W
@@ -566,7 +568,7 @@ PokemonNumbers::
 	db "554@G" ; DARUMAKA_G
 	db "555@@" ; DARMANITAN
 	db "555@G" ; DARMANITAN_G
-	db "556@@" ; MARACTUS
+	; db "556@@" ; MARACTUS
 	db "557@@" ; DWEBBLE
 	db "558@@" ; CRUSTLE
 	db "559@@" ; SCRAGGY
@@ -575,8 +577,8 @@ PokemonNumbers::
 	db "562@G" ; YAMASK_G
 	db "564@@" ; TIRTOUGA
 	db "565@@" ; CARRACOSTA
-	db "566@@" ; ARCHEN
-	db "567@@" ; ARCHEOPS
+	; db "566@@" ; ARCHEN
+	; db "567@@" ; ARCHEOPS
 	db "570@@" ; ZORUA
 	db "571@@" ; ZOROARK
 	db "577@@" ; SOLOSIS
@@ -607,19 +609,19 @@ PokemonNumbers::
 	db "619@@" ; MIENFOO
 	db "620@@" ; MIENSHAO
 	db "621@@" ; DRUDDIGON
-	db "622@@" ; GOLETT
-	db "623@@" ; GOLURK
-	db "624@@" ; PAWNIARD
-	db "625@@" ; BISHARP
+	; db "622@@" ; GOLETT
+	; db "623@@" ; GOLURK
+	; db "624@@" ; PAWNIARD
+	; db "625@@" ; BISHARP
 	db "629@@" ; VULLABY
 	db "630@@" ; MANDIBUZZ
 	db "631@@" ; HEATMOR
 	db "632@@" ; DURANT
-	db "633@@" ; DEINO
-	db "634@@" ; ZWEILOUS
-	db "635@@" ; HYDREIGON
-	db "636@@" ; LARVESTA
-	db "637@@" ; VOLCARONA
+	; db "633@@" ; DEINO
+	; db "634@@" ; ZWEILOUS
+	; db "635@@" ; HYDREIGON
+	; db "636@@" ; LARVESTA
+	; db "637@@" ; VOLCARONA
 	db "650@@" ; CHESPIN
 	db "651@@" ; QUILLADIN
 	db "652@@" ; CHESNAUGHT
@@ -642,15 +644,15 @@ PokemonNumbers::
 	db "673@@" ; GOGOAT
 	db "674@@" ; PANCHAM
 	db "675@@" ; PANGORO
-	db "677@@" ; ESPURR
-	db "678@@" ; MEOWSTIC
-	db "679@@" ; HONEDGE
-	db "680@@" ; DOUBLADE
-	db "681@@" ; AEGISLASH
+	; db "677@@" ; ESPURR
+	; db "678@@" ; MEOWSTIC
+	; db "679@@" ; HONEDGE
+	; db "680@@" ; DOUBLADE
+	; db "681@@" ; AEGISLASH
 	db "682@@" ; SPRITZEE
 	db "683@@" ; AROMATISSE
-	db "684@@" ; SWIRLIX
-	db "685@@" ; SLURPUFF
+	; db "684@@" ; SWIRLIX
+	; db "685@@" ; SLURPUFF
 	db "686@@" ; INKAY
 	db "687@@" ; MALAMAR
 	db "688@@" ; BINACLE
@@ -672,25 +674,25 @@ PokemonNumbers::
 	db "705@H" ; SLIGGOO_H
 	db "706@@" ; GOODRA
 	db "706@H" ; GOODRA_H
-	db "707@@" ; KLEFKI
+	; db "707@@" ; KLEFKI
 	db "708@@" ; PHANTUMP
 	db "709@@" ; TREVENANT
 	db "710@@" ; PUMPKABOO
 	db "711@@" ; GOURGEIST
 	db "712@@" ; BERGMITE
 	db "713@@" ; AVALUGG
-	db "716@@" ; XERNEAS
-	db "717@@" ; YVELTAL
-	db "718@@" ; ZYGARDE
+	; db "716@@" ; XERNEAS
+	; db "717@@" ; YVELTAL
+	; db "718@@" ; ZYGARDE
 	db "719@@" ; DIANCIE
-	db "721@@" ; VOLCANION
+	; db "721@@" ; VOLCANION
 	db "722@@" ; ROWLET
 	db "723@@" ; DARTRIX
 	db "724@@" ; DECIDUEYE
 	db "724@H" ; DECIDUEYE_H
-	db "731@@" ; PIKIPEK
-	db "732@@" ; TRUMBEAK
-	db "733@@" ; TOUCANNON
+	; db "731@@" ; PIKIPEK
+	; db "732@@" ; TRUMBEAK
+	; db "733@@" ; TOUCANNON
 	db "734@@" ; YUNGOOS
 	db "735@@" ; GUMSHOOS
 	db "736@@" ; GRUBBIN
@@ -703,10 +705,10 @@ PokemonNumbers::
 	db "744@@" ; ROCKRUFF
 	db "745@@" ; LYCANROC_MD
 	db "745@@" ; LYCANROC_MN
-	db "747@@" ; MAREANIE
-	db "748@@" ; TOXAPEX
-	db "749@@" ; MUDBRAY
-	db "750@@" ; MUDSDALE
+	; db "747@@" ; MAREANIE
+	; db "748@@" ; TOXAPEX
+	; db "749@@" ; MUDBRAY
+	; db "750@@" ; MUDSDALE
 	db "751@@" ; DEWPIDER
 	db "752@@" ; ARAQUANID
 	db "753@@" ; FOMANTIS
@@ -716,63 +718,63 @@ PokemonNumbers::
 	db "759@@" ; STUFFUL
 	db "760@@" ; BEWEAR
 	db "765@@" ; ORANGURU
-	db "766@@" ; PASSIMIAN
+	; db "766@@" ; PASSIMIAN
 	db "767@@" ; WIMPOD
 	db "768@@" ; GOLISOPOD
 	db "769@@" ; SANDYGAST
 	db "770@@" ; PALOSSAND
 	db "771@@" ; PYUKUMUKU
-	db "772@@" ; TYPE__NULL
-	db "773@@" ; SILVALLY
+	; db "772@@" ; TYPE__NULL
+	; db "773@@" ; SILVALLY
 	db "774@@" ; MINIOR_METEOR
 	db "774@@" ; MINIOR_CORE
-	db "775@@" ; KOMALA
+	; db "775@@" ; KOMALA
 	db "776@@" ; TURTONATOR
 	db "777@@" ; TOGEDEMARU
 	db "778@@" ; MIMIKYU
 	db "780@@" ; DRAMPA
 	db "781@@" ; DHELMISE
-	db "782@@" ; JANGMO_O
-	db "783@@" ; HAKAMO_O
-	db "784@@" ; KOMMO_O
-	db "793@@" ; NIHILEGO
-	db "794@@" ; BUZZWOLE
-	db "795@@" ; PHEROMOSA
-	db "796@@" ; XURKITREE
-	db "797@@" ; CELESTEELA
-	db "798@@" ; KARTANA
-	db "799@@" ; GUZZLORD
-	db "801@@" ; MAGEARNA
-	db "805@@" ; STAKATAKA
-	db "806@@" ; BLACEPHLON
-	db "810@@" ; GROOKEY
-	db "811@@" ; THWACKEY
-	db "812@@" ; RILLABOOM
-	db "821@@" ; ROOKIDEE
-	db "822@@" ; CORVSQUIRE
-	db "823@@" ; CORVKNIGHT
-	db "824@@" ; BLIPBUG
-	db "825@@" ; DOTTLER
-	db "826@@" ; ORBEETLE
+	; db "782@@" ; JANGMO_O
+	; db "783@@" ; HAKAMO_O
+	; db "784@@" ; KOMMO_O
+	; db "793@@" ; NIHILEGO
+	; db "794@@" ; BUZZWOLE
+	; db "795@@" ; PHEROMOSA
+	; db "796@@" ; XURKITREE
+	; db "797@@" ; CELESTEELA
+	; db "798@@" ; KARTANA
+	; db "799@@" ; GUZZLORD
+	; db "801@@" ; MAGEARNA
+	; db "805@@" ; STAKATAKA
+	; db "806@@" ; BLACEPHLON
+	; db "810@@" ; GROOKEY
+	; db "811@@" ; THWACKEY
+	; db "812@@" ; RILLABOOM
+	; db "821@@" ; ROOKIDEE
+	; db "822@@" ; CORVSQUIRE
+	; db "823@@" ; CORVKNIGHT
+	; db "824@@" ; BLIPBUG
+	; db "825@@" ; DOTTLER
+	; db "826@@" ; ORBEETLE
 	db "827@@" ; NICKIT
 	db "828@@" ; THIEVUL
 	db "829@@" ; GOSSIFLEUR
 	db "830@@" ; ELDEGOSS
-	db "831@@" ; WOOLOO
-	db "832@@" ; DUBWOOL
+	; db "831@@" ; WOOLOO
+	; db "832@@" ; DUBWOOL
 	db "833@@" ; CHEWTLE
 	db "834@@" ; DREDNAW
-	db "837@@" ; ROLYCOLY
-	db "838@@" ; CARKOL
-	db "839@@" ; COALOSSAL
+	; db "837@@" ; ROLYCOLY
+	; db "838@@" ; CARKOL
+	; db "839@@" ; COALOSSAL
 	db "840@@" ; APPLIN
 	db "841@@" ; FLAPPLE
 	db "842@@" ; APPLETUN
 	db "846@@" ; ARROKUDA
 	db "847@@" ; BARASKEWDA
-	db "848@@" ; TOXEL
-	db "849@@" ; TOXTRICITY_AMPED
-	db "849@@" ; TOXTRICITY_LOWKEY
+	; db "848@@" ; TOXEL
+	; db "849@@" ; TOXTRICITY_AMPED
+	; db "849@@" ; TOXTRICITY_LOWKEY
 	db "850@@" ; SIZZLIPEDE
 	db "851@@" ; CENTISKRCH
 	db "852@@" ; CLOBBOPUS
@@ -790,24 +792,24 @@ PokemonNumbers::
 	db "867@@" ; RUNERIGUS
 	db "868@@" ; MILCERY
 	db "869@@" ; ALCREMIE
-	db "870@@" ; FALINKS
+	; db "870@@" ; FALINKS
 	db "871@@" ; PINCURCHIN
 	db "872@@" ; SNOM
 	db "873@@" ; FROSMOTH
-	db "874@@" ; STONJOURNR
+	; db "874@@" ; STONJOURNR
 	db "875@@" ; EISCUE
 	db "878@@" ; CUFANT
 	db "879@@" ; COPPERAJAH
-	db "880@@" ; DRACOZOLT
-	db "881@@" ; ARCTOZOLT
-	db "882@@" ; DRACOVISH
-	db "883@@" ; ARCTOVISH
-	db "884@@" ; DURALUDON
+	; db "880@@" ; DRACOZOLT
+	; db "881@@" ; ARCTOZOLT
+	; db "882@@" ; DRACOVISH
+	; db "883@@" ; ARCTOVISH
+	; db "884@@" ; DURALUDON
 	db "885@@" ; DREEPY
 	db "886@@" ; DRAKLOAK
 	db "887@@" ; DRAGAPULT
-	db "894@@" ; REGIELEKI
-	db "895@@" ; REGIDRAGO
+	; db "894@@" ; REGIELEKI
+	; db "895@@" ; REGIDRAGO
 	db "899@@" ; WYRDEER
 	db "900@@" ; KLEAVOR
 	db "901@@" ; URSALUNA
@@ -823,8 +825,8 @@ PokemonNumbers::
 	db "939@@" ; BELLIBOLT
 	db "960@@" ; WIGLETT
 	db "961@@" ; WUGTRIO
-	db "969@@" ; GLIMMET
-	db "970@@" ; GLIMMORA
+	; db "969@@" ; GLIMMET
+	; db "970@@" ; GLIMMORA
 	db "971@@" ; GREAVARD
 	db "972@@" ; HOUNDSTONE
 	db "973@@" ; FLAMIGO
@@ -832,5 +834,5 @@ PokemonNumbers::
 	db "978@@" ; TATSUGIRI
 	db "980@@" ; CLODSIRE
 	db "981@@" ; FARIGIRAF
-	db "1001@" ; WO_CHIEN
+	; db "1001@" ; WO_CHIEN
 	assert_table_length NUM_POKEMON

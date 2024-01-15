@@ -111,8 +111,8 @@ AI_Setup:
 
 	cp EFFECT_PLAY_NICE
 	jr c, .checkmove
-	cp EFFECT_TAR_SHOT + 1
-	jr c, .statdown
+	; cp EFFECT_TAR_SHOT + 1
+	; jr c, .statdown
 
 	cp EFFECT_COSMIC_POWER
 	jr c, .checkmove
@@ -371,8 +371,8 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_FLAME_WHEEL,        AI_Smart_FlameWheel
 	dbw EFFECT_PROTECT,            AI_Smart_Protect
 	dbw EFFECT_SPIKY_SHIELD,       AI_Smart_Protect
-	dbw EFFECT_KINGS_SHIELD,       AI_Smart_Protect
-	dbw EFFECT_BANEFUL_BUNKER,     AI_Smart_Protect
+	; dbw EFFECT_KINGS_SHIELD,       AI_Smart_Protect
+	; dbw EFFECT_BANEFUL_BUNKER,     AI_Smart_Protect
 	dbw EFFECT_OBSTRUCT,           AI_Smart_Protect
 	dbw EFFECT_FORESIGHT,          AI_Smart_Foresight
 	dbw EFFECT_ENDURE,             AI_Smart_Endure
@@ -464,14 +464,14 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_DROWSY_WRATH,       AI_Smart_DrowsyWrath
 	dbw EFFECT_POWDER,             AI_Smart_Powder
 	dbw EFFECT_FOCUS_PUNCH,        AI_Smart_FocusPunch
-	dbw EFFECT_CLANGING_SCALES,    AI_Smart_ClangingScales
-	dbw EFFECT_BEAK_BLAST,         AI_Smart_BeakBlast
+	; dbw EFFECT_CLANGING_SCALES,    AI_Smart_ClangingScales
+	; dbw EFFECT_BEAK_BLAST,         AI_Smart_BeakBlast
 	dbw EFFECT_SHELL_TRAP,         AI_Smart_ShellTrap
 	dbw EFFECT_REVENGE,            AI_Smart_Revenge
 	dbw EFFECT_PUNISHMENT,         AI_Smart_Punishment
 	dbw EFFECT_STORED_POWER,       AI_Smart_StoredPower
-	dbw EFFECT_TAR_SHOT,           AI_Smart_TarShot
-	dbw EFFECT_TRICK_ROOM_HIT,     AI_Smart_CosmicWarp
+	; dbw EFFECT_TAR_SHOT,           AI_Smart_TarShot
+	; dbw EFFECT_TRICK_ROOM_HIT,     AI_Smart_CosmicWarp
 	dbw EFFECT_METEOR_BEAM,        AI_Smart_MeteorBeam
 	dbw EFFECT_SCALE_SHOT,         AI_Smart_ScaleShot
 	dbw EFFECT_MISTY_EXPLOSION,    AI_Smart_MistyExplosion
@@ -484,6 +484,8 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_DATA_PULSE,         AI_Smart_DataPulse
 	dbw EFFECT_ME_FIRST,           AI_Smart_MeFirst
 	dbw EFFECT_HEALING_WISH,       AI_Smart_Healing_Wish
+	dbw EFFECT_EERIE_SPELL,        AI_Smart_EerieSpell
+	dbw EFFECT_STONE_AXE,          AI_Smart_StoneAxe
 
 	dbw EFFECT_CONDITIONAL_BOOST,  AI_Smart_ConditionalBoost ; CUT, GUST, SURF, VENOSHOCK, ROUND, HEX, BRINE, PAYBACK, SHATTER_CLAW, ACROBATICS, RETALIATE, FACADE, BOLT_BEAK, FISHIOUS_REND
 	dbw EFFECT_COND_BOOST_FLINCH,  AI_Smart_ConditionalBoostFlinch ; STOMP, TWISTER, STEAMROLLER, DRAGON_RUSH
@@ -504,6 +506,60 @@ AI_Smart_VariableType:
 	callfar FindMove_AI_Smart_Scoring
 	pop de
 	pop bc
+	ret
+
+AI_Smart_EerieSpell:
+; If the player used a move last turn...
+	ld a, [wLastPlayerCounterMove]
+	and a
+	ret z
+
+; ...do nothing if enemy is slower than player
+	call AICompareSpeed
+	ret nc
+
+	push hl
+	ld b, a
+	ld c, 4
+	ld hl, wBattleMonMoves
+	ld de, wBattleMonPP
+
+.moveloop
+	ld a, [hli]
+	cp b
+	jr z, .foundmove
+
+	inc de
+	dec c
+	jr nz, .moveloop
+
+	pop hl
+	ret
+
+.foundmove
+	pop hl
+	ld a, [de]
+; 80% chance to encourage this move if the player's last move
+; has less than 6 PP remaining.
+	cp $6
+	ret nc
+	call AI_80_20
+	ret c
+	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_StoneAxe:
+	push hl
+	call AICheckLastPlayerMon
+	pop hl
+	ret z
+
+; 80% chance to encourage this move if this is not the player's last Pokemon.
+	call AI_80_20
+	ret c
+	dec [hl]
+	dec [hl]
 	ret
 
 AI_Smart_Sleep:
@@ -1392,10 +1448,10 @@ AI_Smart_RazorWind:
 	jr z, .dismiss
 	cp EFFECT_SPIKY_SHIELD
 	jr z, .dismiss
-	cp EFFECT_KINGS_SHIELD
-	jr z, .dismiss
-	cp EFFECT_BANEFUL_BUNKER
-	jr z, .dismiss
+	; cp EFFECT_KINGS_SHIELD
+	; jr z, .dismiss
+	; cp EFFECT_BANEFUL_BUNKER
+	; jr z, .dismiss
 	cp EFFECT_OBSTRUCT
 	jr z, .dismiss
 	dec c
@@ -1710,7 +1766,7 @@ AI_Smart_SpeedUpHit:
 	dw LOW_SWEEP
 	dw BULLDOZE
 	dw ROCK_TOMB
-	dw DRUM_BEATING
+	; dw DRUM_BEATING
 	dw FLAME_CHARGE
 	dw WIND_RIDE
 	dw -1 ; end
@@ -3069,7 +3125,7 @@ AI_Smart_ScaleShot:
 	ret
 
 AI_Smart_Superpower:
-AI_Smart_ClangingScales:
+; AI_Smart_ClangingScales:
 ; Discourage this move if enemy's HP is at least 50%.
 	call AICheckEnemyHalfHP
 	jr c, .discourage
@@ -3376,47 +3432,47 @@ AI_Smart_TrickRoom:
 	dec [hl]
 	ret
 
-AI_Smart_CosmicWarp:
-; 90% chance to encourage this move if:
-; 1) The enemy is slower and Trick Room is not up, or
-; 2) The enemy is faster and Trick Room is already up.
-; Otherwise, discourage this move.
+; AI_Smart_CosmicWarp:
+;; 90% chance to encourage this move if:
+;; 1) The enemy is slower and Trick Room is not up, or
+;; 2) The enemy is faster and Trick Room is already up.
+;; Otherwise, discourage this move.
 
-	ld a, [wTrickRoom]
-	and a
-	jr z, .no_trick_room
+	; ld a, [wTrickRoom]
+	; and a
+	; jr z, .no_trick_room
 
-; Trick Room is already up.
-	call AICompareSpeed
-	jr c, .encourage
-	jr .discourage
+;; Trick Room is already up.
+	; call AICompareSpeed
+	; jr c, .encourage
+	; jr .discourage
 
-.no_trick_room
-; Trick Room is not up.
-	call AICompareSpeed
-	jp c, .discourage
+; .no_trick_room
+;; Trick Room is not up.
+	; call AICompareSpeed
+	; jp c, .discourage
 
-.encourage
-; Don't encourage this move if enemy's HP is lower than 50%.
-	call AICheckEnemyHalfHP
-	ret nc
+; .encourage
+;; Don't encourage this move if enemy's HP is lower than 50%.
+	; call AICheckEnemyHalfHP
+	; ret nc
 
-	call Random
-	cp 90 percent + 1
-	ret nc
+	; call Random
+	; cp 90 percent + 1
+	; ret nc
 
-	dec [hl]
-	dec [hl]
-	ret
+	; dec [hl]
+	; dec [hl]
+	; ret
 
-.discourage
-; Don't discourage this move if player's HP is lower than 50%.
-	call AICheckPlayerHalfHP
-	ret nc
+; .discourage
+;; Don't discourage this move if player's HP is lower than 50%.
+	; call AICheckPlayerHalfHP
+	; ret nc
 
-	inc [hl]
-	inc [hl]
-	ret
+	; inc [hl]
+	; inc [hl]
+	; ret
 
 AI_Smart_Endeavor:
 ; 80% chance to encourage this move if the player has more
@@ -3488,42 +3544,42 @@ AI_Smart_FocusPunch:
 .done
 	ret
 
-AI_Smart_BeakBlast:
-; Discourage this move if the enemy has less than 25% HP left.
-	call AICheckEnemyQuarterHP
-	jr nc, .discourage
+; AI_Smart_BeakBlast:
+;; Discourage this move if the enemy has less than 25% HP left.
+	; call AICheckEnemyQuarterHP
+	; jr nc, .discourage
 
-; Don't encourage this move if the player is already burned.
-	ld a, [wBattleMonStatus]
-	bit BRN, a
-	jr nz, .done
+;; Don't encourage this move if the player is already burned.
+	; ld a, [wBattleMonStatus]
+	; bit BRN, a
+	; jr nz, .done
 
-; 80% chance to encourage this move if the player used
-; a damaging physical move last.
-	ld a, [wLastPlayerCounterMove]
-	and a
-	jr z, .done
+;; 80% chance to encourage this move if the player used
+;; a damaging physical move last.
+	; ld a, [wLastPlayerCounterMove]
+	; and a
+	; jr z, .done
 
-	call AIGetEnemyMove
+	; call AIGetEnemyMove
 
-	ld a, [wEnemyMoveStruct + MOVE_POWER]
-	and a
-	jr z, .done
+	; ld a, [wEnemyMoveStruct + MOVE_POWER]
+	; and a
+	; jr z, .done
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
-	cp SPECIAL
-	jr nc, .done
+	; ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	; cp SPECIAL
+	; jr nc, .done
 
-	call AI_80_20
-	jr c, .done
-	dec [hl]
-	ret
+	; call AI_80_20
+	; jr c, .done
+	; dec [hl]
+	; ret
 
-.discourage
-	inc [hl]
-	inc [hl]
-.done
-	ret
+; .discourage
+	; inc [hl]
+	; inc [hl]
+; .done
+	; ret
 
 AI_Smart_Revenge:
 ; Discourage this move if the enemy has less than 25% HP left.
@@ -3553,21 +3609,21 @@ AI_Smart_Revenge:
 .done
 	ret
 
-AI_Smart_TarShot:
-; Discourage this move if the player is already covered in tar.
-	ld a, [wPlayerSubStatus7]
-	bit SUBSTATUS_TAR_SHOT, a
-	ret z
+; AI_Smart_TarShot:
+;; Discourage this move if the player is already covered in tar.
+	; ld a, [wPlayerSubStatus7]
+	; bit SUBSTATUS_TAR_SHOT, a
+	; ret z
 
-; Discourage even more if the enemy is faster than the player.
-	call AICompareSpeed
-	jr nc, .discourage
+;; Discourage even more if the enemy is faster than the player.
+	; call AICompareSpeed
+	; jr nc, .discourage
 
-	inc [hl]
-	inc [hl]
-.discourage
-	inc [hl]
-	ret
+	; inc [hl]
+	; inc [hl]
+; .discourage
+	; inc [hl]
+	; ret
 
 AI_Smart_DynamoRush:
 ; Encourage this move if the enemy's speed is boosted

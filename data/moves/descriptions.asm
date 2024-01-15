@@ -412,7 +412,7 @@ MoveDescriptions1:
 	dw ShatterClawDescription
 	dw WildFuryDescription
 	dw WindRideDescription
-	dw BrightMossDescription
+	; dw BrightMossDescription
 	dw ShieldBashDescription
 	dw SacredSwordDescription
 	dw IngrainDescription
@@ -463,14 +463,14 @@ MoveDescriptions1:
 	dw BelchDescription
 	dw YawnDescription
 	dw DiveDescription
-	dw ShadowForceDescription
+	; dw ShadowForceDescription
 	dw PhantomForceDescription
 	dw NobleRoarDescription
 	dw BoomburstDescription
 	dw NeedleArmDescription
 	dw SpikyShieldDescription
-	dw KingsShieldDescription
-	dw BanefulBunkerDescription
+	; dw KingsShieldDescription
+	; dw BanefulBunkerDescription
 	dw ObstructDescription
 	dw CraftyShieldDescription
 	dw FakeOutDescription
@@ -490,10 +490,10 @@ MoveDescriptions1:
 	dw ChargeBeamDescription
 	dw MistBallDescription
 	dw LusterPurgeDescription
-	dw OriginPulseDescription
+	; dw OriginPulseDescription
 	dw PrecipiceBladesDescription
-	dw DragonAscentDescription
-	dw DoomDesireDescription
+	; dw DragonAscentDescription
+	; dw DoomDesireDescription
 	dw PsychoBoostDescription
 	dw TrickRoomDescription
 	dw RetaliateDescription
@@ -507,16 +507,16 @@ MoveDescriptions1:
 	dw ChatterDescription
 	dw PowerUpPunchDescription
 	dw MagnetBombDescription
-	dw RoarOfTimeDescription
-	dw SpacialRendDescription
+	; dw RoarOfTimeDescription
+	; dw SpacialRendDescription
 	dw MagnetRiseDescription
 	dw MeFirstDescription
 	dw BodyPressDescription
 	dw MementoDescription
 	dw HealingWishDescription
-	dw LunarDanceDescription
+	; dw LunarDanceDescription
 	dw DarkVoidDescription
-	dw SeedFlareDescription
+	; dw SeedFlareDescription
 	dw HeavySlamDescription
 	dw HeatCrashDescription
 	dw ElectroBallDescription
@@ -540,7 +540,7 @@ MoveDescriptions1:
 	dw WeathervaneDescription
 	dw CultivateDescription
 	dw TimeTravelDescription
-	dw SeamitarDescription
+	dw AquaCutterDescription
 	dw RockWreckerDescription
 	dw BrutalSwingDescription
 	dw ElectrowebDescription
@@ -549,7 +549,7 @@ MoveDescriptions1:
 	dw LaserFocusDescription
 	dw DrainPunchDescription
 	dw FireLashDescription
-	dw FieryDanceDescription
+	; dw FieryDanceDescription
 	dw WaterShurikenDescription
 	dw PowderDescription
 	dw WishDescription
@@ -559,20 +559,20 @@ MoveDescriptions1:
 	dw TopsyTurvyDescription
 	dw ParabolicChargeDescription
 	dw ElectrifyDescription
-	dw FairyLockDescription
+	; dw FairyLockDescription
 	dw BranchPokeDescription
-	dw GeomancyDescription
-	dw OblivionWingDescription
+	; dw GeomancyDescription
+	; dw OblivionWingDescription
 	dw FocusBlastDescription
-	dw LandsWrathDescription
-	dw ThousandWavesDescription
+	; dw LandsWrathDescription
+	; dw ThousandWavesDescription
 	dw DiamondStormDescription
-	dw SteamEruptionDescription
+	; dw SteamEruptionDescription
 	dw GrassWhistleDescription
 	dw PowerTrickDescription
 	dw SpiritShackleDescription
 	dw FocusPunchDescription
-	dw BeakBlastDescription
+	; dw BeakBlastDescription
 	dw ShellTrapDescription
 	dw RevengeDescription
 	dw AvalancheDescription
@@ -582,37 +582,37 @@ MoveDescriptions1:
 	dw LungeDescription
 	dw SolarBladeDescription
 	dw ShoreUpDescription
-	dw MultiAttackDescription
+	; dw MultiAttackDescription
 	dw ZingZapDescription
-	dw ClangingScalesDescription
-	dw ClangorousSoulDescription
+	; dw ClangingScalesDescription
+	; dw ClangorousSoulDescription
 	dw VacuumWaveDescription
-	dw ShiftGearDescription
-	dw FleurCannonDescription
-	dw MindBlownDescription
-	dw DrumBeatingDescription
+	; dw ShiftGearDescription
+	; dw FleurCannonDescription
+	; dw MindBlownDescription
+	; dw DrumBeatingDescription
 	dw TailSlapDescription
 	dw SpeedSwapDescription
 	dw PowerSwapDescription
 	dw GuardSwapDescription
-	dw HeartSwapDescription
+	; dw HeartSwapDescription
 	dw JawLockDescription
 	dw PunishmentDescription
 	dw StoredPowerDescription
 	dw PowerTripDescription
-	dw TarShotDescription
+	; dw TarShotDescription
 	dw GravAppleDescription
 	dw AppleAcidDescription
 	dw OctolockDescription
-	dw ChronoShiftDescription
-	dw CosmicWarpDescription
+	; dw ChronoShiftDescription
+	; dw CosmicWarpDescription
 	dw TeatimeDescription
 	dw MagicPowderDescription
-	dw BoltBeakDescription
-	dw FishiousRendDescription
-	dw BreakingSwipeDescription
+	; dw BoltBeakDescription
+	; dw FishiousRendDescription
+	; dw BreakingSwipeDescription
 	dw DragonDartsDescription
-	dw ThunderCageDescription
+	; dw ThunderCageDescription
 	dw FrenzyPlantDescription
 	dw BlastBurnDescription
 	dw HydroCannonDescription
@@ -630,7 +630,7 @@ MoveDescriptions1:
 	dw OverheatDescription
 	dw ScaldDescription
 	dw PsychicFangsDescription
-	dw DarkestLariatDescription
+	; dw DarkestLariatDescription
 	dw TailGlowDescription
 	dw RockClimbDescription
 	dw TrumpCardDescription
@@ -640,6 +640,20 @@ MoveDescriptions1:
 	dw PartingShotDescription
 	dw NightDazeDescription
 	dw PurifyDescription
+	dw ShadowBoneDescription
+	dw MeteorAssaultDescription
+	dw ShellSideArmDescription
+	dw EerieSpellDescription
+	dw BarbBarrageDescription
+	dw HeadlongRushDescription
+	dw RagingFuryDescription
+	dw WaveCrashDescription
+	dw TripleArrowsDescription
+	dw StoneAxeDescription
+	dw TorchSongDescription
+	dw TripleDiveDescription
+	dw FilletAwayDescription
+	dw TwinBeamDescription
 	assert_table_length NUM_ATTACKS
 
 InvalidMoveDescription:
@@ -662,10 +676,10 @@ StoneEdgeDescription:
 NightSlashDescription:
 DrillRunDescription:
 ShadowClawDescription:
-SpacialRendDescription:
+; SpacialRendDescription:
 AttackOrderDescription:
-SeamitarDescription:
-WideSlashDescription:
+AquaCutterDescription:
+; WideSlashDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -833,7 +847,8 @@ WildChargeDescription:
 ThrashDescription:
 OutrageDescription:
 PetalDanceDescription:
-SpinSlashDescription:
+; SpinSlashDescription:
+RagingFuryDescription:
 	db   "Works 2-3 turns"
 	next "and confuses user.@"
 
@@ -949,11 +964,12 @@ PlayRoughDescription:
 
 HyperBeamDescription:
 GigaImpactDescription:
-RoarOfTimeDescription:
+; RoarOfTimeDescription:
 RockWreckerDescription:
 FrenzyPlantDescription:
 BlastBurnDescription:
 HydroCannonDescription:
+MeteorAssaultDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
@@ -995,7 +1011,7 @@ DrainingKissDescription:
 DrainPunchDescription:
 HornLeechDescription:
 ParabolicChargeDescription:
-OblivionWingDescription:
+; OblivionWingDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
@@ -1174,6 +1190,7 @@ SludgeBombDescription:
 PoisonJabDescription:
 SludgeWaveDescription:
 GunkShotDescription:
+ShellSideArmDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
 
@@ -1190,7 +1207,7 @@ WhirlpoolDescription:
 SandTombDescription:
 NailDownDescription:
 JawClampDescription:
-ThunderCageDescription:
+; ThunderCageDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
@@ -1308,7 +1325,7 @@ CovetDescription:
 
 SpiderWebDescription:
 MeanLookDescription:
-FairyLockDescription:
+; FairyLockDescription:
 	db   "Prevents fleeing"
 	next "or switching.@"
 
@@ -1321,7 +1338,7 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
-SteamEruptionDescription:
+; SteamEruptionDescription:
 	db   "An attack that may"
 	next "cause a burn.@"
 
@@ -1522,6 +1539,7 @@ SweetScentDescription:
 
 IronTailDescription:
 LiquidationDescription:
+ShadowBoneDescription:
 	db   "An attack that may"
 	next "reduce DEFENSE.@"
 
@@ -1561,6 +1579,7 @@ CrunchDescription:
 RazorShellDescription:
 RockSmashDescription:
 CrushClawDescription:
+TripleArrowsDescription:
 	db   "An attack that may"
 	next "lower DEFENSE.@"
 
@@ -1583,7 +1602,7 @@ SilverWindDescription:
 	next "raise all stats.@"
 
 FutureSightDescription:
-DoomDesireDescription:
+; DoomDesireDescription:
 	db   "An attack that"
 	next "hits on 3rd turn.@"
 
@@ -1616,7 +1635,7 @@ InfernoDescription:
 	next "always burns.@"
 
 FlareBlitzDescription:
-	db   "Hurts the user and"
+	db   "Hurts the user but"
 	next "may cause a burn.@"
 
 DragonClawDescription:
@@ -1644,6 +1663,7 @@ QuiverDanceDescription:
 	next "both SPCL. stats.@"
 
 VenoshockDescription:
+BarbBarrageDescription:
 	db   "Stronger against"
 	next "poisoned targets.@"
 
@@ -1750,6 +1770,7 @@ AquaJetDescription:
 	next "strikes first.@"
 
 CloseCombatDescription:
+HeadlongRushDescription:
 	db   "Sacrifices DEFENSE"
 	next "and SP.DEF.@"
 
@@ -1830,7 +1851,7 @@ NightDazeDescription:
 
 LeafStormDescription:
 PsychoBoostDescription:
-FleurCannonDescription:
+; FleurCannonDescription:
 DracoMeteorDescription:
 OverheatDescription:
 	db   "Sharply reduces"
@@ -1944,7 +1965,7 @@ DragonPulseDescription:
 
 DragonDanceDescription:
 WildFuryDescription:
-ShiftGearDescription:
+; ShiftGearDescription:
 	db   "Increases ATTACK"
 	next "and SPEED.@"
 
@@ -2036,7 +2057,7 @@ AuraSphereDescription:
 
 AnchorShotDescription:
 MagnetGripDescription:
-ThousandWavesDescription:
+; ThousandWavesDescription:
 SpiritShackleDescription:
 	db   "An attack that"
 	next "prevents escape.@"
@@ -2057,13 +2078,13 @@ WindRideDescription:
 	db   "An airborne tackle"
 	next "that raises SPEED.@"
 
-BrightMossDescription:
-	db   "Raises ACCURACY"
-	next "for both sides.@"
+; BrightMossDescription:
+	; db   "Raises ACCURACY"
+	; next "for both sides.@"
 
 SacredSwordDescription:
 ChipAwayDescription:
-DarkestLariatDescription:
+; DarkestLariatDescription:
 	db   "Ignores the foe's"
 	next "stat changes.@"
 
@@ -2208,7 +2229,7 @@ DiveDescription:
 	db   "1st turn: Dive"
 	next "2nd turn: Attack@"
 
-ShadowForceDescription:
+; ShadowForceDescription:
 PhantomForceDescription:
 TimeTravelDescription:
 	db   "1st turn: Vanish"
@@ -2226,13 +2247,13 @@ SpikyShieldDescription:
 	db   "Protection that"
 	next "may hurt the foe.@"
 
-KingsShieldDescription:
-	db   "Protection that"
-	next "may lower ATTACK.@"
+; KingsShieldDescription:
+	; db   "Protection that"
+	; next "may lower ATTACK.@"
 
-BanefulBunkerDescription:
-	db   "Protection that"
-	next "may cause poison.@"
+; BanefulBunkerDescription:
+	; db   "Protection that"
+	; next "may cause poison.@"
 
 ObstructDescription:
 	db   "Protection that"
@@ -2272,21 +2293,21 @@ SynchronoiseDescription:
 	next "the same type.@"
 
 ChargeBeamDescription:
-FieryDanceDescription:
+; FieryDanceDescription:
 	db   "An attack that may"
 	next "raise SP.ATK.@"
 
-OriginPulseDescription:
-	db   "Attacks with blue"
-	next "beams of light.@"
+; OriginPulseDescription:
+	; db   "Attacks with blue"
+	; next "beams of light.@"
 
 PrecipiceBladesDescription:
 	db   "Manifests fearsome"
 	next "blades of stone.@"
 
-DragonAscentDescription:
-	db   "Sacrifices DEFENSE"
-	next "and SP.DEF.@"
+; DragonAscentDescription:
+	; db   "Sacrifices DEFENSE"
+	; next "and SP.DEF.@"
 
 TrickRoomDescription:
 	db   "Reverses the move"
@@ -2338,13 +2359,13 @@ MementoDescription:
 	next "lower foe's stats.@"
 
 HealingWishDescription:
-LunarDanceDescription:
+; LunarDanceDescription:
 	db   "The user faints to"
 	next "heal its ally.@"
 
-SeedFlareDescription:
-	db   "May harshly reduce"
-	next "foe's SP.DEF.@"
+; SeedFlareDescription:
+	; db   "May harshly reduce"
+	; next "foe's SP.DEF.@"
 
 HeavySlamDescription:
 HeatCrashDescription:
@@ -2372,7 +2393,7 @@ SpitUpDescription:
 	next "power to attack.@"
 
 JudgementDescription:
-MultiAttackDescription:
+; MultiAttackDescription:
 	db   "Its type matches"
 	next "the held PLATE.@"
 
@@ -2448,13 +2469,13 @@ BranchPokeDescription:
 	db   "Pokes the foe with"
 	next "a pointed branch.@"
 
-GeomancyDescription:
-	db   "Raises stats after"
-	next "charging one turn.@"
+; GeomancyDescription:
+	; db   "Raises stats after"
+	; next "charging one turn.@"
 
-LandsWrathDescription:
-	db   "Attacks with the"
-	next "power of the land.@"
+; LandsWrathDescription:
+	; db   "Attacks with the"
+	; next "power of the land.@"
 
 DiamondStormDescription:
 	db   "May sharply raise"
@@ -2468,9 +2489,9 @@ FocusPunchDescription:
 	db   "Fails if the user"
 	next "is hit before use.@"
 
-BeakBlastDescription:
-	db   "Burns a foe that"
-	next "makes contact.@"
+; BeakBlastDescription:
+	; db   "Burns a foe that"
+	; next "makes contact.@"
 
 ShellTrapDescription:
 	db   "Goes off if hit by"
@@ -2490,29 +2511,29 @@ AccelerockDescription:
 	next "that hits first.@"
 
 LungeDescription:
-BreakingSwipeDescription:
+; BreakingSwipeDescription:
 	db   "An attack that"
 	next "lowers ATTACK.@"
 
-ClangingScalesDescription:
-	db   "Lowers the user's"
-	next "DEFENSE.@"
+; ClangingScalesDescription:
+	; db   "Lowers the user's"
+	; next "DEFENSE.@"
 
-ClangorousSoulDescription:
-	db   "Sacrifices HP to"
-	next "raise all stats.@"
+; ClangorousSoulDescription:
+	; db   "Sacrifices HP to"
+	; next "raise all stats.@"
 
 VacuumWaveDescription:
 	db   "A wave of vacuum"
 	next "that hits first.@"
 
-MindBlownDescription:
-	db   "Makes the user's"
-	next "own head expode.@"
+; MindBlownDescription:
+	; db   "Makes the user's"
+	; next "own head expode.@"
 
-DrumBeatingDescription:
-	db   "Controls roots"
-	next "that lower SPEED.@"
+; DrumBeatingDescription:
+	; db   "Controls roots"
+	; next "that lower SPEED.@"
 
 TailSlapDescription:
 	db   "Strikes with a"
@@ -2530,9 +2551,9 @@ GuardSwapDescription:
 	db   "Swaps changes to"
 	next "defenses with foe.@"
 
-HeartSwapDescription:
-	db   "Swaps stat changes"
-	next "with the foe.@"
+; HeartSwapDescription:
+	; db   "Swaps stat changes"
+	; next "with the foe.@"
 
 JawLockDescription:
 	db   "Stops escape for"
@@ -2547,9 +2568,9 @@ PowerTripDescription:
 	db   "Power is based on"
 	next "the user's boosts.@"
 
-TarShotDescription:
-	db   "Lowers SPEED and"
-	next "covers foe in tar.@"
+; TarShotDescription:
+	; db   "Lowers SPEED and"
+	; next "covers foe in tar.@"
 
 AppleAcidDescription:
 	db   "An attack that"
@@ -2559,13 +2580,13 @@ OctolockDescription:
 	db   "Traps the foe and"
 	next "lowers defenses.@"
 
-ChronoShiftDescription:
-	db   "Shifts time to re-"
-	next "vert stat changes.@"
+; ChronoShiftDescription:
+	; db   "Shifts time to re-"
+	; next "vert stat changes.@"
 
-CosmicWarpDescription:
-	db   "Warps space to re-"
-	next "verse move order.@"
+; CosmicWarpDescription:
+	; db   "Warps space to re-"
+	; next "verse move order.@"
 
 TeatimeDescription:
 	db   "Each #MON eats"
@@ -2575,17 +2596,17 @@ MagicPowderDescription:
 	db   "Changes the foe's"
 	next "type to PSYCHIC.@"
 
-BoltBeakDescription:
-FishiousRendDescription:
-	db   "Stronger if the"
-	next "user moves first.@"
+; BoltBeakDescription:
+; FishiousRendDescription:
+	; db   "Stronger if the"
+	; next "user moves first.@"
 
 DragonDartsDescription:
 	db   "Attacks twice"
 	next "using DREEPY.@"
 
 VoltTackleDescription:
-	db   "Hurts the user and"
+	db   "Hurts the user but"
 	next "may paralyze.@"
 
 SteelBeamDescription:
@@ -2650,4 +2671,30 @@ PurifyDescription:
 	db   "Uses foe's status"
 	next "to heal user's HP.@"
 
-		;"123456789123456789"
+EerieSpellDescription:
+	db   "An attack that"
+	next "drains PP.@"
+
+WaveCrashDescription:
+	db   "Hurts the user but"
+	next "may lower DEFENSE.@"
+
+StoneAxeDescription:
+	db   "Leaves floating"
+	next "rocks after a hit.@"
+
+TorchSongDescription:
+	db   "Raging flames that"
+	next "raise SP.ATK.@"
+
+TripleDiveDescription:
+	db   "Hits with splashes"
+	next "three times.@"
+
+FilletAwayDescription:
+	db   "Reduces own HP to"
+	next "raise stats.@"
+
+TwinBeamDescription:
+	db   "Shoots twice with"
+	next "mystical beams.@"

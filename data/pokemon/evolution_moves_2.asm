@@ -16,7 +16,7 @@ EvolutionMovePointers2::
 	dw PhandarinEvolutionMoves  ; PHANDARIN
 	dw NoEvolutionMoves2        ; WOLFROST
 	dw WarwolfEvolutionMoves    ; WARWOLF
-	dw NoEvolutionMoves2        ; GUSTELA
+	; dw NoEvolutionMoves2        ; GUSTELA
 	dw NoEvolutionMoves2        ; CHIKORITA
 	dw NoEvolutionMoves2        ; BAYLEEF
 	dw MeganiumEvolutionMoves   ; MEGANIUM

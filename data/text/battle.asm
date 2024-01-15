@@ -1685,20 +1685,16 @@ StatChangesReversedText:
 	scroll "all reversed!"
 	prompt
 
-		;"123456789123456789"
-
 ForesawAttackText:
 	text "<USER>"
 	line "foresaw an attack!"
 	prompt
 
-ChoseDestinyText:
-	text "<USER>"
-	line "chose DOOM DESIRE"
-	scroll "as its destiny!"
-	prompt
-
-		;"123456789123456789"
+; ChoseDestinyText:
+	; text "<USER>"
+	; line "chose DOOM DESIRE"
+	; scroll "as its destiny!"
+	; prompt
 
 BeatUpAttackText:
 	text_ram wStringBuffer1
@@ -1799,11 +1795,11 @@ TighteningFocusText:
 	scroll "focus!"
 	prompt
 
-StartedHeatingUpBeakText:
-	text "<USER>"
-	line "started heating up"
-	scroll "its beak!"
-	prompt
+; StartedHeatingUpBeakText:
+	; text "<USER>"
+	; line "started heating up"
+	; scroll "its beak!"
+	; prompt
 
 SetAShellTrapText:
 	text "<USER>"

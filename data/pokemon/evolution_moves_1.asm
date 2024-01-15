@@ -55,6 +55,8 @@ EvolutionMovePointers1:
 	dw ParasectEvolutionMoves    ; PARASECT
 	dw NoEvolutionMoves1         ; VENONAT
 	dw VenomothEvolutionMoves    ; VENOMOTH
+	dw NoEvolutionMoves1         ; DIGLETT
+	dw DugtrioEvolutionMoves     ; DUGTRIO
 	dw NoEvolutionMoves1         ; MEOWTH
 	dw NoEvolutionMoves1         ; MEOWTH_A
 	dw NoEvolutionMoves1         ; MEOWTH_G
@@ -189,6 +191,10 @@ KakunaEvolutionMoves:
 ButterfreeEvolutionMoves:
 VenomothEvolutionMoves:
 	dw GUST
+	db 0 ; no more evolution moves
+
+DugtrioEvolutionMoves:
+	dw SAND_TOMB
 	db 0 ; no more evolution moves
 
 BeedrillEvolutionMoves:

@@ -36,9 +36,9 @@ EggMovePointers4::
 	dw PachirisuEggMoves ; PACHIRISU
 	dw BuizelEggMoves    ; BUIZEL
 	dw NoEggMoves4       ; FLOATZEL
-	dw CherubiEggMoves   ; CHERUBI
-	dw NoEggMoves4       ; CHERRIM_OVERCAST
-	dw NoEggMoves4       ; CHERRIM_SUNSHINE
+	; dw CherubiEggMoves   ; CHERUBI
+	; dw NoEggMoves4       ; CHERRIM_OVERCAST
+	; dw NoEggMoves4       ; CHERRIM_SUNSHINE
 	dw ShellosEEggMoves  ; SHELLOS_E
 	dw ShellosWEggMoves  ; SHELLOS_W
 	dw NoEggMoves4       ; GASTRODON_E
@@ -59,8 +59,8 @@ EggMovePointers4::
 	dw BonslyEggMoves    ; BONSLY
 	dw MimeJrEggMoves    ; MIME_JR
 	dw HappinyEggMoves   ; HAPPINY
-	dw ChatotEggMoves    ; CHATOT
-	dw SpiritombEggMoves ; SPIRITOMB
+	; dw ChatotEggMoves    ; CHATOT
+	; dw SpiritombEggMoves ; SPIRITOMB
 	dw GibleEggMoves     ; GIBLE
 	dw NoEggMoves4       ; GABITE
 	dw NoEggMoves4       ; GARCHOMP
@@ -97,17 +97,17 @@ EggMovePointers4::
 	dw NoEggMoves4       ; PROBOPASS
 	dw NoEggMoves4       ; DUSKNOIR
 	dw NoEggMoves4       ; FROSLASS
-	dw NoEggMoves4       ; ROTOM
-	dw NoEggMoves4       ; UXIE
-	dw NoEggMoves4       ; MESPRIT
-	dw NoEggMoves4       ; AZELF
-	dw NoEggMoves4       ; DIALGA
-	dw NoEggMoves4       ; PALKIA
-	dw NoEggMoves4       ; REGIGIGAS
-	dw NoEggMoves4       ; GIRATINA
-	dw NoEggMoves4       ; CRESSELIA
+	; dw NoEggMoves4       ; ROTOM
+	; dw NoEggMoves4       ; UXIE
+	; dw NoEggMoves4       ; MESPRIT
+	; dw NoEggMoves4       ; AZELF
+	; dw NoEggMoves4       ; DIALGA
+	; dw NoEggMoves4       ; PALKIA
+	; dw NoEggMoves4       ; REGIGIGAS
+	; dw NoEggMoves4       ; GIRATINA
+	; dw NoEggMoves4       ; CRESSELIA
 	dw NoEggMoves4       ; DARKRAI
-	dw NoEggMoves4       ; SHAYMIN
+	; dw NoEggMoves4       ; SHAYMIN
 	dw NoEggMoves4       ; ARCEUS
 
 TurtwigEggMoves:

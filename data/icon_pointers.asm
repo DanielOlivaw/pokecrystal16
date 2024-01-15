@@ -3,7 +3,7 @@ IconPointers:
 	table_width 2, IconPointers
 	dw NullIcon
 	; dw PoliwagIcon
-	; dw DiglettIcon
+	dw DiglettIcon
 	; dw BugIcon
 	; dw EquineIcon
 	; dw VoltorbIcon
@@ -55,7 +55,7 @@ IconPointers:
 	dw HorseaIcon
 	dw StaryuIcon
 	dw ScytherIcon
-	dw BigmonIcon
+	; dw BigmonIcon
 	dw TaurosIcon
 	dw FishIcon
 	dw GyaradosIcon
@@ -129,13 +129,13 @@ IconPointers:
 	dw SnoruntIcon
 	dw TyruntIcon
 	dw ShelgonIcon
-	dw MetangIcon
-	dw RegiIcon
+	; dw MetangIcon
+	; dw RegiIcon
 	dw LatiasIcon
-	dw KyogreIcon
+	; dw KyogreIcon
 	dw GroudonIcon
-	dw RayquazaIcon
-	dw JirachiIcon
+	; dw RayquazaIcon
+	; dw JirachiIcon
 	dw DeoxysIcon
 	dw TurtwigIcon
 	; dw TorterraIcon
@@ -150,9 +150,9 @@ IconPointers:
 	dw HaxorusIcon
 	dw LucarioIcon
 	dw CroagunkIcon
-	dw MespritIcon
+	; dw MespritIcon
 	dw AurorusIcon
-	dw ShayminIcon
+	; dw ShayminIcon
 	dw ArceusIcon
 	dw RockruffIcon
 	dw VenonatIcon
@@ -181,8 +181,8 @@ IconPointers:
 	dw TyranitarIcon
 	dw PelipperIcon
 	dw AronIcon
-	dw TorkoalIcon
-	dw GrumpigIcon
+	; dw TorkoalIcon
+	; dw GrumpigIcon
 	dw TrapinchIcon
 	dw FlygonIcon
 	dw ZangooseIcon
@@ -197,8 +197,8 @@ IconPointers:
 	dw GlalieIcon
 	dw SphealIcon
 	dw SalamenceIcon
-	dw BeldumIcon
-	dw MetagrossIcon
+	; dw BeldumIcon
+	; dw MetagrossIcon
 	dw FloatzelIcon
 	dw BronzongIcon
 	dw TogekissIcon
@@ -206,18 +206,18 @@ IconPointers:
 	dw MunnaIcon
 	dw ScolipedeIcon
 	dw KrookodileIcon
-	dw ArchenIcon
+	; dw ArchenIcon
 	dw SolosisIcon
 	dw LitwickIcon
 	dw ChandelureIcon
 	dw AxewIcon
-	dw GolurkIcon
+	; dw GolurkIcon
 	dw HeatmorIcon
-	dw DeinoIcon
-	dw ZweilousIcon
-	dw HydreigonIcon
+	; dw DeinoIcon
+	; dw ZweilousIcon
+	; dw HydreigonIcon
 	dw SpewpaIcon
-	dw VolcaronaIcon
+	; dw VolcaronaIcon
 	dw ChespinIcon
 	dw ChesnaughtIcon
 	dw FennekinIcon
@@ -231,12 +231,12 @@ IconPointers:
 	dw InkayIcon
 	dw DedenneIcon
 	dw GoodraIcon
-	dw KlefkiIcon
+	; dw KlefkiIcon
 	dw BergmiteIcon
-	dw XerneasIcon
-	dw YveltalIcon
-	dw ZygardeIcon
-	dw VolcanionIcon
+	; dw XerneasIcon
+	; dw YveltalIcon
+	; dw ZygardeIcon
+	; dw VolcanionIcon
 	dw RowletIcon
 	dw DecidueyeIcon
 	dw RibombeeIcon
@@ -246,23 +246,58 @@ IconPointers:
 	dw AipomIcon
 	dw SandygastIcon
 	dw PyukumukuIcon
-	dw Type_nullIcon
-	dw SilvallyIcon
+	; dw TypeNullIcon
+	; dw SilvallyIcon
 	dw TogedemaruIcon
 	dw DhelmiseIcon
-	dw Hakamo_oIcon
-	dw NihilegoIcon
-	dw BuzzwoleIcon
-	dw PheromosaIcon
-	dw XurkitreeIcon
-	dw CelesteelaIcon
-	dw KartanaIcon
-	dw GuzzlordIcon
-	dw MagearnaIcon
-	dw StakatakaIcon
-	dw BlacephalonIcon
+	; dw HakamooIcon
+	; dw NihilegoIcon
+	; dw BuzzwoleIcon
+	; dw PheromosaIcon
+	; dw XurkitreeIcon
+	; dw CelesteelaIcon
+	; dw KartanaIcon
+	; dw GuzzlordIcon
+	; dw MagearnaIcon
+	; dw StakatakaIcon
+	; dw BlacephalonIcon
 	dw ApplinIcon
 	dw SizzlipedeIcon
 	dw ClobbopusIcon
 	dw PolteageistIcon
+	dw BlastoiseIcon
+	dw SandshrewIcon
+	dw NidokingIcon
+	dw DoduoIcon
+	dw CuboneIcon
+	dw RhyhornIcon
+	dw MagmarIcon
+	dw PinsirIcon
+	dw FurretIcon
+	dw TogeticIcon
+	dw MisdreavusIcon
+	dw WobbuffetIcon
+	dw SkarmoryIcon
+	dw StantlerIcon
+	dw ShiftryIcon
+	dw RaltsIcon
+	dw MasquerainIcon
+	dw GulpinIcon
+	dw MiloticIcon
+	dw WalreinIcon
+	dw PigniteIcon
+	dw TynamoIcon
+	dw ElgyemIcon
+	dw LampentIcon
+	dw MienshaoIcon
+	dw DruddigonIcon
+	dw FletchlingIcon
+	dw FlabebeIcon
+	dw FlorgesIcon
+	dw SpritzeeIcon
+	dw AromatisseIcon
+	dw HawluchaIcon
+	dw PumpkabooIcon
+	dw GourgeistIcon
+	dw OranguruIcon
 	assert_table_length NUM_ICONS + 1

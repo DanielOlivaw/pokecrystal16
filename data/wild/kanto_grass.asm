@@ -9,7 +9,7 @@ KantoGrassWildMons:
 	dbw 41, CARNIVINE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
-	dbw 44, KOMALA
+	dbw 44, LEDIAN
 	dbw 45, LEDIAN
 	dbw 42, PIKACHU
 	; day
@@ -17,7 +17,7 @@ KantoGrassWildMons:
 	dbw 41, CARNIVINE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
-	dbw 44, KOMALA
+	dbw 44, RIBOMBEE
 	dbw 45, RIBOMBEE
 	dbw 42, PIKACHU
 	; nite
@@ -25,8 +25,8 @@ KantoGrassWildMons:
 	dbw 41, CARNIVINE
 	dbw 43, NOCTOWL
 	dbw 45, VENOMOTH
-	dbw 44, KOMALA
-	dbw 45, SPINARAK
+	dbw 44, ARIADOS
+	dbw 45, ARIADOS
 	dbw 42, TREVENANT
 	end_grass_wildmons
 
@@ -105,13 +105,13 @@ KantoGrassWildMons:
 	dbw 38, GRAVELER_A
 	dbw 35, GRAVELER_A
 	; nite
-	dbw 36, GRAVELER_A
+	dbw 36, WOOBAT
 	dbw 37, GRAVELER_A
 	dbw 38, HAUNTER
 	dbw 41, WOOBAT
 	dbw 41, STEELIX
-	dbw 38, GOLETT
-	dbw 35, GOLETT
+	dbw 38, GRAVELER_A
+	dbw 35, GRAVELER_A
 	end_grass_wildmons
 
 	def_grass_wildmons ROCK_TUNNEL_B1F
@@ -133,13 +133,13 @@ KantoGrassWildMons:
 	dbw 42, GRAVELER_A
 	dbw 41, KANGASKHAN
 	; nite
-	dbw 38, MAROWAK
+	dbw 38, WOOBAT
 	dbw 40, GRAVELER_A
 	dbw 42, STEELIX
 	dbw 41, WOOBAT
 	dbw 41, GRAVELER_A
-	dbw 37, GOLETT
-	dbw 41, GOLETT
+	dbw 42, GRAVELER_A
+	dbw 41, GRAVELER_A
 	end_grass_wildmons
 
 	def_grass_wildmons SEAFOAM_ISLAND_1F
@@ -374,24 +374,24 @@ KantoGrassWildMons:
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
 	dbw 45, LUXRAY
-	dbw 42, PLUSLE
-	dbw 42, MINUN
+	dbw 42, WEEPINBELL
+	dbw 42, WEEPINBELL
 	; day
 	dbw 41, VIVILLON
 	dbw 41, RIBOMBEE
 	dbw 43, PIDGEOT
 	dbw 45, VIVILLON
 	dbw 45, LUXRAY
-	dbw 42, PLUSLE
-	dbw 42, MINUN
+	dbw 42, WEEPINBELL
+	dbw 42, WEEPINBELL
 	; nite
 	dbw 41, VENOMOTH
 	dbw 41, ARIADOS
 	dbw 43, NOCTOWL
 	dbw 45, VENOMOTH
 	dbw 45, LUXRAY
-	dbw 42, NOCTOWL
-	dbw 42, NOCTOWL
+	dbw 42, WEEPINBELL
+	dbw 42, WEEPINBELL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_3
@@ -401,7 +401,7 @@ KantoGrassWildMons:
 	dbw 40, MIENFOO
 	dbw 38, ARBOK
 	dbw 40, PRIMEAPE
-	dbw 40, GRUMPIG
+	dbw 40, LUXRAY
 	dbw 40, ARBOK
 	dbw 40, SANDSLASH
 	; day
@@ -409,7 +409,7 @@ KantoGrassWildMons:
 	dbw 40, MIENFOO
 	dbw 38, ARBOK
 	dbw 40, PRIMEAPE
-	dbw 40, GRUMPIG
+	dbw 40, LUXRAY
 	dbw 40, ARBOK
 	dbw 40, SANDSLASH
 	; nite
@@ -417,7 +417,7 @@ KantoGrassWildMons:
 	dbw 38, LIEPARD
 	dbw 38, GOLBAT
 	dbw 40, PRIMEAPE
-	dbw 42, GRUMPIG
+	dbw 42, LUXRAY
 	dbw 40, GOLBAT
 	dbw 36, CLEFAIRY
 	end_grass_wildmons
@@ -429,7 +429,7 @@ KantoGrassWildMons:
 	dbw 40, MIENFOO
 	dbw 38, ARBOK
 	dbw 40, PRIMEAPE
-	dbw 40, GRUMPIG
+	dbw 40, LUXRAY
 	dbw 40, ARBOK
 	dbw 40, SANDSLASH
 	; day
@@ -437,7 +437,7 @@ KantoGrassWildMons:
 	dbw 40, MIENFOO
 	dbw 38, ARBOK
 	dbw 40, PRIMEAPE
-	dbw 40, GRUMPIG
+	dbw 40, LUXRAY
 	dbw 40, ARBOK
 	dbw 40, SANDSLASH
 	; nite
@@ -445,7 +445,7 @@ KantoGrassWildMons:
 	dbw 38, LIEPARD
 	dbw 38, GOLBAT
 	dbw 40, PRIMEAPE
-	dbw 42, GRUMPIG
+	dbw 42, LUXRAY
 	dbw 40, GOLBAT
 	dbw 36, CLEFAIRY
 	end_grass_wildmons
@@ -483,7 +483,7 @@ KantoGrassWildMons:
 	; morn
 	dbw 35, GLAMEOW
 	dbw 35, GRANBULL
-	dbw 36, KLEFKI
+	dbw 36, TADBULB
 	dbw 38, PURUGLY
 	dbw 34, MILCERY
 	dbw 35, MILCERY
@@ -491,7 +491,7 @@ KantoGrassWildMons:
 	; day
 	dbw 35, GLAMEOW
 	dbw 35, GRANBULL
-	dbw 36, KLEFKI
+	dbw 36, TADBULB
 	dbw 38, PURUGLY
 	dbw 34, MILCERY
 	dbw 35, MILCERY
@@ -499,7 +499,7 @@ KantoGrassWildMons:
 	; nite
 	dbw 35, LIEPARD
 	dbw 35, HYPNO
-	dbw 36, KLEFKI
+	dbw 36, TADBULB
 	dbw 38, GOLDUCK
 	dbw 34, MILCERY
 	dbw 35, MILCERY
@@ -626,24 +626,24 @@ KantoGrassWildMons:
 	dbw 36, TADBULB
 	dbw 34, FLETCHINDR
 	dbw 32, SAWSBUCK
-	dbw 32, HONEDGE
-	dbw 34, HONEDGE
+	dbw 32, FLETCHINDR
+	dbw 34, FLETCHINDR
 	; day
 	dbw 34, JUMPLUFF
 	dbw 34, LINOONE
 	dbw 36, TADBULB
 	dbw 34, FLETCHINDR
 	dbw 32, SAWSBUCK
-	dbw 32, HONEDGE
-	dbw 34, HONEDGE
+	dbw 32, FLETCHINDR
+	dbw 34, FLETCHINDR
 	; nite
 	dbw 34, HYPNO
 	dbw 34, CHIMEOW
 	dbw 36, TADBULB
 	dbw 34, NOCTOWL
-	dbw 32, HONEDGE
-	dbw 32, HONEDGE
-	dbw 34, HONEDGE
+	dbw 32, CHIMEOW
+	dbw 32, NOCTOWL
+	dbw 34, NOCTOWL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_13
@@ -734,7 +734,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 37, GRIMER
 	dbw 39, SKUNTANK
 	dbw 37, SKUNTANK
@@ -742,7 +742,7 @@ KantoGrassWildMons:
 	dbw 40, MUK
 	; day
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 37, GRIMER
 	dbw 39, SKUNTANK
 	dbw 37, SLUGMA
@@ -750,7 +750,7 @@ KantoGrassWildMons:
 	dbw 40, MUK
 	; nite
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, MURKROW
 	dbw 37, GRIMER
 	dbw 39, MURKROW
 	dbw 37, MURKROW
@@ -762,7 +762,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 37, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 40, MUK
 	dbw 41, SCRAFTY
 	dbw 42, SCRAFTY
@@ -770,7 +770,7 @@ KantoGrassWildMons:
 	dbw 41, MUK
 	; day
 	dbw 37, SLUGMA
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 40, MUK
 	dbw 41, SCRAFTY
 	dbw 42, MAGCARGO
@@ -778,7 +778,7 @@ KantoGrassWildMons:
 	dbw 41, MUK
 	; nite
 	dbw 37, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, MURKROW
 	dbw 40, MUK
 	dbw 41, SCRAFTY
 	dbw 42, SCRAFTY
@@ -790,7 +790,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 37, GRIMER
 	dbw 39, SKUNTANK
 	dbw 37, SKUNTANK
@@ -798,7 +798,7 @@ KantoGrassWildMons:
 	dbw 40, MUK
 	; day
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, FLETCHINDR
 	dbw 37, GRIMER
 	dbw 39, SKUNTANK
 	dbw 37, SLUGMA
@@ -806,7 +806,7 @@ KantoGrassWildMons:
 	dbw 40, MUK
 	; nite
 	dbw 36, GRIMER
-	dbw 39, PAWNIARD
+	dbw 39, MURKROW
 	dbw 37, GRIMER
 	dbw 39, MURKROW
 	dbw 37, MURKROW
@@ -991,7 +991,7 @@ KantoGrassWildMons:
 	dbw 50, HEATMOR
 	dbw 49, COPPERAJAH
 	dbw 51, COPPERAJAH
-	dbw 46, LARVESTA
+	dbw 51, DODRIO
 	; day
 	dbw 50, GOGOAT
 	dbw 52, RAPIDASH
@@ -999,15 +999,15 @@ KantoGrassWildMons:
 	dbw 50, HEATMOR
 	dbw 49, COPPERAJAH
 	dbw 51, COPPERAJAH
-	dbw 46, LARVESTA
+	dbw 51, DODRIO
 	; nite
 	dbw 50, GOGOAT
 	dbw 52, GOLDUCK
 	dbw 49, DURANT
 	dbw 50, DRAPION
 	dbw 49, GOLBAT
-	dbw 51, GOLBAT
-	dbw 42, DEINO
+	dbw 51, WARWOLF
+	dbw 49, WARWOLF
 	end_grass_wildmons
 
 	db -1 ; end

@@ -10,9 +10,9 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; OSHAWOTT
 	dw NoEvolutionMoves5         ; DEWOTT
 	dw SamurottEvolutionMoves    ; SAMUROTT
-	dw NoEvolutionMoves5         ; LILLIPUP
-	dw NoEvolutionMoves5         ; HERDIER
-	dw NoEvolutionMoves5         ; STOUTLAND
+	; dw NoEvolutionMoves5         ; LILLIPUP
+	; dw NoEvolutionMoves5         ; HERDIER
+	; dw NoEvolutionMoves5         ; STOUTLAND
 	dw NoEvolutionMoves5         ; PURRLOIN
 	dw NoEvolutionMoves5         ; LIEPARD
 	dw NoEvolutionMoves5         ; MUNNA
@@ -26,16 +26,16 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; TIMBURR
 	dw NoEvolutionMoves5         ; GURDURR
 	dw ConkeldurrEvolutionMoves  ; CONKELDURR
-	dw NoEvolutionMoves5         ; SEWADDLE
-	dw SwadloonEvolutionMoves    ; SWADLOON
-	dw LeavannyEvolutionMoves    ; LEAVANNY
+	; dw NoEvolutionMoves5         ; SEWADDLE
+	; dw SwadloonEvolutionMoves    ; SWADLOON
+	; dw LeavannyEvolutionMoves    ; LEAVANNY
 	dw NoEvolutionMoves5         ; VENIPEDE
 	dw WhirlipedeEvolutionMoves  ; WHIRLIPEDE
 	dw ScolipedeEvolutionMoves   ; SCOLIPEDE
 	dw NoEvolutionMoves5         ; COTTONEE
 	dw WhimsicottEvolutionMoves  ; WHIMSICOTT
-	dw NoEvolutionMoves5         ; PETILIL
-	dw LilligantEvolutionMoves   ; LILLIGANT
+	; dw NoEvolutionMoves5         ; PETILIL
+	; dw LilligantEvolutionMoves   ; LILLIGANT
 	dw NoEvolutionMoves5         ; BASCULIN_R
 	dw NoEvolutionMoves5         ; BASCULIN_B
 	dw NoEvolutionMoves5         ; BASCULIN_W
@@ -46,7 +46,7 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; DARUMAKA_G
 	dw DarmanitanEvolutionMoves  ; DARMANITAN
 	dw DarmanitanGEvolutionMoves ; DARMANITAN_G
-	dw NoEvolutionMoves5         ; MARACTUS
+	; dw NoEvolutionMoves5         ; MARACTUS
 	dw NoEvolutionMoves5         ; DWEBBLE
 	dw NoEvolutionMoves5         ; CRUSTLE
 	dw NoEvolutionMoves5         ; SCRAGGY
@@ -55,8 +55,8 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; YAMASK_G
 	dw NoEvolutionMoves5         ; TIRTOUGA
 	dw NoEvolutionMoves5         ; CARRACOSTA
-	dw NoEvolutionMoves5         ; ARCHEN
-	dw NoEvolutionMoves5         ; ARCHEOPS
+	; dw NoEvolutionMoves5         ; ARCHEN
+	; dw NoEvolutionMoves5         ; ARCHEOPS
 	dw NoEvolutionMoves5         ; ZORUA
 	dw ZoroarkEvolutionMoves     ; ZOROARK
 	dw NoEvolutionMoves5         ; SOLOSIS
@@ -87,19 +87,19 @@ EvolutionMovePointers5::
 	dw NoEvolutionMoves5         ; MIENFOO
 	dw MienshaoEvolutionMoves    ; MIENSHAO
 	dw NoEvolutionMoves5         ; DRUDDIGON
-	dw NoEvolutionMoves5         ; GOLETT
-	dw GolurkEvolutionMoves      ; GOLURK
-	dw NoEvolutionMoves5         ; PAWNIARD
-	dw BisharpEvolutionMoves     ; BISHARP
+	; dw NoEvolutionMoves5         ; GOLETT
+	; dw GolurkEvolutionMoves      ; GOLURK
+	; dw NoEvolutionMoves5         ; PAWNIARD
+	; dw BisharpEvolutionMoves     ; BISHARP
 	dw NoEvolutionMoves5         ; VULLABY
 	dw MandibuzzEvolutionMoves   ; MANDIBUZZ
 	dw NoEvolutionMoves5         ; HEATMOR
 	dw NoEvolutionMoves5         ; DURANT
-	dw NoEvolutionMoves5         ; DEINO
-	dw ZweilousEvolutionMoves    ; ZWEILOUS
-	dw HydreigonEvolutionMoves   ; HYDREIGON
-	dw NoEvolutionMoves5         ; LARVESTA
-	dw VolcaronaEvolutionMoves   ; VOLCARONA
+	; dw NoEvolutionMoves5         ; DEINO
+	; dw ZweilousEvolutionMoves    ; ZWEILOUS
+	; dw HydreigonEvolutionMoves   ; HYDREIGON
+	; dw NoEvolutionMoves5         ; LARVESTA
+	; dw VolcaronaEvolutionMoves   ; VOLCARONA
 
 SerperiorEvolutionMoves:
 	dw DRAGON_TAIL

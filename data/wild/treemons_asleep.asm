@@ -23,7 +23,7 @@ AsleepTreeMonsNite:
 	dw WORMADAM_TRASH
 	dw CRABRAWLER
 	dw ORANGURU
-	dw PASSIMIAN
+	; dw PASSIMIAN
 	dw APPLIN
 	dw MUNCHLAX
 	dw -1 ; end

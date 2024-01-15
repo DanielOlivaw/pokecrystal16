@@ -21,7 +21,7 @@ prob_total = 0
 ; Wynaut
 	prob 7
 ; Budew
-	prob 7
+	prob 6
 ; Chingling
 	prob 7
 ; Bonsly
@@ -36,8 +36,8 @@ prob_total = 0
 	prob 6
 ; Mantyke
 	prob 7
-; Toxel
-	prob 6
+; Magby
+	prob 7
 	assert_table_length NUM_ODD_EGGS
 
 OddEggSpecies:
@@ -55,7 +55,7 @@ OddEggSpecies:
 	dw MUNCHLAX
 	dw RIOLU
 	dw MANTYKE
-	dw TOXEL
+	dw MAGBY
 
 OddEggMoves:
 	dw THUNDERSHOCK, TAIL_WHIP, PLAY_NICE, METRONOME ; PICHU
@@ -72,7 +72,7 @@ OddEggMoves:
 	dw TACKLE, DEFENSE_CURL, LICK, METRONOME         ; MUNCHLAX
 	dw QUICK_ATTACK, ENDURE, FEINT, METRONOME        ; RIOLU
 	dw TACKLE, BUBBLE, SUPERSONIC, METRONOME         ; MANTYKE
-	dw GROWL, FLAIL, ACID, METRONOME                 ; TOXEL
+	dw SMOG, LEER, EMBER, METRONOME                  ; MAGBY
 
 OddEggs:
 
@@ -482,12 +482,12 @@ OddEggs:
 	bigdw 18 ; SDef
 	db "EGG@@@@@@@@"
 
-	; TOXEL
+	; MAGBY
 	db 0 ; Species, will be filled on load
 	db NO_ITEM
 	db 0, 0, 0, 0 ; Moves, will be filled on load
-	dw 00848 ; OT ID
-	dt 135 ; Exp
+	dw 00239 ; OT ID
+	dt 125 ; Exp
 	;; Stat exp
 	; bigdw 0
 	; bigdw 0
@@ -497,16 +497,16 @@ OddEggs:
 	db 0, 0, 0, 0, 0, 0 ; EVs
 	db 0, 0, 0, 0 ; padding
 	dn 2, 10, 10, 10 ; DVs
-	db 40, 15, 30, 10 ; PP
+	db 30, 30, 30, 10 ; PP
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
 	db 0, 0 ; Status
 	bigdw 0 ; HP
 	bigdw 20 ; Max HP
-	bigdw 10 ; Atk
-	bigdw 9 ; Def
-	bigdw 10 ; Spd
-	bigdw 10; SAtk
-	bigdw 8 ; SDef
+	bigdw 12 ; Atk
+	bigdw 10 ; Def
+	bigdw 15 ; Spd
+	bigdw 12 ; SAtk
+	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"

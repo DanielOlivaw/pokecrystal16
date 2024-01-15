@@ -24,14 +24,14 @@ TreeMonSet_City: ; New Bark Town, Violet City, Ecruteak City, Mahogany Town
 ; common
 	dbbw 34, 10, HOOTHOOT
 	dbbw 30, 10, BURMY_TRASH
-	dbbw 20, 10, CHERUBI
+	dbbw 20, 10, APPLIN
 	dbbw 15, 10, LEDYBA
 	dbbw  1, 10, MUNCHLAX
 	db -1        
 ; rare
 	dbbw 24, 10, HOOTHOOT
 	dbbw 20, 10, BURMY_TRASH
-	dbbw 30, 10, CHERUBI
+	dbbw 30, 10, APPLIN
 	dbbw 25, 10, LEDYBA
 	dbbw  1, 10, MUNCHLAX
 	db -1        
@@ -138,21 +138,19 @@ TreeMonSet_Forest: ; Ilex Forest
 
 TreeMonSet_KantoForest: ; Viridian Forest
 ; common
-	dbbw 29, 40, NOCTOWL
-	dbbw 25, 40, SEEDOT
+	dbbw 34, 40, NOCTOWL
+	dbbw 30, 40, SEEDOT
 	dbbw 15, 40, VIVILLON
 	dbbw 10, 40, SHROOMISH
 	dbbw 10, 40, ORANGURU
-	dbbw 10, 40, PASSIMIAN
 	dbbw  1, 40, MUNCHLAX
 	db -1
 ; rare
 	dbbw 24, 40, NOCTOWL
 	dbbw 20, 40, SEEDOT
-	dbbw 10, 40, VIVILLON
-	dbbw  5, 40, SHROOMISH
-	dbbw 20, 40, ORANGURU
-	dbbw 20, 40, PASSIMIAN
+	dbbw 15, 40, VIVILLON
+	dbbw 10, 40, SHROOMISH
+	dbbw 30, 40, ORANGURU
 	dbbw  1, 40, MUNCHLAX
 	db -1
                  

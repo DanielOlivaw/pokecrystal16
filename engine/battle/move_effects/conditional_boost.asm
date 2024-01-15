@@ -36,8 +36,9 @@ ConditionalBoostMoves:
 	dww ROUND_M, 		BattleCommand_Round
 	dww SHATTER_CLAW, 	BattleCommand_ShatterClaw
 	dww VENOSHOCK, 		BattleCommand_Venoshock
-	dww BOLT_BEAK, 		BattleCommand_BoltBeak
-	dww FISHIOUS_REND, 	BattleCommand_BoltBeak
+	dww BARB_BARRAGE, 	BattleCommand_Venoshock
+	; dww BOLT_BEAK, 		BattleCommand_BoltBeak
+	; dww FISHIOUS_REND, 	BattleCommand_BoltBeak
 ; Moves with EFFECT_COND_BOOST_FLINCH
 	dww DRAGON_RUSH, 	BattleCommand_DoubleMinimizeDamage
 	dww GUST, 			BattleCommand_DoubleFlyingDamage

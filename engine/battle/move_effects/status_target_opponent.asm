@@ -47,6 +47,6 @@ StatusTargetOpponentMoves:
 	dww SPEED_SWAP,   BattleCommand_SpeedSwap
 	dww POWER_SWAP,   BattleCommand_PowerSwap
 	dww GUARD_SWAP,   BattleCommand_GuardSwap
-	dww HEART_SWAP,   BattleCommand_HeartSwap
+	; dww HEART_SWAP,   BattleCommand_HeartSwap
 	dww PURIFY,       BattleCommand_Purify
 	db -1 ; end

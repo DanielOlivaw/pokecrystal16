@@ -23,15 +23,15 @@ EggMovePointers6::
 	dw NoEggMoves6
 	dw PanchamEggMoves
 	dw NoEggMoves6
-	dw EspurrEggMoves
-	dw NoEggMoves6
-	dw HonedgeEggMoves
-	dw NoEggMoves6
-	dw NoEggMoves6
+	; dw EspurrEggMoves
+	; dw NoEggMoves6
+	; dw HonedgeEggMoves
+	; dw NoEggMoves6
+	; dw NoEggMoves6
 	dw SpritzeeEggMoves
 	dw NoEggMoves6
-	dw SwirlixEggMoves
-	dw NoEggMoves6
+	; dw SwirlixEggMoves
+	; dw NoEggMoves6
 	dw InkayEggMoves
 	dw NoEggMoves6
 	dw BinacleEggMoves
@@ -53,18 +53,18 @@ EggMovePointers6::
 	dw NoEggMoves6
 	dw NoEggMoves6
 	dw NoEggMoves6
-	dw KlefkiEggMoves
+	; dw KlefkiEggMoves
 	dw PhantumpEggMoves
 	dw NoEggMoves6
 	dw PumpkabooEggMoves
 	dw NoEggMoves6
 	dw BergmiteEggMoves
 	dw NoEggMoves6
+	; dw NoEggMoves6
+	; dw NoEggMoves6
+	; dw NoEggMoves6
 	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
+	; dw NoEggMoves6
 
 ChespinEggMoves:
 	dw BELLY_DRUM

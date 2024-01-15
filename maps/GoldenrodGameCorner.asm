@@ -3,7 +3,7 @@ GOLDENRODGAMECORNER_TM25_COINS EQU 3500
 GOLDENRODGAMECORNER_TM38_COINS EQU 3500
 GOLDENRODGAMECORNER_ABRA_COINS   EQU 100
 GOLDENRODGAMECORNER_CUBONE_COINS EQU 800
-GOLDENRODGAMECORNER_BELDUM_COINS EQU 2100
+GOLDENRODGAMECORNER_DRATINI_COINS EQU 2100
 
 	object_const_def ; object_event constants
 	const GOLDENRODGAMECORNER_CLERK
@@ -183,7 +183,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal 1, .Abra
 	ifequal 2, .Cubone
-	ifequal 3, .Beldum
+	ifequal 3, .Dratini
 	sjump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
 .Abra:
@@ -222,22 +222,22 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	takecoins GOLDENRODGAMECORNER_CUBONE_COINS
 	sjump .loop
 
-.Beldum:
-	checkcoins GOLDENRODGAMECORNER_BELDUM_COINS
+.Dratini:
+	checkcoins GOLDENRODGAMECORNER_DRATINI_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	getmonname STRING_BUFFER_3, BELDUM
+	getmonname STRING_BUFFER_3, DRATINI
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	loadmonindex 3, BELDUM
+	loadmonindex 3, DRATINI
 	special GameCornerPrizeMonCheckDex
-	givepoke BELDUM, 15
-	takecoins GOLDENRODGAMECORNER_BELDUM_COINS
+	givepoke DRATINI, 15
+	takecoins GOLDENRODGAMECORNER_DRATINI_COINS
 	sjump .loop
 
 .MenuHeader:
@@ -251,7 +251,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "ABRA        100@"
 	db "CUBONE      800@"
-	db "BELDUM     2100@"
+	db "DRATINI    2100@"
 	db "CANCEL@"
 
 GoldenrodGameCornerPharmacistScript:

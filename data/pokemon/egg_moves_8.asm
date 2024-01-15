@@ -1,34 +1,34 @@
 SECTION "Egg Moves 8", ROMX
 
 EggMovePointers8::
-	dw GrookeyEggMoves    ; GROOKEY
-	dw NoEggMoves8        ; THWACKEY
-	dw NoEggMoves8        ; RILLABOOM
-	dw RookideeEggMoves   ; ROOKIDEE
-	dw NoEggMoves8        ; CORVSQUIRE
-	dw NoEggMoves8        ; CORVKNIGHT
-	dw BlipbugEggMoves    ; BLIPBUG
-	dw NoEggMoves8        ; DOTTLER
-	dw NoEggMoves8        ; ORBEETLE
+	; dw GrookeyEggMoves    ; GROOKEY
+	; dw NoEggMoves8        ; THWACKEY
+	; dw NoEggMoves8        ; RILLABOOM
+	; dw RookideeEggMoves   ; ROOKIDEE
+	; dw NoEggMoves8        ; CORVSQUIRE
+	; dw NoEggMoves8        ; CORVKNIGHT
+	; dw BlipbugEggMoves    ; BLIPBUG
+	; dw NoEggMoves8        ; DOTTLER
+	; dw NoEggMoves8        ; ORBEETLE
 	dw NickitEggMoves     ; NICKIT
 	dw NoEggMoves8        ; THIEVUL
 	dw GossifleurEggMoves ; GOSSIFLEUR
 	dw NoEggMoves8        ; ELDEGOSS
-	dw WoolooEggMoves     ; WOOLOO
-	dw NoEggMoves8        ; DUBWOOL
+	; dw WoolooEggMoves     ; WOOLOO
+	; dw NoEggMoves8        ; DUBWOOL
 	dw ChewtleEggMoves    ; CHEWTLE
 	dw NoEggMoves8        ; DREDNAW
-	dw RolycolyEggMoves   ; ROLYCOLY
-	dw NoEggMoves8        ; CARKOL
-	dw NoEggMoves8        ; COALOSSAL
+	; dw RolycolyEggMoves   ; ROLYCOLY
+	; dw NoEggMoves8        ; CARKOL
+	; dw NoEggMoves8        ; COALOSSAL
 	dw ApplinEggMoves     ; APPLIN
 	dw NoEggMoves8        ; FLAPPLE
 	dw NoEggMoves8        ; APPLETUN
 	dw ArrokudaEggMoves   ; ARROKUDA
 	dw NoEggMoves8        ; BARASKEWDA
-	dw ToxelEggMoves      ; TOXEL
-	dw NoEggMoves8        ; TOXTRICITY_AMPED
-	dw NoEggMoves8        ; TOXTRICITY_LOWKEY
+	; dw ToxelEggMoves      ; TOXEL
+	; dw NoEggMoves8        ; TOXTRICITY_AMPED
+	; dw NoEggMoves8        ; TOXTRICITY_LOWKEY
 	dw SizzlipedeEggMoves ; SIZZLIPEDE
 	dw NoEggMoves8        ; CENTISKRCH
 	dw ClobbopusEggMoves  ; CLOBBOPUS
@@ -46,24 +46,24 @@ EggMovePointers8::
 	dw NoEggMoves8        ; RUNERIGUS
 	dw MilceryEggMoves    ; MILCERY
 	dw NoEggMoves8        ; ALCREMIE
-	dw NoEggMoves8        ; FALINKS
+	; dw NoEggMoves8        ; FALINKS
 	dw PincurchinEggMoves ; PINCURCHIN
 	dw SnomEggMoves       ; SNOM
 	dw NoEggMoves8        ; FROSMOTH
-	dw StonjournrEggMoves ; STONJOURNR
+	; dw StonjournrEggMoves ; STONJOURNR
 	dw EiscueEggMoves     ; EISCUE
 	dw CufantEggMoves     ; CUFANT
 	dw NoEggMoves8        ; COPPERAJAH
-	dw NoEggMoves8        ; DRACOZOLT
-	dw NoEggMoves8        ; ARCTOZOLT
-	dw NoEggMoves8        ; DRACOVISH
-	dw NoEggMoves8        ; ARCTOVISH
-	dw DuraludonEggMoves  ; DURALUDON
+	; dw NoEggMoves8        ; DRACOZOLT
+	; dw NoEggMoves8        ; ARCTOZOLT
+	; dw NoEggMoves8        ; DRACOVISH
+	; dw NoEggMoves8        ; ARCTOVISH
+	; dw DuraludonEggMoves  ; DURALUDON
 	dw DreepyEggMoves     ; DREEPY
 	dw NoEggMoves8        ; DRAKLOAK
 	dw NoEggMoves8        ; DRAGAPULT
-	dw NoEggMoves8        ; REGIELEKI
-	dw NoEggMoves8        ; REGIDRAGO
+	; dw NoEggMoves8        ; REGIELEKI
+	; dw NoEggMoves8        ; REGIDRAGO
 	dw NoEggMoves8        ; WYRDEER
 	dw NoEggMoves8        ; KLEAVOR
 	dw NoEggMoves8        ; URSALUNA
@@ -79,8 +79,8 @@ EggMovePointers8::
 	dw NoEggMoves8        ; BELLIBOLT
 	dw WiglettEggMoves    ; WIGLETT
 	dw NoEggMoves8        ; WUGTRIO
-	dw GlimmetEggMoves    ; GLIMMET
-	dw NoEggMoves8        ; GLIMMORA
+	; dw GlimmetEggMoves    ; GLIMMET
+	; dw NoEggMoves8        ; GLIMMORA
 	dw GreavardEggMoves   ; GREAVARD
 	dw NoEggMoves8        ; HOUNDSTONE
 	dw FlamigoEggMoves    ; FLAMIGO
@@ -90,7 +90,7 @@ EggMovePointers8::
 	dw TatsugiriEggMoves  ; TATSUGIRI_STRETCHY
 	dw NoEggMoves8        ; CLODSIRE
 	dw NoEggMoves8        ; FARIGIRAF
-	dw NoEggMoves8        ; WO_CHIEN
+	; dw NoEggMoves8        ; WO_CHIEN
 
 GrookeyEggMoves:
 	dw FAKE_OUT
@@ -332,7 +332,7 @@ GreavardEggMoves:
 	dw -1 ; end
 
 FlamigoEggMoves:
-	dw POUNCE
+	; dw POUNCE
 	dw LIQUIDATION
 	dw HURRICANE
 	dw SKY_ATTACK

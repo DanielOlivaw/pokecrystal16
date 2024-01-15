@@ -48,8 +48,8 @@ FishGroups:
 .Shore_Super:
 	dbbw  40 percent,     40, KINGLER
 	dbbw  65 percent,      1, TIME_GROUP ; CORSOLA, STARYU
-	dbbw  90 percent + 1, 40, CLAMPERL
-	dbbw 100 percent,     40, MAREANIE
+	dbbw  95 percent + 1, 40, CLAMPERL
+	dbbw 100 percent,     40, DHELMISE
 
 ; New Bark Town, Pallet Town, Vermilion City, Cinnabar Island, Route 41, 27, 26, 20, & 21
 .Ocean_Old:
@@ -65,7 +65,7 @@ FishGroups:
 	dbbw  90 percent + 1, 20, SKRELP
 	dbbw 100 percent,      2, TIME_GROUP ; SHELLDER, SHELLDER
 .Ocean_Super:
-	dbbw  20 percent,     40, ANCHORRAGE
+	dbbw  20 percent,     40, ANGORE
 	dbbw  35 percent,     40, LANTURN
 	dbbw  50 percent,      3, TIME_GROUP ; SHELLDER, SHELLDER
 	dbbw  65 percent,     40, WAILMER

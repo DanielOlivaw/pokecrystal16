@@ -26,8 +26,8 @@ FalknerGroup:
 	next_list_item ; FALKNER (2)
 	db "FALKNER@", TRAINERTYPE_MOVES
 	db 50
-	dw CORVKNIGHT
-	dw BRAVE_BIRD, STEEL_WING, HONE_CLAWS, ATTRACT
+	dw DODRIO
+	dw DRILL_PECK, LUNGE, ACUPRESSURE, FACADE
 	db 52
 	dw NOCTOWL
 	dw MOONBLAST, ROOST, AIR_SLASH, SHADOW_BALL
@@ -248,12 +248,12 @@ JasmineGroup:
 	dw STEELIX
 	dw ICE_FANG, ROCK_SLIDE, STEALTH_ROCK, IRON_TAIL
 	db -1 ; end
-	
+
 	next_list_item ; JASMINE (2)
 	db "JASMINE@", TRAINERTYPE_MOVES
 	db 52
-	dw METAGROSS
-	dw METEOR_MASH, MAGNET_RISE, BULLET_PUNCH, EXPLOSION
+	dw GOODRA_H
+	dw FLASH_CANNON, ACID_SPRAY, DRAGON_PULSE, WATER_PULSE
 	db 56
 	dw MAGNEZONE
 	dw METAL_SOUND, MIRROR_COAT, LOCK_ON, ZAP_CANNON
@@ -545,9 +545,9 @@ BrockGroup:
 	db GOLD_BERRY
 	dw STEALTH_ROCK, ROCK_SLIDE, EARTHQUAKE, SANDSTORM
 	db 54
-	dw RELICANTH
+	dw OMASTAR
 	db MIRACLEBERRY
-	dw HEAD_SMASH, AQUA_TAIL, EARTHQUAKE, REST
+	dw SHELL_SMASH, ICE_BEAM, SURF, REST
 	db 56
 	dw RHYPERIOR
 	db NO_ITEM
@@ -924,7 +924,7 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (6)
 	db "TOMMY@", TRAINERTYPE_NORMAL
 	db 42
-	dw GRUMPIG
+	dw SIGILYPH
 	db 44
 	dw REUNICLUS
 	db -1 ; end
@@ -1156,11 +1156,11 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (6)
 	db "DENIS@", TRAINERTYPE_NORMAL
 	db 20
-	dw ROOKIDEE
+	dw STARAVIA
 	db 22
 	dw SKARMORY
 	db 20
-	dw ROOKIDEE
+	dw STARAVIA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (7)
@@ -1448,8 +1448,8 @@ JanineGroup:
 	dw ROSERADE
 	dw DAZZLING_GLEAM, VENOSHOCK, TOXIC_SPIKES, GIGA_DRAIN
 	db 47
-	dw GLIMMORA
-	dw POWER_GEM, VENOSHOCK, SANDSTORM, MORTAL_SPIN
+	dw ARIADOS
+	dw SWORDS_DANCE, CROSS_POISON, SUCKER_PUNCH, SHADOW_SNEAK
 	db 47
 	dw DRAPION
 	dw PURSUIT, TOXIC_SPIKES, CROSS_POISON, KNOCK_OFF
@@ -1464,17 +1464,17 @@ JanineGroup:
 	next_list_item ; JANINE (2)
 	db "JANINE@", TRAINERTYPE_ITEM_MOVES
 	db 52
-	dw GLIMMORA
+	dw ROSERADE
 	db NO_ITEM
-	dw STEALTH_ROCK, SPIKY_SHIELD, SANDSTORM, MORTAL_SPIN
+	dw DAZZLING_GLEAM, VENOSHOCK, TOXIC_SPIKES, GIGA_DRAIN
 	db 52
 	dw TOXICROAK
 	db NO_ITEM
 	dw SWAGGER, POISON_JAB, TOXIC, REVENGE
 	db 56
-	dw ROSERADE
+	dw SLOWBRO_G
 	db NO_ITEM
-	dw DAZZLING_GLEAM, VENOSHOCK, TOXIC_SPIKES, GIGA_DRAIN
+	dw PSYCHIC_M, SHELL_SIDE_ARM, SLACK_OFF, WATER_PULSE
 	db 58
 	dw ARIADOS
 	db NO_ITEM
@@ -1551,8 +1551,8 @@ CooltrainerMGroup:
 	dw WARWOLF
 	dw WILD_FURY, SHATTER_CLAW, NIGHT_SLASH, MOONLIGHT
 	db 45
-	dw AEGISLASH
-	dw IRON_HEAD, RETALIATE, KINGS_SHIELD, SHADOW_SNEAK
+	dw MEDICHAM
+	dw HI_JUMP_KICK, HIDDEN_POWER, ZEN_HEADBUTT, ACUPRESSURE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (7)
@@ -1570,9 +1570,9 @@ CooltrainerMGroup:
 	db NO_ITEM
 	dw WILD_FURY, SHATTER_CLAW, NIGHT_SLASH, CONFUSE_RAY
 	db 49
-	dw AEGISLASH
+	dw MEDICHAM
 	db KINGS_ROCK
-	dw IRON_HEAD, RETALIATE, KINGS_SHIELD, SHADOW_SNEAK
+	dw HI_JUMP_KICK, THUNDERPUNCH, ZEN_HEADBUTT, ACUPRESSURE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (8)
@@ -1600,8 +1600,8 @@ CooltrainerMGroup:
 	dw BEARTIC
 	dw SHATTER_CLAW, FROST_BREATH, AQUA_JET, CHARM
 	db 37
-	dw PASSIMIAN
-	dw THRASH, BEAT_UP, BULK_UP, BRICK_BREAK
+	dw HOUNDSTONE
+	dw PLAY_ROUGH, CRUNCH, DIG, ROAR
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (10)
@@ -1613,8 +1613,8 @@ CooltrainerMGroup:
 	dw CRAWDAUNT
 	dw RAZOR_SHELL, SWIFT, NIGHT_SLASH, PROTECT
 	db 38
-	dw DOUBLADE
-	dw DUAL_CHOP, RETALIATE, AERIAL_ACE, SHADOW_SNEAK
+	dw MEDICHAM
+	dw HI_JUMP_KICK, HIDDEN_POWER, CALM_MIND, ACUPRESSURE
 	db 38
 	dw WARWOLF
 	dw WILD_FURY, AVALANCHE, SLASH, MOONLIGHT
@@ -1707,8 +1707,8 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (21)
 	db "BONITA@", TRAINERTYPE_MOVES
 	db 50
-	dw KLEFKI
-	dw SPIKES, METAL_SOUND, LIGHT_SCREEN, FLASH_CANNON
+	dw DEDENNE
+	dw NUZZLE, VOLT_SWITCH, CHARM, SUPER_FANG
 	db 50
 	dw DRAKLOAK
 	dw INFESTATION, U_TURN, DRAGON_PULSE, QUICK_ATTACK
@@ -1726,8 +1726,8 @@ CooltrainerMGroup:
 	dw PORYGON2
 	dw RECOVER, TRI_ATTACK, DISCHARGE, SIGNAL_BEAM
 	db 50
-	dw GOLURK
-	dw HAMMER_ARM, HEAVY_SLAM, PHANTOM_FORCE, IRON_DEFENSE
+	dw CLODSIRE
+	dw TOXIC, MEGAHORN, POISON_JAB, DIG
 	db 52
 	dw TAUROS
 	dw PAYBACK, ZEN_HEADBUTT, DOUBLE_EDGE, SWAGGER
@@ -1864,7 +1864,7 @@ CooltrainerFGroup:
 	db 52
 	dw MEGANIUM
 	db 52
-	dw BISHARP
+	dw AROMATISSE
 	db 50
 	dw SALAMENCE
 	db -1 ; end
@@ -2231,15 +2231,15 @@ GruntMGroup:
 	next_list_item ; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 25
-	dw PAWNIARD
+	dw RATTATA_A
 	db 25
-	dw PAWNIARD
+	dw RATTATA_A
 	db 27
-	dw PAWNIARD
+	dw RATTATA_A
 	db 27
-	dw PAWNIARD
+	dw RATTATA_A
 	db 27
-	dw PAWNIARD
+	dw RATTATA_A
 	db -1 ; end
 
 	next_list_item ; GRUNTM (6)
@@ -2274,7 +2274,7 @@ GruntMGroup:
 	db 28
 	dw LINOONE_G
 	db 30
-	dw MAREANIE
+	dw KOFFING
 	db -1 ; end
 
 	next_list_item ; GRUNTM (10)
@@ -2451,9 +2451,9 @@ GentlemanGroup:
 	next_list_item ; GENTLEMAN (1)
 	db "PRESTON@", TRAINERTYPE_NORMAL
 	db 20
-	dw HONEDGE
+	dw ARON
 	db 20
-	dw HONEDGE
+	dw ARON
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (2)
@@ -2469,7 +2469,7 @@ GentlemanGroup:
 	db 46
 	dw FLAAFFY
 	db 43
-	dw MANECTRIC
+	dw AMPHAROS
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (4)
@@ -2535,7 +2535,7 @@ TeacherGroup:
 	next_list_item ; TEACHER (3)
 	db "SHIRLEY@", TRAINERTYPE_NORMAL
 	db 44
-	dw CHATOT
+	dw ORANGURU
 	db 44
 	dw WIGGLYTUFF
 	db -1 ; end
@@ -2843,7 +2843,7 @@ FisherGroup:
 	next_list_item ; FISHER (7)
 	db "TULLY@", TRAINERTYPE_NORMAL
 	db 21
-	dw BASCULIN
+	dw BASCULIN_B
 	db -1 ; end
 
 	next_list_item ; FISHER (8)
@@ -3503,11 +3503,11 @@ SuperNerdGroup:
 	next_list_item ; SUPER_NERD (7)
 	db "TOM@", TRAINERTYPE_NORMAL
 	db 42
-	dw METANG
+	dw MAGNETON
 	db 42
-	dw METANG
+	dw MAGNETON
 	db 45
-	dw METAGROSS
+	dw MAGNEZONE
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (8)
@@ -3573,7 +3573,7 @@ SuperNerdGroup:
 	next_list_item ; SUPER_NERD (16)
 	db "WALDO@", TRAINERTYPE_NORMAL
 	db 53
-	dw LARVESTA
+	dw CAMERUPT
 	db -1 ; end
 
 	end_list_items
@@ -4079,13 +4079,13 @@ JugglerGroup:
 	next_list_item ; JUGGLER (3)
 	db "HORTON@", TRAINERTYPE_NORMAL
 	db 43
-	dw ROTOM
+	dw TOGEDEMARU
 	db 43
-	dw ROTOM
+	dw TOGEDEMARU
 	db 43
-	dw ROTOM
+	dw TOGEDEMARU
 	db 43
-	dw ROTOM
+	dw TOGEDEMARU
 	db -1 ; end
 
 	next_list_item ; JUGGLER (4)
@@ -4317,11 +4317,11 @@ PsychicGroup:
 	next_list_item ; PSYCHIC_T (6)
 	db "NORMAN@", TRAINERTYPE_MOVES
 	db 18
-	dw SPOINK
-	dw CONFUSE_RAY, PSYCH_UP, PSYBEAM, ODOR_SLEUTH
+	dw SLOWPOKE_G
+	dw GROWL, CONFUSION, YAWN, ACID
 	db 21
-	dw SPOINK
-	dw CONFUSE_RAY, PSYCH_UP, PSYBEAM, ZEN_HEADBUTT
+	dw SLOWPOKE_G
+	dw DISABLE, CONFUSION, YAWN, ACID
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (7)
@@ -4562,7 +4562,7 @@ PicnickerGroup:
 	dw FLORGES
 	dw MOONBLAST, MISTY_TERRAIN, MAGICAL_LEAF, WISH
 	db 46
-	dw STARIGAR
+	dw STRAIGAR
 	dw DYNAMO_RUSH, PLAY_ROUGH, AGILITY, ROAR
 	db 50
 	dw RAPIDASH
@@ -5295,33 +5295,33 @@ TwinsGroup:
 	next_list_item ; TWINS (5)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
 	db 47
-	dw WHIMSICOTT
+	dw VICTREEBEL
 	db 47
-	dw LILLIGANT
+	dw VILEPLUME
 	db -1 ; end
 
 	next_list_item ; TWINS (6)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
 	db 47
-	dw LILLIGANT
+	dw VILEPLUME
 	db 47
-	dw WHIMSICOTT
+	dw VICTREEBEL
 	db -1 ; end
 
 	next_list_item ; TWINS (7)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL
 	db 45
-	dw MINUN
+	dw SEVIPER
 	db 45
-	dw PLUSLE
+	dw ZANGOOSE
 	db -1 ; end
 
 	next_list_item ; TWINS (8)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL
 	db 45
-	dw PLUSLE
+	dw ZANGOOSE
 	db 45
-	dw MINUN
+	dw SEVIPER
 	db -1 ; end
 
 	next_list_item ; TWINS (9)

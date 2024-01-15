@@ -36,9 +36,9 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4             ; PACHIRISU
 	dw NoEvolutionMoves4             ; BUIZEL
 	dw FloatzelEvolutionMoves        ; FLOATZEL
-	dw NoEvolutionMoves4             ; CHERUBI
-	dw CherrimOvercastEvolutionMoves ; CHERRIM_OVERCAST
-	dw CherrimSunshineEvolutionMoves ; CHERRIM_SUNSHINE
+	; dw NoEvolutionMoves4             ; CHERUBI
+	; dw CherrimOvercastEvolutionMoves ; CHERRIM_OVERCAST
+	; dw CherrimSunshineEvolutionMoves ; CHERRIM_SUNSHINE
 	dw NoEvolutionMoves4             ; SHELLOS_E
 	dw NoEvolutionMoves4             ; SHELLOS_W
 	dw GastrodonEEvolutionMoves      ; GASTRODON_E
@@ -59,8 +59,8 @@ EvolutionMovePointers4::
 	dw NoEvolutionMoves4             ; BONSLY
 	dw NoEvolutionMoves4             ; MIME_JR
 	dw NoEvolutionMoves4             ; HAPPINY
-	dw NoEvolutionMoves4             ; CHATOT
-	dw NoEvolutionMoves4             ; SPIRITOMB
+	; dw NoEvolutionMoves4             ; CHATOT
+	; dw NoEvolutionMoves4             ; SPIRITOMB
 	dw NoEvolutionMoves4             ; GIBLE
 	dw GabiteEvolutionMoves          ; GABITE
 	dw GarchompEvolutionMoves        ; GARCHOMP
@@ -97,17 +97,17 @@ EvolutionMovePointers4::
 	dw ProbopassEvolutionMoves       ; PROBOPASS
 	dw NoEvolutionMoves4             ; DUSKNOIR
 	dw FroslassEvolutionMoves        ; FROSLASS
-	dw NoEvolutionMoves4             ; ROTOM
-	dw NoEvolutionMoves4             ; UXIE
-	dw NoEvolutionMoves4             ; MESPRIT
-	dw NoEvolutionMoves4             ; AZELF
-	dw NoEvolutionMoves4             ; DIALGA
-	dw NoEvolutionMoves4             ; PALKIA
-	dw NoEvolutionMoves4             ; REGIGIGAS
-	dw NoEvolutionMoves4             ; GIRATINA
-	dw NoEvolutionMoves4             ; CRESSELIA
+	; dw NoEvolutionMoves4             ; ROTOM
+	; dw NoEvolutionMoves4             ; UXIE
+	; dw NoEvolutionMoves4             ; MESPRIT
+	; dw NoEvolutionMoves4             ; AZELF
+	; dw NoEvolutionMoves4             ; DIALGA
+	; dw NoEvolutionMoves4             ; PALKIA
+	; dw NoEvolutionMoves4             ; REGIGIGAS
+	; dw NoEvolutionMoves4             ; GIRATINA
+	; dw NoEvolutionMoves4             ; CRESSELIA
 	dw NoEvolutionMoves4             ; DARKRAI
-	dw NoEvolutionMoves4             ; SHAYMIN
+	; dw NoEvolutionMoves4             ; SHAYMIN
 	dw NoEvolutionMoves4             ; ARCEUS
 
 GrotleEvolutionMoves:
