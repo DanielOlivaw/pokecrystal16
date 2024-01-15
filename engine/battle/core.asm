@@ -798,10 +798,10 @@ ParsePlayerAction:
 	jr z, .continue_protect
 	cp EFFECT_SPIKY_SHIELD
 	jr z, .continue_protect
-	cp EFFECT_KINGS_SHIELD
-	jr z, .continue_protect
-	cp EFFECT_BANEFUL_BUNKER
-	jr z, .continue_protect
+	; cp EFFECT_KINGS_SHIELD
+	; jr z, .continue_protect
+	; cp EFFECT_BANEFUL_BUNKER
+	; jr z, .continue_protect
 	cp EFFECT_OBSTRUCT
 	jr z, .continue_protect
 	xor a
@@ -6365,10 +6365,10 @@ ParseEnemyAction:
 	ret z
 	cp EFFECT_SPIKY_SHIELD
 	ret z
-	cp EFFECT_KINGS_SHIELD
-	ret z
-	cp EFFECT_BANEFUL_BUNKER
-	ret z
+	; cp EFFECT_KINGS_SHIELD
+	; ret z
+	; cp EFFECT_BANEFUL_BUNKER
+	; ret z
 	cp EFFECT_OBSTRUCT
 	ret z
 	xor a

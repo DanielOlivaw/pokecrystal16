@@ -82,47 +82,47 @@ BattleCommand_GuardSwap:
 	farcall PrintButItFailed
 	ret
 
-BattleCommand_HeartSwap:
-; Switch all of the user's and the target's stat levels.
+; BattleCommand_HeartSwap:
+;; Switch all of the user's and the target's stat levels.
 
-	ld a, [wAttackMissed]
-	and a
-	jp nz, .failed
+	; ld a, [wAttackMissed]
+	; and a
+	; jp nz, .failed
 
-	farcall CheckHiddenOpponent
-	jr nz, .failed
+	; farcall CheckHiddenOpponent
+	; jr nz, .failed
 
-; Get both sides' stat changes
-	ld hl, wPlayerStatLevels
-	ld de, wEnemyStatLevels
+;; Get both sides' stat changes
+	; ld hl, wPlayerStatLevels
+	; ld de, wEnemyStatLevels
 
-	ld b, NUM_LEVEL_STATS
+	; ld b, NUM_LEVEL_STATS
 
-.loop
-; Swap the stat levels between Pokemon for the current stat.
-	push bc
-	call SwapStatLevels
-	pop bc
-; End the loop if we've covered every stat.
-	dec b
-	jr z, .calc_stats
-; Increment to the next stat.
-	inc hl
-	inc de
-	jr .loop
+; .loop
+;; Swap the stat levels between Pokemon for the current stat.
+	; push bc
+	; call SwapStatLevels
+	; pop bc
+;; End the loop if we've covered every stat.
+	; dec b
+	; jr z, .calc_stats
+;; Increment to the next stat.
+	; inc hl
+	; inc de
+	; jr .loop
 
-.calc_stats
-	farcall CalcPlayerStats
-	farcall CalcEnemyStats
+; .calc_stats
+	; farcall CalcPlayerStats
+	; farcall CalcEnemyStats
 
-	farcall AnimateCurrentMove
-	ld hl, SwitchedStatChangesText
-	jp StdBattleTextbox
+	; farcall AnimateCurrentMove
+	; ld hl, SwitchedStatChangesText
+	; jp StdBattleTextbox
 
-.failed:
-	farcall AnimateFailedMove
-	farcall PrintButItFailed
-	ret
+; .failed:
+	; farcall AnimateFailedMove
+	; farcall PrintButItFailed
+	; ret
 
 SwapStatLevels:
 ; Load player's stat level (hl) to b

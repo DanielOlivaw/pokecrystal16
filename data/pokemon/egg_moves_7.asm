@@ -4,8 +4,11 @@ EggMovePointers7::
 	dw RowletEggMoves
 	dw NoEggMoves7
 	dw NoEggMoves7
-	dw PikipekEggMoves
 	dw NoEggMoves7
+	; dw PikipekEggMoves
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	dw YungoosEggMoves
 	dw NoEggMoves7
 	dw GrubbinEggMoves
 	dw NoEggMoves7
@@ -17,10 +20,10 @@ EggMovePointers7::
 	dw RockruffEggMoves
 	dw NoEggMoves7
 	dw NoEggMoves7
-	dw MareanieEggMoves
-	dw NoEggMoves7
-	dw MudbrayEggMoves
-	dw NoEggMoves7
+	; dw MareanieEggMoves
+	; dw NoEggMoves7
+	; dw MudbrayEggMoves
+	; dw NoEggMoves7
 	dw DewpiderEggMoves
 	dw NoEggMoves7
 	dw FomantisEggMoves
@@ -30,33 +33,35 @@ EggMovePointers7::
 	dw StuffulEggMoves
 	dw NoEggMoves7
 	dw OranguruEggMoves
-	dw PassimianEggMoves
+	; dw PassimianEggMoves
 	dw WimpodEggMoves
 	dw NoEggMoves7
 	dw SandygastEggMoves
 	dw NoEggMoves7
 	dw PyukumukuEggMoves
+	; dw NoEggMoves7
+	; dw NoEggMoves7
 	dw NoEggMoves7
 	dw NoEggMoves7
-	dw KomalaEggMoves
+	; dw KomalaEggMoves
 	dw TurtonatorEggMoves
 	dw TogedemaruEggMoves
 	dw MimikyuEggMoves
 	dw DrampaEggMoves
 	dw NoEggMoves7
-	dw JangmoOEggMoves
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
-	dw NoEggMoves7
+	; dw JangmoOEggMoves
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
+	; dw NoEggMoves7
 
 RowletEggMoves:
 	dw BATON_PASS
@@ -71,6 +76,14 @@ PikipekEggMoves:
 	dw BRAVE_BIRD
 	dw HEAT_WAVE
 	dw HYPER_VOICE
+	dw -1 ; end
+
+YungoosEggMoves:
+	dw ENDEAVOR
+	dw FIRE_FANG
+	dw ICE_FANG
+	dw THUNDER_FANG
+	dw REVENGE
 	dw -1 ; end
 
 GrubbinEggMoves:

@@ -10,7 +10,7 @@
 	db NO_ITEM, STAR_PIECE ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 25 ; step cycles to hatch
-	INCBIN "gfx/pokemon/minior_core/front.dimensions"
+	INCBIN "gfx/pokemon/minior/red/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups

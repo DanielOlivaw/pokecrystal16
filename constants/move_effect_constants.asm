@@ -146,7 +146,7 @@
 	const EFFECT_CAPTIVATE          ; 90
 	const EFFECT_ATK_SP_ATK_DOWN    ; 91
 	const EFFECT_CONFIDE            ; 92
-	const EFFECT_TAR_SHOT           ; 93
+	const EFFECT_EERIE_SPELL ; const EFFECT_TAR_SHOT           ; 93
 	const EFFECT_BLIZZARD           ; 94
 	const EFFECT_METAL_BURST        ; 95
 	const EFFECT_FLATTER            ; 96
@@ -159,8 +159,8 @@
 	const EFFECT_BULK_UP            ; 9d
 	const EFFECT_WORK_UP            ; 9e
 	const EFFECT_ACUPRESSURE        ; 9f
-	const EFFECT_GEOMANCY           ; a0
-	const EFFECT_SHIFT_GEAR         ; a1
+	const EFFECT_BARB_BARRAGE ; const EFFECT_GEOMANCY           ; a0
+	; const EFFECT_SHIFT_GEAR         ; a1
 	const EFFECT_DEFENSE_UP_3       ; a2
 	const EFFECT_SP_ATK_UP_3        ; a3
 	const EFFECT_CLOSE_COMBAT       ; a4
@@ -204,8 +204,8 @@
 	const EFFECT_SHADOW_FORCE       ; ca
 	const EFFECT_WHIRLPOOL          ; cb
 	const EFFECT_SPIKY_SHIELD       ; cc
-	const EFFECT_KINGS_SHIELD       ; cd
-	const EFFECT_BANEFUL_BUNKER     ; ce
+	const EFFECT_TRIPLE_HIT ; const EFFECT_KINGS_SHIELD       ; cd
+	const EFFECT_STONE_AXE ; const EFFECT_BANEFUL_BUNKER     ; ce
 	const EFFECT_OBSTRUCT           ; cf
 	const EFFECT_CRAFTY_SHIELD      ; d0
 	const EFFECT_FIRST_IMPRESSION   ; d1
@@ -227,17 +227,17 @@
 	const EFFECT_STATUS_OPP_ACC     ; e1 (same as EFFECT_STATUS_OPP, but bypasses accuracy checks)
 	const EFFECT_DEFENSE_UP_2_HIT   ; e2
 	const EFFECT_FOCUS_PUNCH        ; e3
-	const EFFECT_BEAK_BLAST         ; e4
+	; const EFFECT_BEAK_BLAST         ; e4
 	const EFFECT_SHELL_TRAP         ; e5
 	const EFFECT_REVENGE            ; e6
 	const EFFECT_SHORE_UP           ; e7
-	const EFFECT_CLANGING_SCALES    ; e8
+	; const EFFECT_CLANGING_SCALES    ; e8
 	const EFFECT_RECOIL_HIT_HALF    ; e9
 	const EFFECT_RECOIL_HIT_THIRD   ; ea
 	const EFFECT_MIND_BLOWN         ; eb
 	const EFFECT_PUNISHMENT         ; ec
 	const EFFECT_STORED_POWER       ; ed
-	const EFFECT_TRICK_ROOM_HIT     ; ee
+	; const EFFECT_TRICK_ROOM_HIT     ; ee
 	const EFFECT_VOLT_TACKLE        ; ef
 	const EFFECT_METEOR_BEAM        ; f1
 	const EFFECT_POLTERGEIST        ; f2

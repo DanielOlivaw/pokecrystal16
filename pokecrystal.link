@@ -48,7 +48,6 @@ ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
 	"Egg Move Pointers"
-	"Egg Moves 1"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -71,9 +70,10 @@ ROMX $11
 	"bank11"
 ROMX $12
 	"Crystal Features 1"
-	"Egg Moves 2"
+	"Egg Moves 1"
 ROMX $13
 	"bank13"
+	"Egg Moves 2"
 ROMX $14
 	"bank14"
 ROMX $15
@@ -228,7 +228,6 @@ ROMX $5f
 	"Mobile 5F"
 ROMX $60
 	"Map Scripts 13"
-	"Pokedex Entries 001-064"
 ROMX $61
 	"Map Scripts 14"
 ROMX $62
@@ -257,7 +256,6 @@ ROMX $6c
 ROMX $6d
 	"Special Phone Text"
 ROMX $6e
-	"Pokedex Entries 065-128"
 ROMX $6f
 	"Text 1"
 ROMX $70
@@ -267,7 +265,6 @@ ROMX $71
 ROMX $72
 	"Miscellaneous Text"
 ROMX $73
-	"Pokedex Entries 129-192"
 ROMX $74
 	"bank74"
 ROMX $75

@@ -10,9 +10,11 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; MUDKIP
 	dw MarshtompEvolutionMoves  ; MARSHTOMP
 	dw SwampertEvolutionMoves   ; SWAMPERT
-	dw NoEvolutionMoves3        ; POOCHYENA
-	dw MightyenaEvolutionMoves  ; MIGHTYENA
+	; dw NoEvolutionMoves3        ; POOCHYENA
+	; dw MightyenaEvolutionMoves  ; MIGHTYENA
+	dw NoEvolutionMoves3        ; ZIGZAGOON
 	dw NoEvolutionMoves3        ; ZIGZAGOON_G
+	dw LinooneEvolutionMoves    ; LINOONE
 	dw LinooneGEvolutionMoves   ; LINOONE_G
 	dw NoEvolutionMoves3        ; LOTAD
 	dw LombreEvolutionMoves     ; LOMBRE
@@ -47,8 +49,10 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; AGGRON
 	dw NoEvolutionMoves3        ; MEDITITE
 	dw MedichamEvolutionMoves   ; MEDICHAM
-	dw NoEvolutionMoves3        ; ELECTRIKE
-	dw NoEvolutionMoves3        ; MANECTRIC
+	; dw NoEvolutionMoves3        ; ELECTRIKE
+	; dw NoEvolutionMoves3        ; MANECTRIC
+	; dw NoEvolutionMoves3        ; PLUSLE
+	; dw NoEvolutionMoves3        ; MINUN
 	dw RoseliaEvolutionMoves    ; ROSELIA
 	dw NoEvolutionMoves3        ; GULPIN
 	dw SwalotEvolutionMoves     ; SWALOT
@@ -58,14 +62,14 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; WAILORD
 	dw NoEvolutionMoves3        ; NUMEL
 	dw CameruptEvolutionMoves   ; CAMERUPT
-	dw NoEvolutionMoves3        ; TORKOAL
-	dw NoEvolutionMoves3        ; SPOINK
-	dw GrumpigEvolutionMoves    ; GRUMPIG
+	; dw NoEvolutionMoves3        ; TORKOAL
+	; dw NoEvolutionMoves3        ; SPOINK
+	; dw GrumpigEvolutionMoves    ; GRUMPIG
 	dw NoEvolutionMoves3        ; TRAPINCH
 	dw VibravaEvolutionMoves    ; VIBRAVA
 	dw FlygonEvolutionMoves     ; FLYGON
-	dw NoEvolutionMoves3        ; CACNEA
-	dw CacturneEvolutionMoves   ; CACTURNE
+	; dw NoEvolutionMoves3        ; CACNEA
+	; dw CacturneEvolutionMoves   ; CACTURNE
 	dw NoEvolutionMoves3        ; SWABLU
 	dw AltariaEvolutionMoves    ; ALTARIA
 	dw NoEvolutionMoves3        ; ZANGOOSE
@@ -84,8 +88,8 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; ARMALDO
 	dw NoEvolutionMoves3        ; FEEBAS
 	dw MiloticEvolutionMoves    ; MILOTIC
-	dw NoEvolutionMoves3        ; SHUPPET
-	dw BanetteEvolutionMoves    ; BANETTE
+	; dw NoEvolutionMoves3        ; SHUPPET
+	; dw BanetteEvolutionMoves    ; BANETTE
 	dw NoEvolutionMoves3        ; DUSKULL
 	dw DusclopsEvolutionMoves   ; DUSCLOPS
 	dw NoEvolutionMoves3        ; TROPIUS
@@ -100,23 +104,23 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; CLAMPERL
 	dw NoEvolutionMoves3        ; HUNTAIL
 	dw NoEvolutionMoves3        ; GOREBYSS
-	dw NoEvolutionMoves3        ; RELICANTH
+	; dw NoEvolutionMoves3        ; RELICANTH
 	dw NoEvolutionMoves3        ; LUVDISC
 	dw NoEvolutionMoves3        ; BAGON
 	dw ShelgonEvolutionMoves    ; SHELGON
 	dw SalamenceEvolutionMoves  ; SALAMENCE
-	dw NoEvolutionMoves3        ; BELDUM
-	dw MetangEvolutionMoves     ; METANG
-	dw MetagrossEvolutionMoves  ; METAGROSS
-	dw NoEvolutionMoves3        ; REGIROCK
-	dw NoEvolutionMoves3        ; REGICE
-	dw NoEvolutionMoves3        ; REGISTEEL
+	; dw NoEvolutionMoves3        ; BELDUM
+	; dw MetangEvolutionMoves     ; METANG
+	; dw MetagrossEvolutionMoves  ; METAGROSS
+	; dw NoEvolutionMoves3        ; REGIROCK
+	; dw NoEvolutionMoves3        ; REGICE
+	; dw NoEvolutionMoves3        ; REGISTEEL
 	dw NoEvolutionMoves3        ; LATIAS
 	dw NoEvolutionMoves3        ; LATIOS
-	dw NoEvolutionMoves3        ; KYOGRE
+	; dw NoEvolutionMoves3        ; KYOGRE
 	dw NoEvolutionMoves3        ; GROUDON
-	dw NoEvolutionMoves3        ; RAYQUAZA
-	dw NoEvolutionMoves3        ; JIRACHI
+	; dw NoEvolutionMoves3        ; RAYQUAZA
+	; dw NoEvolutionMoves3        ; JIRACHI
 	dw NoEvolutionMoves3        ; DEOXYS
 
 GrovyleEvolutionMoves:
@@ -146,6 +150,11 @@ MetagrossEvolutionMoves:
 
 MightyenaEvolutionMoves:
 	dw SNARL
+	db 0 ; no more evolution moves
+
+LinooneEvolutionMoves:
+SharpedoEvolutionMoves:
+	dw SLASH
 	db 0 ; no more evolution moves
 
 LinooneGEvolutionMoves:
@@ -209,10 +218,6 @@ RoseliaEvolutionMoves:
 
 SwalotEvolutionMoves:
 	dw BODY_SLAM
-	db 0 ; no more evolution moves
-
-SharpedoEvolutionMoves:
-	dw SLASH
 	db 0 ; no more evolution moves
 
 CameruptEvolutionMoves:

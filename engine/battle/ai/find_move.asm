@@ -30,8 +30,8 @@ FindMove_AI_Smart_Scoring:
 	dww ACROBATICS,      AI_Smart_Acrobatics
 	dww RETALIATE,       AI_Smart_Retaliate
 	dww FACADE,          AI_Smart_Facade
-	dww BOLT_BEAK,       AI_Smart_BoltBeak
-	dww FISHIOUS_REND,   AI_Smart_BoltBeak
+	; dww BOLT_BEAK,       AI_Smart_BoltBeak
+	; dww FISHIOUS_REND,   AI_Smart_BoltBeak
 	dww STOMP,           AI_Smart_Stomp
 	dww TWISTER,         AI_Smart_Twister
 	dww STEAMROLLER,     AI_Smart_Stomp
@@ -63,7 +63,7 @@ FindMove_AI_Smart_Scoring:
 	dww MISTY_TERRAIN,   AI_Smart_MistyTerrain
 	dww STOCKPILE,       AI_Smart_Stockpile
 	dww BLOCK,           AI_Smart_MeanLook
-	dww BRIGHT_MOSS,     AI_Smart_BrightMoss
+	; dww BRIGHT_MOSS,     AI_Smart_BrightMoss
 	dww INGRAIN,         AI_Smart_Ingrain
 	; dww CHARGE,          AI_Smart_Charge
 	dww AQUA_RING,       AI_Smart_AquaRing
@@ -75,8 +75,8 @@ FindMove_AI_Smart_Scoring:
 	dww CULTIVATE,       AI_Smart_Cultivate
 	dww LASER_FOCUS,     AI_Smart_LaserFocus
 	dww WISH,            AI_Smart_Wish
-	dww FAIRY_LOCK,      AI_Smart_MeanLook
-	dww CLANGOROUS_SOUL, AI_Smart_ClangorousSoul
+	; dww FAIRY_LOCK,      AI_Smart_MeanLook
+	; dww CLANGOROUS_SOUL, AI_Smart_ClangorousSoul
 	dww OCTOLOCK,        AI_Smart_Octolock
 	dww TEATIME,         AI_Smart_Teatime
 	dww LEECH_SEED,      AI_Smart_LeechSeed
@@ -95,10 +95,10 @@ FindMove_AI_Smart_Scoring:
 	; dww SPEED_SWAP,      AI_Smart_SpeedSwap
 	dww POWER_SWAP,      AI_Smart_PowerSwap
 	dww GUARD_SWAP,      AI_Smart_GuardSwap
-	dww HEART_SWAP,      AI_Smart_HeartSwap
+	; dww HEART_SWAP,      AI_Smart_HeartSwap
 	dww HIDDEN_POWER,    AI_Smart_HiddenPower
 	dww JUDGEMENT,       AI_Smart_Judgement
-	dww MULTI_ATTACK,    AI_Smart_Judgement
+	; dww MULTI_ATTACK,    AI_Smart_Judgement
 	dww PURIFY,          AI_Smart_Purify
 	db -1 ; end
 
@@ -293,16 +293,16 @@ AI_Smart_Facade:
 	dec [hl]
 	ret
 
-AI_Smart_BoltBeak:
-	pop hl
+; AI_Smart_BoltBeak:
+	; pop hl
 ; 80% chance to encourage this move if the player is slower than the enemy.
-	callfar AICompareSpeed
-	ret nc
+	; callfar AICompareSpeed
+	; ret nc
 
-	callfar AI_80_20
-	ret c
-	dec [hl]
-	ret
+	; callfar AI_80_20
+	; ret c
+	; dec [hl]
+	; ret
 
 AI_Smart_Stomp:
 	pop hl
@@ -445,7 +445,7 @@ AI_Smart_Spikes:
 	pop hl
 ; Dismiss this move if this is the player's last Pokemon.
 	push hl
-	call AICheckLastPlayerMon
+	callfar AICheckLastPlayerMon
 	pop hl
 	jp z, FindMove_AIDiscourageMove
 	
@@ -858,7 +858,7 @@ AI_Smart_Safeguard:
 	ret
 
 AI_Smart_PsychUp:
-AI_Smart_HeartSwap:
+; AI_Smart_HeartSwap:
 	ld hl, wEnemyAtkLevel
 	ld b, NUM_LEVEL_STATS
 	ld c, 100
@@ -1049,33 +1049,33 @@ AI_Smart_Stockpile:
 	inc [hl]
 	ret
 
-AI_Smart_BrightMoss:
-	pop hl
-; 60% chance to encourage this move if the enemy's accuracy is sharply lowered.
-	ld a, [wEnemyAccLevel]
-	cp BASE_STAT_LEVEL - 2
-	jr c, .encourage
+; AI_Smart_BrightMoss:
+	; pop hl
+;; 60% chance to encourage this move if the enemy's accuracy is sharply lowered.
+	; ld a, [wEnemyAccLevel]
+	; cp BASE_STAT_LEVEL - 2
+	; jr c, .encourage
 
-; 60% chance to encourage this move if the player's evasion is sharply raised.
-	ld a, [wPlayerEvaLevel]
-	cp BASE_STAT_LEVEL + 3
-	jr nc, .encourage
+;; 60% chance to encourage this move if the player's evasion is sharply raised.
+	; ld a, [wPlayerEvaLevel]
+	; cp BASE_STAT_LEVEL + 3
+	; jr nc, .encourage
 
-; 92% chance to discourage this move otherwise.
-	call Random
-	cp 8 percent
-	ret c
+;; 92% chance to discourage this move otherwise.
+	; call Random
+	; cp 8 percent
+	; ret c
 
-	inc [hl]
-	ret
+	; inc [hl]
+	; ret
 
-.encourage
-	call Random
-	cp 39 percent + 1
-	ret c
-	dec [hl]
-	dec [hl]
-	ret
+; .encourage
+	; call Random
+	; cp 39 percent + 1
+	; ret c
+	; dec [hl]
+	; dec [hl]
+	; ret
 
 AI_Smart_Ingrain:
 ; Greatly disourage this move if the player has shown
@@ -1347,45 +1347,45 @@ AI_Smart_LaserFocus:
 	dec [hl]
 	ret
 
-AI_Smart_ClangorousSoul:
-	pop hl
-; Dismiss this move if any of the enemy's stats are maxed
-; or if enemy's HP is below 50%.
-; Else, discourage this move if enemy's HP is not full.
+; AI_Smart_ClangorousSoul:
+	; pop hl
+;; Dismiss this move if any of the enemy's stats are maxed
+;; or if enemy's HP is below 50%.
+;; Else, discourage this move if enemy's HP is not full.
 
-	ld a, [wEnemyAtkLevel]
-	cp BASE_STAT_LEVEL + 6
-	jr nc, .discourage
+	; ld a, [wEnemyAtkLevel]
+	; cp BASE_STAT_LEVEL + 6
+	; jr nc, .discourage
 
-	ld a, [wEnemyDefLevel]
-	cp BASE_STAT_LEVEL + 6
-	jr nc, .discourage
+	; ld a, [wEnemyDefLevel]
+	; cp BASE_STAT_LEVEL + 6
+	; jr nc, .discourage
 
-	ld a, [wEnemySAtkLevel]
-	cp BASE_STAT_LEVEL + 6
-	jr nc, .discourage
+	; ld a, [wEnemySAtkLevel]
+	; cp BASE_STAT_LEVEL + 6
+	; jr nc, .discourage
 
-	ld a, [wEnemySDefLevel]
-	cp BASE_STAT_LEVEL + 6
-	jr nc, .discourage
+	; ld a, [wEnemySDefLevel]
+	; cp BASE_STAT_LEVEL + 6
+	; jr nc, .discourage
 
-	ld a, [wEnemySpdLevel]
-	cp BASE_STAT_LEVEL + 6
-	jr nc, .discourage
+	; ld a, [wEnemySpdLevel]
+	; cp BASE_STAT_LEVEL + 6
+	; jr nc, .discourage
 
-	callfar AICheckEnemyMaxHP
-	ret c
+	; callfar AICheckEnemyMaxHP
+	; ret c
 
-	inc [hl]
+	; inc [hl]
 
-	callfar AICheckEnemyHalfHP
-	ret c
+	; callfar AICheckEnemyHalfHP
+	; ret c
 
-.discourage
-	ld a, [hl]
-	add $5
-	ld [hl], a
-	ret
+; .discourage
+	; ld a, [hl]
+	; add $5
+	; ld [hl], a
+	; ret
 
 AI_Smart_Teatime:
 	pop hl
@@ -1971,7 +1971,7 @@ FindMove_AI_Redundant:
 	dww REFLECT,       .Reflect
 	dww SUBSTITUTE,    .Substitute
 	dww OCTOLOCK,      .ArenaTrap
-	dww FAIRY_LOCK,    .ArenaTrap
+	; dww FAIRY_LOCK,    .ArenaTrap
 	dww SPIDER_WEB,    .ArenaTrap
 	dww BLOCK,         .ArenaTrap
 	dww MEAN_LOOK,     .ArenaTrap

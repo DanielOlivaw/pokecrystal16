@@ -169,8 +169,8 @@ ENDM
 	command strengthsap             ; a2
 	command spitup                  ; a3
 	command awaken                  ; a4
-	command clangingscales          ; a5
-	command shiftgear               ; a6
+	command defensedownscales       ; a5
+	; command shiftgear               ; a6
 	command punishment              ; a7
 	command storedpower             ; a8
 	command heavyslam               ; a9

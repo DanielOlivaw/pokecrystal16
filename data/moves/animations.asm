@@ -435,7 +435,7 @@ BattleAnimations::
 	dw BattleAnim_ShatterClaw
 	dw BattleAnim_WildFury
 	dw BattleAnim_WindRide
-	dw BattleAnim_BrightMoss
+	; dw BattleAnim_BrightMoss
 	dw BattleAnim_ShieldBash
 	dw BattleAnim_SacredSword
 	dw BattleAnim_Ingrain
@@ -486,14 +486,14 @@ BattleAnimations::
 	dw BattleAnim_Belch
 	dw BattleAnim_Yawn
 	dw BattleAnim_Dive
-	dw BattleAnim_ShadowForce
+	; dw BattleAnim_ShadowForce
 	dw BattleAnim_PhantomForce
 	dw BattleAnim_NobleRoar
 	dw BattleAnim_Boomburst
 	dw BattleAnim_NeedleArm
 	dw BattleAnim_SpikyShield
-	dw BattleAnim_KingsShield
-	dw BattleAnim_BanefulBunker
+	; dw BattleAnim_KingsShield
+	; dw BattleAnim_BanefulBunker
 	dw BattleAnim_Obstruct
 	dw BattleAnim_CraftyShield
 	dw BattleAnim_FakeOut
@@ -513,10 +513,10 @@ BattleAnimations::
 	dw BattleAnim_ChargeBeam
 	dw BattleAnim_MistBall
 	dw BattleAnim_LusterPurge
-	dw BattleAnim_OriginPulse
+	; dw BattleAnim_OriginPulse
 	dw BattleAnim_PrecipiceBlades
-	dw BattleAnim_DragonAscent
-	dw BattleAnim_DoomDesire
+	; dw BattleAnim_DragonAscent
+	; dw BattleAnim_DoomDesire
 	dw BattleAnim_PsychoBoost
 	dw BattleAnim_TrickRoom
 	dw BattleAnim_Retaliate
@@ -530,16 +530,16 @@ BattleAnimations::
 	dw BattleAnim_Chatter
 	dw BattleAnim_PowerUpPunch
 	dw BattleAnim_MagnetBomb
-	dw BattleAnim_RoarOfTime
-	dw BattleAnim_SpacialRend
+	; dw BattleAnim_RoarOfTime
+	; dw BattleAnim_SpacialRend
 	dw BattleAnim_MagnetRise
 	dw BattleAnim_MeFirst
 	dw BattleAnim_BodyPress
 	dw BattleAnim_Memento
 	dw BattleAnim_HealingWish
-	dw BattleAnim_LunarDance
+	; dw BattleAnim_LunarDance
 	dw BattleAnim_DarkVoid
-	dw BattleAnim_SeedFlare
+	; dw BattleAnim_SeedFlare
 	dw BattleAnim_HeavySlam
 	dw BattleAnim_HeatCrash
 	dw BattleAnim_ElectroBall
@@ -563,7 +563,7 @@ BattleAnimations::
 	dw BattleAnim_Weathervane
 	dw BattleAnim_Cultivate
 	dw BattleAnim_TimeTravel
-	dw BattleAnim_Seamitar
+	dw BattleAnim_AquaCutter
 	dw BattleAnim_RockWrecker
 	dw BattleAnim_BrutalSwing
 	dw BattleAnim_Electroweb
@@ -572,7 +572,7 @@ BattleAnimations::
 	dw BattleAnim_LaserFocus
 	dw BattleAnim_DrainPunch
 	dw BattleAnim_FireLash
-	dw BattleAnim_FieryDance
+	; dw BattleAnim_FieryDance
 	dw BattleAnim_WaterShuriken
 	dw BattleAnim_Powder
 	dw BattleAnim_Wish
@@ -582,20 +582,20 @@ BattleAnimations::
 	dw BattleAnim_TopsyTurvy
 	dw BattleAnim_ParabolicCharge
 	dw BattleAnim_Electrify
-	dw BattleAnim_FairyLock
+	; dw BattleAnim_FairyLock
 	dw BattleAnim_BranchPoke
-	dw BattleAnim_Geomancy
-	dw BattleAnim_OblivionWing
+	; dw BattleAnim_Geomancy
+	; dw BattleAnim_OblivionWing
 	dw BattleAnim_FocusBlast
-	dw BattleAnim_LandsWrath
-	dw BattleAnim_ThousandWaves
+	; dw BattleAnim_LandsWrath
+	; dw BattleAnim_ThousandWaves
 	dw BattleAnim_DiamondStorm
-	dw BattleAnim_SteamEruption
+	; dw BattleAnim_SteamEruption
 	dw BattleAnim_GrassWhistle
 	dw BattleAnim_PowerTrick
 	dw BattleAnim_SpiritShackle
 	dw BattleAnim_FocusPunch
-	dw BattleAnim_BeakBlast
+	; dw BattleAnim_BeakBlast
 	dw BattleAnim_ShellTrap
 	dw BattleAnim_Revenge
 	dw BattleAnim_Avalanche
@@ -605,37 +605,37 @@ BattleAnimations::
 	dw BattleAnim_Lunge
 	dw BattleAnim_SolarBlade
 	dw BattleAnim_ShoreUp
-	dw BattleAnim_MultiAttack
+	; dw BattleAnim_MultiAttack
 	dw BattleAnim_ZingZap
-	dw BattleAnim_ClangingScales
-	dw BattleAnim_ClangorousSoul
+	; dw BattleAnim_ClangingScales
+	; dw BattleAnim_ClangorousSoul
 	dw BattleAnim_VacuumWave
-	dw BattleAnim_ShiftGear
-	dw BattleAnim_FleurCannon
-	dw BattleAnim_MindBlown
-	dw BattleAnim_DrumBeating
+	; dw BattleAnim_ShiftGear
+	; dw BattleAnim_FleurCannon
+	; dw BattleAnim_MindBlown
+	; dw BattleAnim_DrumBeating
 	dw BattleAnim_TailSlap
 	dw BattleAnim_SpeedSwap
 	dw BattleAnim_PowerSwap
 	dw BattleAnim_GuardSwap
-	dw BattleAnim_HeartSwap
+	; dw BattleAnim_HeartSwap
 	dw BattleAnim_JawLock
 	dw BattleAnim_Punishment
 	dw BattleAnim_StoredPower
 	dw BattleAnim_PowerTrip
-	dw BattleAnim_TarShot
+	; dw BattleAnim_TarShot
 	dw BattleAnim_GravApple
 	dw BattleAnim_AppleAcid
 	dw BattleAnim_Octolock
-	dw BattleAnim_ChronoShift
-	dw BattleAnim_CosmicWarp
+	; dw BattleAnim_ChronoShift
+	; dw BattleAnim_CosmicWarp
 	dw BattleAnim_Teatime
 	dw BattleAnim_MagicPowder
-	dw BattleAnim_BoltBeak
-	dw BattleAnim_FishiousRend
-	dw BattleAnim_BreakingSwipe
+	; dw BattleAnim_BoltBeak
+	; dw BattleAnim_FishiousRend
+	; dw BattleAnim_BreakingSwipe
 	dw BattleAnim_DragonDarts
-	dw BattleAnim_ThunderCage
+	; dw BattleAnim_ThunderCage
 	dw BattleAnim_FrenzyPlant
 	dw BattleAnim_BlastBurn
 	dw BattleAnim_HydroCannon
@@ -653,7 +653,7 @@ BattleAnimations::
 	dw BattleAnim_Overheat
 	dw BattleAnim_Scald
 	dw BattleAnim_PsychicFangs
-	dw BattleAnim_DarkestLariat
+	; dw BattleAnim_DarkestLariat
 	dw BattleAnim_TailGlow
 	dw BattleAnim_RockClimb
 	dw BattleAnim_TrumpCard
@@ -663,6 +663,20 @@ BattleAnimations::
 	dw BattleAnim_PartingShot
 	dw BattleAnim_NightDaze
 	dw BattleAnim_Purify
+	dw BattleAnim_ShadowBone
+	dw BattleAnim_MeteorAssault
+	dw BattleAnim_ShellSideArm
+	dw BattleAnim_EerieSpell
+	dw BattleAnim_BarbBarrage
+	dw BattleAnim_HeadlongRush
+	dw BattleAnim_RagingFury
+	dw BattleAnim_WaveCrash
+	dw BattleAnim_TripleArrows
+	dw BattleAnim_StoneAxe
+	dw BattleAnim_TorchSong
+	dw BattleAnim_TripleDive
+	dw BattleAnim_FilletAway
+	dw BattleAnim_TwinBeam
 	assert_table_length NUM_ATTACKS + 1
 
 	dw BattleAnim_SweetScent2
@@ -1053,6 +1067,7 @@ BattleAnim_Shake:
 	anim_wait 40
 	anim_ret
 
+BattleAnim_TripleArrows:
 BattleAnim_PartingShot:
 BattleAnim_UTurn:
 BattleAnim_VoltSwitch:
@@ -1061,7 +1076,6 @@ BattleAnim_TrumpCard:
 BattleAnim_Poltergeist:
 BattleAnim_ScaleShot:
 BattleAnim_MistyExplosion:
-BattleAnim_Overheat:
 BattleAnim_Scald:
 BattleAnim_PsychicFangs:
 BattleAnim_DarkestLariat:
@@ -1091,7 +1105,6 @@ BattleAnim_Octolock:
 BattleAnim_TarShot:
 BattleAnim_GravApple:
 BattleAnim_AppleAcid:
-BattleAnim_PowerTrip:
 BattleAnim_StoredPower:
 BattleAnim_Punishment:
 BattleAnim_JawLock:
@@ -1151,7 +1164,6 @@ BattleAnim_RockWrecker:
 BattleAnim_BrutalSwing:
 BattleAnim_Electroweb:
 BattleAnim_TimeTravel:
-BattleAnim_Seamitar:
 BattleAnim_DrowsyWrath:
 BattleAnim_SereneBell:
 BattleAnim_FlareUp:
@@ -1164,14 +1176,12 @@ BattleAnim_MagnetGrip:
 BattleAnim_JawClamp:
 BattleAnim_FeyFury:
 BattleAnim_BouncyTail:
-BattleAnim_Judgement:
 BattleAnim_Swallow:
 BattleAnim_SpitUp:
 BattleAnim_StrengthSap:
 BattleAnim_Endeavor:
 BattleAnim_Refresh:
 BattleAnim_GyroBall:
-BattleAnim_HeatCrash:
 BattleAnim_HeavySlam:
 BattleAnim_DarkVoid:
 BattleAnim_SeedFlare:
@@ -2100,6 +2110,8 @@ BattleAnim_FurySwipes_branch_c9dd9:
 
 BattleAnim_Cut:
 BattleAnim_Slash:
+BattleAnim_AquaCutter:
+BattleAnim_StoneAxe:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_CUT
 	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, 152, 40, $0
@@ -2838,6 +2850,7 @@ BattleAnim_PoisonGas:
 	anim_ret
 
 BattleAnim_HornAttack:
+BattleAnim_BarbBarrage:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
 	anim_obj ANIM_OBJ_HORN, 72, 80, $1
 	anim_wait 16
@@ -3057,6 +3070,7 @@ BattleAnim_Crabhammer:
 
 BattleAnim_SkullBash:
 	anim_if_param_equal $1, BattleAnim_SkullBash_branch_c9fb5
+BattleAnim_HeadlongRush:
 	anim_1gfx ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_1F, $14, $2, $0
 	anim_wait 32
@@ -3335,6 +3349,7 @@ BattleAnim_Psywave:
 	anim_ret
 
 BattleAnim_Glare:
+BattleAnim_TwinBeam:
 	anim_1gfx ANIM_GFX_BEAM
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $20
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
@@ -3537,6 +3552,7 @@ BattleAnim_AgilityLines:
 	anim_ret
 
 BattleAnim_BoneClub:
+BattleAnim_ShadowBone:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_MISC
 	anim_obj ANIM_OBJ_BONE_CLUB, 64, 88, $2
 	anim_wait 32
@@ -3562,6 +3578,7 @@ BattleAnim_Waterfall:
 BattleAnim_Steamroller:
 BattleAnim_SkyUppercut:
 BattleAnim_DragonAscent:
+BattleAnim_TripleDive:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_25, $0, $1, $0
@@ -3607,6 +3624,7 @@ BattleAnim_Toxic:
 BattleAnim_Sludge:
 BattleAnim_SludgeWave:
 BattleAnim_AcidSpray:
+BattleAnim_ShellSideArm:
 	anim_1gfx ANIM_GFX_POISON
 	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
 	anim_call BattleAnim_Toxic_branch_cbc35
@@ -3815,6 +3833,7 @@ BattleAnim_Nightmare:
 
 BattleAnim_FlameWheel:
 BattleAnim_FlameCharge:
+BattleAnim_HeatCrash:
 	anim_1gfx ANIM_GFX_FIRE
 .loop
 	anim_sound 0, 0, SFX_EMBER
@@ -4127,11 +4146,11 @@ BattleAnim_SludgeBomb:
 	anim_ret
 
 BattleAnim_Purify:
-	; anim_1gfx ANIM_GFX_EGG
-	; anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
-	; anim_sound 6, 2, SFX_SLUDGE_BOMB
-	; anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
-	; anim_wait 36
+	anim_1gfx ANIM_GFX_EGG
+	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
+	anim_wait 36
 	anim_ret
 
 BattleAnim_MudSlap:
@@ -4304,6 +4323,7 @@ BattleAnim_LockOnTargeting:
 
 BattleAnim_Outrage:
 BattleAnim_DragonHammer:
+BattleAnim_RagingFury:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_1A, $0, $1, $20
@@ -4662,6 +4682,7 @@ BattleAnim_Present:
 	anim_ret
 
 BattleAnim_Frustration:
+BattleAnim_PowerTrip:
 	anim_1gfx ANIM_GFX_MISC
 	anim_sound 0, 0, SFX_KINESIS_2
 	anim_obj ANIM_OBJ_ANGER, 72, 80, $0
@@ -4715,6 +4736,7 @@ BattleAnim_PainSplit:
 	anim_ret
 
 BattleAnim_SacredFire:
+BattleAnim_Overheat:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -4782,6 +4804,7 @@ BattleAnim_Megahorn:
 BattleAnim_Dragonbreath:
 BattleAnim_Incinerate:
 BattleAnim_MysticalFire:
+BattleAnim_TorchSong:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_sound 6, 2, SFX_EMBER
 .loop
@@ -5590,6 +5613,7 @@ BattleAnim_OriginPulse:
 
 BattleAnim_AquaTail:
 BattleAnim_Liquidation:
+BattleAnim_WaveCrash:
     anim_1gfx ANIM_GFX_HIT
     anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
     anim_sound 0, 1, SFX_SURF
@@ -5909,6 +5933,7 @@ BattleAnim_AuroraVeil:
 BattleAnim_DazzleGleam:
 BattleAnim_LusterPurge:
 BattleAnim_RoarOfTime:
+BattleAnim_Judgement:
 ; From Rangi's Polished Crystal
 	anim_3gfx ANIM_GFX_SPEED, ANIM_GFX_HIT, ANIM_GFX_SHINE
 	anim_sound 0, 1, SFX_MOONLIGHT
@@ -5994,6 +6019,7 @@ BattleAnim_Aromatherapy:
 	anim_ret
 
 BattleAnim_XScissor:
+BattleAnim_CrossPoison:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_CUT
 	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, 148, 38, $0
@@ -6001,15 +6027,15 @@ BattleAnim_XScissor:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_CrossPoison:
-	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_POISON
-	anim_sound 0, 1, SFX_CUT
-	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, 148, 38, $0
-	anim_obj ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 116, 38, $0
-	anim_wait 6
-	anim_call BattleAnim_Toxic_branch_cbc15
-	anim_wait 64
-	anim_ret
+; BattleAnim_CrossPoison:
+	; anim_2gfx ANIM_GFX_CUT, ANIM_GFX_POISON
+	; anim_sound 0, 1, SFX_CUT
+	; anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, 148, 38, $0
+	; anim_obj ANIM_OBJ_CUT_LONG_DOWN_RIGHT, 116, 38, $0
+	; anim_wait 6
+	; anim_call BattleAnim_Toxic_branch_cbc15
+	; anim_wait 64
+	; anim_ret
 
 BattleAnim_ZenHeadbutt:
 BattleAnim_HeartStamp:
@@ -6403,6 +6429,7 @@ BattleAnim_LeafBlade:
     anim_ret
 
 BattleAnim_Hex:
+BattleAnim_EerieSpell:
 ; From Rangi's Polished Crystal
 	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_SPEED
 	anim_bgp $f8
@@ -6752,6 +6779,7 @@ BattleAnim_DragonDance:
 BattleAnim_QuiverDance:
 BattleAnim_WildFury:
 BattleAnim_Coil:
+BattleAnim_FilletAway:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
 	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
 	anim_sound 0, 0, SFX_OUTRAGE
@@ -6764,6 +6792,7 @@ BattleAnim_Coil:
 	anim_ret
 
 BattleAnim_GigaImpact:
+BattleAnim_MeteorAssault:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
 	anim_call BattleAnim_DragonDance
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40

@@ -1,9 +1,11 @@
 SECTION "Evolution Moves 2", ROMX
 
 EvolutionMovePointers2::
+	dw NoEvolutionMoves2        ; URSAFLAME
 	dw NoEvolutionMoves2        ; TANGEL
+	dw NoEvolutionMoves2        ; MARUMARILL
 	dw NoEvolutionMoves2        ; MOLANCORA
-	dw AnchorrageEvolutionMoves ; ANCHORRAGE
+	dw AngoreEvolutionMoves     ; ANGORE
 	dw NoEvolutionMoves2        ; MEOWSY
 	dw NoEvolutionMoves2        ; MOIBELLE
 	dw ChimeowEvolutionMoves    ; CHIMEOW
@@ -14,12 +16,14 @@ EvolutionMovePointers2::
 	dw PhandarinEvolutionMoves  ; PHANDARIN
 	dw NoEvolutionMoves2        ; WOLFROST
 	dw WarwolfEvolutionMoves    ; WARWOLF
+	; dw NoEvolutionMoves2        ; GUSTELA
 	dw NoEvolutionMoves2        ; CHIKORITA
 	dw NoEvolutionMoves2        ; BAYLEEF
 	dw MeganiumEvolutionMoves   ; MEGANIUM
 	dw NoEvolutionMoves2        ; CYNDAQUIL
 	dw NoEvolutionMoves2        ; QUILAVA
 	dw TyphlosionEvolutionMoves ; TYPHLOSION
+	dw TyphlosionHEvolutionMoves ; TYPHLOSION_H
 	dw NoEvolutionMoves2        ; TOTODILE
 	dw NoEvolutionMoves2        ; CROCONAW
 	dw FeraligatrEvolutionMoves ; FERALIGATR
@@ -46,20 +50,26 @@ EvolutionMovePointers2::
 	dw AmpharosEvolutionMoves   ; AMPHAROS
 	dw BellossomEvolutionMoves  ; BELLOSSOM
 	dw NoEvolutionMoves2        ; MARILL
+	dw MarillBEvolutionMoves    ; MARILL_B
 	dw NoEvolutionMoves2        ; AZUMARILL
 	dw SudowoodoEvolutionMoves  ; SUDOWOODO
 	dw NoEvolutionMoves2        ; HOPPIP
+	dw NoEvolutionMoves2        ; HOPPIP_B
 	dw NoEvolutionMoves2        ; SKIPLOOM
+	dw NoEvolutionMoves2        ; SKIPLOOM_B
 	dw NoEvolutionMoves2        ; JUMPLUFF
+	dw NoEvolutionMoves2        ; JUMPLUFF_B
 	dw NoEvolutionMoves2        ; SUNKERN
 	dw SunfloraEvolutionMoves   ; SUNFLORA
 	dw NoEvolutionMoves2        ; YANMA
 	dw NoEvolutionMoves2        ; WOOPER
+	dw NoEvolutionMoves2        ; WOOPER_P
 	dw NoEvolutionMoves2        ; QUAGSIRE
 	dw EspeonEvolutionMoves     ; ESPEON
 	dw UmbreonEvolutionMoves    ; UMBREON
 	dw NoEvolutionMoves2        ; MURKROW
 	dw SlowkingEvolutionMoves   ; SLOWKING
+	dw SlowkingGEvolutionMoves  ; SLOWKING_G
 	dw NoEvolutionMoves2        ; MISDREAVUS
 	dw NoEvolutionMoves2        ; UNOWN
 	dw WobbuffetEvolutionMoves  ; WOBBUFFET
@@ -71,19 +81,24 @@ EvolutionMovePointers2::
 	dw SteelixEvolutionMoves    ; STEELIX
 	dw NoEvolutionMoves2        ; SNUBBULL
 	dw NoEvolutionMoves2        ; GRANBULL
+	dw NoEvolutionMoves2        ; QWILFISH
+	dw NoEvolutionMoves2        ; QWILFISH_H
 	dw ScizorEvolutionMoves     ; SCIZOR
 	dw NoEvolutionMoves2        ; SHUCKLE
 	dw NoEvolutionMoves2        ; HERACROSS
 	dw NoEvolutionMoves2        ; SNEASEL
 	dw NoEvolutionMoves2        ; TEDDIURSA
+	dw NoEvolutionMoves2        ; TEDDIURSA_B
 	dw NoEvolutionMoves2        ; URSARING
 	dw NoEvolutionMoves2        ; SLUGMA
 	dw MagcargoEvolutionMoves   ; MAGCARGO
 	dw NoEvolutionMoves2        ; SWINUB
 	dw PiloswineEvolutionMoves  ; PILOSWINE
+	dw NoEvolutionMoves2        ; CORSOLA
 	dw NoEvolutionMoves2        ; CORSOLA_G
 	dw NoEvolutionMoves2        ; REMORAID
 	dw OctilleryEvolutionMoves  ; OCTILLERY
+	dw OctilleryBEvolutionMoves ; OCTILLERY_B
 	dw NoEvolutionMoves2        ; DELIBIRD
 	dw NoEvolutionMoves2        ; MANTINE
 	dw NoEvolutionMoves2        ; SKARMORY
@@ -93,8 +108,10 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; PHANPY
 	dw DonphanEvolutionMoves    ; DONPHAN
 	dw Porygon2EvolutionMoves   ; PORYGON2
+	dw NoEvolutionMoves2        ; STANTLER
 	dw NoEvolutionMoves2        ; SMEARGLE
 	dw NoEvolutionMoves2        ; ELEKID
+	dw NoEvolutionMoves2        ; MAGBY
 	dw NoEvolutionMoves2        ; MILTANK
 	dw NoEvolutionMoves2        ; BLISSEY
 	dw NoEvolutionMoves2        ; RAIKOU
@@ -107,7 +124,7 @@ EvolutionMovePointers2::
 	dw NoEvolutionMoves2        ; HO_OH
 	dw NoEvolutionMoves2        ; CELEBI
 
-AnchorrageEvolutionMoves:
+AngoreEvolutionMoves:
 	dw ANCHOR_SHOT
 	db 0 ; no more evolution moves
 
@@ -137,6 +154,10 @@ MeganiumEvolutionMoves:
 
 TyphlosionEvolutionMoves:
 	dw INFERNO
+	db 0 ; no more evolution moves
+
+TyphlosionHEvolutionMoves:
+	dw HEX
 	db 0 ; no more evolution moves
 
 FeraligatrEvolutionMoves:
@@ -179,6 +200,10 @@ BellossomEvolutionMoves:
 	dw PETAL_STORM
 	db 0 ; no more evolution moves
 
+MarillBEvolutionMoves:
+	dw THUNDERSHOCK
+	db 0 ; no more evolution moves
+
 SudowoodoEvolutionMoves:
 	dw SLAM
 	db 0 ; no more evolution moves
@@ -197,6 +222,10 @@ UmbreonEvolutionMoves:
 
 SlowkingEvolutionMoves:
 	dw HIDDEN_POWER
+	db 0 ; no more evolution moves
+
+SlowkingGEvolutionMoves:
+	dw EERIE_SPELL
 	db 0 ; no more evolution moves
 
 WobbuffetEvolutionMoves:
@@ -230,6 +259,11 @@ PiloswineEvolutionMoves:
 
 OctilleryEvolutionMoves:
 	dw CONSTRICT
+	dw OCTAZOOKA
+	db 0 ; no more evolution moves
+
+OctilleryBEvolutionMoves:
+	dw IRON_HEAD
 	dw OCTAZOOKA
 	db 0 ; no more evolution moves
 

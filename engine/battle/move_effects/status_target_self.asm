@@ -41,7 +41,7 @@ StatusTargetSelfMoves:
 	dww MEAN_LOOK, 			BattleCommand_ArenaTrap
 	dww SPIDER_WEB, 		BattleCommand_ArenaTrap
 	dww BLOCK, 				BattleCommand_ArenaTrap
-	dww FAIRY_LOCK, 		BattleCommand_ArenaTrap
+	; dww FAIRY_LOCK, 		BattleCommand_ArenaTrap
 	dww SAFEGUARD, 			BattleCommand_Safeguard
 	dww MIST, 				BattleCommand_Mist
 	dww LIGHT_SCREEN, 		BattleCommand_LightScreen
@@ -55,7 +55,7 @@ StatusTargetSelfMoves:
 	dww PSYCH_UP, 			BattleCommand_PsychUp
 	dww SHELL_SMASH, 		BattleCommand_ShellSmash
 	dww QUIVER_DANCE, 		BattleCommand_QuiverDance
-	dww BRIGHT_MOSS, 		BattleCommand_BrightMoss
+	; dww BRIGHT_MOSS, 		BattleCommand_BrightMoss
 	dww INGRAIN, 			BattleCommand_Ingrain
 	dww COIL, 				BattleCommand_Coil
 	dww ACUPRESSURE, 		BattleCommand_Acupressure
@@ -71,9 +71,9 @@ StatusTargetSelfMoves:
 	dww CULTIVATE, 			BattleCommand_Cultivate
 	dww LASER_FOCUS, 		BattleCommand_LaserFocus
 	dww WISH, 				BattleCommand_Wish
-	dww GEOMANCY, 			BattleCommand_Geomancy
+	; dww GEOMANCY, 			BattleCommand_Geomancy
 	dww POWER_TRICK, 		BattleCommand_PowerTrick
-	dww CLANGOROUS_SOUL, 	BattleCommand_ClangorousSoul
+	; dww CLANGOROUS_SOUL, 	BattleCommand_ClangorousSoul
 	dww OCTOLOCK, 			BattleCommand_Octolock
 	dww TEATIME, 			BattleCommand_Teatime
 ; Entry hazards
@@ -87,4 +87,5 @@ StatusTargetSelfMoves:
 	dww SANDSTORM, 			BattleCommand_StartSandstorm
 	dww HAIL, 				BattleCommand_StartHail
 	dww MISTY_TERRAIN, 		BattleCommand_MistyTerrain
+	dww FILLET_AWAY, 		BattleCommand_FilletAway
 	db -1 ; end

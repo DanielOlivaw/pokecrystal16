@@ -1,100 +1,114 @@
 SECTION "Egg Moves 4", ROMX
 
 EggMovePointers4::
-	dw TurtwigEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw ChimcharEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw PiplupEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw StarlyEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw BidoofEggMoves
-	dw NoEggMoves4
-	dw ShinxEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw BudewEggMoves
-	dw NoEggMoves4
-	dw CranidosEggMoves
-	dw NoEggMoves4
-	dw ShieldonEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw PachirisuEggMoves
-	dw BuizelEggMoves
-	dw NoEggMoves4
-	dw ShellosEggMoves
-	dw NoEggMoves4
-	dw DrifloonEggMoves
-	dw NoEggMoves4
-	dw BunearyEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw GlameowEggMoves
-	dw NoEggMoves4
-	dw ChinglingEggMoves
-	dw StunkyEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw BonslyEggMoves
-	dw MimeJrEggMoves
-	dw HappinyEggMoves
-	dw ChatotEggMoves
-	dw SpiritombEggMoves
-	dw GibleEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw MunchlaxEggMoves
-	dw RioluEggMoves
-	dw NoEggMoves4
-	dw HippopotasEggMoves
-	dw NoEggMoves4
-	dw SkorupiEggMoves
-	dw NoEggMoves4
-	dw CroagunkEggMoves
-	dw NoEggMoves4
-	dw CarnivineEggMoves
-	dw FinneonEggMoves
-	dw NoEggMoves4
-	dw MantykeEggMoves
-	dw SnoverEggMoves
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
-	dw NoEggMoves4
+	dw TurtwigEggMoves   ; TURTWIG
+	dw NoEggMoves4       ; GROTLE
+	dw NoEggMoves4       ; TORTERRA
+	dw ChimcharEggMoves  ; CHIMCHAR
+	dw NoEggMoves4       ; MONFERNO
+	dw NoEggMoves4       ; INFERNAPE
+	dw PiplupEggMoves    ; PIPLUP
+	dw NoEggMoves4       ; PRINPLUP
+	dw NoEggMoves4       ; EMPOLEON
+	dw StarlyEggMoves    ; STARLY
+	dw NoEggMoves4       ; STARAVIA
+	dw NoEggMoves4       ; STARAPTOR
+	dw BidoofEggMoves    ; BIDOOF
+	dw NoEggMoves4       ; BIBAREL
+	dw ShinxEggMoves     ; SHINX
+	dw NoEggMoves4       ; LUXIO
+	dw NoEggMoves4       ; LUXRAY
+	dw BudewEggMoves     ; BUDEW
+	dw NoEggMoves4       ; ROSERADE
+	dw CranidosEggMoves  ; CRANIDOS
+	dw NoEggMoves4       ; RAMPARDOS
+	dw ShieldonEggMoves  ; SHIELDON
+	dw NoEggMoves4       ; BASTIODON
+	dw NoEggMoves4       ; BURMY_PLANT
+	dw NoEggMoves4       ; BURMY_SANDY
+	dw NoEggMoves4       ; BURMY_TRASH
+	dw NoEggMoves4       ; WORMADAM_PLANT
+	dw NoEggMoves4       ; WORMADAM_SANDY
+	dw NoEggMoves4       ; WORMADAM_TRASH
+	dw NoEggMoves4       ; MOTHIM
+	dw NoEggMoves4       ; COMBEE
+	dw NoEggMoves4       ; VESPIQUEN
+	dw PachirisuEggMoves ; PACHIRISU
+	dw BuizelEggMoves    ; BUIZEL
+	dw NoEggMoves4       ; FLOATZEL
+	; dw CherubiEggMoves   ; CHERUBI
+	; dw NoEggMoves4       ; CHERRIM_OVERCAST
+	; dw NoEggMoves4       ; CHERRIM_SUNSHINE
+	dw ShellosEEggMoves  ; SHELLOS_E
+	dw ShellosWEggMoves  ; SHELLOS_W
+	dw NoEggMoves4       ; GASTRODON_E
+	dw NoEggMoves4       ; GASTRODON_W
+	dw DrifloonEggMoves  ; DRIFLOON
+	dw NoEggMoves4       ; DRIFBLIM
+	dw BunearyEggMoves   ; BUNEARY
+	dw NoEggMoves4       ; LOPUNNY
+	dw NoEggMoves4       ; MISMAGIUS
+	dw NoEggMoves4       ; HONCHKROW
+	dw GlameowEggMoves   ; GLAMEOW
+	dw NoEggMoves4       ; PURUGLY
+	dw ChinglingEggMoves ; CHINGLING
+	dw StunkyEggMoves    ; STUNKY
+	dw NoEggMoves4       ; SKUNTANK
+	dw NoEggMoves4       ; BRONZOR
+	dw NoEggMoves4       ; BRONZONG
+	dw BonslyEggMoves    ; BONSLY
+	dw MimeJrEggMoves    ; MIME_JR
+	dw HappinyEggMoves   ; HAPPINY
+	; dw ChatotEggMoves    ; CHATOT
+	; dw SpiritombEggMoves ; SPIRITOMB
+	dw GibleEggMoves     ; GIBLE
+	dw NoEggMoves4       ; GABITE
+	dw NoEggMoves4       ; GARCHOMP
+	dw MunchlaxEggMoves  ; MUNCHLAX
+	dw RioluEggMoves     ; RIOLU
+	dw NoEggMoves4       ; LUCARIO
+	dw HippopotasEggMoves; HIPPOPOTAS
+	dw NoEggMoves4       ; HIPPOWDON
+	dw SkorupiEggMoves   ; SKORUPI
+	dw NoEggMoves4       ; DRAPION
+	dw CroagunkEggMoves  ; CROAGUNK
+	dw NoEggMoves4       ; TOXICROAK
+	dw CarnivineEggMoves ; CARNIVINE
+	dw FinneonEggMoves   ; FINNEON
+	dw NoEggMoves4       ; LUMINEON
+	dw MantykeEggMoves   ; MANTYKE
+	dw SnoverEggMoves    ; SNOVER
+	dw NoEggMoves4       ; ABOMASNOW
+	dw NoEggMoves4       ; WEAVILE
+	dw NoEggMoves4       ; MAGNEZONE
+	dw NoEggMoves4       ; LICKILICKY
+	dw NoEggMoves4       ; RHYPERIOR
+	dw NoEggMoves4       ; TANGROWTH
+	dw NoEggMoves4       ; ELECTIVIRE
+	dw NoEggMoves4       ; MAGMORTAR
+	dw NoEggMoves4       ; TOGEKISS
+	dw NoEggMoves4       ; YANMEGA
+	dw NoEggMoves4       ; LEAFEON
+	dw NoEggMoves4       ; GLACEON
+	dw NoEggMoves4       ; GLISCOR
+	dw NoEggMoves4       ; MAMOSWINE
+	dw NoEggMoves4       ; PORYGON_Z
+	dw NoEggMoves4       ; GALLADE
+	dw NoEggMoves4       ; PROBOPASS
+	dw NoEggMoves4       ; DUSKNOIR
+	dw NoEggMoves4       ; FROSLASS
+	; dw NoEggMoves4       ; ROTOM
+	; dw NoEggMoves4       ; UXIE
+	; dw NoEggMoves4       ; MESPRIT
+	; dw NoEggMoves4       ; AZELF
+	; dw NoEggMoves4       ; DIALGA
+	; dw NoEggMoves4       ; PALKIA
+	; dw NoEggMoves4       ; REGIGIGAS
+	; dw NoEggMoves4       ; GIRATINA
+	; dw NoEggMoves4       ; CRESSELIA
+	dw NoEggMoves4       ; DARKRAI
+	; dw NoEggMoves4       ; SHAYMIN
+	dw NoEggMoves4       ; ARCEUS
 
 TurtwigEggMoves:
 	dw AMNESIA
@@ -253,7 +267,19 @@ BuizelEggMoves:
 	dw TAIL_SLAP
 	dw -1 ; end
 
-ShellosEggMoves:
+CherubiEggMoves:
+	dw AROMATHERAPY
+	dw DEFENSE_CURL
+	dw HEALING_WISH
+	dw RAZOR_LEAF
+	dw ROLLOUT
+	dw SWEET_SCENT
+	dw TICKLE
+	dw SEED_BOMB
+	dw -1 ; end
+
+ShellosEEggMoves:
+ShellosWEggMoves:
 	dw ACID_ARMOR
 	dw CLEAR_SMOG
 	dw COUNTER

@@ -1,12 +1,18 @@
 SECTION "Egg Moves 5", ROMX
 
 EggMovePointers5::
+	dw SnivyEggMoves
+	dw NoEggMoves5
+	dw NoEggMoves5
+	dw TepigEggMoves
+	dw NoEggMoves5
+	dw NoEggMoves5
 	dw OshawottEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
-	dw LillipupEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
+	; dw LillipupEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
 	dw PurrloinEggMoves
 	dw NoEggMoves5
 	dw MunnaEggMoves
@@ -20,32 +26,37 @@ EggMovePointers5::
 	dw TimburrEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
-	dw SewaddleEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
+	; dw SewaddleEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
 	dw VenipedeEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
 	dw CottoneeEggMoves
 	dw NoEggMoves5
-	dw PetililEggMoves
-	dw NoEggMoves5
-	dw BasculinEggMoves
+	; dw PetililEggMoves
+	; dw NoEggMoves5
+	dw BasculinREggMoves
+	dw BasculinBEggMoves
+	dw BasculinWEggMoves
 	dw SandileEggMoves
 	dw NoEggMoves5
 	dw NoEggMoves5
+	dw DarumakaEggMoves
 	dw DarumakaGEggMoves
 	dw NoEggMoves5
-	dw MaractusEggMoves
+	dw NoEggMoves5
+	; dw MaractusEggMoves
 	dw DwebbleEggMoves
 	dw NoEggMoves5
 	dw ScraggyEggMoves
 	dw NoEggMoves5
+	dw SigilyphEggMoves
 	dw YamaskGEggMoves
 	dw TirtougaEggMoves
 	dw NoEggMoves5
-	dw ArchenEggMoves
-	dw NoEggMoves5
+	; dw ArchenEggMoves
+	; dw NoEggMoves5
 	dw ZoruaEggMoves
 	dw NoEggMoves5
 	dw SolosisEggMoves
@@ -76,17 +87,44 @@ EggMovePointers5::
 	dw MienfooEggMoves
 	dw NoEggMoves5
 	dw DruddigonEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
-	dw PawniardEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
+	; dw PawniardEggMoves
+	; dw NoEggMoves5
+	dw VullabyEggMoves
 	dw NoEggMoves5
 	dw HeatmorEggMoves
 	dw DurantEggMoves
-	dw DeinoEggMoves
-	dw NoEggMoves5
-	dw NoEggMoves5
-	dw LarvestaEggMoves
-	dw NoEggMoves5
+	; dw DeinoEggMoves
+	; dw NoEggMoves5
+	; dw NoEggMoves5
+	; dw LarvestaEggMoves
+	; dw NoEggMoves5
+
+SnivyEggMoves:
+	dw CAPTIVATE
+	dw GLARE
+	dw MAGICAL_LEAF
+	dw MEAN_LOOK
+	dw MIRROR_COAT
+	dw PURSUIT
+	dw SWEET_SCENT
+	dw TWISTER
+	dw -1 ; end
+
+TepigEggMoves:
+	dw OVERHEAT
+	dw BODY_SLAM
+	dw BURN_UP
+	dw COVET
+	dw ENDEAVOR
+	dw HEAVY_SLAM
+	dw MAGNITUDE
+	dw SUCKER_PUNCH
+	dw SUPERPOWER
+	dw THRASH
+	dw YAWN
+	dw -1 ; end
 
 OshawottEggMoves:
 	dw AIR_SLASH
@@ -227,7 +265,8 @@ PetililEggMoves:
 	dw SWEET_SCENT
 	dw -1 ; end
 
-BasculinEggMoves:
+BasculinREggMoves:
+BasculinBEggMoves:
 	dw AGILITY
 	dw BRINE
 	dw BUBBLEBEAM
@@ -235,6 +274,16 @@ BasculinEggMoves:
 	dw MUDDY_WATER
 	dw RAGE
 	dw REVENGE
+	dw SWIFT
+	dw ENDEAVOR
+	dw SCALE_SHOT
+	dw FLIP_TURN
+	dw -1 ; end
+
+BasculinWEggMoves:
+	dw AGILITY
+	dw BRINE
+	dw MUDDY_WATER
 	dw SWIFT
 	dw ENDEAVOR
 	dw SCALE_SHOT
@@ -255,6 +304,19 @@ SandileEggMoves:
 	dw AQUA_TAIL
 	dw SPITE
 	dw SCORCHING_SANDS
+	dw -1 ; end
+
+DarumakaEggMoves:
+	dw EXTRASENSORY
+	dw FLAME_WHEEL
+	dw FOCUS_PUNCH
+	dw HAMMER_ARM
+	dw TAKE_DOWN
+	dw YAWN
+	dw ENCORE
+	dw FOCUS_ENERGY
+	dw HEAT_WAVE
+	dw OVERHEAT
 	dw -1 ; end
 
 DarumakaGEggMoves:
@@ -302,6 +364,15 @@ ScraggyEggMoves:
 	dw FAINT_ATTACK
 	dw POWER_UP_PUNCH
 	dw DRAGON_CLAW
+	dw -1 ; end
+
+SigilyphEggMoves:
+	dw ANCIENTPOWER
+	dw PSYCHO_SHIFT
+	dw ROOST
+	dw STORED_POWER
+	dw TRICK
+	dw FUTURE_SIGHT
 	dw -1 ; end
 
 YamaskGEggMoves:
@@ -480,6 +551,15 @@ PawniardEggMoves:
 	dw PURSUIT
 	dw REVENGE
 	dw SUCKER_PUNCH
+	dw -1 ; end
+
+VullabyEggMoves:
+	dw MEAN_LOOK
+	dw ROOST
+	dw DUAL_WINGBEAT
+	dw FAKE_TEARS
+	dw KNOCK_OFF
+	dw SCARY_FACE
 	dw -1 ; end
 
 HeatmorEggMoves:

@@ -172,13 +172,19 @@ FireStarterPokeBallScript:
 	iftrue .Torchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .Chimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .Tepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .Fennekin
-	random 5
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .Fuecoco
+	random 7
 	ifequal 1, .Cyndaquil
 	ifequal 2, .Torchic
 	ifequal 3, .Chimchar
-	ifequal 4, .Fennekin
+	ifequal 4, .Tepig
+	ifequal 5, .Fennekin
+	ifequal 6, .Fuecoco
 .Charmander
 	setevent EVENT_CHARMANDER_IS_FIRE_STARTER
 	pokepic CHARMANDER
@@ -284,6 +290,31 @@ FireStarterPokeBallScript:
 	givepoke CHIMCHAR, 5, BERRY
 	sjump .Finish
 
+.Tepig
+	setevent EVENT_TEPIG_IS_FIRE_STARTER
+	pokepic TEPIG
+	cry TEPIG
+	loadmonindex 1, TEPIG
+	special SpecialSetSeenMon
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, TEPIG
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke TEPIG, 5, BERRY
+	sjump .Finish
+
 .Fennekin
 	setevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	pokepic FENNEKIN
@@ -307,6 +338,31 @@ FireStarterPokeBallScript:
 	waitsfx
 	buttonsound
 	givepoke FENNEKIN, 5, BERRY
+	sjump .Finish
+
+.Fuecoco
+	setevent EVENT_FUECOCO_IS_FIRE_STARTER
+	pokepic FUECOCO
+	cry FUECOCO
+	loadmonindex 1, FUECOCO
+	special SpecialSetSeenMon
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, FUECOCO
+	writetext TakeFireStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_FIRE_STARTER_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke FUECOCO, 5, BERRY
 	sjump .Finish
 
 WaterStarterPokeBallScript:
@@ -498,16 +554,19 @@ GrassStarterPokeBallScript:
 	iftrue .Treecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .Turtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .Snivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .Chespin
 	checkevent EVENT_ROWLET_IS_GRASS_STARTER
 	iftrue .Rowlet
-	random 6
+	random 7
 	ifequal 1, .Chikorita
 	ifequal 2, .Treecko
 	ifequal 3, .Turtwig
-	ifequal 4, .Chespin
-	ifequal 5, .Rowlet
+	ifequal 4, .Snivy
+	ifequal 5, .Chespin
+	ifequal 6, .Rowlet
 .Bulbasaur
 	setevent EVENT_BULBASAUR_IS_GRASS_STARTER
 	pokepic BULBASAUR
@@ -609,6 +668,31 @@ GrassStarterPokeBallScript:
 	waitsfx
 	buttonsound
 	givepoke TURTWIG, 5, BERRY
+	sjump .Finish
+
+.Snivy
+	setevent EVENT_SNIVY_IS_GRASS_STARTER
+	pokepic SNIVY
+	cry SNIVY
+	loadmonindex 1, SNIVY
+	special SpecialSetSeenMon
+	waitbutton
+	closepokepic
+	opentext
+	getmonname STRING_BUFFER_3, SNIVY
+	writetext TakeGrassStarterText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_GRASS_STARTER_FROM_ELM
+	writetext ChoseStarterText
+	buttonsound
+	waitsfx
+	writetext ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke SNIVY, 5, BERRY
 	sjump .Finish
 
 .Chespin

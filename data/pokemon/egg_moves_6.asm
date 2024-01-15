@@ -23,15 +23,15 @@ EggMovePointers6::
 	dw NoEggMoves6
 	dw PanchamEggMoves
 	dw NoEggMoves6
-	dw EspurrEggMoves
-	dw NoEggMoves6
-	dw HonedgeEggMoves
-	dw NoEggMoves6
-	dw NoEggMoves6
+	; dw EspurrEggMoves
+	; dw NoEggMoves6
+	; dw HonedgeEggMoves
+	; dw NoEggMoves6
+	; dw NoEggMoves6
 	dw SpritzeeEggMoves
 	dw NoEggMoves6
-	dw SwirlixEggMoves
-	dw NoEggMoves6
+	; dw SwirlixEggMoves
+	; dw NoEggMoves6
 	dw InkayEggMoves
 	dw NoEggMoves6
 	dw BinacleEggMoves
@@ -51,16 +51,20 @@ EggMovePointers6::
 	dw GoomyEggMoves
 	dw NoEggMoves6
 	dw NoEggMoves6
-	dw KlefkiEggMoves
+	dw NoEggMoves6
+	dw NoEggMoves6
+	; dw KlefkiEggMoves
 	dw PhantumpEggMoves
+	dw NoEggMoves6
+	dw PumpkabooEggMoves
 	dw NoEggMoves6
 	dw BergmiteEggMoves
 	dw NoEggMoves6
+	; dw NoEggMoves6
+	; dw NoEggMoves6
+	; dw NoEggMoves6
 	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
-	dw NoEggMoves6
+	; dw NoEggMoves6
 
 ChespinEggMoves:
 	dw BELLY_DRUM
@@ -243,6 +247,16 @@ PhantumpEggMoves:
 	dw SEED_BOMB
 	dw DISABLE
 	dw SUCKER_PUNCH
+	dw POLTERGEIST
+	dw -1 ; end
+
+PumpkabooEggMoves:
+	dw CULTIVATE
+	dw DESTINY_BOND
+	dw DISABLE
+	dw MYSTICAL_FIRE
+	dw HEX
+	dw SYNTHESIS
 	dw POLTERGEIST
 	dw -1 ; end
 

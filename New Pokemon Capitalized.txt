@@ -143,9 +143,9 @@ Gyarados
 Lapras
 Ditto
 Eevee
-Flareon
-Jolteon
 Vaporeon
+Jolteon
+Flareon
 Porygon
 Omanyte
 Omastar
@@ -284,7 +284,7 @@ Larvitar
 Pupitar
 Tyranitar
 Lugia
-Hooh
+HoOh
 Celebi
 Treecko
 Grovyle
@@ -726,9 +726,9 @@ Togedemaru
 Mimikyu
 Drampa
 Dhelmise
-Jangmoo
-Hakamoo
-Kommoo
+JangmoO
+HakamoO
+KommoO
 Nihilego
 Buzzwole
 Pheromosa
@@ -823,9 +823,7 @@ Greavard
 Houndstone
 Flamigo
 Veluza
-TatsugiriCurly
-TatsugiriDroopy
-TatsugiriStretchy
+Tatsugiri
 Clodsire
 Farigiraf
 WoChien

@@ -7,7 +7,7 @@
 	db GRASS, PSYCHIC ; type
 	db 120 ; catch rate
 	db 119 ; base exp
-	db NO_ITEM, SOOTHE_BELL ; items
+	db NO_ITEM, PINK_BOW ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/skiploom_b/front.dimensions"

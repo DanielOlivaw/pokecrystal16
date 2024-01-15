@@ -13,7 +13,7 @@
 	INCBIN "gfx/pokemon/gossifleur/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GRASS, EGG_GRASS ; egg groups
+	dn EGG_PLANT, EGG_PLANT ; egg groups
 
 	; tm/hm learnset
 	tmhm TOXIC, CURSE, HIDDEN_POWER, SUNNY_DAY, LIGHT_SCREEN, PROTECT, SOLARBEAM, RETURN, DOUBLE_TEAM, FACADE, REST, ATTRACT, ENERGY_BALL, ENDURE, BULLET_SEED, FLASH, GRASS_KNOT, SWAGGER, SLEEP_TALK, SUBSTITUTE

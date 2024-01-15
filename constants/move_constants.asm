@@ -412,7 +412,7 @@
 	const SHATTER_CLAW
 	const WILD_FURY
 	const WIND_RIDE
-	const BRIGHT_MOSS
+	; const BRIGHT_MOSS
 	const SHIELD_BASH
 	const SACRED_SWORD
 	const INGRAIN
@@ -463,14 +463,14 @@
 	const BELCH
 	const YAWN
 	const DIVE
-	const SHADOW_FORCE
+	; const SHADOW_FORCE
 	const PHANTOM_FORCE
 	const NOBLE_ROAR
 	const BOOMBURST
 	const NEEDLE_ARM
 	const SPIKY_SHIELD
-	const KINGS_SHIELD
-	const BANEFUL_BUNKER
+	; const KINGS_SHIELD
+	; const BANEFUL_BUNKER
 	const OBSTRUCT
 	const CRAFTY_SHIELD
 	const FAKE_OUT
@@ -490,10 +490,10 @@
 	const CHARGE_BEAM
 	const MIST_BALL
 	const LUSTER_PURGE
-	const ORIGIN_PULSE
+	; const ORIGIN_PULSE
 	const PRECIPICE_BLADES
-	const DRAGON_ASCENT
-	const DOOM_DESIRE
+	; const DRAGON_ASCENT
+	; const DOOM_DESIRE
 	const PSYCHO_BOOST
 	const TRICK_ROOM
 	const RETALIATE
@@ -507,16 +507,16 @@
 	const CHATTER
 	const POWER_UP_PUNCH
 	const MAGNET_BOMB
-	const ROAR_OF_TIME
-	const SPACIAL_REND
+	; const ROAR_OF_TIME
+	; const SPACIAL_REND
 	const MAGNET_RISE
 	const ME_FIRST
 	const BODY_PRESS
 	const MEMENTO
 	const HEALING_WISH
-	const LUNAR_DANCE
+	; const LUNAR_DANCE
 	const DARK_VOID
-	const SEED_FLARE
+	; const SEED_FLARE
 	const HEAVY_SLAM
 	const HEAT_CRASH
 	const ELECTRO_BALL
@@ -540,7 +540,7 @@
 	const WEATHERVANE
 	const CULTIVATE
 	const TIME_TRAVEL
-	const SEAMITAR
+	const AQUA_CUTTER
 	const ROCK_WRECKER
 	const BRUTAL_SWING
 	const ELECTROWEB
@@ -549,7 +549,7 @@
 	const LASER_FOCUS
 	const DRAIN_PUNCH
 	const FIRE_LASH
-	const FIERY_DANCE
+	; const FIERY_DANCE
 	const WATER_SHURIKEN
 	const POWDER
 	const WISH
@@ -559,20 +559,20 @@
 	const TOPSY_TURVY
 	const PARABOLIC_CHARGE
 	const ELECTRIFY
-	const FAIRY_LOCK
+	; const FAIRY_LOCK
 	const BRANCH_POKE
-	const GEOMANCY
-	const OBLIVION_WING
+	; const GEOMANCY
+	; const OBLIVION_WING
 	const FOCUS_BLAST
-	const LANDS_WRATH
-	const THOUSAND_WAVES
+	; const LANDS_WRATH
+	; const THOUSAND_WAVES
 	const DIAMOND_STORM
-	const STEAM_ERUPTION
+	; const STEAM_ERUPTION
 	const GRASSWHISTLE
 	const POWER_TRICK
 	const SPIRIT_SHACKLE
 	const FOCUS_PUNCH
-	const BEAK_BLAST
+	; const BEAK_BLAST
 	const SHELL_TRAP
 	const REVENGE
 	const AVALANCHE
@@ -582,37 +582,37 @@
 	const LUNGE
 	const SOLAR_BLADE
 	const SHORE_UP
-	const MULTI_ATTACK
+	; const MULTI_ATTACK
 	const ZING_ZAP
-	const CLANGING_SCALES
-	const CLANGOROUS_SOUL
+	; const CLANGING_SCALES
+	; const CLANGOROUS_SOUL
 	const VACUUM_WAVE
-	const SHIFT_GEAR
-	const FLEUR_CANNON
-	const MIND_BLOWN
-	const DRUM_BEATING
+	; const SHIFT_GEAR
+	; const FLEUR_CANNON
+	; const MIND_BLOWN
+	; const DRUM_BEATING
 	const TAIL_SLAP
 	const SPEED_SWAP
 	const POWER_SWAP
 	const GUARD_SWAP
-	const HEART_SWAP
+	; const HEART_SWAP
 	const JAW_LOCK
 	const PUNISHMENT
 	const STORED_POWER
 	const POWER_TRIP
-	const TAR_SHOT
+	; const TAR_SHOT
 	const GRAV_APPLE
 	const APPLE_ACID
 	const OCTOLOCK
-	const CHRONO_SHIFT
-	const COSMIC_WARP
+	; const CHRONO_SHIFT
+	; const COSMIC_WARP
 	const TEATIME
 	const MAGIC_POWDER
-	const BOLT_BEAK
-	const FISHIOUS_REND
-	const BREAKING_SWIPE
+	; const BOLT_BEAK
+	; const FISHIOUS_REND
+	; const BREAKING_SWIPE
 	const DRAGON_DARTS
-	const THUNDER_CAGE
+	; const THUNDER_CAGE
 	const FRENZY_PLANT
 	const BLAST_BURN
 	const HYDRO_CANNON
@@ -630,7 +630,7 @@
 	const OVERHEAT
 	const SCALD
 	const PSYCHIC_FANGS
-	const DARKEST_LARIAT
+	; const DARKEST_LARIAT
 	const TAIL_GLOW
 	const ROCK_CLIMB
 	const TRUMP_CARD
@@ -640,6 +640,20 @@
 	const PARTING_SHOT
 	const NIGHT_DAZE
 	const PURIFY
+	const SHADOW_BONE
+	const METEOR_ASSAULT
+	const SHELL_SIDE_ARM
+	const EERIE_SPELL
+	const BARB_BARRAGE
+	const HEADLONG_RUSH
+	const RAGING_FURY
+	const WAVE_CRASH
+	const TRIPLE_ARROWS
+	const STONE_AXE
+	const TORCH_SONG
+	const TRIPLE_DIVE
+	const FILLET_AWAY
+	const TWIN_BEAM
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

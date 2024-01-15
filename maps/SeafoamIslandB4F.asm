@@ -1,40 +1,40 @@
 	object_const_def ; object_event constants
 	const SEAFOAMISLANDB4F_POKE_BALL1
 	const SEAFOAMISLANDB4F_POKE_BALL2
-	const SEAFOAMISLANDB4F_REGICE
+	const SEAFOAMISLANDB4F_ARTICUNO
 
 SeafoamIslandB4F_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .Regice
+	callback MAPCALLBACK_OBJECTS, .Articuno
 
-.Regice:
-	checkevent EVENT_FOUGHT_REGICE
+.Articuno:
+	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .NoAppear
-	appear SEAFOAMISLANDB4F_REGICE
+	appear SEAFOAMISLANDB4F_ARTICUNO
 	return
 
 .NoAppear:
-	disappear SEAFOAMISLANDB4F_REGICE
+	disappear SEAFOAMISLANDB4F_ARTICUNO
 	return
 
-Regice:
+Articuno:
 	faceplayer
 	opentext
-	writetext RegiceText
-	cry REGICE
+	writetext ArticunoText
+	cry ARTICUNO
 	pause 15
 	closetext
-	setevent EVENT_FOUGHT_REGICE
+	setevent EVENT_FOUGHT_ARTICUNO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon REGICE, 60
+	loadwildmon ARTICUNO, 60
 	startbattle
-	disappear SEAFOAMISLANDB4F_REGICE
+	disappear SEAFOAMISLANDB4F_ARTICUNO
 	reloadmapafterbattle
 	end
 
-RegiceText:
+ArticunoText:
 	text "Jakiih!"
 	done
 	
@@ -63,4 +63,4 @@ SeafoamIslandB4F_MapEvents:
 	db 3 ; object events
 	object_event 25, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB4FMaxElixer, EVENT_SEAFOAM_ISLAND_B4F_MAX_ELIXER
 	tmhmball_event 34, 6, TM_ICE_BEAM, EVENT_SEAFOAM_ISLAND_B4F_TM_ICE_BEAM
-	object_event 18, 17, SPRITE_REGI, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Regice, EVENT_SEAFOAM_ISLAND_B4F_REGICE
+	object_event 18, 17, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_SEAFOAM_ISLAND_B4F_ARTICUNO

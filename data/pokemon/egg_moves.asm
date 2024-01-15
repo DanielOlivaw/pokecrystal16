@@ -17,9 +17,9 @@ EggMovePointers::
 	indirect_entries CELEBI, EggMovePointers2
 	indirect_entries DEOXYS, EggMovePointers3
 	indirect_entries ARCEUS, EggMovePointers4
-	indirect_entries VOLCARONA, EggMovePointers5
-	indirect_entries VOLCANION, EggMovePointers6
-	indirect_entries BLACEPHLON, EggMovePointers7
+	indirect_entries DURANT, EggMovePointers5
+	indirect_entries DIANCIE, EggMovePointers6
+	indirect_entries DHELMISE, EggMovePointers7
 	indirect_entries NUM_POKEMON, EggMovePointers8
 	indirect_table_end
 

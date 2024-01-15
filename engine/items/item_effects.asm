@@ -71,6 +71,11 @@ ItemEffects:
 	dw EvoStoneEffect      ; TART_APPLE
 	dw EvoStoneEffect      ; SWEET_APPLE
 	dw EvoStoneEffect      ; CRACKED_POT
+	dw EvoStoneEffect      ; GALARICA_WREATH
+	dw EvoStoneEffect      ; GALARICA_CUFF
+	dw EvoStoneEffect      ; KANTO_COIN
+	dw EvoStoneEffect      ; ALOLA_COIN
+	dw EvoStoneEffect      ; GALAR_COIN
 	dw StatusHealingEffect ; ANTIDOTE
 	dw StatusHealingEffect ; BURN_HEAL
 	dw StatusHealingEffect ; ICE_HEAL
@@ -136,6 +141,7 @@ ItemEffects:
 	dw NoEffect            ; PRETTY_WING
 	dw NoEffect            ; COMET_SHARD
 	dw NoEffect            ; HEART_SCALE
+	dw NoEffect            ; GALARICA_TWIG
 	dw NoEffect            ; FLOWER_MAIL
 	dw NoEffect            ; SURF_MAIL   
 	dw NoEffect            ; LITEBLUEMAIL
@@ -178,7 +184,10 @@ ItemEffects:
 	dw NoEffect            ; OVAL_STONE
 	dw NoEffect            ; RAZOR_FANG  
 	dw NoEffect            ; RAZOR_CLAW  
-	dw NoEffect            ; ELECTIRIZER 
+	dw NoEffect            ; ELECTIRIZER
+	dw NoEffect            ; MAGMARIZER
+	dw NoEffect            ; PROTECTOR 
+	dw NoEffect            ; PEAT_BLOCK
 	dw NoEffect            ; DUBIOUS_DISC
 	dw NoEffect            ; REAPER_CLOTH
 	dw NoEffect            ; WHIPPEDDREAM

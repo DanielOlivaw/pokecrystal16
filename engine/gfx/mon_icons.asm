@@ -134,7 +134,7 @@ GetMenuMonIconPalette_PredeterminedShininess:
 	ret
 
 .egg
-	ld hl, 684 ; index of EGG in menu_icon_pals.asm
+	ld hl, NUM_POKEMON ; index of EGG in menu_icon_pals.asm
 	jr .got_pal_index
 
 LoadMenuMonIcon:

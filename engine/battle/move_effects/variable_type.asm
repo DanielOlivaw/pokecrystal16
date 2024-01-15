@@ -27,7 +27,7 @@ Find_VariableType:
 VariableTypeMoves:
 	dww WEATHER_BALL, 	BattleCommand_WeatherBall
 	dww JUDGEMENT, 		BattleCommand_Judgement
-	dww MULTI_ATTACK, 	BattleCommand_Judgement
+	; dww MULTI_ATTACK, 	BattleCommand_Judgement
 	dww HIDDEN_POWER,	BattleCommand_HiddenPower
 	db -1 ; end
 

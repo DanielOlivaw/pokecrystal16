@@ -10,7 +10,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F100 ; gender ratio
 	db 40 ; step cycles to hatch
-	INCBIN "gfx/pokemon/basculegon/front.dimensions"
+	INCBIN "gfx/pokemon/basculegon_f/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_WATER_2, EGG_WATER_2 ; egg groups

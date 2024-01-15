@@ -2,8 +2,8 @@ MoveEffectPriorities:
 	db EFFECT_PROTECT,           10
 	db EFFECT_ENDURE,            10
 	db EFFECT_SPIKY_SHIELD,      10
-	db EFFECT_KINGS_SHIELD,      10
-	db EFFECT_BANEFUL_BUNKER,    10
+	; db EFFECT_KINGS_SHIELD,      10
+	; db EFFECT_BANEFUL_BUNKER,    10
 	db EFFECT_OBSTRUCT,          10
 	db EFFECT_FAKE_OUT,           9
 	db EFFECT_CRAFTY_SHIELD,      9
@@ -18,7 +18,7 @@ MoveEffectPriorities:
 ; BASE_PRIORITY EQU 6
 	db EFFECT_VITAL_THROW,        5
 	db EFFECT_FOCUS_PUNCH,        4
-	db EFFECT_BEAK_BLAST,         4
+	; db EFFECT_BEAK_BLAST,         4
 	db EFFECT_SHELL_TRAP,         4
 	db EFFECT_REVENGE,            3
 	db EFFECT_COUNTER,            2
@@ -27,5 +27,5 @@ MoveEffectPriorities:
 	db EFFECT_FORCE_SWITCH,       1
 	db EFFECT_TELEPORT,           1
 	db EFFECT_TRICK_ROOM,         0
-	db EFFECT_TRICK_ROOM_HIT,     0
+	; db EFFECT_TRICK_ROOM_HIT,     0
 	db -1
