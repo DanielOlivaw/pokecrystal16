@@ -58,6 +58,11 @@ ItemDescriptions:
 	dw TartAppleDesc
 	dw SweetAppleDesc
 	dw CrackedPotDesc
+	dw GalarWreathDesc
+	dw GalarCuffDesc
+	dw KantoCoinDesc
+	dw AlolaCoinDesc
+	dw GalarCoinDesc
 	dw AntidoteDesc
 	dw BurnHealDesc
 	dw IceHealDesc
@@ -123,6 +128,7 @@ ItemDescriptions:
 	dw PrettyWingDesc
 	dw CometShardDesc
 	dw HeartScaleDesc
+	dw GalarTwigDesc
 	dw FlowerMailDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -166,6 +172,9 @@ ItemDescriptions:
 	dw RazorFangDesc
 	dw RazorClawDesc
 	dw ElectirizerDesc
+	dw MagmarizerDesc
+	dw ProtectorDesc
+	dw PeatBlockDesc
 	dw DubiousDiscDesc
 	dw ReaperClothDesc
 	dw WhippedDreamDesc
@@ -218,15 +227,6 @@ ItemDescriptions:
 	dw BlueFluteDesc
 	dw YellowFluteDesc
 	dw RedFluteDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1077,12 +1077,23 @@ ElectirizerDesc:
 	db   "A box loved by"
 	next "ELECTABUZZ. (HOLD)@"
 
+MagmarizerDesc:
+	db   "A box loved by"
+	next "MAGMAR. (HOLD)@"
+
+ProtectorDesc:
+	db   "Armor loved by"
+	next "RHYDON. (HOLD)@"
+
+PeatBlockDesc:
+	db   "Material loved by"
+	next "URSARING. (HOLD)@"
+
 ReaperClothDesc:
 	db   "A cloth loved by"
 	next "DUSCLOPS. (HOLD)@"
 
 DubiousDiscDesc:
-		;"123456789123456789"
 	db   "A box full of dub-"
 	next "ious data. (HOLD)@"
 
@@ -1102,6 +1113,30 @@ SweetAppleDesc:
 CrackedPotDesc:
 	db   "A teapot that can"
 	next "cause evolution.@"
+
+GalarTwigDesc:
+	db   "A twig from a"
+	next "Galarica tree.@"
+
+GalarWreathDesc:
+	db   "A wreath loved by"
+	next "GALARIAN SLOWPOKE.@"
+
+GalarCuffDesc:
+	db   "A cuff loved by"
+	next "GALARIAN SLOWPOKE.@"
+
+KantoCoinDesc:
+	db   "A rare coin from"
+	next "a nearby region.@"
+
+AlolaCoinDesc:
+	db   "A rare coin from"
+	next "a tropical region.@"
+
+GalarCoinDesc:
+	db   "A rare coin from"
+	next "a distant region.@"
 
 BerrySweetDesc:
 	db   "A sweet loved by"
