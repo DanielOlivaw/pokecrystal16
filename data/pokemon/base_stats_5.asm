@@ -1,67 +1,69 @@
 SECTION "Base Stats 5", ROMX
 
 BaseData5:
-INCLUDE "data/pokemon/base_stats/chespin.asm"
-INCLUDE "data/pokemon/base_stats/quilladin.asm"
-INCLUDE "data/pokemon/base_stats/chesnaught.asm"
-INCLUDE "data/pokemon/base_stats/fennekin.asm"
-INCLUDE "data/pokemon/base_stats/braixen.asm"
-INCLUDE "data/pokemon/base_stats/delphox.asm"
-INCLUDE "data/pokemon/base_stats/froakie.asm"
-INCLUDE "data/pokemon/base_stats/frogadier.asm"
-INCLUDE "data/pokemon/base_stats/greninja.asm"
-INCLUDE "data/pokemon/base_stats/fletchling.asm"
-INCLUDE "data/pokemon/base_stats/fletchindr.asm"
-INCLUDE "data/pokemon/base_stats/talonflame.asm"
-INCLUDE "data/pokemon/base_stats/scatterbug.asm"
-INCLUDE "data/pokemon/base_stats/spewpa.asm"
-INCLUDE "data/pokemon/base_stats/vivillon.asm"
-INCLUDE "data/pokemon/base_stats/flabebe.asm"
-INCLUDE "data/pokemon/base_stats/floette.asm"
-INCLUDE "data/pokemon/base_stats/florges.asm"
-INCLUDE "data/pokemon/base_stats/skiddo.asm"
-INCLUDE "data/pokemon/base_stats/gogoat.asm"
-INCLUDE "data/pokemon/base_stats/pancham.asm"
-INCLUDE "data/pokemon/base_stats/pangoro.asm"
-; INCLUDE "data/pokemon/base_stats/espurr.asm"
-; INCLUDE "data/pokemon/base_stats/meowstic.asm"
-; INCLUDE "data/pokemon/base_stats/honedge.asm"
-; INCLUDE "data/pokemon/base_stats/doublade.asm"
-; INCLUDE "data/pokemon/base_stats/aegislash.asm"
-INCLUDE "data/pokemon/base_stats/spritzee.asm"
-INCLUDE "data/pokemon/base_stats/aromatisse.asm"
-; INCLUDE "data/pokemon/base_stats/swirlix.asm"
-; INCLUDE "data/pokemon/base_stats/slurpuff.asm"
-INCLUDE "data/pokemon/base_stats/inkay.asm"
-INCLUDE "data/pokemon/base_stats/malamar.asm"
-INCLUDE "data/pokemon/base_stats/binacle.asm"
-INCLUDE "data/pokemon/base_stats/barbaracle.asm"
-INCLUDE "data/pokemon/base_stats/skrelp.asm"
-INCLUDE "data/pokemon/base_stats/dragalge.asm"
-INCLUDE "data/pokemon/base_stats/helioptile.asm"
-INCLUDE "data/pokemon/base_stats/heliolisk.asm"
-INCLUDE "data/pokemon/base_stats/tyrunt.asm"
-INCLUDE "data/pokemon/base_stats/tyrantrum.asm"
-INCLUDE "data/pokemon/base_stats/amaura.asm"
-INCLUDE "data/pokemon/base_stats/aurorus.asm"
-INCLUDE "data/pokemon/base_stats/sylveon.asm"
-INCLUDE "data/pokemon/base_stats/hawlucha.asm"
-INCLUDE "data/pokemon/base_stats/dedenne.asm"
-INCLUDE "data/pokemon/base_stats/carbink.asm"
-INCLUDE "data/pokemon/base_stats/goomy.asm"
-INCLUDE "data/pokemon/base_stats/sliggoo.asm"
-INCLUDE "data/pokemon/base_stats/sliggoo_h.asm"
-INCLUDE "data/pokemon/base_stats/goodra.asm"
-INCLUDE "data/pokemon/base_stats/goodra_h.asm"
-; INCLUDE "data/pokemon/base_stats/klefki.asm"
-INCLUDE "data/pokemon/base_stats/phantump.asm"
-INCLUDE "data/pokemon/base_stats/trevenant.asm"
-INCLUDE "data/pokemon/base_stats/pumpkaboo.asm"
-INCLUDE "data/pokemon/base_stats/gourgeist.asm"
-INCLUDE "data/pokemon/base_stats/bergmite.asm"
-INCLUDE "data/pokemon/base_stats/avalugg.asm"
-; INCLUDE "data/pokemon/base_stats/xerneas.asm"
-; INCLUDE "data/pokemon/base_stats/yveltal.asm"
-; INCLUDE "data/pokemon/base_stats/zygarde.asm"
-INCLUDE "data/pokemon/base_stats/diancie.asm"
-; INCLUDE "data/pokemon/base_stats/volcanion.asm"
+INCLUDE "data/pokemon/base_stats/chespin.asm"     ; CHESPIN
+INCLUDE "data/pokemon/base_stats/quilladin.asm"   ; QUILLADIN
+INCLUDE "data/pokemon/base_stats/chesnaught.asm"  ; CHESNAUGHT
+INCLUDE "data/pokemon/base_stats/fennekin.asm"    ; FENNEKIN
+INCLUDE "data/pokemon/base_stats/braixen.asm"     ; BRAIXEN
+INCLUDE "data/pokemon/base_stats/delphox.asm"     ; DELPHOX
+INCLUDE "data/pokemon/base_stats/froakie.asm"     ; FROAKIE
+INCLUDE "data/pokemon/base_stats/frogadier.asm"   ; FROGADIER
+INCLUDE "data/pokemon/base_stats/greninja.asm"    ; GRENINJA
+INCLUDE "data/pokemon/base_stats/fletchling.asm"  ; FLETCHLING
+INCLUDE "data/pokemon/base_stats/fletchindr.asm"  ; FLETCHINDR
+INCLUDE "data/pokemon/base_stats/talonflame.asm"  ; TALONFLAME
+INCLUDE "data/pokemon/base_stats/scatterbug.asm"  ; SCATTERBUG
+INCLUDE "data/pokemon/base_stats/spewpa.asm"      ; SPEWPA
+INCLUDE "data/pokemon/base_stats/vivillon.asm"    ; VIVILLON
+INCLUDE "data/pokemon/base_stats/flabebe.asm"     ; FLABEBE
+INCLUDE "data/pokemon/base_stats/floette.asm"     ; FLOETTE
+INCLUDE "data/pokemon/base_stats/florges.asm"     ; FLORGES
+INCLUDE "data/pokemon/base_stats/skiddo.asm"      ; SKIDDO
+INCLUDE "data/pokemon/base_stats/gogoat.asm"      ; GOGOAT
+INCLUDE "data/pokemon/base_stats/pancham.asm"     ; PANCHAM
+INCLUDE "data/pokemon/base_stats/pangoro.asm"     ; PANGORO
+; INCLUDE "data/pokemon/base_stats/espurr.asm"    ; 
+; INCLUDE "data/pokemon/base_stats/meowstic.asm"  ; 
+; INCLUDE "data/pokemon/base_stats/honedge.asm"   ; 
+; INCLUDE "data/pokemon/base_stats/doublade.asm"  ; 
+; INCLUDE "data/pokemon/base_stats/aegislash.asm" ; 
+INCLUDE "data/pokemon/base_stats/spritzee.asm"    ; SPRITZEE
+INCLUDE "data/pokemon/base_stats/aromatisse.asm"  ; AROMATISSE
+; INCLUDE "data/pokemon/base_stats/swirlix.asm"   ; 
+; INCLUDE "data/pokemon/base_stats/slurpuff.asm"  ; 
+INCLUDE "data/pokemon/base_stats/inkay.asm"       ; INKAY
+INCLUDE "data/pokemon/base_stats/malamar.asm"     ; MALAMAR
+INCLUDE "data/pokemon/base_stats/binacle.asm"     ; BINACLE
+INCLUDE "data/pokemon/base_stats/barbaracle.asm"  ; BARBARACLE
+INCLUDE "data/pokemon/base_stats/skrelp.asm"      ; SKRELP
+INCLUDE "data/pokemon/base_stats/dragalge.asm"    ; DRAGALGE
+INCLUDE "data/pokemon/base_stats/helioptile.asm"  ; HELIOPTILE
+INCLUDE "data/pokemon/base_stats/heliolisk.asm"   ; HELIOLISK
+INCLUDE "data/pokemon/base_stats/tyrunt.asm"      ; TYRUNT
+INCLUDE "data/pokemon/base_stats/tyrantrum.asm"   ; TYRANTRUM
+INCLUDE "data/pokemon/base_stats/amaura.asm"      ; AMAURA
+INCLUDE "data/pokemon/base_stats/aurorus.asm"     ; AURORUS
+INCLUDE "data/pokemon/base_stats/sylveon.asm"     ; SYLVEON
+INCLUDE "data/pokemon/base_stats/hawlucha.asm"    ; HAWLUCHA
+INCLUDE "data/pokemon/base_stats/dedenne.asm"     ; DEDENNE
+INCLUDE "data/pokemon/base_stats/carbink.asm"     ; CARBINK
+INCLUDE "data/pokemon/base_stats/goomy.asm"       ; GOOMY
+INCLUDE "data/pokemon/base_stats/sliggoo.asm"     ; SLIGGOO
+INCLUDE "data/pokemon/base_stats/sliggoo_h.asm"   ; SLIGGOO_H
+INCLUDE "data/pokemon/base_stats/goodra.asm"      ; GOODRA
+INCLUDE "data/pokemon/base_stats/goodra_h.asm"    ; GOODRA_H
+; INCLUDE "data/pokemon/base_stats/klefki.asm"    ; 
+INCLUDE "data/pokemon/base_stats/phantump.asm"    ; PHANTUMP
+INCLUDE "data/pokemon/base_stats/trevenant.asm"   ; TREVENANT
+INCLUDE "data/pokemon/base_stats/pumpkaboo.asm"   ; PUMPKABOO
+INCLUDE "data/pokemon/base_stats/gourgeist.asm"   ; GOURGEIST
+INCLUDE "data/pokemon/base_stats/bergmite.asm"    ; BERGMITE
+INCLUDE "data/pokemon/base_stats/avalugg.asm"     ; AVALUGG
+; INCLUDE "data/pokemon/base_stats/xerneas.asm"   ; 
+; INCLUDE "data/pokemon/base_stats/yveltal.asm"   ; 
+; INCLUDE "data/pokemon/base_stats/zygarde.asm"   ; 
+INCLUDE "data/pokemon/base_stats/diancie.asm"     ; DIANCIE
+; INCLUDE "data/pokemon/base_stats/volcanion.asm" ; 
+INCLUDE "data/pokemon/base_stats/rowlet.asm"      ; ROWLET
+INCLUDE "data/pokemon/base_stats/dartrix.asm"     ; DARTRIX
