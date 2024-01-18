@@ -286,13 +286,13 @@ IconPointers:
 	dw MiloticIcon
 	dw WalreinIcon
 	dw PigniteIcon
-	dw TynamoIcon
+	; dw TynamoIcon
 	dw ElgyemIcon
 	dw LampentIcon
 	dw MienshaoIcon
-	dw DruddigonIcon
+	; dw DruddigonIcon
 	dw FletchlingIcon
-	dw FlabebeIcon
+	; dw FlabebeIcon
 	dw FlorgesIcon
 	dw SpritzeeIcon
 	dw AromatisseIcon

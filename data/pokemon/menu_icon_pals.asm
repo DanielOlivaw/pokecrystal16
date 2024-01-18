@@ -620,8 +620,8 @@ MonMenuIconPals:
 	; icon_pals BLUE,   GREEN  ; DEINO
 	; icon_pals BLUE,   GREEN  ; ZWEILOUS
 	; icon_pals BLUE,   GREEN  ; HYDREIGON
-	icon_pals RED,    GOLD   ; LARVESTA
-	icon_pals RED,    GOLD   ; VOLCARONA
+	; icon_pals RED,    GOLD   ; LARVESTA
+	; icon_pals RED,    GOLD   ; VOLCARONA
 	icon_pals GREEN,  RED    ; CHESPIN
 	icon_pals GREEN,  RED    ; QUILLADIN
 	icon_pals GREEN,  RED    ; CHESNAUGHT
@@ -705,10 +705,10 @@ MonMenuIconPals:
 	icon_pals BROWN,  BLUE   ; ROCKRUFF
 	icon_pals BROWN,  BLUE   ; LYCANROC_MD
 	icon_pals RED,    BLUE   ; LYCANROC_MN
-	icon_pals PURPLE, RED    ; MAREANIE
-	icon_pals PURPLE, RED    ; TOXAPEX
-	icon_pals BROWN,  RED    ; MUDBRAY
-	icon_pals BROWN,  RED    ; MUDSDALE
+	; icon_pals PURPLE, RED    ; MAREANIE
+	; icon_pals PURPLE, RED    ; TOXAPEX
+	; icon_pals BROWN,  RED    ; MUDBRAY
+	; icon_pals BROWN,  RED    ; MUDSDALE
 	icon_pals BLUE,   RED    ; DEWPIDER
 	icon_pals BLUE,   RED    ; ARAQUANID
 	icon_pals PINK,   GREEN  ; FOMANTIS
