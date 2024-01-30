@@ -161,7 +161,7 @@ ENDM
 	command hammerarm               ; 9a
 	command dragondance             ; 9b
 	command workup                  ; 9c
-	command brightmoss              ; 9d
+	; command brightmoss              ; 9d
 	command uproar                  ; 9e
 	command uproarstate             ; 9f
 	command weatherball             ; a0
