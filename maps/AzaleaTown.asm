@@ -60,6 +60,8 @@ AzaleaTownRivalBattleScript:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_AZALEA_TOWN
+	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
+	setlasttalked AZALEATOWN_SILVER
 	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .GotWaterStarter
 	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
@@ -76,9 +78,8 @@ AzaleaTownRivalBattleScript:
 	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	iftrue .RivalOshawott
 ; Rival defaults to Froakie if water starter wasn't identified
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_FROAKIE
+.LoadedRival
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -94,16 +95,13 @@ AzaleaTownRivalBattleScript:
 	iftrue .RivalTreecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .RivalTurtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .RivalSnivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_ROWLET
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 
 .GotGrassStarter:
 ; Player chose a Grass-type starter
@@ -113,142 +111,83 @@ AzaleaTownRivalBattleScript:
 	iftrue .RivalTorchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .RivalChimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .RivalTepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .RivalFennekin
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_CYNDAQUIL
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalBulbasaur:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_BULBASAUR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalChikorita:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_CHIKORITA
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalTreecko:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_TREECKO
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalTurtwig:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_TURTWIG
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
+	
+.RivalSnivy:
+	loadtrainer RIVAL1, RIVAL1_2_SNIVY
+	sjump .LoadedRival
 	
 .RivalChespin:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_CHESPIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalCharmander:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_CHARMANDER
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalTorchic:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_TORCHIC
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalChimchar:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_CHIMCHAR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
+	
+.RivalTepig:
+	loadtrainer RIVAL1, RIVAL1_2_TEPIG
+	sjump .LoadedRival
 	
 .RivalFennekin:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_FENNEKIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
+	
+.RivalFuecoco:
+	loadtrainer RIVAL1, RIVAL1_2_FUECOCO
+	sjump .LoadedRival
 	
 .RivalSquirtle:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_SQUIRTLE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalTotodile:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_TOTODILE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalMudkip:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_MUDKIP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalPiplup:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_PIPLUP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 	
 .RivalOshawott:
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
-	setlasttalked AZALEATOWN_SILVER
 	loadtrainer RIVAL1, RIVAL1_2_OSHAWOTT
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .AfterBattle
+	sjump .LoadedRival
 
 .AfterBattle:
 	playmusic MUSIC_RIVAL_AFTER

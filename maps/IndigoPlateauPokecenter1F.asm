@@ -88,6 +88,8 @@ PlateauRivalBattleCommon:
 	waitbutton
 	closetext
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .GotWaterStarter
 	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
@@ -104,13 +106,8 @@ PlateauRivalBattleCommon:
 	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	iftrue .RivalOshawott
 ; Rival defaults to Froakie if water starter wasn't identified
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL2, RIVAL2_2_FROAKIE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 
 .GotWaterStarter:
 ; Player chose a Water-type starter
@@ -122,16 +119,13 @@ PlateauRivalBattleCommon:
 	iftrue .RivalTreecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .RivalTurtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .RivalSnivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_ROWLET
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 
 .GotGrassStarter:
 ; Player chose a Grass-type starter
@@ -141,144 +135,88 @@ PlateauRivalBattleCommon:
 	iftrue .RivalTorchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .RivalChimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .RivalTepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .RivalFennekin
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_CYNDAQUIL
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalBulbasaur:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_BULBASAUR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalChikorita:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_CHIKORITA
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalTreecko:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_TREECKO
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalTurtwig:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_TURTWIG
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
+	
+.RivalSnivy:
+	loadtrainer RIVAL1, RIVAL2_2_SNIVY
+	sjump PlateauRivalBattle
 	
 .RivalChespin:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_CHESPIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalCharmander:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_CHARMANDER
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalTorchic:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_TORCHIC
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalChimchar:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_CHIMCHAR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
+	
+.RivalTepig:
+	loadtrainer RIVAL1, RIVAL2_2_TEPIG
+	sjump PlateauRivalBattle
 	
 .RivalFennekin:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_FENNEKIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
+	
+.RivalFuecoco:
+	loadtrainer RIVAL1, RIVAL2_2_FUECOCO
+	sjump PlateauRivalBattle
 	
 .RivalSquirtle:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_SQUIRTLE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalTotodile:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_TOTODILE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalMudkip:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_MUDKIP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalPiplup:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_PIPLUP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
+	sjump PlateauRivalBattle
 	
 .RivalOshawott:
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
-	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer RIVAL1, RIVAL2_2_OSHAWOTT
+	sjump PlateauRivalBattle
+
+PlateauRivalBattle:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	sjump PlateauRivalPostBattle
-
-PlateauRivalPostBattle:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext PlateauRivalText2

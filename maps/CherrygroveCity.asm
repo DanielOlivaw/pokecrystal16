@@ -113,6 +113,8 @@ CherrygroveSilverSceneNorth:
 	writetext CherrygroveRivalText_Seen
 	waitbutton
 	closetext
+	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
+	setlasttalked CHERRYGROVECITY_SILVER
 	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .GotWaterStarter
 	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
@@ -129,9 +131,8 @@ CherrygroveSilverSceneNorth:
 	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	iftrue .RivalOshawott
 ; Rival defaults to Froakie if water starter wasn't identified
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_FROAKIE
+.LoadedRival
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -149,18 +150,13 @@ CherrygroveSilverSceneNorth:
 	iftrue .RivalTreecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .RivalTurtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .RivalSnivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_ROWLET
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 
 .GotGrassStarter:
 ; Player chose a Grass-type starter
@@ -170,172 +166,83 @@ CherrygroveSilverSceneNorth:
 	iftrue .RivalTorchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .RivalChimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .RivalTepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .RivalFennekin
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalBulbasaur:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_BULBASAUR
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalChikorita:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalTreecko:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_TREECKO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalTurtwig:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_TURTWIG
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
+	
+.RivalSnivy:
+	loadtrainer RIVAL1, RIVAL1_1_SNIVY
+	sjump .LoadedRival
 	
 .RivalChespin:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CHESPIN
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalCharmander:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CHARMANDER
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalTorchic:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_TORCHIC
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalChimchar:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_CHIMCHAR
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
+	
+.RivalTepig:
+	loadtrainer RIVAL1, RIVAL1_1_TEPIG
+	sjump .LoadedRival
 	
 .RivalFennekin:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_FENNEKIN
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
+	
+.RivalFuecoco:
+	loadtrainer RIVAL1, RIVAL1_1_FUECOCO
+	sjump .LoadedRival
 	
 .RivalSquirtle:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_SQUIRTLE
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalTotodile:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalMudkip:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_MUDKIP
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalPiplup:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_PIPLUP
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 	
 .RivalOshawott:
-	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer RIVAL1, RIVAL1_1_OSHAWOTT
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
+	sjump .LoadedRival
 
 .AfterVictorious:
 	playmusic MUSIC_RIVAL_AFTER

@@ -166,6 +166,8 @@ UndergroundSilverBattleScript:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
+	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
+	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .GotWaterStarter
 	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
@@ -182,13 +184,8 @@ UndergroundSilverBattleScript:
 	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	iftrue .RivalOshawott
 ; Rival defaults to Froakie if water starter wasn't identified
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_FROAKIE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 
 .GotWaterStarter:
 ; Player chose a Water-type starter
@@ -200,16 +197,13 @@ UndergroundSilverBattleScript:
 	iftrue .RivalTreecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .RivalTurtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .RivalSnivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_ROWLET
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 
 .GotGrassStarter:
 ; Player chose a Grass-type starter
@@ -219,144 +213,88 @@ UndergroundSilverBattleScript:
 	iftrue .RivalTorchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .RivalChimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .RivalTepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .RivalFennekin
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_CYNDAQUIL
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalBulbasaur:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_BULBASAUR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalChikorita:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_CHIKORITA
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalTreecko:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_TREECKO
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalTurtwig:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_TURTWIG
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
+	
+.RivalSnivy:
+	loadtrainer RIVAL1, RIVAL1_4_SNIVY
+	sjump .DoRivalBattle
 	
 .RivalChespin:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_CHESPIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalCharmander:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_CHARMANDER
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalTorchic:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_TORCHIC
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalChimchar:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_CHIMCHAR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
+	
+.RivalTepig:
+	loadtrainer RIVAL1, RIVAL1_4_TEPIG
+	sjump .DoRivalBattle
 	
 .RivalFennekin:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_FENNEKIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
+	
+.RivalFuecoco:
+	loadtrainer RIVAL1, RIVAL1_4_FUECOCO
+	sjump .DoRivalBattle
 	
 .RivalSquirtle:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_SQUIRTLE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalTotodile:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_TOTODILE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalMudkip:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_MUDKIP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalPiplup:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_PIPLUP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishRivalBattle
+	sjump .DoRivalBattle
 	
 .RivalOshawott:
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer RIVAL1, RIVAL1_4_OSHAWOTT
+	sjump .DoRivalBattle
+
+.DoRivalBattle:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	sjump .FinishRivalBattle
-
-.FinishRivalBattle:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext UndergroundSilverAfterText

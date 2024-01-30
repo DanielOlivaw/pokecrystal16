@@ -26,6 +26,8 @@ MountMoon_MapScripts:
 	writetext MountMoonSilverTextBefore
 	waitbutton
 	closetext
+	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
+	setlasttalked MOUNTMOON_SILVER
 	checkevent EVENT_GOT_WATER_STARTER_FROM_ELM
 	iftrue .GotWaterStarter
 	checkevent EVENT_GOT_GRASS_STARTER_FROM_ELM
@@ -42,13 +44,8 @@ MountMoon_MapScripts:
 	checkevent EVENT_OSHAWOTT_IS_WATER_STARTER
 	iftrue .RivalOshawott
 ; Rival defaults to Froakie if water starter wasn't identified
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL2, RIVAL2_1_FROAKIE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 
 .GotWaterStarter:
 ; Player chose a Water-type starter
@@ -60,16 +57,13 @@ MountMoon_MapScripts:
 	iftrue .RivalTreecko
 	checkevent EVENT_TURTWIG_IS_GRASS_STARTER
 	iftrue .RivalTurtwig
+	checkevent EVENT_SNIVY_IS_GRASS_STARTER
+	iftrue .RivalSnivy
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_ROWLET
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 
 .GotGrassStarter:
 ; Player chose a Grass-type starter
@@ -79,144 +73,88 @@ MountMoon_MapScripts:
 	iftrue .RivalTorchic
 	checkevent EVENT_CHIMCHAR_IS_FIRE_STARTER
 	iftrue .RivalChimchar
+	checkevent EVENT_TEPIG_IS_FIRE_STARTER
+	iftrue .RivalTepig
 	checkevent EVENT_FENNEKIN_IS_FIRE_STARTER
 	iftrue .RivalFennekin
+	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
+	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_CYNDAQUIL
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalBulbasaur:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_BULBASAUR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalChikorita:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_CHIKORITA
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalTreecko:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_TREECKO
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalTurtwig:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_TURTWIG
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
+	
+.RivalSnivy:
+	loadtrainer RIVAL1, RIVAL2_1_SNIVY
+	sjump .DoBattle
 	
 .RivalChespin:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_CHESPIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalCharmander:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_CHARMANDER
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalTorchic:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_TORCHIC
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalChimchar:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_CHIMCHAR
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
+	
+.RivalTepig:
+	loadtrainer RIVAL1, RIVAL2_1_TEPIG
+	sjump .DoBattle
 	
 .RivalFennekin:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_FENNEKIN
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
+	
+.RivalFuecoco:
+	loadtrainer RIVAL1, RIVAL2_1_FUECOCO
+	sjump .DoBattle
 	
 .RivalSquirtle:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_SQUIRTLE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalTotodile:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_TOTODILE
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalMudkip:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_MUDKIP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalPiplup:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_PIPLUP
-	startbattle
-	dontrestartmapmusic
-	reloadmapafterbattle
-	sjump .FinishBattle
+	sjump .DoBattle
 	
 .RivalOshawott:
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
 	loadtrainer RIVAL1, RIVAL2_1_OSHAWOTT
+	sjump .DoBattle
+
+.DoBattle:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	sjump .FinishBattle
-
-.FinishBattle:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext MountMoonSilverTextAfter
