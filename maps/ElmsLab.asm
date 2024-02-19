@@ -979,7 +979,7 @@ AideScript_GivePotion:
 	buttonsound
 	getitemname STRING_BUFFER_4, POTION
 	scall AideScript_ReceiveItem
-	giveitem POTION, 5
+	giveitem POTION, 3
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
