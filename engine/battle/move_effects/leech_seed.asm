@@ -32,7 +32,8 @@ BattleCommand_LeechSeed:
 
 .grass
 	farcall AnimateFailedMove
-	jp PrintDoesntAffect
+	ld hl, DoesntAffectText
+	jp StdBattleTextbox
 
 .evaded
 	farcall AnimateFailedMove
