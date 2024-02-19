@@ -1677,8 +1677,8 @@ JohtoGrassWildMons:
 	dbw 3, ROCKRUFF
 	dbw 2, HOOTHOOT
 	dbw 3, WOLFROST
-	dbw 2, SENTRET
-	dbw 3, SENTRET
+	dbw 2, MOIBELLE
+	dbw 3, MOIBELLE
 	dbw 2, WOLFROST
 	end_grass_wildmons
 
