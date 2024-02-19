@@ -282,7 +282,7 @@ LassCarrieBeatenText:
 	done
 
 LassCarrieAfterBattleText:
-	text "Do my #MON"
+	text "Does my #MON"
 	line "think I'm cute?"
 	done
 
@@ -348,12 +348,12 @@ BeautySamanthaSeenText:
 	done
 
 BeautySamanthaBeatenText:
-	text "No! Oh, GLAMEOW,"
+	text "No! Oh, MEOWTH,"
 	line "I'm so sorry!"
 	done
 
 BeautySamanthaAfterBattleText:
-	text "I taught GLAMEOW"
+	text "I taught MEOWTH"
 	line "moves for taking"
 	cont "on any type…"
 	done
