@@ -35,7 +35,7 @@ JohtoWaterWildMons:
 	def_water_wildmons UNION_CAVE_B2F ; TENTACOOL, WOOPER, MOLANCORA, BASCULIN, SKRELP
 	db 4 percent ; encounter rate
 	dbw 15, TENTACOOL
-	dbw 20, MOLANCORA
+	dbw 20, FINNEON
 	dbw 15, BASCULIN_B
 	dbw 20, SKRELP
 	dbw 20, QUAGSIRE
