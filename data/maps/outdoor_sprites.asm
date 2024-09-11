@@ -213,11 +213,12 @@ CianwoodGroupSprites:
 	db SPRITE_POKEFAN_F
 	db SPRITE_SUPER_NERD
 ; 8 of max 9 walking sprites
-	db SPRITE_TAUROS
+	db SPRITE_MILTANK
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
 	db SPRITE_YOUNGSTER ; non-walking version of SPRITE_YOUNGSTER
 	db SPRITE_SUICUNE
+	db SPRITE_POKE_BALL
 	db 0 ; end
 
 LakeOfRageGroupSprites:
