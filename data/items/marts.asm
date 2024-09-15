@@ -231,7 +231,7 @@ MartGoldenrod5F:
 	db -1 ; end
 
 MartOlivine:
-	db 3 ; # items
+	db 4 ; # items
 	dbw TM_MUD_SHOT,     7500
 	dbw TM_WATER_PULSE,  7500
 	dbw TM_SIGNAL_BEAM,  10000
@@ -257,22 +257,22 @@ MartMahogany1:
 MartMahogany2:
 	db 10 ; # items
 	db RAGECANDYBAR
+	db SACHET
+	db WHIPPEDDREAM
+	db BERRY_SWEET
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
 	db SUPER_REPEL
 	db REVIVE
-	db SACHET
-	db WHIPPEDDREAM
-	db BERRY_SWEET
 	db MUSIC_MAIL
 	db -1 ; end
 
 MartBlackthorn:
 	db 5 ; # items
+	db LITEBLUEMAIL
 	db X_SP_ATK
 	db X_SP_DEF
-	db LITEBLUEMAIL
 	db NET_BALL
 	db DUSK_BALL
 	db -1 ; end
@@ -293,10 +293,10 @@ MartPewter:
 
 MartCerulean:
 	db 5 ; # items
+	db SURF_MAIL
 	db X_DEFEND
 	db X_ATTACK
 	db DIRE_HIT
-	db SURF_MAIL
 	db QUICK_BALL
 	db -1 ; end
 
