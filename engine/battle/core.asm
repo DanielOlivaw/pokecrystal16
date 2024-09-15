@@ -4388,7 +4388,7 @@ SpikesDamage:
 	callfar CheckStealthRockTypeMatchup
 	push de
 	ld a, [wTypeMatchup]
-	cp EFFECTIVE + 6 ; 1.0 + 0.6
+	cp EFFECTIVE + 11 ; 1.0 + 1.1
 	jr nc, .StealthRockQuadrupleDamage
 	cp EFFECTIVE + 1 ; 1.0 + 0.1
 	jr nc, .StealthRockDoubleDamage
