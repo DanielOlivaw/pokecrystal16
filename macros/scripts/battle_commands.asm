@@ -177,9 +177,6 @@ ENDM
 	command trumpcard               ; aa
 	command electroball             ; ab
 	command gyroball                ; ac
-	command dynamorush              ; ad
-	command guilefang               ; ae
-	command datapulse               ; af
 	command mefirst                 ; b0
 	command defoganim               ; b1
 ; NUM_EFFECT_COMMANDS EQU const_value - 1

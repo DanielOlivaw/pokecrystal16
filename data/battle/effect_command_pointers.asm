@@ -176,8 +176,5 @@ BattleCommandPointers:
 	dw BattleCommand_TrumpCard
 	dw BattleCommand_ElectroBall
 	dw BattleCommand_GyroBall
-	dw BattleCommand_DynamoRush
-	dw BattleCommand_GuileFang
-	dw BattleCommand_DataPulse
 	dw BattleCommand_MeFirst
 	dw BattleCommand_DefogAnim

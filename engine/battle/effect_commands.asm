@@ -7203,7 +7203,9 @@ BattleCommand_FinishConfusingTarget:
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
 	jr z, .got_effect
-	cp EFFECT_DYNAMO_RUSH
+	cp EFFECT_DATA_PULSE
+	jr z, .got_effect
+	cp EFFECT_GUILE_FANG
 	jr z, .got_effect
 	call AnimateCurrentMove
 
@@ -7233,7 +7235,9 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit:
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
-	cp EFFECT_DYNAMO_RUSH
+	cp EFFECT_DATA_PULSE
+	ret z
+	cp EFFECT_GUILE_FANG
 	ret z
 	jp PrintDidntAffect2
 

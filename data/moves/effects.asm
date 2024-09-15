@@ -2495,6 +2495,9 @@ ForceSwitchHit:
 TrapHit:
 EerieSpell:
 StoneAxe:
+DynamoRush:
+GuileFang:
+DataPulse:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2538,72 +2541,6 @@ NailDown:
 	statdownmessage
 	kingsrock
 	traptarget
-	endmove
-
-DynamoRush:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	dynamorush
-	endmove
-
-GuileFang:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	guilefang
-	endmove
-
-DataPulse:
-	checkobedience
-	usedmovetext
-	doturn
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	kingsrock
-	datapulse
 	endmove
 
 Uproot:
