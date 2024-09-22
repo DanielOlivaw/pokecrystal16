@@ -12,8 +12,8 @@ INCLUDE "data/pokemon/base_stats/crocalor.asm"     ; CROCALOR
 INCLUDE "data/pokemon/base_stats/skeledirge.asm"   ; SKELEDIRGE
 INCLUDE "data/pokemon/base_stats/fidough.asm"      ; FIDOUGH
 INCLUDE "data/pokemon/base_stats/dachsbun.asm"     ; DACHSBUN
-; INCLUDE "data/pokemon/base_stats/tadbulb.asm"    ; TADBULB
-; INCLUDE "data/pokemon/base_stats/bellibolt.asm"  ; BELLIBOLT
+INCLUDE "data/pokemon/base_stats/tadbulb.asm"      ; TADBULB
+INCLUDE "data/pokemon/base_stats/bellibolt.asm"    ; BELLIBOLT
 INCLUDE "data/pokemon/base_stats/wiglett.asm"      ; WIGLETT
 INCLUDE "data/pokemon/base_stats/wugtrio.asm"      ; WUGTRIO
 ; INCLUDE "data/pokemon/base_stats/glimmet.asm"    ; 
