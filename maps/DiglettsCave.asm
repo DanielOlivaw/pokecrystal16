@@ -17,7 +17,7 @@ DiglettsCaveHiddenCalcium:
 
 DiglettsCavePokefanMText:
 	text "A bunch of"
-	line "TRAPINCH popped"
+	line "DIGLETT popped"
 
 	para "out of the ground!"
 	line "That was shocking."
