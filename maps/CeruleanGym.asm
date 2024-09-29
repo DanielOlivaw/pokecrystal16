@@ -80,8 +80,8 @@ CeruleanGymMistyScript:
 	writetext MistyCascadeBadgeText
 	buttonsound
 	verbosegivetmhm TM_WATER_PULSE
-	setevent EVENT_GOT_TM55_SCALD
-	writetext MistyTMScaldText
+	setevent EVENT_GOT_TM55_WATER_PULSE
+	writetext MistyTMWaterPulseText
 	buttonsound
 .FightDone:
 	writetext MistyFightDoneText
@@ -284,12 +284,12 @@ MistyCascadeBadgeText:
 	para "Take it!"
 	done
 
-MistyTMScaldText:
+MistyTMWaterPulseText:
 	text "It contains the"
-	line "move SCALD."
+	line "move WATER PULSE."
 	
 	para "It can sometimes"
-	line "burn your foe."
+	line "confuse your foe."
 	done
 
 MistyFightDoneText:
