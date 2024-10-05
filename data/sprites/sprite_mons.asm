@@ -55,7 +55,4 @@ SpriteMons:
 	dw MUNNA
 	dw HEATMOR
 	dw FLOETTE
-	dw ARTICUNO
-	dw ZAPDOS
-	dw MOLTRES
 	assert_table_length NUM_POKEMON_SPRITES

@@ -74,7 +74,7 @@ SaffronGroupSprites:
 ; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
-	db SPRITE_ZAPDOS
+	db SPRITE_STARLY
 	db 0 ; end
 
 CeladonGroupSprites:
