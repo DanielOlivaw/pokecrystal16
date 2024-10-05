@@ -142,6 +142,34 @@ KantoGrassWildMons:
 	dbw 41, GRAVELER_A
 	end_grass_wildmons
 
+	def_grass_wildmons ROCK_TUNNEL_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 36, MAROWAK
+	dbw 37, GRAVELER_A
+	dbw 38, MACHOKE
+	dbw 41, WOOBAT
+	dbw 41, GRAVELER_A
+	dbw 38, GRAVELER_A
+	dbw 35, GRAVELER_A
+	; day
+	dbw 36, MAROWAK
+	dbw 37, GRAVELER_A
+	dbw 38, MACHOKE
+	dbw 41, WOOBAT
+	dbw 41, GRAVELER_A
+	dbw 38, GRAVELER_A
+	dbw 35, GRAVELER_A
+	; nite
+	dbw 36, WOOBAT
+	dbw 37, GRAVELER_A
+	dbw 38, HAUNTER
+	dbw 41, WOOBAT
+	dbw 41, GRAVELER_A
+	dbw 38, GRAVELER_A
+	dbw 35, GRAVELER_A
+	end_grass_wildmons
+
 	def_grass_wildmons SEAFOAM_ISLAND_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
