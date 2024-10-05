@@ -158,6 +158,7 @@ ENDM
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
 	map_const VIRIDIAN_FOREST,                             20, 27 ; 92
+	map_const ROCK_TUNNEL_2F,                              10,  9 ; 93
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
@@ -223,6 +224,7 @@ ENDM
 	map_const ROUTE_24,                                    10,  9 ; 15
 	map_const ROUTE_25,                                    30,  9 ; 16
 	map_const CERULEAN_CITY,                               20, 18 ; 17
+	map_const ROCK_SUMMIT,                                 10,  9 ; 18
 	endgroup
 
 	newgroup AZALEA                                               ;  8

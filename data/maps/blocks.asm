@@ -930,6 +930,12 @@ RockTunnel1F_Blocks:
 RockTunnelB1F_Blocks:
 	INCBIN "maps/RockTunnelB1F.blk"
 
+RockTunnel2F_Blocks:
+	INCBIN "maps/RockTunnel2F.blk"
+
+RockSummit_Blocks:
+	INCBIN "maps/RockSummit.blk"
+
 DiglettsCave_Blocks:
 	INCBIN "maps/DiglettsCave.blk"
 
