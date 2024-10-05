@@ -231,9 +231,8 @@ MartGoldenrod5F:
 	db -1 ; end
 
 MartOlivine:
-	db 4 ; # items
+	db 3 ; # items
 	dbw TM_MUD_SHOT,     7500
-	dbw TM_WATER_PULSE,  7500
 	dbw TM_SIGNAL_BEAM,  10000
 	dbw TM_RETALIATE,    10000
 	db -1 ; end
