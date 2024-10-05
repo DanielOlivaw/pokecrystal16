@@ -10,8 +10,8 @@ RockSummit_MapScripts:
 .Zapdos:
 	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppear
-	; checkevent EVENT_RETURNED_MACHINE_PART
-	; iffalse .NoAppear
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iffalse .NoAppear
 	appear ROCKSUMMIT_ZAPDOS
 	return
 
