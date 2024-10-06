@@ -55,4 +55,5 @@ SpriteMons:
 	dw MUNNA
 	dw HEATMOR
 	dw FLOETTE
+	dw MEWTWO
 	assert_table_length NUM_POKEMON_SPRITES

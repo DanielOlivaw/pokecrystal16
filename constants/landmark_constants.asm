@@ -100,6 +100,7 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_27          ; 5c
 	const TOHJO_FALLS       ; 5d
 	const ROUTE_28          ; 5e
+	const CERULEAN_CAVE     ;
 	const FAST_SHIP         ; 5f
 NUM_LANDMARKS EQU const_value
 

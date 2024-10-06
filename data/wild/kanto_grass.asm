@@ -338,6 +338,90 @@ KantoGrassWildMons:
 	dbw 35, MISDREAVUS
 	end_grass_wildmons
 
+	def_grass_wildmons CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 53, PARASECT
+	dbw 55, MAGNETON
+	dbw 53, GOLBAT
+	dbw 54, BARBARACLE
+	dbw 53, MIENSHAO
+	dbw 52, WOBBUFFET
+	dbw 54, DITTO
+	; day
+	dbw 53, PARASECT
+	dbw 55, MAGNETON
+	dbw 53, GOLBAT
+	dbw 54, BARBARACLE
+	dbw 53, MIENSHAO
+	dbw 52, WOBBUFFET
+	dbw 54, DITTO
+	; nite
+	dbw 53, SHIINOTIC
+	dbw 55, MAGNETON
+	dbw 53, GOLBAT
+	dbw 54, BARBARACLE
+	dbw 53, GOLBAT
+	dbw 52, WOBBUFFET
+	dbw 54, DITTO
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 55, PARASECT
+	dbw 56, MAGNETON
+	dbw 56, GOLBAT
+	dbw 55, REUNICLUS
+	dbw 54, MIENSHAO
+	dbw 56, WOBBUFFET
+	dbw 56, DITTO
+	; day
+	dbw 55, PARASECT
+	dbw 56, MAGNETON
+	dbw 56, GOLBAT
+	dbw 55, REUNICLUS
+	dbw 54, MIENSHAO
+	dbw 56, WOBBUFFET
+	dbw 56, DITTO
+	; nite
+	dbw 55, SHIINOTIC
+	dbw 56, MAGNETON
+	dbw 56, GOLBAT
+	dbw 55, REUNICLUS
+	dbw 54, GOLBAT
+	dbw 56, WOBBUFFET
+	dbw 56, DITTO
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 59, REUNICLUS
+	dbw 60, PARASECT
+	dbw 60, MAGNETON
+	dbw 60, GOLBAT
+	dbw 58, DITTO
+	dbw 62, WOBBUFFET
+	dbw 59, CURSOLA
+	; day
+	dbw 59, REUNICLUS
+	dbw 60, PARASECT
+	dbw 60, MAGNETON
+	dbw 60, GOLBAT
+	dbw 58, DITTO
+	dbw 62, WOBBUFFET
+	dbw 59, CURSOLA
+	; nite
+	dbw 59, REUNICLUS
+	dbw 60, SHIINOTIC
+	dbw 60, MAGNETON
+	dbw 60, GOLBAT
+	dbw 58, DITTO
+	dbw 62, WOBBUFFET
+	dbw 59, CURSOLA
+	end_grass_wildmons
+
 	def_grass_wildmons TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn

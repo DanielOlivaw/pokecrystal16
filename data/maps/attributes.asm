@@ -704,3 +704,6 @@ ENDM
 	map_attributes SeafoamIslandB2F, SEAFOAM_ISLAND_B2F, $09, 0
 	map_attributes SeafoamIslandB3F, SEAFOAM_ISLAND_B3F, $09, 0
 	map_attributes SeafoamIslandB4F, SEAFOAM_ISLAND_B4F, $09, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
+	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0

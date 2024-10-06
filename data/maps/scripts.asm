@@ -487,10 +487,21 @@ INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/ViridianForest.asm"
 INCLUDE "maps/ViridianForestGateNorth.asm"
 INCLUDE "maps/ViridianForestGateSouth.asm"
+
+
+SECTION "Map Scripts 26", ROMX
+
 INCLUDE "maps/SeafoamIsland1F.asm"
 INCLUDE "maps/SeafoamIslandB1F.asm"
 INCLUDE "maps/SeafoamIslandB2F.asm"
 INCLUDE "maps/SeafoamIslandB3F.asm"
 INCLUDE "maps/SeafoamIslandB4F.asm"
+
+
+SECTION "Map Scripts 27", ROMX
+
 INCLUDE "maps/RockTunnel2F.asm"
 INCLUDE "maps/RockSummit.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCaveB1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"

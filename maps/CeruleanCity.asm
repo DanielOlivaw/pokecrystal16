@@ -9,11 +9,21 @@
 CeruleanCity_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_TILES, .CeruleanCaveCallback
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CERULEAN
+	return
+
+.CeruleanCaveCallback:
+	readvar VAR_BADGES
+	ifequal NUM_BADGES, .Change
+	return
+
+.Change:
+	changeblock 2, 10, $70 ; cave entrance
 	return
 
 CeruleanCityCooltrainerMScript:
@@ -91,30 +101,13 @@ CeruleanCityFisherScript:
 CeruleanCityYoungsterScript:
 	faceplayer
 	opentext
+	readvar VAR_BADGES
+	ifequal NUM_BADGES, .CeruleanCaveIsOpen
 	writetext CeruleanCityYoungsterText1
 	waitbutton
 	closetext
-	checkevent EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
-	iffalse .BerserkGenePingsItemfinder
-	end
-
-.BerserkGenePingsItemfinder:
-	waitsfx
-	playsound SFX_SECOND_PART_OF_ITEMFINDER
-	waitsfx
-	playsound SFX_TRANSACTION
-	waitsfx
-	playsound SFX_SECOND_PART_OF_ITEMFINDER
-	waitsfx
-	playsound SFX_TRANSACTION
-	waitsfx
-	playsound SFX_SECOND_PART_OF_ITEMFINDER
-	waitsfx
-	playsound SFX_TRANSACTION
-	waitsfx
-	playsound SFX_SECOND_PART_OF_ITEMFINDER
-	waitsfx
-	playsound SFX_TRANSACTION
+.MewtwoCry
+	cry MEWTWO
 	waitsfx
 	showemote EMOTE_SHOCK, CERULEANCITY_YOUNGSTER, 15
 	turnobject CERULEANCITY_YOUNGSTER, LEFT
@@ -122,6 +115,14 @@ CeruleanCityYoungsterScript:
 	writetext CeruleanCityYoungsterText2
 	waitbutton
 	closetext
+	end
+
+.CeruleanCaveIsOpen:
+	writetext CeruleanCityYoungsterText3
+	waitbutton
+	closetext
+	checkevent EVENT_FOUGHT_MEWTWO
+	iffalse .MewtwoCry
 	end
 
 CeruleanCitySign:
@@ -147,9 +148,6 @@ CeruleanCityPokecenterSign:
 
 CeruleanCityMartSign:
 	jumpstd martsign
-
-CeruleanCityHiddenBerserkGene:
-	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
 
 CeruleanCityCooltrainerMText1:
 	text "KANTO's POWER"
@@ -226,8 +224,19 @@ CeruleanCityYoungsterText1:
 CeruleanCityYoungsterText2:
 	text "Ayuh?"
 
-	para "My DOWSING MACHINE"
-	line "is responding…"
+	para "I thought I heard"
+	line "a #MON just"
+	cont "now…"
+	done
+
+CeruleanCityYoungsterText3:
+	text "A cave opened up"
+	line "here recently."
+
+	para "You don't think…"
+	
+	para "Could that #MON"
+	line "have returned?"
 	done
 
 CeruleanCitySignText:
@@ -280,17 +289,18 @@ CeruleanLockedDoorText:
 CeruleanCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
+	db 7 ; warp events
 	warp_event  7, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
 	warp_event 28, 17, CERULEAN_POLICE_STATION, 1
 	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
 	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
 	warp_event 30, 23, CERULEAN_GYM, 1
 	warp_event 25, 29, CERULEAN_MART, 2
+	warp_event  2, 11, CERULEAN_CAVE_1F, 8
 
 	db 0 ; coord events
 
-	db 9 ; bg events
+	db 8 ; bg events
 	bg_event 23, 23, BGEVENT_READ, CeruleanCitySign
 	bg_event 27, 25, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
@@ -299,7 +309,6 @@ CeruleanCity_MapEvents:
 	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
 	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
-	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
 	db 6 ; object events
 	object_event 15, 23, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1

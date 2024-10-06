@@ -104,6 +104,7 @@ Landmarks:
 	landmark  20, 100, Route27Name
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
+	landmark  98,  50, CeruleanCaveName
 	landmark 140, 116, FastShipName
 	assert_table_length NUM_LANDMARKS
 

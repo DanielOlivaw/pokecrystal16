@@ -1071,3 +1071,12 @@ SeafoamIslandB3F_Blocks:
 
 SeafoamIslandB4F_Blocks:
 	INCBIN "maps/SeafoamIslandB4F.blk"
+
+CeruleanCave1F_Blocks:
+	INCBIN "maps/CeruleanCave1F.blk"
+
+CeruleanCaveB1F_Blocks:
+	INCBIN "maps/CeruleanCaveB1F.blk"
+
+CeruleanCave2F_Blocks:
+	INCBIN "maps/CeruleanCave2F.blk"

@@ -342,7 +342,7 @@ MartCeladon2F2:
 	db -1 ; end
 
 MartCeladon3F:
-	db 8 ; # items
+	db 7 ; # items
 	dbw TM_SAFEGUARD,    10000
 	dbw TM_STEALTH_ROCK, 10000
 	dbw TM_SWORDS_DANCE, 10000
@@ -350,7 +350,6 @@ MartCeladon3F:
 	dbw TM_OMINOUS_WIND, 10000
 	dbw TM_VENOSHOCK,    10000
 	dbw TM_SUBSTITUTE,   20000
-	dbw TM_FOCUS_BLAST,  30000
 	db -1 ; end
 
 MartCeladon4F:
