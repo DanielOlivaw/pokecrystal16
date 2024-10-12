@@ -4765,6 +4765,10 @@ CamperGroup:
 	db "JERRY@", TRAINERTYPE_NORMAL
 	db 48
 	dw LYCANROC_MD
+	db 47
+	dw SANDSLASH
+	db 50
+	dw RHYDON
 	db -1 ; end
 
 	next_list_item ; CAMPER (19)
