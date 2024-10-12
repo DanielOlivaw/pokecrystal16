@@ -33,6 +33,7 @@ FindMove_AI_Smart_Scoring:
 	; dww BOLT_BEAK,       AI_Smart_BoltBeak
 	; dww FISHIOUS_REND,   AI_Smart_BoltBeak
 	dww STOMP,           AI_Smart_Stomp
+	dww BODY_SLAM,       AI_Smart_Stomp
 	dww TWISTER,         AI_Smart_Twister
 	dww STEAMROLLER,     AI_Smart_Stomp
 	dww DRAGON_RUSH,     AI_Smart_Stomp
