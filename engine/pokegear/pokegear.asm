@@ -2303,14 +2303,14 @@ FlyMap:
 ; the flypoint selection has a default starting point that
 ; can be flown to even if none are enabled.
 ; To prevent both of these things from happening when the player
-; enters Kanto, fly access is restricted until Indigo Plateau is
+; enters Kanto, fly access is restricted until Victory Road is
 ; visited and its flypoint enabled.
 	push af
-	ld c, SPAWN_INDIGO
+	ld c, SPAWN_VICTORY_ROAD
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
-; Kanto's map is only loaded if we've visited Indigo Plateau
+; Kanto's map is only loaded if we've visited Victory Road
 
 ; Flypoints begin at Pallet Town...
 	ld a, FLY_PALLET
@@ -2318,8 +2318,9 @@ FlyMap:
 ; ...and end at Indigo Plateau
 	ld a, FLY_INDIGO
 	ld [wEndFlypoint], a
-; Because Indigo Plateau is the first flypoint the player
+; Because Victory Road is the first flypoint the player
 ; visits, it's made the default flypoint.
+	ld a, FLY_VICTORY_ROAD
 	ld [wTownMapPlayerIconLandmark], a
 ; Fill out the map
 	call FillKantoMap
