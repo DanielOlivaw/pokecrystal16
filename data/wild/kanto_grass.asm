@@ -146,27 +146,27 @@ KantoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 37, WOOBAT
-	dbw 38, BEARTIC
-	dbw 39, GOLDUCK
+	dbw 38, WOOBAT
 	dbw 39, WOOBAT
-	dbw 39, GOLDUCK
-	dbw 37, DARUMAKA_G
+	dbw 39, WOOBAT
+	dbw 39, DARUMAKA_G
+	dbw 37, WOOBAT
 	dbw 37, DARUMAKA_G
 	; day
 	dbw 37, WOOBAT
-	dbw 38, BEARTIC
-	dbw 39, GOLDUCK
+	dbw 38, WOOBAT
 	dbw 39, WOOBAT
-	dbw 39, GOLDUCK
-	dbw 37, DARUMAKA_G
+	dbw 39, WOOBAT
+	dbw 39, DARUMAKA_G
+	dbw 37, WOOBAT
 	dbw 37, DARUMAKA_G
 	; nite
 	dbw 37, WOOBAT
-	dbw 38, WARWOLF
-	dbw 39, GOLDUCK
+	dbw 38, WOOBAT
 	dbw 39, WOOBAT
-	dbw 39, GOLDUCK
-	dbw 37, WARWOLF
+	dbw 39, WOOBAT
+	dbw 39, WARWOLF
+	dbw 37, WOOBAT
 	dbw 37, WARWOLF
 	end_grass_wildmons
 
@@ -257,7 +257,7 @@ KantoGrassWildMons:
 	def_grass_wildmons SEAFOAM_ISLAND_B4F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 43, GOLBAT
+	dbw 43, WOOBAT
 	dbw 43, BEARTIC
 	dbw 42, SEALEO
 	dbw 44, MEDICHAM
@@ -265,7 +265,7 @@ KantoGrassWildMons:
 	dbw 41, CHIMECHO
 	dbw 43, EISCUE
 	; day
-	dbw 43, GOLBAT
+	dbw 43, WOOBAT
 	dbw 43, BEARTIC
 	dbw 42, SEALEO
 	dbw 44, MEDICHAM
@@ -273,7 +273,7 @@ KantoGrassWildMons:
 	dbw 41, CHIMECHO
 	dbw 43, EISCUE
 	; nite
-	dbw 43, GOLBAT
+	dbw 43, WOOBAT
 	dbw 43, WARWOLF
 	dbw 42, SEALEO
 	dbw 44, MEDICHAM

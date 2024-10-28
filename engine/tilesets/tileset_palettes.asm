@@ -14,6 +14,8 @@ LoadSpecialMapPalette:
 	jr z, .battle_tower
 	cp TILESET_ICE_PATH
 	jr z, .ice_path
+	cp TILESET_SEAFOAM_DEPTHS
+	jr z, .ice_path
 	cp TILESET_HOUSE
 	jr z, .house
 	cp TILESET_RADIO_TOWER

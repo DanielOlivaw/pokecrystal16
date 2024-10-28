@@ -95,6 +95,7 @@ UnusedMuseumPalMap:
 INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
 
 TilesetIcePathPalMap:
+TilesetSeafoamDepthsPalMap:
 INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
 
 TilesetForestPalMap:
@@ -109,5 +110,5 @@ INCLUDE "gfx/tilesets/battle_tower_palette_map.asm"
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
-TilesetSeafoamDepthsPalMap:
-INCLUDE "gfx/tilesets/seafoam_depths_palette_map.asm"
+; TilesetSeafoamDepthsPalMap:
+; INCLUDE "gfx/tilesets/seafoam_depths_palette_map.asm"

@@ -345,5 +345,5 @@ INCBIN "data/tilesets/seafoam_depths_metatiles.bin"
 TilesetSeafoamDepthsColl::
 INCLUDE "data/tilesets/seafoam_depths_collision.asm"
 
-TilesetSeafoamDepthsAttr:
-INCBIN "data/tilesets/seafoam_depths_attributes.bin"
+; TilesetSeafoamDepthsAttr:
+; INCBIN "data/tilesets/seafoam_depths_attributes.bin"

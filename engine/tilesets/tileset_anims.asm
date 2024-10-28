@@ -90,31 +90,31 @@ TilesetJohtoAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-UnusedTilesetAnim_fc0d7:
-	dw vTiles2 tile $03, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw vTiles2 tile $03, WriteTileFromBuffer
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateFlowerTile
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  DoneTileAnimation
+; UnusedTilesetAnim_fc0d7:
+	; dw vTiles2 tile $03, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileRightLeft
+	; dw vTiles2 tile $03, WriteTileFromBuffer
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  AnimateFlowerTile
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  DoneTileAnimation
 
-UnusedTilesetAnim_fc103:
-	dw vTiles2 tile $14, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw vTiles2 tile $14, WriteTileFromBuffer
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  DoneTileAnimation
+; UnusedTilesetAnim_fc103:
+	; dw vTiles2 tile $14, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileRightLeft
+	; dw vTiles2 tile $14, WriteTileFromBuffer
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  WaitTileAnimation
+	; dw NULL,  DoneTileAnimation
 
 TilesetPortAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
@@ -140,39 +140,39 @@ TilesetEliteFourRoomAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-UnusedTilesetAnim_fc17f:
-	dw vTiles2 tile $53, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileDown
-	dw wTileAnimBuffer, ScrollTileDown
-	dw vTiles2 tile $53, WriteTileFromBuffer
-	dw vTiles2 tile $03, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw vTiles2 tile $03, WriteTileFromBuffer
-	dw vTiles2 tile $53, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileDown
-	dw wTileAnimBuffer, ScrollTileDown
-	dw vTiles2 tile $53, WriteTileFromBuffer
-	dw NULL,  DoneTileAnimation
+; UnusedTilesetAnim_fc17f:
+	; dw vTiles2 tile $53, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw vTiles2 tile $53, WriteTileFromBuffer
+	; dw vTiles2 tile $03, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileRightLeft
+	; dw vTiles2 tile $03, WriteTileFromBuffer
+	; dw vTiles2 tile $53, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw vTiles2 tile $53, WriteTileFromBuffer
+	; dw NULL,  DoneTileAnimation
 
-UnusedTilesetAnim_fc1af:
-	dw vTiles2 tile $54, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileDown
-	dw wTileAnimBuffer, ScrollTileDown
-	dw vTiles2 tile $54, WriteTileFromBuffer
-	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $03, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileRightLeft
-	dw vTiles2 tile $03, WriteTileFromBuffer
-	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $54, WriteTileToBuffer
-	dw wTileAnimBuffer, ScrollTileDown
-	dw wTileAnimBuffer, ScrollTileDown
-	dw vTiles2 tile $54, WriteTileFromBuffer
-	dw NULL,  DoneTileAnimation
+; UnusedTilesetAnim_fc1af:
+	; dw vTiles2 tile $54, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw vTiles2 tile $54, WriteTileFromBuffer
+	; dw NULL,  WaitTileAnimation
+	; dw vTiles2 tile $03, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileRightLeft
+	; dw vTiles2 tile $03, WriteTileFromBuffer
+	; dw NULL,  WaitTileAnimation
+	; dw vTiles2 tile $54, WriteTileToBuffer
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw wTileAnimBuffer, ScrollTileDown
+	; dw vTiles2 tile $54, WriteTileFromBuffer
+	; dw NULL,  DoneTileAnimation
 
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
-TilesetSeafoamDepthsAnim:
+; TilesetSeafoamDepthsAnim:
 	dw vTiles2 tile $14, WriteTileToBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileRightLeft
@@ -194,6 +194,7 @@ TilesetSeafoamDepthsAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetIcePathAnim:
+TilesetSeafoamDepthsAnim:
 	dw vTiles2 tile $35, WriteTileToBuffer
 	dw NULL,  FlickeringCaveEntrancePalette
 	dw wTileAnimBuffer, ScrollTileRightLeft
