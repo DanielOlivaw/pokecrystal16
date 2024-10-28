@@ -843,7 +843,7 @@ StatsScreen_LoadGFX:
 
 .UnknownLevel
 	ld de, .TradeStr
-	hlcoord 4, 8
+	hlcoord 0, 10
 	call PlaceString
 	jp PrintCharacteristics
 
