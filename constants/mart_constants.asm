@@ -5,6 +5,7 @@
 	const MARTTYPE_BARGAIN
 	const MARTTYPE_PHARMACY
 	const MARTTYPE_ROOFTOP
+	const MARTTYPE_COINS
 	const MARTTYPE_TM
 
 ; Marts indexes (see data/items/marts.asm)
@@ -18,6 +19,7 @@
 	const MART_STANDARD_BADGE_8
 	const MART_VIOLET
 	const MART_AZALEA
+	const MART_AZALEA_COINS
 	const MART_CIANWOOD
 	const MART_GOLDENROD_2F_1
 	const MART_GOLDENROD_2F_2

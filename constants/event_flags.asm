@@ -504,7 +504,7 @@
 	const EVENT_1E7
 	const EVENT_1E8
 	const EVENT_1E9
-	const EVENT_1EA
+	const EVENT_GOT_FREE_MEOWSY_COIN
 	const EVENT_1EB
 	const EVENT_1EC
 	const EVENT_1ED

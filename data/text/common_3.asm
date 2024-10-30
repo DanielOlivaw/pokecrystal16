@@ -626,11 +626,33 @@ _PharmacyComeAgainText::
 	line "See you around."
 	done
 
+_CoinShopIntroText::
+	text "Are you still"
+	line "interested my coin"
+	cont "collection?"
+
+	para "I'd be willing to"
+	line "sell some."
+
+	para "Take a look."
+	done
+
+_CoinShopFinalPriceText::
+	text "One @"
+	text_ram wStringBuffer2
+	text_start
+	line "costs ¥@"
+	text_decimal hMoneyTemp, 3, 6
+	text "."
+
+	para "Interested?"
+	done
+
 ; unused
-_NothingToSellText::
-	text "You don't have"
-	line "anything to sell."
-	prompt
+; _NothingToSellText::
+	; text "You don't have"
+	; line "anything to sell."
+	; prompt
 
 _MartSellHowManyText::
 	text "How many?"

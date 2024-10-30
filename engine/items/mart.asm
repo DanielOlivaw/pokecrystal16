@@ -22,6 +22,7 @@ OpenMartDialog::
 	dw BargainShop
 	dw Pharmacist
 	dw RooftopSale
+	dw CoinShop
 	dw TMMart
 
 MartDialog:
@@ -72,6 +73,15 @@ Pharmacist:
 	ld hl, PharmacyComeAgainText
 	call MartTextbox
 	ret
+
+CoinShop:
+	call FarReadMart
+	call LoadStandardMenuHeader
+	ld hl, CoinShopIntroText
+	call MartTextbox
+	call BuyMenu
+	ld hl, BargainShopComeAgainText
+	jp MartTextbox
 
 TMMart:
 	call FarReadTMMart
@@ -461,6 +471,7 @@ GetMartDialogGroup:
 	dwb .BargainShopPointers, 1
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
+	dwb .CoinShopPointers, 0
 	dwb .TMMartPointers, 0
 
 .StandardMartPointers:
@@ -502,6 +513,14 @@ GetMartDialogGroup:
 	dw MartPackFullText
 	dw MartThanksText
 	dw BuyTMMenuLoop
+
+.CoinShopPointers:
+	dw MartHowManyText
+	dw CoinShopFinalPriceText
+	dw BargainShopNoFundsText
+	dw BargainShopPackFullText
+	dw BargainShopThanksText
+	dw BuyMenuLoop
 
 BuyMenuLoop:
 	farcall PlaceMoneyTopRight
@@ -926,6 +945,14 @@ PharmacyComeAgainText:
 
 TMMartFinalPriceText:
 	text_far _TMMartFinalPriceText
+	text_end
+
+CoinShopIntroText:
+	text_far _CoinShopIntroText
+	text_end
+
+CoinShopFinalPriceText:
+	text_far _CoinShopFinalPriceText
 	text_end
 
 SellMenu:

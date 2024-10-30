@@ -9,6 +9,7 @@ Marts:
 	dw MartStandardBadge8
 	dw MartViolet
 	dw MartAzalea
+	dw MartAzaleaCoins
 	dw MartCianwood
 	dw MartGoldenrod2F1
 	dw MartGoldenrod2F2
@@ -158,6 +159,13 @@ MartAzalea:
 	db CHARCOAL
 	db FLOWER_MAIL
 	db NET_BALL
+	db -1 ; end
+
+MartAzaleaCoins:
+	db 3 ; # items
+	db KANTO_COIN
+	db ALOLA_COIN
+	db GALAR_COIN
 	db -1 ; end
 
 MartCianwood:
