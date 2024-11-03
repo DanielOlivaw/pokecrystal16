@@ -110,6 +110,7 @@ ElmCheckEverstone:
 	iftrue ShowElmTogepiScript
 	loadmonindex 2, TOGETIC
 	special FindPartyMonThatSpeciesYourTrainerID
+	iftrue ShowElmTogepiScript
 	loadmonindex 3, TOGEKISS
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
@@ -124,6 +125,7 @@ ElmEggHatchedScript:
 	iftrue ShowElmTogepiScript
 	loadmonindex 2, TOGETIC
 	special FindPartyMonThatSpeciesYourTrainerID
+	iftrue ShowElmTogepiScript
 	loadmonindex 3, TOGEKISS
 	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmTogepiScript
