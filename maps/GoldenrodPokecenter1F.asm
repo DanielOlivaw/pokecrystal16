@@ -15,10 +15,7 @@ GoldenrodPokecenter1FNurseScript:
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue, .gsball
-	end
-
-.gsball
+	iffalse .cancel
 	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
 	iftrue .cancel
 	playsound SFX_EXIT_BUILDING
@@ -46,10 +43,7 @@ GoldenrodPokecenter1F_GSBallSceneLeft:
 
 GoldenrodPokecenter1F_GSBallSceneRight:
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue, .gsball
-	end
-
-.gsball
+	iffalse .cancel
 	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
 	iftrue .cancel
 	playsound SFX_EXIT_BUILDING
