@@ -502,21 +502,13 @@ DisplayHOFMon:
 	ld a, l
 	ld l, h
 	ld h, a
-	push hl
-	ld hl, sp + 0
-	ld d, h
-	ld e, l
-	hlcoord 3, 13
-	ld a, [wCurPartySpecies]
-	ld [wNamedObjectIndexBuffer], a
-	call GetPokemonNumber
-	call PlaceString
-	pop hl
+; Print species
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndexBuffer], a
 	call GetBasePokemonName
 	hlcoord 7, 13
 	call PlaceString
+; Print gender icon
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender
@@ -536,6 +528,17 @@ DisplayHOFMon:
 	call PlaceString
 	hlcoord 1, 16
 	call PrintLevel
+; Print Pokedex number (national dex number, not internal number)
+	push hl
+	ld hl, sp + 0
+	ld d, h
+	ld e, l
+	hlcoord 3, 13
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndexBuffer], a
+	call GetPokemonNumber
+	call PlaceString
+	pop hl
 
 .print_id_no
 	hlcoord 7, 16

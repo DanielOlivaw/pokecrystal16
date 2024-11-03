@@ -168,11 +168,11 @@ GetPokemonNumber::
 	ld de, PokemonNumbers - 5
 	add hl, de
 
-	ld de, wStringBuffer1
+	ld de, wStringBuffer2
 	push de
 	ld bc, 4
 	call CopyBytes
-	ld hl, wStringBuffer1 + 4
+	ld hl, wStringBuffer2 + 4
 	ld [hl], "@"
 	pop de
 

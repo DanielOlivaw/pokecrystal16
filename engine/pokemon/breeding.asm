@@ -330,6 +330,9 @@ HatchEggs:
 	call CopyBytes
 	ld hl, .Text_HatchEgg
 	call PrintText
+
+	call ShowEggDexEntry
+
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
@@ -337,9 +340,6 @@ HatchEggs:
 	ld d, h
 	ld e, l
 	push de
-
-	call ShowEggDexEntry
-
 	ld hl, .Text_NicknameHatchling
 	call PrintText
 	call YesNoBox
