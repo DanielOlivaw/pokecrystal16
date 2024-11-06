@@ -435,26 +435,36 @@ TradeTexts:
 	dw TradeIntroText2
 	dw TradeIntroText3
 	dw TradeIntroText4
+	dw TradeIntroText5
+	dw TradeIntroText6
 ; TRADE_DIALOG_CANCEL
 	dw TradeCancelText1
 	dw TradeCancelText2
 	dw TradeCancelText3
 	dw TradeCancelText4
+	dw TradeCancelText5
+	dw TradeCancelText6
 ; TRADE_DIALOG_WRONG
 	dw TradeWrongText1
 	dw TradeWrongText2
 	dw TradeWrongText3
 	dw TradeWrongText4
+	dw TradeWrongText5
+	dw TradeWrongText6
 ; TRADE_DIALOG_COMPLETE
 	dw TradeCompleteText1
 	dw TradeCompleteText2
 	dw TradeCompleteText3
 	dw TradeCompleteText4
+	dw TradeCompleteText5
+	dw TradeCompleteText6
 ; TRADE_DIALOG_AFTER
 	dw TradeAfterText1
 	dw TradeAfterText2
 	dw TradeAfterText3
 	dw TradeAfterText4
+	dw TradeAfterText5
+	dw TradeAfterText6
 
 ConnectLinkCableText:
 	; OK, connect the Game Link Cable.
@@ -483,6 +493,7 @@ TradeIntroText1:
 	text_end
 
 TradeCancelText1:
+TradeCancelText6:
 	; You don't want to trade? Aww…
 	text_far _NPCTradeCancelText1
 	text_end
@@ -526,6 +537,7 @@ TradeCompleteText2:
 	text_end
 
 TradeAfterText2:
+TradeAfterText5:
 	; Hi! The @ you traded me is doing great!
 	text_far _NPCTradeAfterText2
 	text_end
@@ -536,6 +548,7 @@ TradeIntroText4:
 	text_end
 
 TradeCancelText4:
+TradeCancelText5:
 	; You don't want to trade? Oh, darn…
 	text_far _NPCTradeCancelText3
 	text_end
@@ -551,6 +564,7 @@ TradeCompleteText4:
 	text_end
 
 TradeAfterText4:
+TradeAfterText6:
 	; How is that @  I traded you doing? Your @ 's so cute!
 	text_far _NPCTradeAfterText3
 	text_end
@@ -563,4 +577,28 @@ TradeCompleteText3:
 TradeAfterText3:
 	; Trading is so odd… I still have a lot to learn about it.
 	text_far _NPCTradeAfterText4
+	text_end
+
+TradeIntroText5:
+	; I heard that @ look different here in JOHTO.
+	; Would you trade me one for the @ I caught in another region?
+	text_far _NPCTradeIntroText5
+	text_end
+
+TradeWrongText5:
+TradeWrongText6:
+	; Is that what @ looks like here?! Wait, that's not right…
+	text_far _NPCTradeWrongText5
+	text_end
+
+TradeCompleteText5:
+TradeCompleteText6:
+	; Woah, this @ looks totally different from mine! Thanks for trading with me!
+	text_far _NPCTradeCompleteText5
+	text_end
+
+TradeIntroText6:
+	; I heard that @ look different here in JOHTO.
+	; Would you trade me one for the @ I caught in another region?
+	text_far _NPCTradeIntroText5
 	text_end
