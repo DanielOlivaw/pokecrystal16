@@ -1541,6 +1541,72 @@ _NPCTradeAfterText4::
 	line "to learn about it."
 	done
 
+_NPCTradeIntroText5::
+	text "I heard that"
+	line "@"
+	text_ram wStringBuffer1
+	text " looks"
+
+	para "different here in"
+	line "JOHTO."
+
+	para "Would you trade"
+	line "me one for the"
+
+	para "@"
+	text_ram wStringBuffer2
+	text " I"
+	line "caught in"
+	cont "another region?"
+	done
+
+_NPCTradeWrongText5::
+	text "Is that what"
+	line "@"
+	text_ram wStringBuffer1
+	text " looks"
+	cont "like here?!"
+
+	para "Wait, that's not"
+	line "right…"
+	done
+
+_NPCTradeCompleteText5::
+	text "Woah, this"
+	line "@"
+	text_ram wStringBuffer1
+	text " looks"
+
+	para "totally different"
+	line "from mine!"
+
+	para "Thanks for trading"
+	line "with me!"
+	done
+
+_NPCTradeIntroText6::
+	text "I collect"
+	line "@"
+	text_ram wStringBuffer1
+	text "!"
+
+	para "I saw a type of"
+	line "@"
+	text_ram wStringBuffer1
+	text " here"
+
+	para "that I didn't"
+	line "recognize."
+
+	para "If you catch one,"
+	line "I'll trade one of"
+
+	para "my @"
+	text_ram wStringBuffer2
+	text " for"
+	line "it."
+	done
+
 _MomLeavingText1::
 	text "Wow, that's a cute"
 	line "#MON."

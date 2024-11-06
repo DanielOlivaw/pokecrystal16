@@ -20,7 +20,12 @@ NationalPark_MapScripts:
 	db 0 ; callbacks
 
 NationalParkLassScript:
-	jumptextfaceplayer NationalParkLassText
+	faceplayer
+	opentext
+	trade NPC_TRADE_PERRIN
+	waitbutton
+	closetext
+	end
 
 NationalParkPokefanFScript:
 	jumptextfaceplayer NationalParkPokefanFText
@@ -65,7 +70,7 @@ NationalParkPersian:
 NationalParkGameboyKidScript:
 	faceplayer
 	opentext
-	writetext NationalParkGameboyKidText
+	trade NPC_TRADE_NICHOLAS
 	waitbutton
 	closetext
 	turnobject NATIONALPARK_GAMEBOY_KID, DOWN
@@ -310,16 +315,16 @@ NationalParkHiddenFullHeal1:
 NationalParkHiddenFullHeal2:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL_2
 
-NationalParkLassText:
-	text "Look! Check out my"
-	line "bag!"
+; NationalParkLassText:
+	; text "Look! Check out my"
+	; line "bag!"
 
-	para "I printed out my"
-	line "favorites from my"
+	; para "I printed out my"
+	; line "favorites from my"
 
-	para "#DEX and stuck"
-	line "them on my bag."
-	done
+	; para "#DEX and stuck"
+	; line "them on my bag."
+	; done
 
 NationalParkPokefanFText:
 	text "This is MAIL I got"
@@ -383,16 +388,16 @@ NationalParkPersianText:
 	text "LIEPARD: Fufushaa!"
 	done
 
-NationalParkGameboyKidText:
-	text "I'm printing out"
-	line "my #DEX."
+; NationalParkGameboyKidText:
+	; text "I'm printing out"
+	; line "my #DEX."
 
-	para "You can also print"
-	line "out stuff like"
+	; para "You can also print"
+	; line "out stuff like"
 
-	para "MAIL and your PC"
-	line "BOXES."
-	done
+	; para "MAIL and your PC"
+	; line "BOXES."
+	; done
 
 SchoolboyJack1SeenText:
 	text "The world of"
