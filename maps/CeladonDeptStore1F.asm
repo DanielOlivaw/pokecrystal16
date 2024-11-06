@@ -2,6 +2,7 @@
 	const CELADONDEPTSTORE1F_RECEPTIONIST
 	const CELADONDEPTSTORE1F_GENTLEMAN
 	const CELADONDEPTSTORE1F_TEACHER
+	const CELADONDEPTSTORE1F_FISHINGGURU
 
 CeladonDeptStore1F_MapScripts:
 	db 0 ; scene scripts
@@ -16,6 +17,14 @@ CeladonDeptStore1FGentlemanScript:
 
 CeladonDeptStore1FTeacherScript:
 	jumptextfaceplayer CeladonDeptStore1FTeacherText
+
+Charlie:
+	faceplayer
+	opentext
+	trade NPC_TRADE_CHARLIE
+	waitbutton
+	closetext
+	end
 
 CeladonDeptStore1FDirectory:
 	jumptext CeladonDeptStore1FDirectoryText
@@ -86,7 +95,8 @@ CeladonDeptStore1F_MapEvents:
 	bg_event 14,  0, BGEVENT_READ, CeladonDeptStore1FDirectory
 	bg_event  3,  0, BGEVENT_READ, CeladonDeptStore1FElevatorButton
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 10,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore1FReceptionistScript, -1
 	object_event 11,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore1FGentlemanScript, -1
 	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore1FTeacherScript, -1
+	object_event  9,  5, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Charlie, -1

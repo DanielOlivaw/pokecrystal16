@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const ILEXFORESTAZALEAGATE_OFFICER
 	const ILEXFORESTAZALEAGATE_GRANNY
+	const ILEXFORESTAZALEAGATE_YOUNGSTER
 
 IlexForestAzaleaGate_MapScripts:
 	db 0 ; scene scripts
@@ -12,6 +13,14 @@ IlexForestAzaleaGateOfficerScript:
 
 IlexForestAzaleaGateGrannyScript:
 	jumptextfaceplayer IlexForestAzaleaGateGrannyText
+
+Akira:
+	faceplayer
+	opentext
+	trade NPC_TRADE_AKIRA
+	waitbutton
+	closetext
+	end
 
 IlexForestAzaleaGateOfficerText:
 	text "ILEX FOREST is"
@@ -41,6 +50,7 @@ IlexForestAzaleaGate_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IlexForestAzaleaGateOfficerScript, -1
 	object_event  1,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IlexForestAzaleaGateGrannyScript, -1
+	object_event  8,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Akira, -1
