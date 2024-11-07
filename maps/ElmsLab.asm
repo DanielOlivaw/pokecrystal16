@@ -886,7 +886,7 @@ ShowElmTogepiScript:
 ElmGiveEverstoneScript:
 	writetext ElmGiveEverstoneText1
 	buttonsound
-	verbosegiveitem EXP_SHARE
+	verbosegiveitem EVERSTONE
 	iffalse ElmScript_NoRoomForEverstone
 	writetext ElmGiveEverstoneText2
 	waitbutton
@@ -1627,35 +1627,38 @@ ElmGiveEverstoneText1:
 
 ElmGiveEverstoneText2:
 	text "That's an"
-	line "EXP.SHARE."
+	line "EVERSTONE."
 
-	; para "Some species of"
-	; line "#MON evolve"
+	para "Some species of"
+	line "#MON evolve"
 
-	; para "when they grow to"
-	; line "certain levels."
+	para "when they grow to"
+	line "certain levels."
 
-	; para "A #MON holding"
-	; line "the EVERSTONE"
-	; cont "won't evolve."
+	para "A #MON holding"
+	line "the EVERSTONE"
+	cont "won't evolve."
 
-	; para "Give it to a #-"
-	; line "MON you don't want"
-	; cont "to evolve."
+	para "Give it to a #-"
+	line "MON you don't want"
+	cont "to evolve."
+
+	; text "That's an"
+	; line "EXP.SHARE."
 	
-	para "If you give that"
-	line "to a #MON,"
+	; para "If you give that"
+	; line "to a #MON,"
 	
-	para "it will gain exp-"
-	line "erience even if"
+	; para "it will gain exp-"
+	; line "erience even if"
 	
-	para "it doesn't enter"
-	line "battle."
+	; para "it doesn't enter"
+	; line "battle."
 	
-	para "Give it to a weak-"
-	line "er #MON you"
-	cont "want to train."
-	done
+	; para "Give it to a weak-"
+	; line "er #MON you"
+	; cont "want to train."
+	; done
 
 ElmText_CallYou:
 	text "ELM: <PLAY_G>, I'll"

@@ -735,11 +735,7 @@ wLastEnemyMove:: db ; c71c
 wPlayerFutureSightCount:: db ; c71d
 wEnemyFutureSightCount:: db ; c71e
 
-wGivingExperienceToExpShareHolders:: db ; c71f
-
-wBackupEnemyMonBaseStats:: ds 5 ; c720
-wBackupEnemyMonCatchRate:: db ; c725
-wBackupEnemyMonBaseExp:: db ; c726
+	ds 8
 
 wPlayerFutureSightDamage:: dw ; c727
 wEnemyFutureSightDamage:: dw ; c729
@@ -1647,7 +1643,7 @@ wGBPrinterBrightness:: ; cfd0
 ;   darker:   $60
 ;   darkest:  $7F
 	db
-wOptions2:: ; cfd1
+wExpAllToggle:: ; cfd1
 ; bit 1: menu account off/on
 	db
 	ds 2

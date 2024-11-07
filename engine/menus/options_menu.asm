@@ -67,11 +67,11 @@ StringOptions:
 	db "        :<LF>"
 	db "BATTLE STYLE<LF>"
 	db "        :<LF>"
+	db "EXP.ALL<LF>"
+	db "        :<LF>"
 	db "SOUND<LF>"
 	db "        :<LF>"
 	db "PRINT<LF>"
-	db "        :<LF>"
-	db "MENU HELP<LF>"
 	db "        :<LF>"
 	db "FRAME<LF>"
 	db "        :TYPE<LF>"
@@ -93,9 +93,9 @@ GetOptionPointer:
 	dw Options_TextSpeed
 	dw Options_BattleScene
 	dw Options_BattleStyle
+	dw Options_ExpAll
 	dw Options_Sound
 	dw Options_Print
-	dw Options_MenuAccount
 	dw Options_Frame
 	dw Options_Cancel
 
@@ -107,9 +107,9 @@ GetOptionPointer:
 Options_TextSpeed:
 	call GetTextSpeed
 	ldh a, [hJoyPressed]
-	bit D_LEFT_F, a
-	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
+	jr nz, .RightPressed
+	bit D_LEFT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
 	cp OPT_TEXT_SPEED_SLOW
@@ -121,7 +121,7 @@ Options_TextSpeed:
 	ld a, e
 	jr .Save
 
-.LeftPressed:
+.RightPressed:
 	ld a, c
 	and a
 	jr nz, .Decrease
@@ -299,7 +299,7 @@ Options_Sound:
 	ld de, .Stereo
 
 .Display:
-	hlcoord 11, 9
+	hlcoord 11, 11
 	call PlaceString
 	and a
 	ret
@@ -353,7 +353,7 @@ Options_Print:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 11, 11
+	hlcoord 11, 13
 	call PlaceString
 	and a
 	ret
@@ -409,37 +409,37 @@ GetPrinterSetting:
 	lb de, GBPRINTER_DARKER, GBPRINTER_LIGHTEST
 	ret
 
-Options_MenuAccount:
-	ld hl, wOptions2
+Options_ExpAll:
+	ld hl, wExpAllToggle
 	ldh a, [hJoyPressed]
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
-	bit MENU_ACCOUNT, [hl]
+	bit EXP_ALL, [hl]
 	jr nz, .ToggleOff
 	jr .ToggleOn
 
 .LeftPressed:
-	bit MENU_ACCOUNT, [hl]
+	bit EXP_ALL, [hl]
 	jr z, .ToggleOn
 	jr .ToggleOff
 
 .NonePressed:
-	bit MENU_ACCOUNT, [hl]
+	bit EXP_ALL, [hl]
 	jr nz, .ToggleOn
 
 .ToggleOff:
-	res MENU_ACCOUNT, [hl]
+	res EXP_ALL, [hl]
 	ld de, .Off
 	jr .Display
 
 .ToggleOn:
-	set MENU_ACCOUNT, [hl]
+	set EXP_ALL, [hl]
 	ld de, .On
 
 .Display:
-	hlcoord 11, 13
+	hlcoord 11, 9
 	call PlaceString
 	and a
 	ret

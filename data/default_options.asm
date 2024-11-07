@@ -9,8 +9,8 @@ DefaultOptions:
 	db 1 << FAST_TEXT_DELAY_F
 ; wGBPrinterBrightness: normal
 	db GBPRINTER_NORMAL
-; wOptions2: menu account on
-	db 1 << MENU_ACCOUNT
+; wExpAllToggle: exp all off
+	db FALSE
 
 	db $00
 	db $00

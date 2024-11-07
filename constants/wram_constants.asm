@@ -63,7 +63,7 @@ GBPRINTER_DARKEST  EQU $7f
 
 ; wOptions2:: ; cfd1
 	const_def
-	const MENU_ACCOUNT ; 0
+	const EXP_ALL ; 0
 
 ; wForgettingMove ; TMHM Update
 FORGETTING_MOVE_F EQU 7
