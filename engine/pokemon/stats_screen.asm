@@ -786,6 +786,24 @@ StatsScreen_LoadGFX:
 	dw wBufferMonOT
 
 .OrangePage:
+	; Level when caught
+	; Limited to between 1 and 63 since it's a 6-bit quantity.
+	ld a, [wTempMonCaughtLevel]
+	and CAUGHT_LEVEL_MASK
+	jr z, .UnknownLevel
+	cp CAUGHT_EGG_LEVEL ; egg marker value
+	jr nz, .NotHatched
+	ld a, EGG_LEVEL ; egg hatch level
+.NotHatched
+	ld [wBuffer2], a
+	hlcoord 4, 10
+	ld de, wBuffer2
+	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
+	call PrintNum
+	ld de, .AtLevelStr
+	hlcoord 0, 10
+	call PlaceString
+
 	; Time of day when caught
 	ld de, .MetStr
 	hlcoord 0, 8
@@ -803,22 +821,6 @@ StatsScreen_LoadGFX:
 	call CopyName1
 	ld de, wStringBuffer2
 	hlcoord 4, 8
-	call PlaceString
-
-	; Level when caught
-	; Limited to between 1 and 63 since it's a 6-bit quantity.
-	ld a, [wTempMonCaughtLevel]
-	and CAUGHT_LEVEL_MASK
-	jr z, .UnknownLevel
-	; cp CAUGHT_EGG_LEVEL ; egg marker value
-	; jr z, .HatchedLevel
-	ld [wBuffer2], a
-	hlcoord 4, 10
-	ld de, wBuffer2
-	lb bc, PRINTNUM_RIGHTALIGN | 1, 3
-	call PrintNum
-	ld de, .AtLevelStr
-	hlcoord 0, 10
 	call PlaceString
 
 	; Location where caught
@@ -842,8 +844,11 @@ StatsScreen_LoadGFX:
 	jp PrintCharacteristics
 
 .UnknownLevel
+	ld de, .MetStr
+	hlcoord 0, 8
+	call PlaceString
 	ld de, .TradeStr
-	hlcoord 0, 10
+	hlcoord 4, 8
 	call PlaceString
 	jp PrintCharacteristics
 
