@@ -1082,7 +1082,6 @@ BattleAnim_MeteorBeam:
 BattleAnim_SkitterSmack:
 BattleAnim_TripleAxel:
 BattleAnim_FrenzyPlant:
-BattleAnim_BlastBurn:
 BattleAnim_HydroCannon:
 BattleAnim_DracoMeteor:
 BattleAnim_VoltTackle:
@@ -2263,7 +2262,6 @@ BattleAnim_FocusEnergy:
 BattleAnim_Autotomize:
 BattleAnim_MagnetRise:
 BattleAnim_FlareUp:
-BattleAnim_WildFury:
 BattleAnim_RazorWind_branch_c9fb5:
 BattleAnim_SkullBash_branch_c9fb5:
 BattleAnim_SkyAttack_branch_c9fb5:
@@ -6253,6 +6251,7 @@ BattleAnim_DualChop:
 
 BattleAnim_BulkUp:
 BattleAnim_WorkUp:
+BattleAnim_WildFury:
 ; From Pokémon Prism
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_WIND
 .loop
@@ -6817,6 +6816,7 @@ BattleAnim_MuddyWater:
 	anim_ret
 
 BattleAnim_LavaPlume:
+BattleAnim_BlastBurn:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_call BattleAnim_UserFlames
 	anim_wait 16
