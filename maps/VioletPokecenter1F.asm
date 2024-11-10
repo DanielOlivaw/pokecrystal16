@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const VIOLETPOKECENTER1F_NURSE
 	const VIOLETPOKECENTER1F_GAMEBOY_KID
+	const VIOLETPOKECENTER1F_GEODUDE
 	const VIOLETPOKECENTER1F_GENTLEMAN
 	const VIOLETPOKECENTER1F_YOUNGSTER
 	const VIOLETPOKECENTER1F_SCIENTIST
@@ -75,6 +76,16 @@ VioletPokecenter1F_ElmsAideScript:
 .SecondTimeAsking:
 	writetext UnknownText_0x69712
 	sjump .AskTakeEgg
+
+VioletPokecenter1FGeodudeScript:
+	opentext
+	writetext VioletPokecenter1FGeodudeText
+	cry GEODUDE
+	loadmonindex 1, GEODUDE
+	special SpecialSetSeenMon
+	waitbutton
+	closetext
+	end
 
 VioletPokecenter1FGameboyKidScript:
 	jumptextfaceplayer VioletPokecenter1FGameboyKidText
@@ -186,6 +197,10 @@ VioletPokecenter1FGameboyKidText:
 	cont "PC storage system."
 	done
 
+VioletPokecenter1FGeodudeText:
+	text "GEODUDE: Du duude!"
+	done
+
 VioletPokecenter1FGentlemanText:
 	text "It was around"
 	line "three years ago."
@@ -228,6 +243,7 @@ VioletPokecenter1F_MapEvents:
 	db 5 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletPokecenterNurse, -1
 	object_event  7,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGameboyKidScript, -1
+	object_event  8,  5, SPRITE_GEODUDE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGeodudeScript, -1
 	object_event  1,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGentlemanScript, -1
 	object_event  8,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FYoungsterScript, -1
 	object_event  4,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER

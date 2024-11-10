@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const ROUTE29ROUTE46GATE_OFFICER
+	const ROUTE29ROUTE46GATE_WOLFROST
 	const ROUTE29ROUTE46GATE_YOUNGSTER
 
 Route29Route46Gate_MapScripts:
@@ -9,6 +10,16 @@ Route29Route46Gate_MapScripts:
 
 Route29Route46GateOfficerScript:
 	jumptextfaceplayer Route29Route46GateOfficerText
+
+Route29Route46GateWolfrostScript:
+	opentext
+	writetext Route29Route46GateWolfrostText
+	cry WOLFROST
+	loadmonindex 1, WOLFROST
+	special SpecialSetSeenMon
+	waitbutton
+	closetext
+	end
 
 Route29Route46GateYoungsterScript:
 	jumptextfaceplayer Route29Route46GateYoungsterText
@@ -20,6 +31,10 @@ Route29Route46GateOfficerText:
 	para "But you can jump"
 	line "down from them to"
 	cont "take a shortcut."
+	done
+
+Route29Route46GateWolfrostText:
+	text "WOLFROST: Awooo!"
 	done
 
 Route29Route46GateYoungsterText:
@@ -49,4 +64,5 @@ Route29Route46Gate_MapEvents:
 
 	db 2 ; object events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29Route46GateOfficerScript, -1
+	object_event  0,  3, SPRITE_WOLFROST, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29Route46GateWolfrostScript, -1
 	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29Route46GateYoungsterScript, -1
