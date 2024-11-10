@@ -142,13 +142,13 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MACHOP ; 9a
 	const SPRITE_MAGNETON ; 9b
 	const SPRITE_LAPRAS ; 9c
-	const SPRITE_HAXORUS ; 9d
+	const SPRITE_RHYDON ; 9d
 	const SPRITE_LIEPARD ; 9e
 	const SPRITE_SNORLAX ; 9f
 	const SPRITE_GYARADOS ; a0
 	const SPRITE_LUGIA ; a1
 	const SPRITE_HO_OH ; a2
-	; const SPRITE_REGI ; a3
+	const SPRITE_WOLFROST ; a3
 	const SPRITE_TEDDIURSA ; a4
 	const SPRITE_MARILL ; a5
 	const SPRITE_CHANSEY ; a6
@@ -160,7 +160,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MILTANK ; ac
 	const SPRITE_WINGULL ; ad
 	const SPRITE_MAKUHITA ; ae
-	; const SPRITE_GRUMPIG ; af
+	const SPRITE_GEODUDE ; af
 	const SPRITE_ZANGOOSE ; b0
 	const SPRITE_FLOATZEL ; b1
 	const SPRITE_CROAGUNK ; b2

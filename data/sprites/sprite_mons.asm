@@ -30,13 +30,13 @@ SpriteMons:
 	dw MACHOP
 	dw MAGNETON
 	dw LAPRAS
-	dw HAXORUS
+	dw RHYDON
 	dw LIEPARD
 	dw SNORLAX
 	dw GYARADOS
 	dw LUGIA
 	dw HO_OH
-	; dw REGIROCK
+	dw WOLFROST
 	dw TEDDIURSA
 	dw MARILL
 	dw CHANSEY
@@ -48,7 +48,7 @@ SpriteMons:
 	dw MILTANK
 	dw WINGULL
 	dw MAKUHITA
-	; dw GRUMPIG
+	dw GEODUDE
 	dw ZANGOOSE
 	dw FLOATZEL
 	dw CROAGUNK

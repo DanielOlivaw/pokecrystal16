@@ -13,7 +13,7 @@ OlivineHouseBetaTeacherScript:
 OlivineHouseBetaRhydonScript:
 	opentext
 	writetext OlivineHouseBetaRhydonText
-	cry HAXORUS
+	cry RHYDON
 	waitbutton
 	closetext
 	end
@@ -34,7 +34,7 @@ OlivineHouseBetaTeacherText:
 	done
 
 OlivineHouseBetaRhydonText:
-	text "HAXORUS: Gugooh!"
+	text "RHYDON: Gugooh!"
 	done
 
 OlivineHouseBeta_MapEvents:
@@ -52,4 +52,4 @@ OlivineHouseBeta_MapEvents:
 
 	db 2 ; object events
 	object_event  2,  3, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaTeacherScript, -1
-	object_event  6,  4, SPRITE_HAXORUS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaRhydonScript, -1
+	object_event  6,  4, SPRITE_RHYDON, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineHouseBetaRhydonScript, -1
