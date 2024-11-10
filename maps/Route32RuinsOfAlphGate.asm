@@ -18,10 +18,11 @@ Route32RuinsOfAlphGateYoungsterScript:
 	jumptextfaceplayer Route32RuinsOfAlphGateYoungsterText
 
 Route32RuinsOfAlphGateOfficerText:
-	text "RUINS OF ALPH"
+	text "These are the"
+	line "RUINS OF ALPH,"
 
-	para "A Look-and-Touch"
-	line "Tourist Site"
+	para "a look-and-touch"
+	line "tourist site!"
 
 	para "Try the sliding"
 	line "stone panels!"
