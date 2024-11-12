@@ -113,4 +113,6 @@ OverworldSprites:
 	overworld_sprite ArianaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite ScientistFSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite FarfetchDSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite ChrisSurfSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite KrisSurfSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	assert_table_length NUM_OVERWORLD_SPRITES

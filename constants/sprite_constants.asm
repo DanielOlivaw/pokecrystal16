@@ -107,7 +107,9 @@
 	const SPRITE_PETREL ; 67
 	const SPRITE_ARIANA ; 68
 	const SPRITE_SCIENTIST_F ; 69
-	const SPRITE_FARFETCHD ; 70
+	const SPRITE_FARFETCHD ; 6a
+	const SPRITE_CHRIS_SURF ; 6b
+	const SPRITE_KRIS_SURF ; 6c
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
