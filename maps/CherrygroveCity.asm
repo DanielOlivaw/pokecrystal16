@@ -324,6 +324,9 @@ CherrygroveCitySign:
 GuideGentsHouseSign:
 	jumptext GuideGentsHouseSignText
 
+MoveDeletersHouseSign:
+	jumptext MoveDeletersHouseSignText
+
 CherrygroveCityPokecenterSign:
 	jumpstd pokecentersign
 
@@ -639,23 +642,29 @@ GuideGentsHouseSignText:
 	text "GUIDE GENT'S HOUSE"
 	done
 
+MoveDeletersHouseSignText:
+	text "MOVE DELETER'S"
+	line "HOUSE"
+	done
+
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
 	warp_event 23,  3, CHERRYGROVE_MART, 2
 	warp_event 29,  3, CHERRYGROVE_POKECENTER_1F, 1
-	warp_event 17,  7, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
+	warp_event 31, 11, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
 	warp_event 25,  9, GUIDE_GENTS_HOUSE, 1
-	warp_event 31, 11, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
+	warp_event 17,  7, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 
 	db 2 ; coord events
 	coord_event 33,  6, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneNorth
 	coord_event 33,  7, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveSilverSceneSouth
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 30,  8, BGEVENT_READ, CherrygroveCitySign
 	bg_event 23,  9, BGEVENT_READ, GuideGentsHouseSign
+	bg_event 15,  7, BGEVENT_READ, MoveDeletersHouseSign
 	bg_event 24,  3, BGEVENT_READ, CherrygroveCityMartSign
 	bg_event 30,  3, BGEVENT_READ, CherrygroveCityPokecenterSign
 

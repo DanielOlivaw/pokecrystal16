@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const GUIDEGENTSHOUSE_GRAMPS
+	const GUIDEGENTSHOUSE_ROCKRUFF
 
 GuideGentsHouse_MapScripts:
 	db 0 ; scene scripts

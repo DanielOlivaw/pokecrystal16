@@ -127,8 +127,8 @@ BlackthornCitySign:
 BlackthornGymSign:
 	jumptext BlackthornGymSignText
 
-MoveDeletersHouseSign:
-	jumptext MoveDeletersHouseSignText
+MoveRemindersHouseSign:
+	jumptext MoveRemindersHouseSignText
 
 DragonDensSign:
 	jumptext DragonDensSignText
@@ -289,8 +289,8 @@ BlackthornGymSignText:
 	line "of Dragon #MON"
 	done
 
-MoveDeletersHouseSignText:
-	text "MOVE DELETER'S"
+MoveRemindersHouseSignText:
+	text "MOVE REMINDER'S"
 	line "HOUSE"
 	done
 
@@ -327,7 +327,7 @@ BlackthornCity_MapEvents:
 	db 7 ; bg events
 	bg_event 34, 24, BGEVENT_READ, BlackthornCitySign
 	bg_event 17, 13, BGEVENT_READ, BlackthornGymSign
-	bg_event  7, 31, BGEVENT_READ, MoveDeletersHouseSign
+	bg_event  7, 31, BGEVENT_READ, MoveRemindersHouseSign
 	bg_event 21,  3, BGEVENT_READ, DragonDensSign
 	bg_event  5, 25, BGEVENT_READ, BlackthornCityTrainerTips
 	bg_event 16, 29, BGEVENT_READ, BlackthornCityMartSign
