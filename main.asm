@@ -140,6 +140,7 @@ SECTION "bankB", ROMX
 INCLUDE "engine/battle/trainer_huds.asm"
 INCLUDE "data/trainers/class_names.asm"
 INCLUDE "engine/events/move_deleter.asm"
+INCLUDE "engine/events/move_reminder.asm"
 INCLUDE "engine/link/mystery_gift_2.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"

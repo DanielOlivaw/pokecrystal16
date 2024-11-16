@@ -96,7 +96,7 @@ MoveDeletion:
 
 .AskWhichMonText:
 	; Which #MON?
-	text_far UnknownText_0x1c5fd1
+	text_far _WhichMonText
 	text_end
 
 .DeleteMove:

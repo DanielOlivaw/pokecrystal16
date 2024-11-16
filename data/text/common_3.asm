@@ -1499,9 +1499,68 @@ UnknownText_0x1c5f74::
 	line "#MON forget?"
 	done
 
-UnknownText_0x1c5fd1::
+_WhichMonText::
 	text "Which #MON?"
 	prompt
+
+_MoveReminderIntroText::
+	text "I'm the MOVE"
+	line "REMINDER."
+
+	para "I know all the"
+	line "moves that #MON"
+
+	para "learn, and I can"
+	line "teach #MON"
+	cont "those moves."
+
+	para "Want me to teach a"
+	line "move to one of"
+	cont "your #MON?"
+	done
+
+_MoveReminderWhichMoveText::
+	text "Which move should"
+	line "it remember?"
+	prompt
+
+_MoveReminderCancelText::
+	text "Come visit me"
+	line "again."
+	done
+
+_MoveReminderEggText::
+	text "Huh? I don't have"
+	line "any moves I can"
+	cont "teach an EGG."
+	done
+
+_MoveReminderNotaMonText::
+	text "Huh? I don't have"
+	line "any moves I can"
+	cont "teach that."
+	done
+
+_MoveReminderNoMovesText::
+	text "I'm sorry, but it"
+	line "doesn't look like"
+
+	para "I've got any moves"
+	line "to teach that"
+	cont "#MON."
+	done
+
+_MoveReminderMoveLearnedText::
+	text "Done! Your #MON"
+	line "remembered the"
+	cont "move."
+	done
+
+_TestMoveText::
+	text "@"
+	text_ram wStringBuffer1
+	text "."
+	done
 
 Text_DSTIsThatOK::
 	text " DST,"
