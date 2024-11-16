@@ -1,10 +1,11 @@
 MoveReminder:
-	ld hl, .MoveReminderIntroText
+	ld hl, MoveReminderIntroText
 	call PrintText
 	call YesNoBox
 	jr c, .declined
 
-	ld hl, .MoveReminderWhichMonText
+.loop_party_menu
+	ld hl, MoveReminderWhichMonText
 	call PrintText
 	farcall SelectMonFromParty
 	jr c, .declined
@@ -14,12 +15,16 @@ MoveReminder:
 	call IsAPokemon
 	jr c, .not_a_pokemon
 
-	call .GetRemindableMoves
+	call GetRemindableMoves
 	jr z, .no_moves_to_learn
-	ld hl, .MoveReminderWhichMoveText
+
+	ld hl, MoveReminderWhichMoveText
 	call PrintText
-	call .ChooseMoveToLearn
+
+.loop_move_menu
+	call ChooseMoveToLearn
 	jr c, .exit_menu
+
 	ld a, [wMenuSelection]
 	ld [wNamedObjectIndexBuffer], a
 	call GetMoveName
@@ -29,69 +34,80 @@ MoveReminder:
 	ld a, b
 	dec a
 	jr z, .move_learned
-.exit_menu
-	call ReturnToMapWithSpeechTextbox
+	; fallthrough
+
+; A move was selected but the player decided not to overwrite anything.
+; Check again for any moves that can be learned.
+.recheck_for_moves
+	call GetRemindableMoves
+	jr z, .no_moves_to_learn
+	jr .loop_move_menu
+
 .declined
-	ld hl, .MoveReminderCancelText
+	ld hl, MoveReminderCancelText
 	jp PrintText
 
 .egg
-	ld hl, .MoveReminderEggText
-	jp PrintText
+	ld hl, MoveReminderEggText
+	call PrintText
+	jr .loop_party_menu
 
 .not_a_pokemon
-	ld hl, .MoveReminderNotaMonText
-	jp PrintText
+	ld hl, MoveReminderNotaMonText
+	call PrintText
+	jr .loop_party_menu
 
 .no_moves_to_learn
-	ld hl, .MoveReminderNoMovesText
-	jp PrintText
+	ld hl, MoveReminderNoMovesText
+	call PrintText
+	jr .loop_party_menu
+
+.exit_menu
+	call ReturnToMapWithSpeechTextbox
+	jr .loop_party_menu
 
 .move_learned
 	call ReturnToMapWithSpeechTextbox
-	ld hl, .MoveReminderMoveLearnedText
-	jp PrintText
+	ld hl, MoveReminderMoveLearnedText
+	call PrintText
+	jr .recheck_for_moves
 
 ; Calls to text, found in common_3.asm
-.MoveReminderIntroText:
+MoveReminderIntroText:
 	text_far _MoveReminderIntroText
 	text_end
 
-.MoveReminderWhichMonText:
+MoveReminderWhichMonText:
 	text_far _WhichMonText
 	text_end
 
-.MoveReminderWhichMoveText:
+MoveReminderWhichMoveText:
 	text_far _MoveReminderWhichMoveText
 	text_end
 
-.MoveReminderCancelText:
+MoveReminderCancelText:
 	text_far _MoveReminderCancelText
 	text_end
 
-.MoveReminderEggText:
+MoveReminderEggText:
 	text_far _MoveReminderEggText
 	text_end
 
-.MoveReminderNotaMonText:
+MoveReminderNotaMonText:
 	text_far _MoveReminderNotaMonText
 	text_end
 
-.MoveReminderNoMovesText:
+MoveReminderNoMovesText:
 	text_far _MoveReminderNoMovesText
 	text_end
 
-.MoveReminderMoveLearnedText:
+MoveReminderMoveLearnedText:
 	text_far _MoveReminderMoveLearnedText
-	text_end
-
-.MoveText:
-	text_far _TestMoveText
 	text_end
 
 ; Checks for moves that can be learned and returns
 ; a zero flag if there are none.
-.GetRemindableMoves:
+GetRemindableMoves:
 
 	; The "wd002" wram label is being used to store
 	; the moves for placement in the move list.
@@ -234,10 +250,41 @@ MoveReminder:
 	scf
 	ret
 
+.skip_evos:
+; Receives a pointer to the evos and attacks for a mon in b:hl,
+; and skips to the attacks.
+	ld a, b
+	call GetFarByte
+	inc hl
+	and a
+	ret z
+	cp EVOLVE_ITEM
+	jr z, .no_extra_skip
+	cp EVOLVE_TRADE
+	jr z, .no_extra_skip
+	cp EVOLVE_HAPPINESS
+	jr z, .no_extra_skip
+	cp EVOLVE_HAPPINESS_REGION
+	jr z, .no_extra_skip
+	cp EVOLVE_MOVE_TYPE
+	jr z, .no_extra_skip
+	inc hl
+.no_extra_skip
+	inc hl
+	inc hl
+	inc hl
+	jr .skip_evos
+
+.GetNextEvoAttackByte:
+	ldh a, [hTemp]
+	call GetFarByte
+	inc hl
+	ret
+
 ; Creates a scrolling menu and sets up the menu gui.
 ; The number of items is stored in "wd002"
 ; The list of items is stored in "wd002 + 1"
-.ChooseMoveToLearn:
+ChooseMoveToLearn:
 	farcall FadeOutPalettes
 	farcall BlankScreen
 	ld hl, .MenuHeader
@@ -269,11 +316,9 @@ MoveReminder:
 	; it, an incorrect symbol will appear.
 	farcall LoadStatsScreenPageTilesGFX
 
-	; This displays the Pokémon's species
-	; name (not nickname) at the
-	; coordinates defined at "hlcoord".
-	; In this case that is the
-	; top left of the screen.
+	; This displays the Pokémon's species name (not nickname)
+	; at the coordinates defined at "hlcoord".
+	; In this case that is the top left of the screen.
 	xor a
 	ld [wMonType], a
 	ld a, [wCurPartySpecies]
@@ -282,16 +327,14 @@ MoveReminder:
 	hlcoord 2, 1
 	call PlaceString
 
-	; This displays the Pokémon's level
-	; right after the Pokémon's name.
+	; This displays the Pokémon's level right after the Pokémon's name.
 	push bc
 	farcall CopyMonToTempMon
 	pop hl
 	call PrintLevel
 
-	; Creates the menu, sets the "B_BUTTON"
-	; to cancel and sets up each entry
-	; to behave like a tm/hm.
+	; Creates the menu, sets the "B_BUTTON" to cancel,
+	; and sets up each entry to behave like a tm/hm.
 	call ScrollingMenu
 	ld a, [wMenuJoypad]
 	cp B_BUTTON
@@ -301,18 +344,15 @@ MoveReminder:
 	and a
 	ret
 
-; Sets the carry flag and returns from
-; this subroutine. Setting the carry
-; flag being set will cause the
-; menu to exit after returning.
+; Sets the carry flag and returns from this subroutine.
+; Setting the carry flag will cause the menu to exit after returning.
 .close_menu
 	call ClearSprites
 	scf
 	ret
 
-; The menu header defines the menu's position and
-; what will be included. The last two values
-; of "menu_coords" will determine where the
+; The menu header defines the menu's position and what will be included.
+; The last two values of "menu_coords" will determine where the
 ; vertical scroll arrows will be located.
 .MenuHeader:
 	db MENU_BACKUP_TILES
@@ -323,8 +363,7 @@ MoveReminder:
 ; This sets up the menu's contents, including the amount
 ; of entries displayed before scrolling is required.
 
-; Vertical scroll arrows and the move's
-; details will be displayed.
+; Vertical scroll arrows and the move's details will be displayed.
 
 ; This menu is populated with an item and three functions.
 ; The item is "wd002".
@@ -511,36 +550,6 @@ MoveReminder:
 	db "---@"
 .MovePercentString:
 	db "<%>@"
-
-.skip_evos:
-; Receives a pointer to the evos and attacks for a mon in b:hl, and skips to the attacks.
-	ld a, b
-	call GetFarByte
-	inc hl
-	and a
-	ret z
-	cp EVOLVE_ITEM
-	jr z, .no_extra_skip
-	cp EVOLVE_TRADE
-	jr z, .no_extra_skip
-	cp EVOLVE_HAPPINESS
-	jr z, .no_extra_skip
-	cp EVOLVE_HAPPINESS_REGION
-	jr z, .no_extra_skip
-	cp EVOLVE_MOVE_TYPE
-	jr z, .no_extra_skip
-	inc hl
-.no_extra_skip
-	inc hl
-	inc hl
-	inc hl
-	jr .skip_evos
-
-.GetNextEvoAttackByte:
-	ldh a, [hTemp]
-	call GetFarByte
-	inc hl
-	ret
 
 .GetMoveAccuracyAsPercentage:
 ; Turn an accuracy value out of 255 into a percentage (out of 100).

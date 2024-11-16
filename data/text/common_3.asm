@@ -1500,7 +1500,8 @@ UnknownText_0x1c5f74::
 	done
 
 _WhichMonText::
-	text "Which #MON?"
+	text "Which #MON"
+	line "should I teach?"
 	prompt
 
 _MoveReminderIntroText::
@@ -1526,20 +1527,20 @@ _MoveReminderWhichMoveText::
 
 _MoveReminderCancelText::
 	text "Come visit me"
-	line "again."
+	line "again sometime."
 	done
 
 _MoveReminderEggText::
 	text "Huh? I don't have"
 	line "any moves I can"
 	cont "teach an EGG."
-	done
+	prompt
 
 _MoveReminderNotaMonText::
 	text "Huh? I don't have"
 	line "any moves I can"
 	cont "teach that."
-	done
+	prompt
 
 _MoveReminderNoMovesText::
 	text "I'm sorry, but it"
@@ -1548,13 +1549,13 @@ _MoveReminderNoMovesText::
 	para "I've got any moves"
 	line "to teach that"
 	cont "#MON."
-	done
+	prompt
 
 _MoveReminderMoveLearnedText::
 	text "Done! Your #MON"
 	line "remembered the"
 	cont "move."
-	done
+	prompt
 
 _TestMoveText::
 	text "@"
