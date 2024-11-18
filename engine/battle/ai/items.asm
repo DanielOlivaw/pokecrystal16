@@ -627,28 +627,25 @@ AIUsedItemSound:
 EnemyUsedFullHeal:
 	call AIUsedItemSound
 	call AI_HealStatus
-	ld a, FULL_HEAL
-	ld [wCurEnemyItem], a
 	xor a
 	ld [wEnemyConfuseCount], a
+	ld a, FULL_HEAL
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 EnemyUsedLavaCookie:
 	call AIUsedItemSound
 	call AI_HealStatus
-	ld a, LAVA_COOKIE
-	ld [wCurEnemyItem], a
 	xor a
 	ld [wEnemyConfuseCount], a
+	ld a, LAVA_COOKIE
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 EnemyUsedLumBerry:
 	call AIUsedItemSound
 	call AI_HealStatus
-	ld a, MIRACLEBERRY
-	ld [wCurEnemyItem], a
 	xor a
 	ld [wEnemyConfuseCount], a
+	ld a, MIRACLEBERRY
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
 
 EnemyUsedMaxPotion:
@@ -660,8 +657,6 @@ EnemyUsedFullRestore:
 	call AI_HealStatus
 	ld a, FULL_RESTORE
 	ld [wCurEnemyItem], a
-	; ld hl, wEnemySubStatus6
-	; res SUBSTATUS_CONFUSED, [hl]
 	xor a
 	ld [wEnemyConfuseCount], a
 
