@@ -18,6 +18,7 @@ Features in this version include:
 - More bag pockets
 - Standardized marts that gain more items as you progress
 - Pokédex opening after evolutions and hatching
+
 and a ton of other upgrades, fixes, and tweaks.
 
 Feel free to try this out for yourself. If you have any problems or have questions about how I did something, open an issue and I'll try to respond when I can.
