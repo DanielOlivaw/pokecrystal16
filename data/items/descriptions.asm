@@ -227,11 +227,11 @@ ItemDescriptions:
 	dw BlueFluteDesc
 	dw YellowFluteDesc
 	dw RedFluteDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw ExpCandyXSDesc
+	dw ExpCandySDesc
+	dw ExpCandyMDesc
+	dw ExpCandyLDesc
+	dw ExpCandyXLDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -747,7 +747,7 @@ HardStoneDesc:
 
 LuckyEggDesc:
 	db   "Earns extra EXP."
-	next "points. (HOLD)@"
+	next "Points. (HOLD)@"
 
 CardKeyDesc:
 	db   "Opens shutters in"
@@ -1153,3 +1153,24 @@ YellowFluteDesc:
 RedFluteDesc:
 	db   "A glass flute that"
 	next "cures infatuation.@"
+
+ExpCandyXSDesc:
+	db   "Grants 100 EXP."
+	next "Points.@"
+
+ExpCandySDesc:
+	db   "Grants 800 EXP."
+	next "Points.@"
+
+ExpCandyMDesc:
+	db   "Grants 3,000 EXP."
+	next "Points.@"
+
+ExpCandyLDesc:
+	db   "Grants 10,000 EXP."
+	next "Points.@"
+
+ExpCandyXLDesc:
+	db   "Grants 30,000 EXP."
+	next "Points.@"
+

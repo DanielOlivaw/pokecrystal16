@@ -1448,6 +1448,14 @@ UnknownText_0x1c5e90::
 	text "."
 	prompt
 
+_MonGainedExpPointText::
+	text_ram wStringBuffer1
+	text " gained"
+	line "@"
+	text_decimal wStringBuffer2, 2, 5
+	text " EXP. Points!"
+	prompt
+
 UnknownText_0x1c5ea8::
 	text_ram wStringBuffer1
 	text " knows"

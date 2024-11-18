@@ -232,11 +232,11 @@
 	const BLUE_FLUTE   ; e0
 	const YELLOW_FLUTE ; e1
 	const RED_FLUTE    ; e2
-	const ITEM_E3      ; e3
-	const ITEM_E4      ; e4
-	const ITEM_E5      ; e5
-	const ITEM_E6      ; e6
-	const ITEM_E7      ; e7
+	const EXP_CANDY_XS ; e3
+	const EXP_CANDY_S  ; e4
+	const EXP_CANDY_M  ; e5
+	const EXP_CANDY_L  ; e6
+	const EXP_CANDY_XL ; e7
 	const ITEM_E8      ; e8
 	const ITEM_E9      ; e9
 	const ITEM_EA      ; ea

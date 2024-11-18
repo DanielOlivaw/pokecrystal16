@@ -240,7 +240,12 @@ ItemEffects:
 	dw StatusHealingEffect ; BLUE_FLUTE
 	dw BitterBerryEffect   ; YELLOW_FLUTE
 	dw RedFluteEffect      ; RED_FLUTE
-	assert_table_length RED_FLUTE
+	dw ExpCandyEffect      ; EXP_CANDY_XS
+	dw ExpCandyEffect      ; EXP_CANDY_S
+	dw ExpCandyEffect      ; EXP_CANDY_M
+	dw ExpCandyEffect      ; EXP_CANDY_L
+	dw ExpCandyEffect      ; EXP_CANDY_XL
+	assert_table_length EXP_CANDY_XL
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -1592,6 +1597,217 @@ RareCandyEffect:
 	farcall EvolvePokemon
 
 	jp UseDisposableItem
+
+ExpCandyEffect:
+	ld b, PARTYMENUACTION_HEALING_ITEM
+	call UseItem_SelectMon
+
+	jp c, RareCandy_StatBooster_ExitMenu
+
+	call RareCandy_StatBooster_GetParameters
+
+	ld a, MON_LEVEL
+	call GetPartyParamLocation
+
+	ld a, [hl]
+	cp MAX_LEVEL
+	jp nc, NoEffectMessage
+
+	call GetExpCandyAmount
+
+	; RareCandy_StatBooster_GetParameters put the nickname in wStringBuffer1.
+	; Load the exp points to be gained to wStringBuffer2.
+	ld a, e
+	ld [wStringBuffer2 + 1], a
+	ldh [hQuotient + 3], a
+	ld a, d
+	ld [wStringBuffer2], a
+	ldh [hQuotient + 2], a
+	ld hl, MonGainedExpPointText
+	push de
+	call PrintText
+
+	; Add the exp points in de to the Pokemon's current exp points
+	ld a, MON_EXP + 2
+	call GetPartyParamLocation
+	pop de
+	ld a, [hl]
+	add e
+	ld [hld], a
+	ld a, [hl]
+	adc d
+	ld [hl], a
+
+	jr nc, .no_exp_overflow
+	dec hl
+	inc [hl]
+	jr nz, .no_exp_overflow
+	ld a, $ff
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+
+.no_exp_overflow
+	push de
+	ld d, MAX_LEVEL
+	callfar CalcExpAtLevel
+	ld a, MON_EXP + 2
+	call GetPartyParamLocation
+	pop de
+	ldh a, [hQuotient + 1]
+	ld b, a
+	ldh a, [hQuotient + 2]
+	ld c, a
+	ldh a, [hQuotient + 3]
+	ld d, a
+	ld a, [hld]
+	sub d
+	ld a, [hld]
+	sbc c
+	ld a, [hl]
+	sbc b
+	jr c, .not_max_exp
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hli], a
+	ld a, d
+	ld [hld], a
+
+.not_max_exp
+; Check if the mon leveled up
+	xor a ; PARTYMON
+	ld [wMonType], a
+	predef CopyMonToTempMon
+	callfar CalcLevel
+	ld a, MON_LEVEL
+	call GetPartyParamLocation
+	ld a, [hl]
+	cp d
+	jp z, UseDisposableItem
+
+	; Store current level in e
+	ld e, a
+
+	; Level up
+	ld a, d
+	ld [hl], a
+	ld [wCurPartyLevel], a
+	push de
+
+	ld a, MON_MAXHP
+	call GetPartyParamLocation
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	push bc
+	call UpdateStatsAfterItem
+
+	ld a, MON_MAXHP + 1
+	call GetPartyParamLocation
+
+	pop bc
+	ld a, [hld]
+	sub c
+	ld c, a
+	ld a, [hl]
+	sbc b
+	ld b, a
+	dec hl
+	ld a, [hl]
+	add c
+	ld [hld], a
+	ld a, [hl]
+	adc b
+	ld [hl], a
+	farcall LevelUpHappinessMod
+
+	ld a, PARTYMENUTEXT_LEVEL_UP
+	call ItemActionText
+
+	xor a ; PARTYMON
+	ld [wMonType], a
+	predef CopyMonToTempMon
+
+	hlcoord 9, 0
+	ld b, 10
+	ld c, 9
+	call Textbox
+
+	hlcoord 11, 1
+	ld bc, 4
+	predef PrintTempMonStats
+
+	call WaitPressAorB_BlinkCursor
+
+	pop de
+
+.learn_moves_loop
+	ld a, MON_LEVEL
+	call GetPartyParamLocation
+	; Get base level from before giving candy
+	ld a, e
+	; Increase level by one from base
+	inc a
+	ld [hl], a
+	ld [wCurPartyLevel], a
+
+	; Learn any level-up moves from this level
+	xor a ; PARTYMON
+	ld [wMonType], a
+	ld a, [wCurPartySpecies]
+	ld [wTempSpecies], a
+	push de
+	push hl
+	predef LearnLevelMoves
+	pop hl
+	pop de
+
+	; If the current level is less than the target level, loop again.
+	; If they match, we can continue.
+	ld a, [wCurPartyLevel]
+	ld e, a
+	cp d
+	jr nz, .learn_moves_loop
+
+	xor a
+	ld [wForceEvolution], a
+	farcall EvolvePokemon
+
+	jp UseDisposableItem
+
+GetExpCandyAmount:
+; Returns amount of exp granted by candy in de
+	push hl
+	ld a, [wCurItem]
+	ld hl, ExpCandyTable
+	ld d, a
+.next
+	ld a, [hli]
+	cp -1
+	jr z, .NotFound
+	cp d
+	jr z, .done
+	inc hl
+	inc hl
+	jr .next
+
+.NotFound:
+	scf
+.done
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	pop hl
+	ret
+
+ExpCandyTable:
+	dbw EXP_CANDY_XS,      100
+	dbw EXP_CANDY_S,       800
+	dbw EXP_CANDY_M,      3000
+	dbw EXP_CANDY_L,     10000
+	dbw EXP_CANDY_XL,    30000
+	dbw -1, 0 ; end
 
 HealPowderEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
@@ -3022,6 +3238,11 @@ GotOnTheItemText:
 GotOffTheItemText:
 	; got off@ the @ .
 	text_far UnknownText_0x1c5e90
+	text_end
+
+MonGainedExpPointText:
+	; got off@ the @ .
+	text_far _MonGainedExpPointText
 	text_end
 
 ApplyPPUp:
