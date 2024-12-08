@@ -148,6 +148,7 @@ CherrygroveGroupSprites:
 SilverGroupSprites:
 ; Route28, SilverCaveOutside
 ; 0 of max 9 walking sprites
+	db SPRITE_POKE_BALL
 	db 0 ; end
 
 ; Route37 and EcruteakCity are connected
