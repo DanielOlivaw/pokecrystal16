@@ -23,6 +23,8 @@ and a ton of other upgrades, fixes, and tweaks.
 
 Feel free to try this out for yourself. If you have any problems or have questions about how I did something, open an issue and I'll try to respond when I can.
 
+Artist credits: https://github.com/DanielOlivaw/pokecrystal16/wiki/Art-Credits
+
 See the wiki for more information: https://github.com/DanielOlivaw/pokecrystal16/wiki
 
 [compare]: https://github.com/aaaaaa123456789/pokecrystal16/compare
