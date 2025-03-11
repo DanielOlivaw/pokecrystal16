@@ -7,7 +7,7 @@
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate
 	db 58 ; base exp
-	db NO_ITEM, QUICK_CLAW ; items
+	db KANTO_COIN, QUICK_CLAW ; items
 	db GENDER_F50 ; gender ratio
 	db 20 ; step cycles to hatch
 	INCBIN "gfx/pokemon/meowth/front.dimensions"
