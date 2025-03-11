@@ -914,6 +914,7 @@ DachsbunEvosAttacks:
 	db 0 ; no more level-up moves
 
 TadbulbEvosAttacks:
+	dbbw EVOLVE_ITEM, THUNDERSTONE, BELLIBOLT
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, MUD_SLAP
