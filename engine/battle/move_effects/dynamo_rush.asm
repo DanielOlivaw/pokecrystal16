@@ -22,7 +22,7 @@ BattleCommand_GuileFang:
 	jr z, .got_sp_atk
 	ld hl, wPlayerAtkLevel
 .got_sp_atk
-; If the user's attack is lowered below the base level,
+; If the opponent's attack is lowered below the base level,
 ; try to confuse the target.
 	ld a, [hl]
 	cp $7
