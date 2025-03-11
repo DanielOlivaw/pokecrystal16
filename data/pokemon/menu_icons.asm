@@ -691,7 +691,7 @@ MonMenuIcons:
 	; db ICON_BIRD        ; PIKIPEK
 	; db ICON_BIRD        ; TRUMBEAK
 	; db ICON_BIRD        ; TOUCANNON
-	db ICON_ZANGOOSE    ; YUNGOOS
+	db ICON_FOX         ; YUNGOOS
 	db ICON_ZANGOOSE    ; GUMSHOOS
 	db ICON_GRUBBIN     ; GRUBBIN
 	db ICON_GRUBBIN     ; CHARJABUG

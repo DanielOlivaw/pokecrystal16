@@ -693,8 +693,8 @@ MonMenuIconPals:
 	; icon_pals RED,    PINK   ; PIKIPEK
 	; icon_pals RED,    PINK   ; TRUMBEAK
 	; icon_pals RED,    PINK   ; TOUCANNON
-	icon_pals GOLD,   PURPLE ; YUNGOOS
-	icon_pals GOLD,   PINK   ; GUMSHOOS
+	icon_pals BROWN,  PURPLE ; YUNGOOS
+	icon_pals BROWN,  PINK   ; GUMSHOOS
 	icon_pals RED,    RED    ; GRUBBIN
 	icon_pals GREEN,  RED    ; CHARJABUG
 	icon_pals BLUE,   GRAY   ; VIKAVOLT
