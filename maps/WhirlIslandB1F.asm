@@ -24,7 +24,7 @@ WhirlIslandB1FNugget:
 	itemball NUGGET
 
 WhirlIslandB1FEscapeRope:
-	itemball HEART_STONE
+	itemball MAX_POTION
 
 WhirlIslandB1FBoulder:
 	jumpstd strengthboulder
