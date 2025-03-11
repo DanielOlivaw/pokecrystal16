@@ -622,7 +622,7 @@ MoveNames::
 	db "MISTY BURST@"
 	db "OVERHEAT@"
 	db "SCALD@"
-	db "PSYCHO FANGS@"
+	db "PSYCHIC FANG@"
 	; db "DARK LARIAT@"
 	db "TAIL GLOW@"
 	db "ROCK CLIMB@"
