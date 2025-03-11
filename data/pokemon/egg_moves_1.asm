@@ -199,7 +199,7 @@ CharmanderEggMoves:
 	dw FLARE_BLITZ
 	dw FOCUS_PUNCH
 	dw OUTRAGE
-	dw DRAGON_CLAW
+	dw DRAGON_RAGE
 	dw -1 ; end
 
 SquirtleEggMoves:

@@ -235,7 +235,7 @@ CharmanderEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
-	dbw 12, DRAGON_RAGE
+	dbw 12, DRAGONBREATH
 	dbw 15, FIRE_FANG
 	dbw 18, SLASH
 	dbw 21, DRAGON_CLAW
@@ -253,7 +253,7 @@ CharmeleonEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
-	dbw 12, DRAGON_RAGE
+	dbw 12, DRAGONBREATH
 	dbw 15, FIRE_FANG
 	dbw 20, SLASH
 	dbw 25, DRAGON_CLAW
@@ -271,7 +271,7 @@ CharizardEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, EMBER
 	dbw 9, SMOKESCREEN
-	dbw 12, DRAGON_RAGE
+	dbw 12, DRAGONBREATH
 	dbw 15, FIRE_FANG
 	dbw 20, SLASH
 	dbw 25, DRAGON_CLAW
@@ -3611,8 +3611,8 @@ DratiniEvosAttacks:
 	dbw 1, LEER
 	dbw 5, TWISTER
 	dbw 9, THUNDER_WAVE
-	dbw 13, DRAGON_RAGE
-	dbw 18, AGILITY
+	dbw 13, AGILITY
+	dbw 18, DRAGON_RAGE
 	dbw 22, SLAM
 	dbw 26, DRAGON_TAIL
 	dbw 31, AQUA_TAIL
@@ -3631,8 +3631,8 @@ DragonairEvosAttacks:
 	dbw 1, LEER
 	dbw 5, TWISTER
 	dbw 9, THUNDER_WAVE
-	dbw 13, DRAGON_RAGE
-	dbw 18, AGILITY
+	dbw 13, AGILITY
+	dbw 18, DRAGON_RAGE
 	dbw 22, SLAM
 	dbw 26, DRAGON_TAIL
 	dbw 33, AQUA_TAIL
@@ -3654,8 +3654,8 @@ DragoniteEvosAttacks:
 	dbw 1, LEER
 	dbw 5, TWISTER
 	dbw 9, THUNDER_WAVE
-	dbw 13, DRAGON_RAGE
-	dbw 18, AGILITY
+	dbw 13, AGILITY
+	dbw 18, DRAGON_RAGE
 	dbw 22, SLAM
 	dbw 26, DRAGON_TAIL
 	dbw 33, AQUA_TAIL

@@ -1811,9 +1811,9 @@ DruddigonEvosAttacks:
 	dbw 1, LEER
 	dbw 4, BITE
 	dbw 8, METAL_CLAW
-	dbw 12, DRAGON_RAGE
-	dbw 16, DRAGON_TAIL
-	dbw 20, SCARY_FACE
+	dbw 12, SCARY_FACE
+	dbw 16, DRAGON_RAGE
+	dbw 20, DRAGON_TAIL
 	dbw 24, SLASH
 	dbw 28, DRAGON_CLAW
 	dbw 32, CHIP_AWAY

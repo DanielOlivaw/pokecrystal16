@@ -534,11 +534,12 @@ ShieldonEvosAttacks:
 	dbw 30, ANCIENTPOWER
 	dbw 35, METAL_BURST
 	dbw 40, SWAGGER
-	dbw 45, HEAVY_SLAM
+	dbw 45, SHIELD_BASH
 	db 0 ; no more level-up moves
 
 BastiodonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, HEAVY_SLAM
 	dbw 1, TACKLE
 	dbw 1, PROTECT
 	dbw 5, METAL_SOUND
@@ -550,7 +551,7 @@ BastiodonEvosAttacks:
 	dbw 32, ANCIENTPOWER
 	dbw 39, METAL_BURST
 	dbw 46, SWAGGER
-	dbw 53, HEAVY_SLAM
+	dbw 53, SHIELD_BASH
 	db 0 ; no more level-up moves
 
 BurmyPlantEvosAttacks:
@@ -1243,8 +1244,8 @@ GibleEvosAttacks:
 	dbw 1, SAND_TOMB
 	dbw 1, TACKLE
 	dbw 5, SAND_ATTACK
-	dbw 10, DRAGON_RAGE
-	dbw 15, DRAGONBREATH
+	dbw 10, DRAGONBREATH
+	dbw 15, DRAGON_RAGE
 	dbw 20, BULLDOZE
 	dbw 25, BITE
 	dbw 30, SLASH
@@ -1261,8 +1262,8 @@ GabiteEvosAttacks:
 	dbw 1, SAND_TOMB
 	dbw 1, TACKLE
 	dbw 5, SAND_ATTACK
-	dbw 10, DRAGON_RAGE
-	dbw 15, DRAGONBREATH
+	dbw 10, DRAGONBREATH
+	dbw 15, DRAGON_RAGE
 	dbw 20, BULLDOZE
 	dbw 23, DUAL_CHOP
 	dbw 27, BITE
@@ -1279,8 +1280,8 @@ GarchompEvosAttacks:
 	dbw 1, SAND_TOMB
 	dbw 1, TACKLE
 	dbw 5, SAND_ATTACK
-	dbw 10, DRAGON_RAGE
-	dbw 15, DRAGONBREATH
+	dbw 10, DRAGONBREATH
+	dbw 15, DRAGON_RAGE
 	dbw 20, BULLDOZE
 	dbw 23, DUAL_CHOP
 	dbw 27, BITE

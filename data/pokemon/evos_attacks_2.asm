@@ -1897,7 +1897,6 @@ ShuckleEvosAttacks:
 	dbw 52, POWER_TRICK
 	dbw 56, STONE_EDGE
 	dbw 60, SHELL_SMASH
-	dbw 64, SHIELD_BASH
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:
@@ -2177,6 +2176,8 @@ OctilleryEvosAttacks:
 OctilleryBEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ROCK_BLAST
+	dbw 1, SOAK
+	dbw 1, HYDRO_PUMP
 	dbw 1, WATER_GUN
 	dbw 1, FOCUS_ENERGY
 	dbw 4, WATER_PULSE
