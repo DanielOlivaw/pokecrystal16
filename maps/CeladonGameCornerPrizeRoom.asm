@@ -43,10 +43,10 @@ CeladonPrizeRoom_tmcounterloop:
 	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_DOUBLE_TEAM
+	tmhmtotext TM_DOUBLE_TEAM, STRING_BUFFER_3
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_DOUBLE_TEAM
+	givetmhm TM_DOUBLE_TEAM
 	iffalse CeladonPrizeRoom_notenoughroom
 	takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
 	sjump CeladonPrizeRoom_purchased
@@ -56,10 +56,10 @@ CeladonPrizeRoom_tmcounterloop:
 	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins CELADONGAMECORNERPRIZEROOM_TM71_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_DUAL_CHOP
+	tmhmtotext TM_DUAL_CHOP, STRING_BUFFER_3
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_DUAL_CHOP
+	givetmhm TM_DUAL_CHOP
 	iffalse CeladonPrizeRoom_notenoughroom
 	takecoins CELADONGAMECORNERPRIZEROOM_TM71_COINS
 	sjump CeladonPrizeRoom_purchased
@@ -69,10 +69,10 @@ CeladonPrizeRoom_tmcounterloop:
 	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins CELADONGAMECORNERPRIZEROOM_TM74_COINS
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	getitemname STRING_BUFFER_3, TM_GYRO_BALL
+	tmhmtotext TM_GYRO_BALL, STRING_BUFFER_3
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_CancelPurchaseScript
-	giveitem TM_GYRO_BALL
+	givetmhm TM_GYRO_BALL
 	iffalse CeladonPrizeRoom_notenoughroom
 	takecoins CELADONGAMECORNERPRIZEROOM_TM74_COINS
 	sjump CeladonPrizeRoom_purchased
@@ -250,7 +250,7 @@ CeladonPrizeRoom_AskWhichPrizeText:
 
 CeladonPrizeRoom_ConfirmPurchaseText:
 	text "OK, so you wanted"
-	line "a @"
+	line "@"
 	text_ram wStringBuffer3
 	text "?"
 	done
