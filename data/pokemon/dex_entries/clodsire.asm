@@ -3,11 +3,11 @@
 
 	db   "When attacked,"
 	next "this #MON will"
-	next "retaliate by sti-"
+	next "retaliate by"
 
-	page "cking thick spines"
-	next "out from its body."
-	next "@"
+	page "sticking thick"
+	next "spines out from"
+	next "its body.@"
 
 	; db   "It lives at the"
 	; next "bottom of ponds"

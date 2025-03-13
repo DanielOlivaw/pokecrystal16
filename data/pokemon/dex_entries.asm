@@ -448,7 +448,6 @@ GorebyssPokedexEntry::           INCLUDE "data/pokemon/dex_entries/gorebyss.asm"
 LuvdiscPokedexEntry::            INCLUDE "data/pokemon/dex_entries/luvdisc.asm"
 BagonPokedexEntry::              INCLUDE "data/pokemon/dex_entries/bagon.asm"
 ShelgonPokedexEntry::            INCLUDE "data/pokemon/dex_entries/shelgon.asm"
-SalamencePokedexEntry::          INCLUDE "data/pokemon/dex_entries/salamence.asm"
 ; BeldumPokedexEntry::             INCLUDE "data/pokemon/dex_entries/beldum.asm"
 ; MetangPokedexEntry::             INCLUDE "data/pokemon/dex_entries/metang.asm"
 ; MetagrossPokedexEntry::          INCLUDE "data/pokemon/dex_entries/metagross.asm"
@@ -457,6 +456,7 @@ SalamencePokedexEntry::          INCLUDE "data/pokemon/dex_entries/salamence.asm
 
 SECTION "Pokedex Entries 14", ROMX
 
+SalamencePokedexEntry::          INCLUDE "data/pokemon/dex_entries/salamence.asm"
 ; RegicePokedexEntry::             INCLUDE "data/pokemon/dex_entries/regice.asm"
 ; RegisteelPokedexEntry::          INCLUDE "data/pokemon/dex_entries/registeel.asm"
 LatiasPokedexEntry::             INCLUDE "data/pokemon/dex_entries/latias.asm"
@@ -1015,6 +1015,10 @@ HoundstonePokedexEntry::         INCLUDE "data/pokemon/dex_entries/houndstone.as
 FlamigoPokedexEntry::            INCLUDE "data/pokemon/dex_entries/flamigo.asm"
 VeluzaPokedexEntry::             INCLUDE "data/pokemon/dex_entries/veluza.asm"
 TatsugiriPokedexEntry::          INCLUDE "data/pokemon/dex_entries/tatsugiri.asm"
+
+
+SECTION "Pokedex Entries 47", ROMX
+
 ClodsirePokedexEntry::           INCLUDE "data/pokemon/dex_entries/clodsire.asm"
 FarigirafPokedexEntry::          INCLUDE "data/pokemon/dex_entries/farigiraf.asm"
 ; WoChienPokedexEntry::            INCLUDE "data/pokemon/dex_entries/wo_chien.asm"

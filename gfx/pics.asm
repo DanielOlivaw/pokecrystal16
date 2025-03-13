@@ -1174,6 +1174,8 @@ DewottFrontpic:      INCBIN "gfx/pokemon/dewott/front.animated.2bpp.lz"
 DewottBackpic:       INCBIN "gfx/pokemon/dewott/back.2bpp.lz"
 SamurottFrontpic:      INCBIN "gfx/pokemon/samurott/front.animated.2bpp.lz"
 SamurottBackpic:       INCBIN "gfx/pokemon/samurott/back.2bpp.lz"
+PurrloinFrontpic:      INCBIN "gfx/pokemon/purrloin/front.animated.2bpp.lz"
+PurrloinBackpic:       INCBIN "gfx/pokemon/purrloin/back.2bpp.lz"
 
 
 SECTION "Pics 43", ROMX
@@ -1184,8 +1186,6 @@ SECTION "Pics 43", ROMX
 ; HerdierBackpic:       INCBIN "gfx/pokemon/herdier/back.2bpp.lz"
 ; StoutlandFrontpic:      INCBIN "gfx/pokemon/stoutland/front.animated.2bpp.lz"
 ; StoutlandBackpic:       INCBIN "gfx/pokemon/stoutland/back.2bpp.lz"
-PurrloinFrontpic:      INCBIN "gfx/pokemon/purrloin/front.animated.2bpp.lz"
-PurrloinBackpic:       INCBIN "gfx/pokemon/purrloin/back.2bpp.lz"
 LiepardFrontpic:      INCBIN "gfx/pokemon/liepard/front.animated.2bpp.lz"
 LiepardBackpic:       INCBIN "gfx/pokemon/liepard/back.2bpp.lz"
 
