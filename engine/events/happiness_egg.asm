@@ -79,6 +79,33 @@ ChangeHappiness:
 	ld a, [de]
 	jr nc, .negative
 	add [hl]
+
+; Multiply happiness increase by 1.5 if holding Soothe Bell
+; Code is from i0brendan0's pokecrystal2
+	push af
+	push hl
+	ld hl, wPartyMon1Item
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [wCurPartyMon]
+	call AddNTimes
+
+	ld a, [hl]
+	cp SOOTHE_BELL
+	jr z, .increase
+	pop hl
+	pop af
+	jr .done
+
+.increase:
+	pop hl
+	pop af
+	ld b, [hl]
+	srl b
+	jr nc, .no_add
+	inc b
+.no_add:
+	add b
+
 	jr nc, .done
 	ld a, -1
 	jr .done

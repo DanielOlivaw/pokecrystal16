@@ -230,7 +230,7 @@ ItemNames::
 	db "EXP.CANDY M@"
 	db "EXP.CANDY L@"
 	db "EXP.CANDY XL@"
-	db "UNUSED@"
+	db "SOOTHE BELL@"
 	db "UNUSED@"
 	db "UNUSED@"
 	db "UNUSED@"

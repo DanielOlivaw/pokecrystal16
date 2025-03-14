@@ -66,7 +66,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_4
 	const HELD_5
 	const HELD_RESTORE_PP
-	const HELD_7
+	const HELD_FRIENDSHIP_BOOST
 	const HELD_CLEANSE_TAG
 
 	const_def 10

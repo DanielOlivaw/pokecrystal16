@@ -232,7 +232,7 @@ ItemDescriptions:
 	dw ExpCandyMDesc
 	dw ExpCandyLDesc
 	dw ExpCandyXLDesc
-	dw QuestionMarkDesc
+	dw SootheBellDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1173,4 +1173,8 @@ ExpCandyLDesc:
 ExpCandyXLDesc:
 	db   "Grants 30,000 EXP."
 	next "Points.@"
+
+SootheBellDesc:
+	db   "Makes the holder"
+	next "friendly. (HOLD)@"
 
