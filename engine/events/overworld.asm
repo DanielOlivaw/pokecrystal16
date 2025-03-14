@@ -1301,16 +1301,16 @@ HeadbuttScript:
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
+
+	callasm TreeItemEncounter
+	iffalse .no_item
+	opentext
+	verbosegiveitem ITEM_FROM_MEM
+	closetext
+.no_item
 	end
 
 .no_battle
-	callasm TreeItemEncounter
-	iffalse .no_item
-	verbosegiveitem ITEM_FROM_MEM
-	closetext
-	end
-
-.no_item
 	writetext UnknownText_0xcea2
 	waitbutton
 	closetext
@@ -1415,6 +1415,8 @@ RockSmashScript:
 	callasm RockItemEncounter
 	iffalse .no_item
 	opentext
+	writetext ItemFellFromTreeText
+	buttonsound
 	verbosegiveitem ITEM_FROM_MEM
 	closetext
 .no_item
@@ -1426,6 +1428,10 @@ MovementData_0xcf55:
 
 UnknownText_0xcf58:
 	text_far _UsedRockSmashText
+	text_end
+
+ItemFellFromTreeText:
+	text_far _ItemFellFromTreeText
 	text_end
 
 AskRockSmashScript:

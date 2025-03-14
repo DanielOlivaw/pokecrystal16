@@ -83,6 +83,17 @@ CheckForHiddenItems:
 	ret
 
 TreeItemEncounter:
+	ld a, [wBattleResult]
+	and a ; WIN?
+	jr z, .caught_or_defeated_tree_mon
+	; ld a, [wBattleResult]
+	; and $f
+	; jr z, .caught_or_defeated_tree_mon ; WIN
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.caught_or_defeated_tree_mon
 	ld hl, .TreeItems
 	call Random
 .loop
@@ -104,6 +115,7 @@ TreeItemEncounter:
 .TreeItems:
 	db 4, TART_APPLE
 	db 4, SWEET_APPLE
+	db 10, GALARICA_TWIG
 	db 1, GOLD_LEAF
 	db 4, SILVER_LEAF
 	db 10, PRETTY_WING
@@ -153,18 +165,18 @@ RockItemEncounter:
 	ret
 
 .RockItems:
-	db 2, MAX_REVIVE
-	db 2, COMET_SHARD
-	db 5, MAX_ETHER
-	db 5, STAR_PIECE
-	db 8, BIG_PEARL
-	db 13, THICK_CLUB
-	db 13, STARDUST
-	db 13, ETHER
-	db 15, HEART_SCALE
-	db 15, SOFT_SAND
-	db 15, HARD_STONE
-	db 20, PEARL
-	db 20, REVIVE
-	db 24, BRICK_PIECE
+	db 1, MAX_REVIVE
+	db 1, COMET_SHARD
+	db 3, MAX_ETHER
+	db 3, STAR_PIECE
+	db 5, BIG_PEARL
+	db 8, THICK_CLUB
+	db 8, STARDUST
+	db 8, ETHER
+	db 10, HEART_SCALE
+	db 10, SOFT_SAND
+	db 10, HARD_STONE
+	db 12, PEARL
+	db 12, REVIVE
+	db 16, BRICK_PIECE
 	db -1

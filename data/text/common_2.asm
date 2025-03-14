@@ -462,6 +462,11 @@ _AskUseHeadbuttText::
 	line "it?"
 	done
 
+_ItemFellFromTreeText::
+	text "Something fell"
+	line "from the tree!"
+	done
+
 _UsedRockSmashText::
 	text_ram wStringBuffer2
 	text " used"
