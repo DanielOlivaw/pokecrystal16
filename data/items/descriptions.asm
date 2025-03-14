@@ -991,7 +991,7 @@ QuestionMarkDesc:
 
 BrickPieceDesc:
 	db   "A rare chunk of"
-	next "tile.@"
+	next "tile. Sell low.@"
 
 PrettyWingDesc:
 	db   "A beautiful"
