@@ -46,5 +46,7 @@ RockMonMaps:
 	treemon_map ROUTE_40,                  TREEMON_SET_BEACH_ROCK
 	treemon_map DARK_CAVE_VIOLET_ENTRANCE, TREEMON_SET_CAVE_ROCK
 	treemon_map SLOWPOKE_WELL_B1F,         TREEMON_SET_CAVE_ROCK
+	treemon_map BURNED_TOWER_1F,           TREEMON_SET_CAVE_ROCK
+	treemon_map ICE_PATH_B3F,              TREEMON_SET_KANTO_ROCK
 	treemon_map VICTORY_ROAD,              TREEMON_SET_KANTO_ROCK
 	db -1
