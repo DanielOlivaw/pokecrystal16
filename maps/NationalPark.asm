@@ -304,7 +304,7 @@ NationalParkTrainerTipsSign:
 	jumptext NationalParkTrainerTipsText
 
 NationalParkParlyzHeal:
-	itemball PARLYZ_HEAL
+	itemball SOOTHE_BELL
 
 ; NationalParkTMDig:
 	; itemball TM_DIG

@@ -7,7 +7,7 @@
 	db DARK, FAIRY ; type
 	db 255 ; catch rate
 	db 66 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db NO_ITEM, SOOTHE_BELL ; items
 	db GENDER_F100 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/moibelle/front.dimensions"
