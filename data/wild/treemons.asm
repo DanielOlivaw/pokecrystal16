@@ -9,10 +9,10 @@ TreeMons:
 	dw TreeMonSet_Lake         ; Lake of Rage, Route 43
 	dw TreeMonSet_Forest       ; Ilex Forest
 	dw TreeMonSet_KantoForest  ; Viridian Forest
-	dw TreeMonSet_Seaside      ; Route 32, 39
-	dw TreeMonSet_CaveRock     ; Dark Cave
-	dw TreeMonSet_BeachRock    ; Route 40, Cianwood City
-	dw TreeMonSet_KantoRock    ; Victory Road
+	dw TreeMonSet_Seaside      ; Battle Tower, Route 32, 39
+	dw TreeMonSet_CaveRock     ; Dark Cave, Burned Tower
+	dw TreeMonSet_BeachRock    ; Cianwood City, Route 40
+	dw TreeMonSet_KantoRock    ; Ice Path, Victory Road
 	assert_table_length NUM_TREEMON_SETS
 	dw TreeMonSet_City
 
@@ -154,7 +154,7 @@ TreeMonSet_KantoForest: ; Viridian Forest
 	dbbw  1, 40, MUNCHLAX
 	db -1
                  
-TreeMonSet_Seaside: ; Route 32
+TreeMonSet_Seaside: ; Battle Tower, Route 32, 39
 ; common
 	dbbw 34, 10, TAILLOW
 	dbbw 25, 10, APPLIN

@@ -39,13 +39,13 @@ TreeMonMaps:
 	treemon_map SILVER_CAVE_OUTSIDE,       TREEMON_SET_CITY
 	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST
 	treemon_map VIRIDIAN_FOREST,           TREEMON_SET_KANTO_FOREST
+	treemon_map BATTLE_TOWER_OUTSIDE,      TREEMON_SET_SEASIDE
 	db -1
 
 RockMonMaps:
 	treemon_map CIANWOOD_CITY,             TREEMON_SET_BEACH_ROCK
 	treemon_map ROUTE_40,                  TREEMON_SET_BEACH_ROCK
 	treemon_map DARK_CAVE_VIOLET_ENTRANCE, TREEMON_SET_CAVE_ROCK
-	treemon_map SLOWPOKE_WELL_B1F,         TREEMON_SET_CAVE_ROCK
 	treemon_map BURNED_TOWER_1F,           TREEMON_SET_CAVE_ROCK
 	treemon_map ICE_PATH_B3F,              TREEMON_SET_KANTO_ROCK
 	treemon_map VICTORY_ROAD,              TREEMON_SET_KANTO_ROCK
