@@ -1281,11 +1281,6 @@ UnknownText_0x1bd286::
 	text "…"
 	done
 
-UnknownText_0x1bd2a0::
-	text "Obtained the"
-	line "VOLTORBBADGE!"
-	done
-
 UnknownText_0x1bd2bc::
 	text "Which floor?"
 	done
@@ -1309,8 +1304,8 @@ _RepelWoreOffText::
 _UseAnotherRepelText::
 	text "@"
 	text_ram wStringBuffer3
-	text "'s effect"
-	line "wore off."
+	text "'s"
+	line "effect wore off."
 
 	para "Use another?"
 	done

@@ -1645,20 +1645,20 @@ ElmGiveEverstoneText2:
 
 	; text "That's an"
 	; line "EXP.SHARE."
-	
+
 	; para "If you give that"
 	; line "to a #MON,"
-	
+
 	; para "it will gain exp-"
 	; line "erience even if"
-	
+
 	; para "it doesn't enter"
 	; line "battle."
-	
+
 	; para "Give it to a weak-"
 	; line "er #MON you"
 	; cont "want to train."
-	; done
+	done
 
 ElmText_CallYou:
 	text "ELM: <PLAY_G>, I'll"
