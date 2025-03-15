@@ -5,18 +5,18 @@ This repository contains a modified Pokémon Crystal game, updated to handle 16-
 Features in this version include:
 - Many Pokémon from later generations, including regional forms
 - Several Pokémon from the Gold and Silver beta
-- Altered trainer parties and wild encounters
+- Altered trainer parties and wild encounters to include newly added Pokémon and provide a smoother and slightly more challenging level curve
 - Over 600 moves, including moves from later generations and a handful of original moves
 - Physical/special split
 - Fairy type
-- A move reminder
-- Full maps for Viridian Forest and Seafoam Islands
-- A list of 99 infinitely reusable TMs (that don't use item slots)
-- Gen 6+ style Exp. All, toggleable from the options menu
+- A move reminder in Blackthorn City (the move deleter has been moved to Cherrygrove instead)
+- Viridian Forest and Seafoam Islands, restored to their full sizes
+- A list of 99 infinitely reusable TMs (that use a separate index system from items)
+- A Gen 6+ style experience system, with full experience for each battler, experience from catching, and an Exp. All that is toggleable from the options menu
 - Starters randomly selected from across the generations
 - Newer Poké Ball types
 - More bag pockets
-- Standardized marts that gain more items as you progress
+- Marts that share a common inventory between cities and gain more items as you progress
 - Pokédex opening after evolutions and hatching
 
 and a ton of other upgrades, fixes, and tweaks.
