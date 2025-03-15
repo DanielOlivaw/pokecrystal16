@@ -315,7 +315,7 @@ KantoGrassWildMons:
 	; morn
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
-	dbw 21, SLOWPOKE
+	dbw 21, SLOWPOKE_G
 	dbw 20, WIMPOD
 	dbw 22, BAGON
 	dbw 23, BAGON
@@ -323,7 +323,7 @@ KantoGrassWildMons:
 	; day
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
-	dbw 21, SLOWPOKE
+	dbw 21, SLOWPOKE_G
 	dbw 20, WIMPOD
 	dbw 22, BAGON
 	dbw 23, BAGON
@@ -331,7 +331,7 @@ KantoGrassWildMons:
 	; nite
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
-	dbw 21, SLOWPOKE
+	dbw 21, SLOWPOKE_G
 	dbw 20, WIMPOD
 	dbw 22, BAGON
 	dbw 23, BAGON

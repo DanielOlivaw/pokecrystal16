@@ -2,22 +2,22 @@
 
 KantoWaterWildMons:
 
-	def_water_wildmons SEAFOAM_ISLAND_B4F ; SEALEO, SEADRA, SLOWBRO, GOLDUCK, BERGMITE, TENTACRUEL
+	def_water_wildmons SEAFOAM_ISLAND_B4F ; SEALEO, SEADRA, SLOWBRO_G, GOLDUCK, BERGMITE, TENTACRUEL
 	db 4 percent ; encounter rate
 	dbw 35, BERGMITE
 	dbw 35, SEADRA
 	dbw 35, SEALEO
 	dbw 40, TENTACRUEL
-	dbw 40, SLOWBRO
+	dbw 40, SLOWBRO_G
 	dbw 40, GOLDUCK
 	end_water_wildmons
 
-	def_water_wildmons TOHJO_FALLS ; GOLDEEN, SLOWPOKE, BASCULIN
+	def_water_wildmons TOHJO_FALLS ; GOLDEEN, SLOWPOKE_G, BASCULIN
 	db 4 percent ; encounter rate
 	dbw 15, GOLDEEN
-	dbw 15, SLOWPOKE
+	dbw 15, SLOWPOKE_G
 	dbw 15, BASCULIN_B
-	dbw 15, SLOWPOKE
+	dbw 15, SLOWPOKE_G
 	dbw 20, GOLDEEN
 	dbw 20, GOLDEEN
 	end_water_wildmons
