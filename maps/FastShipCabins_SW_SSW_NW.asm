@@ -47,15 +47,6 @@ TrainerGuitaristClyde:
 
 .Script:
 	endifjustbattled
-	special Mobile_DummyReturnFalse
-	iftrue .mobile
-	opentext
-	writetext GuitaristClydeAfterBattleText
-	waitbutton
-	closetext
-	end
-
-.mobile
 	opentext
 	writetext GuitaristClydeAfterBattleMobileText
 	waitbutton
@@ -190,13 +181,13 @@ GuitaristClydeAfterBattleMobileText:
 	cont "redo my training…"
 	done
 
-GuitaristClydeAfterBattleText:
-	text "Speaking of the"
-	line "RADIO STATION,"
+; GuitaristClydeAfterBattleText:
+	; text "Speaking of the"
+	; line "RADIO STATION,"
 
-	para "what's this week's"
-	line "lucky number?"
-	done
+	; para "what's this week's"
+	; line "lucky number?"
+	; done
 
 FastShipBedText1:
 	text "A comfy bed!"

@@ -59,12 +59,7 @@ EcruteakPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 EcruteakPokecenter1FPokefanMScript:
-	special Mobile_DummyReturnFalse
-	iftrue .mobile
 	jumptextfaceplayer EcruteakPokecenter1FPokefanMText
-
-.mobile
-	jumptextfaceplayer EcruteakPokecenter1FPokefanMTextMobile
 
 EcruteakPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer EcruteakPokecenter1FCooltrainerFText
@@ -169,21 +164,21 @@ EcruteakPokecenter1FPokefanMText:
 	cont "use their #MON."
 	done
 
-EcruteakPokecenter1FPokefanMTextMobile:
-	text "You must be hoping"
-	line "to battle more"
+; EcruteakPokecenter1FPokefanMTextMobile:
+	; text "You must be hoping"
+	; line "to battle more"
 
-	para "people, right?"
-	line "There's apparently"
+	; para "people, right?"
+	; line "There's apparently"
 
-	para "some place where"
-	line "trainers gather."
+	; para "some place where"
+	; line "trainers gather."
 
-	para "Where, you ask?"
+	; para "Where, you ask?"
 
-	para "It's a little past"
-	line "OLIVINE CITY."
-	done
+	; para "It's a little past"
+	; line "OLIVINE CITY."
+	; done
 
 EcruteakPokecenter1FCooltrainerFText:
 	text "MORTY, the GYM"

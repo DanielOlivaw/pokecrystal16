@@ -78,12 +78,7 @@ Route40Lass1Script:
 	jumptextfaceplayer Route40Lass1Text
 
 Route40PokefanMScript:
-	special Mobile_DummyReturnFalse
-	iftrue .mobile
 	jumptextfaceplayer Route40PokefanMText
-
-.mobile
-	jumptextfaceplayer Route40PokefanMText_Mobile
 
 Route40Lass2Script:
 	jumptextfaceplayer Route40Lass2Text
@@ -249,14 +244,14 @@ Route40PokefanMText:
 	para "What is it?"
 	done
 
-Route40PokefanMText_Mobile:
-	text "Hm! Look at all"
-	line "those serious-"
-	cont "looking trainers"
-	cont "streaming in."
+; Route40PokefanMText_Mobile:
+	; text "Hm! Look at all"
+	; line "those serious-"
+	; cont "looking trainers"
+	; cont "streaming in."
 
-	para "What? What?"
-	done
+	; para "What? What?"
+	; done
 
 Route40Lass2Text:
 	text "I came to OLIVINE"

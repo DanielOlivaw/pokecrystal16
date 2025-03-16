@@ -15,9 +15,6 @@ Special::
 
 INCLUDE "data/special_pointers.asm"
 
-DummySpecial_c224:
-	ret
-
 SetPlayerPalette:
 	ld a, [wScriptVar]
 	ld d, a
@@ -202,14 +199,6 @@ CardFlip:
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	call StartGameCornerGame
-	ret
-
-DummyNonfunctionalGameCornerGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_DummyGame)
-	ld hl, _DummyGame
 	call StartGameCornerGame
 	ret
 

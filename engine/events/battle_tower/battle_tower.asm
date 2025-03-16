@@ -197,9 +197,6 @@ BattleTowerBattle:
 	jr nz, .loop
 	ret
 
-DummySpecial_17021d:
-	ret
-
 InitBattleTowerChallengeRAM:
 	xor a
 	ld [wBattleTowerBattleEnded], a
@@ -1617,9 +1614,6 @@ LoadOpponentTrainerAndPokemonWithOTSprite:
 	ret
 
 INCLUDE "data/trainers/sprites.asm"
-
-DummySpecial_170bd2:
-	ret
 
 CheckForBattleTowerRules:
 	farcall _CheckForBattleTowerRules

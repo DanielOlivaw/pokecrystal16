@@ -3,13 +3,6 @@ CARDFLIP_LIGHT_ON  EQU "♀" ; $f5
 
 CARDFLIP_DECK_SIZE EQU 4 * 6
 
-; two labels below called from inside ./dummy_game.asm
-Unknown_e00ed:
-; Graphics for an unused Game Corner
-; game were meant to be here.
-ret_e00ed:
-	ret
-
 _CardFlip:
 	ld hl, wOptions
 	set NO_TEXT_SCROLL, [hl]

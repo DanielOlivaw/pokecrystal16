@@ -402,7 +402,7 @@ DoAnimFrame:
 	ret
 
 .UnusedCursor
-	callfar ret_e00ed
+	; callfar ret_e00ed
 	ret
 
 .PokegearArrow
@@ -410,7 +410,7 @@ DoAnimFrame:
 	ret
 
 .DummyGameCursor
-	callfar DummyGame_InterpretJoypad_AnimateCursor
+	; callfar DummyGame_InterpretJoypad_AnimateCursor
 	ret
 
 .TradePokeBall
