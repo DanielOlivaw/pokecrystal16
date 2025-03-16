@@ -101,6 +101,7 @@ FindMove_AI_Smart_Scoring:
 	dww JUDGEMENT,       AI_Smart_Judgement
 	; dww MULTI_ATTACK,    AI_Smart_Judgement
 	dww PURIFY,          AI_Smart_Purify
+	dww ROUND_M,         AI_Smart_Round
 	db -1 ; end
 
 AI_Smart_Cut:
@@ -1180,6 +1181,31 @@ AI_Smart_Refresh:
 .encourage
 	dec [hl]
 	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_Round:
+	pop hl
+	ld a, [wLastPlayerMove]
+	and a
+	ret z
+	
+	ld bc, ROUND_M
+
+; Check if the player's last move, in a, matches the move ROUND_M, in bc
+	push hl
+	call GetMoveIndexFromID
+	ld a, h
+	cp b
+	ld a, l
+	pop hl
+	ret nz
+	cp c
+	ret nz
+
+; 80% chance to encourage the move
+	callfar AI_80_20
+	ret c
 	dec [hl]
 	ret
 

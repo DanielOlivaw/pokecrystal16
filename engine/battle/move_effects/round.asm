@@ -8,7 +8,7 @@ BattleCommand_Round:
 
 ; Check if the opponent already used Round
 	ld bc, ROUND_M
-	call CompareMove
+	call CompareMove2
 	ret nz
 
 ; If so, deal double damage
