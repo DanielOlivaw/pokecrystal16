@@ -1305,6 +1305,8 @@ HeadbuttScript:
 	callasm TreeItemEncounter
 	iffalse .no_item
 	opentext
+	writetext ItemFellFromTreeText
+	buttonsound
 	verbosegiveitem ITEM_FROM_MEM
 	closetext
 .no_item
@@ -1342,6 +1344,10 @@ AskHeadbuttScript:
 UnknownText_0xcee6:
 	; A #MON could be in this tree. Want to HEADBUTT it?
 	text_far _AskUseHeadbuttText
+	text_end
+
+ItemFellFromTreeText:
+	text_far _ItemFellFromTreeText
 	text_end
 
 RockSmashFunction:
@@ -1415,8 +1421,6 @@ RockSmashScript:
 	callasm RockItemEncounter
 	iffalse .no_item
 	opentext
-	writetext ItemFellFromTreeText
-	buttonsound
 	verbosegiveitem ITEM_FROM_MEM
 	closetext
 .no_item
@@ -1428,10 +1432,6 @@ MovementData_0xcf55:
 
 UnknownText_0xcf58:
 	text_far _UsedRockSmashText
-	text_end
-
-ItemFellFromTreeText:
-	text_far _ItemFellFromTreeText
 	text_end
 
 AskRockSmashScript:
