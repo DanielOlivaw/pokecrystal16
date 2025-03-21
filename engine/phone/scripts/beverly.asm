@@ -14,7 +14,7 @@ BeverlyPhoneCallerScript:
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_BEVERLY_HAS_HEART_STONE
 	iftrue .HasNugget
-	farscall PhoneScript_Random4
+	random 2
 	ifequal 0, .FoundNugget
 
 .HasNugget:

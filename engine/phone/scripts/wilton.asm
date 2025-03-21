@@ -32,9 +32,9 @@ WiltonPhoneCallerScript:
 	iftrue .GenericCall
 	checkflag ENGINE_WILTON_HAS_ITEM
 	iftrue .GenericCall
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, WiltonWantsBattle
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, WiltonHasItem
 
 .GenericCall:

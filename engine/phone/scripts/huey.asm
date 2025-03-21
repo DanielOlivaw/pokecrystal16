@@ -25,7 +25,7 @@ HueyPhoneCallerScript:
 	iftrue .Flavor
 	checkflag ENGINE_HUEY_WEDNESDAY_NIGHT
 	iftrue .Flavor
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, HueyWantsBattle
 	ifequal 1, HueyWantsBattle
 

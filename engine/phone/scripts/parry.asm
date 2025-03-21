@@ -24,7 +24,7 @@ ParryPhoneCallerScript:
 	iftrue .GenericCall
 	checkflag ENGINE_PARRY_FRIDAY_AFTERNOON
 	iftrue .GenericCall
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, ParryWantsBattle
 	ifequal 1, ParryWantsBattle
 

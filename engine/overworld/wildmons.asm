@@ -445,10 +445,14 @@ LoadWildMonDataPointer:
 	jr z, _WaterWildmonLookup
 
 _GrassWildmonLookup:
+	ld hl, wDailyFlags1 ; check if the flag is set
+	bit DAILYFLAGS1_SWARM_F, [hl]
+	jr z, .no_swarm ; if not, then skip generating a swarm
 	ld hl, SwarmGrassWildMons
 	ld bc, GRASS_WILDDATA_LENGTH
 	call _SwarmWildmonCheck
 	ret c
+.no_swarm
 	ld hl, JohtoGrassWildMons
 	ld de, KantoGrassWildMons
 	call _JohtoWildmonCheck

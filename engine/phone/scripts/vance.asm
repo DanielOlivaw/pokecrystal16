@@ -24,7 +24,7 @@ VancePhoneCallerScript:
 	iftrue .WantsBattle
 	checkflag ENGINE_VANCE_WEDNESDAY_NIGHT
 	iftrue .WantsBattle
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, VanceWantsRematch
 	ifequal 1, VanceWantsRematch
 

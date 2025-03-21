@@ -25,7 +25,7 @@ TiffanyPhoneCalleeScript:
 
 TiffanyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, PICNICKER, TIFFANY3
-	farscall PhoneScript_Random4
+	random 4
 	ifequal 0, TiffanysFamilyMembers
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_TIFFANY
@@ -34,15 +34,15 @@ TiffanyPhoneCallerScript:
 	iftrue .Generic
 	checkflag ENGINE_TIFFANY_HAS_PINK_BOW
 	iftrue .Generic
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, TiffanyWantsBattle
 	checkevent EVENT_TIFFANY_GAVE_PINK_BOW
 	iftrue .PinkBow
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, TiffanyHasPinkBow
 
 .PinkBow:
-	farscall PhoneScript_Random11
+	random 11
 	ifequal 0, TiffanyHasPinkBow
 
 .Generic:

@@ -32,15 +32,15 @@ AlanPhoneCallerScript:
 	iftrue .Generic
 	checkflag ENGINE_ALAN_HAS_FIRE_STONE
 	iftrue .Generic
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, AlanWantsBattle
 	checkevent EVENT_ALAN_GAVE_FIRE_STONE
 	iftrue .FireStone
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, AlanHasFireStone
 
 .FireStone:
-	farscall PhoneScript_Random11
+	random 4
 	ifequal 0, AlanHasFireStone
 
 .Generic:

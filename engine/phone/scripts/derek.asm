@@ -3,7 +3,7 @@ DerekPhoneCalleeScript:
 	farscall PhoneScript_AnswerPhone_Male
 	checkflag ENGINE_DEREK_HAS_NUGGET
 	iftrue .Nugget
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
@@ -25,7 +25,7 @@ DerekPhoneCalleeScript:
 DerekPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, POKEFANM, DEREK1
 	farscall PhoneScript_GreetPhone_Male
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
@@ -35,7 +35,7 @@ DerekPhoneCallerScript:
 	ifequal SATURDAY, .ContestToday
 
 .NoContest:
-	farscall PhoneScript_Random4
+	random 4
 	ifequal 0, .Nugget
 	farsjump Phone_GenericCall_Male
 

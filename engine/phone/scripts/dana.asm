@@ -32,19 +32,19 @@ DanaPhoneCallerScript:
 	iftrue .Generic
 	checkflag ENGINE_DANA_HAS_THUNDERSTONE
 	iftrue .Generic
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, DanaWantsBattle
 	checkevent EVENT_DANA_GAVE_THUNDERSTONE
 	iftrue .Thunderstone
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, DanaHasThunderstone
 
 .Thunderstone:
-	farscall PhoneScript_Random11
+	random 4
 	ifequal 0, DanaHasThunderstone
 
 .Generic:
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, DanaFoundRare
 	farsjump Phone_GenericCall_Female
 

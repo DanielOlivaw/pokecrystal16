@@ -13,7 +13,7 @@ WadePhoneCalleeScript:
 	iftrue WadeTuesdayNight
 
 .NotTuesday:
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
@@ -39,7 +39,7 @@ WadePhoneCalleeScript:
 WadePhoneCallerScript:
 	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
 	farscall PhoneScript_GreetPhone_Male
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, .NoContest
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue .NoContest
@@ -55,15 +55,15 @@ WadePhoneCallerScript:
 	iftrue .next
 	checkflag ENGINE_WADE_HAS_ITEM
 	iftrue .next
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, WadeHasItem2
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iffalse .next
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, WadeWantsBattle2
 
 .next:
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, WadeFoundRare
 	farsjump Phone_GenericCall_Male
 

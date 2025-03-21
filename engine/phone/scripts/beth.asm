@@ -24,7 +24,7 @@ BethPhoneCallerScript:
 	iftrue .Generic
 	checkflag ENGINE_BETH_FRIDAY_AFTERNOON
 	iftrue .Generic
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, BethWantsBattle
 
 .Generic:

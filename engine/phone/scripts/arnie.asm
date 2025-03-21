@@ -11,7 +11,7 @@ ArniePhoneCalleeScript:
 	iftrue ArnieTuesdayMorning
 
 .NotTuesday:
-	checkflag ENGINE_YANMA_SWARM
+	checkflag ENGINE_SWARM
 	iftrue .AlreadySwarming
 	farsjump UnknownScript_0xa0968
 
@@ -30,13 +30,13 @@ ArniePhoneCallerScript:
 	iftrue .Swarm
 	checkflag ENGINE_ARNIE_TUESDAY_MORNING
 	iftrue .Swarm
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, ArnieWantsBattle
 
 .Swarm:
-	farscall PhoneScript_Random5
+	random 3
 	ifequal 0, ArnieYanmaSwarm
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, ArnieFoundRare
 	farsjump Phone_GenericCall_Male
 
@@ -49,9 +49,9 @@ ArnieWantsBattle:
 	farsjump PhoneScript_WantsToBattle_Male
 
 ArnieYanmaSwarm: ; start swarm
-	checkflag ENGINE_YANMA_SWARM
+	checkflag ENGINE_SWARM
 	iftrue ArnieYanmaAlreadySwarming
-	setflag ENGINE_YANMA_SWARM
+	setflag ENGINE_SWARM
 	getmonname STRING_BUFFER_4, YANMA
 	swarm ROUTE_35
 	getlandmarkname STRING_BUFFER_5, ROUTE_35

@@ -20,7 +20,7 @@ LizPhoneCalleeScript:
 
 LizPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, PICNICKER, LIZ1
-	farscall PhoneScript_Random4
+	random 4
 	ifequal 0, LizWrongNumber
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_LIZ
@@ -29,11 +29,11 @@ LizPhoneCallerScript:
 	iftrue .next
 
 .next:
-	farscall PhoneScript_Random2
+	random 4
 	ifequal 0, LizGossip
 	checkflag ENGINE_FLYPOINT_GOLDENROD
 	iffalse .Generic
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, LizWantsBattle
 
 .Generic:

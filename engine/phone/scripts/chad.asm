@@ -20,17 +20,17 @@ ChadPhoneCalleeScript:
 ChadPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, CHAD1
 	farscall PhoneScript_GreetPhone_Male
-	farscall PhoneScript_Random2
+	random 4
 	ifequal 0, ChadOakGossip
 	checkflag ENGINE_CHAD
 	iftrue .Generic
 	checkflag ENGINE_CHAD_FRIDAY_MORNING
 	iftrue .Generic
-	farscall PhoneScript_Random2
+	random 2
 	ifequal 0, ChadWantsBattle
 
 .Generic:
-	farscall PhoneScript_Random3
+	random 3
 	ifequal 0, ChadFoundRare
 	farsjump Phone_GenericCall_Male
 
