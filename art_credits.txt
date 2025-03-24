@@ -305,7 +305,8 @@ Grovyle                     Blue Emerald                      bloodless
 Sceptile                    Blue Emerald                      bloodless
 Torchic                     Blue Emerald                      bloodless
 Combusken                   Blue Emerald                      bloodless
-Blaziken                    Blue Emerald                      bloodless
+Blaziken                    Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: Blue Emerald                 
 Mudkip                      Blue Emerald                      bloodless
 Marshtomp                   Blue Emerald                      bloodless
 Swampert                    Blue Emerald                      bloodless
@@ -321,7 +322,8 @@ Ludicolo                    Blue Emerald                      bloodless
 Seedot                      Blue Emerald                      bloodless
 Nuzleaf                     Blue Emerald, COMBOY              bloodless
 Shiftry                     Blue Emerald                      COMBOY
-Taillow                     Blue Emerald                      bloodless
+Taillow                     Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: Blue Emerald                 
 Swellow                     Blue Emerald                      bloodless
 Wingull                     Blue Emerald                      bloodless
 Pelipper                    Blue Emerald                      bloodless
@@ -366,7 +368,8 @@ Spoink                      Blue Emerald                      bloodless
 Grumpig                     Blue Emerald                      bloodless
 Trapinch                    Blue Emerald                      bloodless
 Vibrava                     Blue Emerald                      bloodless
-Flygon                      Blue Emerald                      bloodless
+Flygon                      Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: Blue Emerald                 
 Cacnea                      Blue Emerald                      bloodless
 Cacturne                    Blue Emerald                      bloodless
 Swablu                      Blue Emerald                      bloodless
@@ -388,7 +391,8 @@ Armaldo                     Blue Emerald                      bloodless
 Feebas                      lakeofdance                       lakeofdance
 Milotic                     Blue Emerald                      bloodless
 Shuppet                     Blue Emerald                      bloodless
-Banette                     Blue Emerald                      bloodless
+Banette                     Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: Blue Emerald                 
 Duskull                     Game Freak                        bloodless
 Dusclops                    Blue Emerald                      bloodless
 Tropius                     Blue Emerald                      bloodless
@@ -427,9 +431,12 @@ Torterra                    Bummer                            bloodless
 Chimchar                    Pokekoks                          Pokekoks
 Monferno                    Pokekoks                          Pokekoks
 Infernape                   Pokekoks                          Pokekoks
-Piplup                      Game Freak                        bloodless
-Prinplup                    bloodless                         bloodless
-Empoleon                    COMBOY                            bloodless
+Piplup                      Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: Game Freak                   
+Prinplup                    Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: bloodless                    
+Empoleon                    Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: COMBOY                       
 Starly                      COMBOY                            bloodless
 Staravia                    bloodless                         bloodless
 Staraptor                   bloodless                         bloodless
@@ -442,8 +449,10 @@ Budew                       bloodless                         COMBOY
 Roserade                    bloodless                         COMBOY
 Cranidos                    bloodless                         bloodless
 Rampardos                   bloodless                         bloodless
-Shieldon                    bloodless                         bloodless
-Bastiodon                   bloodless                         bloodless
+Shieldon                    Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: bloodless                    
+Bastiodon                   Adam Hartman (retro_pokesprites)  bloodless
+                            Alt: bloodless                    
 Burmy                       bloodless                         bloodless
 Wormadam                    bloodless                         bloodless
 Mothim                      bloodless                         bloodless
@@ -541,9 +550,12 @@ Purrloin                    Pokekoks                          Pokekoks
 Liepard                     EeVeeEe1999                       Pokekoks
 Munna                       Pokekoks                          Pokekoks
 Musharna                    G0LD Z!                           G0LD Z!
-Roggenrola                  Bummer                            COMBOY
-Boldore                     Chris2Balls                       COMBOY
-Gigalith                    lakeofdance                       lakeofdance
+Roggenrola                  Adam Hartman (retro_pokesprites)  COMBOY
+                            Alt: Bummer                       
+Boldore                     Adam Hartman (retro_pokesprites)  COMBOY
+                            Alt: Chris2Balls                  
+Gigalith                    Adam Hartman (retro_pokesprites)  lakeofdance
+                            Alt: lakeofdance                  
 Woobat                      Gors                              COMBOY
 Swoobat                     ubasuteyama                       COMBOY
 Audino                      Wisgarus                          Wisgarus
@@ -770,9 +782,12 @@ Drednaw                     EeVeeEe1999                       utytft
 Rolycoly                    EeVeeEe1999, JaceDeane            leParagon
 Carkol                      utytft                            utytft
 Coalossal                   Menyu                             utytft
-Applin                      utytft                            utytft
-Flapple                     utytft                            utytft
-Appletun                    utytft                            utytft
+Applin                      Adam Hartman (retro_pokesprites)  utytft
+                            Alt: utytft                       
+Flapple                     Adam Hartman (retro_pokesprites)  utytft
+                            Alt: utytft                       
+Appletun                    Adam Hartman (retro_pokesprites)  utytft
+                            Alt: utytft                       
 Arrokuda                    QuilChess                         leParagon
 Baraskewda                  Menyu                             Z-nogyroP
 Toxel                       lakeofdance                       utytft
