@@ -62,7 +62,7 @@ MountMoon_MapScripts:
 	checkevent EVENT_CHESPIN_IS_GRASS_STARTER
 	iftrue .RivalChespin
 ; Rival defaults to Rowlet if grass starter wasn't identified
-	loadtrainer RIVAL1, RIVAL2_1_ROWLET
+	loadtrainer RIVAL2, RIVAL2_1_ROWLET
 	sjump .DoBattle
 
 .GotGrassStarter:
@@ -80,75 +80,75 @@ MountMoon_MapScripts:
 	checkevent EVENT_FUECOCO_IS_FIRE_STARTER
 	iftrue .RivalFuecoco
 ; Rival defaults to Cyndaquil if fire starter wasn't identified
-	loadtrainer RIVAL1, RIVAL2_1_CYNDAQUIL
+	loadtrainer RIVAL2, RIVAL2_1_CYNDAQUIL
 	sjump .DoBattle
 	
 .RivalBulbasaur:
-	loadtrainer RIVAL1, RIVAL2_1_BULBASAUR
+	loadtrainer RIVAL2, RIVAL2_1_BULBASAUR
 	sjump .DoBattle
 	
 .RivalChikorita:
-	loadtrainer RIVAL1, RIVAL2_1_CHIKORITA
+	loadtrainer RIVAL2, RIVAL2_1_CHIKORITA
 	sjump .DoBattle
 	
 .RivalTreecko:
-	loadtrainer RIVAL1, RIVAL2_1_TREECKO
+	loadtrainer RIVAL2, RIVAL2_1_TREECKO
 	sjump .DoBattle
 	
 .RivalTurtwig:
-	loadtrainer RIVAL1, RIVAL2_1_TURTWIG
+	loadtrainer RIVAL2, RIVAL2_1_TURTWIG
 	sjump .DoBattle
 	
 .RivalSnivy:
-	loadtrainer RIVAL1, RIVAL2_1_SNIVY
+	loadtrainer RIVAL2, RIVAL2_1_SNIVY
 	sjump .DoBattle
 	
 .RivalChespin:
-	loadtrainer RIVAL1, RIVAL2_1_CHESPIN
+	loadtrainer RIVAL2, RIVAL2_1_CHESPIN
 	sjump .DoBattle
 	
 .RivalCharmander:
-	loadtrainer RIVAL1, RIVAL2_1_CHARMANDER
+	loadtrainer RIVAL2, RIVAL2_1_CHARMANDER
 	sjump .DoBattle
 	
 .RivalTorchic:
-	loadtrainer RIVAL1, RIVAL2_1_TORCHIC
+	loadtrainer RIVAL2, RIVAL2_1_TORCHIC
 	sjump .DoBattle
 	
 .RivalChimchar:
-	loadtrainer RIVAL1, RIVAL2_1_CHIMCHAR
+	loadtrainer RIVAL2, RIVAL2_1_CHIMCHAR
 	sjump .DoBattle
 	
 .RivalTepig:
-	loadtrainer RIVAL1, RIVAL2_1_TEPIG
+	loadtrainer RIVAL2, RIVAL2_1_TEPIG
 	sjump .DoBattle
 	
 .RivalFennekin:
-	loadtrainer RIVAL1, RIVAL2_1_FENNEKIN
+	loadtrainer RIVAL2, RIVAL2_1_FENNEKIN
 	sjump .DoBattle
 	
 .RivalFuecoco:
-	loadtrainer RIVAL1, RIVAL2_1_FUECOCO
+	loadtrainer RIVAL2, RIVAL2_1_FUECOCO
 	sjump .DoBattle
 	
 .RivalSquirtle:
-	loadtrainer RIVAL1, RIVAL2_1_SQUIRTLE
+	loadtrainer RIVAL2, RIVAL2_1_SQUIRTLE
 	sjump .DoBattle
 	
 .RivalTotodile:
-	loadtrainer RIVAL1, RIVAL2_1_TOTODILE
+	loadtrainer RIVAL2, RIVAL2_1_TOTODILE
 	sjump .DoBattle
 	
 .RivalMudkip:
-	loadtrainer RIVAL1, RIVAL2_1_MUDKIP
+	loadtrainer RIVAL2, RIVAL2_1_MUDKIP
 	sjump .DoBattle
 	
 .RivalPiplup:
-	loadtrainer RIVAL1, RIVAL2_1_PIPLUP
+	loadtrainer RIVAL2, RIVAL2_1_PIPLUP
 	sjump .DoBattle
 	
 .RivalOshawott:
-	loadtrainer RIVAL1, RIVAL2_1_OSHAWOTT
+	loadtrainer RIVAL2, RIVAL2_1_OSHAWOTT
 	sjump .DoBattle
 
 .DoBattle:
