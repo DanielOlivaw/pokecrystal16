@@ -684,14 +684,14 @@ Mom_HeldString:
 
 MenuHeader_0x166b5:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 10, 10
+	menu_coords 0, 0, 11, 10
 	dw MenuData_0x166bd
 	db 1 ; default option
 
 MenuData_0x166bd:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "GET@"
-	db "SAVE@"
+	db "WITHDRAW@"
+	db "DEPOSIT@"
 	db "CHANGE@"
 	db "CANCEL@"
