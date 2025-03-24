@@ -55,8 +55,6 @@ StdScripts::
 	dba StandardMartScript
 
 PokecenterNurseScript:
-; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
-
 	opentext
 	checktime MORN
 	iftrue .morn
@@ -69,57 +67,37 @@ PokecenterNurseScript:
 	sjump .ok
 
 .morn
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .morn_comcenter
 	farwritetext NurseMornText
-	buttonsound
-	sjump .ok
-.morn_comcenter
-	farwritetext PokeComNurseMornText
 	buttonsound
 	sjump .ok
 
 .day
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .day_comcenter
 	farwritetext NurseDayText
-	buttonsound
-	sjump .ok
-.day_comcenter
-	farwritetext PokeComNurseDayText
 	buttonsound
 	sjump .ok
 
 .eve
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .eve_comcenter
 	farwritetext NurseEveText
-	buttonsound
-	sjump .ok
-.eve_comcenter
-	farwritetext PokeComNurseEveText
 	buttonsound
 	sjump .ok
 
 .nite
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .nite_comcenter
 	farwritetext NurseNiteText
 	buttonsound
-	sjump .ok
-.nite_comcenter
-	farwritetext PokeComNurseNiteText
-	buttonsound
-	sjump .ok
+	; fallthrough
 
 .ok
-	; only do this once
-	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
+	checkevent EVENT_WELCOMED_TO_POKEMON_CENTER
+	iftrue .short_version
 
 	farwritetext NurseAskHealText
 	yesorno
 	iffalse .done
 
+	; only do this once
+	setevent EVENT_WELCOMED_TO_POKEMON_CENTER
+
+.heal_pokemon
 	farwritetext NurseTakePokemonText
 	pause 20
 	special StubbedTrainerRankings_Healings
@@ -157,21 +135,16 @@ PokecenterNurseScript:
 	closetext
 	end
 
+.short_version
+	farwritetext NurseAskHealShortText
+	yesorno
+	iffalse .done
+	sjump .heal_pokemon
+
 .pokerus
-	; already cleared earlier in the script
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .pokerus_comcenter
 	farwritetext NursePokerusText
 	waitbutton
 	closetext
-	sjump .pokerus_done
-
-.pokerus_comcenter
-	farwritetext PokeComNursePokerusText
-	waitbutton
-	closetext
-
-.pokerus_done
 	setflag ENGINE_CAUGHT_POKERUS
 	specialphonecall SPECIALCALL_POKERUS
 	end

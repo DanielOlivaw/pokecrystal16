@@ -24,46 +24,46 @@ NurseNiteText:
 	line "#MON CENTER."
 	done
 
-PokeComNurseMornText:
-	text "Good morning!"
+; PokeComNurseMornText:
+	; text "Good morning!"
 
-	para "This is the #-"
-	line "MON COMMUNICATION"
+	; para "This is the #-"
+	; line "MON COMMUNICATION"
 
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
+	; para "CENTER--or the"
+	; line "#COM CENTER."
+	; done
 
-PokeComNurseDayText:
-	text "Hello!"
+; PokeComNurseDayText:
+	; text "Hello!"
 
-	para "This is the #-"
-	line "MON COMMUNICATION"
+	; para "This is the #-"
+	; line "MON COMMUNICATION"
 
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
+	; para "CENTER--or the"
+	; line "#COM CENTER."
+	; done
 
-PokeComNurseEveText:
-	text "Good evening."
+; PokeComNurseEveText:
+	; text "Good evening."
 
-	para "This is the #-"
-	line "MON COMMUNICATION"
+	; para "This is the #-"
+	; line "MON COMMUNICATION"
 
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
+	; para "CENTER--or the"
+	; line "#COM CENTER."
+	; done
 
-PokeComNurseNiteText:
-	text "Good to see you"
-	line "working so late."
+; PokeComNurseNiteText:
+	; text "Good to see you"
+	; line "working so late."
 
-	para "This is the #-"
-	line "MON COMMUNICATION"
+	; para "This is the #-"
+	; line "MON COMMUNICATION"
 
-	para "CENTER--or the"
-	line "#COM CENTER."
-	done
+	; para "CENTER--or the"
+	; line "#COM CENTER."
+	; done
 
 NurseAskHealText:
 	text "We can heal your"
@@ -71,6 +71,11 @@ NurseAskHealText:
 	cont "health."
 
 	para "Shall we heal your"
+	line "#MON?"
+	done
+
+NurseAskHealShortText:
+	text "Shall we heal your"
 	line "#MON?"
 	done
 
@@ -114,20 +119,20 @@ NursePokerusText:
 	line "CENTER."
 	done
 
-PokeComNursePokerusText:
-	text "Your #MON"
-	line "appear to be"
+; PokeComNursePokerusText:
+	; text "Your #MON"
+	; line "appear to be"
 
-	para "infected by tiny"
-	line "life forms."
+	; para "infected by tiny"
+	; line "life forms."
 
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
+	; para "Your #MON are"
+	; line "healthy and seem"
+	; cont "to be fine."
 
-	para "But we can't tell"
-	line "you anything more."
-	done
+	; para "But we can't tell"
+	; line "you anything more."
+	; done
 
 DifficultBookshelfText:
 	text "It's full of"
@@ -196,25 +201,15 @@ HomepageText:
 	done
 
 ; not used
-	text "#MON RADIO!"
+	; text "#MON RADIO!"
 
-	para "Call in with your"
-	line "requests now!"
-	done
+	; para "Call in with your"
+	; line "requests now!"
+	; done
 
 TrashCanText:
 	text "There's nothing in"
 	line "here…"
-	done
-
-; not used
-	text "A #MON may be"
-	line "able to move this."
-	done
-
-; not used
-	text "Maybe a #MON"
-	line "can break this."
 	done
 
 PokecenterSignText:
