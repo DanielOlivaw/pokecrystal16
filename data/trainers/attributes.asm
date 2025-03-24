@@ -117,7 +117,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Scientist
-	db X_SP_ATK, NO_ITEM ; items
+	db FULL_HEAL, NO_ITEM ; items
 	db 12 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -129,7 +129,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Youngster
-	db NO_ITEM, NO_ITEM ; items
+	db PSNCUREBERRY, NO_ITEM ; items
 	db 4 ; base reward
 	dw AI_BASIC | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -147,7 +147,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Lass
-	db NO_ITEM, NO_ITEM ; items
+	db PSNCUREBERRY, NO_ITEM ; items
 	db 4 ; base reward
 	dw AI_BASIC | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_OFTEN
@@ -189,7 +189,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Gentleman
-	db FULL_HEAL, LEMONADE ; items
+	db FULL_HEAL, HYPER_POTION ; items
 	db 50 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_AGGRESSIVE | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -219,7 +219,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Fisher
-	db NO_ITEM, NO_ITEM ; items
+	db LEMONADE, NO_ITEM ; items
 	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
 	dw CONTEXT_USE | SWITCH_OFTEN
@@ -243,7 +243,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Super Nerd
-	db X_SP_ATK, X_DEFEND ; items
+	db SODA_POP, NO_ITEM ; items
 	db 10 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -363,7 +363,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Pokefanm
-	db MAX_POTION, MIRACLEBERRY ; items
+	db MAX_POTION, FULL_HEAL ; items
 	db 20 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -381,7 +381,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Pokefanf
-	db MAX_POTION, MIRACLEBERRY ; items
+	db MAX_POTION, FULL_HEAL ; items
 	db 20 ; base reward
 	dw AI_BASIC | AI_TYPES | AI_SMART | AI_STATUS
 	dw CONTEXT_USE | SWITCH_SOMETIMES
@@ -411,7 +411,7 @@ TrainerClassAttributes:
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Mysticalman
-	db FULL_HEAL, DIRE_HIT ; items
+	db FULL_HEAL, NO_ITEM ; items
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
