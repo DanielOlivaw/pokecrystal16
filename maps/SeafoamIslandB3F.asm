@@ -18,8 +18,8 @@ SeafoamIslandB3FBoulder:
 SeafoamIslandB3FFullRestore:
 	itemball FULL_RESTORE
 	
-SeafoamIslandB3FBigPearl:
-	itemball BIG_PEARL
+SeafoamIslandB3FIceStone:
+	itemball ICE_STONE
 
 SeafoamIslandB3FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_SEAFOAM_ISLAND_B3F_HIDDEN_MAX_REVIVE
@@ -50,5 +50,5 @@ SeafoamIslandB3F_MapEvents:
 
 	db 3 ; object events
 	object_event 11, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB3FFullRestore, EVENT_SEAFOAM_ISLAND_B3F_FULL_RESTORE
-	object_event 17, 6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB3FBigPearl, EVENT_SEAFOAM_ISLAND_B3F_BIG_PEARL
+	object_event 17, 6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandB3FIceStone, EVENT_SEAFOAM_ISLAND_B3F_ICE_STONE
 	object_event 25, 7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandB3FBoulder, -1
