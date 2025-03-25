@@ -2,7 +2,7 @@
 	const POKECENTER2F_TRADE_RECEPTIONIST
 	const POKECENTER2F_BATTLE_RECEPTIONIST
 	const POKECENTER2F_TIME_CAPSULE_RECEPTIONIST
-	const POKECENTER2F_OFFICER
+	; const POKECENTER2F_OFFICER
 
 Pokecenter2F_MapScripts:
 	db 6 ; scene scripts
@@ -16,40 +16,40 @@ Pokecenter2F_MapScripts:
 	db 0 ; callbacks
 
 .Scene0:
-	special CheckMysteryGift
-	ifequal $0, .Scene0Done
-	clearevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue .Scene0Done
-	prioritysjump Pokecenter2F_AppearMysteryGiftDeliveryGuy
+	; special CheckMysteryGift
+	; ifequal $0, .Scene0Done
+	; clearevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
+	; checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	; iftrue .Scene0Done
+	; prioritysjump Pokecenter2F_AppearMysteryGiftDeliveryGuy
 
-.Scene0Done:
+; .Scene0Done:
 	end
 
 .Scene1:
-	prioritysjump Script_LeftCableTradeCenter
+	; prioritysjump Script_LeftCableTradeCenter
 	end
 
 .Scene2:
-	prioritysjump Script_LeftCableColosseum
+	; prioritysjump Script_LeftCableColosseum
 	end
 
 .Scene3:
-	prioritysjump Script_LeftTimeCapsule
+	; prioritysjump Script_LeftTimeCapsule
 	end
 
 .Scene4:
-	prioritysjump Script_LeftMobileTradeRoom
+	; prioritysjump Script_LeftMobileTradeRoom
 	end
 
 .Scene5:
-	prioritysjump Script_LeftMobileBattleRoom
+	; prioritysjump Script_LeftMobileBattleRoom
 	end
 
-Pokecenter2F_AppearMysteryGiftDeliveryGuy:
-	appear POKECENTER2F_OFFICER
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	end
+; Pokecenter2F_AppearMysteryGiftDeliveryGuy:
+	; appear POKECENTER2F_OFFICER
+	; setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	; end
 
 Script_TradeCenterClosed:
 	faceplayer
@@ -299,119 +299,120 @@ Script_TimeCapsuleClosed:
 	end
 
 LinkReceptionistScript_TimeCapsule:
-	checkevent EVENT_MET_BILL
-	iftrue Script_TimeCapsuleClosed
-	checkflag ENGINE_TIME_CAPSULE
-	iftrue Script_TimeCapsuleClosed
-	special SetBitsForTimeCapsuleRequest
-	faceplayer
-	opentext
-	writetext Text_TimeCapsuleReceptionistIntro
-	yesorno
-	iffalse .Cancel
-	special CheckTimeCapsuleCompatibility
-	ifequal $1, .MonTooNew
-	ifequal $2, .MonMoveTooNew
-	ifequal $3, .MonHasMail
-	writetext Text_PleaseWait
-	special WaitForLinkedFriend
-	iffalse .FriendNotReady
-	writetext Text_MustSaveGame
-	yesorno
-	iffalse .DidNotSave
-	special TryQuickSave
-	iffalse .DidNotSave
-	writetext Text_PleaseWait
-	special CheckLinkTimeout
-	iffalse .LinkTimedOut
-	readmem wOtherPlayerLinkMode
-	iffalse .OK
-	special CheckBothSelectedSameRoom
-	writetext Text_IncompatibleRooms
-	special CloseLink
-	closetext
-	end
+	scall Script_TimeCapsuleClosed
+	; checkevent EVENT_MET_BILL
+	; iftrue Script_TimeCapsuleClosed
+	; checkflag ENGINE_TIME_CAPSULE
+	; iftrue Script_TimeCapsuleClosed
+	; special SetBitsForTimeCapsuleRequest
+	; faceplayer
+	; opentext
+	; writetext Text_TimeCapsuleReceptionistIntro
+	; yesorno
+	; iffalse .Cancel
+	; special CheckTimeCapsuleCompatibility
+	; ifequal $1, .MonTooNew
+	; ifequal $2, .MonMoveTooNew
+	; ifequal $3, .MonHasMail
+	; writetext Text_PleaseWait
+	; special WaitForLinkedFriend
+	; iffalse .FriendNotReady
+	; writetext Text_MustSaveGame
+	; yesorno
+	; iffalse .DidNotSave
+	; special TryQuickSave
+	; iffalse .DidNotSave
+	; writetext Text_PleaseWait
+	; special CheckLinkTimeout
+	; iffalse .LinkTimedOut
+	; readmem wOtherPlayerLinkMode
+	; iffalse .OK
+	; special CheckBothSelectedSameRoom
+	; writetext Text_IncompatibleRooms
+	; special CloseLink
+	; closetext
+	; end
 
-.OK:
-	special EnterTimeCapsule
-	writetext Text_PleaseComeIn2
-	waitbutton
-	closetext
-	scall TimeCapsuleScript_CheckPlayerGender
-	warpcheck
-	end
+; .OK:
+	; special EnterTimeCapsule
+	; writetext Text_PleaseComeIn2
+	; waitbutton
+	; closetext
+	; scall TimeCapsuleScript_CheckPlayerGender
+	; warpcheck
+	; end
 
-.FriendNotReady:
-	special WaitForOtherPlayerToExit
-	writetext Text_FriendNotReady
-	closetext
-	end
+; .FriendNotReady:
+	; special WaitForOtherPlayerToExit
+	; writetext Text_FriendNotReady
+	; closetext
+	; end
 
-.LinkTimedOut:
-	writetext Text_LinkTimedOut
-	sjump .Cancel
+; .LinkTimedOut:
+	; writetext Text_LinkTimedOut
+	; sjump .Cancel
 
-.DidNotSave:
-	writetext Text_PleaseComeAgain
-.Cancel:
-	special WaitForOtherPlayerToExit
-	closetext
-	end
+; .DidNotSave:
+	; writetext Text_PleaseComeAgain
+; .Cancel:
+	; special WaitForOtherPlayerToExit
+	; closetext
+	; end
 
-.MonTooNew:
-	writetext Text_RejectNewMon
-	closetext
-	end
+; .MonTooNew:
+	; writetext Text_RejectNewMon
+	; closetext
+	; end
 
-.MonMoveTooNew:
-	writetext Text_RejectMonWithNewMove
-	closetext
-	end
+; .MonMoveTooNew:
+	; writetext Text_RejectMonWithNewMove
+	; closetext
+	; end
 
-.MonHasMail:
-	writetext Text_RejectMonWithMail
-	closetext
-	end
+; .MonHasMail:
+	; writetext Text_RejectMonWithMail
+	; closetext
+	; end
 
-Script_LeftCableTradeCenter:
-	special WaitForOtherPlayerToExit
-	scall Script_WalkOutOfLinkTradeRoom
-	setscene SCENE_DEFAULT
-	setmapscene TRADE_CENTER, SCENE_DEFAULT
-	end
+; Script_LeftCableTradeCenter:
+	; special WaitForOtherPlayerToExit
+	; scall Script_WalkOutOfLinkTradeRoom
+	; setscene SCENE_DEFAULT
+	; setmapscene TRADE_CENTER, SCENE_DEFAULT
+	; end
 
-Script_LeftMobileTradeRoom:
-	special Function101220
-	scall Script_WalkOutOfMobileTradeRoom
-	setscene SCENE_DEFAULT
-	setmapscene MOBILE_TRADE_ROOM, SCENE_DEFAULT
-	end
+; Script_LeftMobileTradeRoom:
+	; special Function101220
+	; scall Script_WalkOutOfMobileTradeRoom
+	; setscene SCENE_DEFAULT
+	; setmapscene MOBILE_TRADE_ROOM, SCENE_DEFAULT
+	; end
 
-Script_WalkOutOfMobileTradeRoom:
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown
-	end
+; Script_WalkOutOfMobileTradeRoom:
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown
+	; end
 
-Script_LeftCableColosseum:
-	special WaitForOtherPlayerToExit
-	scall Script_WalkOutOfLinkBattleRoom
-	setscene SCENE_DEFAULT
-	setmapscene COLOSSEUM, SCENE_DEFAULT
-	end
+; Script_LeftCableColosseum:
+	; special WaitForOtherPlayerToExit
+	; scall Script_WalkOutOfLinkBattleRoom
+	; setscene SCENE_DEFAULT
+	; setmapscene COLOSSEUM, SCENE_DEFAULT
+	; end
 
-Script_LeftMobileBattleRoom:
-	special Function101220
-	scall Script_WalkOutOfMobileBattleRoom
-	setscene SCENE_DEFAULT
-	setmapscene MOBILE_BATTLE_ROOM, SCENE_DEFAULT
-	end
+; Script_LeftMobileBattleRoom:
+	; special Function101220
+	; scall Script_WalkOutOfMobileBattleRoom
+	; setscene SCENE_DEFAULT
+	; setmapscene MOBILE_BATTLE_ROOM, SCENE_DEFAULT
+	; end
 
-Script_WalkOutOfMobileBattleRoom:
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown
-	end
+; Script_WalkOutOfMobileBattleRoom:
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown
+	; end
 
 Pokecenter2F_CheckGender:
 	checkflag ENGINE_PLAYER_IS_FEMALE
@@ -557,31 +558,31 @@ TimeCapsuleScript_CheckPlayerGender:
 	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp_2
 	end
 
-Script_LeftTimeCapsule:
-	special WaitForOtherPlayerToExit
-	checkflag ENGINE_KRIS_IN_CABLE_CLUB
-	iftrue .Female
-	applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown
-	applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2
-	sjump .Done
+; Script_LeftTimeCapsule:
+	; special WaitForOtherPlayerToExit
+	; checkflag ENGINE_KRIS_IN_CABLE_CLUB
+	; iftrue .Female
+	; applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown
+	; applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2
+	; sjump .Done
 
-.Female:
-	applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown
-	clearflag ENGINE_KRIS_IN_CABLE_CLUB
-	playsound SFX_TINGLE
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
-	setval (PAL_NPC_BLUE << 4)
-	special SetPlayerPalette
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
-	special ReplaceKrisSprite
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown
-	applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2
-.Done:
-	setscene SCENE_DEFAULT
-	setmapscene TIME_CAPSULE, SCENE_DEFAULT
-	end
+; .Female:
+	; applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown
+	; clearflag ENGINE_KRIS_IN_CABLE_CLUB
+	; playsound SFX_TINGLE
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
+	; setval (PAL_NPC_BLUE << 4)
+	; special SetPlayerPalette
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
+	; special ReplaceKrisSprite
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown
+	; applymovement POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2
+; .Done:
+	; setscene SCENE_DEFAULT
+	; setmapscene TIME_CAPSULE, SCENE_DEFAULT
+	; end
 
 Pokecenter2FLinkRecordSign:
 	refreshscreen
@@ -589,38 +590,38 @@ Pokecenter2FLinkRecordSign:
 	closetext
 	end
 
-Pokecenter2FOfficerScript:
-	faceplayer
-	opentext
-	checkevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
-	iftrue .AlreadyGotGift
-	writetext Text_MysteryGiftDeliveryGuy_Intro
-	yesorno
-	iffalse .RefusedGift
-	writetext Text_MysteryGiftDeliveryGuy_HereYouGo
-	buttonsound
-	waitsfx
-	special GetMysteryGiftItem
-	iffalse .BagIsFull
-	itemnotify
-	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
-.AlreadyGotGift:
-	writetext Text_MysteryGiftDeliveryGuy_Outro
-	waitbutton
-	closetext
-	end
+; Pokecenter2FOfficerScript:
+	; faceplayer
+	; opentext
+	; checkevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
+	; iftrue .AlreadyGotGift
+	; writetext Text_MysteryGiftDeliveryGuy_Intro
+	; yesorno
+	; iffalse .RefusedGift
+	; writetext Text_MysteryGiftDeliveryGuy_HereYouGo
+	; buttonsound
+	; waitsfx
+	; special GetMysteryGiftItem
+	; iffalse .BagIsFull
+	; itemnotify
+	; setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
+; .AlreadyGotGift:
+	; writetext Text_MysteryGiftDeliveryGuy_Outro
+	; waitbutton
+	; closetext
+	; end
 
-.BagIsFull:
-	writetext Text_MysteryGiftDeliveryGuy_NoRoom
-	waitbutton
-	closetext
-	end
+; .BagIsFull:
+	; writetext Text_MysteryGiftDeliveryGuy_NoRoom
+	; waitbutton
+	; closetext
+	; end
 
-.RefusedGift:
-	writetext Text_MysteryGiftDeliveryGuy_SaidNo
-	waitbutton
-	closetext
-	end
+; .RefusedGift:
+	; writetext Text_MysteryGiftDeliveryGuy_SaidNo
+	; waitbutton
+	; closetext
+	; end
 
 Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight:
 	slow_step UP
@@ -955,38 +956,38 @@ Text_BattleRoomClosed:
 	cont "being adjusted."
 	done
 
-Text_MysteryGiftDeliveryGuy_Intro:
-	text "Hello! You're"
-	line "<PLAYER>, right?"
+; Text_MysteryGiftDeliveryGuy_Intro:
+	; text "Hello! You're"
+	; line "<PLAYER>, right?"
 
-	para "I have some-"
-	line "thing for you."
-	done
+	; para "I have some-"
+	; line "thing for you."
+	; done
 
-Text_MysteryGiftDeliveryGuy_HereYouGo:
-	text "Here you go!"
-	done
+; Text_MysteryGiftDeliveryGuy_HereYouGo:
+	; text "Here you go!"
+	; done
 
-Text_MysteryGiftDeliveryGuy_Outro:
-	text "We hope to serve"
-	line "you again."
-	done
+; Text_MysteryGiftDeliveryGuy_Outro:
+	; text "We hope to serve"
+	; line "you again."
+	; done
 
-Text_MysteryGiftDeliveryGuy_NoRoom:
-	text "Oh, you have no"
-	line "space for this."
+; Text_MysteryGiftDeliveryGuy_NoRoom:
+	; text "Oh, you have no"
+	; line "space for this."
 
-	para "Stop in at any"
-	line "#MON CENTER"
+	; para "Stop in at any"
+	; line "#MON CENTER"
 
-	para "across the country"
-	line "to pick it up."
-	done
+	; para "across the country"
+	; line "to pick it up."
+	; done
 
-Text_MysteryGiftDeliveryGuy_SaidNo:
-	text "No? That's very"
-	line "strange…"
-	done
+; Text_MysteryGiftDeliveryGuy_SaidNo:
+	; text "No? That's very"
+	; line "strange…"
+	; done
 
 Text_OhPleaseWait:
 	text "Oh, please wait."
@@ -1038,8 +1039,8 @@ Pokecenter2F_MapEvents:
 	db 1 ; bg events
 	bg_event  7,  3, BGEVENT_READ, Pokecenter2FLinkRecordSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event  5,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Trade, -1
 	object_event  9,  2, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_Battle, -1
 	object_event 13,  3, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LinkReceptionistScript_TimeCapsule, -1
-	object_event  1,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Pokecenter2FOfficerScript, EVENT_MYSTERY_GIFT_DELIVERY_GUY
+	; object_event  1,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Pokecenter2FOfficerScript, EVENT_MYSTERY_GIFT_DELIVERY_GUY

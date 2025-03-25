@@ -9,9 +9,6 @@ _MainMenu:
 	farcall MainMenu
 	jp StartTitleScreen
 
-; unused
-	ret
-
 PrintDayOfWeek:
 	push de
 	ld hl, .Days
@@ -48,11 +45,11 @@ NewGame_ClearTileMapEtc:
 	call ClearWindowData
 	ret
 
-MysteryGift:
-	call UpdateTime
-	farcall DoMysteryGiftIfDayHasPassed
-	farcall DoMysteryGift
-	ret
+; MysteryGift:
+	; call UpdateTime
+	; farcall DoMysteryGiftIfDayHasPassed
+	; farcall DoMysteryGift
+	; ret
 
 OptionsMenu:
 	farcall _OptionsMenu
@@ -77,14 +74,7 @@ NewGame:
 	jp FinishContinueFunction
 
 AreYouABoyOrAreYouAGirl:
-	farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
-	jr c, .ok
 	farcall InitGender
-	ret
-
-.ok
-	ld c, 0
-	farcall InitMobileProfile ; mobile
 	ret
 
 ResetWRAM:
@@ -231,7 +221,7 @@ endc
 
 	farcall DeletePartyMonMail
 
-	farcall DeleteMobileEventIndex
+	; farcall DeleteMobileEventIndex
 
 	call ResetGameTime
 	ret
@@ -376,13 +366,13 @@ Continue:
 	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
 	call ClearBGPalettes
-	call Continue_MobileAdapterMenu
+	; call Continue_MobileAdapterMenu
 	call CloseWindow
 	call ClearTileMap
 	ld c, 20
 	call DelayFrames
 	farcall JumpRoamMons
-	farcall MysteryGift_CopyReceivedDecosToPC ; Mystery Gift
+	; farcall MysteryGift_CopyReceivedDecosToPC ; Mystery Gift
 	farcall Function140ae ; time-related
 	ld a, [wSpawnAfterChampion]
 	cp SPAWN_LANCE
@@ -411,35 +401,35 @@ PostCreditsSpawn:
 	ldh [hMapEntryMethod], a
 	ret
 
-Continue_MobileAdapterMenu:
-	farcall Mobile_AlwaysReturnNotCarry ; mobile check
-	ret nc
+; Continue_MobileAdapterMenu:
+	; farcall Mobile_AlwaysReturnNotCarry ; mobile check
+	; ret nc
 
 ; the rest of this stuff is never reached because
 ; the previous function returns with carry not set
-	ld hl, wd479
-	bit 1, [hl]
-	ret nz
-	ld a, 5
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID + 1], a
-	ld c, 20
-	call DelayFrames
-	ld c, $1
-	farcall InitMobileProfile ; mobile
-	farcall _SaveData
-	ld a, 8
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
-	ld c, 35
-	call DelayFrames
-	ret
+	; ld hl, wd479
+	; bit 1, [hl]
+	; ret nz
+	; ld a, 5
+	; ld [wMusicFade], a
+	; ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
+	; ld [wMusicFadeID], a
+	; ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
+	; ld [wMusicFadeID + 1], a
+	; ld c, 20
+	; call DelayFrames
+	; ld c, $1
+	; farcall InitMobileProfile ; mobile
+	; farcall _SaveData
+	; ld a, 8
+	; ld [wMusicFade], a
+	; ld a, LOW(MUSIC_NONE)
+	; ld [wMusicFadeID], a
+	; ld a, HIGH(MUSIC_NONE)
+	; ld [wMusicFadeID + 1], a
+	; ld c, 35
+	; call DelayFrames
+	; ret
 
 ConfirmContinue:
 .loop
@@ -1057,16 +1047,16 @@ RunTitleScreen:
 	scf
 	ret
 
-Unreferenced_Function6292:
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	ret
+; Unreferenced_Function6292:
+	; ldh a, [hVBlankCounter]
+	; and $7
+	; ret nz
+	; ld hl, wLYOverrides + $5f
+	; ld a, [hl]
+	; dec a
+	; ld bc, 2 * SCREEN_WIDTH
+	; call ByteFill
+	; ret
 
 TitleScreenScene:
 	ld e, a
@@ -1085,10 +1075,10 @@ TitleScreenScene:
 	dw TitleScreenMain
 	dw TitleScreenEnd
 
-.Unreferenced_NextScene:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
+; .Unreferenced_NextScene:
+	; ld hl, wJumptableIndex
+	; inc [hl]
+	; ret
 
 TitleScreenEntrance:
 ; Animate the logo:
@@ -1260,37 +1250,37 @@ ResetClock:
 	farcall _ResetClock
 	jp Init
 
-Unreferenced_Function639b:
-	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
-	ld a, [wTitleScreenTimer]
-	and %00000011
-	ret nz
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc ; over-the-top compicated way to load wc3ae into hl
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .Data63ca
-	add hl, de
-	; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
-	call _InitSpriteAnimStruct
-	ret
+; Unreferenced_Function639b:
+	;; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
+	; ld a, [wTitleScreenTimer]
+	; and %00000011
+	; ret nz
+	; ld bc, wSpriteAnim10
+	; ld hl, SPRITEANIMSTRUCT_FRAME
+	; add hl, bc ; over-the-top compicated way to load wc3ae into hl
+	; ld l, [hl]
+	; ld h, 0
+	; add hl, hl
+	; add hl, hl
+	; ld de, .Data63ca
+	; add hl, de
+	;; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
+	; ld a, [wTitleScreenTimer]
+	; and %00000100
+	; srl a
+	; srl a
+	; ld e, a
+	; ld d, 0
+	; add hl, de
+	; add hl, de
+	; ld a, [hli]
+	; and a
+	; ret z
+	; ld e, a
+	; ld d, [hl]
+	; ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
+	; call _InitSpriteAnimStruct
+	; ret
 
 .Data63ca:
 ; frame 0 y, x; frame 1 y, x
@@ -1343,3 +1333,46 @@ GameInit::
 	ldh [hWY], a
 	call WaitBGMap
 	jp CrystalIntroSequence
+
+AboutSpeech:
+	call ClearTileMap
+
+	ld de, MUSIC_BUENAS_PASSWORD
+	call PlayMusic
+
+	; Prepare for sprite display
+	call RotateThreePalettesRight
+
+	ld hl, CLODSIRE
+	call GetPokemonIDFromIndex
+	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
+	call GetBaseData
+
+	hlcoord 6, 4
+	call PrepMonFrontpic
+	
+	xor a
+	ld [wTempMonDVs], a
+	ld [wTempMonDVs + 1], a
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_WipeInFrontpic ; actually display the sprite
+
+	; Display text
+	ld hl, AboutText
+	call PrintText
+
+	; Return to main menu music
+	ld de, MUSIC_NONE
+	call PlayMusic
+	call DelayFrame
+	ld de, MUSIC_MAIN_MENU
+	ld a, e
+	ld [wMapMusic], a
+	call PlayMusic
+	ret
+
+AboutText:
+	text_far _AboutText
+	text_end

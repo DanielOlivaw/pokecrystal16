@@ -1605,8 +1605,6 @@ _OakText3::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 _OakText4::
 	text "People and #MON"
 	line "live together by"
@@ -1630,4 +1628,49 @@ _OakText5::
 
 	para "That's why I study"
 	line "#MON every day."
+	prompt
+
+_AboutText::
+	text "This is a 16-bit"
+	line "hack of #MON"
+	cont "CRYSTAL VERSION."
+
+	para "This hack is foc-"
+	line "used on adding a"
+
+	para "variety of #MON"
+	line "and quality of"
+	cont "life features"
+
+	para "to enhance the"
+	line "classic CRYSTAL"
+	cont "experience."
+
+	para "For a list of the"
+	line "major changes,"
+
+	para "credits for many"
+	line "amazing sprite"
+	cont "artists,"
+
+	para "and some helpful"
+	line "tips, check out"
+
+	para "github.com/"
+	line "DanielOlivaw/"
+	cont "pokecrystal16."
+
+	para "If you run into"
+	line "any problems, open"
+	cont "an issue there."
+
+	para "I recommend check-"
+	line "ing the ROM down-"
+	cont "load on GitHub"
+
+	para "for the latest"
+	line "changes and fixes."
+
+	para "Please, enjoy the"
+	line "game!"
 	prompt

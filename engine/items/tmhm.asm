@@ -172,7 +172,7 @@ TeachTMHM:
 	and a
 	jr z, .nope
 
-	farcall StubbedTrainerRankings_TMsHMsTaught
+	; farcall StubbedTrainerRankings_TMsHMsTaught
 	; ld a, [wCurItem]
 	ld a, [wCurTMHM]
 	call IsHM

@@ -18,16 +18,16 @@ TradeCenter_MapScripts:
 	end
 
 .SetWhichChris:
-	special CableClubCheckWhichChris
-	iffalse .Chris2
+	; special CableClubCheckWhichChris
+	; iffalse .Chris2
 	disappear TRADECENTER_CHRIS2
 	appear TRADECENTER_CHRIS1
 	return
 
-.Chris2:
-	disappear TRADECENTER_CHRIS1
-	appear TRADECENTER_CHRIS2
-	return
+; .Chris2:
+	; disappear TRADECENTER_CHRIS1
+	; appear TRADECENTER_CHRIS2
+	; return
 
 .InitializeAndPreparePokecenter2F:
 	setscene SCENE_FINISHED
@@ -35,22 +35,9 @@ TradeCenter_MapScripts:
 	end
 
 TradeCenterConsoleScript:
-	special TradeCenter
-	newloadmap MAPSETUP_LINKRETURN
+	; special TradeCenter
+	; newloadmap MAPSETUP_LINKRETURN
 	end
-
-TradeCenterFriendScript:
-; unreferenced
-	opentext
-	writetext .FriendReadyText
-	waitbutton
-	closetext
-	end
-
-.FriendReadyText:
-	text "Your friend is"
-	line "ready."
-	done
 
 TradeCenter_MapEvents:
 	db 0, 0 ; filler

@@ -18,16 +18,16 @@ TimeCapsule_MapScripts:
 	end
 
 .SetWhichChris:
-	special CableClubCheckWhichChris
-	iffalse .Chris2
+	; special CableClubCheckWhichChris
+	; iffalse .Chris2
 	disappear TIMECAPSULE_CHRIS2
 	appear TIMECAPSULE_CHRIS1
 	return
 
-.Chris2:
-	disappear TIMECAPSULE_CHRIS1
-	appear TIMECAPSULE_CHRIS2
-	return
+; .Chris2:
+	; disappear TIMECAPSULE_CHRIS1
+	; appear TIMECAPSULE_CHRIS2
+	; return
 
 .InitializeAndPreparePokecenter2F:
 	setscene SCENE_FINISHED
@@ -35,8 +35,8 @@ TimeCapsule_MapScripts:
 	end
 
 TimeCapsuleConsoleScript:
-	special TimeCapsule
-	newloadmap MAPSETUP_LINKRETURN
+	; special TimeCapsule
+	; newloadmap MAPSETUP_LINKRETURN
 	end
 
 TimeCapsuleFriendScript:

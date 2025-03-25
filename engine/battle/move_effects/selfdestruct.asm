@@ -6,7 +6,7 @@ BattleCommand_Selfdestruct:
 	cp EFFECT_HEALING_WISH
 	jr z, .Memento_HealingWish
 
-	farcall StubbedTrainerRankings_Selfdestruct
+	; farcall StubbedTrainerRankings_Selfdestruct
 	ld a, BATTLEANIM_PLAYER_DAMAGE
 	ld [wNumHits], a
 	ld c, 3
@@ -44,7 +44,7 @@ BattleCommand_Selfdestruct:
 	and a
 	ret nz
 
-	farcall StubbedTrainerRankings_Selfdestruct
+	; farcall StubbedTrainerRankings_Selfdestruct
 	ld a, BATTLEANIM_PLAYER_DAMAGE
 	ld [wNumHits], a
 	ld c, 3

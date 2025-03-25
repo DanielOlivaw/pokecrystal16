@@ -1,6 +1,3 @@
-GFX_49c0c:
-INCBIN "gfx/unknown/049c0c.2bpp"
-
 MainMenu:
 	xor a
 	ld [wDisableTextAcceleration], a
@@ -29,7 +26,7 @@ MainMenu:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 16, 7
+	menu_coords 0, 0, 12, 7
 	dw .MenuData
 	db 1 ; default option
 
@@ -44,99 +41,34 @@ MainMenu:
 	db "CONTINUE@"
 	db "NEW GAME@"
 	db "OPTIONS@"
-	db "MYSTERY GIFT@"
-	db "MOBILE@"
-	db "MOBILE STUDIUM@"
+	db "ABOUT@"
 
 .Jumptable:
 	dw MainMenu_Continue
 	dw MainMenu_NewGame
 	dw MainMenu_Options
-	dw MainMenu_MysteryGift
-	dw MainMenu_Mobile
-	dw MainMenu_MobileStudium
+	dw MainMenu_About
 
 CONTINUE       EQU 0
 NEW_GAME       EQU 1
 OPTIONS        EQU 2
-MYSTERY_GIFT   EQU 3
-MOBILE         EQU 4
-MOBILE_STUDIUM EQU 5
+ABOUT          EQU 3
 
 MainMenuItems:
 
 NewGameMenu:
-	db 2
+	db 3
 	db NEW_GAME
 	db OPTIONS
+	db ABOUT
 	db -1
 
 ContinueMenu:
-	db 3
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db -1
-
-MobileMysteryMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MYSTERY_GIFT
-	db MOBILE
-	db -1
-
-MobileMenu:
 	db 4
 	db CONTINUE
 	db NEW_GAME
 	db OPTIONS
-	db MOBILE
-	db -1
-
-MobileStudiumMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MOBILE
-	db MOBILE_STUDIUM
-	db -1
-
-MysteryMobileStudiumMenu:
-	db 6
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MYSTERY_GIFT
-	db MOBILE
-	db MOBILE_STUDIUM
-	db -1
-
-MysteryMenu:
-	db 4
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MYSTERY_GIFT
-	db -1
-
-MysteryStudiumMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MYSTERY_GIFT
-	db MOBILE_STUDIUM
-	db -1
-
-StudiumMenu:
-	db 4
-	db CONTINUE
-	db NEW_GAME
-	db OPTIONS
-	db MOBILE_STUDIUM
+	db ABOUT
 	db -1
 
 MainMenu_GetWhichMenu:
@@ -150,42 +82,7 @@ MainMenu_GetWhichMenu:
 	ret
 
 .next
-	ldh a, [hCGB]
-	cp $1
-	ld a, $1
-	ret nz
-	ld a, BANK(sNumDailyMysteryGiftPartnerIDs)
-	call GetSRAMBank
-	ld a, [sNumDailyMysteryGiftPartnerIDs]
-	cp -1
-	call CloseSRAM
-	jr nz, .mystery_gift
-	; This check makes no difference.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_MAIN_MENU_MOBILE_CHOICES_F, a
 	ld a, $1 ; Continue
-	jr z, .ok
-	jr .ok
-
-.ok
-	jr .ok2
-
-.ok2
-	ld a, $1 ; Continue
-	ret
-
-.mystery_gift
-	; This check makes no difference.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_MAIN_MENU_MOBILE_CHOICES_F, a
-	jr z, .ok3
-	jr .ok3
-
-.ok3
-	jr .ok4
-
-.ok4
-	ld a, $6 ; Mystery Gift
 	ret
 
 MainMenuJoypadLoop:
@@ -267,10 +164,6 @@ MainMenu_PrintCurrentTimeAndDay:
 	call PrintNum
 	ret
 
-.min
-; unused
-	db "min.@"
-
 .PrintTimeNotSet:
 	hlcoord 1, 14
 	ld de, .TimeNotSet
@@ -279,11 +172,6 @@ MainMenu_PrintCurrentTimeAndDay:
 
 .TimeNotSet:
 	db "TIME NOT SET@"
-
-.UnusedText:
-	; Clock time unknown
-	text_far UnknownText_0x1c5182
-	text_end
 
 .PlaceCurrentDay:
 	push de
@@ -328,10 +216,10 @@ MainMenu_Options:
 	farcall OptionsMenu
 	ret
 
-MainMenu_Continue:
-	farcall Continue
+MainMenu_About:
+	farcall AboutSpeech
 	ret
 
-MainMenu_MysteryGift:
-	farcall MysteryGift
+MainMenu_Continue:
+	farcall Continue
 	ret

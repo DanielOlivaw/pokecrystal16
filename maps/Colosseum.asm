@@ -23,16 +23,16 @@ Colosseum_MapScripts:
 	end
 
 .SetWhichChris:
-	special CableClubCheckWhichChris
-	iffalse .Chris2
+	; special CableClubCheckWhichChris
+	; iffalse .Chris2
 	disappear COLOSSEUM_CHRIS2
 	appear COLOSSEUM_CHRIS1
 	return
 
-.Chris2:
-	disappear COLOSSEUM_CHRIS1
-	appear COLOSSEUM_CHRIS2
-	return
+; .Chris2:
+	; disappear COLOSSEUM_CHRIS1
+	; appear COLOSSEUM_CHRIS2
+	; return
 
 .PreparePokecenter2F:
 	setmapscene POKECENTER_2F, SCENE_POKECENTER2F_LEAVE_COLOSSEUM
@@ -44,8 +44,8 @@ Colosseum_MapScripts:
 	end
 
 ColosseumConsoleScript:
-	special Colosseum
-	newloadmap MAPSETUP_LINKRETURN
+	; special Colosseum
+	; newloadmap MAPSETUP_LINKRETURN
 	end
 
 CableClubFriendScript:

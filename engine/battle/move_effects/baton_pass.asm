@@ -125,46 +125,47 @@ BattleCommand_BatonPass:
 	; ret
 
 BatonPass_LinkPlayerSwitch:
-	ld a, [wLinkMode]
-	and a
-	ret z
+	; ld a, [wLinkMode]
+	; and a
+	; ret z
 
-	ld a, BATTLEPLAYERACTION_USEITEM
-	ld [wBattlePlayerAction], a
+	; ld a, BATTLEPLAYERACTION_USEITEM
+	; ld [wBattlePlayerAction], a
 
-	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
-	call CallBattleCore
-	call CloseWindow
+	; call LoadStandardMenuHeader
+	; ld hl, LinkBattleSendReceiveAction
+	; call CallBattleCore
+	; call CloseWindow
 
-	xor a ; BATTLEPLAYERACTION_USEMOVE
-	ld [wBattlePlayerAction], a
+	; xor a ; BATTLEPLAYERACTION_USEMOVE
+	; ld [wBattlePlayerAction], a
 	ret
 
 BatonPass_LinkEnemySwitch:
-	ld a, [wLinkMode]
-	and a
-	ret z
+	ret
+	; ld a, [wLinkMode]
+	; and a
+	; ret z
 
-	call LoadStandardMenuHeader
-	ld hl, LinkBattleSendReceiveAction
-	call CallBattleCore
+	; call LoadStandardMenuHeader
+	; ld hl, LinkBattleSendReceiveAction
+	; call CallBattleCore
 
-	ld a, [wOTPartyCount]
-	add BATTLEACTION_SWITCH1
-	ld b, a
-	ld a, [wBattleAction]
-	cp BATTLEACTION_SWITCH1
-	jr c, .baton_pass
-	cp b
-	jr c, .switch
+	; ld a, [wOTPartyCount]
+	; add BATTLEACTION_SWITCH1
+	; ld b, a
+	; ld a, [wBattleAction]
+	; cp BATTLEACTION_SWITCH1
+	; jr c, .baton_pass
+	; cp b
+	; jr c, .switch
 
-.baton_pass
-	ld a, [wCurOTMon]
-	add BATTLEACTION_SWITCH1
-	ld [wBattleAction], a
-.switch
-	jp CloseWindow
+; .baton_pass
+	; ld a, [wCurOTMon]
+	; add BATTLEACTION_SWITCH1
+	; ld [wBattleAction], a
+; .switch
+	; jp CloseWindow
 
 FailedBatonPass:
 	ld a, BATTLE_VARS_MOVE_EFFECT

@@ -10,17 +10,17 @@ CianwoodPhotoStudioFishingGuruScript:
 	faceplayer
 	opentext
 	writetext CianwoodPhotoStudioFishingGuruText_Question
-	yesorno
-	iffalse .Refused
-	writetext CianwoodPhotoStudioFishingGuruText_Yes
-	waitbutton
-	special PhotoStudio
-	waitbutton
-	closetext
-	end
+	; yesorno
+	; iffalse .Refused
+	; writetext CianwoodPhotoStudioFishingGuruText_Yes
+	; waitbutton
+	; special PhotoStudio
+	; waitbutton
+	; closetext
+	; end
 
-.Refused:
-	writetext CianwoodPhotoStudioFishingGuruText_No
+; .Refused:
+	; writetext CianwoodPhotoStudioFishingGuruText_No
 	waitbutton
 	closetext
 	end
@@ -34,17 +34,17 @@ CianwoodPhotoStudioFishingGuruText_Question:
 	line "for a souvenir?"
 	done
 
-CianwoodPhotoStudioFishingGuruText_Yes:
-	text "OK! Big smile now!"
-	done
+; CianwoodPhotoStudioFishingGuruText_Yes:
+	; text "OK! Big smile now!"
+	; done
 
-CianwoodPhotoStudioFishingGuruText_No:
-	text "Oh, that's too"
-	line "bad. I thought it"
+; CianwoodPhotoStudioFishingGuruText_No:
+	; text "Oh, that's too"
+	; line "bad. I thought it"
 
-	para "would be a great"
-	line "memento…"
-	done
+	; para "would be a great"
+	; line "memento…"
+	; done
 
 CianwoodPhotoStudio_MapEvents:
 	db 0, 0 ; filler

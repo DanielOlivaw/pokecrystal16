@@ -438,7 +438,7 @@ UnknownScript_0x90261:
 RingTwice_StartCall:
 	call .Ring
 	call .Ring
-	farcall StubbedTrainerRankings_PhoneCalls
+	; farcall StubbedTrainerRankings_PhoneCalls
 	ret
 
 .Ring:
@@ -466,7 +466,7 @@ PhoneCall::
 	ld [wPhoneCaller + 1], a
 	call Phone_FirstOfTwoRings
 	call Phone_FirstOfTwoRings
-	farcall StubbedTrainerRankings_PhoneCalls
+	; farcall StubbedTrainerRankings_PhoneCalls
 	ret
 
 Phone_FirstOfTwoRings:

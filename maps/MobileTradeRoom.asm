@@ -19,11 +19,11 @@ MobileTradeRoom_MapScripts:
 
 MobileTradeRoomConsoleScript:
 	refreshscreen
-	special Function1037c2
+	; special Function1037c2
 	writetext MobileTradeRoom_EstablishingCommsText
 	waitbutton
 	reloadmappart
-	special Function101231
+	; special Function101231
 	closetext
 	end
 

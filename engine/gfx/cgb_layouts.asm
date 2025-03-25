@@ -1054,35 +1054,35 @@ _CGB_TrainerOrMonFrontpicPals:
 	ret
 
 _CGB_MysteryGift:
-	ld hl, .Palettes
-	ld de, wBGPals1
-	ld bc, 2 palettes
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	call ApplyPals
-	call WipeAttrMap
-	hlcoord 3, 7, wAttrMap
-	lb bc, 8, 14
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 1, 5, wAttrMap
-	lb bc, 1, 18
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 1, 16, wAttrMap
-	lb bc, 1, 18
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 0, 0, wAttrMap
-	lb bc, 17, 2
-	ld a, $1
-	call FillBoxCGB
-	hlcoord 18, 5, wAttrMap
-	lb bc, 12, 1
-	ld a, $1
-	call FillBoxCGB
-	call ApplyAttrMap
+	; ld hl, .Palettes
+	; ld de, wBGPals1
+	; ld bc, 2 palettes
+	; ld a, BANK(wBGPals1)
+	; call FarCopyWRAM
+	; call ApplyPals
+	; call WipeAttrMap
+	; hlcoord 3, 7, wAttrMap
+	; lb bc, 8, 14
+	; ld a, $1
+	; call FillBoxCGB
+	; hlcoord 1, 5, wAttrMap
+	; lb bc, 1, 18
+	; ld a, $1
+	; call FillBoxCGB
+	; hlcoord 1, 16, wAttrMap
+	; lb bc, 1, 18
+	; ld a, $1
+	; call FillBoxCGB
+	; hlcoord 0, 0, wAttrMap
+	; lb bc, 17, 2
+	; ld a, $1
+	; call FillBoxCGB
+	; hlcoord 18, 5, wAttrMap
+	; lb bc, 12, 1
+	; ld a, $1
+	; call FillBoxCGB
+	; call ApplyAttrMap
 	ret
 
-.Palettes:
-INCLUDE "gfx/mystery_gift/mystery_gift.pal"
+; .Palettes:
+; INCLUDE "gfx/mystery_gift/mystery_gift.pal"

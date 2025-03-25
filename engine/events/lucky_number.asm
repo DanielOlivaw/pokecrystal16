@@ -110,7 +110,7 @@ CheckForLuckyNumberWinners:
 	ld a, [wScriptVar]
 	and a
 	ret z ; found nothing
-	farcall StubbedTrainerRankings_LuckyNumberShow
+	; farcall StubbedTrainerRankings_LuckyNumberShow
 	ld a, [wTempByteValue]
 	ld hl, .FoundPartymonText
 	and a
