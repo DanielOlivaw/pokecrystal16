@@ -42,7 +42,7 @@ Function8b35d:
 
 Function8b363:
 	push bc
-	farcall Mobile_AlwaysReturnNotCarry
+	or a
 	pop bc
 	ret
 

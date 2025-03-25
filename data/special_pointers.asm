@@ -28,7 +28,7 @@ SpecialsPointers::
 	add_special CableClubCheckWhichChris ; $10
 	add_special CheckMysteryGift
 	add_special GetMysteryGiftItem
-	add_special UnlockMysteryGift
+	; add_special UnlockMysteryGift
 
 ; Map events
 	add_special BugContestJudging
@@ -167,7 +167,7 @@ SpecialsPointers::
 	add_special Mobile_SelectThreeMons
 	add_special Function1037eb
 	add_special Function10383c
-	add_special StubbedTrainerRankings_Healings
+	; add_special StubbedTrainerRankings_Healings
 	add_special RefreshSprites
 	add_special Function1037c2
 	add_special Function103780

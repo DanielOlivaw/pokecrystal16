@@ -1,80 +1,80 @@
-Unreferenced_Function16c000:
-	; Only for CGB
-	ldh a, [hCGB]
-	and a
-	ret z
-	; Only do this once per boot cycle
-	ldh a, [hSystemBooted]
-	and a
-	ret z
-	; Set some flag, preserving the old state
-	ld a, [wcfbe]
-	push af
-	set 7, a
-	ld [wcfbe], a
-	; Do stuff
-	call MobileSystemSplashScreen_InitGFX ; Load GFX
-	farcall SetRAMStateForMobile
-	farcall EnableMobile
-	call .RunJumptable
-	farcall DisableMobile
-	; Prevent this routine from running again
-	; until the next time the system is turned on
-	xor a
-	ldh [hSystemBooted], a
-	; Restore the flag state
-	pop af
-	ld [wcfbe], a
-	ret
-
-.RunJumptable:
-	xor a
-	ld [wJumptableIndex], a
-	ld [wcf64], a
-	ld [wd002], a
-	ld [wd003], a
-.loop
-	call DelayFrame
-	farcall Function10635c
-	ld a, [wd002]
-	ld hl, .Jumptable
-	rst JumpTable
-	call Function16cb2e
-	call Function16cbae
-	ld a, [wd002]
-	cp $ff
-	jr nz, .loop
-	ret
-
-.Jumptable:
-	dw .init
-	dw Function16c0ba
-	dw Function16c089
-	dw Function16c09e
-	dw Function16c0a8
-	dw Function16c0dc
-	dw Function16c0ec
-	dw Function16c0ba
-	dw Function16c0ca
-	dw Function16c0dc
-	dw Function16c0ec
-	dw .quit
-
-.init
-	ld a, [wcf64]
-	and a
-	ret z
-	ld [wd002], a
-	xor a
-	ld [wd003], a
-	ret
-
-.quit
-	push af
-	ld a, $ff
-	ld [wd002], a
-	pop af
-	ret
+;Unreferenced_Function16c000:
+;	; Only for CGB
+;	ldh a, [hCGB]
+;	and a
+;	ret z
+;	; Only do this once per boot cycle
+;	ldh a, [hSystemBooted]
+;	and a
+;	ret z
+;	; Set some flag, preserving the old state
+;	ld a, [wcfbe]
+;	push af
+;	set 7, a
+;	ld [wcfbe], a
+;	; Do stuff
+;	call MobileSystemSplashScreen_InitGFX ; Load GFX
+;	farcall SetRAMStateForMobile
+;	farcall EnableMobile
+;	call .RunJumptable
+;	farcall DisableMobile
+;	; Prevent this routine from running again
+;	; until the next time the system is turned on
+;	xor a
+;	ldh [hSystemBooted], a
+;	; Restore the flag state
+;	pop af
+;	ld [wcfbe], a
+;	ret
+;
+;.RunJumptable:
+;	xor a
+;	ld [wJumptableIndex], a
+;	ld [wcf64], a
+;	ld [wd002], a
+;	ld [wd003], a
+;.loop
+;	call DelayFrame
+;	farcall Function10635c
+;	ld a, [wd002]
+;	ld hl, .Jumptable
+;	rst JumpTable
+;	call Function16cb2e
+;	call Function16cbae
+;	ld a, [wd002]
+;	cp $ff
+;	jr nz, .loop
+;	ret
+;
+;.Jumptable:
+;	dw .init
+;	dw Function16c0ba
+;	dw Function16c089
+;	dw Function16c09e
+;	dw Function16c0a8
+;	dw Function16c0dc
+;	dw Function16c0ec
+;	dw Function16c0ba
+;	dw Function16c0ca
+;	dw Function16c0dc
+;	dw Function16c0ec
+;	dw .quit
+;
+;.init
+;	ld a, [wcf64]
+;	and a
+;	ret z
+;	ld [wd002], a
+;	xor a
+;	ld [wd003], a
+;	ret
+;
+;.quit
+;	push af
+;	ld a, $ff
+;	ld [wd002], a
+;	pop af
+;	ret
 
 Function16c089:
 	ld a, $1

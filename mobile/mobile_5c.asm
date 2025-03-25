@@ -635,7 +635,6 @@ Function171c41:
 	dec [hl]
 	ret nz
 	call ClearBGPalettes
-	farcall Stubbed_Function106462
 	farcall Function106464
 	ld a, $2
 	ld [wc303], a

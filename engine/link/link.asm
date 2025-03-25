@@ -1907,21 +1907,21 @@ Function28b22:
 	ldh [rSC], a
 	ret
 
-Unreferenced_Function28b42:
-	hlcoord 0, 16
-	ld a, "┘"
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	hlcoord 1, 16
-	ld a, " "
-	ld bc, SCREEN_WIDTH - 2
-	call ByteFill
-	hlcoord 2, 16
-	ld de, .Cancel
-	jp PlaceString
+; Unreferenced_Function28b42:
+	; hlcoord 0, 16
+	; ld a, "┘"
+	; ld bc, 2 * SCREEN_WIDTH
+	; call ByteFill
+	; hlcoord 1, 16
+	; ld a, " "
+	; ld bc, SCREEN_WIDTH - 2
+	; call ByteFill
+	; hlcoord 2, 16
+	; ld de, .Cancel
+	; jp PlaceString
 
-.Cancel:
-	db "CANCEL@"
+; .Cancel:
+	; db "CANCEL@"
 
 Function28b68:
 	ld a, [wOtherPlayerLinkMode]
@@ -2271,7 +2271,7 @@ LinkTrade:
 
 .save
 	farcall SaveAfterLinkTrade
-	farcall StubbedTrainerRankings_Trades
+	; farcall StubbedTrainerRankings_Trades
 	farcall BackupMobileEventIndex
 	ld c, 40
 	call DelayFrames
@@ -2326,17 +2326,17 @@ SetTradeRoomBGPals:
 	call SetPalettes
 	ret
 
-Unreferenced_Function28f09:
-	hlcoord 0, 0
-	ld b, 6
-	ld c, 18
-	call LinkTextboxAtHL
-	hlcoord 0, 8
-	ld b, 6
-	ld c, 18
-	call LinkTextboxAtHL
-	farcall PlaceTradePartnerNamesAndParty
-	ret
+; Unreferenced_Function28f09:
+	; hlcoord 0, 0
+	; ld b, 6
+	; ld c, 18
+	; call LinkTextboxAtHL
+	; hlcoord 0, 8
+	; ld b, 6
+	; ld c, 18
+	; call LinkTextboxAtHL
+	; farcall PlaceTradePartnerNamesAndParty
+	; ret
 
 INCLUDE "engine/movie/trade_animation.asm"
 
@@ -2872,16 +2872,16 @@ CableClubCheckWhichChris:
 	ld [wScriptVar], a
 	ret
 
-Unreferenced_Gen1LinkCommsBorderGFX:
-INCBIN "gfx/trade/unused_gen_1_border_tiles.2bpp"
+; Unreferenced_Gen1LinkCommsBorderGFX:
+; INCBIN "gfx/trade/unused_gen_1_border_tiles.2bpp"
 
-Unreferenced_Function29fe4:
-	ld a, BANK(sPartyMail)
-	call GetSRAMBank
-	ld d, FALSE
-	ld b, CHECK_FLAG
-	predef SmallFarFlagAction
-	call CloseSRAM
-	ld a, c
-	and a
-	ret
+; Unreferenced_Function29fe4:
+	; ld a, BANK(sPartyMail)
+	; call GetSRAMBank
+	; ld d, FALSE
+	; ld b, CHECK_FLAG
+	; predef SmallFarFlagAction
+	; call CloseSRAM
+	; ld a, c
+	; and a
+	; ret
