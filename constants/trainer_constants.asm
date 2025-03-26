@@ -809,10 +809,14 @@ KRIS EQU __enum__
 	trainerclass KIMONO_GIRL ; 3c
 	const NAOKO1
 	const NAOKO2
-	const SAYO
-	const ZUKI
-	const KUNI
-	const MIKI
+	const SAYO1
+	const SAYO2
+	const ZUKI1
+	const ZUKI2
+	const KUNI1
+	const KUNI2
+	const MIKI1
+	const MIKI2
 
 	trainerclass TWINS ; 3d
 	const AMYANDMAY1

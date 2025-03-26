@@ -14,56 +14,181 @@ DanceTheatre_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerKimonoGirlNaoko2:
-	trainer KIMONO_GIRL, NAOKO2, EVENT_BEAT_KIMONO_GIRL_NAOKO, KimonoGirlNaoko2SeenText, KimonoGirlNaoko2BeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
+TrainerKimonoGirlNaoko:
+	faceplayer
 	opentext
-	writetext KimonoGirlNaoko2AfterBattleText
+	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO
+	iffalse .battle1
+	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO_REMATCH
+	iftrue .after_battle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .after_battle
+	writetext KimonoGirlNaokoSeenText2
+	waitbutton
+	closetext
+	winlosstext KimonoGirlNaokoBeatenText2, 0
+	loadtrainer KIMONO_GIRL, NAOKO2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_NAOKO_REMATCH
+	end
+
+.battle1:
+	writetext KimonoGirlNaokoSeenText1
+	waitbutton
+	closetext
+	winlosstext KimonoGirlNaokoBeatenText1, 0
+	loadtrainer KIMONO_GIRL, NAOKO1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_NAOKO
+	end
+
+.after_battle
+	writetext KimonoGirlNaokoAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerKimonoGirlSayo:
-	trainer KIMONO_GIRL, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, KimonoGirlSayoSeenText, KimonoGirlSayoBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO
+	iffalse .battle1
+	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO_REMATCH
+	iftrue .after_battle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .after_battle
+	writetext KimonoGirlSayoSeenText2
+	waitbutton
+	closetext
+	winlosstext KimonoGirlSayoBeatenText2, 0
+	loadtrainer KIMONO_GIRL, SAYO2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_SAYO_REMATCH
+	end
+
+.battle1:
+	writetext KimonoGirlSayoSeenText1
+	waitbutton
+	closetext
+	winlosstext KimonoGirlSayoBeatenText1, 0
+	loadtrainer KIMONO_GIRL, SAYO1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_SAYO
+	end
+
+.after_battle
 	writetext KimonoGirlSayoAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerKimonoGirlZuki:
-	trainer KIMONO_GIRL, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, KimonoGirlZukiSeenText, KimonoGirlZukiBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_ZUKI
+	iffalse .battle1
+	checkevent EVENT_BEAT_KIMONO_GIRL_ZUKI_REMATCH
+	iftrue .after_battle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .after_battle
+	writetext KimonoGirlZukiSeenText2
+	waitbutton
+	closetext
+	winlosstext KimonoGirlZukiBeatenText2, 0
+	loadtrainer KIMONO_GIRL, ZUKI2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_ZUKI_REMATCH
+	end
+
+.battle1:
+	writetext KimonoGirlZukiSeenText1
+	waitbutton
+	closetext
+	winlosstext KimonoGirlZukiBeatenText1, 0
+	loadtrainer KIMONO_GIRL, ZUKI1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_ZUKI
+	end
+
+.after_battle
 	writetext KimonoGirlZukiAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerKimonoGirlKuni:
-	trainer KIMONO_GIRL, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, KimonoGirlKuniSeenText, KimonoGirlKuniBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_KUNI
+	iffalse .battle1
+	checkevent EVENT_BEAT_KIMONO_GIRL_KUNI_REMATCH
+	iftrue .after_battle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .after_battle
+	writetext KimonoGirlKuniSeenText2
+	waitbutton
+	closetext
+	winlosstext KimonoGirlKuniBeatenText2, 0
+	loadtrainer KIMONO_GIRL, KUNI2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_KUNI_REMATCH
+	end
+
+.battle1:
+	writetext KimonoGirlKuniSeenText1
+	waitbutton
+	closetext
+	winlosstext KimonoGirlKuniBeatenText1, 0
+	loadtrainer KIMONO_GIRL, KUNI1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_KUNI
+	end
+
+.after_battle
 	writetext KimonoGirlKuniAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerKimonoGirlMiki:
-	trainer KIMONO_GIRL, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, KimonoGirlMikiSeenText, KimonoGirlMikiBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
+	faceplayer
 	opentext
+	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI
+	iffalse .battle1
+	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI_REMATCH
+	iftrue .after_battle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .after_battle
+	writetext KimonoGirlMikiSeenText2
+	waitbutton
+	closetext
+	winlosstext KimonoGirlMikiBeatenText2, 0
+	loadtrainer KIMONO_GIRL, MIKI2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_MIKI_REMATCH
+	end
+
+.battle1:
+	writetext KimonoGirlMikiSeenText1
+	waitbutton
+	closetext
+	winlosstext KimonoGirlMikiBeatenText1, 0
+	loadtrainer KIMONO_GIRL, MIKI1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_KIMONO_GIRL_MIKI
+	end
+
+.after_battle
 	writetext KimonoGirlMikiAfterBattleText
 	waitbutton
 	closetext
@@ -137,24 +262,41 @@ DanceTheatreGrannyScript:
 DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
 
-KimonoGirlNaoko2SeenText:
+KimonoGirlNaokoSeenText1:
 	text "You have lovely"
 	line "#MON. May I see"
 	cont "them in battle?"
 	done
 
-KimonoGirlNaoko2BeatenText:
+KimonoGirlNaokoBeatenText1:
 	text "Oh, you are very"
 	line "strong."
 	done
 
-KimonoGirlNaoko2AfterBattleText:
+KimonoGirlNaokoAfterBattleText:
 	text "I enjoyed that"
 	line "bout. I would like"
 	cont "to see you again."
 	done
 
-KimonoGirlSayoSeenText:
+KimonoGirlNaokoSeenText2:
+	text "I remember you de-"
+	line "feating us before."
+
+	para "You are quite the"
+	line "TRAINER."
+
+	para "Allow me to chall-"
+	line "enge you and your"
+	cont "#MON once more!"
+	done
+
+KimonoGirlNaokoBeatenText2:
+	text "That was indeed"
+	line "excellent."
+	done
+
+KimonoGirlSayoSeenText1:
 	text "I always dance"
 	line "with my #MON."
 
@@ -162,7 +304,7 @@ KimonoGirlSayoSeenText:
 	line "train them."
 	done
 
-KimonoGirlSayoBeatenText:
+KimonoGirlSayoBeatenText1:
 	text "Oh, so close!"
 	line "I almost had you."
 	done
@@ -175,7 +317,26 @@ KimonoGirlSayoAfterBattleText:
 	line "MON."
 	done
 
-KimonoGirlZukiSeenText:
+KimonoGirlSayoSeenText2:
+	text "You are quite"
+	line "strong."
+
+	para "I heard how you"
+	line "helped KURT and"
+
+	para "the SLOWPOKE in"
+	line "AZALEA TOWN."
+
+	para "Will you show me"
+	line "that strength?"
+	done
+
+KimonoGirlSayoBeatenText2:
+	text "Yes, you are truly"
+	line "strong."
+	done
+
+KimonoGirlZukiSeenText1:
 	text "Isn't my barrette"
 	line "pretty?"
 
@@ -183,7 +344,7 @@ KimonoGirlZukiSeenText:
 	line "battle?"
 	done
 
-KimonoGirlZukiBeatenText:
+KimonoGirlZukiBeatenText1:
 	text "I don't have any"
 	line "#MON left…"
 	done
@@ -194,13 +355,31 @@ KimonoGirlZukiAfterBattleText:
 	cont "rette every month."
 	done
 
-KimonoGirlKuniSeenText:
+KimonoGirlZukiSeenText2:
+	text "When we last"
+	line "battled, your bond"
+
+	para "with your #MON"
+	line "was strong."
+
+	para "How much closer"
+	line "have you bonded"
+	cont "with your #MON?"
+	done
+
+KimonoGirlZukiBeatenText2:
+	text "You have beauti-"
+	line "fully demonstrated"
+	cont "your bonds."
+	done
+
+KimonoGirlKuniSeenText1:
 	text "Oh, you're a cute"
 	line "trainer. Would you"
 	cont "like to battle?"
 	done
 
-KimonoGirlKuniBeatenText:
+KimonoGirlKuniBeatenText1:
 	text "You're stronger"
 	line "than you look."
 	done
@@ -213,13 +392,32 @@ KimonoGirlKuniAfterBattleText:
 	line "I guess I'm not."
 	done
 
-KimonoGirlMikiSeenText:
+KimonoGirlKuniSeenText2:
+	text "I looked at you in"
+	line "wonder when you"
+
+	para "thwarted TEAM"
+	line "ROCKET's mission"
+
+	para "to take over the"
+	line "RADIO TOWER."
+
+	para "You must show me"
+	line "your strength."
+	done
+
+KimonoGirlKuniBeatenText2:
+	text "Oh, you are"
+	line "wonderful…"
+	done
+
+KimonoGirlMikiSeenText1:
 	text "Do you like my"
 	line "dancing? I'm good"
 	cont "at #MON too."
 	done
 
-KimonoGirlMikiBeatenText:
+KimonoGirlMikiBeatenText1:
 	text "Ooh, you're good"
 	line "at #MON too."
 	done
@@ -233,6 +431,22 @@ KimonoGirlMikiAfterBattleText:
 
 	para "My #MON keep my"
 	line "spirits up too."
+	done
+
+KimonoGirlMikiSeenText2:
+	text "I was told you"
+	line "passed the test"
+
+	para "of BLACKTHORN's"
+	line "elder."
+
+	para "Would you battle"
+	line "me once more?"
+	done
+
+KimonoGirlMikiBeatenText2:
+	text "Oh, so close!"
+	line "I almost had you."
 	done
 
 SurfGuyNeverLeftAScratchText:
@@ -351,11 +565,11 @@ DanceTheatre_MapEvents:
 	bg_event  6,  6, BGEVENT_UP, DanceTheatreFancyPanel
 
 	db 9 ; object events
-	object_event  0,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlNaoko2, -1
-	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlSayo, -1
-	object_event  6,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlZuki, -1
-	object_event  9,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlKuni, -1
-	object_event 11,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlMiki, -1
+	object_event  0,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerKimonoGirlNaoko, -1
+	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerKimonoGirlSayo, -1
+	object_event  6,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerKimonoGirlZuki, -1
+	object_event  9,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerKimonoGirlKuni, -1
+	object_event 11,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerKimonoGirlMiki, -1
 	object_event  7, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterSurfGuy, -1
 	object_event  6,  8, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DanceTheaterRhydon, -1
 	object_event 10, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheatreCooltrainerMScript, -1

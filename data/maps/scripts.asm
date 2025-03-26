@@ -195,7 +195,6 @@ INCLUDE "maps/EcruteakTinTowerEntrance.asm"
 INCLUDE "maps/WiseTriosRoom.asm"
 INCLUDE "maps/EcruteakPokecenter1F.asm"
 INCLUDE "maps/EcruteakLugiaSpeechHouse.asm"
-INCLUDE "maps/DanceTheatre.asm"
 INCLUDE "maps/EcruteakMart.asm"
 INCLUDE "maps/EcruteakGym.asm"
 INCLUDE "maps/EcruteakItemfinderHouse.asm"
@@ -482,6 +481,7 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 
 SECTION "Map Scripts 25", ROMX
 
+INCLUDE "maps/DanceTheatre.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/ViridianForest.asm"

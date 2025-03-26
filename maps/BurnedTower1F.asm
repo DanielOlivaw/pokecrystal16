@@ -325,8 +325,7 @@ BurnedTowerSilver_AfterText2:
 	done
 
 BurnedTower1FEusineIntroText:
-	text "EUSINE: My name's"
-	line "EUSINE."
+	text "My name's EUSINE."
 
 	para "I'm on the trail"
 	line "of a #MON named"
