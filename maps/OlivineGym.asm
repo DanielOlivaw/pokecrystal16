@@ -5,7 +5,27 @@
 OlivineGym_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Jasmine
+
+.Jasmine:
+	checkevent EVENT_OLIVINE_GYM_JASMINE
+	iftrue .JasmineDisappear
+	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
+	iffalse .JasmineAppear
+	checkevent EVENT_JASMINE_REMATCH
+	iftrue .JasmineAppear
+	checktime DAY | EVE
+	iffalse .JasmineAppear
+	readvar VAR_WEEKDAY
+	ifnotequal WEDNESDAY, .JasmineAppear
+.JasmineDisappear
+	disappear OLIVINEGYM_JASMINE
+	return
+
+.JasmineAppear:
+	appear OLIVINEGYM_JASMINE
+	return
 
 OlivineGymJasmineScript:
 	faceplayer

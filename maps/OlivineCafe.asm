@@ -2,11 +2,59 @@
 	const OLIVINECAFE_SAILOR1
 	const OLIVINECAFE_FISHING_GURU
 	const OLIVINECAFE_SAILOR2
+	const OLIVINECAFE_JASMINE
 
 OlivineCafe_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Jasmine
+
+.Jasmine:
+	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
+	iffalse .JasmineDisappear
+	checkevent EVENT_JASMINE_REMATCH
+	iftrue .JasmineDisappear
+	checktime DAY | EVE
+	iffalse .JasmineDisappear
+	readvar VAR_WEEKDAY
+	ifequal WEDNESDAY, .JasmineAppear
+.JasmineDisappear
+	disappear OLIVINECAFE_JASMINE
+	return
+
+.JasmineAppear:
+	appear OLIVINECAFE_JASMINE
+	return
+
+OlivineCafeJasmineScript:
+	faceplayer
+	opentext
+	checkevent EVENT_JASMINE_REMATCH
+	iftrue .FightDone
+	writetext OlivineCafeJasmineIntroText1
+	yesorno
+	iffalse .Refused
+	writetext OlivineCafeJasmineIntroText2
+	waitbutton
+	closetext
+	winlosstext OlivineCafeJasmineLossText, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_JASMINE_REMATCH
+	opentext
+.FightDone
+	writetext OlivineCafeJasmineAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext OlivineCafeJasmineNoBattleText
+	waitbutton
+	closetext
+	end
 
 OlivineCafeStrengthSailorScript:
 	faceplayer
@@ -28,6 +76,50 @@ OlivineCafeFishingGuruScript:
 
 OlivineCafeSailorScript:
 	jumptextfaceplayer OlivineCafeSailorText
+
+OlivineCafeJasmineIntroText1:
+	text "JASMINE: Hi!"
+
+	para "…!"
+
+	para "These empty dishes"
+	line "are not all mine…"
+
+	para "Er… Actually, the"
+	line "person who sat"
+
+	para "here ahead of me"
+	line "ate a lot…"
+
+	para "Anyway, would you"
+	line "like to battle me"
+	cont "again?"
+	done
+
+OlivineCafeJasmineIntroText2:
+	text "My #MON are"
+	line "ready for a"
+	cont "rematch…"
+
+	para "Let's begin!"
+	done
+
+OlivineCafeJasmineLossText:
+	text "True to your"
+	line "reputation…"
+	done
+
+OlivineCafeJasmineAfterBattleText:
+	text "JASMINE: Um…"
+
+	para "Keep on doing your"
+	line "best… with your"
+	cont "#MON."
+	done
+
+OlivineCafeJasmineNoBattleText:
+	text "Oh… I understand…"
+	done
 
 OlivineCafeStrengthSailorText:
 	text "Hah! Your #MON"
@@ -87,7 +179,8 @@ OlivineCafe_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  4,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
 	object_event  7,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
 	object_event  6,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1
+	object_event  2,  4, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCafeJasmineScript, EVENT_JASMINE_REMATCH
