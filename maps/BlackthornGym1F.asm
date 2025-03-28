@@ -8,8 +8,9 @@
 BlackthornGym1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_TILES, .Boulders
+	callback MAPCALLBACK_OBJECTS, .CheckClair
 
 .Boulders:
 	checkevent EVENT_BOULDER_IN_BLACKTHORN_GYM_1
@@ -24,6 +25,23 @@ BlackthornGym1F_MapScripts:
 	iffalse .skip3
 	changeblock 8, 6, $3b ; fallen boulder 2
 .skip3
+	return
+
+.CheckClair:
+	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
+	iffalse .AppearClair
+	checkevent EVENT_CLAIR_REMATCH
+	iftrue .AppearClair
+	checktime EVE | NITE
+	iffalse .AppearClair
+	readvar VAR_WEEKDAY
+	ifequal FRIDAY, .DisappearClair
+.AppearClair:
+	appear BLACKTHORNGYM1F_CLAIR
+	return
+
+.DisappearClair:
+	disappear BLACKTHORNGYM1F_CLAIR
 	return
 
 BlackthornGymClairScript:
@@ -285,8 +303,9 @@ BlackthornGymClairText_League:
 	done
 
 CooltrainermPaulSeenText:
-	text "Your first battle"
-	line "against dragons?"
+	text "Is this your first"
+	line "battle against"
+	cont "dragons?"
 
 	para "I'll show you how"
 	line "tough they are!"

@@ -15,7 +15,8 @@ DragonsDenB1F_MapScripts:
 	scene_script .DummyScene0 ; SCENE_DRAGONSDENB1F_NOTHING
 	scene_script .DummyScene1 ; SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM
 
-	db 1 ; callbacks
+	db 2 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .CheckClair
 	callback MAPCALLBACK_NEWMAP, .CheckSilver
 
 .DummyScene0:
@@ -26,19 +27,33 @@ DragonsDenB1F_MapScripts:
 
 .CheckSilver:
 	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-	iftrue .CheckDay
-	disappear DRAGONSDENB1F_SILVER
-	return
-
-.CheckDay:
+	iffalse .DisappearSilver
 	readvar VAR_WEEKDAY
 	ifequal TUESDAY, .AppearSilver
 	ifequal THURSDAY, .AppearSilver
+.DisappearSilver:
 	disappear DRAGONSDENB1F_SILVER
 	return
 
 .AppearSilver:
 	appear DRAGONSDENB1F_SILVER
+	return
+
+.CheckClair:
+	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
+	iffalse .DisappearClair
+	checkevent EVENT_CLAIR_REMATCH
+	iftrue .DisappearClair
+	checktime EVE | NITE
+	iffalse .DisappearClair
+	readvar VAR_WEEKDAY
+	ifequal FRIDAY, .AppearClair
+.DisappearClair:
+	disappear DRAGONSDENB1F_CLAIR2
+	return
+
+.AppearClair:
+	appear DRAGONSDENB1F_CLAIR2
 	return
 
 DragonsDenB1F_ClairScene:
@@ -54,13 +69,6 @@ DragonsDenB1F_ClairScene:
 	opentext
 	writetext ClairText_GiveDragonbreathDragonDen
 	buttonsound
-	; givetmhm TM_DRAGONBREATH
-	; iffalse .BagFull
-	; getitemname STRING_BUFFER_3, TM_DRAGONBREATH
-	; writetext NotifyReceiveDragonbreath
-	; playsound SFX_ITEM
-	; waitsfx
-	; itemnotify
 	verbosegivetmhm TM_DRAGON_PULSE
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext ClairText_DescribeDragonbreathDragonDen
@@ -127,30 +135,8 @@ TrainerTwinsLeaandpia2:
 	closetext
 	end
 
-DragonsDenB1FDragonFangScript:
-; This whole script is written out rather than as an itemball
-; because it's left over from the GS event.
-	giveitem DRAGON_FANG
-	iffalse .BagFull
-	disappear DRAGONSDENB1F_POKE_BALL1
-	opentext
-	getitemname STRING_BUFFER_3, DRAGON_FANG
-	writetext Text_FoundDragonFang
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	closetext
-	end
-
-.BagFull:
-	opentext
-	getitemname STRING_BUFFER_3, DRAGON_FANG
-	writetext Text_FoundDragonFang
-	buttonsound
-	writetext Text_NoRoomForDragonFang
-	waitbutton
-	closetext
-	end
+DragonsDenB1FDragonFang:
+	itemball DRAGON_FANG
 
 DragonsDenB1FSilverScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
@@ -176,9 +162,31 @@ DragonsDenB1FClairScript:
 	playmusic MUSIC_CLAIR
 	faceplayer
 	opentext
+	checkevent EVENT_CLAIR_REMATCH
+	iftrue .FightDone
 	writetext ClairText_AskAboutRematch
-	buttonsound
+	yesorno
+	iffalse .Refused
 	writetext ClairText_AgreeToRematch
+	waitbutton
+	closetext
+	winlosstext ClairText_DragonsDenLoss, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	playmusic MUSIC_CLAIR
+	setevent EVENT_CLAIR_REMATCH
+	opentext
+.FightDone
+	writetext ClairText_AfterBattle
+	waitbutton
+	closetext
+	special RestartMapMusic
+	end
+
+.Refused
+	writetext ClairText_RefusedBattle
 	waitbutton
 	closetext
 	special RestartMapMusic
@@ -291,26 +299,47 @@ ClairText_WhatsTheMatterDragonDen:
 	done
 
 ClairText_AskAboutRematch:
-	text "CLAIR: It's still"
-	line "early, and you've"
+	text "CLAIR: It's Friday"
+	line "night, and you've"
+	cont "got nothing to do?"
 
-	para "got nothing to do"
-	line "already?"
-	
 	para "I might have time"
 	line "to listen to you."
-	
-	para "…You want a"
-	line "rematch at the"
-	cont "FIGHTING DOJO?"
+
+	para "If you insist,"
+	line "we can have a"
+	cont "rematch, too!"
 	done
-	
+
 ClairText_AgreeToRematch:
-	text "CLAIR: I can"
-	line "battle you on"
-	
-	para "Friday nights, if"
-	line "you insist!"
+	text "Hahaha. It's great"
+	line "that you're"
+	cont "stepping up."
+
+	para "Now give it your"
+	line "all!"
+	done
+
+ClairText_RefusedBattle:
+	text "What in the world?"
+
+	para "Are you trying to"
+	line "make fun of me?!"
+	done
+
+ClairText_DragonsDenLoss:
+	text "Oh, I see..."
+	done
+
+ClairText_AfterBattle:
+	text "I must excuse"
+	line "myself."
+
+	para "…<PLAYER>, it was"
+	line "a fun battle."
+
+	para "But next time, I"
+	line "won't lose!"
 	done
 
 DragonShrineSignpostText:
@@ -457,7 +486,7 @@ DragonsDenB1F_MapEvents:
 	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
 	db 10 ; object events
-	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
+	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FDragonFang, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 30, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGONS_DEN_CLAIR
 	object_event 16,  5, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FClairScript, EVENT_RIVAL_DRAGONS_DEN
 	object_event 20, 23, SPRITE_SILVER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FSilverScript, EVENT_RIVAL_DRAGONS_DEN
