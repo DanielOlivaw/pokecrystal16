@@ -270,7 +270,7 @@ BlackthornGroupSprites:
 	db 0 ; end
 
 DungeonsGroupSprites:
-; NationalPark, NationalParkBugContest, RuinsOfAlphOutside
+; NationalPark, NationalParkBugContest, RuinsOfAlphOutside, ViridianForest
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_F
 	db SPRITE_TEACHER
@@ -279,7 +279,8 @@ DungeonsGroupSprites:
 	db SPRITE_ROCKER
 	db SPRITE_FISHER
 	db SPRITE_SCIENTIST
-; 8 of max 9 walking sprites
+	db SPRITE_BUGSY
+; 9 of max 9 walking sprites
 	db SPRITE_GAMEBOY_KID
 	db SPRITE_LIEPARD
 	db SPRITE_POKE_BALL

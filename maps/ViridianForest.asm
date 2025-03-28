@@ -4,6 +4,7 @@
 	const VIRIDIANFOREST_SUPER_NERD3
 	const VIRIDIANFOREST_SUPER_NERD4
 	const VIRIDIANFOREST_SUPER_NERD5
+	const VIRIDIANFOREST_BUGSY
 	const VIRIDIANFOREST_POKE_BALL1
 	const VIRIDIANFOREST_POKE_BALL2
 	const VIRIDIANFOREST_POKE_BALL3
@@ -12,7 +13,52 @@
 ViridianForest_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Bugsy
+
+.Bugsy:
+	checkevent EVENT_BUGSY_REMATCH
+	iftrue .BugsyDisappear
+	checktime DAY
+	iffalse .BugsyDisappear
+	readvar VAR_WEEKDAY
+	ifequal THURSDAY, .BugsyAppear
+.BugsyDisappear:
+	disappear VIRIDIANFOREST_BUGSY
+	return
+
+.BugsyAppear:
+	appear VIRIDIANFOREST_BUGSY
+	return
+
+ViridianForestBugsyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BUGSY_REMATCH
+	iftrue .FightDone
+	writetext ViridianForestBugsyIntroText1
+	yesorno
+	iffalse .Refused
+	writetext ViridianForestBugsyIntroText2
+	waitbutton
+	closetext
+	winlosstext ViridianForestBugsyLossText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BUGSY_REMATCH
+	opentext
+.FightDone
+	writetext ViridianForestBugsyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext ViridianForestBugsyNoBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerBugManiacAbner:
 	trainer BUG_MANIAC, ABNER, EVENT_BEAT_BUG_MANIAC_ABNER, BugManiacAbnerSeenText, BugManiacAbnerBeatenText, 0, .Script
@@ -98,6 +144,50 @@ ViridianForestHiddenMaxEther:
 
 ViridianForestHiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_ROUTE_2_HIDDEN_FULL_RESTORE
+
+ViridianForestBugsyIntroText1:
+	text "BUGSY: Hi,"
+	line "<PLAY_G>!"
+
+	para "I came to KANTO to"
+	line "look for BUG-type"
+
+	para "#MON, so I can"
+	line "become a stronger"
+
+	para "BUG-type #MON"
+	line "TRAINER!"
+
+	para "Hey, why don't we"
+	line "have a battle?"
+	done
+
+ViridianForestBugsyIntroText2:
+	text "Behold my bug"
+	line "research!"
+	done
+
+ViridianForestBugsyLossText:
+	text "I need to do some"
+	line "more research."
+	done
+
+ViridianForestBugsyAfterBattleText:
+	text "BUGSY: You must"
+	line "have studied a lot"
+	cont "about #MON!"
+
+	para "If you wanna"
+	line "battle again, come"
+
+	para "find me here in"
+	line "VIRIDIAN FOREST!"
+	done
+
+ViridianForestBugsyNoBattleText:
+	text "Oh, well…"
+	line "That's OK…"
+	done
 
 BugManiacAbnerSeenText:
 	text "Some people prefer"
@@ -221,12 +311,13 @@ ViridianForest_MapEvents:
 	bg_event  5, 46, BGEVENT_ITEM, ViridianForestHiddenMaxEther
 	bg_event 13, 22, BGEVENT_ITEM, ViridianForestHiddenFullRestore
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event  7, 18, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugManiacAbner, -1
 	object_event 29,  7, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugManiacEllis, -1
 	object_event 36, 24, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugManiacStacey, -1
 	object_event 34, 36, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugManiacDion, -1
 	object_event  9, 44, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugManiacDane, -1
+	object_event 21, 46, SPRITE_BUGSY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestBugsyScript, EVENT_BUGSY_REMATCH
 	tmhmball_event 36, 46, TM_PSYCH_UP, EVENT_ROUTE_2_DIRE_HIT
 	object_event 15,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestDireHit, EVENT_ROUTE_2_MAX_POTION
 	object_event  6, 34, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestRazorFang, EVENT_VIRIDIAN_FOREST_RAZOR_FANG
