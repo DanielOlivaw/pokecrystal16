@@ -85,26 +85,20 @@ BlackthornGymClairScript:
 	writetext BlackthornGymClairText_YouKeptMeWaiting
 	buttonsound
 	verbosegivetmhm TM_DRAGON_PULSE
-	; givetmhm TM_DRAGONBREATH
-	; iffalse .BagFull
-	; getitemname STRING_BUFFER_3, TM_DRAGONBREATH
-	; writetext BlackthornGymText_ReceivedTM24
-	; playsound SFX_ITEM
-	; waitsfx
-	; itemnotify
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext BlackthornGymClairText_DescribeTM24
 	buttonsound
-	; sjump .GotTM24
-
-; .BagFull:
-	; writetext BlackthornGymClairText_BagFull
-	; waitbutton
-	; closetext
-	; end
 
 .GotTM24:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .BeatEliteFour
 	writetext BlackthornGymClairText_League
+	waitbutton
+	closetext
+	end
+
+.BeatEliteFour:
+	writetext BlackthornGymClairText_AfterLeague
 	waitbutton
 	closetext
 	end
@@ -291,6 +285,23 @@ BlackthornGymClairText_League:
 	para "Don't you dare"
 	line "lose at the #-"
 	cont "MON LEAGUE!"
+
+	para "If you do, I'll"
+	line "feel even worse"
+
+	para "about having lost"
+	line "to you!"
+
+	para "Give it every-"
+	line "thing you've got."
+	done
+
+BlackthornGymClairText_AfterLeague:
+	text "CLAIR: Whatever"
+	line "you have to face"
+
+	para "from now, don't"
+	line "you dare give up!"
 
 	para "If you do, I'll"
 	line "feel even worse"
