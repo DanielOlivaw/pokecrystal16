@@ -48,8 +48,11 @@ KarenScript_Battle:
 	writetext KarenScript_KarenBeforeText
 	waitbutton
 	closetext
+	readvar VAR_BADGES
+	ifequal NUM_BADGES, .Team2
 	winlosstext KarenScript_KarenBeatenText, 0
 	loadtrainer KAREN, KAREN1
+.StartBattle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
@@ -64,6 +67,11 @@ KarenScript_Battle:
 	setevent EVENT_KARENS_ROOM_EXIT_OPEN
 	waitsfx
 	end
+
+.Team2:
+	winlosstext KarenScript_KarenBeatenText, 0
+	loadtrainer KAREN, KAREN2
+	sjump .StartBattle
 
 KarenScript_AfterBattle:
 	writetext KarenScript_KarenDefeatText
