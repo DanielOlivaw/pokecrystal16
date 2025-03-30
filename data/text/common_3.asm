@@ -750,43 +750,43 @@ UnknownText_0x1c50bb::
 	text "Darn!"
 	done
 
-_MobileStadiumEntryText::
-	text "Data for use in"
-	line "the MOBILE STADIUM"
+; _MobileStadiumEntryText::
+	; text "Data for use in"
+	; line "the MOBILE STADIUM"
 
-	para "of the N64 #MON"
-	line "STADIUM 2 can be"
-	cont "read here."
+	; para "of the N64 #MON"
+	; line "STADIUM 2 can be"
+	; cont "read here."
 
-	para "Read the data?"
-	done
+	; para "Read the data?"
+	; done
 
-_MobileStadiumSuccessText::
-	text "Data transfer is"
-	line "complete."
+; _MobileStadiumSuccessText::
+	; text "Data transfer is"
+	; line "complete."
 
-	para "We hope you enjoy"
-	line "MOBILE STADIUM"
+	; para "We hope you enjoy"
+	; line "MOBILE STADIUM"
 
-	para "battles in the N64"
-	line "#MON STADIUM 2."
+	; para "battles in the N64"
+	; line "#MON STADIUM 2."
 
-	para ""
-	done
+	; para ""
+	; done
 
 UnknownText_0x1c5182::
 	text "Clock time unknown"
 	done
 
-UnknownText_0x1c5196::
-	text "Delete the saved"
-	line "LOG-IN PASSWORD?"
-	done
+; UnknownText_0x1c5196::
+	; text "Delete the saved"
+	; line "LOG-IN PASSWORD?"
+	; done
 
-UnknownText_0x1c51b9::
-	text "Deleted the LOG-IN"
-	line "PASSWORD."
-	done
+; UnknownText_0x1c51b9::
+	; text "Deleted the LOG-IN"
+	; line "PASSWORD."
+	; done
 
 UnknownText_0x1c51d7::
 	text "Pick three #MON"
@@ -811,107 +811,107 @@ UnknownText_0x1c521c::
 	line "may enter."
 	prompt
 
-UnknownText_0x1c5238::
-	text "The CARD FOLDER"
-	line "stores your and"
+; UnknownText_0x1c5238::
+	; text "The CARD FOLDER"
+	; line "stores your and"
 
-	para "your friends'"
-	line "CARDS."
+	; para "your friends'"
+	; line "CARDS."
 
-	para "A CARD contains"
-	line "information like"
+	; para "A CARD contains"
+	; line "information like"
 
-	para "the person's name,"
-	line "phone number and"
-	cont "profile."
+	; para "the person's name,"
+	; line "phone number and"
+	; cont "profile."
 
-	para ""
-	done
+	; para ""
+	; done
 
-UnknownText_0x1c52bc::
-	text "This is your CARD."
+; UnknownText_0x1c52bc::
+	; text "This is your CARD."
 
-	para "Once you've"
-	line "entered your phone"
+	; para "Once you've"
+	; line "entered your phone"
 
-	para "number, you can"
-	line "trade CARDS with"
-	cont "your friends."
+	; para "number, you can"
+	; line "trade CARDS with"
+	; cont "your friends."
 
-	para ""
-	done
+	; para ""
+	; done
 
-UnknownText_0x1c531e::
-	text "If you have your"
-	line "friend's CARD, you"
+; UnknownText_0x1c531e::
+	; text "If you have your"
+	; line "friend's CARD, you"
 
-	para "can use it to make"
-	line "a call from a"
+	; para "can use it to make"
+	; line "a call from a"
 
-	para "mobile phone on"
-	line "the 2nd floor of a"
-	cont "#MON CENTER."
+	; para "mobile phone on"
+	; line "the 2nd floor of a"
+	; cont "#MON CENTER."
 
-	para ""
-	done
+	; para ""
+	; done
 
-UnknownText_0x1c5394::
-	text "To safely store"
-	line "your collection of"
+; UnknownText_0x1c5394::
+	; text "To safely store"
+	; line "your collection of"
 
-	para "CARDS, you must"
-	line "set a PASSCODE for"
-	cont "your CARD FOLDER."
+	; para "CARDS, you must"
+	; line "set a PASSCODE for"
+	; cont "your CARD FOLDER."
 
-	para ""
-	done
+	; para ""
+	; done
 
-UnknownText_0x1c53ee::
-	text "If the CARD FOLDER"
-	line "is deleted, all"
+; UnknownText_0x1c53ee::
+	; text "If the CARD FOLDER"
+	; line "is deleted, all"
 
-	para "its CARDS and the"
-	line "PASSCODE will also"
-	cont "be deleted."
+	; para "its CARDS and the"
+	; line "PASSCODE will also"
+	; cont "be deleted."
 
-	para "Beware--a deleted"
-	line "CARD FOLDER can't"
-	cont "be restored."
+	; para "Beware--a deleted"
+	; line "CARD FOLDER can't"
+	; cont "be restored."
 
-	para "Want to delete"
-	line "your CARD FOLDER?"
-	done
+	; para "Want to delete"
+	; line "your CARD FOLDER?"
+	; done
 
-UnknownText_0x1c5494::
-	text "Are you sure you"
-	line "want to delete it?"
-	done
+; UnknownText_0x1c5494::
+	; text "Are you sure you"
+	; line "want to delete it?"
+	; done
 
-UnknownText_0x1c54b9::
-	text "The CARD FOLDER"
-	line "has been deleted."
+; UnknownText_0x1c54b9::
+	; text "The CARD FOLDER"
+	; line "has been deleted."
 
-	para ""
-	done
+	; para ""
+	; done
 
-UnknownText_0x1c54dd::
-	text "There is an older"
-	line "CARD FOLDER from a"
-	cont "previous journey."
+; UnknownText_0x1c54dd::
+	; text "There is an older"
+	; line "CARD FOLDER from a"
+	; cont "previous journey."
 
-	para "Do you want to"
-	line "open it?"
-	done
+	; para "Do you want to"
+	; line "open it?"
+	; done
 
-UnknownText_0x1c552d::
-	text "Delete the old"
-	line "CARD FOLDER?"
-	done
+; UnknownText_0x1c552d::
+	; text "Delete the old"
+	; line "CARD FOLDER?"
+	; done
 
-UnknownText_0x1c554a::
-	text "Finish registering"
-	line "CARDS?"
-	done
+; UnknownText_0x1c554a::
+	; text "Finish registering"
+	; line "CARDS?"
+	; done
 
 UnknownText_0x1c5565::
 	text "Huh? Sorry, wrong"
@@ -967,8 +967,6 @@ UnknownText_0x1c5660::
 	sound_dex_fanfare_50_79
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c5678::
 	text "Which move should"

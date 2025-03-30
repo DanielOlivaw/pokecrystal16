@@ -4332,52 +4332,52 @@ Function101dd0:
 	ret
 
 Function101de3:
-	call Function101ecc
-	call Function101ead
-	jr c, .asm_101df3
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
+	; call Function101ecc
+	; call Function101ead
+	; jr c, .asm_101df3
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
 	ret
 
-.asm_101df3
-	call Function101e98
-	jr c, .asm_101e00
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+; .asm_101df3
+	; call Function101e98
+	; jr c, .asm_101e00
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
+	; ret
 
-.asm_101e00
-	call Function101ed3
-	ld a, $02
-	ld [wcd2b], a
-	ret
+; .asm_101e00
+	; call Function101ed3
+	; ld a, $02
+	; ld [wcd2b], a
+	; ret
 
 Function101e09:
-	call Function101ead
-	jr c, .asm_101e16
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
+	; call Function101ead
+	; jr c, .asm_101e16
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
 	ret
 
-.asm_101e16
-	call Function101ecc
-	call Function101e98
-	push af
-	call Function101ed3
-	pop af
-	jr c, .asm_101e2b
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+; .asm_101e16
+	; call Function101ecc
+	; call Function101e98
+	; push af
+	; call Function101ed3
+	; pop af
+	; jr c, .asm_101e2b
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
+	; ret
 
-.asm_101e2b
-	ld a, $02
-	ld [wcd2b], a
-	ret
+; .asm_101e2b
+	; ld a, $02
+	; ld [wcd2b], a
+	; ret
 
 Function101e31:
 	ld a, $3a
@@ -4428,51 +4428,51 @@ Function101e64:
 	ld [wcd2b], a
 	ret
 
-Unreferenced_Function101e82:
-	call Function101ecc
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+; Unreferenced_Function101e82:
+	; call Function101ecc
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
+	; ret
 
-Unreferenced_Function101e8d:
-	call Function101ed3
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+; Unreferenced_Function101e8d:
+	; call Function101ed3
+	; ld a, [wMobileCommsJumptableIndex]
+	; inc a
+	; ld [wMobileCommsJumptableIndex], a
+	; ret
 
-Function101e98:
-	call ClearSprites
-	farcall Function8adb3
-	ret c
-	ld hl, wGameTimerPause
-	set GAMETIMERPAUSE_MOBILE_7_F, [hl]
-	ld hl, wdc41
-	set 4, [hl]
-	ret
+; Function101e98:
+	; call ClearSprites
+	; farcall Function8adb3
+	; ret c
+	; ld hl, wGameTimerPause
+	; set GAMETIMERPAUSE_MOBILE_7_F, [hl]
+	; ld hl, wdc41
+	; set 4, [hl]
+	; ret
 
-Function101ead:
-	ld hl, wGameTimerPause
-	bit GAMETIMERPAUSE_MOBILE_7_F, [hl]
-	jr nz, .asm_101ec8
-	ld hl, wdc41
-	bit 2, [hl]
-	jr z, .asm_101eca
-	ld a, [wcd2f]
-	and a
-	jr nz, .asm_101ec8
-	ld hl, wdc41
-	bit 1, [hl]
-	jr z, .asm_101eca
+; Function101ead:
+	; ld hl, wGameTimerPause
+	; bit GAMETIMERPAUSE_MOBILE_7_F, [hl]
+	; jr nz, .asm_101ec8
+	; ld hl, wdc41
+	; bit 2, [hl]
+	; jr z, .asm_101eca
+	; ld a, [wcd2f]
+	; and a
+	; jr nz, .asm_101ec8
+	; ld hl, wdc41
+	; bit 1, [hl]
+	; jr z, .asm_101eca
 
-.asm_101ec8
-	xor a
-	ret
+; .asm_101ec8
+	; xor a
+	; ret
 
-.asm_101eca
-	scf
-	ret
+; .asm_101eca
+	; scf
+	; ret
 
 Function101ecc:
 	call Function101ee2

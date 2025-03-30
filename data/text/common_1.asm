@@ -105,53 +105,53 @@ _CameToItsSensesText::
 	line "to its senses."
 	done
 
-_EnterNewPasscodeText::
-	text "Please enter any"
-	line "four-digit number."
-	done
+; _EnterNewPasscodeText::
+	; text "Please enter any"
+	; line "four-digit number."
+	; done
 
-_ConfirmPasscodeText::
-	text "Enter the same"
-	line "number to confirm."
-	done
+; _ConfirmPasscodeText::
+	; text "Enter the same"
+	; line "number to confirm."
+	; done
 
-_PasscodesNotSameText::
-	text "That's not the"
-	line "same number."
-	done
+; _PasscodesNotSameText::
+	; text "That's not the"
+	; line "same number."
+	; done
 
-_PasscodeSetText::
-	text "Your PASSCODE has"
-	line "been set."
+; _PasscodeSetText::
+	; text "Your PASSCODE has"
+	; line "been set."
 
-	para "Enter this number"
-	line "next time to open"
-	cont "the CARD FOLDER."
+	; para "Enter this number"
+	; line "next time to open"
+	; cont "the CARD FOLDER."
 
-	para ""
-	done
+	; para ""
+	; done
 
-_FourZerosInvalidText::
-	text "0000 is invalid!"
+; _FourZerosInvalidText::
+	; text "0000 is invalid!"
 
-	para ""
-	done
+	; para ""
+	; done
 
-_EnterPasscodeText::
-	text "Enter the CARD"
-	next "FOLDER PASSCODE."
-	done
+; _EnterPasscodeText::
+	; text "Enter the CARD"
+	; next "FOLDER PASSCODE."
+	; done
 
-_IncorrectPasscodeText::
-	text "Incorrect"
-	line "PASSCODE!"
+; _IncorrectPasscodeText::
+	; text "Incorrect"
+	; line "PASSCODE!"
 
-	para ""
-	done
+	; para ""
+	; done
 
-_CardFolderOpenText::
-	text "CARD FOLDER open.@"
-	text_end
+; _CardFolderOpenText::
+	; text "CARD FOLDER open.@"
+	; text_end
 
 _OakTimeText1::
 	text "<……><……><……><……><……><……>"

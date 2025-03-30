@@ -649,30 +649,30 @@ Yamaguchi: db "やまぐちけん@" ; Yamaguchi
 Yamanashi: db "やまなしけん@" ; Yamanashi
 Wakayama:  db "わかやまけん@" ; Wakayama
 
-Function48689:
-	ld c, 7
-	call DelayFrames
-	ld b, $1
-	call GetMysteryGift_MobileAdapterLayout
-	call ClearBGPalettes
-	hlcoord 0, 0
-	ld b, 4
-	ld c, SCREEN_WIDTH
-	call ClearBox
-	hlcoord 0, 2
-	ld a, $c
-	ld [hl], a
-	ld bc, SCREEN_WIDTH - 1
-	add hl, bc
-	ld [hl], a
-	ld de, MobileProfileString
-	hlcoord 1, 2
-	call PlaceString
-	hlcoord 0, 4
-	ld b, $8
-	ld c, $12
-	call Function48cdc
-	ret
+; Function48689:
+	; ld c, 7
+	; call DelayFrames
+	; ld b, $1
+	; call GetMysteryGift_MobileAdapterLayout
+	; call ClearBGPalettes
+	; hlcoord 0, 0
+	; ld b, 4
+	; ld c, SCREEN_WIDTH
+	; call ClearBox
+	; hlcoord 0, 2
+	; ld a, $c
+	; ld [hl], a
+	; ld bc, SCREEN_WIDTH - 1
+	; add hl, bc
+	; ld [hl], a
+	; ld de, MobileProfileString
+	; hlcoord 1, 2
+	; call PlaceString
+	; hlcoord 0, 4
+	; ld b, $8
+	; ld c, $12
+	; call Function48cdc
+	; ret
 
 Function486bf:
 	ld hl, w2DMenuCursorInitY
@@ -898,99 +898,99 @@ Function487ff:
 String_4880d:
 	db "@"
 
-Function4880e:
-	ldh a, [hJoyPressed]
-	and A_BUTTON
-	jp nz, Function488b9
-	ldh a, [hJoyPressed]
-	and B_BUTTON
-	jp nz, Function488b4
-	ld hl, hJoyLast
-	ld a, [hl]
-	and D_UP
-	jr nz, .asm_48843
-	ld a, [hl]
-	and D_DOWN
-	jr nz, .asm_48838
-	ld a, [hl]
-	and D_LEFT
-	jr nz, .asm_4884f
-	ld a, [hl]
-	and D_RIGHT
-	jr nz, .asm_4885f
-	call DelayFrame
-	and a
-	ret
-.asm_48838
-	ld hl, wd473
-	ld a, [hl]
-	and a
-	jr z, .asm_48840
-	dec a
-.asm_48840
-	ld [hl], a
-	jr .asm_4886f
-.asm_48843
-	ld hl, wd473
-	ld a, [hl]
-	cp $64
-	jr nc, .asm_4884c
-	inc a
-.asm_4884c
-	ld [hl], a
-	jr .asm_4886f
-.asm_4884f
-	ld a, [wd473]
-	cp $5b
-	jr c, .asm_48858
-	ld a, $5a
-.asm_48858
-	add $a
-	ld [wd473], a
-	jr .asm_4886f
-.asm_4885f
-	ld a, [wd473]
-	cp $a
-	jr nc, .asm_48868
-	ld a, $a
-.asm_48868
-	sub $a
-	ld [wd473], a
-	jr .asm_4886f
-.asm_4886f
-	ld a, [wd473]
-	and a
-	jr z, .asm_48887
-	cp $64
-	jr z, .asm_48898
-	jr z, .asm_488a7
-	hlcoord 12, 5
-	ld [hl], $10
-	hlcoord 12, 7
-	ld [hl], $11
-	jr .asm_488a7
-.asm_48887
-	hlcoord 10, 5
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	hlcoord 12, 5
-	ld [hl], $10
-	jr .asm_488a7
-.asm_48898
-	hlcoord 10, 5
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	hlcoord 12, 7
-	ld [hl], $11
-.asm_488a7
-	hlcoord 11, 6
-	call Function487ec
-	call WaitBGMap
-	ld a, $1
-	and a
-	ret
+; Function4880e:
+	; ldh a, [hJoyPressed]
+	; and A_BUTTON
+	; jp nz, Function488b9
+	; ldh a, [hJoyPressed]
+	; and B_BUTTON
+	; jp nz, Function488b4
+	; ld hl, hJoyLast
+	; ld a, [hl]
+	; and D_UP
+	; jr nz, .asm_48843
+	; ld a, [hl]
+	; and D_DOWN
+	; jr nz, .asm_48838
+	; ld a, [hl]
+	; and D_LEFT
+	; jr nz, .asm_4884f
+	; ld a, [hl]
+	; and D_RIGHT
+	; jr nz, .asm_4885f
+	; call DelayFrame
+	; and a
+	; ret
+; .asm_48838
+	; ld hl, wd473
+	; ld a, [hl]
+	; and a
+	; jr z, .asm_48840
+	; dec a
+; .asm_48840
+	; ld [hl], a
+	; jr .asm_4886f
+; .asm_48843
+	; ld hl, wd473
+	; ld a, [hl]
+	; cp $64
+	; jr nc, .asm_4884c
+	; inc a
+; .asm_4884c
+	; ld [hl], a
+	; jr .asm_4886f
+; .asm_4884f
+	; ld a, [wd473]
+	; cp $5b
+	; jr c, .asm_48858
+	; ld a, $5a
+; .asm_48858
+	; add $a
+	; ld [wd473], a
+	; jr .asm_4886f
+; .asm_4885f
+	; ld a, [wd473]
+	; cp $a
+	; jr nc, .asm_48868
+	; ld a, $a
+; .asm_48868
+	; sub $a
+	; ld [wd473], a
+	; jr .asm_4886f
+; .asm_4886f
+	; ld a, [wd473]
+	; and a
+	; jr z, .asm_48887
+	; cp $64
+	; jr z, .asm_48898
+	; jr z, .asm_488a7
+	; hlcoord 12, 5
+	; ld [hl], $10
+	; hlcoord 12, 7
+	; ld [hl], $11
+	; jr .asm_488a7
+; .asm_48887
+	; hlcoord 10, 5
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; hlcoord 12, 5
+	; ld [hl], $10
+	; jr .asm_488a7
+; .asm_48898
+	; hlcoord 10, 5
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; hlcoord 12, 7
+	; ld [hl], $11
+; .asm_488a7
+	; hlcoord 11, 6
+	; call Function487ec
+	; call WaitBGMap
+	; ld a, $1
+	; and a
+	; ret
 
 Function488b4:
 	ld a, $0
@@ -1211,51 +1211,51 @@ Function489ea:
 String_48a38:
 	db "-@"
 
-Function48a3a:
-	ld hl, MenuHeader_0x48a9c
-	call LoadMenuHeader
-	call Function4873c
-	ld a, $a
-	ld [w2DMenuCursorInitY], a
-	ld a, $b
-	ld [w2DMenuCursorInitX], a
-	ld a, $1
-	ld [wMenuCursorY], a
-	hlcoord 10, 8
-	ld b, $4
-	ld c, $8
-	call Function48cdc
-	hlcoord 12, 10
-	ld de, String_48aa1
-	call PlaceString
-	call StaticMenuJoypad
-	push af
-	call PlayClickSFX
-	call ExitMenu
-	pop af
-	bit 1, a
-	jp nz, Function48a9a
-	ld a, [wMenuCursorY]
-	cp $1
-	jr z, .asm_48a98
-	ld a, [wd003]
-	set 3, a
-	ld [wd003], a
-	ld a, [wd479]
-	res 0, a
-	ld [wd479], a
-	xor a
-	ld bc, $4
-	ld hl, wd475
-	call ByteFill
-	jr Function48a9a
-.asm_48a98
-	and a
-	ret
+; Function48a3a:
+	; ld hl, MenuHeader_0x48a9c
+	; call LoadMenuHeader
+	; call Function4873c
+	; ld a, $a
+	; ld [w2DMenuCursorInitY], a
+	; ld a, $b
+	; ld [w2DMenuCursorInitX], a
+	; ld a, $1
+	; ld [wMenuCursorY], a
+	; hlcoord 10, 8
+	; ld b, $4
+	; ld c, $8
+	; call Function48cdc
+	; hlcoord 12, 10
+	; ld de, String_48aa1
+	; call PlaceString
+	; call StaticMenuJoypad
+	; push af
+	; call PlayClickSFX
+	; call ExitMenu
+	; pop af
+	; bit 1, a
+	; jp nz, Function48a9a
+	; ld a, [wMenuCursorY]
+	; cp $1
+	; jr z, .asm_48a98
+	; ld a, [wd003]
+	; set 3, a
+	; ld [wd003], a
+	; ld a, [wd479]
+	; res 0, a
+	; ld [wd479], a
+	; xor a
+	; ld bc, $4
+	; ld hl, wd475
+	; call ByteFill
+	; jr Function48a9a
+; .asm_48a98
+	; and a
+	; ret
 
-Function48a9a:
-	scf
-	ret
+; Function48a9a:
+	; scf
+	; ret
 
 MenuHeader_0x48a9c:
 	db MENU_BACKUP_TILES ; flags
@@ -1265,225 +1265,225 @@ String_48aa1:
 	db   "Tell Now"
 	next "Tell Later@"
 
-Function48ab5:
-	ldh a, [hJoyPressed]
-	and A_BUTTON
-	jp nz, Function48c0f
-	ldh a, [hJoyPressed]
-	and B_BUTTON
-	jp nz, Function48c0d
-	ld a, d
-	and a
-	jr z, .asm_48adf
-	cp $1
-	jr z, .asm_48ae7
-	cp $2
-	jr z, .asm_48af1
-	cp $3
-	jr z, .asm_48af9
-	cp $4
-	jr z, .asm_48b03
-	cp $5
-	jr z, .asm_48b0b
-	cp $6
-	jr .asm_48b15
-.asm_48adf
-	ld hl, wd475
-	ld a, [hl]
-	and $f
-	jr .asm_48b1d
-.asm_48ae7
-	ld hl, wd476
-	ld a, [hl]
-	swap a
-	or $f0
-	jr .asm_48b1d
-.asm_48af1
-	ld hl, wd476
-	ld a, [hl]
-	and $f
-	jr .asm_48b1d
-.asm_48af9
-	ld hl, wd477
-	ld a, [hl]
-	swap a
-	or $f0
-	jr .asm_48b1d
-.asm_48b03
-	ld hl, wd477
-	ld a, [hl]
-	and $f
-	jr .asm_48b1d
-.asm_48b0b
-	ld hl, wd478
-	ld a, [hl]
-	swap a
-	or $f0
-	jr .asm_48b1d
-.asm_48b15
-	ld hl, wd478
-	ld a, [hl]
-	and $f
-	jr .asm_48b1d
-.asm_48b1d
-	push hl
-	push af
-	ld e, $0
-	hlcoord 11, 10
-	ld a, d
-.asm_48b25
-	and a
-	jr z, .asm_48b2c
-	inc e
-	dec a
-	jr .asm_48b25
-.asm_48b2c
-	ld hl, hJoyLast
-	ld a, [hl]
-	and D_UP
-	jr nz, .asm_48b8d
-	ld a, [hl]
-	and D_DOWN
-	jr nz, .asm_48b55
-	ld a, [hl]
-	and D_LEFT
-	jp nz, Function48bd7
-	ld a, [hl]
-	and D_RIGHT
-	jr nz, .asm_48b9d
-	hlcoord 11, 10
-	call Function489ea
-	ld a, [wd002]
-	bit 7, a
-	jr nz, .asm_48b51
-.asm_48b51
-	pop bc
-	pop bc
-	and a
-	ret
-.asm_48b55
-	pop af
-	ld b, a
-	and $f
-	and a
-	ld a, b
-	jr nz, .asm_48b61
-	and $f0
-	add $a
-.asm_48b61
-	dec a
-.asm_48b62
-	push de
-	push af
-	hlcoord 10, 9
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	pop af
-	pop de
-	hlcoord 11, 10
-	ld b, a
-	ld a, d
-	cp $3
-	jr c, .asm_48b7a
-	inc hl
-.asm_48b7a
-	ld a, b
-	pop hl
-	bit 7, a
-	jr z, .asm_48b85
-	call Function48c4d
-	jr .asm_48b88
-.asm_48b85
-	call Function48c5a
-.asm_48b88
-	ld a, $f0
-	jp Function48c00
-.asm_48b8d
-	pop af
-	ld b, a
-	and $f
-	cp $9
-	ld a, b
-	jr c, .asm_48b9a
-	and $f0
-	add $ff
-.asm_48b9a
-	inc a
-	jr .asm_48b62
-.asm_48b9d
-	push de
-	hlcoord 10, 9
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	pop de
-	ld a, d
-	cp $6
-	jr nc, .asm_48baf
-	inc d
-.asm_48baf
-	pop af
-	pop hl
-	ld b, a
-	ld a, d
-	cp $6
-	ld a, b
-	jr z, .asm_48bc4
-	bit 7, a
-	jr nz, .asm_48bc4
-	inc hl
-	ld a, [hl]
-	swap a
-	and $f
-	jr asm_48bc7
-.asm_48bc4
-	ld a, [hl]
-	and $f
+; Function48ab5:
+	; ldh a, [hJoyPressed]
+	; and A_BUTTON
+	; jp nz, Function48c0f
+	; ldh a, [hJoyPressed]
+	; and B_BUTTON
+	; jp nz, Function48c0d
+	; ld a, d
+	; and a
+	; jr z, .asm_48adf
+	; cp $1
+	; jr z, .asm_48ae7
+	; cp $2
+	; jr z, .asm_48af1
+	; cp $3
+	; jr z, .asm_48af9
+	; cp $4
+	; jr z, .asm_48b03
+	; cp $5
+	; jr z, .asm_48b0b
+	; cp $6
+	; jr .asm_48b15
+; .asm_48adf
+	; ld hl, wd475
+	; ld a, [hl]
+	; and $f
+	; jr .asm_48b1d
+; .asm_48ae7
+	; ld hl, wd476
+	; ld a, [hl]
+	; swap a
+	; or $f0
+	; jr .asm_48b1d
+; .asm_48af1
+	; ld hl, wd476
+	; ld a, [hl]
+	; and $f
+	; jr .asm_48b1d
+; .asm_48af9
+	; ld hl, wd477
+	; ld a, [hl]
+	; swap a
+	; or $f0
+	; jr .asm_48b1d
+; .asm_48b03
+	; ld hl, wd477
+	; ld a, [hl]
+	; and $f
+	; jr .asm_48b1d
+; .asm_48b0b
+	; ld hl, wd478
+	; ld a, [hl]
+	; swap a
+	; or $f0
+	; jr .asm_48b1d
+; .asm_48b15
+	; ld hl, wd478
+	; ld a, [hl]
+	; and $f
+	; jr .asm_48b1d
+; .asm_48b1d
+	; push hl
+	; push af
+	; ld e, $0
+	; hlcoord 11, 10
+	; ld a, d
+; .asm_48b25
+	; and a
+	; jr z, .asm_48b2c
+	; inc e
+	; dec a
+	; jr .asm_48b25
+; .asm_48b2c
+	; ld hl, hJoyLast
+	; ld a, [hl]
+	; and D_UP
+	; jr nz, .asm_48b8d
+	; ld a, [hl]
+	; and D_DOWN
+	; jr nz, .asm_48b55
+	; ld a, [hl]
+	; and D_LEFT
+	; jp nz, Function48bd7
+	; ld a, [hl]
+	; and D_RIGHT
+	; jr nz, .asm_48b9d
+	; hlcoord 11, 10
+	; call Function489ea
+	; ld a, [wd002]
+	; bit 7, a
+	; jr nz, .asm_48b51
+; .asm_48b51
+	; pop bc
+	; pop bc
+	; and a
+	; ret
+; .asm_48b55
+	; pop af
+	; ld b, a
+	; and $f
+	; and a
+	; ld a, b
+	; jr nz, .asm_48b61
+	; and $f0
+	; add $a
+; .asm_48b61
+	; dec a
+; .asm_48b62
+	; push de
+	; push af
+	; hlcoord 10, 9
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; pop af
+	; pop de
+	; hlcoord 11, 10
+	; ld b, a
+	; ld a, d
+	; cp $3
+	; jr c, .asm_48b7a
+	; inc hl
+; .asm_48b7a
+	; ld a, b
+	; pop hl
+	; bit 7, a
+	; jr z, .asm_48b85
+	; call Function48c4d
+	; jr .asm_48b88
+; .asm_48b85
+	; call Function48c5a
+; .asm_48b88
+	; ld a, $f0
+	; jp Function48c00
+; .asm_48b8d
+	; pop af
+	; ld b, a
+	; and $f
+	; cp $9
+	; ld a, b
+	; jr c, .asm_48b9a
+	; and $f0
+	; add $ff
+; .asm_48b9a
+	; inc a
+	; jr .asm_48b62
+; .asm_48b9d
+	; push de
+	; hlcoord 10, 9
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; pop de
+	; ld a, d
+	; cp $6
+	; jr nc, .asm_48baf
+	; inc d
+; .asm_48baf
+	; pop af
+	; pop hl
+	; ld b, a
+	; ld a, d
+	; cp $6
+	; ld a, b
+	; jr z, .asm_48bc4
+	; bit 7, a
+	; jr nz, .asm_48bc4
+	; inc hl
+	; ld a, [hl]
+	; swap a
+	; and $f
+	; jr asm_48bc7
+; .asm_48bc4
+	; ld a, [hl]
+	; and $f
 
-asm_48bc7:
-	hlcoord 11, 10
-	push af
-	ld a, d
-	cp $3
-	pop bc
-	ld a, b
-	jr c, .asm_48bd3
-	inc hl
-.asm_48bd3
-	ld a, $f
-	jr Function48c00
+; asm_48bc7:
+	; hlcoord 11, 10
+	; push af
+	; ld a, d
+	; cp $3
+	; pop bc
+	; ld a, b
+	; jr c, .asm_48bd3
+	; inc hl
+; .asm_48bd3
+	; ld a, $f
+	; jr Function48c00
 
-Function48bd7:
-	push de
-	hlcoord 10, 9
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	pop de
-	ld a, d
-	and a
-	pop af
-	pop hl
-	ld b, a
-	ld a, d
-	and a
-	ld a, b
-	jr z, .asm_48bf3
-	bit 7, a
-	jr z, .asm_48bf8
-	dec d
-	dec hl
-.asm_48bf3
-	ld a, [hl]
-	and $f
-	jr asm_48bc7
-.asm_48bf8
-	dec d
-	ld a, [hl]
-	swap a
-	and $f
-	jr asm_48bc7
+; Function48bd7:
+	; push de
+	; hlcoord 10, 9
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; pop de
+	; ld a, d
+	; and a
+	; pop af
+	; pop hl
+	; ld b, a
+	; ld a, d
+	; and a
+	; ld a, b
+	; jr z, .asm_48bf3
+	; bit 7, a
+	; jr z, .asm_48bf8
+	; dec d
+	; dec hl
+; .asm_48bf3
+	; ld a, [hl]
+	; and $f
+	; jr asm_48bc7
+; .asm_48bf8
+	; dec d
+	; ld a, [hl]
+	; swap a
+	; and $f
+	; jr asm_48bc7
 
 Function48c00:
 	push af
@@ -1652,168 +1652,168 @@ Function48ca3:
 	pop af
 	ret
 
-Function48cda:
-	ld h, d
-	ld l, e
+; Function48cda:
+	; ld h, d
+	; ld l, e
 
-Function48cdc:
-	push bc
-	push hl
-	call Function48cfd
-	pop hl
-	pop bc
-	ld de, wAttrMap - wTileMap
-	add hl, de
-	inc b
-	inc b
-	inc c
-	inc c
-	ld a, $0
-.asm_48ced
-	push bc
-	push hl
-.asm_48cef
-	ld [hli], a
-	dec c
-	jr nz, .asm_48cef
-	pop hl
-	ld de, $14
-	add hl, de
-	pop bc
-	dec b
-	jr nz, .asm_48ced
-	ret
+; Function48cdc:
+	; push bc
+	; push hl
+	; call Function48cfd
+	; pop hl
+	; pop bc
+	; ld de, wAttrMap - wTileMap
+	; add hl, de
+	; inc b
+	; inc b
+	; inc c
+	; inc c
+	; ld a, $0
+; .asm_48ced
+	; push bc
+	; push hl
+; .asm_48cef
+	; ld [hli], a
+	; dec c
+	; jr nz, .asm_48cef
+	; pop hl
+	; ld de, $14
+	; add hl, de
+	; pop bc
+	; dec b
+	; jr nz, .asm_48ced
+	; ret
 
-Function48cfd:
-	push hl
-	ld a, $4
-	ld [hli], a
-	inc a
-	call Function48d2a
-	inc a
-	ld [hl], a
-	pop hl
-	ld de, $14
-	add hl, de
-.asm_48d0c
-	push hl
-	ld a, $7
-	ld [hli], a
-	ld a, $7f
-	call Function48d2a
-	ld [hl], $8
-	pop hl
-	ld de, $14
-	add hl, de
-	dec b
-	jr nz, .asm_48d0c
-	ld a, $9
-	ld [hli], a
-	ld a, $a
-	call Function48d2a
-	ld [hl], $b
-	ret
+; Function48cfd:
+	; push hl
+	; ld a, $4
+	; ld [hli], a
+	; inc a
+	; call Function48d2a
+	; inc a
+	; ld [hl], a
+	; pop hl
+	; ld de, $14
+	; add hl, de
+; .asm_48d0c
+	; push hl
+	; ld a, $7
+	; ld [hli], a
+	; ld a, $7f
+	; call Function48d2a
+	; ld [hl], $8
+	; pop hl
+	; ld de, $14
+	; add hl, de
+	; dec b
+	; jr nz, .asm_48d0c
+	; ld a, $9
+	; ld [hli], a
+	; ld a, $a
+	; call Function48d2a
+	; ld [hl], $b
+	; ret
 
-Function48d2a:
-	ld d, c
-.asm_48d2b
-	ld [hli], a
-	dec d
-	jr nz, .asm_48d2b
-	ret
+; Function48d2a:
+	; ld d, c
+; .asm_48d2b
+	; ld [hli], a
+	; dec d
+	; jr nz, .asm_48d2b
+	; ret
 
-Function48d30:
-	ld hl, wd475
-	call Function48d4a
-	ld hl, wd477
-	call Function48d4a
-	ret
+; Function48d30:
+	; ld hl, wd475
+	; call Function48d4a
+	; ld hl, wd477
+	; call Function48d4a
+	; ret
 
-Function48d3d:
-	ld hl, wd475
-	call Function48d94
-	ld hl, wd477
-	call Function48d94
-	ret
+; Function48d3d:
+	; ld hl, wd475
+	; call Function48d94
+	; ld hl, wd477
+	; call Function48d94
+	; ret
 
-Function48d4a:
-	inc hl
-	ld a, [hl]
-	ld b, a
-	and $f
-	ld c, a
-	srl b
-	srl b
-	srl b
-	srl b
-	push bc
-	ld c, 10
-	ld a, b
-	call SimpleMultiply
-	pop bc
-	add c
-	ld [hld], a
-	xor a
-	ldh [hMultiplicand + 0], a
-	ldh [hMultiplicand + 1], a
-	ld a, [hl]
-	srl a
-	srl a
-	srl a
-	srl a
-	ld c, 10
-	call SimpleMultiply
-	ld b, a
-	ld a, [hli]
-	and $f
-	add b
-	ldh [hMultiplicand + 2], a
-	ld a, 100
-	ldh [hMultiplier], a
-	call Multiply
-	ldh a, [hProduct + 2]
-	ld b, a
-	ldh a, [hProduct + 3]
-	ld c, a
-	ld e, [hl]
-	add e
-	ld c, a
-	ld a, b
-	adc 0
-	ld b, a
-	ld a, c
-	ld [hld], a
-	ld [hl], b
-	ret
+; Function48d4a:
+	; inc hl
+	; ld a, [hl]
+	; ld b, a
+	; and $f
+	; ld c, a
+	; srl b
+	; srl b
+	; srl b
+	; srl b
+	; push bc
+	; ld c, 10
+	; ld a, b
+	; call SimpleMultiply
+	; pop bc
+	; add c
+	; ld [hld], a
+	; xor a
+	; ldh [hMultiplicand + 0], a
+	; ldh [hMultiplicand + 1], a
+	; ld a, [hl]
+	; srl a
+	; srl a
+	; srl a
+	; srl a
+	; ld c, 10
+	; call SimpleMultiply
+	; ld b, a
+	; ld a, [hli]
+	; and $f
+	; add b
+	; ldh [hMultiplicand + 2], a
+	; ld a, 100
+	; ldh [hMultiplier], a
+	; call Multiply
+	; ldh a, [hProduct + 2]
+	; ld b, a
+	; ldh a, [hProduct + 3]
+	; ld c, a
+	; ld e, [hl]
+	; add e
+	; ld c, a
+	; ld a, b
+	; adc 0
+	; ld b, a
+	; ld a, c
+	; ld [hld], a
+	; ld [hl], b
+	; ret
 
-Function48d94:
-	xor a
-	ldh [hDividend + 0], a
-	ldh [hDividend + 1], a
-	ld a, [hli]
-	ldh [hDividend + 0], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld a, 100
-	ldh [hDivisor], a
-	ld b, 2
-	call Divide
-	ldh a, [hRemainder]
-	ld c, 10
-	call SimpleDivide
-	sla b
-	sla b
-	sla b
-	sla b
-	or b
-	ld [hld], a
-	ldh a, [hQuotient + 3]
-	ld c, 10
-	call SimpleDivide
-	sla b
-	sla b
-	sla b
-	sla b
-	or b
-	ld [hl], a
-	ret
+; Function48d94:
+	; xor a
+	; ldh [hDividend + 0], a
+	; ldh [hDividend + 1], a
+	; ld a, [hli]
+	; ldh [hDividend + 0], a
+	; ld a, [hl]
+	; ldh [hDividend + 1], a
+	; ld a, 100
+	; ldh [hDivisor], a
+	; ld b, 2
+	; call Divide
+	; ldh a, [hRemainder]
+	; ld c, 10
+	; call SimpleDivide
+	; sla b
+	; sla b
+	; sla b
+	; sla b
+	; or b
+	; ld [hld], a
+	; ldh a, [hQuotient + 3]
+	; ld c, 10
+	; call SimpleDivide
+	; sla b
+	; sla b
+	; sla b
+	; sla b
+	; or b
+	; ld [hl], a
+	; ret

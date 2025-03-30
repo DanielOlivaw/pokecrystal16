@@ -4232,125 +4232,125 @@ Function119f76:
 	jp BattleTowerRoomMenu2_IncrementJumptable
 
 Function119f98:
-	call Function11a536
-	ret c
-	call PlayClickSFX
-	ld a, [wMobileInactivityTimerMinutes]
-	and a
-	jr nz, .asm_119fef
-	call ExitMenu
-	call Function11a63c
-	xor a
-	ld [wScriptVar], a
-	call Function11a00e
-	ld a, [wScriptVar]
-	and a
-	jr z, .asm_119fd4
-	call ExitMenu
-	farcall ReloadMapPart
-	farcall Function115dc3
-	ld a, [wcd33]
-	ld [wcf66], a
-	ld a, $a
-	ld [wc300], a
-	scf
+	; call Function11a536
+	; ret c
+	; call PlayClickSFX
+	; ld a, [wMobileInactivityTimerMinutes]
+	; and a
+	; jr nz, .asm_119fef
+	; call ExitMenu
+	; call Function11a63c
+	; xor a
+	; ld [wScriptVar], a
+	; call Function11a00e
+	; ld a, [wScriptVar]
+	; and a
+	; jr z, .asm_119fd4
+	; call ExitMenu
+	; farcall ReloadMapPart
+	; farcall Function115dc3
+	; ld a, [wcd33]
+	; ld [wcf66], a
+	; ld a, $a
+	; ld [wc300], a
+	; scf
 	ret
 
-.asm_119fd4
-	hlcoord 4, 2
-	ld de, String_11a692
-	call PlaceString
-	ld a, $1
-	ld [wc30d], a
-	ld a, $1
-	ld [wc314], a
-	farcall ReloadMapPart
-	and a
-	ret
+; .asm_119fd4
+	; hlcoord 4, 2
+	; ld de, String_11a692
+	; call PlaceString
+	; ld a, $1
+	; ld [wc30d], a
+	; ld a, $1
+	; ld [wc314], a
+	; farcall ReloadMapPart
+	; and a
+	; ret
 
-.asm_119fef
-	call ExitMenu
-	call ExitMenu
-	farcall ReloadMapPart
-	ld a, [wMobileInactivityTimerSeconds]
-	ld [wcf66], a
-	farcall Function115dc3
-	ld a, $a
-	ld [wc300], a
-	scf
-	ret
+; .asm_119fef
+	; call ExitMenu
+	; call ExitMenu
+	; farcall ReloadMapPart
+	; ld a, [wMobileInactivityTimerSeconds]
+	; ld [wcf66], a
+	; farcall Function115dc3
+	; ld a, $a
+	; ld [wc300], a
+	; scf
+	; ret
 
-Function11a00e:
-	ld a, BANK(sMobileLoginPassword)
-	call GetSRAMBank
-	ld a, [sMobileLoginPassword]
-	and a
-	jr z, .asm_11a02a
-	ld a, [sMobileLoginPassword + 1]
-	call CloseSRAM
-	and a
-	ret nz
-	ld a, BANK(sMobileLoginPassword)
-	call GetSRAMBank
-	xor a
-	ld [sMobileLoginPassword], a
+; Function11a00e:
+	; ld a, BANK(sMobileLoginPassword)
+	; call GetSRAMBank
+	; ld a, [sMobileLoginPassword]
+	; and a
+	; jr z, .asm_11a02a
+	; ld a, [sMobileLoginPassword + 1]
+	; call CloseSRAM
+	; and a
+	; ret nz
+	; ld a, BANK(sMobileLoginPassword)
+	; call GetSRAMBank
+	; xor a
+	; ld [sMobileLoginPassword], a
 
-.asm_11a02a
-	call CloseSRAM
-	ld a, [wBGMapPalBuffer]
-	and a
-	jr z, .asm_11a039
-	dec a
-	jr z, .asm_11a081
-	jp Function11a0ca
+; .asm_11a02a
+	; call CloseSRAM
+	; ld a, [wBGMapPalBuffer]
+	; and a
+	; jr z, .asm_11a039
+	; dec a
+	; jr z, .asm_11a081
+	; jp Function11a0ca
 
-.asm_11a039
-	ld a, $3
-	ldh [rSVBK], a
-	ld hl, $c608
-	ld de, w3_d800
-	ld bc, $00f6
-	call CopyBytes
-	ld a, $1
-	ldh [rSVBK], a
-	call FadeToMenu
-	farcall Function11765d
-	call Function11a9ce
-	ld a, $3
-	ldh [rSVBK], a
-	ld hl, w3_d800
-	ld de, $c608
-	ld bc, $00f6
-	call CopyBytes
-	ld a, $1
-	ldh [rSVBK], a
-	farcall Function115d99
-	ld c, $0
-	farcall Function115e18
-	ld a, $1
-	ld [wc305], a
-	ret
+; .asm_11a039
+	; ld a, $3
+	; ldh [rSVBK], a
+	; ld hl, $c608
+	; ld de, w3_d800
+	; ld bc, $00f6
+	; call CopyBytes
+	; ld a, $1
+	; ldh [rSVBK], a
+	; call FadeToMenu
+	; farcall Function11765d
+	; call Function11a9ce
+	; ld a, $3
+	; ldh [rSVBK], a
+	; ld hl, w3_d800
+	; ld de, $c608
+	; ld bc, $00f6
+	; call CopyBytes
+	; ld a, $1
+	; ldh [rSVBK], a
+	; farcall Function115d99
+	; ld c, $0
+	; farcall Function115e18
+	; ld a, $1
+	; ld [wc305], a
+	; ret
 
-.asm_11a081
-	xor a
-	ld [wMenuBorderLeftCoord], a
-	ld [wMenuBorderTopCoord], a
-	ld a, $13
-	ld [wMenuBorderRightCoord], a
-	ld a, $5
-	ld [wMenuBorderBottomCoord], a
-	call PushWindow
-	farcall Function11765d
-	farcall Function117ab4
-	farcall Function106464
-	call ExitMenu
-	farcall ReloadMapPart
-	farcall Function115d99
-	ld c, $0
-	farcall Function115e18
-	ld a, $1
-	ld [wc305], a
-	ret
+; .asm_11a081
+	; xor a
+	; ld [wMenuBorderLeftCoord], a
+	; ld [wMenuBorderTopCoord], a
+	; ld a, $13
+	; ld [wMenuBorderRightCoord], a
+	; ld a, $5
+	; ld [wMenuBorderBottomCoord], a
+	; call PushWindow
+	; farcall Function11765d
+	; farcall Function117ab4
+	; farcall Function106464
+	; call ExitMenu
+	; farcall ReloadMapPart
+	; farcall Function115d99
+	; ld c, $0
+	; farcall Function115e18
+	; ld a, $1
+	; ld [wc305], a
+	; ret
 
 Function11a0ca:
 	xor a
