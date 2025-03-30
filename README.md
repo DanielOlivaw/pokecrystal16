@@ -19,7 +19,7 @@ Features in this version include:
 - Marts that share a common inventory between cities and gain more items as you progress
 - Pokédex opening after evolutions and hatching
 
-and a ton of other upgrades, fixes, and tweaks.
+and a ton of other upgrades, fixes, and tweaks. See the [wiki](https://github.com/DanielOlivaw/pokecrystal16/wiki) for artist credits and some useful hints and tips.
 
 Feel free to try this out for yourself. If you have any problems or have questions about how I did something, open an issue and I'll try to respond when I can.
 
