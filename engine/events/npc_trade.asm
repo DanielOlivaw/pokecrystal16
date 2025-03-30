@@ -415,7 +415,7 @@ PrintTradeText:
 	push af
 	call GetTradeMonNames
 	pop af
-	ld bc, 2 * 4
+	ld bc, 2 * 6
 	ld hl, TradeTexts
 	call AddNTimes
 	ld a, [wcf64]
@@ -598,7 +598,7 @@ TradeCompleteText6:
 	text_end
 
 TradeIntroText6:
-	; I heard that @ look different here in JOHTO.
-	; Would you trade me one for the @ I caught in another region?
-	text_far _NPCTradeIntroText5
+	; I collect @! I saw a type of @ here that I didn't recognize.
+	; If you catch one, I'll trade one of my @ for it.
+	text_far _NPCTradeIntroText6
 	text_end
