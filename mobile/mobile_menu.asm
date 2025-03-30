@@ -1,219 +1,219 @@
-MainMenu_Mobile:
-	call ClearBGPalettes
-	ld a, MUSIC_MOBILE_ADAPTER_MENU
-	ld [wMapMusic], a
-	ld de, MUSIC_MOBILE_ADAPTER_MENU
-	call Function4a6c5
-Function49f0a:
-	call ClearBGPalettes
-	call Function4a3a7
-	call Function4a492
-	call ClearBGPalettes
-Function49f16:
-	call MobileMenu_InitMenuBuffers
-	ld c, 12
-	call DelayFrames
-	hlcoord 4, 0
-	ld b, 10
-	ld c, 10
-	call Function48cdc
-	hlcoord 6, 2
-	ld de, MobileString1
-	call PlaceString
-	hlcoord 0, 12
-	ld b, 4
-	ld c, SCREEN_HEIGHT
-	call Textbox
-	xor a
-	ld de, String_0x49fe9
-	hlcoord 1, 14
-	call PlaceString
-	call WaitBGMap2
-	call SetPalettes
-	call StaticMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
-	jr .check_buttons
+; MainMenu_Mobile:
+	; call ClearBGPalettes
+	; ld a, MUSIC_MOBILE_ADAPTER_MENU
+	; ld [wMapMusic], a
+	; ld de, MUSIC_MOBILE_ADAPTER_MENU
+	; call Function4a6c5
+; Function49f0a:
+	; call ClearBGPalettes
+	; call Function4a3a7
+	; call Function4a492
+	; call ClearBGPalettes
+; Function49f16:
+	; call MobileMenu_InitMenuBuffers
+	; ld c, 12
+	; call DelayFrames
+	; hlcoord 4, 0
+	; ld b, 10
+	; ld c, 10
+	; call Function48cdc
+	; hlcoord 6, 2
+	; ld de, MobileString1
+	; call PlaceString
+	; hlcoord 0, 12
+	; ld b, 4
+	; ld c, SCREEN_HEIGHT
+	; call Textbox
+	; xor a
+	; ld de, String_0x49fe9
+	; hlcoord 1, 14
+	; call PlaceString
+	; call WaitBGMap2
+	; call SetPalettes
+	; call StaticMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
+	; jr .check_buttons
 
-.joy_loop
-	call ScrollingMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
+; .joy_loop
+	; call ScrollingMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
 
-.check_buttons
-	bit A_BUTTON_F, a
-	jr nz, .a_button
-	bit B_BUTTON_F, a
-	jr nz, .b_button
-	jr .next
+; .check_buttons
+	; bit A_BUTTON_F, a
+	; jr nz, .a_button
+	; bit B_BUTTON_F, a
+	; jr nz, .b_button
+	; jr .next
 
-.a_button
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	cp 1
-	jp z, Function4a098
-	cp 2
-	jp z, Function4a0b9
-	cp 3
-	jp z, Function4a0c2
-	cp 4
-	jp z, Function4a100
-	ld a, 1
-	call MenuClickSound
-.b_button
-	pop bc
-	call ClearBGPalettes
-	call ClearTileMap
-	ld a, MUSIC_MAIN_MENU
-	ld [wMapMusic], a
-	ld de, MUSIC_MAIN_MENU
-	call Function4a6c5
-	ret
+; .a_button
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; cp 1
+	; jp z, Function4a098
+	; cp 2
+	; jp z, Function4a0b9
+	; cp 3
+	; jp z, Function4a0c2
+	; cp 4
+	; jp z, Function4a100
+	; ld a, 1
+	; call MenuClickSound
+; .b_button
+	; pop bc
+	; call ClearBGPalettes
+	; call ClearTileMap
+	; ld a, MUSIC_MAIN_MENU
+	; ld [wMapMusic], a
+	; ld de, MUSIC_MAIN_MENU
+	; call Function4a6c5
+	; ret
 
-.next
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	dec a
-	ld hl, MobileStrings2
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 1, 13
-	ld b, 4
-	ld c, SCREEN_HEIGHT
-	call ClearBox
-	hlcoord 1, 14
-	call PlaceString
-	jp .useless_jump
+; .next
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; dec a
+	; ld hl, MobileStrings2
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 1, 13
+	; ld b, 4
+	; ld c, SCREEN_HEIGHT
+	; call ClearBox
+	; hlcoord 1, 14
+	; call PlaceString
+	; jp .useless_jump
 
-.useless_jump
-	call MobileMenu_InitMenuBuffers
-	pop bc
-	ld hl, wMenuCursorY
-	ld [hl], b
-	ld b, $a
-	ld c, $1
-	hlcoord 5, 1
-	call ClearBox
-	jp .joy_loop
+; .useless_jump
+	; call MobileMenu_InitMenuBuffers
+	; pop bc
+	; ld hl, wMenuCursorY
+	; ld [hl], b
+	; ld b, $a
+	; ld c, $1
+	; hlcoord 5, 1
+	; call ClearBox
+	; jp .joy_loop
 
-MobileString1:
-	db   "めいしフォルダー"
-	next "あいさつ"
-	next "プロフィール"
-	next "せ<TTE>い"
-	next "もどる"
-	db   "@"
+; MobileString1:
+	; db   "めいしフォルダー"
+	; next "あいさつ"
+	; next "プロフィール"
+	; next "せ<TTE>い"
+	; next "もどる"
+	; db   "@"
 
-MobileStrings2:
+; MobileStrings2:
 
-String_0x49fe9:
-	db   "めいし¯つくったり"
-	next "ほぞんしておける　フォルダーです@"
+; String_0x49fe9:
+	; db   "めいし¯つくったり"
+	; next "ほぞんしておける　フォルダーです@"
 
-String_0x4a004:
-	db   "モバイルたいせんや　じぶんのめいしで"
-	next "つかう　あいさつ¯つくります@"
+; String_0x4a004:
+	; db   "モバイルたいせんや　じぶんのめいしで"
+	; next "つかう　あいさつ¯つくります@"
 
-String_0x4a026:
-	db   "あなた<NO>じゅうしょや　ねんれいの"
-	next "せ<TTE>い¯かえられます@"
+; String_0x4a026:
+	; db   "あなた<NO>じゅうしょや　ねんれいの"
+	; next "せ<TTE>い¯かえられます@"
 
-String_0x4a042:
-	db  "モバイルセンター<NI>せつぞくするとき"
-	next "ひつような　こと¯きめます@"
+; String_0x4a042:
+	; db  "モバイルセンター<NI>せつぞくするとき"
+	; next "ひつような　こと¯きめます@"
 
-String_0x4a062:
-	db   "まえ<NO>がめん　<NI>もどります"
-	next "@"
+; String_0x4a062:
+	; db   "まえ<NO>がめん　<NI>もどります"
+	; next "@"
 
-MobileMenu_InitMenuBuffers:
-	ld hl, w2DMenuCursorInitY
-	ld a, 2
-	ld [hli], a
-	ld a, 5 ; w2DMenuCursorInitX
-	ld [hli], a
-	ld a, 5 ; w2DMenuNumRows
-	ld [hli], a
-	ld a, 1 ; w2DMenuNumCols
-	ld [hli], a
-	ld [hl], $0 ; w2DMenuFlags1
-	set 5, [hl]
-	inc hl
-	xor a ; w2DMenuFlags2
-	ld [hli], a
-	ld a, $20 ; w2DMenuCursorOffsets
-	ld [hli], a
-	; this is a stupid way to load $c3
-	ld a, A_BUTTON
-	add D_UP
-	add D_DOWN
-	add B_BUTTON
-	ld [hli], a ; wMenuJoypadFilter
-	ld a, 1
-	ld [hli], a ; wMenuCursorY, wMenuCursorX
-	ld [hli], a ; wMenuCursorY, wMenuCursorX
-	ret
+; MobileMenu_InitMenuBuffers:
+	; ld hl, w2DMenuCursorInitY
+	; ld a, 2
+	; ld [hli], a
+	; ld a, 5 ; w2DMenuCursorInitX
+	; ld [hli], a
+	; ld a, 5 ; w2DMenuNumRows
+	; ld [hli], a
+	; ld a, 1 ; w2DMenuNumCols
+	; ld [hli], a
+	; ld [hl], $0 ; w2DMenuFlags1
+	; set 5, [hl]
+	; inc hl
+	; xor a ; w2DMenuFlags2
+	; ld [hli], a
+	; ld a, $20 ; w2DMenuCursorOffsets
+	; ld [hli], a
+	;;this is a stupid way to load $c3
+	; ld a, A_BUTTON
+	; add D_UP
+	; add D_DOWN
+	; add B_BUTTON
+	; ld [hli], a ; wMenuJoypadFilter
+	; ld a, 1
+	; ld [hli], a ; wMenuCursorY, wMenuCursorX
+	; ld [hli], a ; wMenuCursorY, wMenuCursorX
+	; ret
 
-Function4a098:
-	ld a, 2
-	call MenuClickSound
-	call PlaceHollowCursor
-	call WaitBGMap
-	call LoadStandardMenuHeader
-	farcall Function89de0
-	call ExitMenu
-	call MG_Mobile_Layout_LoadPals
-	call Function4a485
-	pop bc
-	jp Function49f16
+; Function4a098:
+	; ld a, 2
+	; call MenuClickSound
+	; call PlaceHollowCursor
+	; call WaitBGMap
+	; call LoadStandardMenuHeader
+	; farcall Function89de0
+	; call ExitMenu
+	; call MG_Mobile_Layout_LoadPals
+	; call Function4a485
+	; pop bc
+	; jp Function49f16
 
-Function4a0b9:
-	ld a, 2
-	call MenuClickSound
-	pop bc
-	jp Function4a4c4
+; Function4a0b9:
+	; ld a, 2
+	; call MenuClickSound
+	; pop bc
+	; jp Function4a4c4
 
-Function4a0c2:
-	ld a, 2
-	call MenuClickSound
-	ld a, BANK(sPlayerData)
-	call GetSRAMBank
-	ld hl, sPlayerData + wPlayerName - wPlayerData
-	ld de, wPlayerName
-	ld bc, NAME_LENGTH_JAPANESE
-	call CopyBytes
-	call CloseSRAM
-	farcall _LoadData
-	ld c, 2
-	call DelayFrames
-	ld c, $1
-	call InitMobileProfile
-	push af
-	call ClearBGPalettes
-	pop af
-	and a
-	jr nz, .skip_save
-	farcall _SaveData
-.skip_save
-	ld c, 5
-	call DelayFrames
-	jr asm_4a111
+; Function4a0c2:
+	; ld a, 2
+	; call MenuClickSound
+	; ld a, BANK(sPlayerData)
+	; call GetSRAMBank
+	; ld hl, sPlayerData + wPlayerName - wPlayerData
+	; ld de, wPlayerName
+	; ld bc, NAME_LENGTH_JAPANESE
+	; call CopyBytes
+	; call CloseSRAM
+	; farcall _LoadData
+	; ld c, 2
+	; call DelayFrames
+	; ld c, $1
+	; call InitMobileProfile
+	; push af
+	; call ClearBGPalettes
+	; pop af
+	; and a
+	; jr nz, .skip_save
+	; farcall _SaveData
+; .skip_save
+	; ld c, 5
+	; call DelayFrames
+	; jr asm_4a111
 
-Function4a100:
-	ld a, 2
-	call MenuClickSound
-	call ClearBGPalettes
-	call Function4a13b
-	call ClearBGPalettes
-	call ClearTileMap
+; Function4a100:
+	; ld a, 2
+	; call MenuClickSound
+	; call ClearBGPalettes
+	; call Function4a13b
+	; call ClearBGPalettes
+	; call ClearTileMap
 
-asm_4a111:
-	pop bc
-	call LoadFontsExtra
-	jp Function49f0a
+; asm_4a111:
+	; pop bc
+	; call LoadFontsExtra
+	; jp Function49f0a
 
 Function4a118:
 	ld hl, w2DMenuCursorInitY
@@ -637,147 +637,147 @@ MainMenu_MobileStudium:
 	ld [wStartSecond], a
 	ret
 
-Function4a4c4:
-	call ClearBGPalettes
-	call Function4a3a7
-	call Function4a492
-	call Function4a680
-	call ClearBGPalettes
-	ld c, 20
-	call DelayFrames
-	hlcoord 2, 0
-	ld b, $a
-	ld c, $e
-	call Function48cdc
-	hlcoord 4, 2
-	ld de, String_4a5c5
-	call PlaceString
-	hlcoord 4, 4
-	ld de, String_4a5cd
-	call PlaceString
-	hlcoord 4, 6
-	ld de, String_4a5da
-	call PlaceString
-	hlcoord 4, 8
-	ld de, String_4a5e6
-	call PlaceString
-	hlcoord 4, 10
-	ld de, String_4a5f2
-	call PlaceString
-	hlcoord 0, 12
-	ld b, $4
-	ld c, $12
-	call Textbox
-	xor a
-	ld hl, Strings_4a5f6
-	ld d, h
-	ld e, l
-	hlcoord 1, 14
-	call PlaceString
-	ld a, $1
-	ld hl, Strings_4a5f6
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 1, 16
-	call PlaceString
-	call WaitBGMap2
-	call SetPalettes
-	call StaticMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
-	jr asm_4a54d
+; Function4a4c4:
+	; call ClearBGPalettes
+	; call Function4a3a7
+	; call Function4a492
+	; call Function4a680
+	; call ClearBGPalettes
+	; ld c, 20
+	; call DelayFrames
+	; hlcoord 2, 0
+	; ld b, $a
+	; ld c, $e
+	; call Function48cdc
+	; hlcoord 4, 2
+	; ld de, String_4a5c5
+	; call PlaceString
+	; hlcoord 4, 4
+	; ld de, String_4a5cd
+	; call PlaceString
+	; hlcoord 4, 6
+	; ld de, String_4a5da
+	; call PlaceString
+	; hlcoord 4, 8
+	; ld de, String_4a5e6
+	; call PlaceString
+	; hlcoord 4, 10
+	; ld de, String_4a5f2
+	; call PlaceString
+	; hlcoord 0, 12
+	; ld b, $4
+	; ld c, $12
+	; call Textbox
+	; xor a
+	; ld hl, Strings_4a5f6
+	; ld d, h
+	; ld e, l
+	; hlcoord 1, 14
+	; call PlaceString
+	; ld a, $1
+	; ld hl, Strings_4a5f6
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 1, 16
+	; call PlaceString
+	; call WaitBGMap2
+	; call SetPalettes
+	; call StaticMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
+	; jr asm_4a54d
 
-Function4a545:
-	call ScrollingMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
+; Function4a545:
+	; call ScrollingMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
 
-asm_4a54d:
-	bit 0, a
-	jr nz, .asm_4a557
-	bit 1, a
-	jr nz, .asm_4a574
-	jr .asm_4a57e
-.asm_4a557
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	cp $1
-	jp z, Function4a6ab
-	cp $2
-	jp z, Function4a6ab
-	cp $3
-	jp z, Function4a6ab
-	cp $4
-	jp z, Function4a6ab
-	ld a, $1
-	call MenuClickSound
-.asm_4a574
-	pop bc
-	call ClearBGPalettes
-	call ClearTileMap
-	jp Function49f0a
-.asm_4a57e
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	dec a
-	add a
-	push af
-	ld hl, Strings_4a5f6
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 1, 13
-	ld b, $4
-	ld c, $12
-	call ClearBox
-	hlcoord 1, 14
-	call PlaceString
-	pop af
-	inc a
-	ld hl, Strings_4a5f6
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 1, 16
-	call PlaceString
-	jp Function4a5b0
+; asm_4a54d:
+	; bit 0, a
+	; jr nz, .asm_4a557
+	; bit 1, a
+	; jr nz, .asm_4a574
+	; jr .asm_4a57e
+; .asm_4a557
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; cp $1
+	; jp z, Function4a6ab
+	; cp $2
+	; jp z, Function4a6ab
+	; cp $3
+	; jp z, Function4a6ab
+	; cp $4
+	; jp z, Function4a6ab
+	; ld a, $1
+	; call MenuClickSound
+; .asm_4a574
+	; pop bc
+	; call ClearBGPalettes
+	; call ClearTileMap
+	; jp Function49f0a
+; .asm_4a57e
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; dec a
+	; add a
+	; push af
+	; ld hl, Strings_4a5f6
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 1, 13
+	; ld b, $4
+	; ld c, $12
+	; call ClearBox
+	; hlcoord 1, 14
+	; call PlaceString
+	; pop af
+	; inc a
+	; ld hl, Strings_4a5f6
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 1, 16
+	; call PlaceString
+	; jp Function4a5b0
 
-Function4a5b0:
-	call Function4a680
-	pop bc
-	ld hl, wMenuCursorY
-	ld [hl], b
-	ld b, $a
-	ld c, $1
-	hlcoord 3, 1
-	call ClearBox
-	jp Function4a545
+; Function4a5b0:
+	; call Function4a680
+	; pop bc
+	; ld hl, wMenuCursorY
+	; ld [hl], b
+	; ld b, $a
+	; ld c, $1
+	; hlcoord 3, 1
+	; call ClearBox
+	; jp Function4a545
 
-String_4a5c5:
-	db "じこしょうかい@"
-String_4a5cd:
-	db "たいせん　<GA>はじまるとき@"
-String_4a5da:
-	db "たいせん　<NI>かったとき@"
-String_4a5e6:
-	db "たいせん　<NI>まけたとき@"
-String_4a5f2:
-	db "もどる@"
+; String_4a5c5:
+	; db "じこしょうかい@"
+; String_4a5cd:
+	; db "たいせん　<GA>はじまるとき@"
+; String_4a5da:
+	; db "たいせん　<NI>かったとき@"
+; String_4a5e6:
+	; db "たいせん　<NI>まけたとき@"
+; String_4a5f2:
+	; db "もどる@"
 
-Strings_4a5f6:
-	db "めいし　や　ニュース　<NI>のせる@"
-	db "あなた<NO>あいさつです@"
-	db "モバイル　たいせん<GA>はじまるとき@"
-	db "あいて<NI>みえる　あいさつです@"
-	db "モバイル　たいせんで　かったとき@"
-	db "あいて<NI>みえる　あいさつです@"
-	db "モバイル　たいせんで　まけたとき@"
-	db "あいて<NI>みえる　あいさつです@"
-	db "まえ<NO>がめん　<NI>もどります@"
-	db "@"
+; Strings_4a5f6:
+	; db "めいし　や　ニュース　<NI>のせる@"
+	; db "あなた<NO>あいさつです@"
+	; db "モバイル　たいせん<GA>はじまるとき@"
+	; db "あいて<NI>みえる　あいさつです@"
+	; db "モバイル　たいせんで　かったとき@"
+	; db "あいて<NI>みえる　あいさつです@"
+	; db "モバイル　たいせんで　まけたとき@"
+	; db "あいて<NI>みえる　あいさつです@"
+	; db "まえ<NO>がめん　<NI>もどります@"
+	; db "@"
 
 Function4a680:
 	ld hl, w2DMenuCursorInitY
@@ -810,16 +810,16 @@ Function4a680:
 	ld [hli], a
 	ret
 
-Function4a6ab:
-	ld a, $2
-	call MenuClickSound
-	call ClearBGPalettes
-	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
-	farcall Function11c1ab
-	pop bc
-	call LoadFontsExtra
-	jp Function4a4c4
+; Function4a6ab:
+	; ld a, $2
+	; call MenuClickSound
+	; call ClearBGPalettes
+	; ld b, SCGB_DIPLOMA
+	; call GetSGBLayout
+	; farcall Function11c1ab
+	; pop bc
+	; call LoadFontsExtra
+	; jp Function4a4c4
 
 Function4a6c5:
 	ld a, $5

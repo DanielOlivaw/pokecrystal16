@@ -702,9 +702,9 @@ SECTION "Battle Tower Trainer Data", ROMX
 INCLUDE "data/battle_tower/unknown.asm"
 
 
-SECTION "Mobile News Data", ROMX
+; SECTION "Mobile News Data", ROMX
 
-INCLUDE "mobile/news/news.asm"
+; INCLUDE "mobile/news/news.asm"
 
 
 SECTION "Crystal Events", ROMX
@@ -713,9 +713,9 @@ INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
 
-SECTION "Mobile Stadium 2", ROMX
+; SECTION "Mobile Stadium 2", ROMX
 
-INCBIN "mobile/stadium/stadium2.bin"
+; INCBIN "mobile/stadium/stadium2.bin"
 
 
 SECTION "Battle Weather Images", ROMX

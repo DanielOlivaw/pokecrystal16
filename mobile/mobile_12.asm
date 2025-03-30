@@ -1,124 +1,124 @@
-InitMobileProfile:
-	xor a
-	set 6, a
-	ld [wd002], a
-	ld hl, wd003
-	set 0, [hl]
-	ld a, c
-	and a
-	call z, InitCrystalData
-	call ClearBGPalettes
-	call Function48d3d
-	ld a, [wd479]
-	bit 1, a
-	jr z, .not_yet_initialized
-	ld a, [wd003]
-	set 0, a
-	set 1, a
-	set 2, a
-	set 3, a
-	ld [wd003], a
-.not_yet_initialized
-	call Function486bf
-	call LoadFontsExtra
-	ld de, MobileUpArrowGFX
-	ld hl, vTiles2 tile $10
-	lb bc, BANK(MobileUpArrowGFX), 1
-	call Request1bpp
-	ld de, MobileDownArrowGFX
-	ld hl, vTiles2 tile $11
-	lb bc, BANK(MobileDownArrowGFX), 1
-	call Request1bpp
-	call Function4a3a7
-	call ClearBGPalettes
-	ld a, [wd002]
-	bit 6, a
-	jr z, .asm_4808a
-	call Function48689
-	jr .asm_480d7
-.asm_4808a
-	ld a, $5
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID + 1], a
-	ld c, 20
-	call DelayFrames
-	ld b, $1
-	call GetMysteryGift_MobileAdapterLayout
-	call ClearBGPalettes
-	hlcoord 0, 0
-	ld b,  2
-	ld c, 20
-	call ClearBox
-	hlcoord 0, 1
-	ld a, $c
-	ld [hl], a
-	ld bc, $13
-	add hl, bc
-	ld [hl], a
-	ld de, MobileProfileString
-	hlcoord 1, 1
-	call PlaceString
-	hlcoord 0, 2
-	ld b, $a
-	ld c, $12
-	call Function48cdc
-	hlcoord 2, 4
-	ld de, MobileString_Gender
-	call PlaceString
-.asm_480d7
-	hlcoord 2, 6
-	ld de, MobileString_Age
-	call PlaceString
-	hlcoord 2, 8
-	ld de, MobileString_Address
-	call PlaceString
-	hlcoord 2, 10
-	ld de, MobileString_ZipCode
-	call PlaceString
-	hlcoord 2, 12
-	ld de, MobileString_OK
-	call PlaceString
-	ld a, [wd002]
-	bit 6, a
-	jr nz, .asm_48113
-	ld a, [wPlayerGender]
-	ld hl, Strings_484fb
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 11, 4
-	call PlaceString
-.asm_48113
-	hlcoord 11, 6
-	call Function487ec
-	ld a, [wd474]
-	dec a
-	ld hl, Prefectures
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 11, 8
-	call PlaceString
-	hlcoord 11, 10
-	call Function489ea
-	hlcoord 0, 14
-	ld b, $2
-	ld c, $12
-	call Textbox
-	hlcoord 1, 16
-	ld de, MobileString_PersonalInfo
-	call PlaceString
-	call Function48187
-	call WaitBGMap2
-	call SetPalettes
-	call StaticMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
-	jr asm_4815f
+; InitMobileProfile:
+	; xor a
+	; set 6, a
+	; ld [wd002], a
+	; ld hl, wd003
+	; set 0, [hl]
+	; ld a, c
+	; and a
+	; call z, InitCrystalData
+	; call ClearBGPalettes
+	; call Function48d3d
+	; ld a, [wd479]
+	; bit 1, a
+	; jr z, .not_yet_initialized
+	; ld a, [wd003]
+	; set 0, a
+	; set 1, a
+	; set 2, a
+	; set 3, a
+	; ld [wd003], a
+; .not_yet_initialized
+	; call Function486bf
+	; call LoadFontsExtra
+	; ld de, MobileUpArrowGFX
+	; ld hl, vTiles2 tile $10
+	; lb bc, BANK(MobileUpArrowGFX), 1
+	; call Request1bpp
+	; ld de, MobileDownArrowGFX
+	; ld hl, vTiles2 tile $11
+	; lb bc, BANK(MobileDownArrowGFX), 1
+	; call Request1bpp
+	; call Function4a3a7
+	; call ClearBGPalettes
+	; ld a, [wd002]
+	; bit 6, a
+	; jr z, .asm_4808a
+	; call Function48689
+	; jr .asm_480d7
+; .asm_4808a
+	; ld a, $5
+	; ld [wMusicFade], a
+	; ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
+	; ld [wMusicFadeID], a
+	; ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
+	; ld [wMusicFadeID + 1], a
+	; ld c, 20
+	; call DelayFrames
+	; ld b, $1
+	; call GetMysteryGift_MobileAdapterLayout
+	; call ClearBGPalettes
+	; hlcoord 0, 0
+	; ld b,  2
+	; ld c, 20
+	; call ClearBox
+	; hlcoord 0, 1
+	; ld a, $c
+	; ld [hl], a
+	; ld bc, $13
+	; add hl, bc
+	; ld [hl], a
+	; ld de, MobileProfileString
+	; hlcoord 1, 1
+	; call PlaceString
+	; hlcoord 0, 2
+	; ld b, $a
+	; ld c, $12
+	; call Function48cdc
+	; hlcoord 2, 4
+	; ld de, MobileString_Gender
+	; call PlaceString
+; .asm_480d7
+	; hlcoord 2, 6
+	; ld de, MobileString_Age
+	; call PlaceString
+	; hlcoord 2, 8
+	; ld de, MobileString_Address
+	; call PlaceString
+	; hlcoord 2, 10
+	; ld de, MobileString_ZipCode
+	; call PlaceString
+	; hlcoord 2, 12
+	; ld de, MobileString_OK
+	; call PlaceString
+	; ld a, [wd002]
+	; bit 6, a
+	; jr nz, .asm_48113
+	; ld a, [wPlayerGender]
+	; ld hl, Strings_484fb
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 11, 4
+	; call PlaceString
+; .asm_48113
+	; hlcoord 11, 6
+	; call Function487ec
+	; ld a, [wd474]
+	; dec a
+	; ld hl, Prefectures
+	; call GetNthString
+	; ld d, h
+	; ld e, l
+	; hlcoord 11, 8
+	; call PlaceString
+	; hlcoord 11, 10
+	; call Function489ea
+	; hlcoord 0, 14
+	; ld b, $2
+	; ld c, $12
+	; call Textbox
+	; hlcoord 1, 16
+	; ld de, MobileString_PersonalInfo
+	; call PlaceString
+	; call Function48187
+	; call WaitBGMap2
+	; call SetPalettes
+	; call StaticMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
+	; jr asm_4815f
 
 Function48157:
 	call ScrollingMenuJoypad
@@ -1080,23 +1080,23 @@ asm_48922:
 	call DelayFrames
 	jr asm_48972
 
-Function4895a:
-	ldh a, [hJoyPressed]
-	and a
-	jr z, .asm_48965
-	pop bc
-	ld b, $1
-	push bc
-	jr asm_48972
+; Function4895a:
+	; ldh a, [hJoyPressed]
+	; and a
+	; jr z, .asm_48965
+	; pop bc
+	; ld b, $1
+	; push bc
+	; jr asm_48972
 
-.asm_48965
-	ldh a, [hJoyLast]
-	and a
-	jr z, asm_48972
+; .asm_48965
+	; ldh a, [hJoyLast]
+	; and a
+	; jr z, asm_48972
 
-	pop bc
-	ld b, $1
-	push bc
+	; pop bc
+	; ld b, $1
+	; push bc
 
 Function4896e:
 	pop bc
@@ -1598,15 +1598,15 @@ Function48c63:
 	scf
 	ret
 
-Unreferenced_Function48c8e:
-	ld hl, wd019 + $11
-	ld d, h
-	ld e, l
-	farcall Function48c63
-	hlcoord 10, 7
-	call PlaceString
-	call WaitBGMap
-	ret
+; Unreferenced_Function48c8e:
+	; ld hl, wd019 + $11
+	; ld d, h
+	; ld e, l
+	; farcall Function48c63
+	; hlcoord 10, 7
+	; call PlaceString
+	; call WaitBGMap
+	; ret
 
 Function48ca3:
 	push af

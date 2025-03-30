@@ -31,14 +31,14 @@ Function11c075:
 	call Function11c08f
 	ret
 
-Unreferenced_Function11c082:
-	push de
-	ld a, c
-	call Function11c254
-	pop de
-	ld bc, wcd36
-	call PrintEZChatBattleMessage
-	ret
+; Unreferenced_Function11c082:
+	; push de
+	; ld a, c
+	; call Function11c254
+	; pop de
+	; ld bc, wcd36
+	; call PrintEZChatBattleMessage
+	; ret
 
 Function11c08f:
 	ld l, e
