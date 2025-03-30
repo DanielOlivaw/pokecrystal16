@@ -120,305 +120,305 @@
 	; push bc
 	; jr asm_4815f
 
-Function48157:
-	call ScrollingMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
-asm_4815f:
-	bit A_BUTTON_F, a
-	jp nz, Function4820d
-	ld b, a
-	ld a, [wd002]
-	bit 6, a
-	jr z, .dont_check_b_button
-	ld hl, wd479
-	bit 1, [hl]
-	jr z, .dont_check_b_button
-	bit B_BUTTON_F, b
-	jr nz, .b_button
-.dont_check_b_button
-	jp Function48272
+; Function48157:
+	; call ScrollingMenuJoypad
+	; ld hl, wMenuCursorY
+	; ld b, [hl]
+	; push bc
+; asm_4815f:
+	; bit A_BUTTON_F, a
+	; jp nz, Function4820d
+	; ld b, a
+	; ld a, [wd002]
+	; bit 6, a
+	; jr z, .dont_check_b_button
+	; ld hl, wd479
+	; bit 1, [hl]
+	; jr z, .dont_check_b_button
+	; bit B_BUTTON_F, b
+	; jr nz, .b_button
+; .dont_check_b_button
+	; jp Function48272
 
-.b_button
-	call ClearBGPalettes
-	call Function48d30
-	pop bc
-	call ClearTileMap
-	ld a, $ff
-	ret
+; .b_button
+	; call ClearBGPalettes
+	; call Function48d30
+	; pop bc
+	; call ClearTileMap
+	; ld a, $ff
+	; ret
 
-Function48187:
-	ld a, [wd479]
-	bit 1, a
-	jr nz, .asm_481f1
-	ld a, [wd003]
-	ld d, a
-	call Function48725
-	jr c, .asm_481a2
-	lb bc, 1, 4
-	hlcoord 2, 12
-	call ClearBox
-	jr .asm_481ad
-.asm_481a2
-	push de
-	hlcoord 2, 12
-	ld de, MobileString_OK
-	call PlaceString
-	pop de
-.asm_481ad
-	ld a, [wd002]
-	bit 6, a
-	jr nz, .asm_481c1
-	bit 0, d
-	jr nz, .asm_481c1
-	lb bc, 1, 8
-	hlcoord 11, 4
-	call ClearBox
-.asm_481c1
-	bit 1, d
-	jr nz, .asm_481ce
-	lb bc, 1, 8
-	hlcoord 11, 6
-	call ClearBox
-.asm_481ce
-	bit 2, d
-	jr nz, .asm_481db
-	lb bc, 2, 8
-	hlcoord 11, 7
-	call ClearBox
-.asm_481db
-	bit 3, d
-	jr nz, .asm_481f1
-	ld a, [wd479]
-	bit 0, a
-	jr nz, .asm_481f8
-	lb bc, 1, 8
-	hlcoord 11, 10
-	call ClearBox
-	jr .asm_48201
-.asm_481f1
-	ld a, [wd479]
-	bit 0, a
-	jr nz, .asm_48201
-.asm_481f8
-	hlcoord 11, 10
-	ld de, .String_TellLater
-	call PlaceString
-.asm_48201
-	ret
+; Function48187:
+	; ld a, [wd479]
+	; bit 1, a
+	; jr nz, .asm_481f1
+	; ld a, [wd003]
+	; ld d, a
+	; call Function48725
+	; jr c, .asm_481a2
+	; lb bc, 1, 4
+	; hlcoord 2, 12
+	; call ClearBox
+	; jr .asm_481ad
+; .asm_481a2
+	; push de
+	; hlcoord 2, 12
+	; ld de, MobileString_OK
+	; call PlaceString
+	; pop de
+; .asm_481ad
+	; ld a, [wd002]
+	; bit 6, a
+	; jr nz, .asm_481c1
+	; bit 0, d
+	; jr nz, .asm_481c1
+	; lb bc, 1, 8
+	; hlcoord 11, 4
+	; call ClearBox
+; .asm_481c1
+	; bit 1, d
+	; jr nz, .asm_481ce
+	; lb bc, 1, 8
+	; hlcoord 11, 6
+	; call ClearBox
+; .asm_481ce
+	; bit 2, d
+	; jr nz, .asm_481db
+	; lb bc, 2, 8
+	; hlcoord 11, 7
+	; call ClearBox
+; .asm_481db
+	; bit 3, d
+	; jr nz, .asm_481f1
+	; ld a, [wd479]
+	; bit 0, a
+	; jr nz, .asm_481f8
+	; lb bc, 1, 8
+	; hlcoord 11, 10
+	; call ClearBox
+	; jr .asm_48201
+; .asm_481f1
+	; ld a, [wd479]
+	; bit 0, a
+	; jr nz, .asm_48201
+; .asm_481f8
+	; hlcoord 11, 10
+	; ld de, .String_TellLater
+	; call PlaceString
+; .asm_48201
+	; ret
 
-.String_TellLater:
-	db "Tell Later@"
+; .String_TellLater:
+	; db "Tell Later@"
 
-Function4820d:
-	call PlaceHollowCursor
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	push af
-	ld a, [wd002]
-	bit 6, a
-	jr z, .asm_4821f
-	pop af
-	inc a
-	push af
-.asm_4821f
-	pop af
-	cp $1
-	jr z, asm_4828d
-	cp $2
-	jp z, Function4876f
-	cp $3
-	jp z, Function48304
-	cp $4
-	jp z, Function488d3
-	ld a, $2
-	call MenuClickSound
-	ld a, [wd002]
-	bit 6, a
-	jr z, .asm_4825c
-	jr .asm_4825c
+; Function4820d:
+	; call PlaceHollowCursor
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; push af
+	; ld a, [wd002]
+	; bit 6, a
+	; jr z, .asm_4821f
+	; pop af
+	; inc a
+	; push af
+; .asm_4821f
+	; pop af
+	; cp $1
+	; jr z, asm_4828d
+	; cp $2
+	; jp z, Function4876f
+	; cp $3
+	; jp z, Function48304
+	; cp $4
+	; jp z, Function488d3
+	; ld a, $2
+	; call MenuClickSound
+	; ld a, [wd002]
+	; bit 6, a
+	; jr z, .asm_4825c
+	; jr .asm_4825c
 
-	hlcoord 1, 15
-	ld b, $2
-	ld c, $12
-	call ClearBox
-	ld de, MobileString_ProfileChanged
-	hlcoord 1, 16
-	call PlaceString
-	call WaitBGMap
-	ld c, 48
-	call DelayFrames
+	; hlcoord 1, 15
+	; ld b, $2
+	; ld c, $12
+	; call ClearBox
+	; ld de, MobileString_ProfileChanged
+	; hlcoord 1, 16
+	; call PlaceString
+	; call WaitBGMap
+	; ld c, 48
+	; call DelayFrames
 
-.asm_4825c
-	call ClearBGPalettes
-	call Function48d30
-	pop bc
-	call ClearTileMap
-	ld b, SCGB_DIPLOMA
-	call GetSGBLayout
-	ld hl, wd479
-	set 1, [hl]
-	xor a
-	ret
+; .asm_4825c
+	; call ClearBGPalettes
+	; call Function48d30
+	; pop bc
+	; call ClearTileMap
+	; ld b, SCGB_DIPLOMA
+	; call GetSGBLayout
+	; ld hl, wd479
+	; set 1, [hl]
+	; xor a
+	; ret
 
-Function48272:
-	jp Function4840c
+; Function48272:
+	; jp Function4840c
 
-MobileString_PersonalInfo:
-	db "Personal Info@"
+; MobileString_PersonalInfo:
+	; db "Personal Info@"
 
-Function48283:
-	lb bc, 2, 18
-	hlcoord 1, 15
-	call ClearBox
-	ret
+; Function48283:
+	; lb bc, 2, 18
+	; hlcoord 1, 15
+	; call ClearBox
+	; ret
 
-asm_4828d:
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileDesc_Gender
-	call PlaceString
-	ld hl, MenuHeader_0x484f1
-	call LoadMenuHeader
-	call Function4873c
-	hlcoord 11, 2
-	ld b, $4
-	ld c, $7
-	call Function48cdc
-	hlcoord 13, 4
-	ld de, String_484fb
-	call PlaceString
-	hlcoord 13, 6
-	ld de, String_484ff
-	call PlaceString
-	call WaitBGMap
-	ld a, [wPlayerGender]
-	inc a
-	ld [wMenuCursorBuffer], a
-	call StaticMenuJoypad
-	call PlayClickSFX
-	call ExitMenu
-	bit 0, a
-	jp z, Function4840c
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	ld hl, Strings_484fb
-	cp $1
-	jr z, .asm_482ed
-.asm_482e1
-	ld a, [hli]
-	cp $50
-	jr nz, .asm_482e1
-	ld a, 1 << PLAYERGENDER_FEMALE_F
-	ld [wPlayerGender], a
-	jr .asm_482f1
-.asm_482ed
-	xor a
-	ld [wPlayerGender], a
-.asm_482f1
-	ld d, h
-	ld e, l
-	hlcoord 11, 4
-	call PlaceString
-	ld a, [wd003]
-	set 0, a
-	ld [wd003], a
-	jp Function4840c
+; asm_4828d:
+	; call Function48283
+	; hlcoord 1, 16
+	; ld de, MobileDesc_Gender
+	; call PlaceString
+	; ld hl, MenuHeader_0x484f1
+	; call LoadMenuHeader
+	; call Function4873c
+	; hlcoord 11, 2
+	; ld b, $4
+	; ld c, $7
+	; call Function48cdc
+	; hlcoord 13, 4
+	; ld de, String_484fb
+	; call PlaceString
+	; hlcoord 13, 6
+	; ld de, String_484ff
+	; call PlaceString
+	; call WaitBGMap
+	; ld a, [wPlayerGender]
+	; inc a
+	; ld [wMenuCursorBuffer], a
+	; call StaticMenuJoypad
+	; call PlayClickSFX
+	; call ExitMenu
+	; bit 0, a
+	; jp z, Function4840c
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; ld hl, Strings_484fb
+	; cp $1
+	; jr z, .asm_482ed
+; .asm_482e1
+	; ld a, [hli]
+	; cp $50
+	; jr nz, .asm_482e1
+	; ld a, 1 << PLAYERGENDER_FEMALE_F
+	; ld [wPlayerGender], a
+	; jr .asm_482f1
+; .asm_482ed
+	; xor a
+	; ld [wPlayerGender], a
+; .asm_482f1
+	; ld d, h
+	; ld e, l
+	; hlcoord 11, 4
+	; call PlaceString
+	; ld a, [wd003]
+	; set 0, a
+	; ld [wd003], a
+	; jp Function4840c
 
-Function48304:
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileDesc_Address
-	call PlaceString
-	ld hl, MenuHeader_0x48504
-	call LoadMenuHeader
-	ld hl, MenuHeader_0x48513
-	call LoadMenuHeader
-	hlcoord 10, 0
-	ld b, $c
-	ld c, $8
-	call Function48cdc
-	ld a, [wMenuCursorBuffer]
-	ld b, a
-	ld a, [wMenuScrollPosition]
-	ld c, a
-	push bc
-	ld a, [wd474]
-	dec a
-	cp $29
-	jr c, .asm_4833f
-	sub $29
-	inc a
-	ld [wMenuCursorBuffer], a
-	ld a, $29
-.asm_4833f
-	ld [wMenuScrollPosition], a
-	farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-.asm_48348
-	call ScrollingMenu
-	ld de, $629
-	call Function48383
-	jr c, .asm_48348
-	ld d, a
-	pop bc
-	ld a, b
-	ld [wMenuCursorBuffer], a
-	ld a, c
-	ld [wMenuScrollPosition], a
-	ld a, d
-	push af
-	call ExitMenu
-	call ExitMenu
-	pop af
-	ldh a, [hJoyPressed]
-	bit 0, a
-	jr z, .asm_48377
-	call Function483bb
-	ld a, [wd003]
-	set 2, a
-	ld [wd003], a
-.asm_48377
-	call Function48187
-	farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	jp Function4840c
+; Function48304:
+	; call Function48283
+	; hlcoord 1, 16
+	; ld de, MobileDesc_Address
+	; call PlaceString
+	; ld hl, MenuHeader_0x48504
+	; call LoadMenuHeader
+	; ld hl, MenuHeader_0x48513
+	; call LoadMenuHeader
+	; hlcoord 10, 0
+	; ld b, $c
+	; ld c, $8
+	; call Function48cdc
+	; ld a, [wMenuCursorBuffer]
+	; ld b, a
+	; ld a, [wMenuScrollPosition]
+	; ld c, a
+	; push bc
+	; ld a, [wd474]
+	; dec a
+	; cp $29
+	; jr c, .asm_4833f
+	; sub $29
+	; inc a
+	; ld [wMenuCursorBuffer], a
+	; ld a, $29
+; .asm_4833f
+	; ld [wMenuScrollPosition], a
+	; farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
+; .asm_48348
+	; call ScrollingMenu
+	; ld de, $629
+	; call Function48383
+	; jr c, .asm_48348
+	; ld d, a
+	; pop bc
+	; ld a, b
+	; ld [wMenuCursorBuffer], a
+	; ld a, c
+	; ld [wMenuScrollPosition], a
+	; ld a, d
+	; push af
+	; call ExitMenu
+	; call ExitMenu
+	; pop af
+	; ldh a, [hJoyPressed]
+	; bit 0, a
+	; jr z, .asm_48377
+	; call Function483bb
+	; ld a, [wd003]
+	; set 2, a
+	; ld [wd003], a
+; .asm_48377
+	; call Function48187
+	; farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
+	; jp Function4840c
 
-Function48383:
-	push bc
-	push af
-	bit 5, a
-	jr nz, .asm_48390
-	bit 4, a
-	jr nz, .asm_4839f
-	and a
-	jr .asm_483b7
-.asm_48390
-	ld a, [wMenuScrollPosition]
-	sub d
-	ld [wMenuScrollPosition], a
-	jr nc, .asm_483af
-	xor a
-	ld [wMenuScrollPosition], a
-	jr .asm_483af
-.asm_4839f
-	ld a, [wMenuScrollPosition]
-	add d
-	ld [wMenuScrollPosition], a
-	cp e
-	jr c, .asm_483af
-	ld a, e
-	ld [wMenuScrollPosition], a
-	jr .asm_483af
-.asm_483af
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	ld [wMenuCursorBuffer], a
-	scf
-.asm_483b7
-	pop bc
-	ld a, b
-	pop bc
-	ret
+; Function48383:
+	; push bc
+	; push af
+	; bit 5, a
+	; jr nz, .asm_48390
+	; bit 4, a
+	; jr nz, .asm_4839f
+	; and a
+	; jr .asm_483b7
+; .asm_48390
+	; ld a, [wMenuScrollPosition]
+	; sub d
+	; ld [wMenuScrollPosition], a
+	; jr nc, .asm_483af
+	; xor a
+	; ld [wMenuScrollPosition], a
+	; jr .asm_483af
+; .asm_4839f
+	; ld a, [wMenuScrollPosition]
+	; add d
+	; ld [wMenuScrollPosition], a
+	; cp e
+	; jr c, .asm_483af
+	; ld a, e
+	; ld [wMenuScrollPosition], a
+	; jr .asm_483af
+; .asm_483af
+	; ld hl, wMenuCursorY
+	; ld a, [hl]
+	; ld [wMenuCursorBuffer], a
+	; scf
+; .asm_483b7
+	; pop bc
+	; ld a, b
+	; pop bc
+	; ret
 
 Function483bb:
 	ld hl, wScrollingMenuCursorPosition
@@ -478,31 +478,31 @@ Function483e8:
 	call PlaceString
 	ret
 
-Function4840c:
-	call Function48187
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileString_PersonalInfo
-	call PlaceString
-	call Function486bf
-	pop bc
-	ld hl, wMenuCursorY
-	ld [hl], b
-	ld a, [wd002]
-	bit 6, a
-	jr nz, .narrower_box
-	ld b, 9
-	ld c, 1
-	hlcoord 1, 4
-	call ClearBox
-	jp Function48157
+; Function4840c:
+	; call Function48187
+	; call Function48283
+	; hlcoord 1, 16
+	; ld de, MobileString_PersonalInfo
+	; call PlaceString
+	; call Function486bf
+	; pop bc
+	; ld hl, wMenuCursorY
+	; ld [hl], b
+	; ld a, [wd002]
+	; bit 6, a
+	; jr nz, .narrower_box
+	; ld b, 9
+	; ld c, 1
+	; hlcoord 1, 4
+	; call ClearBox
+	; jp Function48157
 
-.narrower_box
-	ld b, 7
-	ld c, 1
-	hlcoord 1, 6
-	call ClearBox
-	jp Function48157
+; .narrower_box
+	; ld b, 7
+	; ld c, 1
+	; hlcoord 1, 6
+	; call ClearBox
+	; jp Function48157
 
 Mobile12_Bin2Dec:
 	push bc
@@ -813,64 +813,64 @@ Function4873c:
 	ld [hli], a ; cursor tile + 1
 	ret
 
-Function4876f:
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileDesc_Age
-	call PlaceString
-	ld hl, MenuHeader_0x48509
-	call LoadMenuHeader
-	ldh a, [hInMenu]
-	push af
-	ld a, $1
-	ldh [hInMenu], a
-	hlcoord 10, 5
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	call WaitBGMap
-	ld a, [wd473]
-	and a
-	jr z, .asm_487ab
-	cp $64
-	jr z, .asm_487b2
-	hlcoord 12, 5
-	ld [hl], $10
-	hlcoord 12, 7
-	ld [hl], $11
-	jr .asm_487b7
-.asm_487ab
-	hlcoord 12, 5
-	ld [hl], $10
-	jr .asm_487b7
-.asm_487b2
-	hlcoord 12, 7
-	ld [hl], $11
-.asm_487b7
-	hlcoord 11, 6
-	call Function487ec
-	ld c, 10
-	call DelayFrames
-	ld a, [wd473]
-	push af
-.asm_487c6
-	call JoyTextDelay
-	call Function4880e
-	jr nc, .asm_487c6
-	ld a, $1
-	call MenuClickSound
-	pop bc
-	jr nz, .asm_487da
-	ld a, b
-	ld [wd473], a
-.asm_487da
-	ld a, [wd473]
-	call ExitMenu
-	hlcoord 11, 6
-	call Function487ec
-	pop af
-	ldh [hInMenu], a
-	jp Function4840c
+; Function4876f:
+	; call Function48283
+	; hlcoord 1, 16
+	; ld de, MobileDesc_Age
+	; call PlaceString
+	; ld hl, MenuHeader_0x48509
+	; call LoadMenuHeader
+	; ldh a, [hInMenu]
+	; push af
+	; ld a, $1
+	; ldh [hInMenu], a
+	; hlcoord 10, 5
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; call WaitBGMap
+	; ld a, [wd473]
+	; and a
+	; jr z, .asm_487ab
+	; cp $64
+	; jr z, .asm_487b2
+	; hlcoord 12, 5
+	; ld [hl], $10
+	; hlcoord 12, 7
+	; ld [hl], $11
+	; jr .asm_487b7
+; .asm_487ab
+	; hlcoord 12, 5
+	; ld [hl], $10
+	; jr .asm_487b7
+; .asm_487b2
+	; hlcoord 12, 7
+	; ld [hl], $11
+; .asm_487b7
+	; hlcoord 11, 6
+	; call Function487ec
+	; ld c, 10
+	; call DelayFrames
+	; ld a, [wd473]
+	; push af
+; .asm_487c6
+	; call JoyTextDelay
+	; call Function4880e
+	; jr nc, .asm_487c6
+	; ld a, $1
+	; call MenuClickSound
+	; pop bc
+	; jr nz, .asm_487da
+	; ld a, b
+	; ld [wd473], a
+; .asm_487da
+	; ld a, [wd473]
+	; call ExitMenu
+	; hlcoord 11, 6
+	; call Function487ec
+	; pop af
+	; ldh [hInMenu], a
+	; jp Function4840c
 
 Function487ec:
 	push hl
@@ -1011,74 +1011,74 @@ INCBIN "gfx/mobile/up_arrow.2bpp"
 MobileDownArrowGFX:
 INCBIN "gfx/mobile/down_arrow.2bpp"
 
-Function488d3:
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileDesc_ZipCode
-	call PlaceString
-	call Function48a3a
-	jp c, Function4840c
-	ld hl, MenuHeader_0x4850e
-	call LoadMenuHeader
-	ldh a, [hInMenu]
-	push af
-	ld a, $1
-	ldh [hInMenu], a
-	hlcoord 10, 9
-	ld b, $1
-	ld c, $8
-	call Function48cdc
-	ld a, [wd475]
-	and $f
-	ld d, $0
-	hlcoord 11, 10
-	call Function489ea
-	call WaitBGMap
-	ld a, [wd475]
-	ld b, a
-	ld a, [wd476]
-	ld c, a
-	ld a, [wd477]
-	ld d, a
-	ld a, [wd478]
-	ld e, a
-	push de
-	push bc
-	ld d, $0
-	ld b, $0
+; Function488d3:
+	; call Function48283
+	; hlcoord 1, 16
+	; ld de, MobileDesc_ZipCode
+	; call PlaceString
+	; call Function48a3a
+	; jp c, Function4840c
+	; ld hl, MenuHeader_0x4850e
+	; call LoadMenuHeader
+	; ldh a, [hInMenu]
+	; push af
+	; ld a, $1
+	; ldh [hInMenu], a
+	; hlcoord 10, 9
+	; ld b, $1
+	; ld c, $8
+	; call Function48cdc
+	; ld a, [wd475]
+	; and $f
+	; ld d, $0
+	; hlcoord 11, 10
+	; call Function489ea
+	; call WaitBGMap
+	; ld a, [wd475]
+	; ld b, a
+	; ld a, [wd476]
+	; ld c, a
+	; ld a, [wd477]
+	; ld d, a
+	; ld a, [wd478]
+	; ld e, a
+	; push de
+	; push bc
+	; ld d, $0
+	; ld b, $0
 
-asm_48922:
-	push bc
-	call JoyTextDelay
-	ldh a, [hJoyDown]
-	and a
-	jp z, Function4896e
-	bit 0, a
-	jp nz, Function4896e
-	bit 1, a
-	jp nz, Function4896e
-	ld a, [wd002]
-	and %11001111
-	res 7, a
-	ld [wd002], a
-	pop bc
-	inc b
-	ld a, b
-	cp $5
-	push bc
-	jr c, .asm_4894c
-	pop bc
-	ld b, $4
-	push bc
-.asm_4894c
-	pop bc
-	push bc
-	ld a, b
-	cp $4
-	jr nz, asm_48972
-	ld c, 10
-	call DelayFrames
-	jr asm_48972
+; asm_48922:
+	; push bc
+	; call JoyTextDelay
+	; ldh a, [hJoyDown]
+	; and a
+	; jp z, Function4896e
+	; bit 0, a
+	; jp nz, Function4896e
+	; bit 1, a
+	; jp nz, Function4896e
+	; ld a, [wd002]
+	; and %11001111
+	; res 7, a
+	; ld [wd002], a
+	; pop bc
+	; inc b
+	; ld a, b
+	; cp $5
+	; push bc
+	; jr c, .asm_4894c
+	; pop bc
+	; ld b, $4
+	; push bc
+; .asm_4894c
+	; pop bc
+	; push bc
+	; ld a, b
+	; cp $4
+	; jr nz, asm_48972
+	; ld c, 10
+	; call DelayFrames
+	; jr asm_48972
 
 ; Function4895a:
 	; ldh a, [hJoyPressed]
@@ -1098,77 +1098,77 @@ asm_48922:
 	; ld b, $1
 	; push bc
 
-Function4896e:
-	pop bc
-	ld b, $0
-	push bc
+; Function4896e:
+	; pop bc
+	; ld b, $0
+	; push bc
 
-asm_48972:
-	call Function48ab5
-	push af
-	cp $f0
-	jr z, .asm_48994
-	cp $f
-	jr nz, .asm_48988
-	ld a, [wd002]
-	set 7, a
-	and $cf
-	ld [wd002], a
-.asm_48988
-	hlcoord 11, 10
-	ld b, $0
-	ld c, d
-	add hl, bc
-	ld b, $3
-	call Function48c11
-.asm_48994
-	call WaitBGMap
-	pop af
-	pop bc
-	jr nc, asm_48922
-	jr nz, .asm_489b1
-	pop bc
-	ld a, b
-	ld [wd475], a
-	ld a, c
-	ld [wd476], a
-	pop bc
-	ld a, b
-	ld [wd477], a
-	ld a, c
-	ld [wd478], a
-	jr .asm_489c5
-.asm_489b1
-	push af
-	ld a, [wd479]
-	set 0, a
-	ld [wd479], a
-	ld a, [wd003]
-	set 3, a
-	ld [wd003], a
-	pop af
-	pop bc
-	pop bc
-.asm_489c5
-	push af
-	push bc
-	push de
-	push hl
-	ld a, $1
-	call MenuClickSound
-	pop hl
-	pop de
-	pop bc
-	pop af
-	call ExitMenu
-	hlcoord 11, 10
-	call Function489ea
-	hlcoord 11, 9
-	lb bc, 1, 8
-	call ClearBox
-	pop af
-	ldh [hInMenu], a
-	jp Function4840c
+; asm_48972:
+	; call Function48ab5
+	; push af
+	; cp $f0
+	; jr z, .asm_48994
+	; cp $f
+	; jr nz, .asm_48988
+	; ld a, [wd002]
+	; set 7, a
+	; and $cf
+	; ld [wd002], a
+; .asm_48988
+	; hlcoord 11, 10
+	; ld b, $0
+	; ld c, d
+	; add hl, bc
+	; ld b, $3
+	; call Function48c11
+; .asm_48994
+	; call WaitBGMap
+	; pop af
+	; pop bc
+	; jr nc, asm_48922
+	; jr nz, .asm_489b1
+	; pop bc
+	; ld a, b
+	; ld [wd475], a
+	; ld a, c
+	; ld [wd476], a
+	; pop bc
+	; ld a, b
+	; ld [wd477], a
+	; ld a, c
+	; ld [wd478], a
+	; jr .asm_489c5
+; .asm_489b1
+	; push af
+	; ld a, [wd479]
+	; set 0, a
+	; ld [wd479], a
+	; ld a, [wd003]
+	; set 3, a
+	; ld [wd003], a
+	; pop af
+	; pop bc
+	; pop bc
+; .asm_489c5
+	; push af
+	; push bc
+	; push de
+	; push hl
+	; ld a, $1
+	; call MenuClickSound
+	; pop hl
+	; pop de
+	; pop bc
+	; pop af
+	; call ExitMenu
+	; hlcoord 11, 10
+	; call Function489ea
+	; hlcoord 11, 9
+	; lb bc, 1, 8
+	; call ClearBox
+	; pop af
+	; ldh [hInMenu], a
+	; jp Function4840c
 
 Function489ea:
 	push de
