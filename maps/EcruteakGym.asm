@@ -12,7 +12,8 @@ EcruteakGym_MapScripts:
 	scene_script .ForcedToLeave ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Morty
 
 .ForcedToLeave:
 	prioritysjump EcruteakGymClosed
@@ -20,6 +21,25 @@ EcruteakGym_MapScripts:
 
 .DummyScene:
 	end
+
+.Morty:
+	checkevent EVENT_FOUGHT_SUICUNE
+	iffalse .MortyAppear
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .MortyAppear
+	checkevent EVENT_MORTY_REMATCH
+	iftrue .MortyAppear
+	checktime EVE
+	iffalse .MortyAppear
+	readvar VAR_WEEKDAY
+	ifequal TUESDAY, .MortyDisappear
+.MortyAppear:
+	appear ECRUTEAKGYM_MORTY
+	return
+
+.MortyDisappear:
+	disappear ECRUTEAKGYM_MORTY
+	return
 
 EcruteakGymMortyScript:
 	faceplayer
@@ -429,7 +449,7 @@ EcruteakGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, EcruteakGymStatue
 
 	db 7 ; object events
-	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
+	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, EVENT_ECRUTEAK_GYM_MORTY
 	object_event  2,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJeffrey, -1
 	object_event  3, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSagePing, -1
 	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, -1

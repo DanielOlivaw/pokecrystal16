@@ -6,16 +6,66 @@
 	const ECRUTEAKCITY_FISHER
 	const ECRUTEAKCITY_YOUNGSTER
 	const ECRUTEAKCITY_GRAMPS3
+	const ECRUTEAKCITY_MORTY
 
 EcruteakCity_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_OBJECTS, .Morty
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	return
+
+.Morty:
+	checkevent EVENT_FOUGHT_SUICUNE
+	iffalse .MortyDisappear
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .MortyDisappear
+	checkevent EVENT_MORTY_REMATCH
+	iftrue .MortyDisappear
+	checktime EVE
+	iffalse .MortyDisappear
+	readvar VAR_WEEKDAY
+	ifequal TUESDAY, .MortyAppear
+.MortyDisappear:
+	disappear ECRUTEAKCITY_MORTY
+	return
+
+.MortyAppear:
+	appear ECRUTEAKCITY_MORTY
+	return
+
+EcruteakCityMortyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_MORTY_REMATCH
+	iftrue .FightDone
+	writetext EcruteakCityMortyIntroText1
+	yesorno
+	iffalse .Refused
+	writetext EcruteakCityMortyIntroText2
+	waitbutton
+	closetext
+	winlosstext EcruteakCityMortyLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_MORTY_REMATCH
+	opentext
+.FightDone
+	writetext EcruteakCityMortyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext EcruteakCityMortyNoBattleText
+	waitbutton
+	closetext
+	end
 
 EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
@@ -106,26 +156,75 @@ EcruteakCityHiddenGoldLeaf2:
 EcruteakCityHiddenGoldLeaf3:
 	hiddenitem GOLD_LEAF, EVENT_ECRUTEAK_CITY_HIDDEN_GOLD_LEAF_3
 
-UnusedMissingDaughterText:
-; unused
-	text "Oh, no. Oh, no…"
+EcruteakCityMortyIntroText1:
+	text "MORTY: The legend-"
+	line "ary #MON did"
+	cont "not choose me…"
 
-	para "My daughter is"
-	line "missing."
+	para "But that does not"
+	line "mean that I have"
 
-	para "No… She couldn't"
-	line "have gone to the"
-	cont "BURNED TOWER."
+	para "lost out on my"
+	line "future."
 
-	para "I told her not to"
-	line "go near it…"
+	para "I will continue"
+	line "my training until"
 
-	para "People seem to"
-	line "disappear there…"
+	para "I discover a new"
+	line "future for myself."
 
-	para "Oh, what should I"
-	line "do…?"
+	para "Say, do you want"
+	line "to be part of my"
+	cont "training?"
 	done
+
+EcruteakCityMortyIntroText2:
+	text "All right! Let's"
+	line "battle!"
+	done
+
+EcruteakCityMortyLossText:
+	text "I've lost again…"
+	done
+
+EcruteakCityMortyAfterBattleText:
+	text "MORTY: I don't th-"
+	line "ink our potentials"
+	cont "are so different."
+
+	para "But you seem to"
+	line "have something…"
+
+	para "Something more"
+	line "than that…"
+	done
+
+EcruteakCityMortyNoBattleText:
+	text "I understand… you"
+	line "must be busy with"
+	cont "things."
+	done
+
+; UnusedMissingDaughterText:
+;; unused
+	; text "Oh, no. Oh, no…"
+
+	; para "My daughter is"
+	; line "missing."
+
+	; para "No… She couldn't"
+	; line "have gone to the"
+	; cont "BURNED TOWER."
+
+	; para "I told her not to"
+	; line "go near it…"
+
+	; para "People seem to"
+	; line "disappear there…"
+
+	; para "Oh, what should I"
+	; line "do…?"
+	; done
 
 EcruteakCityGramps1Text:
 	text "ECRUTEAK used to"
@@ -313,7 +412,7 @@ EcruteakCity_MapEvents:
 	bg_event 28,  5, BGEVENT_ITEM, EcruteakCityHiddenGoldLeaf2
 	bg_event 35,  6, BGEVENT_ITEM, EcruteakCityHiddenGoldLeaf3
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event 18, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
@@ -321,3 +420,4 @@ EcruteakCity_MapEvents:
 	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 	object_event 10, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
 	object_event  3,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, EVENT_ECRUTEAK_CITY_GRAMPS
+	object_event 31,  4, SPRITE_MORTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakCityMortyScript, EVENT_MORTY_REMATCH
