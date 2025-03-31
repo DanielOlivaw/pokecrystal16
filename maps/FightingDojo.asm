@@ -14,7 +14,7 @@ FightingDojo_MapScripts:
 	iffalse .ChuckDisappear
 	checkevent EVENT_CHUCK_REMATCH
 	iftrue .ChuckDisappear
-	checktime NITE
+	checktime EVE | NITE
 	iffalse .ChuckDisappear
 	readvar VAR_WEEKDAY
 	ifequal WEDNESDAY, .ChuckAppear
