@@ -9,6 +9,7 @@
 	const LAKEOFRAGE_COOLTRAINER_F2
 	const LAKEOFRAGE_GYARADOS
 	const LAKEOFRAGE_WESLEY
+	const LAKEOFRAGE_PRYCE
 	const LAKEOFRAGE_POKE_BALL1
 	const LAKEOFRAGE_POKE_BALL2
 	const LAKEOFRAGE_POKE_BALL3
@@ -20,7 +21,7 @@ LakeOfRage_MapScripts:
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_OBJECTS, .Wesley
+	callback MAPCALLBACK_OBJECTS, .WesleyOrPryce
 
 .DummyScene0:
 	end
@@ -32,14 +33,29 @@ LakeOfRage_MapScripts:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	return
 
-.Wesley:
+.WesleyOrPryce:
 	readvar VAR_WEEKDAY
+	ifequal MONDAY, .CheckPryce
 	ifequal WEDNESDAY, .WesleyAppears
+	disappear LAKEOFRAGE_PRYCE
 	disappear LAKEOFRAGE_WESLEY
 	return
 
 .WesleyAppears:
 	appear LAKEOFRAGE_WESLEY
+.NoPryce:
+	disappear LAKEOFRAGE_PRYCE
+	return
+
+.CheckPryce:
+	disappear LAKEOFRAGE_WESLEY
+	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
+	iffalse .NoPryce
+	checkevent EVENT_PRYCE_REMATCH
+	iftrue .NoPryce
+	checktime MORN
+	iffalse .NoPryce
+	appear LAKEOFRAGE_PRYCE
 	return
 
 LakeOfRageLanceScript:
@@ -102,6 +118,35 @@ RedGyarados:
 	closetext
 	setscene 0 ; Lake of Rage does not have a scene variable
 	appear LAKEOFRAGE_LANCE
+	end
+
+LakeOfRagePryceScript:
+	faceplayer
+	opentext
+	checkevent EVENT_PRYCE_REMATCH
+	iftrue .FightDone
+	writetext LakeOfRagePryceIntroText1
+	yesorno
+	iffalse .Refused
+	writetext LakeOfRagePryceIntroText2
+	waitbutton
+	closetext
+	winlosstext LakeOfRagePryceLossText, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_PRYCE_REMATCH
+	opentext
+.FightDone
+	writetext LakeOfRagePryceAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext LakeOfRagePryceNoBattleText
+	waitbutton
+	closetext
 	end
 
 LakeOfRageGrampsScript:
@@ -326,6 +371,64 @@ UnknownText_0x703df:
 	line "RED SCALE."
 	done
 
+LakeOfRagePryceIntroText1:
+	text "PRYCE: I make it a"
+	line "habit to train"
+
+	para "myself on Monday"
+	line "mornings to give"
+
+	para "this lazy body a"
+	line "spine."
+
+	para "You could be a"
+	line "good training"
+	cont "partner."
+
+	para "So? Will you"
+	line "battle me?"
+	done
+
+LakeOfRagePryceIntroText2:
+	text "Finally. No need"
+	line "for words."
+
+	para "A #MON battle"
+	line "is the way for us"
+	cont "to communicate."
+	done
+
+LakeOfRagePryceLossText:
+	text "Mmm… Impressive!"
+	done
+
+LakeOfRagePryceAfterBattleText:
+	text "PRYCE: It's"
+	line "strange, but when"
+
+	para "I lose, I don't"
+	line "feel disappointed."
+
+	para "I just feel happy."
+
+	para "Just happy that"
+	line "such talented"
+
+	para "trainers still"
+	line "come to see me."
+	done
+
+LakeOfRagePryceNoBattleText:
+	text "That's OK, too."
+	line "People ought to"
+
+	para "have their own"
+	line "ideas."
+
+	para "That's the way it"
+	line "is."
+	done
+
 LakeOfRageGrampsText:
 	text "The GYARADOS are"
 	line "angry!"
@@ -515,7 +618,7 @@ LakeOfRage_MapEvents:
 	bg_event 35,  5, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion
 	bg_event 16,  3, BGEVENT_ITEM, LakeOfRageHiddenMaxRevive
 
-	db 13 ; object events
+	db 14 ; object events
 	object_event 21, 28, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageLanceScript, EVENT_LAKE_OF_RAGE_LANCE
 	object_event 20, 26, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageGrampsScript, -1
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeOfRageSuperNerdScript, -1
@@ -526,7 +629,7 @@ LakeOfRage_MapEvents:
 	object_event 36,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCooltrainerfLois, EVENT_LAKE_OF_RAGE_CIVILIANS
 	object_event 18, 22, SPRITE_GYARADOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RedGyarados, EVENT_LAKE_OF_RAGE_RED_GYARADOS
 	object_event  4,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
+	object_event 17, 16, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRagePryceScript, EVENT_PRYCE_REMATCH
 	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
-	; object_event 35,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
 	tmhmball_event 35,  2, TM_BULLET_SEED, EVENT_LAKE_OF_RAGE_TM_DETECT
 	object_event 11, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageRedFlute, EVENT_LAKE_OF_RAGE_RED_FLUTE
