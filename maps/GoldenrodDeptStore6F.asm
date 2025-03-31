@@ -5,11 +5,30 @@ GOLDENRODDEPTSTORE6F_LEMONADE_PRICE    EQU 350
 	object_const_def ; object_event constants
 	const GOLDENRODDEPTSTORE6F_LASS
 	const GOLDENRODDEPTSTORE6F_SUPER_NERD
+	const GOLDENRODDEPTSTORE6F_WHITNEY
 
 GoldenrodDeptStore6F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Whitney
+
+.Whitney:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .WhitneyDisappear
+	checkevent EVENT_WHITNEY_REMATCH
+	iftrue .WhitneyDisappear
+	checktime DAY
+	iffalse .WhitneyDisappear
+	readvar VAR_WEEKDAY
+	ifequal SATURDAY, .WhitneyAppear
+.WhitneyDisappear:
+	disappear GOLDENRODDEPTSTORE6F_WHITNEY
+	return
+
+.WhitneyAppear:
+	appear GOLDENRODDEPTSTORE6F_WHITNEY
+	return
 
 GoldenrodVendingMachine:
 	opentext
@@ -84,6 +103,35 @@ GoldenrodVendingMachine:
 	db "LEMONADE     ¥350@"
 	db "CANCEL@"
 
+GoldenrodDeptStore6FWhitneyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_WHITNEY_REMATCH
+	iftrue .FightDone
+	writetext GoldenrodDeptStore6FWhitneyIntroText1
+	yesorno
+	iffalse .Refused
+	writetext GoldenrodDeptStore6FWhitneyIntroText2
+	waitbutton
+	closetext
+	winlosstext GoldenrodDeptStore6FWhitneyLossText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_WHITNEY_REMATCH
+	opentext
+.FightDone
+	writetext GoldenrodDeptStore6FWhitneyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext GoldenrodDeptStore6FWhitneyNoBattleText
+	waitbutton
+	closetext
+	end
+
 GoldenrodDeptStore6FLassScript:
 	jumptextfaceplayer GoldenrodDeptStore6FLassText
 
@@ -117,6 +165,44 @@ GoldenrodVendingNoMoneyText:
 GoldenrodVendingNoSpaceText:
 	text "There's no more"
 	line "room for stuff."
+	done
+
+GoldenrodDeptStore6FWhitneyIntroText1:
+	text "WHITNEY: What a"
+	line "coincidence!"
+
+	para "<PLAYER>, what are"
+	line "you doing here?"
+
+	para "Me? I'm bored!"
+	line "Nothing to do!"
+
+	para "Oh, hey! You wanna"
+	line "battle me again?"
+	done
+
+GoldenrodDeptStore6FWhitneyIntroText2:
+	text "My #MON are a"
+	line "lot stronger now!"
+
+	para "Are you ready?"
+	done
+
+GoldenrodDeptStore6FWhitneyLossText:
+	text "Ugh…"
+	done
+
+GoldenrodDeptStore6FWhitneyAfterBattleText:
+	text "WHITNEY: You"
+	line "really are strong!"
+
+	para "But I won't lose"
+	line "next time!"
+	done
+
+GoldenrodDeptStore6FWhitneyNoBattleText:
+	text "Hey, don't be so"
+	line "mean."
 	done
 
 GoldenrodDeptStore6FLassText:
@@ -167,6 +253,7 @@ GoldenrodDeptStore6F_MapEvents:
 	bg_event 10,  1, BGEVENT_UP, GoldenrodVendingMachine
 	bg_event 11,  1, BGEVENT_UP, GoldenrodVendingMachine
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 10,  2, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore6FLassScript, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event  8,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore6FSuperNerdScript, EVENT_GOLDENROD_CITY_CIVILIANS
+	object_event 13,  4, SPRITE_WHITNEY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore6FWhitneyScript, EVENT_WHITNEY_REMATCH

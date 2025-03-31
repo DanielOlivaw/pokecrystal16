@@ -11,7 +11,25 @@ GoldenrodGym_MapScripts:
 	scene_script .DummyScene0 ; SCENE_GOLDENRODGYM_NOTHING
 	scene_script .DummyScene1 ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Whitney
+
+.Whitney:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .WhitneyAppear
+	checkevent EVENT_WHITNEY_REMATCH
+	iftrue .WhitneyAppear
+	checktime DAY
+	iffalse .WhitneyAppear
+	readvar VAR_WEEKDAY
+	ifequal SATURDAY, .WhitneyDisappear
+.WhitneyAppear:
+	appear GOLDENRODGYM_WHITNEY
+	return
+
+.WhitneyDisappear:
+	disappear GOLDENRODGYM_WHITNEY
+	return
 
 .DummyScene0:
 	end
