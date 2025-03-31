@@ -10,7 +10,25 @@
 AzaleaGym_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Bugsy
+
+.Bugsy:
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iffalse .BugsyAppear
+	checkevent EVENT_BUGSY_REMATCH
+	iftrue .BugsyAppear
+	checktime DAY
+	iffalse .BugsyAppear
+	readvar VAR_WEEKDAY
+	ifequal THURSDAY, .BugsyDisappear
+.BugsyAppear:
+	appear AZALEAGYM_BUGSY
+	return
+
+.BugsyDisappear
+	disappear AZALEAGYM_BUGSY
+	return
 
 AzaleaGymBugsyScript:
 	faceplayer
