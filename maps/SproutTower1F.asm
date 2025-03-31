@@ -5,11 +5,64 @@
 	const SPROUTTOWER1F_TEACHER
 	const SPROUTTOWER1F_SAGE3
 	const SPROUTTOWER1F_POKE_BALL
+	const SPROUTTOWER1F_FALKNER
 
 SproutTower1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Falkner
+
+.Falkner:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .FalknerDisappear
+	checkevent EVENT_FALKNER_REMATCH
+	iftrue .FalknerDisappear
+	checktime MORN
+	iffalse .FalknerDisappear
+	readvar VAR_WEEKDAY
+	ifequal SATURDAY, .FalknerAppear
+.FalknerDisappear:
+	disappear SPROUTTOWER1F_FALKNER
+	return
+
+.FalknerAppear:
+	appear SPROUTTOWER1F_FALKNER
+	return
+
+SproutTower1FFalknerScript:
+	checkevent EVENT_FALKNER_REMATCH
+	iftrue .FightDone
+	opentext
+	writetext SproutTower1FFalknerIntroText1
+	waitbutton
+	faceplayer
+	writetext SproutTower1FFalknerIntroText2
+	yesorno
+	iffalse .Refused
+	writetext SproutTower1FFalknerIntroText3
+	waitbutton
+	closetext
+	winlosstext SproutTower1FFalknerLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_FALKNER_REMATCH
+	opentext
+.FightDone
+	faceplayer
+	opentext
+	writetext SproutTower1FFalknerAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.Refused
+	writetext SproutTower1FFalknerNoBattleText
+	waitbutton
+	turnobject SPROUTTOWER1F_FALKNER, LEFT
+	closetext
+	end
 
 SproutTower1FSage1Script:
 	jumptextfaceplayer SproutTower1FSage1Text
@@ -39,6 +92,70 @@ SproutTower1FParlyzHeal:
 
 SproutTower1FStatue:
 	jumptext SproutTower1FStatueText
+
+SproutTower1FFalknerIntroText1:
+	text "FALKNER: The"
+	line "graceful movement"
+	cont "of the pillar…"
+	done
+
+SproutTower1FFalknerIntroText2:
+	text "Oh, <PLAYER>!"
+
+	para "My dad brought me"
+	line "to SPROUT TOWER to"
+
+	para "train when I was"
+	line "just starting out."
+
+	para "I bet you trained"
+	line "here too when you"
+
+	para "were starting your"
+	line "journey, right?"
+
+	para "Brings back mem-"
+	line "ories, huh?"
+
+	para "Hey, what do you"
+	line "say to a battle?"
+	done
+
+SproutTower1FFalknerIntroText3:
+	text "All right!"
+
+	para "It's a pleasure to"
+	line "be able to battle"
+	cont "you again!"
+	done
+
+SproutTower1FFalknerLossText:
+	text "Hmm… It's still a"
+	line "long way to become"
+	cont "the best trainer."
+	done
+
+SproutTower1FFalknerAfterBattleText:
+	text "FALKNER: A defeat"
+	line "is a defeat."
+
+	para "You are strong"
+	line "indeed."
+
+	para "I'm going to train"
+	line "harder with my"
+
+	para "#MON to become"
+	line "the greatest bird"
+	cont "keeper of all!"
+	done
+
+SproutTower1FFalknerNoBattleText:
+	text "That's all right."
+
+	para "I'll just stay"
+	line "here for a while…"
+	done
 
 SageChowSeenText:
 	text "We stand guard in"
@@ -116,10 +233,11 @@ SproutTower1F_MapEvents:
 	bg_event  7, 15, BGEVENT_READ, SproutTower1FStatue
 	bg_event 12, 15, BGEVENT_READ, SproutTower1FStatue
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event  7,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SproutTower1FSage1Script, -1
 	object_event  6,  7, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SproutTower1FSage2Script, -1
 	object_event 11, 12, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SproutTower1FGrannyScript, -1
 	object_event  9,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SproutTower1FTeacherScript, -1
 	object_event  3,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageChow, -1
 	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower1FParlyzHeal, EVENT_SPROUT_TOWER1F_PARLYZ_HEAL
+	object_event 12,  8, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SproutTower1FFalknerScript, -1
