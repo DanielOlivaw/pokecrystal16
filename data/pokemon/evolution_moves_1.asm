@@ -215,7 +215,7 @@ RaichuEvolutionMoves:
 	db 0 ; no more evolution moves
 
 RaichuAEvolutionMoves:
-	dw PSYCHIC
+	dw PSYCHIC_M
 	db 0 ; no more evolution moves
 
 SandslashEvolutionMoves:
