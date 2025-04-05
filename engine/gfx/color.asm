@@ -43,6 +43,56 @@ CheckShininess:
 	and a
 	ret
 
+GetFlowerColor:
+; Return Flabebe, Floette, or Florges color in a based on DVs at hl
+
+; Take the middle 2 bits of each DV and place them in order:
+;	atk  def  spd  spc
+;	.ww..xx.  .yy..zz.
+
+	ld l, c
+	ld h, b
+
+	; atk
+	ld a, [hl]
+	and %01100000
+	sla a
+	ld b, a
+	; def
+	ld a, [hli]
+	and %00000110
+	swap a
+	srl a
+	or b
+	ld b, a
+
+	; spd
+	ld a, [hl]
+	and %01100000
+	swap a
+	sla a
+	or b
+	ld b, a
+	; spc
+	ld a, [hl]
+	and %00000110
+	srl a
+	or b
+
+; Divide by 51 to get 0-5
+	ldh [hDividend + 3], a
+	xor a
+	ldh [hDividend], a
+	ldh [hDividend + 1], a
+	ldh [hDividend + 2], a
+	ld a, $ff / 5
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+
+	ldh a, [hQuotient + 3]
+	ret
+
 InitPartyMenuPalettes:
 	ld hl, PalPacket_PartyMenu + 1
 	call CopyFourPalettes
@@ -217,31 +267,31 @@ LoadMailPalettes:
 	add hl, hl
 	ld de, .MailPals
 	add hl, de
-	call CheckCGB
-	jr nz, .cgb
-	push hl
-	ld hl, PalPacket_9ce6
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	pop hl
-	inc hl
-	inc hl
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hli]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	call PushSGBPals
-	ld hl, BlkPacket_9a86
-	call PushSGBPals
-	ret
+	; call CheckCGB
+	; jr nz, .cgb
+	; push hl
+	; ld hl, PalPacket_9ce6
+	; ld de, wSGBPals
+	; ld bc, PALPACKET_LENGTH
+	; call CopyBytes
+	; pop hl
+	; inc hl
+	; inc hl
+	; ld a, [hli]
+	; ld [wSGBPals + 3], a
+	; ld a, [hli]
+	; ld [wSGBPals + 4], a
+	; ld a, [hli]
+	; ld [wSGBPals + 5], a
+	; ld a, [hli]
+	; ld [wSGBPals + 6], a
+	; ld hl, wSGBPals
+	; call PushSGBPals
+	; ld hl, BlkPacket_9a86
+	; call PushSGBPals
+	; ret
 
-.cgb
+; .cgb
 	ld de, wBGPals1
 	ld bc, 1 palettes
 	ld a, BANK(wBGPals1)
@@ -533,11 +583,56 @@ BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
 
 _GetMonPalettePointer:
+	push bc
+	push de
 	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 3
+	ld hl, .color_form_table
+	call IsInHalfwordArray
+	jr c, .color_form
+	ld h, b
+	ld l, c
+	pop de
+	pop bc
 	add hl, hl
 	add hl, hl
 	add hl, hl
 	ld bc, PokemonPalettes
+	add hl, bc
+	ret
+
+.color_form_table
+	dwb FLABEBE, 0
+	dwb FLOETTE, 5
+	dwb FLORGES, 10
+	; dwb MINIOR_CORE, 15
+	dw -1
+
+.color_form
+	pop de
+	pop bc
+	inc hl
+	inc hl
+	ld a, [hl]
+	ld d, a
+	call GetFlowerColor
+	ld l, a
+	ld h, 0
+	ld a, d
+	inc a
+.color_form_loop
+	dec a
+	jr z, .get_color_form_palette
+	inc hl
+	jr .color_form_loop
+
+.get_color_form_palette
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, FlowerPalettes
 	add hl, bc
 	ret
 
@@ -608,32 +703,32 @@ InitSGBBorder:
 	call CheckCGB
 	ret nz
 ; SGB/DMG only
-	di
-	ld a, [wcfbe]
-	push af
-	set 7, a
-	ld [wcfbe], a
-	xor a
-	ldh [rJOYP], a
-	ldh [hSGB], a
-	call PushSGBBorderPalsAndWait
-	jr nc, .skip
-	ld a, $1
-	ldh [hSGB], a
-	call _InitSGBBorderPals
-	call SGBBorder_PushBGPals
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	call PushSGBBorder
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	ld hl, MaskEnCancelPacket
-	call _PushSGBPals
+	; di
+	; ld a, [wcfbe]
+	; push af
+	; set 7, a
+	; ld [wcfbe], a
+	; xor a
+	; ldh [rJOYP], a
+	; ldh [hSGB], a
+	; call PushSGBBorderPalsAndWait
+	; jr nc, .skip
+	; ld a, $1
+	; ldh [hSGB], a
+	; call _InitSGBBorderPals
+	; call SGBBorder_PushBGPals
+	; call SGBDelayCycles
+	; call SGB_ClearVRAM
+	; call PushSGBBorder
+	; call SGBDelayCycles
+	; call SGB_ClearVRAM
+	; ld hl, MaskEnCancelPacket
+	; call _PushSGBPals
 
-.skip
-	pop af
-	ld [wcfbe], a
-	ei
+; .skip
+	; pop af
+	; ld [wcfbe], a
+	; ei
 	ret
 
 InitCGBPals::
@@ -691,178 +786,178 @@ InitCGBPals::
 	jr nz, .loop
 	ret
 
-_InitSGBBorderPals:
-	ld hl, .PacketPointerTable
-	ld c, 9
-.loop
-	push bc
-	ld a, [hli]
-	push hl
-	ld h, [hl]
-	ld l, a
-	call _PushSGBPals
-	pop hl
-	inc hl
-	pop bc
-	dec c
-	jr nz, .loop
-	ret
+; _InitSGBBorderPals:
+	; ld hl, .PacketPointerTable
+	; ld c, 9
+; .loop
+	; push bc
+	; ld a, [hli]
+	; push hl
+	; ld h, [hl]
+	; ld l, a
+	; call _PushSGBPals
+	; pop hl
+	; inc hl
+	; pop bc
+	; dec c
+	; jr nz, .loop
+	; ret
 
-.PacketPointerTable:
-	dw MaskEnFreezePacket
-	dw DataSndPacket1
-	dw DataSndPacket2
-	dw DataSndPacket3
-	dw DataSndPacket4
-	dw DataSndPacket5
-	dw DataSndPacket6
-	dw DataSndPacket7
-	dw DataSndPacket8
+; .PacketPointerTable:
+	; dw MaskEnFreezePacket
+	; dw DataSndPacket1
+	; dw DataSndPacket2
+	; dw DataSndPacket3
+	; dw DataSndPacket4
+	; dw DataSndPacket5
+	; dw DataSndPacket6
+	; dw DataSndPacket7
+	; dw DataSndPacket8
 
-PushSGBBorder:
-	call .LoadSGBBorderPointers
-	push de
-	call SGBBorder_YetMorePalPushing
-	pop hl
-	call SGBBorder_MorePalPushing
-	ret
+; PushSGBBorder:
+	; call .LoadSGBBorderPointers
+	; push de
+	; call SGBBorder_YetMorePalPushing
+	; pop hl
+	; call SGBBorder_MorePalPushing
+	; ret
 
-.LoadSGBBorderPointers:
-	ld hl, SGBBorder
-	ld de, SGBBorderMap
-	ret
+; .LoadSGBBorderPointers:
+	; ld hl, SGBBorder
+	; ld de, SGBBorderMap
+	; ret
 
-SGB_ClearVRAM:
-	ld hl, VRAM_Begin
-	ld bc, VRAM_End - VRAM_Begin
-	xor a
-	call ByteFill
-	ret
+; SGB_ClearVRAM:
+	; ld hl, VRAM_Begin
+	; ld bc, VRAM_End - VRAM_Begin
+	; xor a
+	; call ByteFill
+	; ret
 
-PushSGBBorderPalsAndWait:
-	ld hl, MltReq2Packet
-	call _PushSGBPals
-	call SGBDelayCycles
-	ldh a, [rJOYP]
-	and $3
-	cp $3
-	jr nz, .carry
-	ld a, $20
-	ldh [rJOYP], a
-	ldh a, [rJOYP]
-	ldh a, [rJOYP]
-	call SGBDelayCycles
-	call SGBDelayCycles
-	ld a, $30
-	ldh [rJOYP], a
-	call SGBDelayCycles
-	call SGBDelayCycles
-	ld a, $10
-	ldh [rJOYP], a
-rept 6
-	ldh a, [rJOYP]
-endr
-	call SGBDelayCycles
-	call SGBDelayCycles
-	ld a, $30
-	ldh [rJOYP], a
-	ldh a, [rJOYP]
-	ldh a, [rJOYP]
-	ldh a, [rJOYP]
-	call SGBDelayCycles
-	call SGBDelayCycles
-	ldh a, [rJOYP]
-	and $3
-	cp $3
-	jr nz, .carry
-	call .FinalPush
-	and a
-	ret
+; PushSGBBorderPalsAndWait:
+	; ld hl, MltReq2Packet
+	; call _PushSGBPals
+	; call SGBDelayCycles
+	; ldh a, [rJOYP]
+	; and $3
+	; cp $3
+	; jr nz, .carry
+	; ld a, $20
+	; ldh [rJOYP], a
+	; ldh a, [rJOYP]
+	; ldh a, [rJOYP]
+	; call SGBDelayCycles
+	; call SGBDelayCycles
+	; ld a, $30
+	; ldh [rJOYP], a
+	; call SGBDelayCycles
+	; call SGBDelayCycles
+	; ld a, $10
+	; ldh [rJOYP], a
+; rept 6
+	; ldh a, [rJOYP]
+; endr
+	; call SGBDelayCycles
+	; call SGBDelayCycles
+	; ld a, $30
+	; ldh [rJOYP], a
+	; ldh a, [rJOYP]
+	; ldh a, [rJOYP]
+	; ldh a, [rJOYP]
+	; call SGBDelayCycles
+	; call SGBDelayCycles
+	; ldh a, [rJOYP]
+	; and $3
+	; cp $3
+	; jr nz, .carry
+	; call .FinalPush
+	; and a
+	; ret
 
-.carry
-	call .FinalPush
-	scf
-	ret
+; .carry
+	; call .FinalPush
+	; scf
+	; ret
 
-.FinalPush:
-	ld hl, MltReq1Packet
-	call _PushSGBPals
-	jp SGBDelayCycles
+; .FinalPush:
+	; ld hl, MltReq1Packet
+	; call _PushSGBPals
+	; jp SGBDelayCycles
 
-SGBBorder_PushBGPals:
-	call DisableLCD
-	ld a, %11100100
-	ldh [rBGP], a
-	ld hl, PredefPals
-	ld de, vTiles1
-	ld bc, $100 tiles
-	call CopyData
-	call DrawDefaultTiles
-	ld a, LCDC_DEFAULT
-	ldh [rLCDC], a
-	ld hl, PalTrnPacket
-	call _PushSGBPals
-	xor a
-	ldh [rBGP], a
-	ret
+; SGBBorder_PushBGPals:
+	; call DisableLCD
+	; ld a, %11100100
+	; ldh [rBGP], a
+	; ld hl, PredefPals
+	; ld de, vTiles1
+	; ld bc, $100 tiles
+	; call CopyData
+	; call DrawDefaultTiles
+	; ld a, LCDC_DEFAULT
+	; ldh [rLCDC], a
+	; ld hl, PalTrnPacket
+	; call _PushSGBPals
+	; xor a
+	; ldh [rBGP], a
+	; ret
 
-SGBBorder_MorePalPushing:
-	call DisableLCD
-	ld a, $e4
-	ldh [rBGP], a
-	ld de, vTiles1
-	ld bc, (6 + SCREEN_WIDTH + 6) * 5 * 2
-	call CopyData
-	ld b, SCREEN_HEIGHT
-.loop
-	push bc
-	ld bc, 6 * 2
-	call CopyData
-	ld bc, SCREEN_WIDTH * 2
-	call ClearBytes
-	ld bc, 6 * 2
-	call CopyData
-	pop bc
-	dec b
-	jr nz, .loop
-	ld bc, (6 + SCREEN_WIDTH + 6) * 5 * 2
-	call CopyData
-	ld bc, $100
-	call ClearBytes
-	ld bc, 16 palettes
-	call CopyData
-	call DrawDefaultTiles
-	ld a, LCDC_DEFAULT
-	ldh [rLCDC], a
-	ld hl, PctTrnPacket
-	call _PushSGBPals
-	xor a
-	ldh [rBGP], a
-	ret
+; SGBBorder_MorePalPushing:
+	; call DisableLCD
+	; ld a, $e4
+	; ldh [rBGP], a
+	; ld de, vTiles1
+	; ld bc, (6 + SCREEN_WIDTH + 6) * 5 * 2
+	; call CopyData
+	; ld b, SCREEN_HEIGHT
+; .loop
+	; push bc
+	; ld bc, 6 * 2
+	; call CopyData
+	; ld bc, SCREEN_WIDTH * 2
+	; call ClearBytes
+	; ld bc, 6 * 2
+	; call CopyData
+	; pop bc
+	; dec b
+	; jr nz, .loop
+	; ld bc, (6 + SCREEN_WIDTH + 6) * 5 * 2
+	; call CopyData
+	; ld bc, $100
+	; call ClearBytes
+	; ld bc, 16 palettes
+	; call CopyData
+	; call DrawDefaultTiles
+	; ld a, LCDC_DEFAULT
+	; ldh [rLCDC], a
+	; ld hl, PctTrnPacket
+	; call _PushSGBPals
+	; xor a
+	; ldh [rBGP], a
+	; ret
 
-SGBBorder_YetMorePalPushing:
-	call DisableLCD
-	ld a, %11100100
-	ldh [rBGP], a
-	ld de, vTiles1
-	ld b, $80
-.loop
-	push bc
-	ld bc, 1 tiles
-	call CopyData
-	ld bc, 1 tiles
-	call ClearBytes
-	pop bc
-	dec b
-	jr nz, .loop
-	call DrawDefaultTiles
-	ld a, LCDC_DEFAULT
-	ldh [rLCDC], a
-	ld hl, ChrTrnPacket
-	call _PushSGBPals
-	xor a
-	ldh [rBGP], a
-	ret
+; SGBBorder_YetMorePalPushing:
+	; call DisableLCD
+	; ld a, %11100100
+	; ldh [rBGP], a
+	; ld de, vTiles1
+	; ld b, $80
+; .loop
+	; push bc
+	; ld bc, 1 tiles
+	; call CopyData
+	; ld bc, 1 tiles
+	; call ClearBytes
+	; pop bc
+	; dec b
+	; jr nz, .loop
+	; call DrawDefaultTiles
+	; ld a, LCDC_DEFAULT
+	; ldh [rLCDC], a
+	; ld hl, ChrTrnPacket
+	; call _PushSGBPals
+	; xor a
+	; ldh [rBGP], a
+	; ret
 
 CopyData:
 ; copy bc bytes of data from hl to de
@@ -921,20 +1016,20 @@ SGBDelayCycles:
 
 INCLUDE "gfx/sgb/blk_packets.asm"
 INCLUDE "gfx/sgb/pal_packets.asm"
-INCLUDE "data/sgb_ctrl_packets.asm"
+; INCLUDE "data/sgb_ctrl_packets.asm"
 
 PredefPals:
 INCLUDE "gfx/sgb/predef.pal"
 
-SGBBorderMap:
-; interleaved tile ids and palette ids
-INCBIN "gfx/sgb/sgb_border.bin"
+; SGBBorderMap:
+;; interleaved tile ids and palette ids
+; INCBIN "gfx/sgb/sgb_border.bin"
 
-SGBBorderPalettes:
-INCLUDE "gfx/sgb/sgb_border.pal"
+; SGBBorderPalettes:
+; INCLUDE "gfx/sgb/sgb_border.pal"
 
-SGBBorder:
-INCBIN "gfx/sgb/sgb_border.2bpp"
+; SGBBorder:
+; INCBIN "gfx/sgb/sgb_border.2bpp"
 
 HPBarPals:
 INCLUDE "gfx/battle/hp_bar.pal"
@@ -1054,8 +1149,8 @@ LoadMapPals:
 
 INCLUDE "data/maps/environment_colors.asm"
 
-PartyMenuBGMobilePalette:
-INCLUDE "gfx/stats/party_menu_bg_mobile.pal"
+; PartyMenuBGMobilePalette:
+; INCLUDE "gfx/stats/party_menu_bg_mobile.pal"
 
 PartyMenuBGPalette:
 INCLUDE "gfx/stats/party_menu_bg.pal"
