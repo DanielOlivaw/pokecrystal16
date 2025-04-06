@@ -250,6 +250,54 @@ GetGender:
 	scf
 	ret
 
+GetGenderFormF50:
+; Return gender form, assuming a 50/50 gender split, in e based on DVs at hl
+
+; Take the middle 2 bits of each DV and place them in order:
+;	atk  def  spd  spc
+;	.ww..xx.  .yy..zz.
+
+	ld l, c
+	ld h, b
+
+; Attack DV
+	ld a, [hl]
+	cpl
+	and $10
+	swap a
+	add a
+	ld b, a   ; ~(Atk DV & 1) << 1
+; Defense DV
+	ld a, [hli]
+	and $1
+	add a
+	add a
+	or b
+	ld b, a   ; ~(Atk DV & 1) << 1 | (Def DV & 1) << 2
+; Special DV
+	ld a, [hl]
+	cpl
+	and $1
+	add a
+	add a
+	add a
+	or b
+	swap a
+	ld b, a   ; ~(Atk DV & 1) << 1 | (Def DV & 1) << 2 | ~(Spc DV & 1) << 3
+
+; Values below the ratio are male, and vice versa.
+	ld a, GENDER_F50
+	cp b
+	jr c, .Male
+
+.Female:
+	ld e, 0
+	ret
+
+.Male:
+	ld e, 1
+	ret
+
 ListMovePP:
 	ld a, [wNumMoves]
 	inc a

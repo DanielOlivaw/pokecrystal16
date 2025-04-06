@@ -1178,10 +1178,14 @@ PokemonPicPointers::
 	dba DeerlingBackpic
 	dba SawsbuckFrontpic
 	dba SawsbuckBackpic
-	dba FrillishFrontpic
-	dba FrillishBackpic
-	dba JellicentFrontpic
-	dba JellicentBackpic
+
+	; Frillish and Jellicent pics are part of the form pics table
+	; See UnownPicPointers
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+
 	dba JoltikFrontpic
 	dba JoltikBackpic
 	dba GalvantulaFrontpic

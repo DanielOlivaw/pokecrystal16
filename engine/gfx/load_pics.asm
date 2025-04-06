@@ -1,9 +1,23 @@
+FRILLISH_INDEX EQU 27
+JELLICENT_INDEX EQU 29
+
 GetUnownLetter:
 ; Return Unown letter in wUnownLetter based on DVs at hl
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
 ;	.ww..xx.  .yy..zz.
+
+	push hl
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 3
+	ld hl, .gender_form_mons
+	call IsInHalfwordArray
+	jr c, GetGenderForm
+	pop hl
 
 	; atk
 	ld a, [hl]
@@ -45,6 +59,25 @@ GetUnownLetter:
 ; Increment to get 1-26
 	ldh a, [hQuotient + 3]
 	inc a
+	ld [wUnownLetter], a
+	ret
+
+.gender_form_mons
+	dwb FRILLISH, FRILLISH_INDEX
+	dwb JELLICENT, JELLICENT_INDEX
+	dw -1
+
+GetGenderForm:
+	inc hl
+	inc hl
+	ld a, [hl]
+	ld d, a
+	pop hl
+	ld b, h
+	ld c, l
+	farcall GetGenderFormF50
+	ld a, e
+	add d
 	ld [wUnownLetter], a
 	ret
 
@@ -121,34 +154,30 @@ GetPicIndirectPointer:
 	call GetPokemonIndexFromID
 	ld b, h
 	ld c, l
-	ld a, l
-	sub LOW(UNOWN)
-	if HIGH(UNOWN) == 0
-		or h
-	else
-		jr nz, .not_unown
-		if HIGH(UNOWN) == 1
-			dec h
-		else
-			ld a, h
-			cp HIGH(UNOWN)
-		endc
-	endc
-	jr z, .unown
-.not_unown
+	ld de, 2
+	ld hl, .form_mons
+	call IsInHalfwordArray
+	jr c, .get_form
+; .no_alt_forms
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
 .done
 	ld a, 6
 	jp AddNTimes
 
-.unown
+.get_form
 	ld a, [wUnownLetter]
 	ld c, a
 	ld b, 0
 	ld hl, UnownPicPointers - 6
 	ld d, BANK(UnownPicPointers)
 	jr .done
+
+.form_mons
+	dw UNOWN
+	dw FRILLISH
+	dw JELLICENT
+	dw -1
 
 GetFrontpicPointer:
 	call GetPicIndirectPointer

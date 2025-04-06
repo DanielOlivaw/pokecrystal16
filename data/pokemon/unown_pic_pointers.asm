@@ -54,3 +54,11 @@ UnownPicPointers::
 	dba UnownZFrontpic
 	dba UnownZBackpic
 	assert_table_length NUM_UNOWN
+	dba FrillishFFrontpic
+	dba FrillishFBackpic
+	dba FrillishMFrontpic
+	dba FrillishMBackpic
+	dba JellicentFFrontpic
+	dba JellicentFBackpic
+	dba JellicentMFrontpic
+	dba JellicentMBackpic

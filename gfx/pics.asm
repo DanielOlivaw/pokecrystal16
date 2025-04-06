@@ -1304,10 +1304,10 @@ ReuniclusBackpic:       INCBIN "gfx/pokemon/reuniclus/back.2bpp.lz"
 
 SECTION "Pics 52", ROMX
 
-FrillishFrontpic:      INCBIN "gfx/pokemon/frillish_f/front.animated.2bpp.lz"
-FrillishBackpic:       INCBIN "gfx/pokemon/frillish_f/back.2bpp.lz"
-JellicentFrontpic:      INCBIN "gfx/pokemon/jellicent_f/front.animated.2bpp.lz"
-JellicentBackpic:       INCBIN "gfx/pokemon/jellicent_f/back.2bpp.lz"
+FrillishFFrontpic:      INCBIN "gfx/pokemon/frillish_f/front.animated.2bpp.lz"
+FrillishFBackpic:       INCBIN "gfx/pokemon/frillish_f/back.2bpp.lz"
+JellicentFFrontpic:      INCBIN "gfx/pokemon/jellicent_f/front.animated.2bpp.lz"
+JellicentFBackpic:       INCBIN "gfx/pokemon/jellicent_f/back.2bpp.lz"
 JoltikFrontpic:      INCBIN "gfx/pokemon/joltik/front.animated.2bpp.lz"
 JoltikBackpic:       INCBIN "gfx/pokemon/joltik/back.2bpp.lz"
 GalvantulaFrontpic:      INCBIN "gfx/pokemon/galvantula/front.animated.2bpp.lz"
@@ -2304,3 +2304,11 @@ DiglettFrontpic:      INCBIN "gfx/pokemon/diglett/front.animated.2bpp.lz"
 DiglettBackpic:       INCBIN "gfx/pokemon/diglett/back.2bpp.lz"
 DugtrioFrontpic:      INCBIN "gfx/pokemon/dugtrio/front.animated.2bpp.lz"
 DugtrioBackpic:       INCBIN "gfx/pokemon/dugtrio/back.2bpp.lz"
+
+
+SECTION "Pics 124", ROMX
+
+FrillishMFrontpic:      INCBIN "gfx/pokemon/frillish_m/front.animated.2bpp.lz"
+FrillishMBackpic:       INCBIN "gfx/pokemon/frillish_m/back.2bpp.lz"
+JellicentMFrontpic:      INCBIN "gfx/pokemon/jellicent_m/front.animated.2bpp.lz"
+JellicentMBackpic:       INCBIN "gfx/pokemon/jellicent_m/back.2bpp.lz"

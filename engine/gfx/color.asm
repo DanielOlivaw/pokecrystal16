@@ -592,6 +592,9 @@ _GetMonPalettePointer:
 	ld hl, .color_form_table
 	call IsInHalfwordArray
 	jr c, .color_form
+	ld hl, .gender_form_table
+	call IsInHalfwordArray
+	jr c, .gender_form
 	ld h, b
 	ld l, c
 	pop de
@@ -633,6 +636,36 @@ _GetMonPalettePointer:
 	add hl, hl
 	add hl, hl
 	ld bc, FlowerPalettes
+	add hl, bc
+	ret
+
+.gender_form_table
+	dwb FRILLISH, 0
+	dwb JELLICENT, 2
+	dw -1
+
+.gender_form
+	pop de
+	pop bc
+	inc hl
+	inc hl
+	ld a, [hl]
+	ld d, a
+	farcall GetGenderFormF50
+	ld l, e
+	ld h, 0
+	inc d
+.gender_form_loop
+	dec d
+	jr z, .get_gender_form_palette
+	inc hl
+	jr .gender_form_loop
+
+.get_gender_form_palette
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, JellyfishPalettes
 	add hl, bc
 	ret
 
