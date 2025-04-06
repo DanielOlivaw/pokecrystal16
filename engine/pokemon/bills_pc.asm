@@ -2481,24 +2481,24 @@ BillsPC_ChangeBoxSubmenu:
 	jr z, .Switch
 	cp $2
 	jr z, .Name
-	cp $3
-	jr z, .Print
+	; cp $3
+	; jr z, .Print
 	and a
 	ret
 
-.Print:
-	call GetBoxCount
-	and a
-	jr z, .EmptyBox
-	ld e, l
-	ld d, h
-	ld a, [wMenuSelection]
-	dec a
-	ld c, a
-	farcall PrintPCBox
-	call BillsPC_ClearTilemap
-	and a
-	ret
+; .Print:
+	; call GetBoxCount
+	; and a
+	; jr z, .EmptyBox
+	; ld e, l
+	; ld d, h
+	; ld a, [wMenuSelection]
+	; dec a
+	; ld c, a
+	; farcall PrintPCBox
+	; call BillsPC_ClearTilemap
+	; and a
+	; ret
 
 .EmptyBox:
 	call BillsPC_PlaceEmptyBoxString_SFX
@@ -2547,10 +2547,10 @@ BillsPC_ChangeBoxSubmenu:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 3 ; items
 	db "SWITCH@"
 	db "NAME@"
-	db "PRINT@"
+	; db "PRINT@"
 	db "QUIT@"
 
 BillsPC_PlaceChooseABoxString:

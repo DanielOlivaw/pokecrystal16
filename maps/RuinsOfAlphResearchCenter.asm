@@ -150,22 +150,22 @@ RuinsOfAlphResearchCenterComputer:
 
 RuinsOfAlphResearchCenterPrinter:
 	opentext
-	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
-	iftrue .SkipChecking
-	readvar VAR_UNOWNCOUNT
-	ifequal NUM_UNOWN, .PrinterAvailable
-.SkipChecking:
+	; checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
+	; iftrue .SkipChecking
+	; readvar VAR_UNOWNCOUNT
+	; ifequal NUM_UNOWN, .PrinterAvailable
+; .SkipChecking:
 	writetext RuinsOfAlphResearchCenterPrinterText_DoesntWork
 	waitbutton
 	closetext
 	end
 
-.PrinterAvailable:
-	writetext RuinsOfAlphResearchCenterUnownPrinterText
-	waitbutton
-	special UnownPrinter
-	closetext
-	end
+; .PrinterAvailable:
+	; writetext RuinsOfAlphResearchCenterUnownPrinterText
+	; waitbutton
+	; special UnownPrinter
+	; closetext
+	; end
 
 RuinsOfAlphResearchCenterPhoto:
 ; unreferenced
@@ -365,13 +365,13 @@ RuinsOfAlphResearchCenterComputerText_GotAllUnown:
 
 RuinsOfAlphResearchCenterPrinterText_DoesntWork:
 	text "This doesn't seem"
-	line "to work yet."
+	line "to work."
 	done
 
-RuinsOfAlphResearchCenterUnownPrinterText:
-	text "UNOWN may be"
-	line "printed out."
-	done
+; RuinsOfAlphResearchCenterUnownPrinterText:
+	; text "UNOWN may be"
+	; line "printed out."
+	; done
 
 RuinsOfAlphResearchCenterProfSilktreePhotoText:
 ; unused

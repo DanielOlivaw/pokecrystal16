@@ -100,11 +100,11 @@ OverworldTownMap:
 	call ExitAllMenus
 	ret
 
-UnownPrinter:
-	call FadeToMenu
-	farcall _UnownPrinter
-	call ExitAllMenus
-	ret
+; UnownPrinter:
+	; call FadeToMenu
+	; farcall _UnownPrinter
+	; call ExitAllMenus
+	; ret
 
 DisplayLinkRecord:
 	call FadeToMenu
@@ -409,11 +409,11 @@ Diploma:
 	call ExitAllMenus
 	ret
 
-PrintDiploma:
-	call FadeToMenu
-	farcall _PrintDiploma
-	call ExitAllMenus
-	ret
+; PrintDiploma:
+	; call FadeToMenu
+	; farcall _PrintDiploma
+	; call ExitAllMenus
+	; ret
 
 TrainerHouse:
 	ld a, BANK(sMysteryGiftTrainerHouseFlag)

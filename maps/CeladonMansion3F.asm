@@ -36,33 +36,33 @@ GameFreakGameDesignerScript:
 GameFreakGraphicArtistScript:
 	faceplayer
 	opentext
-	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
-	iftrue .CanPrintDiploma
+	; checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+	; iftrue .CanPrintDiploma
 	writetext GameFreakGraphicArtistText
 	waitbutton
 	closetext
 	end
 
-.CanPrintDiploma:
-	writetext GameFreakGraphicArtistPrintDiplomaText
-	yesorno
-	iffalse .Refused
-	special PrintDiploma
-	closetext
-	end
+; .CanPrintDiploma:
+	; writetext GameFreakGraphicArtistPrintDiplomaText
+	; yesorno
+	; iffalse .Refused
+	; special PrintDiploma
+	; closetext
+	; end
 
-.Refused:
-	writetext GameFreakGraphicArtistRefusedText
-	waitbutton
-	closetext
-	end
+; .Refused:
+	; writetext GameFreakGraphicArtistRefusedText
+	; waitbutton
+	; closetext
+	; end
 
-.CancelPrinting:
-; unused
-	writetext GameFreakGraphicArtistErrorText
-	waitbutton
-	closetext
-	end
+; .CancelPrinting:
+;; unused
+	; writetext GameFreakGraphicArtistErrorText
+	; waitbutton
+	; closetext
+	; end
 
 GameFreakProgrammerScript:
 	jumptextfaceplayer GameFreakProgrammerText
@@ -121,28 +121,28 @@ GameFreakGraphicArtistText:
 	para "I drew you!"
 	done
 
-GameFreakGraphicArtistPrintDiplomaText:
-	text "I'm the GRAPHIC"
-	line "ARTIST."
+; GameFreakGraphicArtistPrintDiplomaText:
+	; text "I'm the GRAPHIC"
+	; line "ARTIST."
 
-	para "Oh, you completed"
-	line "your #DEX?"
+	; para "Oh, you completed"
+	; line "your #DEX?"
 
-	para "Want me to print"
-	line "out your DIPLOMA?"
-	done
+	; para "Want me to print"
+	; line "out your DIPLOMA?"
+	; done
 
-GameFreakGraphicArtistRefusedText:
-	text "Give me a shout if"
-	line "you want your"
-	cont "DIPLOMA printed."
-	done
+; GameFreakGraphicArtistRefusedText:
+	; text "Give me a shout if"
+	; line "you want your"
+	; cont "DIPLOMA printed."
+	; done
 
-GameFreakGraphicArtistErrorText:
-	text "Something's wrong."
-	line "I'll have to can-"
-	cont "cel printing."
-	done
+; GameFreakGraphicArtistErrorText:
+	; text "Something's wrong."
+	; line "I'll have to can-"
+	; cont "cel printing."
+	; done
 
 GameFreakProgrammerText:
 	text "Who, me? I'm the"
