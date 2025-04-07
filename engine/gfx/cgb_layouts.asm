@@ -204,6 +204,12 @@ _CGB_StatsScreenHPPals:
 	ld bc, HPBarPals
 	add hl, bc
 	call LoadPalette_White_Col1_Col2_Black ; hp palette
+	; Get form data for palette
+	push de
+	ld hl, wTempMonDVs
+	predef GetUnownLetter
+	pop de
+	; Get palettes
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer

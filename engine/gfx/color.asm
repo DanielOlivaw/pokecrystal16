@@ -43,56 +43,6 @@ CheckShininess:
 	and a
 	ret
 
-GetFlowerColor:
-; Return Flabebe, Floette, or Florges color in a based on DVs at hl
-
-; Take the middle 2 bits of each DV and place them in order:
-;	atk  def  spd  spc
-;	.ww..xx.  .yy..zz.
-
-	ld l, c
-	ld h, b
-
-	; atk
-	ld a, [hl]
-	and %01100000
-	sla a
-	ld b, a
-	; def
-	ld a, [hli]
-	and %00000110
-	swap a
-	srl a
-	or b
-	ld b, a
-
-	; spd
-	ld a, [hl]
-	and %01100000
-	swap a
-	sla a
-	or b
-	ld b, a
-	; spc
-	ld a, [hl]
-	and %00000110
-	srl a
-	or b
-
-; Divide by 51 to get 0-5
-	ldh [hDividend + 3], a
-	xor a
-	ldh [hDividend], a
-	ldh [hDividend + 1], a
-	ldh [hDividend + 2], a
-	ld a, $ff / 5
-	ldh [hDivisor], a
-	ld b, 4
-	call Divide
-
-	ldh a, [hQuotient + 3]
-	ret
-
 InitPartyMenuPalettes:
 	ld hl, PalPacket_PartyMenu + 1
 	call CopyFourPalettes
@@ -541,6 +491,10 @@ GetEnemyFrontpicPalettePointer:
 	ld c, l
 	ld b, h
 	ld a, [wTempEnemyMonSpecies]
+	ld [wCurPartySpecies], a
+	push af
+	predef GetUnownLetter
+	pop af
 	call GetFrontpicPalettePointer
 	pop de
 	ret
@@ -583,22 +537,12 @@ BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
 
 _GetMonPalettePointer:
-	push bc
-	push de
+	push af
+	ld a, [wUnownLetter]
+	cp NUM_UNOWN + 1
+	jr nc, .get_palette
+	pop af
 	call GetPokemonIndexFromID
-	ld b, h
-	ld c, l
-	ld de, 3
-	ld hl, .color_form_table
-	call IsInHalfwordArray
-	jr c, .color_form
-	ld hl, .gender_form_table
-	call IsInHalfwordArray
-	jr c, .gender_form
-	ld h, b
-	ld l, c
-	pop de
-	pop bc
 	add hl, hl
 	add hl, hl
 	add hl, hl
@@ -606,67 +550,17 @@ _GetMonPalettePointer:
 	add hl, bc
 	ret
 
-.color_form_table
-	dwb FLABEBE, 0
-	dwb FLOETTE, 5
-	dwb FLORGES, 10
-	; dwb MINIOR_CORE, 15
-	dw -1
-
-.color_form
-	pop de
-	pop bc
-	inc hl
-	inc hl
-	ld a, [hl]
-	ld d, a
-	call GetFlowerColor
+.get_palette
+	sub NUM_UNOWN + 1
 	ld l, a
 	ld h, 0
-	ld a, d
-	inc a
-.color_form_loop
-	dec a
-	jr z, .get_color_form_palette
-	inc hl
-	jr .color_form_loop
-
-.get_color_form_palette
+.get_form_palette
 	add hl, hl
 	add hl, hl
 	add hl, hl
-	ld bc, FlowerPalettes
+	ld bc, FormPalettes
 	add hl, bc
-	ret
-
-.gender_form_table
-	dwb FRILLISH, 0
-	dwb JELLICENT, 2
-	dw -1
-
-.gender_form
-	pop de
-	pop bc
-	inc hl
-	inc hl
-	ld a, [hl]
-	ld d, a
-	farcall GetGenderFormF50
-	ld l, e
-	ld h, 0
-	inc d
-.gender_form_loop
-	dec d
-	jr z, .get_gender_form_palette
-	inc hl
-	jr .gender_form_loop
-
-.get_gender_form_palette
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld bc, JellyfishPalettes
-	add hl, bc
+	pop af
 	ret
 
 GetMonNormalOrShinyPalettePointer:

@@ -2724,10 +2724,25 @@ Pokedex_LoadSelectedMonTiles:
 	call Pokedex_GetSelectedMon
 	call Pokedex_CheckSeen
 	jr z, .QuestionMark
-	ld a, [wFirstUnownSeen]
-	ld [wUnownLetter], a
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
+
+	; Get default form for form mons
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 3
+	ld hl, .FormMons
+	call IsInHalfwordArray
+	jr c, .GetIndex
+
+	; Get form of first Unown seen
+	ld a, [wFirstUnownSeen]
+	jr nz, .GotIndex
+	; Default to form A
+	ld a, 1
+.GotIndex
+	ld [wUnownLetter], a
 	call GetBaseData
 	ld de, vTiles2
 	predef GetMonFrontpic
@@ -2745,6 +2760,17 @@ Pokedex_LoadSelectedMonTiles:
 	call Get2bpp
 	call CloseSRAM
 	ret
+
+.GetIndex:
+	inc hl
+	inc hl
+	ld a, [hl]
+	jr .GotIndex
+
+.FormMons:
+	dwb FRILLISH, FRILLISH_INDEX
+	dwb JELLICENT, JELLICENT_INDEX
+	dw -1
 
 ; Pokedex_LoadCurrentFootprint:
 	; call Pokedex_GetSelectedMon

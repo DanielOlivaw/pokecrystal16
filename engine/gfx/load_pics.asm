@@ -1,6 +1,3 @@
-FRILLISH_INDEX EQU 27
-JELLICENT_INDEX EQU 29
-
 GetUnownLetter:
 ; Return Unown letter in wUnownLetter based on DVs at hl
 
@@ -17,6 +14,9 @@ GetUnownLetter:
 	ld hl, .gender_form_mons
 	call IsInHalfwordArray
 	jr c, GetGenderForm
+	ld hl, .flower_form_mons
+	call IsInHalfwordArray
+	jr c, GetFlowerForm
 	pop hl
 
 	; atk
@@ -67,6 +67,12 @@ GetUnownLetter:
 	dwb JELLICENT, JELLICENT_INDEX
 	dw -1
 
+.flower_form_mons
+	dwb FLABEBE, FLABEBE_INDEX
+	dwb FLOETTE, FLOETTE_INDEX
+	dwb FLORGES, FLORGES_INDEX
+	dw -1
+
 GetGenderForm:
 	inc hl
 	inc hl
@@ -77,6 +83,62 @@ GetGenderForm:
 	ld c, l
 	farcall GetGenderFormF50
 	ld a, e
+	add d
+	ld [wUnownLetter], a
+	ret
+
+GetFlowerForm:
+; Save Flabebe, Floette, or Florges index from flower_form_mons in d
+	inc hl
+	inc hl
+	ld a, [hl]
+	ld d, a
+
+; Get Flabebe, Floette, or Florges color in a based on DVs at hl
+	pop hl
+
+; Take the middle 2 bits of each DV and place them in order:
+;	atk  def  spd  spc
+;	.ww..xx.  .yy..zz.
+
+	; atk
+	ld a, [hl]
+	and %01100000
+	sla a
+	ld b, a
+	; def
+	ld a, [hli]
+	and %00000110
+	swap a
+	srl a
+	or b
+	ld b, a
+
+	; spd
+	ld a, [hl]
+	and %01100000
+	swap a
+	sla a
+	or b
+	ld b, a
+	; spc
+	ld a, [hl]
+	and %00000110
+	srl a
+	or b
+
+; Divide by 51 to get 0-5
+	ldh [hDividend + 3], a
+	xor a
+	ldh [hDividend], a
+	ldh [hDividend + 1], a
+	ldh [hDividend + 2], a
+	ld a, $ff / 5
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+
+	ldh a, [hQuotient + 3]
 	add d
 	ld [wUnownLetter], a
 	ret

@@ -1701,7 +1701,7 @@ INCLUDE "gfx/pokemon/farigiraf/shiny.pal"
 
 	assert_table_length NUM_POKEMON + 1
 
-JellyfishPalettes:
+FormPalettes:
 INCBIN "gfx/pokemon/frillish_f/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/frillish_f/shiny.pal"
 INCBIN "gfx/pokemon/frillish_m/front.gbcpal", middle_colors
@@ -1711,7 +1711,6 @@ INCLUDE "gfx/pokemon/jellicent_f/shiny.pal"
 INCBIN "gfx/pokemon/jellicent_m/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jellicent_m/shiny.pal"
 
-FlowerPalettes:
 INCBIN "gfx/pokemon/flabebe/front.gbcpal", middle_colors ; red
 INCLUDE "gfx/pokemon/flabebe/shiny.pal" ; red
 INCLUDE "gfx/pokemon/flabebe/blue.pal"
