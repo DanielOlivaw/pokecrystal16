@@ -539,7 +539,7 @@ INCLUDE "gfx/battle_anims/battle_anims.pal"
 _GetMonPalettePointer:
 	push af
 	ld a, [wUnownLetter]
-	cp NUM_UNOWN + 1
+	cp FRILLISH_INDEX
 	jr nc, .get_palette
 	pop af
 	call GetPokemonIndexFromID
@@ -551,7 +551,7 @@ _GetMonPalettePointer:
 	ret
 
 .get_palette
-	sub NUM_UNOWN + 1
+	sub FRILLISH_INDEX
 	ld l, a
 	ld h, 0
 .get_form_palette

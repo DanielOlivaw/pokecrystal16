@@ -13,10 +13,10 @@ GetUnownLetter:
 	ld de, 3
 	ld hl, .gender_form_mons
 	call IsInHalfwordArray
-	jr c, GetGenderForm
+	jp c, GetGenderForm
 	ld hl, .flower_form_mons
 	call IsInHalfwordArray
-	jr c, GetFlowerForm
+	jp c, GetFlowerForm
 	pop hl
 
 	; atk
@@ -63,8 +63,20 @@ GetUnownLetter:
 	ret
 
 .gender_form_mons
+	dwb PIKACHU, PIKACHU_INDEX
+	dwb VILEPLUME, VILEPLUME_INDEX
+	dwb WARWOLF, WARWOLF_INDEX
+	dwb SUDOWOODO, SUDOWOODO_INDEX
+	dwb WOOPER, WOOPER_INDEX
+	dwb WOBBUFFET, WOBBUFFET_INDEX
+	dwb HERACROSS, HERACROSS_INDEX
+	dwb SNEASEL, SNEASEL_INDEX
+	dwb COMBEE, COMBEE_INDEX
+	dwb SNOVER, SNOVER_INDEX
 	dwb FRILLISH, FRILLISH_INDEX
 	dwb JELLICENT, JELLICENT_INDEX
+	dwb HIPPOPOTAS, HIPPOPOTAS_INDEX
+	dwb HIPPOWDON, HIPPOWDON_INDEX
 	dw -1
 
 .flower_form_mons
@@ -81,7 +93,7 @@ GetGenderForm:
 	pop hl
 	ld b, h
 	ld c, l
-	farcall GetGenderFormF50
+	farcall GetGenderForForm
 	ld a, e
 	add d
 	ld [wUnownLetter], a
@@ -237,8 +249,19 @@ GetPicIndirectPointer:
 
 .form_mons
 	dw UNOWN
+	dw PIKACHU
+	dw VILEPLUME
+	dw WARWOLF
+	dw SUDOWOODO
+	dw WOOPER
+	dw WOBBUFFET
+	dw HERACROSS
+	dw SNEASEL
+	dw COMBEE
+	dw SNOVER
 	dw FRILLISH
 	dw JELLICENT
+	dw HIPPOPOTAS
 	dw -1
 
 GetFrontpicPointer:

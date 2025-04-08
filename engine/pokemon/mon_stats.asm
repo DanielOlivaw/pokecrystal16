@@ -250,8 +250,8 @@ GetGender:
 	scf
 	ret
 
-GetGenderFormF50:
-; Return gender form, assuming a 50/50 gender split, in e based on DVs at hl
+GetGenderForForm:
+; Return gender form in e based on DVs at bc
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
@@ -285,8 +285,34 @@ GetGenderFormF50:
 	swap a
 	ld b, a   ; ~(Atk DV & 1) << 1 | (Def DV & 1) << 2 | ~(Spc DV & 1) << 3
 
+; We need the gender ratio to do anything with this.
+	push bc
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, BaseData
+	ld a, BANK(BaseData)
+	call LoadIndirectPointer
+	ld bc, BASE_GENDER
+	add hl, bc
+	pop bc
+	jr z, .Genderless
+
+	call GetFarByte
+
+; The higher the ratio, the more likely the monster is to be female.
+
+	cp GENDER_UNKNOWN
+	jr z, .Genderless
+
+	and a ; GENDER_F0?
+	jr z, .Male
+
+	cp GENDER_F100
+	jr z, .Female
+
 ; Values below the ratio are male, and vice versa.
-	ld a, GENDER_F50
 	cp b
 	jr c, .Male
 
@@ -294,6 +320,7 @@ GetGenderFormF50:
 	ld e, 0
 	ret
 
+.Genderless:
 .Male:
 	ld e, 1
 	ret

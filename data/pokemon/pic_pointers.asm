@@ -59,8 +59,8 @@ PokemonPicPointers::
 	dba EkansBackpic
 	dba ArbokFrontpic
 	dba ArbokBackpic
-	dba PikachuFrontpic
-	dba PikachuBackpic
+	dbw -1, -1	;dba PikachuFrontpic
+	dbw -1, -1	;dba PikachuBackpic
 	dba RaichuFrontpic
 	dba RaichuBackpic
 	dba RaichuAFrontpic
@@ -109,8 +109,8 @@ PokemonPicPointers::
 	dba OddishBackpic
 	dba GloomFrontpic
 	dba GloomBackpic
-	dba VileplumeFrontpic
-	dba VileplumeBackpic
+	dbw -1, -1	;dba VileplumeFrontpic
+	dbw -1, -1	;dba VileplumeBackpic
 	dba ParasFrontpic
 	dba ParasBackpic
 	dba ParasectFrontpic
@@ -375,8 +375,8 @@ PokemonPicPointers::
 	dba PhandarinBackpic
 	dba WolfrostFrontpic
 	dba WolfrostBackpic
-	dba WarwolfFrontpic
-	dba WarwolfBackpic
+	dbw -1, -1	;dba WarwolfFrontpic
+	dbw -1, -1	;dba WarwolfBackpic
 	; dba GustelaFrontpic
 	; dba GustelaBackpic
 	dba ChikoritaFrontpic
@@ -449,8 +449,8 @@ PokemonPicPointers::
 	dba MarillBBackpic
 	dba AzumarillFrontpic
 	dba AzumarillBackpic
-	dba SudowoodoFrontpic
-	dba SudowoodoBackpic
+	dbw -1, -1	;dba SudowoodoFrontpic
+	dbw -1, -1	;dba SudowoodoBackpic
 	dba HoppipFrontpic
 	dba HoppipBackpic
 	dba HoppipBFrontpic
@@ -469,8 +469,8 @@ PokemonPicPointers::
 	dba SunfloraBackpic
 	dba YanmaFrontpic
 	dba YanmaBackpic
-	dba WooperFrontpic
-	dba WooperBackpic
+	dbw -1, -1	;dba WooperFrontpic
+	dbw -1, -1	;dba WooperBackpic
 	dba WooperPFrontpic
 	dba WooperPBackpic
 	dba QuagsireFrontpic
@@ -492,8 +492,8 @@ PokemonPicPointers::
 	dbw -1, -1
 	dbw -1, -1
 
-	dba WobbuffetFrontpic
-	dba WobbuffetBackpic
+	dbw -1, -1	;dba WobbuffetFrontpic
+	dbw -1, -1	;dba WobbuffetBackpic
 	dba GirafarigFrontpic
 	dba GirafarigBackpic
 	dba PinecoFrontpic
@@ -518,10 +518,10 @@ PokemonPicPointers::
 	dba ScizorBackpic
 	dba ShuckleFrontpic
 	dba ShuckleBackpic
-	dba HeracrossFrontpic
-	dba HeracrossBackpic
-	dba SneaselFrontpic
-	dba SneaselBackpic
+	dbw -1, -1	;dba HeracrossFrontpic
+	dbw -1, -1	;dba HeracrossBackpic
+	dbw -1, -1	;dba SneaselFrontpic
+	dbw -1, -1	;dba SneaselBackpic
 	dba TeddiursaFrontpic
 	dba TeddiursaBackpic
 	dba TeddiursaBFrontpic
@@ -896,8 +896,8 @@ PokemonPicPointers::
 	dba WormadamTrashBackpic
 	dba MothimFrontpic
 	dba MothimBackpic
-	dba CombeeFrontpic
-	dba CombeeBackpic
+	dbw -1, -1	;dba CombeeFrontpic
+	dbw -1, -1	;dba CombeeBackpic
 	dba VespiquenFrontpic
 	dba VespiquenBackpic
 	dba PachirisuFrontpic
@@ -968,8 +968,8 @@ PokemonPicPointers::
 	dba RioluBackpic
 	dba LucarioFrontpic
 	dba LucarioBackpic
-	dba HippopotasFrontpic
-	dba HippopotasBackpic
+	dbw -1, -1	;dba HippopotasFrontpic
+	dbw -1, -1	;dba HippopotasBackpic
 	dba HippowdonFrontpic
 	dba HippowdonBackpic
 	dba SkorupiFrontpic
@@ -988,8 +988,8 @@ PokemonPicPointers::
 	dba LumineonBackpic
 	dba MantykeFrontpic
 	dba MantykeBackpic
-	dba SnoverFrontpic
-	dba SnoverBackpic
+	dbw -1, -1	;dba SnoverFrontpic
+	dbw -1, -1	;dba SnoverBackpic
 	dba AbomasnowFrontpic
 	dba AbomasnowBackpic
 	dba WeavileFrontpic

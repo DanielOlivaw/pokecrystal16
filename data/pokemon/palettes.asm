@@ -1710,6 +1710,14 @@ INCBIN "gfx/pokemon/jellicent_f/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jellicent_f/shiny.pal"
 INCBIN "gfx/pokemon/jellicent_m/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jellicent_m/shiny.pal"
+INCBIN "gfx/pokemon/hippopotas_f/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hippopotas_f/shiny.pal"
+INCBIN "gfx/pokemon/hippopotas_m/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hippopotas_m/shiny.pal"
+INCBIN "gfx/pokemon/hippowdon_f/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hippowdon_f/shiny.pal"
+INCBIN "gfx/pokemon/hippowdon_m/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/hippowdon_m/shiny.pal"
 
 INCBIN "gfx/pokemon/flabebe/front.gbcpal", middle_colors ; red
 INCLUDE "gfx/pokemon/flabebe/shiny.pal" ; red
