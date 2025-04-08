@@ -17,6 +17,9 @@ GetUnownLetter:
 	ld hl, .flower_form_mons
 	call IsInHalfwordArray
 	jp c, GetFlowerForm
+	ld hl, .meteor_form_mons
+	call IsInHalfwordArray
+	jp c, GetMeteorForm
 	pop hl
 
 	; atk
@@ -85,6 +88,10 @@ GetUnownLetter:
 	dwb FLORGES, FLORGES_INDEX
 	dw -1
 
+.meteor_form_mons
+	dwb MINIOR_CORE, MINIOR_INDEX
+	dw -1
+
 GetGenderForm:
 	inc hl
 	inc hl
@@ -99,14 +106,20 @@ GetGenderForm:
 	ld [wUnownLetter], a
 	ret
 
+GetMeteorForm:
+	ld e, 1
+	jr GetColorForm
+
 GetFlowerForm:
-; Save Flabebe, Floette, or Florges index from flower_form_mons in d
+	ld e, 0
+GetColorForm:
+; Save Pokemon index from one of the above tables in d
 	inc hl
 	inc hl
 	ld a, [hl]
 	ld d, a
 
-; Get Flabebe, Floette, or Florges color in a based on DVs at hl
+; Get Pokemon palette in a based on DVs at hl
 	pop hl
 
 ; Take the middle 2 bits of each DV and place them in order:
@@ -139,13 +152,21 @@ GetFlowerForm:
 	srl a
 	or b
 
-; Divide by 51 to get 0-5
 	ldh [hDividend + 3], a
 	xor a
 	ldh [hDividend], a
 	ldh [hDividend + 1], a
 	ldh [hDividend + 2], a
+	or e
+	jr z, .flower
+; Divide by 36 to get 0-7
+	ld a, $ff / 7
+	jr .divided
+
+.flower
+; Divide by 51 to get 0-5
 	ld a, $ff / 5
+.divided
 	ldh [hDivisor], a
 	ld b, 4
 	call Divide

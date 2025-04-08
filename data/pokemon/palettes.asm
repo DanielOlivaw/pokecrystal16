@@ -1749,3 +1749,18 @@ INCLUDE "gfx/pokemon/florges/yellow.pal"
 INCLUDE "gfx/pokemon/florges/yellow_shiny.pal"
 INCLUDE "gfx/pokemon/florges/orange.pal"
 INCLUDE "gfx/pokemon/florges/orange_shiny.pal"
+
+INCBIN "gfx/pokemon/minior/blue/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/blue/shiny.pal"
+INCBIN "gfx/pokemon/minior/green/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/green/shiny.pal"
+INCBIN "gfx/pokemon/minior/indigo/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/indigo/shiny.pal"
+INCBIN "gfx/pokemon/minior/orange/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/orange/shiny.pal"
+INCBIN "gfx/pokemon/minior/red/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/red/shiny.pal"
+INCBIN "gfx/pokemon/minior/violet/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/violet/shiny.pal"
+INCBIN "gfx/pokemon/minior/yellow/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/minior/yellow/shiny.pal"

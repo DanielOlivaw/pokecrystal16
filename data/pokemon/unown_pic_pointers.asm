@@ -160,3 +160,19 @@ UnownPicPointers::
 	dbw -1, -1
 	dbw -1, -1
 	dbw -1, -1
+
+	; Space for Minior core colors (palette differences only)
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
+	dbw -1, -1
