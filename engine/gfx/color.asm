@@ -483,7 +483,9 @@ GetBattlemonBackpicPalettePointer:
 	ld a, [wTempBattleMonSpecies]
 	ld [wCurPartySpecies], a
 	push af
+	push bc
 	predef GetUnownLetter
+	pop bc
 	pop af
 	call GetPlayerOrMonPalettePointer
 	pop de
@@ -497,7 +499,9 @@ GetEnemyFrontpicPalettePointer:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurPartySpecies], a
 	push af
+	push bc
 	predef GetUnownLetter
+	pop bc
 	pop af
 	call GetFrontpicPalettePointer
 	pop de

@@ -318,10 +318,12 @@ _CGB_BillsPC:
 
 .GetMonPalette:
 	; Get form data for palette
+	push af
 	push de
 	ld hl, wTempMonDVs
 	predef GetUnownLetter
 	pop de
+	pop af
 	; Get palette
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
