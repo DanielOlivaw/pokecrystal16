@@ -678,8 +678,8 @@ RaltsEvosAttacks:
 	db 0 ; no more level-up moves
 
 KirliaEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, GARDEVOIR
 	dbbbw EVOLVE_ITEM_GENDER, MON_MALE, DAWN_STONE, GALLADE
+	dbbbw EVOLVE_LEVEL, 30, TR_ANYTIME, GARDEVOIR
 	db 0 ; no more evolutions
 	dbw 1, GROWL
 	dbw 1, DISARMING_VOICE
@@ -2133,8 +2133,8 @@ WynautEvosAttacks:
 	db 0 ; no more level-up moves
 
 SnoruntEvosAttacks:
-	dbbbw EVOLVE_LEVEL, 42, TR_ANYTIME, GLALIE
 	dbbbw EVOLVE_ITEM_GENDER, MON_FEMALE, DAWN_STONE, FROSLASS
+	dbbbw EVOLVE_LEVEL, 42, TR_ANYTIME, GLALIE
 	db 0 ; no more evolutions
 	dbw 1, POWDER_SNOW
 	dbw 1, ASTONISH
