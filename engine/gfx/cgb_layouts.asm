@@ -317,6 +317,12 @@ _CGB_BillsPC:
 	jr .Resume
 
 .GetMonPalette:
+	; Get form data for palette
+	push de
+	ld hl, wTempMonDVs
+	predef GetUnownLetter
+	pop de
+	; Get palette
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
@@ -562,6 +568,12 @@ _CGB_Evolution:
 	jr .got_palette
 
 .pokemon
+	; Get form data for palette
+	push de
+	ld hl, wPartyMon1DVs
+	predef GetUnownLetter
+	pop de
+	; Get palette
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
@@ -1014,6 +1026,10 @@ _CGB_GamefreakLogo:
 INCLUDE "gfx/splash/logo.pal"
 
 _CGB_PlayerOrMonFrontpicPals:
+	; Get form data for palette
+	ld hl, wTempMonDVs
+	predef GetUnownLetter
+	; Get palette
 	ld de, wBGPals1
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs

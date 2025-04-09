@@ -481,6 +481,10 @@ GetBattlemonBackpicPalettePointer:
 	ld c, l
 	ld b, h
 	ld a, [wTempBattleMonSpecies]
+	ld [wCurPartySpecies], a
+	push af
+	predef GetUnownLetter
+	pop af
 	call GetPlayerOrMonPalettePointer
 	pop de
 	ret
