@@ -1122,58 +1122,13 @@ DetermineEvolutionItemResults::
 	cp MON_FEMALE
 .item_gender_check
 	jr nz, .skip_species
-
-	; Check item
-	; inc hl
-	call GetNextEvoAttackByte
-	ld b, a	
-	ld a, [wCurItem]
-	cp b
-	jr nz, .skip_species
-	ldh a, [hTemp]
-	call GetFarHalfword
-	ld d, h
-	ld e, l
-	ret
+	jr .item
 
 .item_region
-	; Check region
+	; Skip region; we'll assume that there's an evolution for each region
 	call GetNextEvoAttackByte
-	cp TR_ANYWHERE
-	jr z, .got_region
-	cp TR_JOHTO
-	jr z, .item_region_johto
-
-; TR_KANTO
-	push hl
-	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
-	ld a, e
-	and a
-	pop hl
-	jp z, .skip_species ; Johto
-	jr .got_region
-	
-.item_region_johto
-	push hl
-	farcall RegionCheck2 ; returns 1 in e if in Kanto; returns 0 in e if in Johto
-	ld a, e
-	and a
-	pop hl
-	jp nz, .skip_species ; Kanto
-	
-.got_region
 	; Check item
-	; inc hl
-	call GetNextEvoAttackByte
-	ld b, a	
-	ld a, [wCurItem]
-	cp b
-	jr nz, .skip_species
-	ldh a, [hTemp]
-	call GetFarHalfword
-	ld d, h
-	ld e, l
-	ret
+	jr .item
 
 .skip_species_two_parameters
 	inc hl
