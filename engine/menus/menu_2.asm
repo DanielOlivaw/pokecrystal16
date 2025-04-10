@@ -36,6 +36,40 @@ PlaceMenuItemQuantity:
 .done
 	ret
 
+PlaceItemInBagQuantity:
+	; Place a text box of size 1x6 at 0, 0.
+	hlcoord 0, 0
+	ld b, 1
+	ld c, 6
+	call Textbox
+	hlcoord 1, 0
+	ld de, InBagString
+	call PlaceString
+
+	ld a, [wMenuSelection]
+	cp -1
+	jr z, .no_selection
+
+	hlcoord 3, 1
+	ld [hl], "×"
+	inc hl
+	ld de, wMenuSelectionQuantity
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+	call PrintNum
+	ret
+
+.no_selection
+	hlcoord 2, 1
+	ld de, .BlankString
+	call PlaceString
+	ret
+
+.BlankString
+	db "@"
+
+InBagString:
+	db "IN BAG@"
+
 PlaceMoneyTopRight:
 	ld hl, MenuHeader_0x24b15
 	call CopyMenuHeader
