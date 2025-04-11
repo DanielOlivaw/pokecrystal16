@@ -231,7 +231,7 @@ ItemNames::
 	db "EXP.CANDY L@"
 	db "EXP.CANDY XL@"
 	db "SOOTHE BELL@"
-	db "UNUSED@"
+	db "PREMIER BALL@"
 	db "UNUSED@"
 	db "UNUSED@"
 	db "UNUSED@"

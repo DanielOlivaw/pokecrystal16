@@ -246,7 +246,8 @@ ItemEffects:
 	dw ExpCandyEffect      ; EXP_CANDY_L
 	dw ExpCandyEffect      ; EXP_CANDY_XL
 	dw NoEffect            ; SOOTHE_BELL
-	assert_table_length SOOTHE_BELL
+	dw PokeBallEffect      ; PREMIER_BALL
+	assert_table_length PREMIER_BALL
 
 PokeBallEffect:
 	ld a, [wBattleMode]

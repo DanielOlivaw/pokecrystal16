@@ -233,7 +233,7 @@ ItemDescriptions:
 	dw ExpCandyLDesc
 	dw ExpCandyXLDesc
 	dw SootheBellDesc
-	dw QuestionMarkDesc
+	dw PremierBallDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1178,3 +1178,6 @@ SootheBellDesc:
 	db   "Makes the holder"
 	next "friendly. (HOLD)@"
 
+PremierBallDesc:
+	db   "A rare BALL sought"
+	next "by collectors.@"

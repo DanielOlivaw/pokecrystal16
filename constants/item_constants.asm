@@ -238,7 +238,7 @@
 	const EXP_CANDY_L  ; e6
 	const EXP_CANDY_XL ; e7
 	const SOOTHE_BELL  ; e8
-	const ITEM_E9      ; e9
+	const PREMIER_BALL ; e9
 	const ITEM_EA      ; ea
 	const ITEM_EB      ; eb
 	const ITEM_EC      ; ec

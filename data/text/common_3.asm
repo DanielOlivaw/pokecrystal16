@@ -710,6 +710,12 @@ _MartBoughtText::
 	text "(S)."
 	done
 
+_MartPremierBallText::
+	text "And here's a"
+	line "PREMIER BALL as an"
+	cont "added bonus!"
+	done
+
 UnknownText_0x1c5049::
 	text "Bet how many"
 	line "coins?"

@@ -37,5 +37,7 @@ BallColors:
 	RGB 29,28,06, 09,20,27
 	db PARK_BALL
 	RGB 31,31,31, 29,17,07 ; 18,18,05
+	db PREMIER_BALL
+	RGB 31,31,31, 31,31,31
 	db -1 ; end
 	RGB 31,31,31, 16,16,16

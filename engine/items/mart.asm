@@ -5,6 +5,7 @@
 	const MARTTEXT_BAG_FULL
 	const MARTTEXT_HERE_YOU_GO
 	const MARTTEXT_SOLD_OUT
+	const MARTTEXT_PREMIER_BALL
 
 OpenMartDialog::
 	call GetMart
@@ -481,6 +482,7 @@ GetMartDialogGroup:
 	dw MartPackFullText
 	dw MartThanksText
 	dw BuyMenuLoop
+	dw MartPremierBallText
 
 .HerbShopPointers:
 	dw HerbalLadyHowManyText
@@ -489,6 +491,7 @@ GetMartDialogGroup:
 	dw HerbalLadyPackFullText
 	dw HerbalLadyThanksText
 	dw BuyMenuLoop
+	dw -1
 
 .BargainShopPointers:
 	dw BuyMenuLoop
@@ -497,6 +500,7 @@ GetMartDialogGroup:
 	dw BargainShopPackFullText
 	dw BargainShopThanksText
 	dw BargainShopSoldOutText
+	dw -1
 
 .PharmacyPointers:
 	dw PharmacyHowManyText
@@ -505,6 +509,7 @@ GetMartDialogGroup:
 	dw PharmacyPackFullText
 	dw PharmacyThanksText
 	dw BuyMenuLoop
+	dw -1
 
 .TMMartPointers:
 	dw MartHowManyText
@@ -513,6 +518,7 @@ GetMartDialogGroup:
 	dw MartPackFullText
 	dw MartThanksText
 	dw BuyTMMenuLoop
+	dw -1
 
 .CoinShopPointers:
 	dw MartHowManyText
@@ -521,6 +527,7 @@ GetMartDialogGroup:
 	dw BargainShopPackFullText
 	dw BargainShopThanksText
 	dw BuyMenuLoop
+	dw -1
 
 BuyMenuLoop:
 	farcall PlaceMoneyTopRight
@@ -539,11 +546,9 @@ BuyMenuLoop:
 	call SpeechTextbox
 	ld a, [wMenuJoypad]
 	cp B_BUTTON
-	jr z, MartMenuLoop_SetCarry
+	jp z, MartMenuLoop_SetCarry
 	cp A_BUTTON
-	; jr z, .useless_pointer
 
-; .useless_pointer
 	call MartAskPurchaseQuantity
 	jr c, .cancel
 	call MartConfirmPurchase
@@ -569,6 +574,7 @@ BuyMenuLoop:
 	ld a, MARTTEXT_HERE_YOU_GO
 	call LoadBuyMenuText
 	call JoyWaitAorB
+	call MartMenuLoop_PremierBallBonus
 
 .cancel
 	call SpeechTextbox
@@ -581,6 +587,31 @@ BuyMenuLoop:
 	call JoyWaitAorB
 	and a
 	ret
+
+MartMenuLoop_PremierBallBonus:
+	; Check whether the player gets a bonus premier ball
+	farcall CheckItemPocket
+	ld a, [wItemAttributeParamBuffer]
+	cp BALL ; Must have bought some type of ball
+	ret nz
+	; Divide the number of balls bought by 10
+	; to get the number of premier balls to give
+	ld a, [wItemQuantityChangeBuffer]
+	ld c, 10 ; divisor
+	call SimpleDivide
+	; Give the premier ball
+	ld a, PREMIER_BALL
+	ld [wCurItem], a
+	ld a, b ; b contains the quotient from SimpleDivide
+	and a
+	ret z ; If there are no balls to give, return
+	ld [wItemQuantityChangeBuffer], a
+	ld hl, wNumItems
+	call ReceiveItem
+	ret nc
+	ld a, MARTTEXT_PREMIER_BALL
+	call LoadBuyMenuText
+	jp JoyWaitAorB
 
 MartMenuLoop_SetCarry:
 	scf
@@ -1165,6 +1196,10 @@ MartAskMoreText:
 
 MartBoughtText:
 	text_far _MartBoughtText
+	text_end
+
+MartPremierBallText:
+	text_far _MartPremierBallText
 	text_end
 
 PlayTransactionSound:
