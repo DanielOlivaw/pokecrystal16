@@ -493,16 +493,27 @@ GetBattlemonBackpicPalettePointer:
 
 GetEnemyFrontpicPalettePointer:
 	push de
+	; Load DVs in hl for use in GetUnownLetter
+	; and in bc for use in CheckShininess.
 	farcall GetEnemyMonDVs
 	ld c, l
 	ld b, h
+	; We need wCurPartySpecies for GetUnownLetter,
+	; but we don't want to overwrite its current value,
+	; so load it to a here, push af, and pop it later to retrieve it.
+	ld a, [wCurPartySpecies]
+	push af
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurPartySpecies], a
-	push af
 	push bc
+	; Get Pokemon form from ID (wCurPartySpecies) and DVs (hl)
 	predef GetUnownLetter
 	pop bc
 	pop af
+	ld [wCurPartySpecies], a
+	; Load wTempEnemyMonSpecies to a,
+	; so _GetMonPalettePointer can use it to get the Pokemon index.
+	ld a, [wTempEnemyMonSpecies]
 	call GetFrontpicPalettePointer
 	pop de
 	ret
