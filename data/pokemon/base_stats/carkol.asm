@@ -7,7 +7,7 @@
 	db ROCK, FIRE ; type
 	db 120 ; catch rate
 	db 144 ; base exp
-	db HARD_STONE, HARD_STONE ; items
+	db HARD_STONE, BLK_AUGURITE ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/carkol/front.dimensions"

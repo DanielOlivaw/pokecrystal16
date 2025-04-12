@@ -232,7 +232,7 @@ ItemNames::
 	db "EXP.CANDY XL@"
 	db "SOOTHE BELL@"
 	db "PREMIER BALL@"
-	db "UNUSED@"
+	db "AUGURITE@"
 	db "UNUSED@"
 	db "UNUSED@"
 	db "UNUSED@"

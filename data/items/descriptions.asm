@@ -234,7 +234,7 @@ ItemDescriptions:
 	dw ExpCandyXLDesc
 	dw SootheBellDesc
 	dw PremierBallDesc
-	dw QuestionMarkDesc
+	dw BlkAuguriteDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1181,3 +1181,7 @@ SootheBellDesc:
 PremierBallDesc:
 	db   "A rare BALL sought"
 	next "by collectors.@"
+
+BlkAuguriteDesc:
+	db   "A dark stone loved"
+	next "by SCYTHER. (HOLD)@"

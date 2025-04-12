@@ -3066,6 +3066,7 @@ MrMimeGEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
+	dbbbw EVOLVE_HOLDING, BLK_AUGURITE, TR_ANYTIME, KLEAVOR
 	dbbbw EVOLVE_HOLDING, METAL_COAT, TR_ANYTIME, SCIZOR
 	dbbw EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions

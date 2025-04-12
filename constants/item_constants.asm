@@ -239,7 +239,7 @@
 	const EXP_CANDY_XL ; e7
 	const SOOTHE_BELL  ; e8
 	const PREMIER_BALL ; e9
-	const ITEM_EA      ; ea
+	const BLK_AUGURITE ; ea
 	const ITEM_EB      ; eb
 	const ITEM_EC      ; ec
 	const ITEM_ED      ; ed

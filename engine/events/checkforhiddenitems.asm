@@ -173,7 +173,7 @@ RockItemEncounter:
 	db 8, THICK_CLUB
 	db 8, STARDUST
 	db 8, ETHER
-	db 10, HEART_SCALE
+	db 10, BLK_AUGURITE ;HEART_SCALE
 	db 10, SOFT_SAND
 	db 10, HARD_STONE
 	db 12, PEARL

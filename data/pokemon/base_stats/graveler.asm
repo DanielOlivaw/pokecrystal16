@@ -7,7 +7,7 @@
 	db ROCK, GROUND ; type
 	db 120 ; catch rate
 	db 137 ; base exp
-	db EVERSTONE, HARD_STONE ; items
+	db HARD_STONE, BLK_AUGURITE ; items
 	db GENDER_F50 ; gender ratio
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/graveler/front.dimensions"
