@@ -1664,12 +1664,12 @@ _AboutText::
 	line "any problems, open"
 	cont "an issue there."
 
-	para "I recommend check-"
-	line "ing the ROM down-"
-	cont "load on GitHub"
+	; para "I recommend check-"
+	; line "ing the ROM down-"
+	; cont "load on GitHub"
 
-	para "for the latest"
-	line "changes and fixes."
+	; para "for the latest"
+	; line "changes and fixes."
 
 	para "Please, enjoy the"
 	line "game!"
