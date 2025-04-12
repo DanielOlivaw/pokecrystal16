@@ -316,26 +316,26 @@ KantoGrassWildMons:
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
 	dbw 21, SLOWPOKE_G
-	dbw 20, WIMPOD
+	dbw 20, SLOWPOKE_G
 	dbw 22, BAGON
 	dbw 23, BAGON
-	dbw 23, WOOBAT
+	dbw 23, TYNAMO
 	; day
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
 	dbw 21, SLOWPOKE_G
-	dbw 20, WIMPOD
+	dbw 20, SLOWPOKE_G
 	dbw 22, BAGON
 	dbw 23, BAGON
-	dbw 23, WOOBAT
+	dbw 23, TYNAMO
 	; nite
 	dbw 22, WOOBAT
 	dbw 24, TYNAMO
 	dbw 21, SLOWPOKE_G
-	dbw 20, WIMPOD
+	dbw 20, SLOWPOKE_G
 	dbw 22, BAGON
 	dbw 23, BAGON
-	dbw 23, WOOBAT
+	dbw 23, TYNAMO
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_1
