@@ -592,6 +592,8 @@ EvolveAfterBattle_MasterLoop:
 	call LearnLevelMoves
 	; ld a, [wTempSpecies]
 	; call SetSeenAndCaughtMon
+	ld hl, wTempMonDVs
+	predef GetUnownLetter
 	call ShowEvoDexEntry
 
 	ld a, [wTempSpecies]
@@ -610,8 +612,6 @@ EvolveAfterBattle_MasterLoop:
 		endc
 	endc
 	jr nz, .skip_unown
-	ld hl, wTempMonDVs
-	predef GetUnownLetter
 	callfar UpdateUnownDex
 
 .skip_unown

@@ -205,10 +205,8 @@ _CGB_StatsScreenHPPals:
 	add hl, bc
 	call LoadPalette_White_Col1_Col2_Black ; hp palette
 	; Get form data for palette
-	push de
 	ld hl, wTempMonDVs
 	predef GetUnownLetter
-	pop de
 	; Get palettes
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
@@ -319,10 +317,8 @@ _CGB_BillsPC:
 .GetMonPalette:
 	; Get form data for palette
 	push af
-	push de
 	ld hl, wTempMonDVs
 	predef GetUnownLetter
-	pop de
 	pop af
 	; Get palette
 	ld bc, wTempMonDVs
@@ -571,10 +567,8 @@ _CGB_Evolution:
 
 .pokemon
 	; Get form data for palette
-	push de
 	ld hl, wPartyMon1DVs
 	predef GetUnownLetter
-	pop de
 	; Get palette
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH

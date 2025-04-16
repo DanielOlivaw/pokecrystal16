@@ -5,6 +5,8 @@ GetUnownLetter:
 ;	atk  def  spd  spc
 ;	.ww..xx.  .yy..zz.
 
+	push bc
+	push de
 	push hl
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
@@ -63,6 +65,8 @@ GetUnownLetter:
 	ldh a, [hQuotient + 3]
 	inc a
 	ld [wUnownLetter], a
+	pop de
+	pop bc
 	ret
 
 .gender_form_mons
@@ -104,6 +108,8 @@ GetGenderForm:
 	ld a, e
 	add d
 	ld [wUnownLetter], a
+	pop de
+	pop bc
 	ret
 
 GetMeteorForm:
@@ -174,6 +180,8 @@ GetColorForm:
 	ldh a, [hQuotient + 3]
 	add d
 	ld [wUnownLetter], a
+	pop de
+	pop bc
 	ret
 
 GetMonFrontpic:

@@ -68,6 +68,8 @@ EvolutionAnimation:
 	ld a, [wEvolutionNewSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	ld hl, wTempMonDVs
+	predef GetUnownLetter
 	call .LoadFrontpic
 	ld a, [wEvolutionOldSpecies]
 	ld [wCurPartySpecies], a
