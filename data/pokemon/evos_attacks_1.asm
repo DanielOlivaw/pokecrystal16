@@ -1828,9 +1828,9 @@ GeodudeEvosAttacks:
 	dbw 21, SELFDESTRUCT
 	dbw 24, STEALTH_ROCK
 	dbw 27, ROCK_BLAST
-	dbw 30, EARTHQUAKE
-	dbw 33, EXPLOSION
-	dbw 36, DOUBLE_EDGE
+	dbw 30, DOUBLE_EDGE
+	dbw 33, EARTHQUAKE
+	dbw 36, EXPLOSION
 	dbw 39, STONE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1848,9 +1848,9 @@ GeodudeAEvosAttacks:
 	dbw 21, SELFDESTRUCT
 	dbw 24, STEALTH_ROCK
 	dbw 27, ROCK_BLAST
-	dbw 30, DISCHARGE
-	dbw 33, EXPLOSION
-	dbw 36, DOUBLE_EDGE
+	dbw 30, DOUBLE_EDGE
+	dbw 33, DISCHARGE
+	dbw 36, EXPLOSION
 	dbw 39, STONE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1869,9 +1869,9 @@ GravelerEvosAttacks:
 	dbw 21, SELFDESTRUCT
 	dbw 24, STEALTH_ROCK
 	dbw 29, ROCK_BLAST
-	dbw 34, EARTHQUAKE
-	dbw 39, EXPLOSION
-	dbw 44, DOUBLE_EDGE
+	dbw 34, DOUBLE_EDGE
+	dbw 39, EARTHQUAKE
+	dbw 44, EXPLOSION
 	dbw 49, STONE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1890,9 +1890,9 @@ GravelerAEvosAttacks:
 	dbw 21, SELFDESTRUCT
 	dbw 24, STEALTH_ROCK
 	dbw 29, ROCK_BLAST
-	dbw 34, DISCHARGE
-	dbw 39, EXPLOSION
-	dbw 44, DOUBLE_EDGE
+	dbw 34, DOUBLE_EDGE
+	dbw 39, DISCHARGE
+	dbw 44, EXPLOSION
 	dbw 49, STONE_EDGE
 	db 0 ; no more level-up moves
 
@@ -1910,9 +1910,9 @@ GolemEvosAttacks:
 	dbw 24, STEALTH_ROCK
 	dbw 24, STEAMROLLER
 	dbw 30, ROCK_BLAST
-	dbw 36, EARTHQUAKE
-	dbw 42, EXPLOSION
-	dbw 48, DOUBLE_EDGE
+	dbw 36, DOUBLE_EDGE
+	dbw 42, EARTHQUAKE
+	dbw 48, EXPLOSION
 	dbw 54, STONE_EDGE
 	dbw 60, HEAVY_SLAM
 	db 0 ; no more level-up moves
@@ -1931,9 +1931,9 @@ GolemAEvosAttacks:
 	dbw 24, STEALTH_ROCK
 	dbw 24, STEAMROLLER
 	dbw 30, ROCK_BLAST
-	dbw 36, DISCHARGE
-	dbw 42, EXPLOSION
-	dbw 48, DOUBLE_EDGE
+	dbw 36, DOUBLE_EDGE
+	dbw 42, DISCHARGE
+	dbw 48, EXPLOSION
 	dbw 54, STONE_EDGE
 	dbw 60, HEAVY_SLAM
 	db 0 ; no more level-up moves
