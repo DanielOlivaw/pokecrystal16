@@ -26,6 +26,13 @@ and a ton of other upgrades, fixes, and tweaks. See the [wiki](https://github.co
 
 Feel free to try this out for yourself. If you have any problems or have questions about how I did something, open an issue and I'll try to respond when I can.
 
+Known Limitations:
+- Many Pokemon do not have a unique cry
+- Some moves just use the default animation
+- There's not enough PC space to possess all available Pokémon simultaneously. This hack is intended to provide a variety of choice for teambuilding, and enabling the player to build a living dex is not a priority.
+
+For other known issues and bugs, see the [Issues](https://github.com/DanielOlivaw/pokecrystal16/issues) section.
+
 [compare]: https://github.com/aaaaaa123456789/pokecrystal16/compare
 [pokecrystal]: https://github.com/pret/pokecrystal/
 [wiki]: https://github.com/aaaaaa123456789/pokecrystal16/wiki
