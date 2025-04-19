@@ -669,6 +669,8 @@ OakSpeech:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
+	ld a, WOOPER_INDEX + 1
+	ld [wUnownLetter], a
 
 	hlcoord 6, 4
 	call PrepMonFrontpic
