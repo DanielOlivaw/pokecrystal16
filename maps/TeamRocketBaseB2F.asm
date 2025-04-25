@@ -221,7 +221,7 @@ TrainerGruntM19:
 
 RocketElectrode1:
 	cry MAGNETON
-	loadwildmon MAGNETON, 23
+	loadwildmon MAGNETON, 27
 	startbattle
 	iftrue TeamRocketBaseB2FReloadMap
 	disappear TEAMROCKETBASEB2F_ELECTRODE1
@@ -239,7 +239,7 @@ RocketElectrode1:
 
 RocketElectrode2:
 	cry MAGNETON
-	loadwildmon MAGNETON, 23
+	loadwildmon MAGNETON, 27
 	startbattle
 	iftrue TeamRocketBaseB2FReloadMap
 	disappear TEAMROCKETBASEB2F_ELECTRODE2
@@ -257,7 +257,7 @@ RocketElectrode2:
 
 RocketElectrode3:
 	cry MAGNETON
-	loadwildmon MAGNETON, 23
+	loadwildmon MAGNETON, 27
 	startbattle
 	iftrue TeamRocketBaseB2FReloadMap
 	disappear TEAMROCKETBASEB2F_ELECTRODE3
