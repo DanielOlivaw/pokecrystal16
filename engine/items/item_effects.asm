@@ -248,7 +248,17 @@ ItemEffects:
 	dw NoEffect            ; SOOTHE_BELL
 	dw PokeBallEffect      ; PREMIER_BALL
 	dw NoEffect            ; BLK_AUGURITE
-	assert_table_length BLK_AUGURITE
+	dw NoEffect            ; HELIX_FOSSIL
+	dw NoEffect            ; DOME_FOSSIL
+	dw NoEffect            ; ROOT_FOSSIL
+	dw NoEffect            ; CLAW_FOSSIL
+	dw NoEffect            ; SKULL_FOSSIL
+	dw NoEffect            ; ARMOR_FOSSIL
+	dw NoEffect            ; COVER_FOSSIL
+	dw NoEffect            ; PLUME_FOSSIL
+	dw NoEffect            ; JAW_FOSSIL
+	dw NoEffect            ; SAIL_FOSSIL
+	assert_table_length SAIL_FOSSIL
 
 PokeBallEffect:
 	ld a, [wBattleMode]

@@ -421,3 +421,13 @@ TrainerHouse:
 	ld a, [sMysteryGiftTrainerHouseFlag]
 	ld [wScriptVar], a
 	jp CloseSRAM
+
+ChooseItemFromBag:
+	call DisableSpriteUpdates
+	farcall DepositSellInitPackBuffers
+.loop
+	farcall DepositSellPack
+	ld a, [wCurItem]
+	ld [wScriptVar], a
+	call ReturnToMapWithSpeechTextbox
+	ret

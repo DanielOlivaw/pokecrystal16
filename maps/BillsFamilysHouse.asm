@@ -113,7 +113,7 @@ BillTakeThisEeveeText:
 
 	para "It came over when"
 	line "I was adjusting"
-	cont "the TIME CAPSULE."
+	cont "the PC."
 
 	para "Someone has to"
 	line "take care of it,"

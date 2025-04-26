@@ -299,15 +299,43 @@ Script_TimeCapsuleClosed:
 	end
 
 LinkReceptionistScript_TimeCapsule:
-	scall Script_TimeCapsuleClosed
 	; checkevent EVENT_MET_BILL
 	; iftrue Script_TimeCapsuleClosed
 	; checkflag ENGINE_TIME_CAPSULE
 	; iftrue Script_TimeCapsuleClosed
 	; special SetBitsForTimeCapsuleRequest
-	; faceplayer
-	; opentext
-	; writetext Text_TimeCapsuleReceptionistIntro
+	faceplayer
+	opentext
+	writetext Text_TimeCapsuleReceptionistIntro
+	waitbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+.OpenFossilMenu:
+	writetext Text_TimeCapsuleReceptionistAskForFossil
+	waitbutton
+	special ChooseItemFromBag
+	ifequal HELIX_FOSSIL, .HelixFossil
+	ifequal DOME_FOSSIL, .DomeFossil
+	ifequal ROOT_FOSSIL, .RootFossil
+	ifequal CLAW_FOSSIL, .ClawFossil
+	ifequal SKULL_FOSSIL, .SkullFossil
+	ifequal ARMOR_FOSSIL, .ArmorFossil
+	ifequal COVER_FOSSIL, .CoverFossil
+	; ifequal PLUME_FOSSIL, .PlumeFossil
+	ifequal JAW_FOSSIL, .JawFossil
+	ifequal SAIL_FOSSIL, .SailFossil
+	ifequal -1, .DontRevive
+	writetext Text_TimeCapsuleReceptionistNotAFossil
+	waitbutton
+	sjump .OpenFossilMenu
+
+.DontRevive:
+	writetext Text_TimeCapsuleReceptionistGoodbye
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
 	; yesorno
 	; iffalse .Cancel
 	; special CheckTimeCapsuleCompatibility
@@ -332,6 +360,248 @@ LinkReceptionistScript_TimeCapsule:
 	; special CloseLink
 	; closetext
 	; end
+
+.NoRoom:
+	writetext Text_TimeCapsuleReceptionistPartyFull
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.HelixFossil:
+	getmonname STRING_BUFFER_3, OMANYTE
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem HELIX_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, OMANYTE
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke OMANYTE, 25
+	getmonname STRING_BUFFER_3, OMANYTE
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.DomeFossil:
+	getmonname STRING_BUFFER_3, KABUTO
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem DOME_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, KABUTO
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke KABUTO, 25
+	getmonname STRING_BUFFER_3, KABUTO
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.RootFossil:
+	getmonname STRING_BUFFER_3, LILEEP
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem ROOT_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, LILEEP
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke LILEEP, 25
+	getmonname STRING_BUFFER_3, LILEEP
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.ClawFossil:
+	getmonname STRING_BUFFER_3, ANORITH
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem CLAW_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, ANORITH
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke ANORITH, 25
+	getmonname STRING_BUFFER_3, ANORITH
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.SkullFossil:
+	getmonname STRING_BUFFER_3, CRANIDOS
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem SKULL_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, CRANIDOS
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke CRANIDOS, 25
+	getmonname STRING_BUFFER_3, CRANIDOS
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.ArmorFossil:
+	getmonname STRING_BUFFER_3, SHIELDON
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem ARMOR_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, SHIELDON
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke SHIELDON, 25
+	getmonname STRING_BUFFER_3, SHIELDON
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.CoverFossil:
+	getmonname STRING_BUFFER_3, TIRTOUGA
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem COVER_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, TIRTOUGA
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke TIRTOUGA, 25
+	getmonname STRING_BUFFER_3, TIRTOUGA
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+; .PlumeFossil:
+	; getmonname STRING_BUFFER_3, ARCHEN
+	; writetext Text_TimeCapsuleReceptionistMon
+	; yesorno
+	; iffalse .DontRevive
+	; takeitem PLUME_FOSSIL
+	; scall .UseTimeCapsule
+	; getmonname STRING_BUFFER_3, ARCHEN
+	; writetext Text_TimeCapsuleReceptionistReceive
+	; playsound SFX_CAUGHT_MON
+	; waitsfx
+	; buttonsound
+	; givepoke ARCHEN, 25
+	; getmonname STRING_BUFFER_3, ARCHEN
+	; writetext Text_TimeCapsuleReceptionistGaveMon
+	; waitbutton
+	; writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	; waitbutton
+	; closetext
+	; turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	; end
+
+.JawFossil:
+	getmonname STRING_BUFFER_3, TYRUNT
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem JAW_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, TYRUNT
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke TYRUNT, 25
+	getmonname STRING_BUFFER_3, TYRUNT
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.SailFossil:
+	getmonname STRING_BUFFER_3, AMAURA
+	writetext Text_TimeCapsuleReceptionistMon
+	yesorno
+	iffalse .DontRevive
+	takeitem SAIL_FOSSIL
+	scall .UseTimeCapsule
+	getmonname STRING_BUFFER_3, AMAURA
+	writetext Text_TimeCapsuleReceptionistReceive
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke AMAURA, 25
+	getmonname STRING_BUFFER_3, AMAURA
+	writetext Text_TimeCapsuleReceptionistGaveMon
+	waitbutton
+	writetext Text_TimeCapsuleReceptionistTakeCareOfMon
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, DOWN
+	end
+
+.UseTimeCapsule:
+	writetext Text_TimeCapsuleReceptionistTakeFossil
+	waitbutton
+	closetext
+	turnobject POKECENTER2F_TIME_CAPSULE_RECEPTIONIST, UP
+	pause 30
+	playmusic MUSIC_HEAL
+	pause 80
+	special RestartMapMusic
+	faceplayer
+	opentext
+	writetext Text_TimeCapsuleReceptionistGiveMon
+	waitbutton
+	end
 
 ; .OK:
 	; special EnterTimeCapsule
@@ -414,149 +684,149 @@ LinkReceptionistScript_TimeCapsule:
 	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown
 	; end
 
-Pokecenter2F_CheckGender:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Female
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsUp
-	end
+; Pokecenter2F_CheckGender:
+	; checkflag ENGINE_PLAYER_IS_FEMALE
+	; iftrue .Female
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsUp
+	; end
 
-.Female:
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight_2
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsUp
-	opentext
-	writetext Text_OhPleaseWait
-	waitbutton
-	closetext
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistLooksRight
-	turnobject PLAYER, LEFT
-	opentext
-	writetext Text_ChangeTheLook
-	waitbutton
-	closetext
-	playsound SFX_TINGLE
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
-	setval (PAL_NPC_RED << 4)
-	special SetPlayerPalette
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
-	setflag ENGINE_KRIS_IN_CABLE_CLUB
-	special ReplaceKrisSprite
-	opentext
-	writetext Text_LikeTheLook
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp
-	end
+; .Female:
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight_2
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsUp
+	; opentext
+	; writetext Text_OhPleaseWait
+	; waitbutton
+	; closetext
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistLooksRight
+	; turnobject PLAYER, LEFT
+	; opentext
+	; writetext Text_ChangeTheLook
+	; waitbutton
+	; closetext
+	; playsound SFX_TINGLE
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
+	; setval (PAL_NPC_RED << 4)
+	; special SetPlayerPalette
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
+	; setflag ENGINE_KRIS_IN_CABLE_CLUB
+	; special ReplaceKrisSprite
+	; opentext
+	; writetext Text_LikeTheLook
+	; waitbutton
+	; closetext
+	; showemote EMOTE_SHOCK, PLAYER, 15
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp
+	; end
 
-Script_WalkOutOfLinkTradeRoom:
-	checkflag ENGINE_KRIS_IN_CABLE_CLUB
-	iftrue .Female
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsDown
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
-	end
+; Script_WalkOutOfLinkTradeRoom:
+	; checkflag ENGINE_KRIS_IN_CABLE_CLUB
+	; iftrue .Female
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsDown
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
+	; end
 
-.Female:
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown_2
-	clearflag ENGINE_KRIS_IN_CABLE_CLUB
-	playsound SFX_TINGLE
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
-	setval (PAL_NPC_BLUE << 4)
-	special SetPlayerPalette
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
-	special ReplaceKrisSprite
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2
-	applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
-	end
+; .Female:
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown_2
+	; clearflag ENGINE_KRIS_IN_CABLE_CLUB
+	; playsound SFX_TINGLE
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
+	; setval (PAL_NPC_BLUE << 4)
+	; special SetPlayerPalette
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
+	; special ReplaceKrisSprite
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2
+	; applymovement POKECENTER2F_TRADE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
+	; end
 
-Script_WalkOutOfLinkBattleRoom:
-	checkflag ENGINE_KRIS_IN_CABLE_CLUB
-	iftrue .Female
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsDown
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
-	end
+; Script_WalkOutOfLinkBattleRoom:
+	; checkflag ENGINE_KRIS_IN_CABLE_CLUB
+	; iftrue .Female
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesThreeStepsDown
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
+	; end
 
-.Female:
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown_2
-	clearflag ENGINE_KRIS_IN_CABLE_CLUB
-	playsound SFX_TINGLE
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
-	setval (PAL_NPC_BLUE << 4)
-	special SetPlayerPalette
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
-	special ReplaceKrisSprite
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2
-	applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
-	end
+; .Female:
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepDown_2
+	; clearflag ENGINE_KRIS_IN_CABLE_CLUB
+	; playsound SFX_TINGLE
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
+	; setval (PAL_NPC_BLUE << 4)
+	; special SetPlayerPalette
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft
+	; special ReplaceKrisSprite
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2
+	; applymovement POKECENTER2F_BATTLE_RECEPTIONIST, Pokecenter2FMovementData_ReceptionistStepsRightAndDown
+	; end
 
-TimeCapsuleScript_CheckPlayerGender:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Female
-	readvar VAR_FACING
-	ifequal LEFT, .MaleFacingLeft
-	ifequal RIGHT, .MaleFacingRight
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsUp_2
-	end
+; TimeCapsuleScript_CheckPlayerGender:
+	; checkflag ENGINE_PLAYER_IS_FEMALE
+	; iftrue .Female
+	; readvar VAR_FACING
+	; ifequal LEFT, .MaleFacingLeft
+	; ifequal RIGHT, .MaleFacingRight
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesTwoStepsUp_2
+	; end
 
-.MaleFacingLeft:
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksLeftAndUp
-	end
+; .MaleFacingLeft:
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksLeftAndUp
+	; end
 
-.MaleFacingRight:
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsRightLooksDown
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksRightAndUp
-	end
+; .MaleFacingRight:
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsRightLooksDown
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerWalksRightAndUp
+	; end
 
-.Female:
-	readvar VAR_FACING
-	ifequal RIGHT, .FemaleFacingRight
-	ifequal LEFT, .FemaleFacingLeft
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp_2
-	sjump .FemaleContinue
+; .Female:
+	; readvar VAR_FACING
+	; ifequal RIGHT, .FemaleFacingRight
+	; ifequal LEFT, .FemaleFacingLeft
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp_2
+	; sjump .FemaleContinue
 
-.FemaleFacingRight:
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepRight
-	sjump .FemaleContinue
+; .FemaleFacingRight:
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepRight
+	; sjump .FemaleContinue
 
-.FemaleFacingLeft:
-	applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepLeft
-.FemaleContinue:
-	opentext
-	writetext Text_OhPleaseWait
-	waitbutton
-	closetext
-	readvar VAR_FACING
-	ifnotequal UP, .FemaleChangeApperance
-	turnobject PLAYER, LEFT
-.FemaleChangeApperance:
-	opentext
-	writetext Text_ChangeTheLook
-	waitbutton
-	closetext
-	playsound SFX_TINGLE
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
-	setval (PAL_NPC_RED << 4)
-	special SetPlayerPalette
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingDown
-	faceobject PLAYER, POKECENTER2F_TIME_CAPSULE_RECEPTIONIST
-	setflag ENGINE_KRIS_IN_CABLE_CLUB
-	special ReplaceKrisSprite
-	opentext
-	writetext Text_LikeTheLook
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp_2
-	end
+; .FemaleFacingLeft:
+	; applymovementlasttalked Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepLeft
+; .FemaleContinue:
+	; opentext
+	; writetext Text_OhPleaseWait
+	; waitbutton
+	; closetext
+	; readvar VAR_FACING
+	; ifnotequal UP, .FemaleChangeApperance
+	; turnobject PLAYER, LEFT
+; .FemaleChangeApperance:
+	; opentext
+	; writetext Text_ChangeTheLook
+	; waitbutton
+	; closetext
+	; playsound SFX_TINGLE
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight
+	; setval (PAL_NPC_RED << 4)
+	; special SetPlayerPalette
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingDown
+	; faceobject PLAYER, POKECENTER2F_TIME_CAPSULE_RECEPTIONIST
+	; setflag ENGINE_KRIS_IN_CABLE_CLUB
+	; special ReplaceKrisSprite
+	; opentext
+	; writetext Text_LikeTheLook
+	; waitbutton
+	; closetext
+	; showemote EMOTE_SHOCK, PLAYER, 15
+	; applymovement PLAYER, Pokecenter2FMovementData_PlayerTakesOneStepUp_2
+	; end
 
 ; Script_LeftTimeCapsule:
 	; special WaitForOtherPlayerToExit
@@ -623,320 +893,389 @@ Pokecenter2FLinkRecordSign:
 	; closetext
 	; end
 
-Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight:
-	slow_step UP
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight:
+	; slow_step UP
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMobileMobileMovementData_ReceptionistWalksUpAndLeft_LookDown:
-	slow_step UP
-	slow_step LEFT
-	turn_head DOWN
-	step_end
+; Pokecenter2FMobileMobileMovementData_ReceptionistWalksUpAndLeft_LookDown:
+	; slow_step UP
+	; slow_step LEFT
+	; turn_head DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown:
-	slow_step LEFT
-	turn_head DOWN
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsLeftLooksDown:
+	; slow_step LEFT
+	; turn_head DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsRightLooksDown:
-	slow_step RIGHT
-	turn_head DOWN
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsRightLooksDown:
+	; slow_step RIGHT
+	; turn_head DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight_2:
-	slow_step UP
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistWalksUpAndLeft_LookRight_2:
+	; slow_step UP
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistLooksRight:
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistLooksRight:
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesThreeStepsUp:
-	step UP
-	step UP
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerTakesThreeStepsUp:
+	; step UP
+	; step UP
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesTwoStepsUp:
-	step UP
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerTakesTwoStepsUp:
+	; step UP
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepUp:
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepUp:
+	; step UP
+	; step_end
 
-Pokecenter2FMobileMovementData_PlayerWalksIntoMobileBattleRoom:
-	step UP
-	step UP
-	step RIGHT
-	step UP
-	step_end
+; Pokecenter2FMobileMovementData_PlayerWalksIntoMobileBattleRoom:
+	; step UP
+	; step UP
+	; step RIGHT
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesTwoStepsUp_2:
-	step UP
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerTakesTwoStepsUp_2:
+	; step UP
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerWalksLeftAndUp:
-	step LEFT
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerWalksLeftAndUp:
+	; step LEFT
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerWalksRightAndUp:
-	step RIGHT
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerWalksRightAndUp:
+	; step RIGHT
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesThreeStepsDown:
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerTakesThreeStepsDown:
+	; step DOWN
+	; step DOWN
+	; step DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesTwoStepsDown:
-	step DOWN
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerTakesTwoStepsDown:
+	; step DOWN
+	; step DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepDown:
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepDown:
+	; step DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsRightAndDown:
-	slow_step RIGHT
-	slow_step DOWN
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsRightAndDown:
+	; slow_step RIGHT
+	; slow_step DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2:
-	slow_step RIGHT
-	turn_head DOWN
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_2:
+	; slow_step RIGHT
+	; turn_head DOWN
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3:
-	slow_step UP
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsRightLooksDown_3:
+	; slow_step UP
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight:
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight:
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft:
-	slow_step UP
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMobileMovementData_ReceptionistWalksUpAndLeft:
+	; slow_step UP
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom:
-	step DOWN
-	step LEFT
-	step DOWN
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerWalksOutOfMobileRoom:
+	; step DOWN
+	; step LEFT
+	; step DOWN
+	; step DOWN
+	; step_end
 
-Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown:
-	slow_step RIGHT
-	slow_step DOWN
-	step_end
+; Pokecenter2FMobileMovementData_ReceptionistWalksRightAndDown:
+	; slow_step RIGHT
+	; slow_step DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingRight:
+	; turn_head DOWN
+	; turn_head LEFT
+	; turn_head UP
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head LEFT
-	step_end
+; Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingLeft:
+	; turn_head DOWN
+	; turn_head LEFT
+	; turn_head UP
+	; turn_head RIGHT
+	; turn_head LEFT
+	; step_end
 
-Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingDown:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerSpinsClockwiseEndsFacingDown:
+	; turn_head DOWN
+	; turn_head LEFT
+	; turn_head UP
+	; turn_head RIGHT
+	; turn_head DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepDown_2:
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepDown_2:
+	; step DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2:
-	step DOWN
-	step DOWN
-	step_end
+; Pokecenter2FMovementData_PlayerTakesTwoStepsDown_2:
+	; step DOWN
+	; step DOWN
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepUp_2:
-	step UP
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepUp_2:
+	; step UP
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepRight:
-	step RIGHT
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepRight:
+	; step RIGHT
+	; step_end
 
-Pokecenter2FMovementData_PlayerTakesOneStepLeft:
-	step LEFT
-	step_end
+; Pokecenter2FMovementData_PlayerTakesOneStepLeft:
+	; step LEFT
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2:
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsLeftLooksRight_2:
+	; slow_step LEFT
+	; turn_head RIGHT
+	; step_end
 
-Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2:
-	slow_step RIGHT
-	turn_head LEFT
-	step_end
+; Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2:
+	; slow_step RIGHT
+	; turn_head LEFT
+	; step_end
 
-Text_BattleReceptionistMobile:
-	text "Would you like to"
-	line "battle over a GAME"
+; Text_BattleReceptionistMobile:
+	; text "Would you like to"
+	; line "battle over a GAME"
 
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
+	; para "LINK cable or by"
+	; line "mobile phone?"
+	; done
 
-Text_TradeReceptionistMobile:
-	text "Would you like to"
-	line "trade over a GAME"
+; Text_TradeReceptionistMobile:
+	; text "Would you like to"
+	; line "trade over a GAME"
 
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
+	; para "LINK cable or by"
+	; line "mobile phone?"
+	; done
 
-Text_ThisWayToMobileRoom:
-	text "This way to the"
-	line "MOBILE ROOM."
-	done
+; Text_ThisWayToMobileRoom:
+	; text "This way to the"
+	; line "MOBILE ROOM."
+	; done
 
-Text_BattleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB COLOSSEUM."
+; Text_BattleReceptionistIntro:
+	; text "Welcome to CABLE"
+	; line "CLUB COLOSSEUM."
 
-	para "You may battle a"
-	line "friend here."
+	; para "You may battle a"
+	; line "friend here."
 
-	para "Would you like to"
-	line "battle?"
-	done
+	; para "Would you like to"
+	; line "battle?"
+	; done
 
-Text_TradeReceptionistIntro:
-	text "Welcome to CABLE"
-	line "TRADE CENTER."
+; Text_TradeReceptionistIntro:
+	; text "Welcome to CABLE"
+	; line "TRADE CENTER."
 
-	para "You may trade your"
-	line "#MON here with"
-	cont "a friend."
+	; para "You may trade your"
+	; line "#MON here with"
+	; cont "a friend."
 
-	para "Would you like to"
-	line "trade?"
-	done
+	; para "Would you like to"
+	; line "trade?"
+	; done
 
 Text_TimeCapsuleReceptionistIntro:
-	text "Welcome to CABLE"
-	line "CLUB TIME CAPSULE."
+	text "Welcome to the"
+	line "TIME CAPSULE."
 
-	para "You can travel to"
-	line "the past and trade"
-	cont "your #MON."
+	para "With this machine,"
+	line "#MON can be"
 
-	para "Would you like to"
-	line "trade across time?"
+	para "revived from"
+	line "ancient FOSSILS."
 	done
 
-Text_FriendNotReady:
-	text "Your friend is not"
-	line "ready."
-	prompt
-
-Text_MustSaveGame:
-	text "Before opening the"
-	line "link, you must"
-	cont "save your game."
+Text_TimeCapsuleReceptionistAskForFossil:
+	text "Do you have a"
+	line "FOSSIL to put in"
+	cont "the TIME CAPSULE?"
 	done
 
-Text_PleaseWait:
-	text "Please wait."
+Text_TimeCapsuleReceptionistNotAFossil:
+	text "My apologies, but"
+	line "that is not a"
+	cont "FOSSIL."
 	done
 
-Text_LinkTimedOut:
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
+Text_TimeCapsuleReceptionistPartyFull:
+	text "My apologies, but"
+	line "there's no room in"
 
-	para "Please contact"
-	line "your friend and"
-	cont "come again."
-	prompt
-
-Text_PleaseComeAgain:
-	text "Please come again."
-	prompt
-
-Text_PleaseComeIn:
-	text "Please come in."
-	prompt
-
-Text_TemporaryStagingInLinkRoom:
-	text "We'll put you in"
-	line "the link room for"
-	cont "the time being."
+	para "your party for"
+	line "another #MON."
 	done
 
-Text_CantLinkToThePast:
-	text "You can't link to"
-	line "the past here."
-	prompt
-
-Text_IncompatibleRooms:
-	text "Incompatible rooms"
-	line "were chosen."
-	prompt
-
-Text_PleaseComeIn2:
-	text "Please come in."
+Text_TimeCapsuleReceptionistGoodbye:
+	text "Please, come back"
+	line "again any time."
 	done
 
-Text_PleaseEnter:
-	text "Please enter."
-	prompt
+Text_TimeCapsuleReceptionistTakeCareOfMon:
+	text "Please take good"
+	line "care of that"
+	cont "#MON."
+	done
 
-Text_RejectNewMon:
-	text "Sorry--@"
-	text_ram wStringBuffer1
-	text_start
-	line "can't be taken."
-	prompt
-
-Text_RejectMonWithNewMove:
-	text "You can't take the"
-	line "@"
-	text_ram wStringBuffer1
-	text " with a"
-	cont "@"
-	text_ram wStringBuffer2
+Text_TimeCapsuleReceptionistMon:
+	text "That is a FOSSIL"
+	line "of @"
+	text_ram wStringBuffer3
 	text "."
-	prompt
 
-Text_RejectMonWithMail:
-	text "You can't take the"
+	para "Would you like me"
+	line "to revive it?"
+	done
+
+Text_TimeCapsuleReceptionistGaveMon:
+	text "That @"
+	text_ram wStringBuffer3
+	text_start
+	line "was revived from"
+	cont "your FOSSIL."
+	done
+
+Text_TimeCapsuleReceptionistTakeFossil:
+	text "<PLAYER> handed"
+	line "over the fossil."
+
+	para "This will only"
+	line "take a moment."
+	done
+
+Text_TimeCapsuleReceptionistGiveMon:
+	text "Your fossilized"
+	line "#MON has been"
+	cont "restored to life."
+	done
+
+Text_TimeCapsuleReceptionistReceive:
+	text "<PLAYER> received"
 	line "@"
-	text_ram wStringBuffer1
-	text " that"
-	cont "has MAIL with you."
-	prompt
+	text_ram wStringBuffer3
+	text "!"
+	done
+
+; Text_FriendNotReady:
+	; text "Your friend is not"
+	; line "ready."
+	; prompt
+
+; Text_MustSaveGame:
+	; text "Before opening the"
+	; line "link, you must"
+	; cont "save your game."
+	; done
+
+; Text_PleaseWait:
+	; text "Please wait."
+	; done
+
+; Text_LinkTimedOut:
+	; text "The link has been"
+	; line "closed because of"
+	; cont "inactivity."
+
+	; para "Please contact"
+	; line "your friend and"
+	; cont "come again."
+	; prompt
+
+; Text_PleaseComeAgain:
+	; text "Please come again."
+	; prompt
+
+; Text_PleaseComeIn:
+	; text "Please come in."
+	; prompt
+
+; Text_TemporaryStagingInLinkRoom:
+	; text "We'll put you in"
+	; line "the link room for"
+	; cont "the time being."
+	; done
+
+; Text_CantLinkToThePast:
+	; text "You can't link to"
+	; line "the past here."
+	; prompt
+
+; Text_IncompatibleRooms:
+	; text "Incompatible rooms"
+	; line "were chosen."
+	; prompt
+
+; Text_PleaseComeIn2:
+	; text "Please come in."
+	; done
+
+; Text_PleaseEnter:
+	; text "Please enter."
+	; prompt
+
+; Text_RejectNewMon:
+	; text "Sorry--@"
+	; text_ram wStringBuffer1
+	; text_start
+	; line "can't be taken."
+	; prompt
+
+; Text_RejectMonWithNewMove:
+	; text "You can't take the"
+	; line "@"
+	; text_ram wStringBuffer1
+	; text " with a"
+	; cont "@"
+	; text_ram wStringBuffer2
+	; text "."
+	; prompt
+
+; Text_RejectMonWithMail:
+	; text "You can't take the"
+	; line "@"
+	; text_ram wStringBuffer1
+	; text " that"
+	; cont "has MAIL with you."
+	; prompt
 
 Text_TimeCapsuleClosed:
 	text "I'm sorry--the"
@@ -989,39 +1328,39 @@ Text_BattleRoomClosed:
 	; line "strange…"
 	; done
 
-Text_OhPleaseWait:
-	text "Oh, please wait."
-	done
+; Text_OhPleaseWait:
+	; text "Oh, please wait."
+	; done
 
-Text_ChangeTheLook:
-	text "We need to change"
-	line "the look here…"
-	done
+; Text_ChangeTheLook:
+	; text "We need to change"
+	; line "the look here…"
+	; done
 
-Text_LikeTheLook:
-	text "How does this"
-	line "style look to you?"
-	done
+; Text_LikeTheLook:
+	; text "How does this"
+	; line "style look to you?"
+	; done
 
-Text_BrokeStadiumRules:
-	text "Excuse me!"
+; Text_BrokeStadiumRules:
+	; text "Excuse me!"
 
-	para "For STADIUM rules,"
-	line "please bring six"
+	; para "For STADIUM rules,"
+	; line "please bring six"
 
-	para "different #MON,"
-	line "excluding EGGS."
+	; para "different #MON,"
+	; line "excluding EGGS."
 
-	para "The six #MON"
-	line "must be different."
+	; para "The six #MON"
+	; line "must be different."
 
-	para "Also, they must"
-	line "not be holding"
-	cont "identical items."
+	; para "Also, they must"
+	; line "not be holding"
+	; cont "identical items."
 
-	para "Please come back"
-	line "when you're ready."
-	done
+	; para "Please come back"
+	; line "when you're ready."
+	; done
 
 Pokecenter2F_MapEvents:
 	db 0, 0 ; filler

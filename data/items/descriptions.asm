@@ -235,16 +235,16 @@ ItemDescriptions:
 	dw SootheBellDesc
 	dw PremierBallDesc
 	dw BlkAuguriteDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
+	dw HelixFossilDesc
+	dw DomeFossilDesc
+	dw RootFossilDesc
+	dw ClawFossilDesc
+	dw SkullFossilDesc
+	dw ArmorFossilDesc
+	dw CoverFossilDesc
+	dw PlumeFossilDesc
+	dw JawFossilDesc
+	dw SailFossilDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -1185,3 +1185,16 @@ PremierBallDesc:
 BlkAuguriteDesc:
 	db   "A dark stone loved"
 	next "by SCYTHER. (HOLD)@"
+
+HelixFossilDesc:
+DomeFossilDesc:
+RootFossilDesc:
+ClawFossilDesc:
+SkullFossilDesc:
+ArmorFossilDesc:
+CoverFossilDesc:
+PlumeFossilDesc:
+JawFossilDesc:
+SailFossilDesc:
+	db   "A fossil of an"
+	next "ancient #MON.@"

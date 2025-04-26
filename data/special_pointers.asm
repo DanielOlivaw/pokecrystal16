@@ -177,3 +177,4 @@ SpecialsPointers::
 	add_special UnusedFindItemInPCOrBag
 	add_special InitialSetDSTFlag
 	add_special InitialClearDSTFlag
+	add_special ChooseItemFromBag

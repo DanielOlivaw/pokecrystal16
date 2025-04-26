@@ -240,16 +240,16 @@
 	const SOOTHE_BELL  ; e8
 	const PREMIER_BALL ; e9
 	const BLK_AUGURITE ; ea
-	const ITEM_EB      ; eb
-	const ITEM_EC      ; ec
-	const ITEM_ED      ; ed
-	const ITEM_EE      ; ee
-	const ITEM_EF      ; ef
-	const ITEM_F0      ; f0
-	const ITEM_F1      ; f1
-	const ITEM_F2      ; f2
-	const ITEM_F3      ; f3
-	const ITEM_F4      ; f4
+	const HELIX_FOSSIL ; eb
+	const DOME_FOSSIL  ; ec
+	const ROOT_FOSSIL  ; ed
+	const CLAW_FOSSIL  ; ee
+	const SKULL_FOSSIL ; ef
+	const ARMOR_FOSSIL ; f0
+	const COVER_FOSSIL ; f1
+	const PLUME_FOSSIL ; f2
+	const JAW_FOSSIL   ; f3
+	const SAIL_FOSSIL  ; f4
 	const ITEM_F5      ; f5
 	const ITEM_F6      ; f6
 	const ITEM_F7      ; f7

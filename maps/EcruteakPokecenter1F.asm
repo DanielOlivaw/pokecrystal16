@@ -39,9 +39,6 @@ EcruteakPokecenter1F_MapScripts:
 	opentext
 	writetext EcruteakPokecenter1F_BillText1
 	buttonsound
-	sjump .PointlessJump
-
-.PointlessJump:
 	writetext EcruteakPokecenter1F_BillText2
 	waitbutton
 	closetext
@@ -106,47 +103,65 @@ EcruteakPokecenter1F_BillText2:
 	line "adjustments on my"
 	cont "TIME CAPSULE."
 
+	; para "You know that"
+	; line "#MON can be"
+	; cont "traded, right?"
+
 	para "You know that"
-	line "#MON can be"
-	cont "traded, right?"
+	line "#MON have been"
+
+	para "around since"
+	line "prehistoric times,"
+	cont "right?"
+
+	; para "My TIME CAPSULE"
+	; line "was developed to"
+
+	; para "enable trades with"
+	; line "the past."
 
 	para "My TIME CAPSULE"
 	line "was developed to"
 
-	para "enable trades with"
-	line "the past."
+	para "restore life to"
+	line "the FOSSILS of"
+	cont "ancient #MON."
 
-	para "But you can't send"
-	line "anything that"
+	; para "But you can't send"
+	; line "anything that"
 
-	para "didn't exist in"
-	line "the past."
+	; para "didn't exist in"
+	; line "the past."
 
-	para "If you did, the PC"
-	line "in the past would"
-	cont "have a breakdown."
+	; para "If you did, the PC"
+	; line "in the past would"
+	; cont "have a breakdown."
 
-	para "So you have to"
-	line "remove anything"
+	; para "So you have to"
+	; line "remove anything"
 
-	para "that wasn't around"
-	line "in the past."
+	; para "that wasn't around"
+	; line "in the past."
 
-	para "Put simply, no"
-	line "sending new moves"
+	; para "Put simply, no"
+	; line "sending new moves"
 
-	para "or new #MON in"
-	line "the TIME CAPSULE."
+	; para "or new #MON in"
+	; line "the TIME CAPSULE."
 
 	para "Don't you worry."
 	line "I'm done with the"
 	cont "adjustments."
 
-	para "Tomorrow, TIME"
-	line "CAPSULES will be"
+	; para "Tomorrow, TIME"
+	; line "CAPSULES will be"
 
-	para "running at all"
-	line "#MON CENTERS."
+	; para "running at all"
+	; line "#MON CENTERS."
+
+	para "TIME CAPSULES are"
+	line "now running at all"
+	cont "#MON CENTERS."
 
 	para "I have to hurry on"
 	line "back to GOLDENROD"
@@ -156,12 +171,25 @@ EcruteakPokecenter1F_BillText2:
 	done
 
 EcruteakPokecenter1FPokefanMText:
-	text "The way the KIMONO"
-	line "GIRLS dance is"
+	; text "The way the KIMONO"
+	; line "GIRLS dance is"
 
-	para "marvelous. Just"
-	line "like the way they"
-	cont "use their #MON."
+	; para "marvelous. Just"
+	; line "like the way they"
+	; cont "use their #MON."
+
+	text "You must be hoping"
+	line "to find some"
+	cont "FOSSILS, right?"
+
+	para "There's apparently"
+	line "a man in MT.MORTAR"
+
+	para "who is always"
+	line "digging them up."
+
+	para "Maybe he'd be"
+	line "willing to trade?"
 	done
 
 ; EcruteakPokecenter1FPokefanMTextMobile:

@@ -42,12 +42,14 @@ FishGroups:
 	dbbw 100 percent,     10, KRABBY
 .Shore_Good:
 	dbbw  10 percent,     20, MAGIKARP
-	dbbw  50 percent,     20, KRABBY
+	dbbw  30 percent,     20, LUVDISC
+	dbbw  60 percent,     20, KRABBY
 	dbbw  80 percent + 1, 20, CLAMPERL
 	dbbw 100 percent,      0, TIME_GROUP ; CORSOLA, STARYU
 .Shore_Super:
-	dbbw  40 percent,     40, KINGLER
-	dbbw  65 percent,      1, TIME_GROUP ; CORSOLA, STARYU
+	dbbw  30 percent,     40, LUVDISC
+	dbbw  50 percent,     40, KINGLER
+	dbbw  75 percent,      1, TIME_GROUP ; CORSOLA, STARYU
 	dbbw  95 percent + 1, 40, CLAMPERL
 	dbbw 100 percent,     40, DHELMISE
 
@@ -63,11 +65,11 @@ FishGroups:
 	dbbw  60 percent,     20, WAILMER
 	dbbw  75 percent,     20, FINNEON
 	dbbw  85 percent + 1, 20, SKRELP
-	dbbw 100 percent,      2, TIME_GROUP ; SHELLDER, SHELLDER
+	dbbw 100 percent,      2, TIME_GROUP ; SHELLDER, STARYU
 .Ocean_Super:
 	dbbw  20 percent,     40, ANGORE
 	dbbw  35 percent,     40, LANTURN
-	dbbw  50 percent,      3, TIME_GROUP ; SHELLDER, SHELLDER
+	dbbw  50 percent,      3, TIME_GROUP ; SHELLDER, STARYU
 	dbbw  65 percent,     40, WAILMER
 	dbbw  80 percent,     40, LUMINEON
 	dbbw  95 percent + 1, 40, SKRELP
@@ -206,8 +208,8 @@ FishGroups:
 	dbbw 100 percent,     10, FINNEON
 .Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
-	dbbw  20 percent,     20, MAGIKARP
-	dbbw  90 percent + 1, 20, FINNEON
+	dbbw  10 percent,     20, MAGIKARP
+	dbbw  80 percent + 1, 20, FINNEON
 	dbbw 100 percent,     20, TIME_GROUP ; LUVDISC, LUVDISC
 .Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:
@@ -227,8 +229,8 @@ FishGroups:
 	dbbw  85 percent + 1, 20, CARVANHA
 	dbbw 100 percent,      6, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 .Remoraid_Super:
-	dbbw  35 percent,     40, CRAWDAUNT
-	dbbw  55 percent,      7, TIME_GROUP ; BASCULIN_R, BASCULIN_R
+	dbbw  30 percent,     40, CRAWDAUNT
+	dbbw  50 percent,      7, TIME_GROUP ; BASCULIN_R, BASCULIN_R
 	dbbw  75 percent + 1, 40, REMORAID
 	dbbw 100 percent,     40, CARVANHA
 
@@ -236,8 +238,8 @@ TimeFishGroups:
 	;     day             nite
 	dbwbw 20, CORSOLA,    20, STARYU     ;  0 Shore, Good Rod
 	dbwbw 40, CORSOLA,    40, STARYU     ;  1 Shore, Super Rod
-	dbwbw 20, SHELLDER,   20, SHELLDER   ;  2 Ocean, Good Rod
-	dbwbw 40, SHELLDER,   40, SHELLDER   ;  3 Ocean, Super Rod
+	dbwbw 20, SHELLDER,   20, STARYU     ;  2 Ocean, Good Rod
+	dbwbw 40, SHELLDER,   40, STARYU     ;  3 Ocean, Super Rod
 	dbwbw 20, BASCULIN_B, 20, BASCULIN_B ;  4 Lake, Good Rod
 	dbwbw 40, BASCULIN_B, 40, BASCULIN_B ;  5 Lake, Super Rod
 	dbwbw 20, BASCULIN_R, 20, BASCULIN_R ;  6 Pond, Good Rod
