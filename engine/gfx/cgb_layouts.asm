@@ -566,9 +566,6 @@ _CGB_Evolution:
 	jr .got_palette
 
 .pokemon
-	; Get form data for palette
-	ld hl, wPartyMon1DVs
-	predef GetUnownLetter
 	; Get palette
 	ld hl, wPartyMon1DVs
 	ld bc, PARTYMON_STRUCT_LENGTH
