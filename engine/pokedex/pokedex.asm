@@ -550,37 +550,37 @@ DexEntryScreen_MenuActionJumptable:
 	ret
 
 .Print:
-	; call Pokedex_ApplyPrintPals
-	; xor a
-	; ldh [hSCX], a
-	; ld hl, wPrevDexEntryBackup
-	; ld a, [hli]
-	; ld h, [hl]
-	; ld l, a
-	; push hl
-	; ld a, [wPrevDexEntryJumptableIndex]
-	; push af
-	; ld a, [wJumptableIndex]
-	; push af
+	call Pokedex_ApplyPrintPals
+	xor a
+	ldh [hSCX], a
+	ld hl, wPrevDexEntryBackup
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+	ld a, [wPrevDexEntryJumptableIndex]
+	push af
+	ld a, [wJumptableIndex]
+	push af
 	; farcall PrintDexEntry
-	; pop af
-	; ld [wJumptableIndex], a
-	; pop af
-	; ld [wPrevDexEntryJumptableIndex], a
-	; pop hl
-	; ld a, l
-	; ld [wPrevDexEntryBackup], a
-	; ld a, h
-	; ld [wPrevDexEntryBackup + 1], a
-	; call ClearBGPalettes
-	; call DisableLCD
-	; call Pokedex_LoadInvertedFont
-	; call Pokedex_RedisplayDexEntry
-	; call EnableLCD
-	; call WaitBGMap
-	; ld a, POKEDEX_SCX
-	; ldh [hSCX], a
-	; call Pokedex_ApplyUsualPals
+	pop af
+	ld [wJumptableIndex], a
+	pop af
+	ld [wPrevDexEntryJumptableIndex], a
+	pop hl
+	ld a, l
+	ld [wPrevDexEntryBackup], a
+	ld a, h
+	ld [wPrevDexEntryBackup + 1], a
+	call ClearBGPalettes
+	call DisableLCD
+	call Pokedex_LoadInvertedFont
+	call Pokedex_RedisplayDexEntry
+	call EnableLCD
+	call WaitBGMap
+	ld a, POKEDEX_SCX
+	ldh [hSCX], a
+	call Pokedex_ApplyUsualPals
 	ret
 
 Pokedex_RedisplayDexEntry:
@@ -2689,13 +2689,13 @@ Pokedex_BlackOutBG:
 	pop af
 	ldh [rSVBK], a
 
-; Pokedex_ApplyPrintPals:
-	; ld a, $ff
-	; call DmgToCgbBGPals
-	; ld a, $ff
-	; call DmgToCgbObjPal0
-	; call DelayFrame
-	; ret
+Pokedex_ApplyPrintPals:
+	ld a, $ff
+	call DmgToCgbBGPals
+	ld a, $ff
+	call DmgToCgbObjPal0
+	call DelayFrame
+	ret
 
 Pokedex_GetSGBLayout:
 	ld b, a
