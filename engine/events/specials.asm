@@ -425,7 +425,6 @@ TrainerHouse:
 ChooseItemFromBag:
 	call DisableSpriteUpdates
 	farcall DepositSellInitPackBuffers
-.loop
 	farcall DepositSellPack
 	ld a, [wCurItem]
 	ld [wScriptVar], a
