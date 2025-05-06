@@ -1092,8 +1092,6 @@ BattleAnim_BreakingSwipe:
 BattleAnim_Teatime:
 BattleAnim_CosmicWarp:
 BattleAnim_ChronoShift:
-BattleAnim_GravApple:
-BattleAnim_AppleAcid:
 BattleAnim_StoredPower:
 BattleAnim_Punishment:
 BattleAnim_JawLock:
@@ -1913,6 +1911,7 @@ BattleAnim_Explosion:
 	anim_ret
 
 BattleAnim_Acid:
+BattleAnim_AppleAcid:
 	anim_1gfx ANIM_GFX_POISON
 	anim_call BattleAnim_Acid_branch_cbc35
 	anim_wait 64
@@ -2964,6 +2963,7 @@ BattleAnim_PetalDance:
 BattleAnim_Barrage:
 BattleAnim_MudBomb:
 BattleAnim_MagnetBomb:
+BattleAnim_GravApple:
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_EXPLOSION
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10
