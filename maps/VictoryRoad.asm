@@ -1,5 +1,10 @@
 	object_const_def ; object_event constants
 	const VICTORYROAD_SILVER
+	const VICTORYROAD_COOLTRAINER_M1
+	const VICTORYROAD_COOLTRAINER_M2
+	const VICTORYROAD_COOLTRAINER_F
+	const VICTORYROAD_BLACK_BELT
+	const VICTORYROAD_POKEFAN_M
 	const VICTORYROAD_POKE_BALL1
 	const VICTORYROAD_POKE_BALL2
 	const VICTORYROAD_POKE_BALL3
@@ -9,8 +14,6 @@
 	const VICTORYROAD_ROCK1
 	const VICTORYROAD_ROCK2
 	const VICTORYROAD_ROCK3
-	const VICTORYROAD_ROCK4
-	const VICTORYROAD_ROCK5
 
 VictoryRoad_MapScripts:
 	db 2 ; scene scripts
@@ -198,6 +201,61 @@ VictoryRoadRivalNext:
 	closetext
 	end
 
+TrainerCooltrainermAndy:
+	trainer COOLTRAINERM, ANDY, EVENT_BEAT_COOLTRAINERM_ANDY, CooltrainermAndySeenText, CooltrainermAndyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermAndyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCooltrainermSteve:
+	trainer COOLTRAINERM, STEVE, EVENT_BEAT_COOLTRAINERM_STEVE, CooltrainermSteveSeenText, CooltrainermSteveBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermSteveAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerCooltrainerfLisa:
+	trainer COOLTRAINERF, LISA, EVENT_BEAT_COOLTRAINERF_LISA, CooltrainerfLisaSeenText, CooltrainerfLisaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfLisaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerBlackbeltDaisuke:
+	trainer BLACKBELT_T, DAISUKE, EVENT_BEAT_BLACKBELT_DAISUKE, BlackbeltDaisukeSeenText, BlackbeltDaisukeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BlackbeltDaisukeAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerHikerDale:
+	trainer HIKER, DALE, EVENT_BEAT_HIKER_DALE, HikerDaleSeenText, HikerDaleBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext HikerDaleAfterBattleText
+	waitbutton
+	closetext
+	end
+
 ; VictoryRoadTMEarthquake:
 	; itemball TM_EARTHQUAKE
 
@@ -358,6 +416,121 @@ VictoryRoadRivalVictoryText:
 	line "thing else."
 	done
 
+CooltrainermSteveSeenText:
+	text "Only the strongest"
+	line "trainers can face"
+	cont "the ELITE FOUR."
+
+	para "Do you think"
+	line "you're ready?"
+	done
+
+CooltrainermSteveBeatenText:
+	text "Impressive!"
+	done
+
+CooltrainermSteveAfterBattleText:
+	text "I think you might"
+	line "be able to win!"
+
+	para "I'll be rooting"
+	line "for you!"
+	done
+
+CooltrainermAndySeenText:
+	text "Just a few more"
+	line "steps, and I'll be"
+
+	para "at the #MON"
+	line "LEAGUE."
+	done
+
+CooltrainermAndyBeatenText:
+	text "I stumbled just at"
+	line "the finish line…"
+	done
+
+CooltrainermAndyAfterBattleText:
+	text "I wasn't ready"
+	line "yet. That's OK."
+
+	para "I'll train and"
+	line "come back even"
+	cont "stronger!"
+	done
+
+CooltrainerfLisaSeenText:
+	text "Only trainers with"
+	line "eight BADGES are"
+
+	para "allowed on VICTORY"
+	line "ROAD."
+
+	para "We're the best of"
+	line "the best!"
+	done
+
+CooltrainerfLisaBeatenText:
+	text "I'm good, but"
+	line "you're better."
+	done
+
+CooltrainerfLisaAfterBattleText:
+	text "To battle the str-"
+	line "ongest trainers of"
+	cont "JOHTO and KANTO…"
+
+	para "It's a thrill!"
+	done
+
+BlackbeltDaisukeSeenText:
+	text "I have trained in"
+	line "this cave for"
+	cont "three years."
+
+	para "Finally, I am"
+	line "worthy to face"
+	cont "BRUNO!"
+	done
+
+BlackbeltDaisukeBeatenText:
+	text "I'm still not"
+	line "worthy…"
+	done
+
+BlackbeltDaisukeAfterBattleText:
+	text "BRUNO is my idol."
+	line "I couldn't bear to"
+
+	para "embarrass myself"
+	line "in battle with"
+	cont "him."
+
+	para "I'll have to keep"
+	line "training…"
+	done
+
+HikerDaleSeenText:
+	text "Hiking this road"
+	line "has made us tough."
+
+	para "My #MON are"
+	line "raring to go!"
+	done
+
+HikerDaleBeatenText:
+	text "Woah! What a rocky"
+	line "battle!"
+	done
+
+HikerDaleAfterBattleText:
+	text "Rugged trails and"
+	line "tough trainers!"
+
+	para "What could be"
+	line "better?"
+	done
+
 VictoryRoad_MapEvents:
 	db 0, 0 ; filler
 
@@ -386,8 +559,13 @@ VictoryRoad_MapEvents:
 	bg_event  2, 19, BGEVENT_ITEM, VictoryRoadHiddenHyperPotion
 	bg_event 14, 13, BGEVENT_ITEM, VictoryRoadHiddenZinc
 
-	db 12 ; object events
+	db 15 ; object events
 	object_event 18, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
+	object_event 11, 53, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermAndy, -1
+	object_event 14, 35, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermSteve, -1
+	object_event  3, 54, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfLisa, -1
+	object_event  7, 35, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltDaisuke, -1
+	object_event  4, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerDale, -1
 	; object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	tmhmball_event  3, 28, TM_EARTHQUAKE, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE
@@ -397,6 +575,4 @@ VictoryRoad_MapEvents:
 	tmhmball_event 18, 28, TM_DARK_PULSE, EVENT_VICTORY_ROAD_TM_DARK_PULSE
 	object_event  4, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1
 	object_event 12, 50, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1
-	object_event 18, 30, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1
 	object_event 18, 29, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1
-	object_event 17, 49, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadRock, -1

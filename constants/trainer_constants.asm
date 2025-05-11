@@ -314,11 +314,11 @@ KRIS EQU __enum__
 	const BLAKE
 	const BRIAN
 	; const ERICK
-	; const ANDY
+	const ANDY
 	; const TYLER
 	const SEAN
 	const KEVIN
-	; const STEVE
+	const STEVE
 	const ALLEN
 	const DARIN
 	const BONITA
@@ -347,6 +347,7 @@ KRIS EQU __enum__
 	const REENA3
 	const CARA
 	const ELAN
+	const LISA
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -633,6 +634,7 @@ KRIS EQU __enum__
 	const PARRY3
 	const ANTHONY4
 	const ANTHONY5
+	const DALE
 
 	trainerclass BIKER ; 2d
 	; const BIKER_BENNY
@@ -683,6 +685,7 @@ KRIS EQU __enum__
 	const LUNG
 	const KENJI3
 	const WAI
+	const DAISUKE
 
 	trainerclass ARCHER
 	const ARCHER_1

@@ -104,32 +104,32 @@ JohtoWaterWildMons:
 
 	def_water_wildmons WHIRL_ISLAND_SW ; FRILLISH, HORSEA, SEEL, FINNEON
 	db 4 percent ; encounter rate
-	dbw 20, FRILLISH
-	dbw 15, FINNEON
-	dbw 20, SEEL
-	dbw 15, HORSEA
-	dbw 15, HORSEA
+	dbw 25, FRILLISH
+	dbw 20, FINNEON
+	dbw 25, SEEL
 	dbw 20, HORSEA
+	dbw 20, HORSEA
+	dbw 25, HORSEA
 	end_water_wildmons
 
 	def_water_wildmons WHIRL_ISLAND_B2F ; FRILLISH, HORSEA, SEEL, FINNEON
 	db 4 percent ; encounter rate
-	dbw 20, HORSEA
-	dbw 15, FINNEON
-	dbw 20, SEEL
-	dbw 20, FRILLISH
-	dbw 20, FRILLISH
-	dbw 20, FRILLISH
+	dbw 25, HORSEA
+	dbw 20, FINNEON
+	dbw 25, SEEL
+	dbw 25, FRILLISH
+	dbw 25, FRILLISH
+	dbw 25, FRILLISH
 	end_water_wildmons
 
 	def_water_wildmons WHIRL_ISLAND_LUGIA_CHAMBER ; FRILLISH, HORSEA, SEEL, FINNEON
 	db 4 percent ; encounter rate
-	dbw 20, HORSEA
-	dbw 20, FINNEON
-	dbw 20, SEEL
-	dbw 20, FRILLISH
-	dbw 20, FRILLISH
+	dbw 25, HORSEA
+	dbw 25, FINNEON
+	dbw 25, SEEL
 	dbw 25, FRILLISH
+	dbw 25, FRILLISH
+	dbw 30, FRILLISH
 	end_water_wildmons
 
 	def_water_wildmons SILVER_CAVE_ROOM_2 ; GOLDEEN, PSYDUCK, CHEWTLE, BASCULIN
@@ -274,22 +274,22 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_44 ; BUIZEL, LOTAD, DEWPIDER, BASCULIN, CARVANHA
 	db 2 percent ; encounter rate
-	dbw 25, BUIZEL
-	dbw 20, LOMBRE
+	dbw 30, FLOATZEL
+	dbw 25, LOMBRE
 	dbw 25, CARVANHA
-	dbw 20, BASCULIN_R
-	dbw 20, DEWPIDER
-	dbw 20, DEWPIDER
+	dbw 30, BASCULIN_R
+	dbw 25, ARAQUANID
+	dbw 25, ARAQUANID
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_45 ; MAGIKARP, FEEBAS
 	db 2 percent ; encounter rate
-	dbw 25, MAGIKARP
-	dbw 25, MAGIKARP
-	dbw 25, MAGIKARP
+	dbw 30, MAGIKARP
+	dbw 30, MAGIKARP
+	dbw 30, MAGIKARP
+	dbw 35, MAGIKARP
 	dbw 30, MAGIKARP
 	dbw 25, MAGIKARP
-	dbw 20, MAGIKARP
 	end_water_wildmons
 
 	def_water_wildmons NEW_BARK_TOWN ; TENTACOOL, FINNEON, WINGULL, WAILMER, SKRELP

@@ -285,29 +285,29 @@ KantoGrassWildMons:
 	def_grass_wildmons VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 34, BOLDORE
-	dbw 32, RHYHORN
-	dbw 33, URSARING
-	dbw 34, GOLBAT
-	dbw 32, HARIYAMA
-	dbw 35, SANDSLASH
-	dbw 35, DRUDDIGON
-	; day
-	dbw 34, BOLDORE
-	dbw 32, RHYHORN
-	dbw 33, URSARING
-	dbw 34, GOLBAT
-	dbw 32, HARIYAMA
-	dbw 35, SANDSLASH
-	dbw 35, DRUDDIGON
-	; nite
-	dbw 34, BOLDORE
 	dbw 36, BOLDORE
-	dbw 33, GOLBAT
-	dbw 34, GOLBAT
-	dbw 32, ABSOL
+	dbw 34, RHYHORN
+	dbw 35, URSARING
+	dbw 36, GOLBAT
+	dbw 34, HARIYAMA
+	dbw 37, SANDSLASH
+	dbw 37, DRUDDIGON
+	; day
+	dbw 36, BOLDORE
+	dbw 34, RHYHORN
+	dbw 35, URSARING
+	dbw 36, GOLBAT
+	dbw 34, HARIYAMA
+	dbw 37, SANDSLASH
+	dbw 37, DRUDDIGON
+	; nite
+	dbw 36, BOLDORE
+	dbw 34, BOLDORE
 	dbw 35, GOLBAT
-	dbw 35, MISDREAVUS
+	dbw 36, GOLBAT
+	dbw 34, ABSOL
+	dbw 37, GOLBAT
+	dbw 37, MISDREAVUS
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS
