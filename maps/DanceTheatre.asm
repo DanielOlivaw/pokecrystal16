@@ -200,7 +200,7 @@ DanceTheaterSurfGuy:
 	writetext SurfGuyNeverLeftAScratchText
 	buttonsound
 	checkevent EVENT_GOT_HM03_SURF
-	iftrue SurfGuyAlreadyGaveSurf
+	iftrue .AlreadyGaveSurf
 	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO
 	iffalse .KimonoGirlsUndefeated
 	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO
@@ -211,7 +211,15 @@ DanceTheaterSurfGuy:
 	iffalse .KimonoGirlsUndefeated
 	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI
 	iffalse .KimonoGirlsUndefeated
-	sjump .GetSurf
+; Give HM03 Surf
+	writetext SurfGuyLikeADanceText
+	buttonsound
+	verbosegivetmhm HM_SURF
+	setevent EVENT_GOT_HM03_SURF
+	writetext SurfGuySurfExplanationText
+	waitbutton
+	closetext
+	end
 
 .KimonoGirlsUndefeated:
 	checkflag ENGINE_PLAYER_IS_FEMALE
@@ -227,27 +235,68 @@ DanceTheaterSurfGuy:
 	closetext
 	end
 
-.GetSurf:
-	writetext SurfGuyLikeADanceText
-	buttonsound
-	verbosegivetmhm HM_SURF
-	setevent EVENT_GOT_HM03_SURF
-	writetext SurfGuySurfExplanationText
+.AlreadyGaveSurf:
+	checkevent EVENT_GOT_PROTECTOR
+	iftrue .NoOffer
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .ProtectorScript
+.NoOffer:
+	writetext SurfGuyElegantKimonoGirlsText
 	waitbutton
 	closetext
 	end
 
-SurfGuyAlreadyGaveSurf:
-	writetext SurfGuyElegantKimonoGirlsText
+.ProtectorScript:
+	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO_REMATCH
+	iffalse .KimonoGirlsRematchUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO_REMATCH
+	iffalse .KimonoGirlsRematchUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_ZUKI_REMATCH
+	iffalse .KimonoGirlsRematchUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_KUNI_REMATCH
+	iffalse .KimonoGirlsRematchUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI_REMATCH
+	iffalse .KimonoGirlsRematchUndefeated
+; Give Protector
+	writetext SurfGuyLikeADanceText
+	buttonsound
+	verbosegiveitem PROTECTOR
+	setevent EVENT_GOT_PROTECTOR
+	writetext SurfGuyProtectorExplanationText
+	waitbutton
+	closetext
+	end
+
+.KimonoGirlsRematchUndefeated:
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .PlayerIsFemale2
+	writetext SurfGuyLadGift2Text
+	waitbutton
+	closetext
+	end
+
+.PlayerIsFemale2:
+	writetext SurfGuyLassieGift2Text
 	waitbutton
 	closetext
 	end
 
 DanceTheaterRhydon:
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .Rhyperior
 	writetext RhydonText
 	cry RHYDON
 	loadmonindex 1, RHYDON
+	special SpecialSetSeenMon
+	waitbutton
+	closetext
+	end
+
+.Rhyperior:
+	writetext RhyperiorText
+	cry RHYPERIOR
+	loadmonindex 1, RHYPERIOR
 	special SpecialSetSeenMon
 	waitbutton
 	closetext
@@ -480,6 +529,24 @@ SurfGuyLassieGiftText:
 	line "give you a gift."
 	done
 
+SurfGuyLadGift2Text:
+	text "Lad! If you can"
+	line "defeat all the"
+
+	para "KIMONO GIRLS"
+	line "again, I'll give"
+	cont "you another gift."
+	done
+
+SurfGuyLassieGift2Text:
+	text "Lassie, if you can"
+	line "defeat all the"
+
+	para "KIMONO GIRLS"
+	line "again, I'll give"
+	cont "you another gift."
+	done
+
 SurfGuyLikeADanceText:
 	text "The way you bat-"
 	line "tled, it was like"
@@ -501,6 +568,17 @@ SurfGuySurfExplanationText:
 	cont "across water."
 	done
 
+SurfGuyProtectorExplanationText:
+	text "That there is a"
+	line "PROTECTOR."
+
+	para "Only a #MON as"
+	line "bulky and strong"
+
+	para "as RHYDON can make"
+	line "use of it."
+	done
+
 SurfGuyElegantKimonoGirlsText:
 	text "I wish my #MON"
 	line "were as elegant as"
@@ -509,6 +587,11 @@ SurfGuyElegantKimonoGirlsText:
 
 RhydonText:
 	text "RHYDON: Gugooh"
+	line "gugogooh!"
+	done
+
+RhyperiorText:
+	text "RHYPERIOR: Gugooh"
 	line "gugogooh!"
 	done
 
