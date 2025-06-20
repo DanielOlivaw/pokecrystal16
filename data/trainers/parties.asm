@@ -989,15 +989,15 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (11)
 	db "OWEN@", TRAINERTYPE_NORMAL
-	db 45
+	db 55
 	dw ARCANINE_H
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (12)
 	db "JASON@", TRAINERTYPE_NORMAL
-	db 43
+	db 53
 	dw PERRSERKER
-	db 45
+	db 53
 	dw FLYGON
 	db -1 ; end
 
@@ -1030,13 +1030,13 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (2)
 	db "KIPP@", TRAINERTYPE_NORMAL
-	db 37
+	db 49
 	dw TADBULB
-	db 37
+	db 49
 	dw TYNAMO
-	db 41
+	db 53
 	dw TADBULB
-	db 41
+	db 53
 	dw EELEKTRIK
 	db -1 ; end
 
@@ -1048,11 +1048,11 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (4)
 	db "JOHNNY@", TRAINERTYPE_NORMAL
-	db 39
+	db 49
 	dw FERROSEED
-	db 41
+	db 51
 	dw GLISCOR
-	db 43
+	db 53
 	dw FERROTHORN
 	db -1 ; end
 
@@ -1068,9 +1068,9 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (6)
 	db "TOMMY@", TRAINERTYPE_NORMAL
-	db 42
+	db 52
 	dw SIGILYPH
-	db 44
+	db 54
 	dw REUNICLUS
 	db -1 ; end
 
@@ -1092,13 +1092,13 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (9)
 	db "BILLY@", TRAINERTYPE_NORMAL
-	db 37
+	db 50
 	dw PARASECT
-	db 37
+	db 50
 	dw PARASECT
-	db 37
+	db 50
 	dw FLAMIGO
-	db 45
+	db 58
 	dw DITTO
 	db -1 ; end
 
@@ -1328,25 +1328,25 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (9)
 	db "ROY@", TRAINERTYPE_NORMAL
-	db 39
+	db 49
 	dw SWELLOW
-	db 45
+	db 55
 	dw SWELLOW
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (10)
 	db "BORIS@", TRAINERTYPE_NORMAL
-	db 42
+	db 50
 	dw WINGULL
-	db 40
+	db 48
 	dw WINGULL
-	db 44
+	db 52
 	dw PELIPPER
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
-	db 48
+	db 54
 	dw HAWLUCHA
 	db -1 ; end
 
@@ -1374,19 +1374,19 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
-	db 40
-	dw FARFETCH_D
-	db 40
-	dw FARFETCH_D
-	db 42
+	db 50
+	dw FARFETCH_D_G
+	db 50
+	dw FARFETCH_D_G
+	db 52
 	dw ALTARIA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (16)
 	db "BRET@", TRAINERTYPE_NORMAL
-	db 41
+	db 52
 	dw PIDGEOTTO
-	db 41
+	db 52
 	dw DECIDUEYE_H
 	db -1 ; end
 
@@ -2586,21 +2586,21 @@ SkierGroup:
 TeacherGroup:
 	next_list_item ; TEACHER (1)
 	db "COLETTE@", TRAINERTYPE_NORMAL
-	db 45
+	db 55
 	dw CLEFABLE
-	db 45
+	db 55
 	dw SUNFLORA
-	db 42
+	db 52
 	dw VIVILLON
 	db -1 ; end
 
 	next_list_item ; TEACHER (2)
 	db "HILLARY@", TRAINERTYPE_NORMAL
-	db 40
+	db 50
 	dw HAPPINY
-	db 40
+	db 50
 	dw HAPPINY
-	db 44
+	db 54
 	dw ORANGURU
 	db -1 ; end
 
@@ -2884,11 +2884,11 @@ FisherGroup:
 
 	next_list_item ; FISHER (4)
 	db "KYLE@", TRAINERTYPE_NORMAL
-	db 39
+	db 48
 	dw VELUZA
-	db 42
+	db 51
 	dw WAILORD
-	db 42
+	db 51
 	dw WAILORD
 	db -1 ; end
 
@@ -2970,31 +2970,31 @@ FisherGroup:
 
 	next_list_item ; FISHER (13)
 	db "MARTIN@", TRAINERTYPE_NORMAL
-	db 42
+	db 52
 	dw BARASKEWDA
-	db 42
+	db 52
 	dw BARASKEWDA
 	db -1 ; end
 
 	next_list_item ; FISHER (14)
 	db "STEPHEN@", TRAINERTYPE_NORMAL
-	db 39
-	dw BASCULIN_R
-	db 39
+	db 45
 	dw BASCULIN_R
 	db 45
+	dw BASCULIN_R
+	db 51
 	dw QWILFISH
-	db 45
+	db 51
 	dw CRAWDAUNT
 	db -1 ; end
 
 	next_list_item ; FISHER (15)
 	db "BARNEY@", TRAINERTYPE_NORMAL
-	db 40
+	db 49
 	dw LANTURN
-	db 43
+	db 52
 	dw HUNTAIL
-	db 43
+	db 52
 	dw BASCULIN_W
 	db -1 ; end
 
@@ -3465,20 +3465,20 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (6)
 	db "SAM@", TRAINERTYPE_NORMAL
-	db 44
-	dw GRIMER
-	db 44
-	dw MUK
+	db 50
+	dw MAGNETON
+	db 50
+	dw MAGNETON
+	db 50
+	dw MAGNEZONE
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (7)
 	db "TOM@", TRAINERTYPE_NORMAL
-	db 42
-	dw MAGNETON
-	db 42
-	dw MAGNETON
-	db 45
-	dw MAGNEZONE
+	db 52
+	dw GRIMER
+	db 52
+	dw MUK
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (8)
@@ -3707,13 +3707,13 @@ HikerGroup:
 
 	next_list_item ; HIKER (16)
 	db "KENNY@", TRAINERTYPE_NORMAL
-	db 38
+	db 47
 	dw SANDSLASH
-	db 40
+	db 49
 	dw LAIRON
-	db 42
+	db 51
 	dw AGGRON
-	db 40
+	db 49
 	dw LAIRON
 	db -1 ; end
 
@@ -3795,61 +3795,61 @@ HikerGroup:
 BikerGroup:
 	next_list_item ; BIKER (3)
 	db "DWAYNE@", TRAINERTYPE_NORMAL
-	db 37
+	db 47
 	dw KOFFING
-	db 38
+	db 48
 	dw KOFFING
-	db 39
+	db 49
 	dw KOFFING
-	db 40
+	db 50
 	dw KOFFING
 	db -1 ; end
 
 	next_list_item ; BIKER (4)
 	db "HARRIS@", TRAINERTYPE_NORMAL
-	db 44
+	db 54
 	dw TYPHLOSION
 	db -1 ; end
 
 	next_list_item ; BIKER (5)
 	db "ZEKE@", TRAINERTYPE_NORMAL
-	db 42
+	db 52
 	dw WHIRLIPEDE
-	db 42
+	db 52
 	dw WHIRLIPEDE
 	db -1 ; end
 
 	next_list_item ; BIKER (6)
 	db "CHARLES@", TRAINERTYPE_NORMAL
-	db 42
+	db 50
 	dw KOFFING
-	db 41
+	db 50
 	dw QUILAVA
-	db 41
+	db 50
 	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; BIKER (7)
 	db "RILEY@", TRAINERTYPE_NORMAL
-	db 44
+	db 54
 	dw SCRAFTY
 	db -1 ; end
 
 	next_list_item ; BIKER (8)
 	db "JOEL@", TRAINERTYPE_NORMAL
-	db 42
+	db 52
 	dw MAGMAR
-	db 42
+	db 52
 	dw MAGMAR
 	db -1 ; end
 
 	next_list_item ; BIKER (9)
 	db "GLENN@", TRAINERTYPE_NORMAL
-	db 38
+	db 48
 	dw WHIRLIPEDE
-	db 40
+	db 50
 	dw MAGMAR
-	db 42
+	db 52
 	dw SCRAFTY
 	db -1 ; end
 
@@ -4249,17 +4249,17 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (3)
 	db "HERMAN@", TRAINERTYPE_NORMAL
-	db 42
+	db 50
 	dw MUNNA
-	db 42
+	db 50
 	dw MUNNA
-	db 42
+	db 50
 	dw MUSHARNA
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (4)
 	db "FIDEL@", TRAINERTYPE_NORMAL
-	db 44
+	db 54
 	dw XATU
 	db -1 ; end
 
@@ -5001,44 +5001,44 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (4)
 	db "JOSHUA@", TRAINERTYPE_ITEM
-	db 32
+	db 53
 	dw PIKACHU
-	db BERRY
-	db 32
+	db GOLD_BERRY
+	db 53
 	dw PIKACHU
-	db BERRY
-	db 32
+	db GOLD_BERRY
+	db 53
 	dw PIKACHU
-	db BERRY
-	db 32
+	db GOLD_BERRY
+	db 53
 	dw PIKACHU
-	db BERRY
-	db 32
+	db GOLD_BERRY
+	db 53
 	dw PIKACHU
-	db BERRY
-	db 32
+	db GOLD_BERRY
+	db 53
 	dw PIKACHU
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (5)
 	db "CARTER@", TRAINERTYPE_ITEM
-	db 39
+	db 59
 	dw BULBASAUR
-	db BERRY
-	db 39
+	db MIRACLE_SEED
+	db 59
 	dw CHARMANDER
-	db BERRY
-	db 39
+	db CHARCOAL
+	db 59
 	dw SQUIRTLE
-	db BERRY
+	db MYSTIC_WATER
 	db -1 ; end
 
 	next_list_item ; POKEFANM (6)
 	db "TREVOR@", TRAINERTYPE_ITEM_MOVES
-	db 43
+	db 53
 	dw SMEARGLE
-	db BERRY
+	db SALAC_BERRY
 	dw SPORE, SPIKES, WHIRLWIND, SKETCH
 	db -1 ; end
 
@@ -5075,43 +5075,43 @@ PokefanMGroup:
 	db "COLIN@", TRAINERTYPE_ITEM
 	db 45
 	dw ABOMASNOW
-	db BERRY
+	db GOLD_BERRY
 	db 42
 	dw STARYU
-	db BERRY
+	db GOLD_BERRY
 	db 45
 	dw SAWSBUCK
-	db BERRY
+	db GOLD_BERRY
 	db 50
 	dw DELIBIRD
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (12)
 	db "ALEX@", TRAINERTYPE_ITEM
-	db 39
+	db 49
 	dw NIDOKING
-	db BERRY
-	db 39
+	db GOLD_BERRY
+	db 49
 	dw SLOWKING
-	db BERRY
-	db 39
+	db GOLD_BERRY
+	db 49
 	dw SEAKING
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (13)
 	db "REX@", TRAINERTYPE_ITEM
-	db 45
+	db 55
 	dw PHANPY
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (14)
 	db "ALLAN@", TRAINERTYPE_ITEM
-	db 45
+	db 55
 	dw TEDDIURSA
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	end_list_items
