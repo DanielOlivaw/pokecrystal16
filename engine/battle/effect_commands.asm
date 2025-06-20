@@ -6825,7 +6825,7 @@ BattleCommand_Charge:
 	dw SOLARBEAM,     .Solarbeam
 	dw SOLAR_BLADE,   .Solarbeam
 	dw SKULL_BASH,    .SkullBash
-	dw SKY_ATTACK,    CloakedInHarshLightText
+	dw SKY_ATTACK,    .SkyAttack
 	dw FLY,           .Fly
 	dw DIG,           .Dig
 	dw BOUNCE,        .Bounce
@@ -6850,6 +6850,11 @@ BattleCommand_Charge:
 .SkullBash:
 ; 'lowered its head!'
 	text_far LoweredItsHeadText
+	text_end
+
+.SkyAttack:
+; 'became cloaked in a harsh light!'
+	text_far CloakedInHarshLightText
 	text_end
 
 .Fly:

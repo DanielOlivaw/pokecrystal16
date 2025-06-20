@@ -762,6 +762,12 @@ LoweredItsHeadText::
 	line "lowered its head!"
 	prompt
 
+CloakedInHarshLightText::
+	text_start
+	line "became cloaked in"
+	scroll "a harsh light!"
+	prompt
+
 FlewUpHighText::
 	text_start
 	line "flew up high!"

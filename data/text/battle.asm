@@ -605,8 +605,6 @@ CaughtInJawsText:
 	scroll "jaws!"
 	prompt
 
-		;"123456789123456789"
-
 StoringEnergyText:
 	text "<USER>"
 	line "is storing energy!"
@@ -615,12 +613,6 @@ StoringEnergyText:
 UnleashedEnergyText:
 	text "<USER>"
 	line "unleashed energy!"
-	prompt
-
-CloakedInHarshLightText:
-	text "<USER>"
-	line "became cloaked in"
-	scroll "a harsh light!"
 	prompt
 
 HungOnText:
