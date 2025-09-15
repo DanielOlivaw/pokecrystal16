@@ -47,7 +47,7 @@ MoveTutor:
 	cp MOVETUTOR_DRACO_METEOR
 	ld hl, DRACO_METEOR
 	jr z, .ok
-	; MOVETUTOR_STEEL_BEAM
+	; cp MOVETUTOR_STEEL_BEAM
 	ld hl, STEEL_BEAM
 .ok
 	jp GetMoveIDFromIndex
@@ -71,7 +71,7 @@ CheckCanLearnMoveTutorMove:
 	ld de, SFX_WRONG
 	call PlaySFX
 	pop de
-	; ld a, BANK(Text_TMHMNotCompatible)
+	ld a, BANK(TutorMoveNotCompatibleText)
 	ld hl, TutorMoveNotCompatibleText
 	call FarPrintText
 	jr .didnt_learn
