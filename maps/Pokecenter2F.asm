@@ -299,11 +299,11 @@ Script_TimeCapsuleClosed:
 	end
 
 LinkReceptionistScript_TimeCapsule:
-	; checkevent EVENT_MET_BILL
-	; iftrue Script_TimeCapsuleClosed
-	; checkflag ENGINE_TIME_CAPSULE
-	; iftrue Script_TimeCapsuleClosed
-	; special SetBitsForTimeCapsuleRequest
+	checkevent EVENT_MET_BILL
+	iftrue Script_TimeCapsuleClosed
+	checkflag ENGINE_TIME_CAPSULE
+	iftrue Script_TimeCapsuleClosed
+	special SetBitsForTimeCapsuleRequest
 	faceplayer
 	opentext
 	writetext Text_TimeCapsuleReceptionistIntro
@@ -327,7 +327,7 @@ LinkReceptionistScript_TimeCapsule:
 	ifequal -1, .DontRevive
 	writetext Text_TimeCapsuleReceptionistNotAFossil
 	waitbutton
-	sjump .OpenFossilMenu
+	; sjump .OpenFossilMenu
 
 .DontRevive:
 	writetext Text_TimeCapsuleReceptionistGoodbye
