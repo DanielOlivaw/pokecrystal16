@@ -48,8 +48,8 @@ RadioTower4FDJMaryScript:
 RadioTowerMeowth:
 	opentext
 	writetext RadioTowerMeowthText
-	cry MEOWTH_G
-	loadmonindex 1, MEOWTH_G
+	cry MEOWTH
+	loadmonindex 1, MEOWTH
 	special SpecialSetSeenMon
 	waitbutton
 	closetext
