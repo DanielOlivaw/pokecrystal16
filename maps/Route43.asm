@@ -78,25 +78,16 @@ TrainerPokemaniacBrent:
 .WantsBattle:
 	scall .Rematch
 	winlosstext PokemaniacBrentBeatenText, 0
-	readmem wBrentFightCount
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight3:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
-.Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
-.Fight1:
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .LoadFight1
-.LoadFight0:
+; .LoadFight0:
 	loadtrainer POKEMANIAC, BRENT1
 	startbattle
 	reloadmapafterbattle
-	loadmem wBrentFightCount, 1
 	clearflag ENGINE_BRENT
 	end
 
@@ -104,7 +95,6 @@ TrainerPokemaniacBrent:
 	loadtrainer POKEMANIAC, BRENT2
 	startbattle
 	reloadmapafterbattle
-	loadmem wBrentFightCount, 2
 	clearflag ENGINE_BRENT
 	end
 
@@ -112,7 +102,6 @@ TrainerPokemaniacBrent:
 	loadtrainer POKEMANIAC, BRENT3
 	startbattle
 	reloadmapafterbattle
-	loadmem wBrentFightCount, 3
 	clearflag ENGINE_BRENT
 	end
 
@@ -209,25 +198,16 @@ TrainerPicnickerTiffany:
 .WantsBattle:
 	scall .Rematch
 	winlosstext PicnickerTiffanyBeatenText, 0
-	readmem wTiffanyFightCount
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight3:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
-.Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
-.Fight1:
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .LoadFight1
-.LoadFight0:
+; .LoadFight0:
 	loadtrainer PICNICKER, TIFFANY3
 	startbattle
 	reloadmapafterbattle
-	loadmem wTiffanyFightCount, 1
 	clearflag ENGINE_TIFFANY
 	end
 
@@ -235,7 +215,6 @@ TrainerPicnickerTiffany:
 	loadtrainer PICNICKER, TIFFANY1
 	startbattle
 	reloadmapafterbattle
-	loadmem wTiffanyFightCount, 2
 	clearflag ENGINE_TIFFANY
 	end
 
@@ -243,7 +222,6 @@ TrainerPicnickerTiffany:
 	loadtrainer PICNICKER, TIFFANY2
 	startbattle
 	reloadmapafterbattle
-	loadmem wTiffanyFightCount, 3
 	clearflag ENGINE_TIFFANY
 	end
 
